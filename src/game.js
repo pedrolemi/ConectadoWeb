@@ -1,25 +1,25 @@
 import Test from './scenes/test.js'
+import DialogManager from './dialog/dialogManager.js'
 
-const max_w = 1506, max_h = 847, min_w = 426, min_h = 240;
+const max_w = 1129, max_h = 847, min_w = 320, min_h = 240;
 
 const config = {
     width: max_w,
     height: max_h,
     
     type: Phaser.AUTO,
-    scene: [Test, ],
+    scene: [Test, DialogManager],
     autoFocus: true,
     disableContextMenu: true,        // Desactivar que aparezca el menu de inspeccionar al hacer click derecho
     render: {
         antialias: true,
-        // pixelArt: true,              // Si el juego va a ser en pixel art
         transparent: true,
     },
     physics: { 
         default: 'arcade', 
         arcade: { 
            // Visibilidad de las colisiones 
-           debug: false   
+           debug: true,   
         },
     },
 	scale: {

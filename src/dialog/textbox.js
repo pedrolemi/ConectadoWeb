@@ -11,17 +11,17 @@ export default class Textbox extends Phaser.GameObjects.Container {
         // Configuracion de la imagen de la caja de texto
         this.padding = 10;        // Espacio entre la caja y los bordes del canvas
 
-        this.box = this.scene.add.image(0, this.scene.getHeight() - this.padding, 'textbox').setOrigin(0, 1);
-        var horizontalScale = this.scene.getWidth() / this.box.width;
+        this.box = this.scene.add.image(this.scene.getWidth() / 2, this.scene.getHeight() - this.padding, 'textbox').setOrigin(0.5, 1);
+        let horizontalScale = (this.scene.getWidth() - this.padding * 2) / this.box.width;
         this.box.setScale(horizontalScale, 1);
         this.box.visible = true;
         this.box.setInteractive();
 
-        this.nameBox = this.scene.add.image(0, this.scene.getHeight() - this.padding, 'textboxName').setOrigin(0, 1);
+        this.nameBox = this.scene.add.image(this.scene.getWidth() / 2, this.scene.getHeight() - this.padding, 'textboxName').setOrigin(0.5, 1);
         this.nameBox.setScale(horizontalScale, 1);
         this.nameBox.visible = true;
 
-        this.box.on('pointerdown', function (pointer) {
+        this.box.on('pointerdown', (pointer) => {
             this.scene.nextDialog();
         });
 
@@ -52,15 +52,23 @@ export default class Textbox extends Phaser.GameObjects.Container {
 
         this.nameText = null;
 
+        // Configuracion de las animaciones
         this.fadeTime = 100;
         this.fadeEase = 'linear';
         this.canWrite = false;
 
         this.createText("");
         this.createName("");
-        this.activate(false);
-              
+        
+        this.box.alpha = 0;
+        this.nameBox.alpha = 0;
+        this.currText.alpha = 0;
+        this.nameText.alpha = 0;
+        
         this.scene.add.existing(this);
+
+        // this.charCamera = this.scene.cameras.add(400, 0, 400, 300);
+        // this.charCamera.setZoom(0.5);
     }
 
     shutdown() {
@@ -85,7 +93,7 @@ export default class Textbox extends Phaser.GameObjects.Container {
         this.fullTextSplit = dialogInfo.text.split('');
 
         // Si el texto es animado, el texto inicial esta vacio
-        var tempText;
+        let tempText;
         if (animate) {
             tempText = '';
             this.finished = false;
@@ -117,15 +125,15 @@ export default class Textbox extends Phaser.GameObjects.Container {
     * @param {string} character - id del personaje que habla
     */
     createText(text, character) {
-        var x = 230;
-        var y = 660;
-        var width = this.scene.getWidth() / 1.45;
+        let x = 230;
+        let y = 660;
+        let width = (this.scene.getWidth() - this.padding) / 1.45;
 
         // Si el personaje que habla es el jugador, modifica la posicion
         // y los margenes del texto porque no hace falta mostrar su retrato
         if (character === "player") {
-            x = 100;
-            width = this.scene.getWidth() / 1.23;
+            x = 110;
+            width = (this.scene.getWidth() - this.padding) / 1.23;
         }
 
         // Crea el texto en la escena
@@ -154,9 +162,9 @@ export default class Textbox extends Phaser.GameObjects.Container {
     * @param {string} character - id del personaje que habla
     */
     createName(name, character) {
-        var x = 285;
-        var y = 622;
-        var charName = name;
+        let x = 290;
+        let y = 622;
+        let charName = name;
 
         // Si el personaje que habla es el jugador, modifica el nombre
         // para que sea el del jugador
@@ -164,7 +172,7 @@ export default class Textbox extends Phaser.GameObjects.Container {
             charName = this.scene.getPlayerName();
         }
         
-        // Crea el texto en la escenca
+        // Crea el texto en la escena
         this.nameText = this.scene.make.text({
             x, y, charName,
             style: {
@@ -208,13 +216,12 @@ export default class Textbox extends Phaser.GameObjects.Container {
         if(this.currText) this.currText.setText(this.fullText);
     }
 
-    // Desactiva la caja con una animacion
-    activate(active) {
-        var wasVisible = this.box.alpha == 1;
+    // Activa la caja con fade in
+    show() {
+        let wasVisible = this.box.alpha == 1;
         
-        // Si se va a activar y antes estaba desactivada
-        if (active && !wasVisible) {
-
+        // Si antes estaba desactivada
+        if (!wasVisible) {
             // Fuerza todas las opacidades a 0 por si acaso
             this.canWrite = false;
             this.box.alpha = 0;
@@ -223,7 +230,7 @@ export default class Textbox extends Phaser.GameObjects.Container {
             this.nameText.alpha = 0;
 
             // Hace la animacion de fade in
-            var fadeIn = this.scene.tweens.add({
+            let fadeIn = this.scene.tweens.add({
                 targets: [this.box, this.nameBox, this.currText, this.nameText],
                 alpha: { from: 0, to: 1 },
                 ease: this.fadeEase,
@@ -240,8 +247,16 @@ export default class Textbox extends Phaser.GameObjects.Container {
 				}, 200);
             });
         }
-        // Si se va a desactivar y antes estaba activada
-        else if (!active && wasVisible) {
+    }
+
+    // Desactiva la caja de texto con fade out. Si se quiere hacer 
+    // algo despues de que haga el fade out, se le pasa la funcion 
+    // o lambda como parametro y el delay con el que ejecutarlo
+    hide(onComplete, delay) {
+        let wasVisible = this.box.alpha == 1;
+
+        // Si antes estaba activada
+        if (wasVisible) {
             // Fuerza todas las opacidades a 1 por si acaso
             this.box.setInteractive(false);
             this.canWrite = false;
@@ -251,44 +266,25 @@ export default class Textbox extends Phaser.GameObjects.Container {
             this.nameText.alpha = 1;
 
             // Hace la animacion de fade out
-            this.scene.tweens.add({
+            let fadeOut = this.scene.tweens.add({
                 targets: [this.box, this.nameBox, this.currText, this.nameText],
                 alpha: { from: 1, to: 0 },
                 ease: this.fadeEase,
                 duration: this.fadeTime,
                 repeat: 0,
             });
-            
-        }
-    }
 
-    // Cambia el personaje que esta hablando, haciendo la animacion
-    // de fade out con el personaje que esta hablando y haciendo
-    // la animacion de fade in con el nuevo personaje
-    changeCharacter(dialogInfo, animate) {
-            this.box.setInteractive(false);
-            this.canWrite = false;
-            this.box.alpha = 1;
-            this.nameBox.alpha = 1;
-            this.currText.alpha = 1;
-            this.nameText.alpha = 1;
-
-            var fadeOut = this.scene.tweens.add({
-                targets: [this.box, this.nameBox, this.currText, this.nameText],
-                alpha: { from: 1, to: 0 },
-                ease: this.fadeEase,
-                duration: this.fadeTime,
-                repeat: 0,
-            });
+            // Llama a la funcion que se quiera ejecutar una vez esta oculta
             fadeOut.on('complete', () => {
                 setTimeout( () => {
-                    this.setText(dialogInfo, animate);
-					this.activate(true);
-				}, 100);
+                    if (onComplete !== null && typeof onComplete === 'function') {
+                        onComplete();
+                    }
+				}, delay);
                 
             });
-
-            
+        }
     }
+    
 
 }

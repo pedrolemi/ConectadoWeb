@@ -30,15 +30,15 @@ export default class OptionBox extends DialogObject {
         this.height = 135;      // Alto que va a ocupar el texto
         // this.graphics = this.scene.add.graphics();
         // this.graphics.fillStyle('black', 1);
-        // this.graphics.fillRect(this.scene.sys.game.canvas.width / 2, this.scene.sys.game.canvas.height / 1.28, 20, this.height);
+        // this.graphics.fillRect(230 , this.scene.sys.game.canvas.height / 1.28, (this.scene.sys.game.canvas.width - this.padding) / 1.53, this.height);
 
 
         // Configuracion del texto de la caja
         this.normalTextConfig = { ...this.textConfig };
-        this.normalTextConfig.size = 25;
+        this.normalTextConfig.size = 20;
 
         this.nameTextConfig = { ...this.textConfig };
-        this.nameTextConfig.size = 20;
+        this.nameTextConfig.size = 25;
 
         // Animacion del texto
         this.textDelay = 30;                  // Tiempo que tarda en aparecer cada letra en milisegundos
@@ -117,13 +117,13 @@ export default class OptionBox extends DialogObject {
     createText(text, character) {
         let x = 230;
         let y = 660;
-        let width = (this.scene.sys.game.canvas.width - this.padding) / 1.45;
+        let width = (this.scene.sys.game.canvas.width - this.padding) / 1.53;
 
         // Si el personaje que habla es el jugador, modifica la posicion
         // y los margenes del texto porque no hace falta mostrar su retrato
         if (character === "player") {
             x = 110;
-            width = (this.scene.sys.game.canvas.width - this.padding) / 1.23;
+            width = (this.scene.sys.game.canvas.width - this.padding) / 1.30;
         }
 
         // Crea el texto en la escena
@@ -195,7 +195,7 @@ export default class OptionBox extends DialogObject {
         // Si se va a activar y no es visible, aparece con animacion.
         if (active && !isVisible) {
             this.canWrite = false;
-
+            
             // Si es el jugador el que va a hablar, no muestra el retrato
             // del personaje que habla, y si no lo es, lo muestra
             if (this.playerTalking) {

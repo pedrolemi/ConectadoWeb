@@ -19,17 +19,7 @@ export default class DialogManager extends Phaser.Scene {
         this.options = [];
         this.selectedOption = null;
     }
-    preload() {
-        // Precarga las imagenes para la caja de texto y de opciones
-        this.load.image('textbox', 'assets/textbox.png');
-        this.load.image('textboxName', 'assets/textboxName.png');
-        this.load.image('option', 'assets/optionBg.png');
-        this.load.image('textboxMask', 'assets/textboxMask.png');
-
-        // Precarga el plugin para hacer fade de colores
-        this.load.plugin('rextintrgbplugin', 'https://raw.githubusercontent.com/rexrainbow/phaser3-rex-notes/master/dist/rextintrgbplugin.min.js', true);
-    }
-
+    
     create() {
         this.textbox = new TextBox(this);
         this.textbox.activate(false);
@@ -47,10 +37,12 @@ export default class DialogManager extends Phaser.Scene {
 
     changeScene(scene) {
         this.currScene = scene;
-        this.currScene.portraitCamera.setMask(this.portraitMask);
+        // this.currScene.portraitCamera.setMask(this.portraitMask);
+        
         if (this.textbox) {
             this.textbox.activate(false);
             this.textbox.portraitCam = this.currScene.portraitCamera;
+            this.currScene.portraitCam
         }
         this.activateOptions(false);
     }
@@ -61,14 +53,24 @@ export default class DialogManager extends Phaser.Scene {
         this.activateOptions(false);
         this.setdialogs([
             {
-                text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Hac habitasse platea dictumst vestibulum rhoncus est pellentesque. Vulputate sapien nec sagittis aliquam. Massa vitae tortor condimentum lacinia. Duis tristique sollicitudin nibh sit amet commodo nulla facilisi. Libero nunc consequat interdum varius sit amet mattis vulputate. Molestie a iaculis at erat pellentesque adipiscing commodo elit. Id aliquet risus feugiat in ante metus dictum. Odio facilisis mauris sit amet massa.",
+                text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu non sodales neque sodales ut etiam sit amet. Tempus urna et pharetra pharetra massa massa ultricies. Pellentesque dignissim enim sit amet. Sit amet justo donec enim diam vulputate ut pharetra sit. Quisque sagittis purus sit amet volutpat. Nulla posuere sollicitudin aliquam ultrices sagittis orci. Euismod elementum nisi quis eleifend quam. Imperdiet sed euismod nisi porta lorem mollis aliquam. Lacus vestibulum sed arcu non odio euismod lacinia at quis.",
                 character: "player",
                 name: " ",
             },
             {
-                text: "texto2 texto2 texto2 texto2",
+                text: "Sit amet consectetur adipiscing elit ut aliquam purus sit. In nibh mauris cursus mattis molestie a iaculis at. Laoreet sit amet cursus sit amet dictum. Tellus mauris a diam maecenas sed enim. Diam donec adipiscing tristique risus nec feugiat in fermentum. Vulputate dignissim suspendisse in est ante. Scelerisque felis imperdiet proin fermentum leo vel. Id eu nisl nunc mi. Quam id leo in vitae. Posuere ac ut consequat semper viverra. Quam vulputate dignissim suspendisse in est. Volutpat sed cras ornare arcu dui vivamus arcu felis bibendum. Egestas tellus rutrum tellus pellentesque eu tincidunt tortor aliquam nulla. Commodo viverra maecenas accumsan lacus vel facilisis. Varius sit amet mattis vulputate enim nulla. Aenean sed adipiscing diam donec. Tempor id eu nisl nunc mi ipsum faucibus. Quisque sagittis purus sit amet volutpat.",
                 character: "b",
                 name: "Personaje 2",
+            },
+            {
+                text: "Purus semper eget duis at tellus at urna. Quam elementum pulvinar etiam non quam lacus suspendisse faucibus interdum. Et molestie ac feugiat sed lectus vestibulum mattis ullamcorper. Diam maecenas ultricies mi eget mauris pharetra et ultrices. Convallis aenean et tortor at risus viverra adipiscing. Facilisis magna etiam tempor orci eu lobortis elementum nibh tellus. Mi quis hendrerit dolor magna eget est lorem ipsum. Sit amet facilisis magna etiam. Netus et malesuada fames ac turpis egestas. Nam at lectus urna duis. Tortor condimentum lacinia quis vel eros donec ac. Suscipit adipiscing bibendum est ultricies integer quis auctor elit. Urna et pharetra pharetra massa. A diam maecenas sed enim ut sem viverra. Ligula ullamcorper malesuada proin libero nunc. Id donec ultrices tincidunt arcu non sodales neque sodales ut. In mollis nunc sed id semper risus.",
+                character: "c",
+                name: "La pola",
+            },
+            {
+                text: "Etiam tempor orci eu lobortis elementum nibh tellus. Ornare suspendisse sed nisi lacus sed viverra tellus in hac. Commodo viverra maecenas accumsan lacus vel facilisis volutpat. Pellentesque habitant morbi tristique senectus. Augue eget arcu dictum varius duis at consectetur. Id volutpat lacus laoreet non curabitur gravida. Pharetra vel turpis nunc eget lorem dolor. Ac feugiat sed lectus vestibulum mattis ullamcorper velit. Neque viverra justo nec ultrices dui. Aliquam etiam erat velit scelerisque in dictum non consectetur. Massa sed elementum tempus egestas. Ultrices vitae auctor eu augue. Eu sem integer vitae justo eget magna fermentum iaculis.",
+                character: "player",
+                name: " ",
             },
         ]);
         this.finished = false;
@@ -86,70 +88,78 @@ export default class DialogManager extends Phaser.Scene {
     * @param {Array} dialogs - la coleccion de dialogos que se mostraran. Cada objeto debera tener los atributos text, character, name (completar)
     */
     setdialogs(dialogs) {
-        this.textCount = 0;
-        this.dialogs = dialogs;
-
         let splitDialogs = [];      // Nuevo array de dialogos tras dividir los dialogos demasiado largos
         let i = 0;                  // Indice del dialogo en el array de dialogos
-        let txt = "";               // Texto del dialogo a separar
-
-        let dialogCopy = { ...this.dialogs[i] };
-        // Se establece el primer dialogo como el texto a separar
-        if (this.dialogs.length > 0) txt = this.dialogs[i].text;
+        let dialogCopy = "";        // Copia del dialogo con todos sus atributos
+        let currText = "";          // Texto a dividir
 
         // Mientras no se haya llegado al final de los dialogos
-        while (i < this.dialogs.length) {
-            // Cambia el texto a mostrar para obtener sus dimensiones 
-            dialogCopy = { ...this.dialogs[i] };
-            dialogCopy.text = txt;
+        while (i < dialogs.length) {
+            // Cambia el texto a mostrar por el dialogo completo para obtener sus dimensiones 
+            // (se copia la informacion del dialogo actual, pero se cambia el texto a mostrar)
+            currText = dialogs[i].text;            
+            dialogCopy = { ...dialogs[i] };
+            dialogCopy.text = currText;
             this.textbox.setText(dialogCopy, false);
 
             // Si la altura del texto supera la de la caja de texto 
             if (this.textbox.currText.getBounds().height > this.textbox.height) {
-                let words = txt.split(' ');    // Se separan todas las palabras del dialogo por espacios
-                let nextText = "";              // Parte del dialogo que no cabe en el cuadro
+                // Se separan todas las palabras del dialogo por espacios
+                let words = currText.split(' ');
+                let prevText = "";          // Texto antes de coger la siguiente palabra del dialogo
+                let newText = "";           // Texto obtenido tras coger la siguiente palabra del dialogo
+                let currWord = words[0];
 
-                // Va quitando palabras del final del dialogo mientras supere la altura de la caja de texto
-                while (this.textbox.currText.getBounds().height > this.textbox.height && words.length > 0) {
-                    // Guarda la palabra del final y la pone al principio del texto que no cabe 
-                    // en el cuadro (al principio, ya que se va recorriendo en orden inverso)
-                    let currWord = words.pop();
-                    currWord += " " + nextText;
-                    nextText = currWord;
-
-                    // Reconstruye el texto sin la palabra que se ha eliminado y lo actualiza
-                    txt = words.join(' ');
-
-                    let next = { ...this.dialogs[i] };;
-                    next.text = txt;
-                    this.textbox.setText(next, false);
+                // Va recorriendo el array de palabras hasta que no quede ninguna
+                while (words.length > 0) {
+                    // Coge la primera palabra y actualiza tanto el
+                    // texto anterior como el nuevo con dicha palabra
+                    prevText = newText;
+                    newText += " " + currWord;
+                    
+                    // Cambia el texto por el nuevo para calcular sus dimensiones
+                    dialogCopy = { ...dialogs[i] };
+                    dialogCopy.text = newText;
+                    this.textbox.setText(dialogCopy, false);
+                    
+                    // Si no supera la altura de la caja de texto, saca la palabra del array
+                    if (this.textbox.currText.getBounds().height <= this.textbox.height) {
+                        words.shift();   
+                        currWord = words[0]; 
+                    }
+                    // Si no, reinicia el texto y guarda el dialogo actual con el texto obtenido hasta el momento
+                    else {
+                        newText = "";
+                        dialogCopy = { ...dialogs[i] };
+                        dialogCopy.text = prevText;
+                        splitDialogs.push(dialogCopy);
+                    }
                 }
-
-                // Mete el texto que cabe en la caja en el array de dialogos
-                // y actualiza el texto a separar por el texto de ese dialogo
-                // que no cabia en la caja 
-                dialogCopy = { ...this.dialogs[i] };
-                dialogCopy.text = txt;
+                // Una vez recorrido todo el dialogo, guarda el dialogo con el texto restante 
+                prevText = newText;
+                newText += " " + currWord;
+                dialogCopy = { ...dialogs[i] };
+                dialogCopy.text = prevText;
                 splitDialogs.push(dialogCopy);
-                txt = nextText;
-
+                
+                i++;
             }
-            // Si la altura no supera la de la caja de texto, se guarda el texto 
-            // actual en el array de dialogos y se pasa a mirar el siguiente
+            // Si la altura no supera la de la caja de texto, se guarda 
+            // el dialogo actual y se pasa a mirar el siguiente
             else {
-                dialogCopy = { ...this.dialogs[i] };
-                dialogCopy.text = txt;
+                dialogCopy = { ...dialogs[i] };
+                dialogCopy.text = currText;
                 splitDialogs.push(dialogCopy);
                 i++;
-                if (this.dialogs[i]) txt = this.dialogs[i].text;
+                if (dialogs[i]) currText = dialogs[i].text;
             }
         }
 
         // Actualiza los dialogos
+        this.textCount = 0;
         this.dialogs = splitDialogs;
         this.lastCharacter = this.dialogs[this.textCount].character;
         this.textbox.setText(this.dialogs[this.textCount], true);
-
     }
 
     
@@ -179,6 +189,7 @@ export default class DialogManager extends Phaser.Scene {
         console.log("Selected option " + index);
     }
 
+
     // Pasa al siguiente dialogo
     nextDialog() {
         // Si no ha acabado de aparecer todo el texto, lo muestra de golpe
@@ -186,6 +197,8 @@ export default class DialogManager extends Phaser.Scene {
             this.textbox.forceFinish();
         }
         else {
+            this.lastCharacter = this.dialogs[this.textCount].character;
+            
             // Actualiza el numero de dialogos
             this.textCount++;
 

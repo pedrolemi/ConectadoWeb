@@ -12,7 +12,6 @@ export default class Optionbox extends Phaser.GameObjects.Container {
         this.boxImage = this.scene.add.image(this.scene.sys.game.canvas.width / 2, 0, 'option').setOrigin(0.5, 0);
         let scale = this.scene.sys.game.canvas.width / (this.boxImage.width + padding);
         this.boxImage.setScale(scale);
-        this.boxImage.alpha = 0.8;
 
         this.boxImage.y = this.scene.sys.game.canvas.height - (this.boxImage.displayHeight * numOpts) + (this.boxImage.displayHeight * index);
 
@@ -52,11 +51,11 @@ export default class Optionbox extends Phaser.GameObjects.Container {
         this.fadeTime = 100;
         this.fadeEase = 'linear';
         this.canWrite = false;
-        
+
         this.boxImage.setInteractive();
         let tintFadeTime = 50;
-        this.scene.plugins.get('rextintrgbplugin').add( this.boxImage);
-        
+        this.scene.plugins.get('rextintrgbplugin').add(this.boxImage);
+
         // Hace fade del color de la caja al pasar o quitar el raton por encima
         this.boxImage.on('pointerover', () => {
             this.scene.tweens.add({
@@ -99,13 +98,13 @@ export default class Optionbox extends Phaser.GameObjects.Container {
         this.text.alpha = 0;
         this.boxImage.setInteractive(false);
     }
-    
+
 
 
     // Activa la caja con fade in
     show() {
         let wasVisible = this.boxImage.alpha == 1;
-        
+
         // Si antes estaba desactivada
         if (!wasVisible) {
             // Fuerza todas las opacidades a 0 por si acaso
@@ -151,12 +150,12 @@ export default class Optionbox extends Phaser.GameObjects.Container {
 
             // Llama a la funcion que se quiera ejecutar una vez esta oculta
             fadeOut.on('complete', () => {
-                setTimeout( () => {
+                setTimeout(() => {
                     if (onComplete !== null && typeof onComplete === 'function') {
                         onComplete();
                     }
-				}, delay);
-                
+                }, delay);
+
             });
         }
     }

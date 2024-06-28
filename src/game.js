@@ -1,3 +1,4 @@
+import BootScene from './scenes/bootScene.js'
 import Test from './scenes/test.js'
 import DialogManager from './dialog/dialogManager.js'
 
@@ -8,7 +9,7 @@ const config = {
     height: max_h,
     
     type: Phaser.AUTO,
-    scene: [Test, DialogManager],
+    scene: [BootScene, Test, DialogManager],
     autoFocus: true,
     disableContextMenu: true,        // Desactivar que aparezca el menu de inspeccionar al hacer click derecho
     render: {

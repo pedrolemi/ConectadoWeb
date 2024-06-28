@@ -25,6 +25,7 @@ export default class DialogManager extends Phaser.Scene {
         this.load.image('textbox', 'assets/textbox.png');
         this.load.image('textboxName', 'assets/textboxName.png');
         this.load.image('option', 'assets/optionBg.png');
+        this.load.image('textboxMask', 'assets/textboxMask.png');
 
         // Precarga el plugin para hacer fade de colores
         this.load.plugin('rextintrgbplugin', 'https://raw.githubusercontent.com/rexrainbow/phaser3-rex-notes/master/dist/rextintrgbplugin.min.js', true);
@@ -34,6 +35,28 @@ export default class DialogManager extends Phaser.Scene {
         this.textbox = new Textbox(this);
         this.textbox.hide();
         this.activateOptions(false);
+
+        this.currScene = null;
+
+        let mask = this.add.image(this.textbox.box.x, this.textbox.box.y, 'textboxMask');
+        mask.setOrigin(this.textbox.box.originX, this.textbox.box.originY);
+        mask.setScale(this.textbox.box.scaleX, this.textbox.box.scaleY);
+        mask.setCrop(0, 0, 160, mask.displayHeight);
+        mask.visible = false;
+        this.portraitMask = mask.createBitmapMask();
+    }
+
+    changeScene(scene) {
+        this.currScene = scene;
+        this.currScene.portraitCamera.setMask(this.portraitMask);
+        if (this.textbox) {
+            this.textbox.hide();
+            this.textbox.portraitCam = this.currScene.portraitCamera;
+        }
+        this.activateOptions(false);
+
+        // this.cameras.main.setMask(this.portraitMask);
+
 
     }
 
@@ -56,7 +79,7 @@ export default class DialogManager extends Phaser.Scene {
         this.finished = false;
         this.textbox.show();
     }
-    
+
     test2() {
         this.textbox.hide();
         this.setOptions(["Opcion 1", "Opcion 2"]);
@@ -67,12 +90,6 @@ export default class DialogManager extends Phaser.Scene {
     shutdown() {
         this.input.keyboard.shutdown();
     }
-
-    getPlayerName() { return this.playerName; }
-    // Getters de las dimensiones del canvas
-    getWidth() { return this.sys.game.canvas.width; }
-    getHeight() { return this.sys.game.canvas.height; }
-
 
     /**
     * Cambia la serie de dialogos a mostrar
@@ -85,14 +102,14 @@ export default class DialogManager extends Phaser.Scene {
         let splitDialogs = [];      // Nuevo array de dialogos tras dividir los dialogos demasiado largos
         let i = 0;                  // Indice del dialogo en el array de dialogos
         let txt = "";               // Texto del dialogo a separar
-        let dialogCopy = {...this.dialogs[i]};
+        let dialogCopy = { ...this.dialogs[i] };
         // Se establece el primer dialogo como el texto a separar
         if (this.dialogs.length > 0) txt = this.dialogs[i].text;
-        
+
         // Mientras no se haya llegado al final de los dialogos
         while (i < this.dialogs.length) {
             // Cambia el texto a mostrar para obtener sus dimensiones 
-            dialogCopy = {...this.dialogs[i]};
+            dialogCopy = { ...this.dialogs[i] };
             dialogCopy.text = txt;
             this.textbox.setText(dialogCopy, false);
 
@@ -112,7 +129,7 @@ export default class DialogManager extends Phaser.Scene {
                     // Reconstruye el texto sin la palabra que se ha eliminado y lo actualiza
                     txt = words.join(' ');
 
-                    let next = {...this.dialogs[i]};;
+                    let next = { ...this.dialogs[i] };;
                     next.text = txt;
                     this.textbox.setText(next, false);
                 }
@@ -120,7 +137,7 @@ export default class DialogManager extends Phaser.Scene {
                 // Mete el texto que cabe en la caja en el array de dialogos
                 // y actualiza el texto a separar por el texto de ese dialogo
                 // que no cabia en la caja 
-                dialogCopy = {...this.dialogs[i]};
+                dialogCopy = { ...this.dialogs[i] };
                 dialogCopy.text = txt;
                 splitDialogs.push(dialogCopy);
                 txt = nextText;
@@ -129,7 +146,7 @@ export default class DialogManager extends Phaser.Scene {
             // Si la altura no supera la de la caja de texto, se guarda el texto 
             // actual en el array de dialogos y se pasa a mirar el siguiente
             else {
-                dialogCopy = {...this.dialogs[i]};
+                dialogCopy = { ...this.dialogs[i] };
                 dialogCopy.text = txt;
                 splitDialogs.push(dialogCopy);
                 i++;
@@ -144,6 +161,9 @@ export default class DialogManager extends Phaser.Scene {
     }
 
     setOptions(opts) {
+        this.options.forEach((option) => {
+            option.hide(() => { option.destroy(); });
+        });
         this.options = [];
         this.selectedOption = null;
         for (let i = 0; i < opts.length; i++) {
@@ -154,7 +174,7 @@ export default class DialogManager extends Phaser.Scene {
     activateOptions(active) {
         if (active) this.selectedOption = null;
         this.options.forEach((option) => {
-            if(active) option.show();
+            if (active) option.show();
             else option.hide();
         });
     }
@@ -184,10 +204,10 @@ export default class DialogManager extends Phaser.Scene {
                     this.textbox.setText(this.dialogs[this.textCount], true);
                 }
                 else {
-                    this.textbox.hide( () => {
+                    this.textbox.hide(() => {
                         this.textbox.setText(this.dialogs[this.textCount], true);
                         this.textbox.show();
-                    } );
+                    });
                 }
             }
             // Si se han acabado, desactiva la caja de texto

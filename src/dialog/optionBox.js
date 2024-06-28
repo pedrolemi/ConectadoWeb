@@ -1,65 +1,47 @@
-export default class Optionbox extends Phaser.GameObjects.Container {
+import DialogObject from "./dialogObject.js";
+
+export default class OptionBox extends DialogObject {
     /**
-    * Caja de texto para los dialogos
-    * @extends Phaser.GameObjects.Container 
+    * Caja de texto para la opción múltiple
+    * @extends DialogObject
     * @param {Phaser.Scene} scene - escena a la que pertenece
+    * @param {number} index - indice de la opcion
+    * @param {number} numOpts - numero total de elecciones
+    * @param {string} text - texto de la opcion
     */
     constructor(scene, index, numOpts, text) {
         super(scene, 0, 0);
         this.scene = scene;
 
         let padding = 10;
-        this.boxImage = this.scene.add.image(this.scene.sys.game.canvas.width / 2, 0, 'option').setOrigin(0.5, 0);
-        let scale = this.scene.sys.game.canvas.width / (this.boxImage.width + padding);
-        this.boxImage.setScale(scale);
+        this.box = this.scene.add.image(this.scene.sys.game.canvas.width / 2, 0, 'option').setOrigin(0.5, 0);
+        let scale = this.scene.sys.game.canvas.width / (this.box.width + padding);
+        this.box.setScale(scale);
 
-        this.boxImage.y = this.scene.sys.game.canvas.height - (this.boxImage.displayHeight * numOpts) + (this.boxImage.displayHeight * index);
+        this.box.y = this.scene.sys.game.canvas.height - (this.box.displayHeight * numOpts) + (this.box.displayHeight * index);
 
         // Configuracion del texto de la caja
-        let textFont = 'Arial';            // Fuente (tiene que estar precargada en el html o el css)
-        let textSize = 25;                 // Tamano de la fuente del dialogo
-        let textStyle = 'bold';            // Estilo de la fuente
-        let textBgColor = null;            // Color del fondo del texto
-        let textColor = '#fff';            // Color del texto
-        let textBorderColor = '#000';      // Color del borde del texto
-        let textBorderSize = 5;            // Grosor del borde del texto 
-        let textAlign = 'left'             // Alineacion del texto ('left', 'center', 'right', 'justify')
+        this.textConfig = { ...this.textConfig };
+        this.textConfig.size = 20;
 
         let x = 80;
-        let y = this.boxImage.y + this.boxImage.displayHeight / 2;
-        // Crea el texto en la escena
-        this.text = this.scene.make.text({
-            x, y, text,
-            style: {
-                fontFamily: textFont,
-                fontSize: textSize + 'px',
-                fontStyle: textStyle,
-                backgroundColor: textBgColor,
-                color: textColor,
-                stroke: textBorderColor,
-                strokeThickness: textBorderSize,
-                align: textAlign,
-            }
-        });
-        this.text.setOrigin(0.5, 0.5);
+        let y = this.box.y + this.box.displayHeight / 2;
 
-        // Cambia el texto del objeto
+        // Crea el texto en la escena
+        this.text = super.createText(x, y, text, this.textConfig);
+        this.text.setOrigin(0.5, 0.5);
         this.text.text = text;
 
+        this.box.setInteractive();
 
         // Configuracion de las animaciones
-        this.fadeTime = 100;
-        this.fadeEase = 'linear';
-        this.canWrite = false;
-
-        this.boxImage.setInteractive();
         let tintFadeTime = 50;
-        this.scene.plugins.get('rextintrgbplugin').add(this.boxImage);
+        this.scene.plugins.get('rextintrgbplugin').add(this.box);
 
         // Hace fade del color de la caja al pasar o quitar el raton por encima
-        this.boxImage.on('pointerover', () => {
+        this.box.on('pointerover', () => {
             this.scene.tweens.add({
-                targets: [this.boxImage],
+                targets: [this.box],
                 tintR: 0x00,
                 tintG: 0xFF,
                 tintB: 0x56,
@@ -67,9 +49,9 @@ export default class Optionbox extends Phaser.GameObjects.Container {
                 repeat: 0,
             });
         });
-        this.boxImage.on('pointerout', () => {
+        this.box.on('pointerout', () => {
             this.scene.tweens.add({
-                targets: [this.boxImage],
+                targets: [this.box],
                 tintR: 0xFF,
                 tintG: 0xFF,
                 tintB: 0xFF,
@@ -80,9 +62,9 @@ export default class Optionbox extends Phaser.GameObjects.Container {
 
         // Al hacer click, vuelve a cambiar el color de la caja al original
         // y avisa a la escena de la opcion elegida 
-        this.boxImage.on('pointerdown', (pointer) => {
+        this.box.on('pointerdown', (pointer) => {
             let fadeColor = this.scene.tweens.add({
-                targets: [this.boxImage],
+                targets: [this.box],
                 tintR: 0xFF,
                 tintG: 0xFF,
                 tintB: 0xFF,
@@ -94,71 +76,34 @@ export default class Optionbox extends Phaser.GameObjects.Container {
             });
         });
 
-        this.boxImage.alpha = 0;
+        this.box.alpha = 0;
         this.text.alpha = 0;
-        this.boxImage.setInteractive(false);
+        this.box.setInteractive(false);
     }
 
+    /**
+    * Activa/desactiva la caja y ejecuta la funcion o lambda que se le
+    * pase como parametro una vez haya terminado la animacion y el retardo indicado
+    * @param {boolean} active - si se va a activar
+    * @param {function} onComplete - funcion a la que llamar cuando acabe la animacion
+    * @param {number} delay - tiempo en ms que tarda en llamarse a onComplete
+    */
+    activate(active, onComplete, delay) {
+        // Es visible si el alpha de la caja es 1
+        let isVisible = this.box.alpha == 1;
 
-
-    // Activa la caja con fade in
-    show() {
-        let wasVisible = this.boxImage.alpha == 1;
-
-        // Si antes estaba desactivada
-        if (!wasVisible) {
-            // Fuerza todas las opacidades a 0 por si acaso
-            this.boxImage.alpha = 0;
-            this.text.alpha = 0;
-            this.boxImage.setInteractive(false);
-
-            // Hace la animacion de fade in
-            let fadeIn = this.scene.tweens.add({
-                targets: [this.boxImage, this.text],
-                alpha: { from: 0, to: 1 },
-                ease: this.fadeEase,
-                duration: this.fadeTime,
-                repeat: 0,
-            });
-            fadeIn.on('complete', () => {
-                this.boxImage.setInteractive(true);
-            });
+        // Si se va a activar y no es visible, aparece con animacion
+        if (active && !isVisible) {
+            this.box.setInteractive(false);
+            super.activate(true, [this.box, this.text], () => {
+                this.box.setInteractive(true);
+            }, 0);
         }
-    }
-
-    // Desactiva la caja con fade out. Si se quiere hacer 
-    // algo despues de que haga el fade out, se le pasa la funcion 
-    // o lambda como parametro y el delay con el que ejecutarlo
-    hide(onComplete, delay) {
-        let wasVisible = this.boxImage.alpha == 1;
-
-        // Si antes estaba activada
-        if (wasVisible) {
-            // Fuerza todas las opacidades a 0 por si acaso
-            this.boxImage.alpha = 1;
-            this.text.alpha = 1;
-            this.boxImage.setInteractive(false);
-
-            // Hace la animacion de fade out
-            let fadeOut = this.scene.tweens.add({
-                targets: [this.boxImage, this.text],
-                alpha: { from: 1, to: 0 },
-                ease: this.fadeEase,
-                duration: this.fadeTime,
-                repeat: 0,
-            });
-
-            // Llama a la funcion que se quiera ejecutar una vez esta oculta
-            fadeOut.on('complete', () => {
-                setTimeout(() => {
-                    if (onComplete !== null && typeof onComplete === 'function') {
-                        onComplete();
-                    }
-                }, delay);
-
-            });
+        // Si se va a desactivar y es visible, desaparece con animacion
+        else if (!active && isVisible) {
+            super.activate(false, [this.box, this.text], onComplete, delay);
         }
-    }
 
+    }
 
 }

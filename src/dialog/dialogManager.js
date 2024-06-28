@@ -1,5 +1,5 @@
-import Textbox from './textbox.js'
-import Optionbox from './optionBox.js'
+import TextBox from './textbox.js'
+import OptionBox from './optionBox.js'
 
 export default class DialogManager extends Phaser.Scene {
     /**
@@ -13,7 +13,6 @@ export default class DialogManager extends Phaser.Scene {
         this.textbox = null;
         this.dialogs = [];
         this.textCount = 0;
-
         this.lastCharacter = "";
         this.playerName = "";
 
@@ -32,8 +31,8 @@ export default class DialogManager extends Phaser.Scene {
     }
 
     create() {
-        this.textbox = new Textbox(this);
-        this.textbox.hide();
+        this.textbox = new TextBox(this);
+        this.textbox.activate(false);
         this.activateOptions(false);
 
         this.currScene = null;
@@ -50,14 +49,10 @@ export default class DialogManager extends Phaser.Scene {
         this.currScene = scene;
         this.currScene.portraitCamera.setMask(this.portraitMask);
         if (this.textbox) {
-            this.textbox.hide();
+            this.textbox.activate(false);
             this.textbox.portraitCam = this.currScene.portraitCamera;
         }
         this.activateOptions(false);
-
-        // this.cameras.main.setMask(this.portraitMask);
-
-
     }
 
     // Pruebas
@@ -66,7 +61,7 @@ export default class DialogManager extends Phaser.Scene {
         this.activateOptions(false);
         this.setdialogs([
             {
-                text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Hac habitasse platea dictumst vestibulum rhoncus est pellentesque. Vulputate sapien nec sagittis aliquam. Massa vitae tortor condimentum lacinia. Duis tristique sollicitudin nibh sit amet commodo nulla facilisi. Libero nunc consequat interdum varius sit amet mattis vulputate. Molestie a iaculis at erat pellentesque adipiscing commodo elit. Id aliquet risus feugiat in ante metus dictum. Odio facilisis mauris sit amet massa. In aliquam sem fringilla ut morbi. Vel fringilla est ullamcorper eget nulla facilisi etiam dignissim. Tincidunt lobortis feugiat vivamus at augue eget. Ac turpis egestas integer eget aliquet. Urna cursus eget nunc scelerisque viverra mauris in aliquam. Ut placerat orci nulla pellentesque. Viverra nam libero justo laoreet sit amet cursus sit amet.",
+                text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Hac habitasse platea dictumst vestibulum rhoncus est pellentesque. Vulputate sapien nec sagittis aliquam. Massa vitae tortor condimentum lacinia. Duis tristique sollicitudin nibh sit amet commodo nulla facilisi. Libero nunc consequat interdum varius sit amet mattis vulputate. Molestie a iaculis at erat pellentesque adipiscing commodo elit. Id aliquet risus feugiat in ante metus dictum. Odio facilisis mauris sit amet massa.",
                 character: "player",
                 name: " ",
             },
@@ -77,18 +72,13 @@ export default class DialogManager extends Phaser.Scene {
             },
         ]);
         this.finished = false;
-        this.textbox.show();
+        this.textbox.activate(true);
     }
 
     test2() {
-        this.textbox.hide();
-        this.setOptions(["Opcion 1", "Opcion 2"]);
+        this.textbox.activate(false);
+        this.createOptions(["Opcion 1", "Opcion 2"]);
         this.activateOptions(true);
-    }
-
-    // Limpia los eventos de input
-    shutdown() {
-        this.input.keyboard.shutdown();
     }
 
     /**
@@ -102,6 +92,7 @@ export default class DialogManager extends Phaser.Scene {
         let splitDialogs = [];      // Nuevo array de dialogos tras dividir los dialogos demasiado largos
         let i = 0;                  // Indice del dialogo en el array de dialogos
         let txt = "";               // Texto del dialogo a separar
+
         let dialogCopy = { ...this.dialogs[i] };
         // Se establece el primer dialogo como el texto a separar
         if (this.dialogs.length > 0) txt = this.dialogs[i].text;
@@ -153,37 +144,38 @@ export default class DialogManager extends Phaser.Scene {
                 if (this.dialogs[i]) txt = this.dialogs[i].text;
             }
         }
-        // Muestra el primer dialogo del array
+
+        // Actualiza los dialogos
         this.dialogs = splitDialogs;
         this.lastCharacter = this.dialogs[this.textCount].character;
         this.textbox.setText(this.dialogs[this.textCount], true);
 
     }
 
-    setOptions(opts) {
+    
+    createOptions(opts) {
+        // Limpia las opciones
         this.options.forEach((option) => {
-            option.hide(() => { option.destroy(); });
+            option.activate(false, () => { option.destroy(); });
         });
         this.options = [];
         this.selectedOption = null;
+
+        // Crea las opciones y las guarda en el array
         for (let i = 0; i < opts.length; i++) {
-            this.options.push(new Optionbox(this, i, opts.length, opts[i]));
+            this.options.push(new OptionBox(this, i, opts.length, opts[i]));
         }
     }
 
+    // Activa/desactiva las cajas de opcion multiple
     activateOptions(active) {
-        if (active) this.selectedOption = null;
-        this.options.forEach((option) => {
-            if (active) option.show();
-            else option.hide();
-        });
+        this.selectedOption = null;
+        this.options.forEach((option) => { option.activate(active); });
     }
 
     selectOption(index) {
-        this.selectedOption = index;
         this.activateOptions(false);
-        this.options = [];
-
+        this.selectedOption = index;
         console.log("Selected option " + index);
     }
 
@@ -197,22 +189,24 @@ export default class DialogManager extends Phaser.Scene {
             // Actualiza el numero de dialogos
             this.textCount++;
 
-            // Si aun no se han escrito todos los dialogos, 
-            // escribe el siguiente
+            // Si aun no se han escrito todos los dialogos, escribe el siguiente
             if (this.textCount < this.dialogs.length) {
+                // Si es el mismo personaje el que habla, solo cambia el texto a mostrar
                 if (this.dialogs[this.textCount].character === this.lastCharacter) {
                     this.textbox.setText(this.dialogs[this.textCount], true);
                 }
+                // Si es otro, oculta la caja de texto y una vez oculta,
+                // actualiza el texto y el personaje y vuelve a mostrar la caja
                 else {
-                    this.textbox.hide(() => {
+                    this.textbox.activate(false, () => {
                         this.textbox.setText(this.dialogs[this.textCount], true);
-                        this.textbox.show();
+                        this.textbox.activate(true);
                     });
                 }
             }
             // Si se han acabado, desactiva la caja de texto
             else {
-                this.textbox.hide();
+                this.textbox.activate(false);
             }
         }
 

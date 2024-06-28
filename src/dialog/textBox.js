@@ -53,19 +53,20 @@ export default class OptionBox extends DialogObject {
 
         this.createText("");
         this.createName("");
-        
+
         this.box.alpha = 0;
         this.nameBox.alpha = 0;
         this.currText.alpha = 0;
         this.nameText.alpha = 0;
 
-        // Camara para mostrar el icono del personaje que habla
-        this.portraitCam = new Phaser.GameObjects.Container(scene, 0, 0);
+        // Retrato del personaje que habla
+        this.emptyPortrait = new Phaser.GameObjects.Container(scene, 0, 0);
+        this.portrait = this.emptyPortrait;
         this.playerTalking = false;
     }
 
     shutdown() {
-        // Limpia los eventos de texto
+        // Limpia los eventos y el texto
         if (this.timedEvent) this.timedEvent.remove();
         if (this.currText) this.currText.destroy();
         if (this.nameText) this.nameText.destroy();
@@ -97,7 +98,7 @@ export default class OptionBox extends DialogObject {
         // Se crea el texto que se va a escribir y el nombre del personaje
         this.createText(tempText, dialogInfo.character);
         this.createName(dialogInfo.name, dialogInfo.character);
-        
+
         if (animate) {
             // Se crea el evento 
             this.timedEvent = this.scene.time.addEvent({
@@ -125,7 +126,6 @@ export default class OptionBox extends DialogObject {
             x = 110;
             width = (this.scene.sys.game.canvas.width - this.padding) / 1.30;
         }
-
         // Crea el texto en la escena
         this.currText = super.createText(x, y, text, this.normalTextConfig, width);
     }
@@ -154,6 +154,15 @@ export default class OptionBox extends DialogObject {
 
         // Cambia el texto del objeto
         this.nameText.text = charName;
+    }
+    
+    /**
+    * Cambia el retrato del personaje hablando
+    * @param {string} character - id del personaje que habla
+    */
+    setPortrait(character) {
+        this.portrait = this.scene.portraits.get(character);
+        if (character == "player" || !this.portrait ) this.portrait = this.emptyPortrait;
     }
 
     // Anima el texto para que vaya apareciendo caracter a caracter
@@ -192,10 +201,14 @@ export default class OptionBox extends DialogObject {
         // Es visible si el alpha de la caja es 1
         let isVisible = this.box.alpha == 1;
 
+        if(active && isVisible) {
+            if (this.playerTalking) this.portrait.alpha = 0;
+        }
+
         // Si se va a activar y no es visible, aparece con animacion.
         if (active && !isVisible) {
             this.canWrite = false;
-            
+
             // Si es el jugador el que va a hablar, no muestra el retrato
             // del personaje que habla, y si no lo es, lo muestra
             if (this.playerTalking) {
@@ -204,11 +217,11 @@ export default class OptionBox extends DialogObject {
                     setTimeout(() => {
                         this.canWrite = true;
                     }, 200);
-                    
+
                 }, 0);
             }
             else {
-                super.activate(true, [this.box, this.nameBox, this.currText, this.nameText, this.portraitCam], () => {
+                super.activate(true, [this.box, this.nameBox, this.currText, this.nameText, this.portrait], () => {
                     this.box.setInteractive(true);
                     setTimeout(() => {
                         this.canWrite = true;
@@ -227,7 +240,7 @@ export default class OptionBox extends DialogObject {
                 super.activate(false, [this.box, this.nameBox, this.currText, this.nameText], onComplete, delay);
             }
             else {
-                super.activate(false, [this.box, this.nameBox, this.currText, this.nameText, this.portraitCam], onComplete, delay);
+                super.activate(false, [this.box, this.nameBox, this.currText, this.nameText, this.portrait], onComplete, delay);
             }
         }
     }

@@ -4,7 +4,7 @@ import OptionBox from './optionBox.js'
 export default class DialogManager extends Phaser.Scene {
     /**
     * Gestor de los dialogos. Crea la caja de texto y el texto y se encarga de actualizarlos.
-    * Los textos a escribir se deben establecer con el metodo setdialogs()
+    * Los textos a escribir se deben establecer con el metodo splitDialogs()
     * @extends Phaser.Scene
     */
     constructor() {
@@ -19,13 +19,11 @@ export default class DialogManager extends Phaser.Scene {
         this.options = [];
         this.selectedOption = null;
     }
-    
+
     create() {
         this.textbox = new TextBox(this);
         this.textbox.activate(false);
         this.activateOptions(false);
-
-        this.currScene = null;
 
         let mask = this.add.image(this.textbox.box.x, this.textbox.box.y, 'textboxMask');
         mask.setOrigin(this.textbox.box.originX, this.textbox.box.originY);
@@ -36,14 +34,15 @@ export default class DialogManager extends Phaser.Scene {
     }
 
     changeScene(scene) {
-        this.currScene = scene;
-        // this.currScene.portraitCamera.setMask(this.portraitMask);
-        
-        if (this.textbox) {
-            this.textbox.activate(false);
-            this.textbox.portraitCam = this.currScene.portraitCamera;
-            this.currScene.portraitCam
-        }
+        // Coge todos los retratos de los personajes de la escena y los copia en esta escena
+        this.portraits = new Map();
+        scene.portraits.forEach((value, key) => {
+            let p = this.add.existing(value);
+            this.portraits.set(key, p );
+        });
+
+        // Desactiva la caja de texto y las opciones (por si acaso)
+        if (this.textbox) this.textbox.activate(false);
         this.activateOptions(false);
     }
 
@@ -51,7 +50,8 @@ export default class DialogManager extends Phaser.Scene {
     test1() {
         this.playerName = "Paco";
         this.activateOptions(false);
-        this.setdialogs([
+        
+        this.splitDialogs([
             {
                 text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu non sodales neque sodales ut etiam sit amet. Tempus urna et pharetra pharetra massa massa ultricies. Pellentesque dignissim enim sit amet. Sit amet justo donec enim diam vulputate ut pharetra sit. Quisque sagittis purus sit amet volutpat. Nulla posuere sollicitudin aliquam ultrices sagittis orci. Euismod elementum nisi quis eleifend quam. Imperdiet sed euismod nisi porta lorem mollis aliquam. Lacus vestibulum sed arcu non odio euismod lacinia at quis.",
                 character: "player",
@@ -59,12 +59,12 @@ export default class DialogManager extends Phaser.Scene {
             },
             {
                 text: "Sit amet consectetur adipiscing elit ut aliquam purus sit. In nibh mauris cursus mattis molestie a iaculis at. Laoreet sit amet cursus sit amet dictum. Tellus mauris a diam maecenas sed enim. Diam donec adipiscing tristique risus nec feugiat in fermentum. Vulputate dignissim suspendisse in est ante. Scelerisque felis imperdiet proin fermentum leo vel. Id eu nisl nunc mi. Quam id leo in vitae. Posuere ac ut consequat semper viverra. Quam vulputate dignissim suspendisse in est. Volutpat sed cras ornare arcu dui vivamus arcu felis bibendum. Egestas tellus rutrum tellus pellentesque eu tincidunt tortor aliquam nulla. Commodo viverra maecenas accumsan lacus vel facilisis. Varius sit amet mattis vulputate enim nulla. Aenean sed adipiscing diam donec. Tempor id eu nisl nunc mi ipsum faucibus. Quisque sagittis purus sit amet volutpat.",
-                character: "b",
+                character: "mom",
                 name: "Personaje 2",
             },
             {
                 text: "Purus semper eget duis at tellus at urna. Quam elementum pulvinar etiam non quam lacus suspendisse faucibus interdum. Et molestie ac feugiat sed lectus vestibulum mattis ullamcorper. Diam maecenas ultricies mi eget mauris pharetra et ultrices. Convallis aenean et tortor at risus viverra adipiscing. Facilisis magna etiam tempor orci eu lobortis elementum nibh tellus. Mi quis hendrerit dolor magna eget est lorem ipsum. Sit amet facilisis magna etiam. Netus et malesuada fames ac turpis egestas. Nam at lectus urna duis. Tortor condimentum lacinia quis vel eros donec ac. Suscipit adipiscing bibendum est ultricies integer quis auctor elit. Urna et pharetra pharetra massa. A diam maecenas sed enim ut sem viverra. Ligula ullamcorper malesuada proin libero nunc. Id donec ultrices tincidunt arcu non sodales neque sodales ut. In mollis nunc sed id semper risus.",
-                character: "c",
+                character: "dad",
                 name: "La pola",
             },
             {
@@ -87,7 +87,7 @@ export default class DialogManager extends Phaser.Scene {
     * Cambia la serie de dialogos a mostrar
     * @param {Array} dialogs - la coleccion de dialogos que se mostraran. Cada objeto debera tener los atributos text, character, name (completar)
     */
-    setdialogs(dialogs) {
+    splitDialogs(dialogs) {
         let splitDialogs = [];      // Nuevo array de dialogos tras dividir los dialogos demasiado largos
         let i = 0;                  // Indice del dialogo en el array de dialogos
         let dialogCopy = "";        // Copia del dialogo con todos sus atributos
@@ -197,6 +197,7 @@ export default class DialogManager extends Phaser.Scene {
             this.textbox.forceFinish();
         }
         else {
+            // Actualiza el ultimo personaje que ha hablado
             this.lastCharacter = this.dialogs[this.textCount].character;
             
             // Actualiza el numero de dialogos
@@ -216,6 +217,9 @@ export default class DialogManager extends Phaser.Scene {
                         this.textbox.activate(true);
                     });
                 }
+
+                // Cambia el retrato a mostrar
+                this.textbox.setPortrait(this.dialogs[this.textCount].character);
             }
             // Si se han acabado, desactiva la caja de texto
             else {

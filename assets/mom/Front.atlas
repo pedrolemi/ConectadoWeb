@@ -1,0 +1,285 @@
+
+Front.png
+size: 2039,1955
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+ArmKbit
+  rotate: true
+  xy: 394, 1511
+  size: 186, 443
+  orig: 188, 447
+  offset: 1, 2
+  index: -1
+ArmLtop
+  rotate: true
+  xy: 2, 999
+  size: 289, 729
+  orig: 291, 731
+  offset: 1, 1
+  index: -1
+ArmRbot
+  rotate: true
+  xy: 839, 1452
+  size: 186, 443
+  orig: 188, 447
+  offset: 1, 2
+  index: -1
+ArmRtop
+  rotate: true
+  xy: 1037, 405
+  size: 327, 746
+  orig: 329, 748
+  offset: 1, 1
+  index: -1
+Boca01
+  rotate: false
+  xy: 2, 1916
+  size: 154, 37
+  orig: 157, 39
+  offset: 2, 1
+  index: -1
+Boca02
+  rotate: true
+  xy: 1269, 1818
+  size: 135, 141
+  orig: 138, 144
+  offset: 1, 2
+  index: -1
+Boca03
+  rotate: false
+  xy: 664, 1871
+  size: 87, 82
+  orig: 89, 84
+  offset: 1, 1
+  index: -1
+Boca04
+  rotate: false
+  xy: 336, 1887
+  size: 163, 66
+  orig: 165, 68
+  offset: 1, 1
+  index: -1
+Boca05
+  rotate: false
+  xy: 501, 1887
+  size: 161, 66
+  orig: 164, 68
+  offset: 1, 1
+  index: -1
+BocaBase
+  rotate: false
+  xy: 158, 1897
+  size: 176, 56
+  orig: 178, 58
+  offset: 1, 1
+  index: -1
+FootLfront
+  rotate: false
+  xy: 1669, 1159
+  size: 368, 387
+  orig: 370, 390
+  offset: 1, 1
+  index: -1
+FootLlifted
+  rotate: true
+  xy: 2, 632
+  size: 365, 606
+  orig: 368, 608
+  offset: 2, 1
+  index: -1
+FootLmidLift
+  rotate: true
+  xy: 1182, 1108
+  size: 336, 422
+  orig: 338, 424
+  offset: 1, 1
+  index: -1
+FootLmidSide
+  rotate: false
+  xy: 1157, 734
+  size: 427, 372
+  orig: 430, 375
+  offset: 1, 2
+  index: -1
+FootRfront
+  rotate: true
+  xy: 1606, 789
+  size: 368, 387
+  orig: 370, 390
+  offset: 1, 1
+  index: -1
+FootRlifted
+  rotate: true
+  xy: 2, 265
+  size: 365, 606
+  orig: 368, 608
+  offset: 1, 1
+  index: -1
+FootRmidLift
+  rotate: true
+  xy: 733, 877
+  size: 336, 422
+  orig: 338, 424
+  offset: 1, 1
+  index: -1
+HairBack
+  rotate: false
+  xy: 2, 1731
+  size: 317, 164
+  orig: 319, 166
+  offset: 1, 1
+  index: -1
+HairFL
+  rotate: true
+  xy: 753, 1865
+  size: 88, 297
+  orig: 91, 299
+  offset: 1, 1
+  index: -1
+HairFr
+  rotate: true
+  xy: 1052, 1862
+  size: 91, 215
+  orig: 93, 217
+  offset: 1, 1
+  index: -1
+HandLclosed
+  rotate: true
+  xy: 1672, 1548
+  size: 182, 256
+  orig: 184, 259
+  offset: 1, 1
+  index: -1
+HandLmid
+  rotate: true
+  xy: 771, 1215
+  size: 235, 409
+  orig: 237, 412
+  offset: 1, 1
+  index: -1
+HandLrelaxed
+  rotate: true
+  xy: 706, 1699
+  size: 161, 481
+  orig: 163, 483
+  offset: 1, 1
+  index: -1
+HandRrelaxed
+  rotate: true
+  xy: 1189, 1640
+  size: 161, 481
+  orig: 163, 483
+  offset: 1, 1
+  index: -1
+LegBotR
+  rotate: true
+  xy: 610, 2
+  size: 401, 836
+  orig: 403, 838
+  offset: 1, 1
+  index: -1
+Neck
+  rotate: true
+  xy: 1797, 1732
+  size: 221, 224
+  orig: 224, 227
+  offset: 2, 2
+  index: -1
+Ojos01
+  rotate: false
+  xy: 386, 1290
+  size: 383, 219
+  orig: 385, 221
+  offset: 1, 1
+  index: -1
+Ojos02
+  rotate: false
+  xy: 1412, 1803
+  size: 383, 150
+  orig: 385, 152
+  offset: 1, 1
+  index: -1
+Ojos03
+  rotate: false
+  xy: 2, 1340
+  size: 382, 199
+  orig: 385, 201
+  offset: 1, 1
+  index: -1
+Ojos04
+  rotate: false
+  xy: 1284, 1446
+  size: 383, 192
+  orig: 385, 194
+  offset: 1, 1
+  index: -1
+OjosBase
+  rotate: false
+  xy: 321, 1710
+  size: 383, 159
+  orig: 385, 161
+  offset: 1, 1
+  index: -1
+OjosCerrados
+  rotate: false
+  xy: 2, 1541
+  size: 390, 167
+  orig: 392, 169
+  offset: 1, 1
+  index: -1
+footRmidSide
+  rotate: false
+  xy: 610, 454
+  size: 425, 421
+  orig: 428, 423
+  offset: 2, 1
+  index: -1
+
+Front2.png
+size: 1716,1835
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Chest
+  rotate: false
+  xy: 2, 867
+  size: 741, 966
+  orig: 745, 968
+  offset: 3, 1
+  index: -1
+Head
+  rotate: true
+  xy: 633, 42
+  size: 600, 638
+  orig: 602, 641
+  offset: 1, 2
+  index: -1
+Hips
+  rotate: true
+  xy: 2, 40
+  size: 825, 629
+  orig: 828, 631
+  offset: 1, 1
+  index: -1
+LegTopL
+  rotate: false
+  xy: 1242, 928
+  size: 472, 905
+  orig: 474, 907
+  offset: 1, 1
+  index: -1
+LegTopR
+  rotate: false
+  xy: 745, 644
+  size: 495, 1189
+  orig: 498, 1191
+  offset: 1, 1
+  index: -1
+LegbotL
+  rotate: false
+  xy: 1273, 2
+  size: 405, 924
+  orig: 407, 927
+  offset: 1, 2
+  index: -1

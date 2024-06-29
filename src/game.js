@@ -16,6 +16,8 @@ const config = {
         antialias: true,
         transparent: true,
     },
+    /*
+    No hacen falta
     physics: { 
         default: 'arcade', 
         arcade: { 
@@ -23,6 +25,13 @@ const config = {
            debug: true,   
         },
     },
+    */
+    plugins: {
+        // Plugin para utilizar animaciones esqueletales creadas con Spine
+		scene: [
+			{ key: 'SpinePlugin', plugin: window.SpinePlugin, mapping: 'spine' }
+		]
+	},
 	scale: {
 		autoCenter: Phaser.Scale.CENTER_BOTH,   // CENTER_BOTH, CENTER_HORIZONTALLY, CENTER_VERTICALLY
 		mode: Phaser.Scale.FIT,                 // ENVELOP, FIT, HEIGHT_CONTROLS_WIDTH, NONE, RESIZE, WIDTH_CONTROLS_HEIGHT

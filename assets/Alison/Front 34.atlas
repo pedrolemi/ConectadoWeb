@@ -1,0 +1,313 @@
+
+Front 34.png
+size: 1984,1944
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Boca1
+  rotate: false
+  xy: 161, 1866
+  size: 176, 76
+  orig: 178, 78
+  offset: 1, 1
+  index: -1
+Boca2
+  rotate: false
+  xy: 666, 1846
+  size: 165, 96
+  orig: 168, 98
+  offset: 2, 1
+  index: -1
+Boca3
+  rotate: false
+  xy: 833, 1837
+  size: 112, 105
+  orig: 114, 107
+  offset: 1, 1
+  index: -1
+Boca4
+  rotate: false
+  xy: 339, 1866
+  size: 151, 76
+  orig: 153, 79
+  offset: 1, 2
+  index: -1
+Boca5
+  rotate: false
+  xy: 492, 1860
+  size: 172, 82
+  orig: 174, 85
+  offset: 1, 2
+  index: -1
+BocaBase
+  rotate: false
+  xy: 2, 1869
+  size: 157, 73
+  orig: 159, 75
+  offset: 1, 1
+  index: -1
+Hips
+  rotate: false
+  xy: 1270, 2
+  size: 613, 393
+  orig: 615, 395
+  offset: 1, 1
+  index: -1
+LarmB
+  rotate: true
+  xy: 386, 278
+  size: 333, 418
+  orig: 335, 421
+  offset: 1, 2
+  index: -1
+LarmT
+  rotate: true
+  xy: 806, 138
+  size: 376, 462
+  orig: 379, 465
+  offset: 1, 2
+  index: -1
+LfootFront
+  rotate: true
+  xy: 924, 840
+  size: 291, 517
+  orig: 294, 519
+  offset: 1, 1
+  index: -1
+LfootLifted
+  rotate: true
+  xy: 1100, 1133
+  size: 282, 440
+  orig: 284, 442
+  offset: 1, 1
+  index: -1
+Lhand
+  rotate: true
+  xy: 324, 1193
+  size: 282, 325
+  orig: 284, 329
+  offset: 1, 2
+  index: -1
+LhandMidClosed
+  rotate: true
+  xy: 1549, 1300
+  size: 250, 320
+  orig: 252, 322
+  offset: 1, 1
+  index: -1
+LhandMidSide
+  rotate: true
+  xy: 753, 1447
+  size: 219, 396
+  orig: 221, 399
+  offset: 1, 1
+  index: -1
+LhandOpenFront
+  rotate: false
+  xy: 1416, 397
+  size: 382, 324
+  orig: 384, 326
+  offset: 1, 1
+  index: -1
+LhandRelaxed
+  rotate: true
+  xy: 2, 971
+  size: 301, 317
+  orig: 304, 320
+  offset: 2, 1
+  index: -1
+LhandSideRelaxed
+  rotate: true
+  xy: 1584, 1552
+  size: 175, 352
+  orig: 177, 354
+  offset: 1, 1
+  index: -1
+LlegB
+  rotate: true
+  xy: 321, 613
+  size: 310, 601
+  orig: 313, 605
+  offset: 2, 2
+  index: -1
+NEck
+  rotate: false
+  xy: 1731, 1729
+  size: 218, 213
+  orig: 220, 215
+  offset: 1, 1
+  index: -1
+Ojos1
+  rotate: false
+  xy: 1339, 1807
+  size: 390, 135
+  orig: 393, 137
+  offset: 2, 1
+  index: -1
+Ojos2
+  rotate: false
+  xy: 947, 1827
+  size: 390, 115
+  orig: 393, 117
+  offset: 1, 1
+  index: -1
+Ojos3
+  rotate: false
+  xy: 1186, 1638
+  size: 396, 167
+  orig: 398, 169
+  offset: 1, 1
+  index: -1
+Ojos4
+  rotate: false
+  xy: 798, 1668
+  size: 386, 157
+  orig: 388, 159
+  offset: 1, 1
+  index: -1
+OjosBase
+  rotate: false
+  xy: 2, 1726
+  size: 390, 138
+  orig: 393, 140
+  offset: 2, 1
+  index: -1
+RarmB
+  rotate: true
+  xy: 651, 1187
+  size: 258, 447
+  orig: 262, 449
+  offset: 2, 1
+  index: -1
+RarmTop
+  rotate: true
+  xy: 924, 516
+  size: 322, 490
+  orig: 324, 493
+  offset: 1, 2
+  index: -1
+RfootFront
+  rotate: true
+  xy: 1443, 723
+  size: 291, 517
+  orig: 294, 519
+  offset: 2, 1
+  index: -1
+RfootLifted
+  rotate: true
+  xy: 1542, 1016
+  size: 282, 440
+  orig: 284, 442
+  offset: 1, 1
+  index: -1
+Rhand
+  rotate: true
+  xy: 367, 1477
+  size: 215, 384
+  orig: 217, 387
+  offset: 1, 1
+  index: -1
+RhandFront
+  rotate: true
+  xy: 367, 1477
+  size: 215, 384
+  orig: 217, 387
+  offset: 1, 1
+  index: -1
+RhandMidClosed
+  rotate: true
+  xy: 2, 1274
+  size: 250, 320
+  orig: 252, 322
+  offset: 1, 1
+  index: -1
+RhandMidSide
+  rotate: true
+  xy: 1151, 1417
+  size: 219, 396
+  orig: 221, 399
+  offset: 1, 1
+  index: -1
+RhandOpenFront
+  rotate: false
+  xy: 2, 287
+  size: 382, 324
+  orig: 384, 326
+  offset: 1, 1
+  index: -1
+RhandRelaxed
+  rotate: true
+  xy: 2, 668
+  size: 301, 317
+  orig: 304, 320
+  offset: 1, 1
+  index: -1
+RlegB
+  rotate: true
+  xy: 321, 925
+  size: 260, 601
+  orig: 262, 603
+  offset: 1, 1
+  index: -1
+RsideSideRelaxed
+  rotate: true
+  xy: 2, 1526
+  size: 198, 363
+  orig: 200, 367
+  offset: 1, 2
+  index: -1
+ojos cerrados
+  rotate: false
+  xy: 394, 1694
+  size: 402, 150
+  orig: 404, 152
+  offset: 1, 1
+  index: -1
+
+Front 342.png
+size: 1825,1346
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Chest
+  rotate: false
+  xy: 2, 428
+  size: 614, 916
+  orig: 616, 919
+  offset: 1, 2
+  index: -1
+Head
+  rotate: true
+  xy: 618, 622
+  size: 722, 686
+  orig: 724, 689
+  offset: 1, 2
+  index: -1
+LfootSideways
+  rotate: false
+  xy: 985, 150
+  size: 397, 470
+  orig: 399, 472
+  offset: 1, 1
+  index: -1
+LlegT
+  rotate: true
+  xy: 2, 4
+  size: 422, 981
+  orig: 440, 983
+  offset: 1, 1
+  index: -1
+RfootSideways
+  rotate: true
+  xy: 1306, 947
+  size: 397, 470
+  orig: 399, 472
+  offset: 1, 1
+  index: -1
+RlegT
+  rotate: false
+  xy: 1384, 2
+  size: 439, 943
+  orig: 443, 945
+  offset: 2, 1
+  index: -1

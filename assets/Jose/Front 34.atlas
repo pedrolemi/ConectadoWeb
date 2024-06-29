@@ -1,0 +1,270 @@
+
+Front 34.png
+size: 2033,1950
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+ArmLbot
+  rotate: true
+  xy: 736, 1254
+  size: 280, 461
+  orig: 290, 469
+  offset: 2, 1
+  index: -1
+ArmRbot
+  rotate: true
+  xy: 1199, 1193
+  size: 280, 460
+  orig: 293, 468
+  offset: 11, 1
+  index: -1
+ArmRtop
+  rotate: true
+  xy: 2, 2
+  size: 418, 833
+  orig: 443, 858
+  offset: 1, 23
+  index: -1
+Boca01
+  rotate: false
+  xy: 220, 1866
+  size: 114, 82
+  orig: 116, 84
+  offset: 1, 1
+  index: -1
+Boca02
+  rotate: false
+  xy: 559, 1853
+  size: 104, 95
+  orig: 106, 97
+  offset: 1, 1
+  index: -1
+Boca03
+  rotate: true
+  xy: 336, 1863
+  size: 85, 92
+  orig: 87, 94
+  offset: 1, 1
+  index: -1
+Boca04
+  rotate: false
+  xy: 111, 1873
+  size: 107, 75
+  orig: 109, 77
+  offset: 1, 1
+  index: -1
+Boca05
+  rotate: false
+  xy: 430, 1860
+  size: 127, 88
+  orig: 129, 90
+  offset: 1, 1
+  index: -1
+BocaBase
+  rotate: false
+  xy: 2, 1877
+  size: 107, 71
+  orig: 109, 73
+  offset: 1, 1
+  index: -1
+FootLfront
+  rotate: true
+  xy: 1661, 1170
+  size: 303, 370
+  orig: 347, 374
+  offset: 1, 1
+  index: -1
+FootLside
+  rotate: false
+  xy: 713, 854
+  size: 522, 337
+  orig: 525, 342
+  offset: 2, 1
+  index: -1
+FootRfront
+  rotate: false
+  xy: 2, 1004
+  size: 303, 370
+  orig: 347, 374
+  offset: 43, 1
+  index: -1
+FootRside
+  rotate: false
+  xy: 1237, 831
+  size: 522, 337
+  orig: 525, 342
+  offset: 1, 1
+  index: -1
+HairF
+  rotate: false
+  xy: 1264, 1762
+  size: 193, 186
+  orig: 195, 188
+  offset: 1, 1
+  index: -1
+HandLbackpack
+  rotate: true
+  xy: 1767, 1718
+  size: 230, 231
+  orig: 251, 234
+  offset: 2, 2
+  index: -1
+HandLopen
+  rotate: true
+  xy: 2, 1376
+  size: 247, 365
+  orig: 250, 367
+  offset: 2, 1
+  index: -1
+HandLrelaxed
+  rotate: true
+  xy: 322, 1625
+  size: 226, 328
+  orig: 228, 330
+  offset: 1, 1
+  index: -1
+HandRbackpack
+  rotate: false
+  xy: 652, 1537
+  size: 248, 235
+  orig: 250, 237
+  offset: 1, 1
+  index: -1
+HandRopen
+  rotate: true
+  xy: 369, 1288
+  size: 247, 365
+  orig: 250, 367
+  offset: 1, 1
+  index: -1
+HandRrelaxed
+  rotate: true
+  xy: 902, 1536
+  size: 226, 328
+  orig: 228, 330
+  offset: 1, 1
+  index: -1
+Hips
+  rotate: true
+  xy: 1446, 19
+  size: 810, 452
+  orig: 813, 454
+  offset: 1, 1
+  index: -1
+LegLbot
+  rotate: true
+  xy: 725, 422
+  size: 407, 719
+  orig: 410, 745
+  offset: 2, 2
+  index: -1
+LegRbot
+  rotate: true
+  xy: 2, 479
+  size: 373, 721
+  orig: 375, 724
+  offset: 1, 2
+  index: -1
+Neck
+  rotate: false
+  xy: 307, 969
+  size: 404, 317
+  orig: 409, 339
+  offset: 2, 20
+  index: -1
+Ojos01
+  rotate: false
+  xy: 665, 1774
+  size: 297, 174
+  orig: 299, 200
+  offset: 1, 1
+  index: -1
+Ojos02
+  rotate: false
+  xy: 964, 1764
+  size: 298, 184
+  orig: 300, 186
+  offset: 1, 1
+  index: -1
+Ojos03
+  rotate: false
+  xy: 1528, 1475
+  size: 307, 241
+  orig: 309, 243
+  offset: 1, 1
+  index: -1
+Ojos04
+  rotate: false
+  xy: 1232, 1497
+  size: 294, 235
+  orig: 296, 237
+  offset: 1, 1
+  index: -1
+OjosBase
+  rotate: false
+  xy: 1459, 1734
+  size: 306, 214
+  orig: 308, 216
+  offset: 1, 1
+  index: -1
+OjosCerrados
+  rotate: false
+  xy: 2, 1639
+  size: 318, 225
+  orig: 320, 227
+  offset: 1, 1
+  index: -1
+
+Front 342.png
+size: 1709,1956
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+ArmLtop
+  rotate: true
+  xy: 891, 1496
+  size: 458, 816
+  orig: 469, 845
+  offset: 10, 28
+  index: -1
+CoreBackpack
+  rotate: true
+  xy: 2, 2
+  size: 791, 1273
+  orig: 810, 1276
+  offset: 1, 1
+  index: -1
+Head
+  rotate: true
+  xy: 824, 795
+  size: 699, 772
+  orig: 701, 777
+  offset: 1, 4
+  index: -1
+LegLtop
+  rotate: true
+  xy: 2, 1502
+  size: 452, 887
+  orig: 455, 889
+  offset: 1, 1
+  index: -1
+LegRtop
+  rotate: true
+  xy: 2, 1021
+  size: 479, 820
+  orig: 538, 824
+  offset: 1, 2
+  index: -1
+
+Front 343.png
+size: 795,1277
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+CoreBase
+  rotate: false
+  xy: 2, 2
+  size: 791, 1273
+  orig: 810, 1276
+  offset: 1, 1
+  index: -1

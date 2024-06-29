@@ -7,8 +7,8 @@ export default class BaseScene extends Phaser.Scene {
         this.dialogManager = this.scene.get('DialogManager');
         this.portraits = new Map();
 
-        this.portraitX = 120;
-        this.portraitY = 800;
+        this.portraitX = 110;
+        this.portraitY = 1000;
         this.portraitScale = 0.1;
     }
 

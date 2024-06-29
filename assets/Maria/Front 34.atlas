@@ -1,0 +1,292 @@
+
+Front 34.png
+size: 2031,1989
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Boca1
+  rotate: false
+  xy: 2, 1911
+  size: 143, 76
+  orig: 145, 78
+  offset: 1, 1
+  index: -1
+Boca2
+  rotate: false
+  xy: 490, 1894
+  size: 128, 93
+  orig: 130, 141
+  offset: 1, 1
+  index: -1
+Boca3
+  rotate: true
+  xy: 620, 1890
+  size: 97, 113
+  orig: 100, 115
+  offset: 2, 1
+  index: -1
+Boca4
+  rotate: false
+  xy: 287, 1907
+  size: 85, 80
+  orig: 87, 82
+  offset: 1, 1
+  index: -1
+Boca5
+  rotate: false
+  xy: 147, 1910
+  size: 138, 77
+  orig: 140, 79
+  offset: 1, 1
+  index: -1
+BocaBase
+  rotate: false
+  xy: 374, 1901
+  size: 114, 86
+  orig: 117, 88
+  offset: 1, 1
+  index: -1
+Glasses
+  rotate: false
+  xy: 1121, 1608
+  size: 443, 204
+  orig: 445, 206
+  offset: 1, 1
+  index: -1
+HairF
+  rotate: true
+  xy: 1520, 334
+  size: 330, 466
+  orig: 332, 468
+  offset: 1, 1
+  index: -1
+Hips
+  rotate: false
+  xy: 1422, 986
+  size: 607, 287
+  orig: 616, 289
+  offset: 1, 1
+  index: -1
+LarmB
+  rotate: false
+  xy: 1447, 1275
+  size: 459, 258
+  orig: 461, 286
+  offset: 1, 1
+  index: -1
+LarmT
+  rotate: true
+  xy: 415, 2
+  size: 361, 697
+  orig: 365, 700
+  offset: 2, 2
+  index: -1
+LefootIdle
+  rotate: true
+  xy: 2, 488
+  size: 338, 375
+  orig: 340, 377
+  offset: 1, 1
+  index: -1
+LfootWalk
+  rotate: true
+  xy: 2, 1476
+  size: 218, 383
+  orig: 221, 385
+  offset: 1, 1
+  index: -1
+LhandMidClosed
+  rotate: true
+  xy: 1119, 1317
+  size: 289, 326
+  orig: 291, 328
+  offset: 1, 1
+  index: -1
+LhandOpen
+  rotate: false
+  xy: 446, 807
+  size: 394, 313
+  orig: 396, 316
+  offset: 1, 2
+  index: -1
+LhandPhone
+  rotate: false
+  xy: 1614, 666
+  size: 409, 318
+  orig: 411, 320
+  offset: 1, 1
+  index: -1
+LhandRelaxed
+  rotate: false
+  xy: 2, 1173
+  size: 350, 301
+  orig: 352, 303
+  offset: 1, 1
+  index: -1
+LlefB
+  rotate: true
+  xy: 764, 365
+  size: 325, 754
+  orig: 338, 757
+  offset: 1, 2
+  index: -1
+Neck
+  rotate: true
+  xy: 1835, 1745
+  size: 242, 185
+  orig: 245, 187
+  offset: 2, 1
+  index: -1
+Ojos05
+  rotate: false
+  xy: 1461, 1814
+  size: 372, 173
+  orig: 374, 175
+  offset: 1, 1
+  index: -1
+Ojos1
+  rotate: false
+  xy: 1088, 1823
+  size: 371, 164
+  orig: 373, 166
+  offset: 1, 1
+  index: -1
+Ojos2
+  rotate: false
+  xy: 375, 1696
+  size: 371, 179
+  orig: 373, 181
+  offset: 1, 1
+  index: -1
+Ojos3
+  rotate: false
+  xy: 1566, 1535
+  size: 378, 208
+  orig: 380, 210
+  offset: 1, 1
+  index: -1
+Ojos4
+  rotate: false
+  xy: 748, 1628
+  size: 371, 193
+  orig: 373, 195
+  offset: 1, 1
+  index: -1
+OjosBase
+  rotate: false
+  xy: 2, 1726
+  size: 371, 173
+  orig: 373, 175
+  offset: 1, 1
+  index: -1
+RarmB
+  rotate: false
+  xy: 2, 828
+  size: 442, 292
+  orig: 449, 296
+  offset: 1, 2
+  index: -1
+RarmT
+  rotate: true
+  xy: 354, 1122
+  size: 284, 723
+  orig: 286, 725
+  offset: 1, 1
+  index: -1
+RfootIdle
+  rotate: true
+  xy: 379, 467
+  size: 338, 383
+  orig: 340, 385
+  offset: 1, 1
+  index: -1
+RfootWalk
+  rotate: true
+  xy: 734, 1408
+  size: 218, 383
+  orig: 221, 385
+  offset: 2, 1
+  index: -1
+RhandMidClosed
+  rotate: true
+  xy: 387, 1427
+  size: 267, 345
+  orig: 271, 347
+  offset: 2, 1
+  index: -1
+RhandOpen
+  rotate: false
+  xy: 2, 110
+  size: 411, 355
+  orig: 414, 357
+  offset: 2, 1
+  index: -1
+RhandRelaxed
+  rotate: true
+  xy: 1079, 991
+  size: 324, 341
+  orig: 327, 344
+  offset: 1, 1
+  index: -1
+RlegB
+  rotate: true
+  xy: 842, 692
+  size: 292, 770
+  orig: 296, 778
+  offset: 2, 7
+  index: -1
+ojos cerrados
+  rotate: false
+  xy: 735, 1877
+  size: 351, 110
+  orig: 359, 112
+  offset: 7, 1
+  index: -1
+
+Front 342.png
+size: 1813,1670
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Core
+  rotate: true
+  xy: 2, 1020
+  size: 648, 1001
+  orig: 658, 1003
+  offset: 2, 1
+  index: -1
+Face
+  rotate: false
+  xy: 1005, 950
+  size: 640, 718
+  orig: 643, 720
+  offset: 1, 1
+  index: -1
+HairBack
+  rotate: false
+  xy: 915, 2
+  size: 442, 946
+  orig: 444, 948
+  offset: 1, 1
+  index: -1
+LlegT
+  rotate: false
+  xy: 453, 31
+  size: 460, 987
+  orig: 462, 990
+  offset: 1, 2
+  index: -1
+RhandBook
+  rotate: false
+  xy: 1359, 385
+  size: 452, 563
+  orig: 456, 566
+  offset: 2, 2
+  index: -1
+RlegT
+  rotate: false
+  xy: 2, 28
+  size: 449, 990
+  orig: 451, 993
+  offset: 1, 2
+  index: -1

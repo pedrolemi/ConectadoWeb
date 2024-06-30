@@ -33,11 +33,15 @@ export default class Test extends BaseScene {
         portraitTrans.y = this.portraitY;
         portraitTrans.scale = this.portraitScale;
 
-        let mom = new Character(this, "mom", trans, portraitTrans, this.dialogManager, this.dialogManager.test2);
+        let mom = new Character(this, "mom", trans, portraitTrans, () => {
+            this.dialogManager.test2();
+        });
         mom.setAnimation("Walk", true);
         
         trans.x = CANVAS_WIDTH / 1.5;
-        let dad = new Character(this, "dad", trans, portraitTrans, this.dialogManager, this.dialogManager.test1);
+        let dad = new Character(this, "dad", trans, portraitTrans, () => {
+            this.dialogManager.test1();
+        });
         dad.setAnimation("Idle01", true);
 
         //let madre = this.add.spine(0, CANVAS_HEIGHT / 2, "madre", "walk");

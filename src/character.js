@@ -8,22 +8,25 @@ export default class Character {
     * @param {object} dialogContext - contexto de la funcion del dialogo
     * @param {function} dialog - funcion con el dialogo que reproduce el personaje
     */
-    constructor(scene, key, trans, portraitTrans, dialogContext, dialog){
+    constructor(scene, key, trans, portraitTrans, dialog){
         this.scene = scene;
 
         this.anims = [];
 
         // se crear el personaje y sus animaciones esqueletales de Spine
+        // nota: el origen es (0.5, 1). No se puede modificar
         this.char = this.scene.add.spine(trans.x, trans.y, key);
         this.char.setScale(trans.scale);
         this.char.setInteractive();
         this.anims.push(this.char);
 
         // Prueba
+        this.dialog = dialog;
         this.char.on('pointerdown', () => {
             // llamar a la funcion con el contexto adecuado
             // en caso de no especificar el contexto se llamaria con this
-            dialog.call(dialogContext);
+            //dialog.call(dialogContext);
+            this.dialog();
         });
 
         // se crea el retrato y sus animaciones esquelates de Spine
@@ -60,5 +63,9 @@ export default class Character {
     setActive(enable){
         this.char.setVisible(enable);
         this.char.setInteractive(enable);
+    }
+
+    changeDialog(dialog){
+        this.dialog = dialog;
     }
 }

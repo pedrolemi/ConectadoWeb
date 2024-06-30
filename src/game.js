@@ -17,7 +17,7 @@ const config = {
         transparent: true,
     },
     /*
-    No hacen falta
+    COMENTAR: No creo que hagan falta fisicas
     physics: { 
         default: 'arcade', 
         arcade: { 

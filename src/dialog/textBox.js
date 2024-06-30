@@ -12,7 +12,7 @@ export default class OptionBox extends DialogObject {
         this.padding = 10;        // Espacio entre la caja y los bordes del canvas
 
         // Imagen de la caja
-        this.box = this.scene.add.image(this.scene.sys.game.canvas.width / 2, this.scene.sys.game.canvas.height - this.padding, 'textbox').setOrigin(0.5, 1);
+        this.box = this.scene.add.image(this.scene.sys.game.canvas.width / 2, this.scene.sys.game.canvas.height - this.padding, 'dialog', 'textbox.png').setOrigin(0.5, 1);
         let horizontalScale = (this.scene.sys.game.canvas.width - this.padding * 2) / this.box.width;
         this.box.setScale(horizontalScale, 1);
         this.box.visible = true;
@@ -23,7 +23,7 @@ export default class OptionBox extends DialogObject {
         });
 
         // Imagen de la caja del nombre
-        this.nameBox = this.scene.add.image(this.scene.sys.game.canvas.width / 2, this.scene.sys.game.canvas.height - this.padding, 'textboxName').setOrigin(0.5, 1);
+        this.nameBox = this.scene.add.image(this.scene.sys.game.canvas.width / 2, this.scene.sys.game.canvas.height - this.padding, 'dialog', 'textboxName.png').setOrigin(0.5, 1);
         this.nameBox.setScale(horizontalScale, 1);
         this.nameBox.visible = true;
 

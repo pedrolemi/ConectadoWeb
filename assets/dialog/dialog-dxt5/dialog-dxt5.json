@@ -1,0 +1,52 @@
+{"frames": {
+
+"optionBg.png":
+{
+	"frame": {"x":1,"y":1,"w":1277,"h":62},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":3,"w":1277,"h":62},
+	"sourceSize": {"w":1277,"h":68}
+},
+"optionBgOpaque.png":
+{
+	"frame": {"x":1,"y":65,"w":1277,"h":62},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":3,"w":1277,"h":62},
+	"sourceSize": {"w":1277,"h":68}
+},
+"textbox.png":
+{
+	"frame": {"x":1,"y":129,"w":916,"h":219},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":2,"y":31,"w":916,"h":219},
+	"sourceSize": {"w":920,"h":250}
+},
+"textboxMask.png":
+{
+	"frame": {"x":919,"y":129,"w":907,"h":201},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":5,"y":43,"w":907,"h":201},
+	"sourceSize": {"w":920,"h":250}
+},
+"textboxName.png":
+{
+	"frame": {"x":1280,"y":1,"w":218,"h":62},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":126,"y":4,"w":218,"h":62},
+	"sourceSize": {"w":920,"h":250}
+}},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "dialog-dxt5.pvr",
+	"format": "DXT5",
+	"size": {"w":2048,"h":512},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:2e0447c1a497cb37370241d7c6414cc1:84fac6e9d653d9e55f7422b8ea373325:f9fc9eb8bf40c0a760078180ab76bd59$"
+}
+}

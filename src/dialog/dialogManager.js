@@ -56,12 +56,6 @@ export default class DialogManager extends Phaser.Scene {
     test1() {
         this.playerName = "Paco";
         this.activateOptions(false);
-        
-        let i18next = this.plugins.get('rextexttranslationplugin');
-        let dialog = {}
-        dialog.text = i18next.t('dialog.text', { ns: 'day1', name: 'John', context: 'male' });
-        dialog.character = i18next.t('dialog.character', { ns: 'day1' });
-        dialog.name = i18next.t('dialog.name', { ns: 'day1' });
 
         this.finished = false;
 

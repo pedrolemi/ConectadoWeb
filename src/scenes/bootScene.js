@@ -70,13 +70,13 @@ export default class BootScene extends Phaser.Scene {
             // idioma inicial
             lng: 'en-UK',
             // solo se mantiene cargado el idioma que se usa (mejora el rendimiento del server)
-            load: 'current',
+            //load: 'current',
             // en caso de que no se encuentra una key en otro idioma se comprueba en los siguientes en orden
             fallbackLng: 'en-UK',
             // idiomas permitidos
             // Sin esta propiedad a la hora de buscar las traducciones se podria buscar
             // en cualquier idioma (aunque o existiese)
-            //supportedLngs: ['en-UK', 'es-ES'],
+            supportedLngs: ['en-UK', 'es-ES'],
             // namespaces que se cargan para cada uno de los idiomas
             ns: ['day1', 'day2'],
             // mostrar informacion de ayuda por consola

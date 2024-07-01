@@ -54,6 +54,11 @@ export default class Test extends BaseScene {
             portrait.setMask(this.dialogManager.portraitMask)
         });
 
+        let i18next = this.plugins.get('rextexttranslationplugin');
+        let dialog = {}
+        dialog.text = i18next.t('dialog.text', { ns: 'day1', name: 'John', context: 'male' });
+        dialog.character = i18next.t('dialog.character', { ns: 'day1' });
+        dialog.name = i18next.t('dialog.name', { ns: 'day1' });
 
         this.dialogManager.changeScene(this);
         this.dialogManager.setDialogs([
@@ -77,6 +82,7 @@ export default class Test extends BaseScene {
                 character: "player",
                 name: " ",
             },
+            dialog
         ]);
         
     }

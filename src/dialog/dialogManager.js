@@ -4,7 +4,8 @@ import OptionBox from './optionBox.js'
 export default class DialogManager extends Phaser.Scene {
     /**
     * Gestor de los dialogos. Crea la caja de texto y el texto y se encarga de actualizarlos.
-    * Los textos a escribir se deben establecer con el metodo splitDialogs()
+    * Los textos a escribir se deben establecer con el metodo setDialogs(), y deben establecer
+    * al momento de crear la escena.
     * @extends Phaser.Scene
     */
     constructor() {
@@ -25,6 +26,7 @@ export default class DialogManager extends Phaser.Scene {
         this.textbox.activate(false);
         this.activateOptions(false);
 
+        // let mask = this.add.image(this.textbox.box.x, this.textbox.box.y, 'textboxMask');
         let mask = this.add.image(this.textbox.box.x, this.textbox.box.y, 'dialog', 'textboxMask.png');
         mask.setOrigin(this.textbox.box.originX, this.textbox.box.originY);
         mask.setScale(this.textbox.box.scaleX, this.textbox.box.scaleY);
@@ -33,6 +35,10 @@ export default class DialogManager extends Phaser.Scene {
         this.portraitMask = mask.createBitmapMask();
     }
 
+    /**
+    * Metodo que se llama cuando se llama al changeScene de una escena 
+    * @param {Phaser.Scene} scene - escena a la que se va a pasar
+    */
     changeScene(scene) {
         // Coge todos los retratos de los personajes de la escena y los copia en esta escena
         this.portraits = new Map();
@@ -57,30 +63,12 @@ export default class DialogManager extends Phaser.Scene {
         dialog.character = i18next.t('dialog.character', { ns: 'day1' });
         dialog.name = i18next.t('dialog.name', { ns: 'day1' });
 
-        this.splitDialogs([
-            {
-                text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu non sodales neque sodales ut etiam sit amet. Tempus urna et pharetra pharetra massa massa ultricies. Pellentesque dignissim enim sit amet. Sit amet justo donec enim diam vulputate ut pharetra sit. Quisque sagittis purus sit amet volutpat. Nulla posuere sollicitudin aliquam ultrices sagittis orci. Euismod elementum nisi quis eleifend quam. Imperdiet sed euismod nisi porta lorem mollis aliquam. Lacus vestibulum sed arcu non odio euismod lacinia at quis.",
-                character: "player",
-                name: " ",
-            },
-            {
-                text: "Sit amet consectetur adipiscing elit ut aliquam purus sit. In nibh mauris cursus mattis molestie a iaculis at. Laoreet sit amet cursus sit amet dictum. Tellus mauris a diam maecenas sed enim. Diam donec adipiscing tristique risus nec feugiat in fermentum. Vulputate dignissim suspendisse in est ante. Scelerisque felis imperdiet proin fermentum leo vel. Id eu nisl nunc mi. Quam id leo in vitae. Posuere ac ut consequat semper viverra. Quam vulputate dignissim suspendisse in est. Volutpat sed cras ornare arcu dui vivamus arcu felis bibendum. Egestas tellus rutrum tellus pellentesque eu tincidunt tortor aliquam nulla. Commodo viverra maecenas accumsan lacus vel facilisis. Varius sit amet mattis vulputate enim nulla. Aenean sed adipiscing diam donec. Tempor id eu nisl nunc mi ipsum faucibus. Quisque sagittis purus sit amet volutpat.",
-                character: "mom",
-                name: "Personaje 2",
-            },
-            {
-                text: "Purus semper eget duis at tellus at urna. Quam elementum pulvinar etiam non quam lacus suspendisse faucibus interdum. Et molestie ac feugiat sed lectus vestibulum mattis ullamcorper. Diam maecenas ultricies mi eget mauris pharetra et ultrices. Convallis aenean et tortor at risus viverra adipiscing. Facilisis magna etiam tempor orci eu lobortis elementum nibh tellus. Mi quis hendrerit dolor magna eget est lorem ipsum. Sit amet facilisis magna etiam. Netus et malesuada fames ac turpis egestas. Nam at lectus urna duis. Tortor condimentum lacinia quis vel eros donec ac. Suscipit adipiscing bibendum est ultricies integer quis auctor elit. Urna et pharetra pharetra massa. A diam maecenas sed enim ut sem viverra. Ligula ullamcorper malesuada proin libero nunc. Id donec ultrices tincidunt arcu non sodales neque sodales ut. In mollis nunc sed id semper risus.",
-                character: "dad",
-                name: "La pola",
-            },
-            {
-                text: "Etiam tempor orci eu lobortis elementum nibh tellus. Ornare suspendisse sed nisi lacus sed viverra tellus in hac. Commodo viverra maecenas accumsan lacus vel facilisis volutpat. Pellentesque habitant morbi tristique senectus. Augue eget arcu dictum varius duis at consectetur. Id volutpat lacus laoreet non curabitur gravida. Pharetra vel turpis nunc eget lorem dolor. Ac feugiat sed lectus vestibulum mattis ullamcorper velit. Neque viverra justo nec ultrices dui. Aliquam etiam erat velit scelerisque in dictum non consectetur. Massa sed elementum tempus egestas. Ultrices vitae auctor eu augue. Eu sem integer vitae justo eget magna fermentum iaculis.",
-                character: "player",
-                name: " ",
-            },
-            dialog
-        ]);
         this.finished = false;
+
+        this.textCount = 0;
+        this.lastCharacter = this.dialogs[this.textCount].character;
+        this.textbox.setText(this.dialogs[this.textCount], true);
+
         this.textbox.activate(true);
     }
 
@@ -91,11 +79,23 @@ export default class DialogManager extends Phaser.Scene {
     }
 
     /**
-    * Cambia la serie de dialogos a mostrar
-    * @param {Array} dialogs - la coleccion de dialogos que se mostraran. Cada objeto debera tener los atributos text, character, name (completar)
+    * Cambia la serie de dialogos a mostrar. Deberia llamarse una vez al crear la escena
+    * @param {Array} dialogs - array de dialogos que se mostraran. Cada objeto debera tener los atributos text, character, name, ... (completar)
+    */
+    setDialogs(dialogs) {
+        this.dialogs = this.splitDialogs(dialogs);
+        this.textCount = 0;
+        this.lastCharacter = this.dialogs[this.textCount].character;
+        this.textbox.setText(this.dialogs[this.textCount], true);
+    }
+    
+    /**
+    * Prepara los dialogos por si alguno es demasiado largo y se sale de la caja de texto
+    * @param {Array} dialogs - array de dialogos a preparar
+    * @return {Array} - array con los dialogos ajustados
     */
     splitDialogs(dialogs) {
-        let splitDialogs = [];      // Nuevo array de dialogos tras dividir los dialogos demasiado largos
+        let newDialogs = [];      // Nuevo array de dialogos tras dividir los dialogos demasiado largos
         let i = 0;                  // Indice del dialogo en el array de dialogos
         let dialogCopy = "";        // Copia del dialogo con todos sus atributos
         let currText = "";          // Texto a dividir
@@ -139,7 +139,7 @@ export default class DialogManager extends Phaser.Scene {
                         newText = "";
                         dialogCopy = { ...dialogs[i] };
                         dialogCopy.text = prevText;
-                        splitDialogs.push(dialogCopy);
+                        newDialogs.push(dialogCopy);
                     }
                 }
                 // Una vez recorrido todo el dialogo, guarda el dialogo con el texto restante 
@@ -147,7 +147,7 @@ export default class DialogManager extends Phaser.Scene {
                 newText += " " + currWord;
                 dialogCopy = { ...dialogs[i] };
                 dialogCopy.text = prevText;
-                splitDialogs.push(dialogCopy);
+                newDialogs.push(dialogCopy);
                 
                 i++;
             }
@@ -156,22 +156,18 @@ export default class DialogManager extends Phaser.Scene {
             else {
                 dialogCopy = { ...dialogs[i] };
                 dialogCopy.text = currText;
-                splitDialogs.push(dialogCopy);
+                newDialogs.push(dialogCopy);
                 i++;
                 if (dialogs[i]) currText = dialogs[i].text;
             }
         }
 
-        // Actualiza los dialogos
-        this.textCount = 0;
-        this.dialogs = splitDialogs;
-        this.lastCharacter = this.dialogs[this.textCount].character;
-        this.textbox.setText(this.dialogs[this.textCount], true);
+        return newDialogs;
     }
 
     
     createOptions(opts) {
-        // Limpia las opciones
+        // Limpia las opciones que hubiera anteriormente
         this.options.forEach((option) => {
             option.activate(false, () => { option.destroy(); });
         });

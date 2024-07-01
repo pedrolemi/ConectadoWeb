@@ -41,66 +41,12 @@ export default class Test extends BaseScene {
         trans.x = CANVAS_WIDTH / 1.5;
         let dad = new Character(this, "dad", trans, portraitTrans, () => {
             this.dialogManager.test1();
+            // let newScene = new BaseScene("lol");
+            // this.scene.start(newScene);
         });
         dad.setAnimation("Idle01", true);
 
-        //let madre = this.add.spine(0, CANVAS_HEIGHT / 2, "madre", "walk");
 
-        //let container = this.add.spineContainer();
-        //container.add(madre);
-
-        // Imagen de la madre y su retrato
-        /*
-        let mom = this.add.image(CANVAS_WIDTH / 2, CANVAS_HEIGHT / 2, 'mom').setOrigin(0.5, 0.5);
-        mom.setScale(0.2);
-        mom.x = mom.x - mom.displayWidth;
-        mom.setInteractive();
-        mom.on('pointerdown', (pointer) => {
-            this.dialogManager.test2();
-        });
-        let momPortrait = this.add.image(this.portraitX, this.portraitY, 'mom').setOrigin(0.5, 0.5).setScale(this.portraitScale);
-        
-        // Imagen del padre y su retrato
-        let dad = this.add.image(CANVAS_WIDTH / 2, CANVAS_HEIGHT / 2, 'dad').setOrigin(0.5, 0.5);
-        dad.setScale(0.2);
-        dad.x = dad.x + dad.displayWidth;
-        dad.setInteractive();
-        dad.on('pointerdown', (pointer) => {
-            this.dialogManager.test1();
-        });
-        let dadPortrait = this.add.image(this.portraitX, this.portraitY, 'dad').setOrigin(0.5, 0.5).setScale(this.portraitScale);
-        
-        */
-
-        /*
-        this.plugins.get('rextintrgbplugin').add(mom);
-        this.plugins.get('rextintrgbplugin').add(momPortrait);
-        this.plugins.get('rextintrgbplugin').add(dad);
-        this.plugins.get('rextintrgbplugin').add(dadPortrait);
-        */
-
-        /*
-        this.tweens.add({
-            targets: [mom, momPortrait],
-            tintR: 0x00,
-            tintG: 0xFF,
-            tintB: 0x56,
-            duration: 1000,
-            repeat: -1,
-            yoyo: true
-        });
-        
-        this.tweens.add({
-            targets: [dad, dadPortrait],
-            tintR: 0x12,
-            tintG: 0x00,
-            tintB: 0x76,
-            duration: 1000,
-            repeat: -1,
-            yoyo: true
-        });
-        */
-        
         this.portraits.set("mom", mom.getPortrait());
         this.portraits.set("dad", dad.getPortrait());
         this.portraits.forEach((portrait) => {
@@ -108,6 +54,30 @@ export default class Test extends BaseScene {
             portrait.setMask(this.dialogManager.portraitMask)
         });
 
+
         this.dialogManager.changeScene(this);
+        this.dialogManager.setDialogs([
+            {
+                text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu non sodales neque sodales ut etiam sit amet. Tempus urna et pharetra pharetra massa massa ultricies. Pellentesque dignissim enim sit amet. Sit amet justo donec enim diam vulputate ut pharetra sit. Quisque sagittis purus sit amet volutpat. Nulla posuere sollicitudin aliquam ultrices sagittis orci. Euismod elementum nisi quis eleifend quam. Imperdiet sed euismod nisi porta lorem mollis aliquam. Lacus vestibulum sed arcu non odio euismod lacinia at quis.",
+                character: "player",
+                name: " ",
+            },
+            {
+                text: "Sit amet consectetur adipiscing elit ut aliquam purus sit. In nibh mauris cursus mattis molestie a iaculis at. Laoreet sit amet cursus sit amet dictum. Tellus mauris a diam maecenas sed enim. Diam donec adipiscing tristique risus nec feugiat in fermentum. Vulputate dignissim suspendisse in est ante. Scelerisque felis imperdiet proin fermentum leo vel. Id eu nisl nunc mi. Quam id leo in vitae. Posuere ac ut consequat semper viverra. Quam vulputate dignissim suspendisse in est. Volutpat sed cras ornare arcu dui vivamus arcu felis bibendum. Egestas tellus rutrum tellus pellentesque eu tincidunt tortor aliquam nulla. Commodo viverra maecenas accumsan lacus vel facilisis. Varius sit amet mattis vulputate enim nulla. Aenean sed adipiscing diam donec. Tempor id eu nisl nunc mi ipsum faucibus. Quisque sagittis purus sit amet volutpat.",
+                character: "mom",
+                name: "Personaje 2",
+            },
+            {
+                text: "Purus semper eget duis at tellus at urna. Quam elementum pulvinar etiam non quam lacus suspendisse faucibus interdum. Et molestie ac feugiat sed lectus vestibulum mattis ullamcorper. Diam maecenas ultricies mi eget mauris pharetra et ultrices. Convallis aenean et tortor at risus viverra adipiscing. Facilisis magna etiam tempor orci eu lobortis elementum nibh tellus. Mi quis hendrerit dolor magna eget est lorem ipsum. Sit amet facilisis magna etiam. Netus et malesuada fames ac turpis egestas. Nam at lectus urna duis. Tortor condimentum lacinia quis vel eros donec ac. Suscipit adipiscing bibendum est ultricies integer quis auctor elit. Urna et pharetra pharetra massa. A diam maecenas sed enim ut sem viverra. Ligula ullamcorper malesuada proin libero nunc. Id donec ultrices tincidunt arcu non sodales neque sodales ut. In mollis nunc sed id semper risus.",
+                character: "dad",
+                name: "La pola",
+            },
+            {
+                text: "Etiam tempor orci eu lobortis elementum nibh tellus. Ornare suspendisse sed nisi lacus sed viverra tellus in hac. Commodo viverra maecenas accumsan lacus vel facilisis volutpat. Pellentesque habitant morbi tristique senectus. Augue eget arcu dictum varius duis at consectetur. Id volutpat lacus laoreet non curabitur gravida. Pharetra vel turpis nunc eget lorem dolor. Ac feugiat sed lectus vestibulum mattis ullamcorper velit. Neque viverra justo nec ultrices dui. Aliquam etiam erat velit scelerisque in dictum non consectetur. Massa sed elementum tempus egestas. Ultrices vitae auctor eu augue. Eu sem integer vitae justo eget magna fermentum iaculis.",
+                character: "player",
+                name: " ",
+            },
+        ]);
+        
     }
 }

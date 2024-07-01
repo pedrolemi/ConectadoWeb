@@ -31,6 +31,8 @@ export default class LanguageMenu extends Phaser.Scene {
     }
 
     startGame(){
+        // IMPORTANTE: HAY QUE LANZAR PRIMERO EL DIALOGMANAGER PARA QUE LOS 
+        // RETRATOS DE LOS PERSONAJES SE PINTEN POR ENCIMA DE LA CAJA DE TEXTO
         this.scene.launch('DialogManager');
         this.scene.start('Test');
     }

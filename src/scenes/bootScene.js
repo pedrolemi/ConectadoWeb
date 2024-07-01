@@ -16,10 +16,10 @@ export default class BootScene extends Phaser.Scene {
     }
 
     preload() {
-        // Precarga las imagenes para la caja de texto y de opciones
         this.load.setPath('./assets');
 
         /*
+        // Precarga las imagenes para la caja de texto y de opciones
         this.load.image('textbox', 'textbox.png');
         this.load.image('textboxName', 'textboxName.png');
         this.load.image('option', 'optionBg.png');
@@ -45,7 +45,7 @@ export default class BootScene extends Phaser.Scene {
         this.load.spine("dad", 'dad/Front 34.json', 'dad/Front 34.atlas')
 
         // comprimir texturas (toma mucha menos memoria, aunque los archivos pueden ocupa mas tam)
-        // Se comprueba de arriba a abajo hasta encontrar el primero que funcione en el dispositivio, sino se usa png
+        // Se comprueba de arriba a abajo hasta encontrar el primero que funcione en el dispositivo, si no, se usa png
         // formatos de compresion: ETC, ETC1, ATC, ASTC, BPTC, RGTC, PVRTC, S3TC, and S3TCSRB
         // ASTC - MAC
         // PVRTC - iOS y algunos Android

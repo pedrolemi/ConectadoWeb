@@ -13,7 +13,7 @@ export default class BaseScene extends Phaser.Scene {
     }
 
     changeScene(scene) {
+        this.dialogManager.clearPortraits();
         this.scene.start(scene);
-        this.dialogManager.changeScene(scene);
     }
 }

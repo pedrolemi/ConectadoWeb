@@ -1,6 +1,6 @@
 import DialogObject from "./dialogObject.js";
 
-export default class OptionBox extends DialogObject {
+export default class TextBox extends DialogObject {
     /**
     * Caja de texto para los dialogos
     * @extends DialogObject

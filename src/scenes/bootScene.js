@@ -23,8 +23,8 @@ export default class BootScene extends Phaser.Scene {
         this.load.image('textbox', 'textbox.png');
         this.load.image('textboxName', 'textboxName.png');
         this.load.image('option', 'optionBg.png');
-        this.load.image('textboxMask', 'textboxMask.png');
         */
+       this.load.image('textboxMask', 'textboxMask.png');
 
         // Fondos menu de idiomas
         this.load.image('basePC', 'languageMenu/BasePCsq.png');
@@ -32,7 +32,7 @@ export default class BootScene extends Phaser.Scene {
 
         // Banderas idiomas
         this.load.image('frFlag', 'languageMenu/frFlag.png');
-        this.load.image('spainFlag', 'languageMenu/spainFlag.jpg');
+        this.load.image('spFlag', 'languageMenu/spFlag.png');
         this.load.image('ukFlag', 'languageMenu/ukFlag.png');
 
         // Test
@@ -79,6 +79,7 @@ export default class BootScene extends Phaser.Scene {
             supportedLngs: ['en-UK', 'es-ES'],
             // namespaces que se cargan para cada uno de los idiomas
             ns: ['day1', 'day2'],
+            preload: ['en-UK', 'es-ES'],
             // mostrar informacion de ayuda por consola
             debug: true,
             // cargar las traducciones de un servidor especificado en vez de ponerlas directamente
@@ -89,9 +90,13 @@ export default class BootScene extends Phaser.Scene {
                 loadPath: './localization/{{lng}}/{{ns}}.json'
             }
         })
+
+        
     }
 
     create() {
         this.scene.start('LanguageMenu');
     }
+
+
 }

@@ -1,4 +1,4 @@
-export default class DialogObject extends Phaser.GameObjects.Container {
+export default class DialogObject {
     /**
     * Clase base para los elementos de dialogo, con metodos 
     * para crear texto o activar/desactivar el objeto
@@ -6,7 +6,6 @@ export default class DialogObject extends Phaser.GameObjects.Container {
     * @param {Phaser.Scene} scene - escena a la que pertenece
     */
     constructor(scene) {
-        super(scene, 0, 0);
         this.scene = scene;
 
         // Configuracion de texto por defecto
@@ -26,8 +25,6 @@ export default class DialogObject extends Phaser.GameObjects.Container {
             fadeTime: 100,
             fadeEase: 'linear'
         }
-
-        this.scene.add.existing(this);
     }
 
     /**

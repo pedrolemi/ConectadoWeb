@@ -21,6 +21,8 @@ export default class Test extends BaseScene {
         bg.on('pointerdown', (pointer) => {
             this.dialogManager.textbox.activate(false);
             this.dialogManager.activateOptions(false);
+            
+            super.changeScene("Test2");
         });
         
         let trans = {};
@@ -33,6 +35,7 @@ export default class Test extends BaseScene {
         portraitTrans.y = this.portraitY;
         portraitTrans.scale = this.portraitScale;
 
+        
         let mom = new Character(this, "mom", trans, portraitTrans, () => {
             this.dialogManager.test2();
         });
@@ -41,8 +44,6 @@ export default class Test extends BaseScene {
         trans.x = CANVAS_WIDTH / 1.5;
         let dad = new Character(this, "dad", trans, portraitTrans, () => {
             this.dialogManager.test1();
-            // let newScene = new BaseScene("lol");
-            // this.scene.start(newScene);
         });
         dad.setAnimation("Idle01", true);
 
@@ -54,12 +55,14 @@ export default class Test extends BaseScene {
             portrait.setMask(this.dialogManager.portraitMask)
         });
 
+
         let i18next = this.plugins.get('rextexttranslationplugin');
         let dialog = {}
         dialog.text = i18next.t('dialog.text', { ns: 'day1', name: 'John', context: 'male' });
         dialog.character = i18next.t('dialog.character', { ns: 'day1' });
         dialog.name = i18next.t('dialog.name', { ns: 'day1' });
 
+        console.log("gogogog");
         this.dialogManager.changeScene(this);
         this.dialogManager.setDialogs([
             {
@@ -84,6 +87,12 @@ export default class Test extends BaseScene {
             },
             dialog
         ]);
-        
+
+
+        // IMPORTANTE: LLAMARLO CUANDO SE HAYA CREADO LA ESCENA
+        this.dialogManager.changeScene(this);
+
     }
+
+
 }

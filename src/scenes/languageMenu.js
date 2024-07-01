@@ -26,10 +26,11 @@ export default class LanguageMenu extends Phaser.Scene {
 
         let height = CANVAS_HEIGHT / 8;
         new FlagButton(this, 0, 3, height, 'ukFlag', 'en-UK');
-        new FlagButton(this, 1, 3, height, 'spainFlag', 'es-ES');
+        new FlagButton(this, 1, 3, height, 'spFlag', 'es-ES');
         new FlagButton(this, 2, 3, height, 'frFlag', 'en-UK');
-    }
 
+    }
+    
     startGame(){
         // IMPORTANTE: HAY QUE LANZAR PRIMERO EL DIALOGMANAGER PARA QUE LOS 
         // RETRATOS DE LOS PERSONAJES SE PINTEN POR ENCIMA DE LA CAJA DE TEXTO

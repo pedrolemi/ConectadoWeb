@@ -27,12 +27,22 @@ export default class DialogManager extends Phaser.Scene {
         this.activateOptions(false);
 
         // let mask = this.add.image(this.textbox.box.x, this.textbox.box.y, 'textboxMask');
-        let mask = this.add.image(this.textbox.box.x, this.textbox.box.y, 'dialog', 'textboxMask.png');
+        let mask = this.add.image(this.textbox.box.x, this.textbox.box.y, 'textboxMask');
         mask.setOrigin(this.textbox.box.originX, this.textbox.box.originY);
         mask.setScale(this.textbox.box.scaleX, this.textbox.box.scaleY);
         mask.setCrop(0, 0, 160, mask.displayHeight);
         mask.visible = false;
         this.portraitMask = mask.createBitmapMask();
+
+        this.portraits = new Map();
+    }
+
+    clearPortraits() {
+        this.portraits.forEach((value, key) => {
+            value.destroy();
+        });
+        this.portraits.clear();
+
     }
 
     /**
@@ -41,7 +51,6 @@ export default class DialogManager extends Phaser.Scene {
     */
     changeScene(scene) {
         // Coge todos los retratos de los personajes de la escena y los copia en esta escena
-        this.portraits = new Map();
         scene.portraits.forEach((value, key) => {
             let p = this.add.existing(value);
             this.portraits.set(key, p );
@@ -60,8 +69,10 @@ export default class DialogManager extends Phaser.Scene {
         this.finished = false;
 
         this.textCount = 0;
-        this.lastCharacter = this.dialogs[this.textCount].character;
-        this.textbox.setText(this.dialogs[this.textCount], true);
+        if (this.dialogs.length > 0) {
+            this.lastCharacter = this.dialogs[this.textCount].character;
+            this.textbox.setText(this.dialogs[this.textCount], true);
+        }
 
         this.textbox.activate(true);
     }
@@ -79,8 +90,10 @@ export default class DialogManager extends Phaser.Scene {
     setDialogs(dialogs) {
         this.dialogs = this.splitDialogs(dialogs);
         this.textCount = 0;
-        this.lastCharacter = this.dialogs[this.textCount].character;
-        this.textbox.setText(this.dialogs[this.textCount], true);
+        if (this.dialogs.length > 0) {
+            this.lastCharacter = this.dialogs[this.textCount].character;
+            this.textbox.setText(this.dialogs[this.textCount], true);
+        }
     }
     
     /**

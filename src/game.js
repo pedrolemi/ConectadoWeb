@@ -1,4 +1,5 @@
 import BootScene from './scenes/bootScene.js'
+import LanguageMenu from './scenes/languageMenu.js'
 import Test from './scenes/test.js'
 import DialogManager from './dialog/dialogManager.js'
 
@@ -7,14 +8,15 @@ const max_w = 1129, max_h = 847, min_w = 320, min_h = 240;
 const config = {
     width: max_w,
     height: max_h,
-    
+    backgroundColor: '#4488aa',
+
     type: Phaser.AUTO,
-    scene: [BootScene, Test, DialogManager],
+    scene: [BootScene, LanguageMenu, Test, DialogManager],
     autoFocus: true,
     disableContextMenu: true,        // Desactivar que aparezca el menu de inspeccionar al hacer click derecho
     render: {
         antialias: true,
-        transparent: true,
+        //transparent: true,
     },
     /*
     COMENTAR: No creo que hagan falta fisicas

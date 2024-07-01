@@ -1,0 +1,8 @@
+{
+    "hi": "Holi",
+    "dialog": {
+        "character": "mom",
+        "name": "Personaje 2",
+        "text_male": "{{name}} es un chico"
+    }
+}

@@ -73,7 +73,6 @@ export default class Test extends BaseScene {
         */
 
         /*
-        TODO: COMENTAR A MATT ???
         this.plugins.get('rextintrgbplugin').add(mom);
         this.plugins.get('rextintrgbplugin').add(momPortrait);
         this.plugins.get('rextintrgbplugin').add(dad);

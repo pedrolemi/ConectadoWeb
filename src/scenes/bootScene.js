@@ -1,19 +1,39 @@
 export default class BootScene extends Phaser.Scene {
     constructor() {
-        super({ key: 'BootScene' });
+        super({ 
+            key: 'BootScene',
+            // Se caraga el plugin i18next
+            pack: {
+                files: [{
+                    type: 'plugin',
+                    key: 'rextexttranslationplugin',
+                    url: 'https://raw.githubusercontent.com/rexrainbow/phaser3-rex-notes/master/dist/rextexttranslationplugin.min.js',
+                    start: true,
+                    mapping: 'translation'  // Add text-translation plugin to `scene.translation`
+                }]
+            }
+        });
     }
 
     preload() {
         // Precarga las imagenes para la caja de texto y de opciones
         this.load.setPath('./assets');
 
+        /*
         this.load.image('textbox', 'textbox.png');
         this.load.image('textboxName', 'textboxName.png');
         this.load.image('option', 'optionBg.png');
         this.load.image('textboxMask', 'textboxMask.png');
+        */
 
-        // Precarga el plugin para hacer fade de colores
-        this.load.plugin('rextintrgbplugin', 'https://raw.githubusercontent.com/rexrainbow/phaser3-rex-notes/master/dist/rextintrgbplugin.min.js', true);
+        // Fondos menu de idiomas
+        this.load.image('basePC', 'languageMenu/BasePCsq.png');
+        this.load.image('PCscreen', 'languageMenu/ScreenWithoutBlack.png');
+
+        // Banderas idiomas
+        this.load.image('frFlag', 'languageMenu/frFlag.png');
+        this.load.image('spainFlag', 'languageMenu/spainFlag.jpg');
+        this.load.image('ukFlag', 'languageMenu/ukFlag.png');
 
         // Test
         this.load.image('bg', 'patio.png');
@@ -37,11 +57,41 @@ export default class BootScene extends Phaser.Scene {
             'S3TCSRGB': { type: 'PVR', textureURL: 'dialog/dialog-dxt5/dialog-dxt5.pvr', atlasURL: 'dialog/dialog-dxt5/dialog-dxt5.json' },
             'IMG': { textureURL: 'dialog/dialog-img/dialog-img.png', atlasURL: 'dialog/dialog-img/dialog-img.json' },
         });
+
+        // PLUGINS
+        // Precarga el plugin para hacer fade de colores
+        // (sin el plugin el fade colores funciona algo mal)
+        this.load.plugin('rextintrgbplugin', 'https://raw.githubusercontent.com/rexrainbow/phaser3-rex-notes/master/dist/rextintrgbplugin.min.js', true);
+
+        // Se inicializa el plugin i18next
+        // Inicialmente solo se carga el idioma inicial y los de respaldo
+        // Luego, conforme se usan tambien se cargan el resto
+        this.plugins.get('rextexttranslationplugin').initI18Next(this, {
+            // idioma inicial
+            lng: 'en-UK',
+            // solo se mantiene cargado el idioma que se usa (mejora el rendimiento del server)
+            load: 'current',
+            // en caso de que no se encuentra una key en otro idioma se comprueba en los siguientes en orden
+            fallbackLng: 'en-UK',
+            // idiomas permitidos
+            // Sin esta propiedad a la hora de buscar las traducciones se podria buscar
+            // en cualquier idioma (aunque o existiese)
+            //supportedLngs: ['en-UK', 'es-ES'],
+            // namespaces que se cargan para cada uno de los idiomas
+            ns: ['day1', 'day2'],
+            // mostrar informacion de ayuda por consola
+            debug: true,
+            // cargar las traducciones de un servidor especificado en vez de ponerlas directamente
+            backend: {
+                // La ruta desde donde cargamos las traducciones
+                // {{lng}} --> nombre carpeta de cada uno de los idiomas
+                // {{ns}} --> nombre carpeta de cada uno de los namespaces
+                loadPath: './localization/{{lng}}/{{ns}}.json'
+            }
+        })
     }
 
     create() {
-        this.scene.launch('DialogManager');
-        this.scene.start('Test');
+        this.scene.start('LanguageMenu');
     }
-
 }

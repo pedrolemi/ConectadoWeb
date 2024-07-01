@@ -25,7 +25,7 @@ export default class DialogManager extends Phaser.Scene {
         this.textbox.activate(false);
         this.activateOptions(false);
 
-        let mask = this.add.image(this.textbox.box.x, this.textbox.box.y, 'textboxMask');
+        let mask = this.add.image(this.textbox.box.x, this.textbox.box.y, 'dialog', 'textboxMask.png');
         mask.setOrigin(this.textbox.box.originX, this.textbox.box.originY);
         mask.setScale(this.textbox.box.scaleX, this.textbox.box.scaleY);
         mask.setCrop(0, 0, 160, mask.displayHeight);
@@ -51,6 +51,12 @@ export default class DialogManager extends Phaser.Scene {
         this.playerName = "Paco";
         this.activateOptions(false);
         
+        let i18next = this.plugins.get('rextexttranslationplugin');
+        let dialog = {}
+        dialog.text = i18next.t('dialog.text', { ns: 'day1', name: 'John', context: 'male' });
+        dialog.character = i18next.t('dialog.character', { ns: 'day1' });
+        dialog.name = i18next.t('dialog.name', { ns: 'day1' });
+
         this.splitDialogs([
             {
                 text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu non sodales neque sodales ut etiam sit amet. Tempus urna et pharetra pharetra massa massa ultricies. Pellentesque dignissim enim sit amet. Sit amet justo donec enim diam vulputate ut pharetra sit. Quisque sagittis purus sit amet volutpat. Nulla posuere sollicitudin aliquam ultrices sagittis orci. Euismod elementum nisi quis eleifend quam. Imperdiet sed euismod nisi porta lorem mollis aliquam. Lacus vestibulum sed arcu non odio euismod lacinia at quis.",
@@ -72,6 +78,7 @@ export default class DialogManager extends Phaser.Scene {
                 character: "player",
                 name: " ",
             },
+            dialog
         ]);
         this.finished = false;
         this.textbox.activate(true);

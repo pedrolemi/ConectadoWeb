@@ -1,0 +1,9 @@
+{
+    "hi": "Hi",
+    "dialog": {
+        "character": "mom",
+        "name": "Character 2",
+        "text_male": "{{name}} is a boy",
+        "text_female": "{{name}} is a girl"
+    }
+}

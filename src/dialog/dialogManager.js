@@ -1,5 +1,7 @@
 import TextBox from './textbox.js'
 import OptionBox from './optionBox.js'
+import GameManager from '../gameManager.js'
+
 
 export default class DialogManager extends Phaser.Scene {
     /**
@@ -30,6 +32,8 @@ export default class DialogManager extends Phaser.Scene {
         mask.setCrop(0, 0, 160, mask.displayHeight);
         mask.visible = false;
         this.portraitMask = mask.createBitmapMask();
+
+        this.gameManager = GameManager.getInstance();
     }
 
 
@@ -64,6 +68,52 @@ export default class DialogManager extends Phaser.Scene {
     }
 
     /**
+    * Crea las opciones de eleccion multiple
+    * @param {Array} opts - array con los strings con el texto a mostrar en las opciones
+    */
+    createOptions(opts) {
+        // Limpia las opciones que hubiera anteriormente
+        this.options.forEach((option) => {
+            option.activate(false, () => { option.destroy(); });
+        });
+        this.options = [];
+        // Crea las opciones y las guarda en el array
+        for (let i = 0; i < opts.length; i++) {
+            this.options.push(new OptionBox(this, i, opts.length, opts[i]));
+        }
+    }
+
+    /**
+    * Activa/desactiva las cajas de opcion multiple
+    * @param {Boolean} active - si se van a activar o no las opciones
+    */
+    activateOptions(active) {
+        this.options.forEach((option) => { option.activate(active); });
+    }
+
+    /**
+    * Elige la opcion sobre la que se ha hecho click (llamado desde la instancia correspondiente de OptionBox)
+    * @param {Number} index - indice elegido
+    */
+    selectOption(index) {
+        // Desactiva las opciones
+        this.activateOptions(false);
+
+        // Actualiza el nodo actual
+        this.currNode.nextInd = index;
+        this.currNode = this.currNode.next[this.currNode.nextInd];
+
+        // Si el nodo actual es valido, actualiza el retrato del personaje por si acaso
+        if (this.currNode) {
+            this.textbox.setPortrait(this.currNode.character);
+        }
+
+        // Procesa el siguiente nodo
+        this.processNextNode();
+    }
+
+
+    /**
     * Cambia el nodo actual por el indicado
     * @param {DialogNode} node - nodo que se va a poner como nodo actual
     */
@@ -80,6 +130,7 @@ export default class DialogManager extends Phaser.Scene {
         if (node.id === "root") {
             this.nextNode();
         }
+        
     }
 
 
@@ -88,14 +139,49 @@ export default class DialogManager extends Phaser.Scene {
         // Actualiza el ultimo personaje que tuvo un dialogo
         this.lastCharacter = this.currNode.character;
 
+        // Si el nodo es un nodo condicional
         if (this.currNode.type === "condition") {
+            let conditionMet = false;
+            let i = 0;
 
-        }
-        else if (this.currNode.type === "option") {
+            // Recorre todas las condiciones hasta que se haya cumplido la primera
+            while (i < this.currNode.conditions.length && !conditionMet) {
+                // Coge el nombre de la variable, el operador y el valor esperado 
+                let variable = this.currNode.conditions[i].key;
+                let operator = this.currNode.conditions[i].operator;
+                let expectedValue = this.currNode.conditions[i].value;
 
+                // Busca el valor de la variable en el gameManager
+                let variableValue = this.gameManager.getValue(variable);
+
+                if (operator === "equal") {
+                    conditionMet = variableValue === expectedValue;
+                }
+                else if (operator === "greater") {
+                    conditionMet = variableValue >= expectedValue;
+
+                }
+                else if (operator === "lower") {
+                    conditionMet = variableValue <= expectedValue;
+
+                }
+                else if (operator === "different") {
+                    conditionMet = variableValue !== expectedValue;
+                }
+
+                // Si no se ha cumplido ninguna condicion, pasa a la siguiente
+                if (!conditionMet) i++;
+            }
+
+            // Actualiza el nodo actual con el primer nodo que cumpla una condicion
+            this.currNode.nextInd = i;
+            this.currNode = this.currNode.next[this.currNode.nextInd];
+
+            // Procesa el siguiente nodo
+            this.processNextNode()
         }
-        // Si es un nodo de texto, 
-        else if (this.currNode.type === "text") {
+        // Si es un nodo de texto o de opcion multiple
+        else if (this.currNode.type === "text" || this.currNode.type === "choice") {
             // Si no se ha acabado de escribir todo el texto, lo muestra entero de golpe
             if (!this.textbox.finished) {
                 this.textbox.forceFinish();
@@ -114,71 +200,71 @@ export default class DialogManager extends Phaser.Scene {
                 else {
                     // Se reinicia el dialogo del nodo actual
                     this.currNode.currDialog = 0;
+                    // Si es un nodo de tipo texto, 
+                    if (this.currNode.type === "text") {
+                        // Actualiza el dialogo actual por el siguiente. Un nodo de tipo texto solo
+                        // puede llevar a un unico nodo de tipo texto, por lo que no se hace distincion
+                        // de casos y se gestiona directamente intentando poner otra caja de texto 
+                        this.currNode = this.currNode.next[this.currNode.nextInd];
 
-                    // Actualiza el dialogo actual por el siguiente. Un nodo de tipo texto solo
-                    // puede llevar a un unico nodo de tipo texto, por lo que no se hace distincion
-                    // de casos y se gestiona directamente intentando poner otra caja de texto 
-                    this.currNode = this.currNode.next[this.currNode.nextInd];
-
-                    // Si el nodo no es valido, se oculta la caja de texto
-                    if (!this.currNode) {
-                        this.textbox.activate(false);
+                        this.processNextNode()
                     }
-                    // Si lo es, 
-                    else if (this.currNode.type == "text") {
-                        // Si el ultimo personaje que hablo no es el mismo que el personaje 
-                        // que va a hablar (deberia serlo, pero se comprueba por si acaso)
-                        if (this.lastCharacter !== this.currNode.character) {
-                            // Se oculta la caja de dialogo y una vez termine la animacion,
-                            // se actualiza el texto a mostrar y se vuelve a mostrar la caja
-                            this.textbox.activate(false, () => {
-                                this.textbox.setText(this.currNode.dialogs[this.currNode.currDialog], true);
-                                this.textbox.activate(true);
-                            });
-                        }
-                        // Si el personaje es el mismo, se actualiza la caja de dialogo
-                        else {
-                            this.textbox.setText(this.currNode.dialogs[this.currNode.currDialog], true);
-                        }
+                    // Si es un nodo de opciocn multiple 
+                    else if (this.currNode.type === "choice") {
+                        // Desactiva la caja de texto y una vez desaparece, hace aparecer las opciones
+                        this.textbox.activate(false, () => {
+                            this.createOptions(this.currNode.choices);
+                            this.activateOptions(true);
+                        });
                     }
-
                 }
 
             }
 
-            // Si el nodo actual es valido, se actualiza el retrato a mostrar
-            if (this.currNode) {
-                this.textbox.setPortrait(this.currNode.character);
+        }
+        // Si el nodo actual es valido, se actualiza el retrato a mostrar
+        if (this.currNode) {
+            this.textbox.setPortrait(this.currNode.character);
+        }
+
+    }
+
+    processNextNode() {
+        // Si el nodo no es valido, se oculta la caja de texto
+        if (!this.currNode || !this.currNode.id) {
+            this.textbox.activate(false);
+        }
+        // Si el nodo es de condicion, comprueba el siguiente nodo
+        else if (this.currNode.type === "condition") {
+            this.nextNode();
+        }
+        // Si es un nodo de texto o de opcion multiple
+        else if (this.currNode.type == "text" || this.currNode.type === "choice") {
+            // Si el nodo no tiene texto, se lo salta
+            if (this.currNode.dialogs[this.currNode.currDialog].text.length < 1) {
+                this.nextNode();
             }
+            else {
+                // Si el ultimo personaje que hablo no es el mismo que el personaje 
+                // que va a hablar (deberia serlo, pero se comprueba por si acaso)
+                if (this.lastCharacter !== this.currNode.character) {
+                    // Se oculta la caja de dialogo y una vez termine la animacion,
+                    // se actualiza el texto a mostrar y se vuelve a mostrar la caja
+                    this.textbox.activate(false, () => {
+                        this.textbox.setText(this.currNode.dialogs[this.currNode.currDialog], true);
+                        this.textbox.activate(true);
+                    });
+                }
+                // Si el personaje es el mismo, se actualiza la caja de dialogo
+                else {
+                    this.textbox.setText(this.currNode.dialogs[this.currNode.currDialog], true);
+                }
 
-
+            }
         }
 
+
     }
 
-    createOptions(opts) {
-        // Limpia las opciones que hubiera anteriormente
-        this.options.forEach((option) => {
-            option.activate(false, () => { option.destroy(); });
-        });
-        this.options = [];
-        this.selectedOption = null;
 
-        // Crea las opciones y las guarda en el array
-        for (let i = 0; i < opts.length; i++) {
-            this.options.push(new OptionBox(this, i, opts.length, opts[i]));
-        }
-    }
-
-    // Activa/desactiva las cajas de opcion multiple
-    activateOptions(active) {
-        this.selectedOption = null;
-        this.options.forEach((option) => { option.activate(active); });
-    }
-
-    selectOption(index) {
-        this.activateOptions(false);
-        this.selectedOption = index;
-        console.log("Selected option " + index);
-    }
 }

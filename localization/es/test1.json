@@ -2,18 +2,24 @@
     "7983e126-257c-456a-8879-6eae98f00874": {
         "name": "Mamá",
         "character_uuid": "mom",
-        "text": "Hola, {{name}}. ¿Qué tal estás  hije? Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu non sodales neque sodales ut etiam sit amet. Tempus urna et pharetra pharetra massa massa ultricies. Pellentesque dignissim enim sit amet. Sit amet justo donec enim diam vulputate ut pharetra sit. Quisque sagittis purus sit amet volutpat. Nulla posuere sollicitudin aliquam ultrices sagittis orci. Euismod elementum nisi quis eleifend quam. Imperdiet sed euismod nisi porta lorem mollis aliquam. Lacus vestibulum sed arcu non odio euismod lacinia at quis.",
-        "text_male": "Hola, {{name}}. ¿Qué tal estás  hijo? Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu non sodales neque sodales ut etiam sit amet. Tempus urna et pharetra pharetra massa massa ultricies. Pellentesque dignissim enim sit amet. Sit amet justo donec enim diam vulputate ut pharetra sit. Quisque sagittis purus sit amet volutpat. Nulla posuere sollicitudin aliquam ultrices sagittis orci. Euismod elementum nisi quis eleifend quam. Imperdiet sed euismod nisi porta lorem mollis aliquam. Lacus vestibulum sed arcu non odio euismod lacinia at quis.",
-        "text_female": "Hola, {{name}}. ¿Qué tal estás  hija? Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu non sodales neque sodales ut etiam sit amet. Tempus urna et pharetra pharetra massa massa ultricies. Pellentesque dignissim enim sit amet. Sit amet justo donec enim diam vulputate ut pharetra sit. Quisque sagittis purus sit amet volutpat. Nulla posuere sollicitudin aliquam ultrices sagittis orci. Euismod elementum nisi quis eleifend quam. Imperdiet sed euismod nisi porta lorem mollis aliquam. Lacus vestibulum sed arcu non odio euismod lacinia at quis.",
+        "text": "",
+        "text_male": "Hola, {{name}}. ¿Qué tal estás hijo? Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu non sodales neque sodales ut etiam sit amet. Tempus urna et pharetra pharetra massa massa ultricies. Pellentesque dignissim enim sit amet. Sit amet justo donec enim diam vulputate ut pharetra sit. Quisque sagittis purus sit amet volutpat. Nulla posuere sollicitudin aliquam ultrices sagittis orci. Euismod elementum nisi quis eleifend quam. Imperdiet sed euismod nisi porta lorem mollis aliquam. Lacus vestibulum sed arcu non odio euismod lacinia at quis.",
+        "text_female": "Hola, {{name}}. ¿Qué tal estás hija? Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu non sodales neque sodales ut etiam sit amet. Tempus urna et pharetra pharetra massa massa ultricies. Pellentesque dignissim enim sit amet. Sit amet justo donec enim diam vulputate ut pharetra sit. Quisque sagittis purus sit amet volutpat. Nulla posuere sollicitudin aliquam ultrices sagittis orci. Euismod elementum nisi quis eleifend quam. Imperdiet sed euismod nisi porta lorem mollis aliquam. Lacus vestibulum sed arcu non odio euismod lacinia at quis.",
         "parent": "34ec2116-939b-40b5-b5b4-58c4993755ff",
         "choices": [
             {
-                "text": "Hola mamá, estoy bien",
+                "text": "",
+                "text_male": "Me llamo {{name}} y estoy sano",
+                "text_female": "Me llamo {{name}} y estoy sana",
+                
                 "next": "1064f486-9951-448b-b4bc-7cec90227db1",
                 "parent": "7983e126-257c-456a-8879-6eae98f00874"
             },
             {
-                "text": "¿Qué tal, papá?",
+                "text": "",
+                "text_male": "Me llamo {{name}} y estoy moribundo",
+                "text_female": "Me llamo {{name}} y estoy moribunda",
+
                 "next": "4eb4b9e1-2265-438d-af98-5650da324709",
                 "parent": "7983e126-257c-456a-8879-6eae98f00874"
             }

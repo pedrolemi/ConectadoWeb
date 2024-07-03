@@ -16,6 +16,11 @@
                     "value": false,
                     "operator": "equal",
                     "type": "boolean"
+                },
+                "asa": {
+                    "value": 213,
+                    "operator": "equal",
+                    "type": "int"
                 }
             }
         ]

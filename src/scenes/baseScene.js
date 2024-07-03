@@ -11,18 +11,18 @@ export default class BaseScene extends Phaser.Scene {
         this.CANVAS_HEIGHT = this.sys.game.canvas.height;
 
         // Obtiene el dialogManager (tendria que haberse iniciado antes que la escena)
-        let gameManager = GameManager.getInstance();
-        this.dialogManager = gameManager.getDialogManager();
+        this.gameManager = GameManager.getInstance();
+        this.dialogManager = this.gameManager.getDialogManager();
 
         // Obtiene el plugin de i18n del GameManager
-        this.i18next = gameManager.i18next;
+        this.i18next = this.gameManager.i18next;
 
         // Crea el mapa para los retratos de los personajes
         this.portraits = new Map();
         this.portraitX = 110;
         this.portraitY = 980;
         this.portraitScale = 0.1;
-        
+
         // Transform del retrato con posicion y escala 
         this.portraitTr = {
             x: this.portraitX,
@@ -86,10 +86,30 @@ export default class BaseScene extends Phaser.Scene {
 
             // Se leen todas las condiciones
             for (let i = 0; i < jsonNode.conditions.length; i++) {
+                // Obtiene el nombre de la condicion filtrando las propiedades del objeto
+                let obj = Object.keys(jsonNode.conditions[i]);
+                let properties = obj.filter(key => key !== "parent" && key !== "next");
+                let conditionName = properties[0];
+
+                // Obtiene el objeto que guarda las propiedades de la condicion
+                let conditionObj = jsonNode.conditions[i][conditionName];
+
+                let condition = {
+                    key: conditionName,
+                    operator: conditionObj.operator,
+                    type: conditionObj.type,
+                    value: conditionObj.value
+                };
+
                 // Se guarda la condicion y se crea de manera recursiva
                 // el nodo siguiente que corresponde a cumplir dicha condicion
-                currNode.conditions.push(jsonNode.conditions[i]);
+                currNode.conditions.push(condition);
                 currNode.next.push(this.readNodes(jsonNode.conditions[i].next, namespace, playerName, context, getObjs))
+
+                // Si la condicion no esta guardada, la guarda en el gameManager a falso por defecto
+                if (!this.gameManager.hasValue(conditionName)) {
+                    this.gameManager.setValue(conditionName, false);
+                }
             }
         }
         // Si el nodo no es ni de opciones ni de condiciones, es de texto
@@ -108,12 +128,11 @@ export default class BaseScene extends Phaser.Scene {
                 character: currNode.character,
                 name: currNode.name
             }
-
             // Se obtiene todo el texto separado en varios dialogos si es demasiado largo
             currNode.dialogs = this.splitDialogs([split]);
             currNode.currDialog = 0;
         }
-        
+
         return currNode;
     }
 
@@ -127,7 +146,7 @@ export default class BaseScene extends Phaser.Scene {
         let i = 0;                  // Indice del dialogo en el array de dialogos
         let dialogCopy = "";        // Copia del dialogo con todos sus atributos
         let currText = "";          // Texto a dividir
-
+        
         // Mientras no se haya llegado al final de los dialogos
         while (i < dialogs.length) {
             // Cambia el texto a mostrar por el dialogo completo para obtener sus dimensiones 
@@ -195,7 +214,7 @@ export default class BaseScene extends Phaser.Scene {
             character: "",
             name: ""
         }
-        
+
         this.dialogManager.textbox.setText(emptyDialog, false);
         return newDialogs;
     }

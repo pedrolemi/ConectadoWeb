@@ -10,12 +10,12 @@ export default class GameManager {
     * Maneja el flujo de juego y variables de uso comun
     * @param {scene} - se necesita una escena para poder acceder al ScenePlugin y cambiar de escena
     */
-    constructor(scene){
+    constructor(scene) {
         // no deberia suceder, pero por si acaso se hace el new de la clase desde fuera
-        if(instance === null) {
+        if (instance === null) {
             instance = this;
         }
-        else{
+        else {
             throw new Error('GameManager is a Singleton class!');
         }
 
@@ -37,22 +37,22 @@ export default class GameManager {
     }
 
     // metodo para generar y coger la instancia
-    static create(scene){
-        if(instance === null){
+    static create(scene) {
+        if (instance === null) {
             instance = new GameManager(scene);
         }
         return instance;
     }
 
     // metodo para generar y coger la instancia
-    static getInstance(){
+    static getInstance() {
         return this.create();
     }
 
     ///////////////////////////////////////
     /// Métodos para cambiar de escena ///
     //////////////////////////////////////
-    startGame(){
+    startGame() {
         // IMPORTANTE: HAY QUE LANZAR PRIMERO EL DIALOGMANAGER PARA QUE LOS 
         // RETRATOS DE LOS PERSONAJES SE PINTEN POR ENCIMA DE LA CAJA DE TEXTO
         let auxDialog = 'DialogManager';
@@ -64,11 +64,11 @@ export default class GameManager {
         this.currentScene = this.currentScene.scene.get(aux);
     }
 
-    getDialogManager(){
+    getDialogManager() {
         return this.dialogManager;
     }
 
-    startLangMenu(){
+    startLangMenu() {
         let aux = 'LanguageMenu';
         this.currentScene.scene.start(aux);
         this.currentScene = this.currentScene.scene.get(aux);
@@ -81,8 +81,8 @@ export default class GameManager {
     * Devuelve el valor buscado en el mapa de propiedades
     * @returns {object} - el objeto buscado en caso de que exista. En caso contrario, devuelve null
     */
-    getValue(key){
-        if(this.map.has(key)){
+    getValue(key) {
+        if (this.map.has(key)) {
             return this.map.get(key);
         }
         return null;
@@ -92,18 +92,20 @@ export default class GameManager {
     * Metodo que setea un valor en el mapa de propiedades
     * @returns {boolean} - indica si se ha sobrescrito un valor o no
     */
-    setValue(key){
-        if(this.map.has(key)){
-            return true;
+    setValue(key, value) {
+        let exists = false;
+        if (this.map.has(key)) {
+            exists = true;
         }
-        return false;
+        this.map.set(key, value);
+        return exists;
     }
 
     /**
     * Indica si un valor existe o no en el mapa de propiedades
     * @returns {boolean} - indica si existe el valor
     */
-    hasValue(key){
+    hasValue(key) {
         return this.map.has(key);
     }
 }

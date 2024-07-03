@@ -1,4 +1,5 @@
 import DialogNode from '../dialog/dialogNode.js'
+import GameManager from '../gameManager.js'
 
 export default class BaseScene extends Phaser.Scene {
     constructor(name) {
@@ -10,10 +11,11 @@ export default class BaseScene extends Phaser.Scene {
         this.CANVAS_HEIGHT = this.sys.game.canvas.height;
 
         // Obtiene el dialogManager (tendria que haberse iniciado antes que la escena)
-        this.dialogManager = this.scene.get('DialogManager');
+        let gameManager = GameManager.getInstance();
+        this.dialogManager = gameManager.getDialogManager();
 
-        // Obtiene el plugin de i18n
-        this.i18next = this.plugins.get('rextexttranslationplugin');
+        // Obtiene el plugin de i18n del GameManager
+        this.i18next = gameManager.i18next;
 
         // Crea el mapa para los retratos de los personajes
         this.portraits = new Map();

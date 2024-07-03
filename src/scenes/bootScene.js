@@ -1,3 +1,6 @@
+import GameManager from '../gameManager.js'
+import FlagButton from '../flagButton.js'
+
 export default class BootScene extends Phaser.Scene {
     constructor() {
         super({ 
@@ -71,18 +74,18 @@ export default class BootScene extends Phaser.Scene {
         // Luego, conforme se usan tambien se cargan el resto
         this.plugins.get('rextexttranslationplugin').initI18Next(this, {
             // idioma inicial
-            lng: 'en-UK',
+            lng: 'en',
             // solo se mantiene cargado el idioma que se usa (mejora el rendimiento del server)
             //load: 'current',
             // en caso de que no se encuentra una key en otro idioma se comprueba en los siguientes en orden
-            fallbackLng: 'en-UK',
+            fallbackLng: 'en',
             // idiomas permitidos
             // Sin esta propiedad a la hora de buscar las traducciones se podria buscar
             // en cualquier idioma (aunque o existiese)
-            supportedLngs: ['en-UK', 'es-ES'],
+            supportedLngs: ['en', 'es'],
             // namespaces que se cargan para cada uno de los idiomas
             ns: ['day1', 'day2', 'test1', 'ohi'],
-            preload: ['en-UK', 'es-ES'],
+            preload: ['en', 'es'],
             // mostrar informacion de ayuda por consola
             debug: true,
             // cargar las traducciones de un servidor especificado en vez de ponerlas directamente
@@ -98,8 +101,8 @@ export default class BootScene extends Phaser.Scene {
     }
 
     create() {
-        this.scene.start('LanguageMenu');
+        let gameManager = GameManager.create(this);
+        gameManager.startLangMenu();
     }
-
 
 }

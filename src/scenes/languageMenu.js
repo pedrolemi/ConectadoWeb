@@ -1,4 +1,5 @@
 import FlagButton from '../flagButton.js'
+import GameManager from '../gameManager.js'
 
 export default class LanguageMenu extends Phaser.Scene {
     /**
@@ -8,7 +9,7 @@ export default class LanguageMenu extends Phaser.Scene {
     constructor() {
         super({key: 'LanguageMenu'});
     }
-
+in
     create() {
         const CANVAS_WIDTH = this.sys.game.canvas.width;
         const CANVAS_HEIGHT = this.sys.game.canvas.height;
@@ -25,16 +26,8 @@ export default class LanguageMenu extends Phaser.Scene {
         screen.setDisplaySize(CANVAS_WIDTH, CANVAS_HEIGHT);
 
         let height = CANVAS_HEIGHT / 8;
-        new FlagButton(this, 0, 3, height, 'ukFlag', 'en-UK');
-        new FlagButton(this, 1, 3, height, 'spFlag', 'es-ES');
-        new FlagButton(this, 2, 3, height, 'frFlag', 'en-UK');
-
-    }
-    
-    startGame(){
-        // IMPORTANTE: HAY QUE LANZAR PRIMERO EL DIALOGMANAGER PARA QUE LOS 
-        // RETRATOS DE LOS PERSONAJES SE PINTEN POR ENCIMA DE LA CAJA DE TEXTO
-        this.scene.launch('DialogManager');
-        this.scene.start('Test');
+        new FlagButton(this, 0, 3, height, 'ukFlag', 'en');
+        new FlagButton(this, 1, 3, height, 'spFlag', 'es');
+        new FlagButton(this, 2, 3, height, 'frFlag', 'en');
     }
 }

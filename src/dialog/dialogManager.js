@@ -181,8 +181,4 @@ export default class DialogManager extends Phaser.Scene {
         this.selectedOption = index;
         console.log("Selected option " + index);
     }
-
-
-
-
 }

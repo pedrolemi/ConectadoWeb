@@ -1,4 +1,5 @@
-import DialogObject from "./dialogObject.js";
+import DialogObject from './dialogObject.js';
+import GameManager from '../gameManager.js'
 
 export default class OptionBox extends DialogObject {
     /**
@@ -34,9 +35,11 @@ export default class OptionBox extends DialogObject {
 
         this.box.setInteractive();
 
+        let gameManager = GameManager.getInstance();
+
         // Configuracion de las animaciones
         let tintFadeTime = 50;
-        this.scene.plugins.get('rextintrgbplugin').add(this.box);
+        gameManager.tintrgb.add(this.box);
 
         // Hace fade del color de la caja al pasar o quitar el raton por encima
         this.box.on('pointerover', () => {

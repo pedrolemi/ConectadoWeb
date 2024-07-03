@@ -1,3 +1,5 @@
+import GameManager from "./gameManager.js";
+
 export default class FlagButton extends Phaser.GameObjects.Image {
     /**
     * Clase que representa un boton para elegir el idioma del juego
@@ -17,7 +19,9 @@ export default class FlagButton extends Phaser.GameObjects.Image {
 
         this.scene.add.existing(this);
 
-        let i18next = this.scene.plugins.get('rextexttranslationplugin');
+        let gameManager = GameManager.getInstance();
+
+        let i18next = gameManager.i18next;
 
         this.setOrigin(0.5, 0.5);
 
@@ -40,7 +44,8 @@ export default class FlagButton extends Phaser.GameObjects.Image {
         this.setInteractive();
         this.on('pointerdown', (pointer) => {
             i18next.changeLanguage(language);
-            this.scene.startGame();
+            gameManager.startGame();
+            //this.scene.startGame();
         });
 
         // Configuracion de las animaciones

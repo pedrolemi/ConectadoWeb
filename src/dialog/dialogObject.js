@@ -2,7 +2,6 @@ export default class DialogObject {
     /**
     * Clase base para los elementos de dialogo, con metodos 
     * para crear texto o activar/desactivar el objeto
-    * @extends Phaser.GameObjects.Container 
     * @param {Phaser.Scene} scene - escena a la que pertenece
     */
     constructor(scene) {

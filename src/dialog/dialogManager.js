@@ -3,22 +3,18 @@ import OptionBox from './optionBox.js'
 
 export default class DialogManager extends Phaser.Scene {
     /**
-    * Gestor de los dialogos. Crea la caja de texto y el texto y se encarga de actualizarlos.
-    * Los textos a escribir se deben establecer con el metodo setDialogs(), y deben establecer
-    * al momento de crear la escena.
+    * Gestor de los dialogos. Crea la caja de texto/opciones con su texto y se encarga de actualizarlos.
+    * Los nodos de diálogos tienen que estar creados con antelación (debería hacerse en la constructora de la escena)
     * @extends Phaser.Scene
     */
     constructor() {
         super({ key: 'DialogManager' });
 
-        this.textbox = null;
-        this.dialogs = [];
-        this.textCount = 0;
-        this.lastCharacter = "";
-        this.playerName = "";
-
-        this.options = [];
-        this.selectedOption = null;
+        this.textbox = null;                // Instancia de la caja de dialogo
+        this.lastCharacter = "";            // Ultimo personaje que hablo
+        this.options = [];                  // Cajas de opcion multiple
+        this.currNode = null;               // Nodo actual
+        this.portraits = new Map();         // Mapa para guardar los retratos en esta escena
     }
 
     create() {
@@ -26,23 +22,25 @@ export default class DialogManager extends Phaser.Scene {
         this.textbox.activate(false);
         this.activateOptions(false);
 
-        // let mask = this.add.image(this.textbox.box.x, this.textbox.box.y, 'textboxMask');
+        // Mascara para los retratos de los personajes (para que no se pinten fuera de la caja de texto)
         let mask = this.add.image(this.textbox.box.x, this.textbox.box.y, 'textboxMask');
+        // let mask = this.add.image(this.textbox.box.x, this.textbox.box.y, 'dialog', 'textboxMask.png');
         mask.setOrigin(this.textbox.box.originX, this.textbox.box.originY);
         mask.setScale(this.textbox.box.scaleX, this.textbox.box.scaleY);
         mask.setCrop(0, 0, 160, mask.displayHeight);
         mask.visible = false;
         this.portraitMask = mask.createBitmapMask();
-
-        this.portraits = new Map();
     }
 
+
+    // IMPORTANTE: SE TIENE QUE LLAMAR ANTES DE CAMBIAR LA ESCENA
+    // Destruye de la escena todos los retratos de los personajes para que
+    // no de error al cambiar de escena porque los personajes ya no existan
     clearPortraits() {
         this.portraits.forEach((value, key) => {
             value.destroy();
         });
         this.portraits.clear();
-
     }
 
     /**
@@ -50,10 +48,14 @@ export default class DialogManager extends Phaser.Scene {
     * @param {Phaser.Scene} scene - escena a la que se va a pasar
     */
     changeScene(scene) {
-        // Coge todos los retratos de los personajes de la escena y los copia en esta escena
+        // Coge todos los retratos de los personajes de la escena, 
+        // los copia en esta escena, y les aplica la mascara
         scene.portraits.forEach((value, key) => {
             let p = this.add.existing(value);
-            this.portraits.set(key, p );
+            this.portraits.set(key, p);
+
+            value.alpha = 0;
+            value.setMask(this.portraitMask)
         });
 
         // Desactiva la caja de texto y las opciones (por si acaso)
@@ -61,118 +63,99 @@ export default class DialogManager extends Phaser.Scene {
         this.activateOptions(false);
     }
 
-    // Pruebas
-    test1() {
-        this.playerName = "Paco";
+    /**
+    * Cambia el nodo actual por el indicado
+    * @param {DialogNode} node - nodo que se va a poner como nodo actual
+    */
+    setNode(node) {
+        // Desactiva la caja de texto y las opciones (por si acaso)
+        if (this.textbox) this.textbox.activate(false);
         this.activateOptions(false);
 
-        this.finished = false;
+        // Cambia el nodo por el indicado
+        this.currNode = node;
 
-        this.textCount = 0;
-        if (this.dialogs.length > 0) {
-            this.lastCharacter = this.dialogs[this.textCount].character;
-            this.textbox.setText(this.dialogs[this.textCount], true);
-        }
-
-        this.textbox.activate(true);
-    }
-
-    test2() {
-        this.textbox.activate(false);
-        this.createOptions(["Opcion 1", "Opcion 2"]);
-        this.activateOptions(true);
-    }
-
-    /**
-    * Cambia la serie de dialogos a mostrar. Deberia llamarse una vez al crear la escena
-    * @param {Array} dialogs - array de dialogos que se mostraran. Cada objeto debera tener los atributos text, character, name, ... (completar)
-    */
-    setDialogs(dialogs) {
-        this.dialogs = this.splitDialogs(dialogs);
-        this.textCount = 0;
-        if (this.dialogs.length > 0) {
-            this.lastCharacter = this.dialogs[this.textCount].character;
-            this.textbox.setText(this.dialogs[this.textCount], true);
+        // Si el nodo es la raiz, pasa al siguiente nodo, ya que la
+        // raiz solo contiene informacion de los nodos siguientes
+        if (node.id === "root") {
+            this.nextNode();
         }
     }
-    
-    /**
-    * Prepara los dialogos por si alguno es demasiado largo y se sale de la caja de texto
-    * @param {Array} dialogs - array de dialogos a preparar
-    * @return {Array} - array con los dialogos ajustados
-    */
-    splitDialogs(dialogs) {
-        let newDialogs = [];      // Nuevo array de dialogos tras dividir los dialogos demasiado largos
-        let i = 0;                  // Indice del dialogo en el array de dialogos
-        let dialogCopy = "";        // Copia del dialogo con todos sus atributos
-        let currText = "";          // Texto a dividir
 
-        // Mientras no se haya llegado al final de los dialogos
-        while (i < dialogs.length) {
-            // Cambia el texto a mostrar por el dialogo completo para obtener sus dimensiones 
-            // (se copia la informacion del dialogo actual, pero se cambia el texto a mostrar)
-            currText = dialogs[i].text;            
-            dialogCopy = { ...dialogs[i] };
-            dialogCopy.text = currText;
-            this.textbox.setText(dialogCopy, false);
 
-            // Si la altura del texto supera la de la caja de texto 
-            if (this.textbox.currText.getBounds().height > this.textbox.height) {
-                // Se separan todas las palabras del dialogo por espacios
-                let words = currText.split(' ');
-                let prevText = "";          // Texto antes de coger la siguiente palabra del dialogo
-                let newText = "";           // Texto obtenido tras coger la siguiente palabra del dialogo
-                let currWord = words[0];
+    // Pasa al nodo siguiente dependiendo del tipo que sea el nodo actual y el nodo siguiente
+    nextNode() {
+        // Actualiza el ultimo personaje que tuvo un dialogo
+        this.lastCharacter = this.currNode.character;
 
-                // Va recorriendo el array de palabras hasta que no quede ninguna
-                while (words.length > 0) {
-                    // Coge la primera palabra y actualiza tanto el
-                    // texto anterior como el nuevo con dicha palabra
-                    prevText = newText;
-                    newText += " " + currWord;
-                    
-                    // Cambia el texto por el nuevo para calcular sus dimensiones
-                    dialogCopy = { ...dialogs[i] };
-                    dialogCopy.text = newText;
-                    this.textbox.setText(dialogCopy, false);
-                    
-                    // Si no supera la altura de la caja de texto, saca la palabra del array
-                    if (this.textbox.currText.getBounds().height <= this.textbox.height) {
-                        words.shift();   
-                        currWord = words[0]; 
-                    }
-                    // Si no, reinicia el texto y guarda el dialogo actual con el texto obtenido hasta el momento
-                    else {
-                        newText = "";
-                        dialogCopy = { ...dialogs[i] };
-                        dialogCopy.text = prevText;
-                        newDialogs.push(dialogCopy);
-                    }
-                }
-                // Una vez recorrido todo el dialogo, guarda el dialogo con el texto restante 
-                prevText = newText;
-                newText += " " + currWord;
-                dialogCopy = { ...dialogs[i] };
-                dialogCopy.text = prevText;
-                newDialogs.push(dialogCopy);
-                
-                i++;
+        if (this.currNode.type === "condition") {
+
+        }
+        else if (this.currNode.type === "option") {
+
+        }
+        // Si es un nodo de texto, 
+        else if (this.currNode.type === "text") {
+            // Si no se ha acabado de escribir todo el texto, lo muestra entero de golpe
+            if (!this.textbox.finished) {
+                this.textbox.forceFinish();
             }
-            // Si la altura no supera la de la caja de texto, se guarda 
-            // el dialogo actual y se pasa a mirar el siguiente
+            // Si ya se ha mostrado todo el texto,
             else {
-                dialogCopy = { ...dialogs[i] };
-                dialogCopy.text = currText;
-                newDialogs.push(dialogCopy);
-                i++;
-                if (dialogs[i]) currText = dialogs[i].text;
+                // Actualiza el dialogo del nodo actual que se esta mostrando
+                this.currNode.currDialog++;
+
+                // Si aun no se han mostrado todos los dialogos del nodo, muestra el siguiente dialogo
+                if (this.currNode.currDialog < this.currNode.dialogs.length) {
+                    this.textbox.setText(this.currNode.dialogs[this.currNode.currDialog], true);
+                    this.textbox.activate(true);
+                }
+                // Si ya se han mostrado todos los dialogos del nodo,
+                else {
+                    // Se reinicia el dialogo del nodo actual
+                    this.currNode.currDialog = 0;
+
+                    // Actualiza el dialogo actual por el siguiente. Un nodo de tipo texto solo
+                    // puede llevar a un unico nodo de tipo texto, por lo que no se hace distincion
+                    // de casos y se gestiona directamente intentando poner otra caja de texto 
+                    this.currNode = this.currNode.next[this.currNode.nextInd];
+
+                    // Si el nodo no es valido, se oculta la caja de texto
+                    if (!this.currNode) {
+                        this.textbox.activate(false);
+                    }
+                    // Si lo es, 
+                    else if (this.currNode.type == "text") {
+                        // Si el ultimo personaje que hablo no es el mismo que el personaje 
+                        // que va a hablar (deberia serlo, pero se comprueba por si acaso)
+                        if (this.lastCharacter !== this.currNode.character) {
+                            // Se oculta la caja de dialogo y una vez termine la animacion,
+                            // se actualiza el texto a mostrar y se vuelve a mostrar la caja
+                            this.textbox.activate(false, () => {
+                                this.textbox.setText(this.currNode.dialogs[this.currNode.currDialog], true);
+                                this.textbox.activate(true);
+                            });
+                        }
+                        // Si el personaje es el mismo, se actualiza la caja de dialogo
+                        else {
+                            this.textbox.setText(this.currNode.dialogs[this.currNode.currDialog], true);
+                        }
+                    }
+
+                }
+
             }
+
+            // Si el nodo actual es valido, se actualiza el retrato a mostrar
+            if (this.currNode) {
+                this.textbox.setPortrait(this.currNode.character);
+            }
+
+
         }
 
-        return newDialogs;
     }
 
-    
     createOptions(opts) {
         // Limpia las opciones que hubiera anteriormente
         this.options.forEach((option) => {
@@ -200,42 +183,6 @@ export default class DialogManager extends Phaser.Scene {
     }
 
 
-    // Pasa al siguiente dialogo
-    nextDialog() {
-        // Si no ha acabado de aparecer todo el texto, lo muestra de golpe
-        if (!this.textbox.finished) {
-            this.textbox.forceFinish();
-        }
-        else {
-            // Actualiza el ultimo personaje que ha hablado
-            this.lastCharacter = this.dialogs[this.textCount].character;
-            
-            // Actualiza el numero de dialogos
-            this.textCount++;
 
-            // Si aun no se han escrito todos los dialogos, escribe el siguiente
-            if (this.textCount < this.dialogs.length) {
-                // Si es el mismo personaje el que habla, solo cambia el texto a mostrar
-                if (this.dialogs[this.textCount].character === this.lastCharacter) {
-                    this.textbox.setText(this.dialogs[this.textCount], true);
-                }
-                // Si es otro, oculta la caja de texto y una vez oculta,
-                // actualiza el texto y el personaje y vuelve a mostrar la caja
-                else {
-                    this.textbox.activate(false, () => {
-                        this.textbox.setText(this.dialogs[this.textCount], true);
-                        this.textbox.activate(true);
-                    });
-                }
 
-                // Cambia el retrato a mostrar
-                this.textbox.setPortrait(this.dialogs[this.textCount].character);
-            }
-            // Si se han acabado, desactiva la caja de texto
-            else {
-                this.textbox.activate(false);
-            }
-        }
-
-    }
 }

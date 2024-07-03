@@ -19,7 +19,7 @@ export default class TextBox extends DialogObject {
 
         this.box.setInteractive();
         this.box.on('pointerdown', (pointer) => {
-            this.scene.nextDialog();
+            this.scene.nextNode();
         });
 
         // Imagen de la caja del nombre
@@ -99,6 +99,11 @@ export default class TextBox extends DialogObject {
         this.createText(tempText, dialogInfo.character);
         this.createName(dialogInfo.name, dialogInfo.character);
 
+        this.playerTalking = false;
+        if (dialogInfo.character === "player") {
+            this.playerTalking = true;
+        }
+
         if (animate) {
             // Se crea el evento 
             this.timedEvent = this.scene.time.addEvent({
@@ -140,14 +145,6 @@ export default class TextBox extends DialogObject {
         let y = 622;
         let charName = name;
 
-        this.playerTalking = false;
-        // Si el personaje que habla es el jugador, modifica el nombre
-        // para que sea el del jugador
-        if (character === "player") {
-            charName = this.scene.playerName;
-            this.playerTalking = true;
-        }
-
         // Crea el texto en la escena
         this.nameText = super.createText(x, y, name, this.nameTextConfig);
         this.nameText.setOrigin(0.5, 0.5);
@@ -155,14 +152,14 @@ export default class TextBox extends DialogObject {
         // Cambia el texto del objeto
         this.nameText.text = charName;
     }
-    
+
     /**
     * Cambia el retrato del personaje hablando
     * @param {string} character - id del personaje que habla
     */
     setPortrait(character) {
         this.portrait = this.scene.portraits.get(character);
-        if (character == "player" || !this.portrait ) this.portrait = this.emptyPortrait;
+        if (character == "player" || !this.portrait) this.portrait = this.emptyPortrait;
     }
 
     // Anima el texto para que vaya apareciendo caracter a caracter
@@ -201,7 +198,7 @@ export default class TextBox extends DialogObject {
         // Es visible si el alpha de la caja es 1
         let isVisible = this.box.alpha == 1;
 
-        if(active && isVisible) {
+        if (active && isVisible) {
             if (this.playerTalking) this.portrait.alpha = 0;
         }
 
@@ -241,6 +238,15 @@ export default class TextBox extends DialogObject {
             }
             else {
                 super.activate(false, [this.box, this.nameBox, this.currText, this.nameText, this.portrait], onComplete, delay);
+            }
+        }
+        // Si se va a desactivar y no era visible, se llama a la funcion que se ha pasado
+        else if (!active && !isVisible) {
+            if (onComplete !== null && typeof onComplete === 'function') {
+                setTimeout(() => {
+                    onComplete();
+                }, delay);
+
             }
         }
     }

@@ -3,7 +3,12 @@
     "dialog": {
         "character": "mom",
         "name": "Character 2",
+        "text": "{{name}} is a person",
         "text_male": "{{name}} is a boy",
-        "text_female": "{{name}} is a girl"
+        "text_female": "{{name}} is a girl",
+        "choices": [
+            "choice1",
+            "choice2"
+        ]
     }
 }

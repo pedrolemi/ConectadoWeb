@@ -24,7 +24,22 @@ export default class BootScene extends Phaser.Scene {
         this.load.image('textboxName', 'textboxName.png');
         this.load.image('option', 'optionBg.png');
         */
-       this.load.image('textboxMask', 'textboxMask.png');
+        this.load.image('textboxMask', './dialog/textboxMask.png');
+        
+        // comprimir texturas (toma mucha menos memoria, aunque los archivos pueden ocupa mas tam)
+        // Se comprueba de arriba a abajo hasta encontrar el primero que funcione en el dispositivo, si no, se usa png
+        // formatos de compresion: ETC, ETC1, ATC, ASTC, BPTC, RGTC, PVRTC, S3TC, and S3TCSRB
+        // ASTC - MAC
+        // PVRTC - iOS y algunos Android
+        // S3TCSRB/S3TCSRGB - SOs sobremesa y algunos Android
+        // ETC1 - mayoria Android
+        this.load.texture('dialog', {
+            // 'ASTC': { type: 'PVR', textureURL: 'dialog/dialog-astc4x4/dialog-astc4x4.pvr', atlasURL: 'dialog/dialog-astc4x4/dialog-astc4x4.json' },
+            //'PVRTC': { type: 'PVR', textureURL: 'dialog/dialog-pvrtc/dialog-pvrtc.pvr', atlasURL: 'dialog/dialog-pvrtc/dialog-pvrtc.json' },
+            // 'S3TCSRGB': { type: 'PVR', textureURL: 'dialog/dialog-dxt5/dialog-dxt5.pvr', atlasURL: 'dialog/dialog-dxt5/dialog-dxt5.json' },
+            'IMG': { textureURL: 'dialog/dialog-img/dialog-img.png', atlasURL: 'dialog/dialog-img/dialog-img.json' },
+        });
+
 
         // Fondos menu de idiomas
         this.load.image('basePC', 'languageMenu/BasePCsq.png');
@@ -44,19 +59,7 @@ export default class BootScene extends Phaser.Scene {
         // [Idle01, IdleBase]
         this.load.spine("dad", 'dad/Front 34.json', 'dad/Front 34.atlas')
 
-        // comprimir texturas (toma mucha menos memoria, aunque los archivos pueden ocupa mas tam)
-        // Se comprueba de arriba a abajo hasta encontrar el primero que funcione en el dispositivo, si no, se usa png
-        // formatos de compresion: ETC, ETC1, ATC, ASTC, BPTC, RGTC, PVRTC, S3TC, and S3TCSRB
-        // ASTC - MAC
-        // PVRTC - iOS y algunos Android
-        // S3TCSRB/S3TCSRGB - SOs sobremesa y algunos Android
-        // ETC1 - mayoria Android
-        this.load.texture('dialog', {
-            'ASTC': { type: 'PVR', textureURL: 'dialog/dialog-astc4x4/dialog-astc4x4.pvr', atlasURL: 'dialog/dialog-astc4x4/dialog-astc4x4.json' },
-            //'PVRTC': { type: 'PVR', textureURL: 'dialog/dialog-pvrtc/dialog-pvrtc.pvr', atlasURL: 'dialog/dialog-pvrtc/dialog-pvrtc.json' },
-            'S3TCSRGB': { type: 'PVR', textureURL: 'dialog/dialog-dxt5/dialog-dxt5.pvr', atlasURL: 'dialog/dialog-dxt5/dialog-dxt5.json' },
-            'IMG': { textureURL: 'dialog/dialog-img/dialog-img.png', atlasURL: 'dialog/dialog-img/dialog-img.json' },
-        });
+        
 
         // PLUGINS
         // Precarga el plugin para hacer fade de colores
@@ -78,7 +81,7 @@ export default class BootScene extends Phaser.Scene {
             // en cualquier idioma (aunque o existiese)
             supportedLngs: ['en-UK', 'es-ES'],
             // namespaces que se cargan para cada uno de los idiomas
-            ns: ['day1', 'day2'],
+            ns: ['day1', 'day2', 'test1', 'ohi'],
             preload: ['en-UK', 'es-ES'],
             // mostrar informacion de ayuda por consola
             debug: true,

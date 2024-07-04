@@ -63,6 +63,7 @@ export default class DialogObject {
     */
     activate(active, objects, onComplete, delay) {
         let fade;
+        if (!delay) delay = 0;
 
         // Si se va a activar
         if (active) {

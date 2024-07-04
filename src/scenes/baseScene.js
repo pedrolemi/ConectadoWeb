@@ -42,13 +42,21 @@ export default class BaseScene extends Phaser.Scene {
 
     /**
     * Va leyendo el json y creando los nodos de manera recursiva
-    * IMPORTANTE: Si para ir al siguiente nodo hay una condicion o seleccion de
+    * 
+    * IMPORTANTE 1: Si para ir al siguiente nodo hay una condicion o seleccion de
     * opcion previa, las condiciones u opciones se guardan en el nodo actual,
     * haciendo que dicho nodo tenga las propiedades choices o conditions.
     * Esto implica que, aunque un nodo tenga texto, si tiene esas propiedades,
     * no se lo catalogara como nodo de tipo texto, por lo que un nodo de
     * tipo texto solo tiene un nodo siguiente y es de tipo texto
     * En principio, un nodo solo puede ser de opcion o de condicion a la vez.
+    * 
+    * IMPORTANTE 2: En un nodo con condiciones, cada condicion lleva a otro nodo distinto.
+    * Al momento de llegar a un nodo condicion, el siguiente nodo al nodo con condiciones
+    * sera el nodo indicado como siguiente en la primera condicion que se cumpla (se van 
+    * comprobando en el orden en el que se han leido). Cada condicion puede tener varios 
+    * requisitos (variables), en cuyo caso, la condicion solo se cumplira si todos sus
+    * requisitos se cumplen (operador &&. De momento no hay soporte para el operador || ) 
     * 
     * @param {String} id - id del nodo que se lee. El nodo inicial es root
     * @param {String} namespace - nombre del archivo del que se va a leer
@@ -84,32 +92,46 @@ export default class BaseScene extends Phaser.Scene {
         else if (jsonNode.hasOwnProperty("conditions")) {
             currNode.type = "condition";
 
-            // Se leen todas las condiciones
+            // Se leen todas las condiciones. Cada condicion lleva a un nodo distinto y 
+            // en una condicion se pueden comprobar multiples variables
             for (let i = 0; i < jsonNode.conditions.length; i++) {
-                // Obtiene el nombre de la condicion filtrando las propiedades del objeto
+
+                // Obtiene el nombre de las variables a comprobar
+                // (suprimiendo las propiedades parent y next)
                 let obj = Object.keys(jsonNode.conditions[i]);
-                let properties = obj.filter(key => key !== "parent" && key !== "next");
-                let conditionName = properties[0];
+                let vars = obj.filter(key => key !== "parent" && key !== "next");
 
-                // Obtiene el objeto que guarda las propiedades de la condicion
-                let conditionObj = jsonNode.conditions[i][conditionName];
+                let nodeConditions = [];
 
-                let condition = {
-                    key: conditionName,
-                    operator: conditionObj.operator,
-                    type: conditionObj.type,
-                    value: conditionObj.value
-                };
+                // Recorre todas las variables obtenidas
+                for (let j = 0; j < vars.length; j++) {
+                    // Lee el nombre de la variable
+                    let varName = vars[j];
 
-                // Se guarda la condicion y se crea de manera recursiva
-                // el nodo siguiente que corresponde a cumplir dicha condicion
-                currNode.conditions.push(condition);
-                currNode.next.push(this.readNodes(jsonNode.conditions[i].next, namespace, playerName, context, getObjs))
+                    // Obtiene el objeto que guarda las propiedades que tiene que cumplir la variable
+                    let obj = jsonNode.conditions[i][varName];
 
-                // Si la condicion no esta guardada, la guarda en el gameManager a falso por defecto
-                if (!this.gameManager.hasValue(conditionName)) {
-                    this.gameManager.setValue(conditionName, false);
+                    // Crea un objeto igual que obj, pero que tamiben guarda su nombre
+                    let condition = {
+                        key: varName,
+                        operator: obj.operator,
+                        type: obj.type,
+                        value: obj.value
+                    };
+
+                    // Lo mete en las variables del nodo
+                    nodeConditions.push(condition);
+
+                    // Si la variable no esta guardada, la guarda en el gameManager a falso por defecto
+                    if (!this.gameManager.hasValue(varName)) {
+                        this.gameManager.setValue(varName, false);
+                    }
                 }
+
+                // Se guardan las condiciones y se crea de manera recursiva
+                // el nodo siguiente que corresponde a cumplir dichas condiciones
+                currNode.conditions.push(nodeConditions);
+                currNode.next.push(this.readNodes(jsonNode.conditions[i].next, namespace, playerName, context, getObjs))
             }
         }
         // Si el nodo no es ni de opciones ni de condiciones, es de texto
@@ -146,7 +168,7 @@ export default class BaseScene extends Phaser.Scene {
         let i = 0;                  // Indice del dialogo en el array de dialogos
         let dialogCopy = "";        // Copia del dialogo con todos sus atributos
         let currText = "";          // Texto a dividir
-        
+
         // Mientras no se haya llegado al final de los dialogos
         while (i < dialogs.length) {
             // Cambia el texto a mostrar por el dialogo completo para obtener sus dimensiones 

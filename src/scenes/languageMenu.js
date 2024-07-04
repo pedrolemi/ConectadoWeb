@@ -7,9 +7,9 @@ export default class LanguageMenu extends Phaser.Scene {
     * @extends Phaser.Scene
     */
     constructor() {
-        super({key: 'LanguageMenu'});
+        super({ key: 'LanguageMenu' });
     }
-in
+    in
     create() {
         const CANVAS_WIDTH = this.sys.game.canvas.width;
         const CANVAS_HEIGHT = this.sys.game.canvas.height;

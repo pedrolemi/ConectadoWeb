@@ -5,7 +5,7 @@ export default class Test2 extends BaseScene {
     constructor() {
         super('Test2');
     }
-    
+
     create() {
         super.create();
 

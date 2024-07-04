@@ -66,6 +66,7 @@ export default class OptionBox extends DialogObject {
         // Al hacer click, vuelve a cambiar el color de la caja al original
         // y avisa a la escena de la opcion elegida 
         this.box.on('pointerdown', (pointer) => {
+            this.box.disableInteractive();
             let fadeColor = this.scene.tweens.add({
                 targets: [this.box],
                 tintR: 0xFF,
@@ -81,7 +82,7 @@ export default class OptionBox extends DialogObject {
 
         this.box.alpha = 0;
         this.text.alpha = 0;
-        this.box.setInteractive(false);
+        this.box.disableInteractive();
     }
 
     /**
@@ -97,16 +98,25 @@ export default class OptionBox extends DialogObject {
 
         // Si se va a activar y no es visible, aparece con animacion
         if (active && !isVisible) {
-            this.box.setInteractive(false);
+            this.box.disableInteractive();
             super.activate(true, [this.box, this.text], () => {
-                this.box.setInteractive(true);
+                this.box.setInteractive();
             }, 0);
         }
         // Si se va a desactivar y es visible, desaparece con animacion
         else if (!active && isVisible) {
+            this.box.disableInteractive();
             super.activate(false, [this.box, this.text], onComplete, delay);
         }
+        // Si se va a desactivar y no era visible, se llama a la funcion que se ha pasado
+        else if (!active && !isVisible) {
+            if (onComplete !== null && typeof onComplete === 'function') {
+                setTimeout(() => {
+                    onComplete();
+                }, delay);
 
+            }
+        }
     }
 
 }

@@ -73,10 +73,9 @@ export default class DialogManager extends Phaser.Scene {
     */
     createOptions(opts) {
         // Limpia las opciones que hubiera anteriormente
-        this.options.forEach((option) => {
-            option.activate(false, () => { option.destroy(); });
-        });
+        this.options.forEach((option) => { option.activate(false); });
         this.options = [];
+
         // Crea las opciones y las guarda en el array
         for (let i = 0; i < opts.length; i++) {
             this.options.push(new OptionBox(this, i, opts.length, opts[i]));
@@ -86,9 +85,11 @@ export default class DialogManager extends Phaser.Scene {
     /**
     * Activa/desactiva las cajas de opcion multiple
     * @param {Boolean} active - si se van a activar o no las opciones
+    * @param {function} onComplete - funcion a la que llamar cuando acabe la animacion
+    * @param {number} delay - tiempo en ms que tarda en llamarse a onComplete
     */
-    activateOptions(active) {
-        this.options.forEach((option) => { option.activate(active); });
+    activateOptions(active, onComplete, delay) {
+        this.options.forEach((option) => { option.activate(active, onComplete, delay); });
     }
 
     /**
@@ -102,16 +103,13 @@ export default class DialogManager extends Phaser.Scene {
         // Actualiza el nodo actual
         this.currNode.nextInd = index;
         this.currNode = this.currNode.next[this.currNode.nextInd];
+        this.processNextNode();
 
         // Si el nodo actual es valido, actualiza el retrato del personaje por si acaso
         if (this.currNode) {
             this.textbox.setPortrait(this.currNode.character);
         }
-
-        // Procesa el siguiente nodo
-        this.processNextNode();
     }
-
 
     /**
     * Cambia el nodo actual por el indicado
@@ -130,7 +128,7 @@ export default class DialogManager extends Phaser.Scene {
         if (node.id === "root") {
             this.nextNode();
         }
-        
+
     }
 
 
@@ -146,27 +144,39 @@ export default class DialogManager extends Phaser.Scene {
 
             // Recorre todas las condiciones hasta que se haya cumplido la primera
             while (i < this.currNode.conditions.length && !conditionMet) {
-                // Coge el nombre de la variable, el operador y el valor esperado 
-                let variable = this.currNode.conditions[i].key;
-                let operator = this.currNode.conditions[i].operator;
-                let expectedValue = this.currNode.conditions[i].value;
+                let allConditionsMet = true;
+                let j = 0;
 
-                // Busca el valor de la variable en el gameManager
-                let variableValue = this.gameManager.getValue(variable);
+                // Se recorren todas las variables de la condicion mientras se cumplan todas
+                while (j < this.currNode.conditions[i].length && allConditionsMet) {
+                    // Coge el nombre de la variable, el operador y el valor esperado 
+                    let variable = this.currNode.conditions[i][j].key;
+                    let operator = this.currNode.conditions[i][j].operator;
+                    let expectedValue = this.currNode.conditions[i][j].value;
 
-                if (operator === "equal") {
-                    conditionMet = variableValue === expectedValue;
-                }
-                else if (operator === "greater") {
-                    conditionMet = variableValue >= expectedValue;
+                    // Busca el valor de la variable en el gameManager
+                    let variableValue = this.gameManager.getValue(variable);
 
-                }
-                else if (operator === "lower") {
-                    conditionMet = variableValue <= expectedValue;
+                    if (operator === "equal") {
+                        conditionMet = variableValue === expectedValue;
+                    }
+                    else if (operator === "greater") {
+                        conditionMet = variableValue >= expectedValue;
 
-                }
-                else if (operator === "different") {
-                    conditionMet = variableValue !== expectedValue;
+                    }
+                    else if (operator === "lower") {
+                        conditionMet = variableValue <= expectedValue;
+
+                    }
+                    else if (operator === "different") {
+                        conditionMet = variableValue !== expectedValue;
+                    }
+
+                    // Se habran cumplido todas las condiciones si todas las condiciones
+                    // se han cumplido anteriormente y esta tambien se ha cumplido
+                    allConditionsMet &= conditionMet;
+
+                    j++;
                 }
 
                 // Si no se ha cumplido ninguna condicion, pasa a la siguiente

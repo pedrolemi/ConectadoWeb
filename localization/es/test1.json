@@ -60,6 +60,11 @@
                     "value": false,
                     "operator": "equal",
                     "type": "boolean"
+                },
+                "sponsored": {
+                    "value": false,
+                    "operator": "equal",
+                    "type": "boolean"
                 }
             },
             {

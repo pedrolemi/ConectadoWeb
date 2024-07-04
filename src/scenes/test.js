@@ -31,7 +31,7 @@ export default class Test extends BaseScene {
             y: this.CANVAS_HEIGHT / 1.1,
             scale: 0.2
         };
-        
+
         let mom = new Character(this, "mom", tr, this.portraitTr, () => {
             this.dialogManager.setNode(momNode)
         });
@@ -47,7 +47,7 @@ export default class Test extends BaseScene {
         this.portraits.set("mom", mom.getPortrait());
         this.portraits.set("dad", dad.getPortrait());
 
-        
+
 
         // IMPORTANTE: LLAMARLO CUANDO SE HAYA CREADO LA ESCENA
         this.dialogManager.changeScene(this);
@@ -55,5 +55,5 @@ export default class Test extends BaseScene {
     }
 
 
-    
+
 }

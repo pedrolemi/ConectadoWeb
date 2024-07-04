@@ -209,18 +209,20 @@ export default class TextBox extends DialogObject {
             // Si es el jugador el que va a hablar, no muestra el retrato
             // del personaje que habla, y si no lo es, lo muestra
             if (this.playerTalking) {
+                this.box.disableInteractive();
                 super.activate(true, [this.box, this.nameBox, this.currText, this.nameText], () => {
-                    this.box.setInteractive(true);
                     setTimeout(() => {
+                        this.box.setInteractive();
                         this.canWrite = true;
                     }, 200);
 
                 }, 0);
             }
             else {
+                this.box.disableInteractive();
                 super.activate(true, [this.box, this.nameBox, this.currText, this.nameText, this.portrait], () => {
-                    this.box.setInteractive(true);
                     setTimeout(() => {
+                        this.box.setInteractive();
                         this.canWrite = true;
                     }, 200);
                 }, 0);
@@ -228,7 +230,7 @@ export default class TextBox extends DialogObject {
         }
         // Si se va a desactivar y es visible, desaparece con animacion
         else if (!active && isVisible) {
-            this.box.setInteractive(false);
+            this.box.disableInteractive();
             this.canWrite = false;
 
             // Si es el jugador el que va a hablar, no oculta el retrato del personaje 

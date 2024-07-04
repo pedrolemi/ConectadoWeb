@@ -11,7 +11,7 @@ export default class FlagButton extends Phaser.GameObjects.Image {
     * @param {string} sprite - clave que representa el sprite de la bandera que usar
     * @param {string} language - idioma al que cambiar cuando se selecciona este boton
     */
-    constructor(scene, index, numLang, height, sprite, language){
+    constructor(scene, index, numLang, height, sprite, language) {
         super(scene, 0, 0, sprite);
 
         const CANVAS_WIDTH = this.scene.sys.game.canvas.width;
@@ -33,10 +33,10 @@ export default class FlagButton extends Phaser.GameObjects.Image {
         this.x = regionWidth * index + regionWidth / 2;
         let offset = regionWidth / 6;
         // Si es el primero o el ultimo se deja un espacio a los lados
-        if(index === 0){
+        if (index === 0) {
             this.x += offset;
         }
-        else if(index === numLang - 1){
+        else if (index === numLang - 1) {
             this.x -= offset;
         }
         this.y = CANVAS_HEIGHT / 2.3;

@@ -8,7 +8,7 @@ export default class Character {
     * @param {object} dialogContext - contexto de la funcion del dialogo
     * @param {function} dialog - funcion con el dialogo que reproduce el personaje
     */
-    constructor(scene, key, trans, portraitTrans, dialog){
+    constructor(scene, key, trans, portraitTrans, dialog) {
         this.scene = scene;
 
         this.anims = [];
@@ -41,7 +41,7 @@ export default class Character {
         this.anims.push(this.imgPortrait);
     }
 
-    setAnimation(name, loop){
+    setAnimation(name, loop) {
         // cambiar la animacion tanto del personaje como del retrato
         this.anims.forEach((anim) => {
             anim.setAnimation(0, name, loop);
@@ -51,21 +51,26 @@ export default class Character {
     getPortrait() {
         return this.portrait;
     }
-    
-    setPosition(x, y){
+
+    setPosition(x, y) {
         this.char.setPosition(x, y);
     }
 
-    setScale(scale){
+    setScale(scale) {
         this.char.setScale(scale);
     }
 
-    setActive(enable){
+    setActive(enable) {
         this.char.setVisible(enable);
-        this.char.setInteractive(enable);
+        if (enable) {
+            this.char.setInteractive();
+        }
+        else {
+            this.char.disableInteractive();
+        }
     }
 
-    changeDialog(dialog){
+    changeDialog(dialog) {
         this.dialog = dialog;
     }
 }

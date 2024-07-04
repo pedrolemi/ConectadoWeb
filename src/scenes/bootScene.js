@@ -3,7 +3,7 @@ import FlagButton from '../flagButton.js'
 
 export default class BootScene extends Phaser.Scene {
     constructor() {
-        super({ 
+        super({
             key: 'BootScene',
             // Se caraga el plugin i18next
             pack: {
@@ -28,7 +28,7 @@ export default class BootScene extends Phaser.Scene {
         this.load.image('option', 'optionBg.png');
         */
         this.load.image('textboxMask', './dialog/textboxMask.png');
-        
+
         // comprimir texturas (toma mucha menos memoria, aunque los archivos pueden ocupa mas tam)
         // Se comprueba de arriba a abajo hasta encontrar el primero que funcione en el dispositivo, si no, se usa png
         // formatos de compresion: ETC, ETC1, ATC, ASTC, BPTC, RGTC, PVRTC, S3TC, and S3TCSRB
@@ -62,7 +62,7 @@ export default class BootScene extends Phaser.Scene {
         // [Idle01, IdleBase]
         this.load.spine("dad", 'dad/Front 34.json', 'dad/Front 34.atlas')
 
-        
+
 
         // PLUGINS
         // Precarga el plugin para hacer fade de colores
@@ -97,7 +97,7 @@ export default class BootScene extends Phaser.Scene {
             }
         })
 
-        
+
     }
 
     create() {

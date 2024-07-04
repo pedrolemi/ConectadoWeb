@@ -1,5 +1,5 @@
 import GameManager from '../gameManager.js'
-import FlagButton from '../flagButton.js'
+import EventDispatcher from '../eventDispatcher.js'
 
 export default class BootScene extends Phaser.Scene {
     constructor() {
@@ -102,7 +102,23 @@ export default class BootScene extends Phaser.Scene {
 
     create() {
         let gameManager = GameManager.create(this);
-        gameManager.startLangMenu();
+
+        let dispatcher = EventDispatcher.getInstance();
+        dispatcher.add("hola", this, (nombre) => {
+            console.log(nombre);
+            gameManager.startLangMenu();
+        });
+
+        dispatcher.add("prueba", this, () => {
+            console.log("prueba");
+        })
+        dispatcher.removeByOwner(this);
+        dispatcher.removeByEvent("prueba");
+        dispatcher.add("hola", this, (nombre) => {
+            console.log(nombre);
+            gameManager.startLangMenu();
+        });
+        dispatcher.dispatch("hola", "juan");
     }
 
 }

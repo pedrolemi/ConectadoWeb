@@ -34,6 +34,8 @@ export default class GameManager {
         // almacena los valores que van a tener que ser usados desde fuera
         this.map = new Map();
         this.map.set("bag", false);
+
+        this.talking = false;
     }
 
     // metodo para generar y coger la instancia
@@ -50,7 +52,7 @@ export default class GameManager {
     }
 
     ///////////////////////////////////////
-    /// Métodos para cambiar de escena ///
+    /// Metodos para cambiar de escena ///
     //////////////////////////////////////
     startGame() {
         // IMPORTANTE: HAY QUE LANZAR PRIMERO EL DIALOGMANAGER PARA QUE LOS 
@@ -74,8 +76,25 @@ export default class GameManager {
         this.currentScene = this.currentScene.scene.get(aux);
     }
 
+
+    /**
+    * Metodo que se llama cuando inicia o termina un dialogo 
+    * @param {boolean} talking - si hay un dialogo activo o no
+    */
+    setTalking(talking) {
+        this.talking = talking;
+    }
+
+    /**
+    * @returns {boolean} - si el dialogo esta activo o no
+    */
+    isTalking() {
+        return this.talking;
+    }
+
+
     ///////////////////////////////////////
-    ///// Métodos para la blackboard /////
+    ///// Metodos para la blackboard /////
     //////////////////////////////////////
     /**
     * Devuelve el valor buscado en el mapa de propiedades
@@ -108,4 +127,5 @@ export default class GameManager {
     hasValue(key) {
         return this.map.has(key);
     }
+
 }

@@ -9,8 +9,8 @@ export default class Test extends BaseScene {
     create() {
         super.create();
 
-        let dadNode = super.readNodes("root", "ohi", "John", "male", true);
-        let momNode = super.readNodes("root", "test1", "John", "male", true);
+        let dadNode = super.readNodes("root", "ohi", "Johanna", "female", true);
+        let momNode = super.readNodes("root", "test1", "Johanna", "female", true);
 
 
         // Pone una imagen de fondo con las dimensiones del canvas

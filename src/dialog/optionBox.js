@@ -3,7 +3,7 @@ import GameManager from '../gameManager.js'
 
 export default class OptionBox extends DialogObject {
     /**
-    * Caja de texto para la opción múltiple
+    * Caja de texto para la opcion multiple
     * @extends DialogObject
     * @param {Phaser.Scene} scene - escena a la que pertenece
     * @param {number} index - indice de la opcion

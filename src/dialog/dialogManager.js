@@ -6,7 +6,7 @@ import GameManager from '../gameManager.js'
 export default class DialogManager extends Phaser.Scene {
     /**
     * Gestor de los dialogos. Crea la caja de texto/opciones con su texto y se encarga de actualizarlos.
-    * Los nodos de diálogos tienen que estar creados con antelación (debería hacerse en la constructora de la escena)
+    * Los nodos de dialogos tienen que estar creados con antelacion (deberia hacerse en la constructora de la escena)
     * @extends Phaser.Scene
     */
     constructor() {
@@ -34,6 +34,7 @@ export default class DialogManager extends Phaser.Scene {
         this.portraitMask = mask.createBitmapMask();
 
         this.gameManager = GameManager.getInstance();
+
     }
 
 
@@ -116,18 +117,25 @@ export default class DialogManager extends Phaser.Scene {
     * @param {DialogNode} node - nodo que se va a poner como nodo actual
     */
     setNode(node) {
-        // Desactiva la caja de texto y las opciones (por si acaso)
-        if (this.textbox) this.textbox.activate(false);
-        this.activateOptions(false);
+        // Si no hay ningun dialogo activo
+        if (!this.gameManager.isTalking()) {
+            // Avisa al gameManager de que ha empezado uno
+            this.gameManager.setTalking(true);
 
-        // Cambia el nodo por el indicado
-        this.currNode = node;
+            // Desactiva la caja de texto y las opciones (por si acaso)
+            if (this.textbox) this.textbox.activate(false);
+            this.activateOptions(false);
 
-        // Si el nodo es la raiz, pasa al siguiente nodo, ya que la
-        // raiz solo contiene informacion de los nodos siguientes
-        if (node.id === "root") {
-            this.nextNode();
+            // Cambia el nodo por el indicado
+            this.currNode = node;
+
+            // Si el nodo es la raiz, pasa al siguiente nodo, ya que la
+            // raiz solo contiene informacion de los nodos siguientes
+            if (node.id === "root") {
+                this.nextNode();
+            }
         }
+
 
     }
 
@@ -235,6 +243,10 @@ export default class DialogManager extends Phaser.Scene {
         // Si el nodo actual es valido, se actualiza el retrato a mostrar
         if (this.currNode) {
             this.textbox.setPortrait(this.currNode.character);
+        }
+        // Si no, se ha acabado el dialogo y lo avisa al gameManager
+        else {
+            this.gameManager.setTalking(false);
         }
 
     }

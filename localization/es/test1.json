@@ -32,7 +32,20 @@
         "parent": "34c7b0d6-13f9-49e4-8194-c06d9ce0c2e8",
         "signals": {
             "parent": "1064f486-9951-448b-b4bc-7cec90227db1",
-            "talked": {}
+            "talked": {},
+            "a": {},
+            "b": {
+                "String": "ddsad"
+            },
+            "c": {
+                "Vector2": {
+                    "x": "1",
+                    "y": "1"
+                }
+            },
+            "d": {
+                "Number": "1"
+            }
         }
     },
     "4eb4b9e1-2265-438d-af98-5650da324709": {

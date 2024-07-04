@@ -13,6 +13,7 @@ export default class DialogNode {
         this.next = [];             // posibles nodos siguientes
         this.choices = [];          // texto de las opciones si el nodo es un nodo opcion
         this.conditions = [];       // condiciones si el nodo es un nodo condicional
+        this.signals = [];          // nombres de los eventos que se llamaran al procesar el nodo
 
         this.dialogs = [];          // serie de dialogos que se van a mostrar
         this.currDialog = null;     // indice del dialogo que se esta mostrando

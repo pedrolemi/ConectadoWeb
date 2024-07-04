@@ -1,5 +1,6 @@
 import BaseScene from './baseScene.js';
 import Character from '../character.js';
+import EventDispatcher from '../eventDispatcher.js'
 
 export default class Test extends BaseScene {
     constructor() {
@@ -52,6 +53,22 @@ export default class Test extends BaseScene {
         // IMPORTANTE: LLAMARLO CUANDO SE HAYA CREADO LA ESCENA
         this.dialogManager.changeScene(this);
 
+        let dispatcher = EventDispatcher.getInstance();
+        dispatcher.add("talked", this, (obj) => {
+            console.log(obj);
+            this.gameManager.setValue("talked", true);
+        });
+
+        // dispatcher.add("prueba", this, () => {
+        //     console.log("prueba");
+        // })
+        // dispatcher.removeByOwner(this);
+        // dispatcher.removeByEvent("prueba");
+        // dispatcher.add("hola", this, (nombre) => {
+        //     console.log(nombre);
+        //     gameManager.startLangMenu();
+        // });
+        // dispatcher.dispatch("hola", "juan");
     }
 
 

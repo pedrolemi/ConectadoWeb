@@ -1,7 +1,7 @@
 import TextBox from './textbox.js'
 import OptionBox from './optionBox.js'
 import GameManager from '../gameManager.js'
-
+import EventDispatcher from '../eventDispatcher.js';
 
 export default class DialogManager extends Phaser.Scene {
     /**
@@ -34,7 +34,7 @@ export default class DialogManager extends Phaser.Scene {
         this.portraitMask = mask.createBitmapMask();
 
         this.gameManager = GameManager.getInstance();
-
+        this.dispatcher = EventDispatcher.getInstance();
     }
 
 
@@ -103,7 +103,6 @@ export default class DialogManager extends Phaser.Scene {
 
         // Actualiza el nodo actual
         this.currNode.nextInd = index;
-        this.currNode = this.currNode.next[this.currNode.nextInd];
         this.processNextNode();
 
         // Si el nodo actual es valido, actualiza el retrato del personaje por si acaso
@@ -140,11 +139,11 @@ export default class DialogManager extends Phaser.Scene {
     }
 
 
-    // Pasa al nodo siguiente dependiendo del tipo que sea el nodo actual y el nodo siguiente
+    // Dependiendo del tipo del nodo actual, actualiza cual es el indice del nodo al que tiene que ir despues
     nextNode() {
         // Actualiza el ultimo personaje que tuvo un dialogo
         this.lastCharacter = this.currNode.character;
-
+        
         // Si el nodo es un nodo condicional
         if (this.currNode.type === "condition") {
             let conditionMet = false;
@@ -191,9 +190,8 @@ export default class DialogManager extends Phaser.Scene {
                 if (!conditionMet) i++;
             }
 
-            // Actualiza el nodo actual con el primer nodo que cumpla una condicion
+            // El indice del siguiente nodo sera el primero que cumpla una de las condiciones
             this.currNode.nextInd = i;
-            this.currNode = this.currNode.next[this.currNode.nextInd];
 
             // Procesa el siguiente nodo
             this.processNextNode()
@@ -218,16 +216,15 @@ export default class DialogManager extends Phaser.Scene {
                 else {
                     // Se reinicia el dialogo del nodo actual
                     this.currNode.currDialog = 0;
+                    
                     // Si es un nodo de tipo texto, 
                     if (this.currNode.type === "text") {
-                        // Actualiza el dialogo actual por el siguiente. Un nodo de tipo texto solo
-                        // puede llevar a un unico nodo de tipo texto, por lo que no se hace distincion
-                        // de casos y se gestiona directamente intentando poner otra caja de texto 
-                        this.currNode = this.currNode.next[this.currNode.nextInd];
-
-                        this.processNextNode()
+                        // Un nodo de tipo texto (unicamente con texto, sin opciones ni condiciones) solo puede llevar
+                        // a un unico nodo, por lo que el siguiente nodo sera el primero de la lista de nodos siguientes
+                        this.currNode.nextInd = 0;
+                        this.processNextNode();
                     }
-                    // Si es un nodo de opciocn multiple 
+                    // Si es un nodo de opcion multiple 
                     else if (this.currNode.type === "choice") {
                         // Desactiva la caja de texto y una vez desaparece, hace aparecer las opciones
                         this.textbox.activate(false, () => {
@@ -236,10 +233,10 @@ export default class DialogManager extends Phaser.Scene {
                         });
                     }
                 }
-
             }
 
         }
+
         // Si el nodo actual es valido, se actualiza el retrato a mostrar
         if (this.currNode) {
             this.textbox.setPortrait(this.currNode.character);
@@ -252,39 +249,47 @@ export default class DialogManager extends Phaser.Scene {
     }
 
     processNextNode() {
+        for (let i = 0; i < this.currNode.signals.length; i++) {
+            let evtName = this.currNode.signals[i].name;
+            this.dispatcher.dispatch(evtName, this.currNode.signals[i]);
+        }
+
+        // Actualiza el nodo actual
+        this.currNode = this.currNode.next[this.currNode.nextInd];
+
         // Si el nodo no es valido, se oculta la caja de texto
         if (!this.currNode || !this.currNode.id) {
             this.textbox.activate(false);
         }
-        // Si el nodo es de condicion, comprueba el siguiente nodo
-        else if (this.currNode.type === "condition") {
-            this.nextNode();
-        }
-        // Si es un nodo de texto o de opcion multiple
-        else if (this.currNode.type == "text" || this.currNode.type === "choice") {
-            // Si el nodo no tiene texto, se lo salta
-            if (this.currNode.dialogs[this.currNode.currDialog].text.length < 1) {
+        else {
+            if (this.currNode.type === "condition") {
                 this.nextNode();
             }
-            else {
-                // Si el ultimo personaje que hablo no es el mismo que el personaje 
-                // que va a hablar (deberia serlo, pero se comprueba por si acaso)
-                if (this.lastCharacter !== this.currNode.character) {
-                    // Se oculta la caja de dialogo y una vez termine la animacion,
-                    // se actualiza el texto a mostrar y se vuelve a mostrar la caja
-                    this.textbox.activate(false, () => {
-                        this.textbox.setText(this.currNode.dialogs[this.currNode.currDialog], true);
-                        this.textbox.activate(true);
-                    });
+            // Si es un nodo de texto o de opcion multiple
+            else if (this.currNode.type == "text" || this.currNode.type === "choice") {
+                // Si el nodo no tiene texto, se lo salta
+                if (this.currNode.dialogs[this.currNode.currDialog].text.length < 1) {
+                    this.nextNode();
                 }
-                // Si el personaje es el mismo, se actualiza la caja de dialogo
                 else {
-                    this.textbox.setText(this.currNode.dialogs[this.currNode.currDialog], true);
+                    // Si el ultimo personaje que hablo no es el mismo que el personaje 
+                    // que va a hablar (deberia serlo, pero se comprueba por si acaso)
+                    if (this.lastCharacter !== this.currNode.character) {
+                        // Se oculta la caja de dialogo y una vez termine la animacion,
+                        // se actualiza el texto a mostrar y se vuelve a mostrar la caja
+                        this.textbox.activate(false, () => {
+                            this.textbox.setText(this.currNode.dialogs[this.currNode.currDialog], true);
+                            this.textbox.activate(true);
+                        });
+                    }
+                    // Si el personaje es el mismo, se actualiza la caja de dialogo
+                    else {
+                        this.textbox.setText(this.currNode.dialogs[this.currNode.currDialog], true);
+                    }
+    
                 }
-
             }
         }
-
 
     }
 

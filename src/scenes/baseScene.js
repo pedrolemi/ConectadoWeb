@@ -58,6 +58,7 @@ export default class BaseScene extends Phaser.Scene {
     * requisitos (variables), en cuyo caso, la condicion solo se cumplira si todos sus
     * requisitos se cumplen (operador &&. De momento no hay soporte para el operador || ) 
     * 
+    * 
     * @param {String} id - id del nodo que se lee. El nodo inicial es root
     * @param {String} namespace - nombre del archivo del que se va a leer
     * @param {String} playerName - nombre del jugador
@@ -112,12 +113,8 @@ export default class BaseScene extends Phaser.Scene {
                     let obj = jsonNode.conditions[i][varName];
 
                     // Crea un objeto igual que obj, pero que tamiben guarda su nombre
-                    let condition = {
-                        key: varName,
-                        operator: obj.operator,
-                        type: obj.type,
-                        value: obj.value
-                    };
+                    let condition = obj;
+                    obj.key = varName
 
                     // Lo mete en las variables del nodo
                     nodeConditions.push(condition);
@@ -134,15 +131,14 @@ export default class BaseScene extends Phaser.Scene {
                 currNode.next.push(this.readNodes(jsonNode.conditions[i].next, namespace, playerName, context, getObjs))
             }
         }
-        // Si el nodo no es ni de opciones ni de condiciones, es de texto
-        else if (jsonNode.next) {
+        // Si el nodo no es ni de opciones ni de condiciones, es de texto puro
+        else if (jsonNode.hasOwnProperty("next")) {
             // Se crea de manera recursiva el nodo siguiente y se pone por defecto
             // que el indice del siguiente nodo sea el primer elemento del array
             currNode.next = [this.readNodes(jsonNode.next, namespace, playerName, context, getObjs)];
-            currNode.nextInd = 0;
         }
 
-        // Ademas, si el nodo tiene la propiedad text
+        // Si tambien tiene la propiedad text
         if (jsonNode.hasOwnProperty("text")) {
             // Se crea un dialogo con todo el texto a mostrar
             let split = {
@@ -155,6 +151,30 @@ export default class BaseScene extends Phaser.Scene {
             currNode.currDialog = 0;
         }
 
+        // Si tambien tiene la propiedad singals
+        if (jsonNode.hasOwnProperty("signals")) {
+            // Obtiene el nombre de los eventos a llamar
+            // (suprimiendo las propiedades parent y next)
+            let obj = Object.keys(jsonNode.signals);
+            let eventNames = obj.filter(key => key !== "parent" && key !== "next");
+
+            // Recorre todas las variables obtenidas
+            for (let i = 0; i < eventNames.length; i++) {
+                // Lee el nombre del evento
+                let evtName = eventNames[i];
+
+                // Obtiene el objeto que guarda los parametros del evento 
+                let obj = jsonNode.signals[evtName];
+
+                // Crea un objeto igual que obj, pero que tamiben guarda su nombre
+                let evt = obj;
+                evt.name = evtName;
+
+                // Lo mete en las variables del nodo
+                currNode.signals.push(evt);
+            }
+
+        }
         return currNode;
     }
 

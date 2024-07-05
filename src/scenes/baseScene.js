@@ -32,7 +32,7 @@ export default class BaseScene extends Phaser.Scene {
 
         this.leftBound = 0;
         this.rightBound = this.CANVAS_WIDTH;
-        this.START_SCROLLING = 100;
+        this.START_SCROLLING = 50;
         this.CAMERA_SPEED = 3;
     }
     

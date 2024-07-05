@@ -1,4 +1,4 @@
-import GameManager from '../gameManager.js'
+import GameManager from '../managers/gameManager.js'
 
 export default class BootScene extends Phaser.Scene {
     constructor() {
@@ -86,7 +86,7 @@ export default class BootScene extends Phaser.Scene {
             ns: ['day1', 'day2', 'test1', 'ohi'],
             preload: ['en', 'es'],
             // mostrar informacion de ayuda por consola
-            debug: true,
+            debug: false,
             // cargar las traducciones de un servidor especificado en vez de ponerlas directamente
             backend: {
                 // La ruta desde donde cargamos las traducciones

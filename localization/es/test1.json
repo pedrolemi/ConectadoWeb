@@ -62,7 +62,11 @@
         "name": "Mamá",
         "character_uuid": "mom",
         "text": "sex0",
-        "parent": "de20fb42-9b7c-4225-87cb-99d63717a17b"
+        "parent": "de20fb42-9b7c-4225-87cb-99d63717a17b",
+        "signals": {
+            "parent": "2e663b1f-d662-4f18-9b6a-105a30bdbc81",
+            "r": {}
+        }
     },
     "root": {
         "conditions": [

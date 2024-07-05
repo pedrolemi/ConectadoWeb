@@ -1,4 +1,4 @@
-import GameManager from "./gameManager.js";
+import GameManager from "../managers/gameManager.js";
 
 export default class FlagButton extends Phaser.GameObjects.Image {
     /**

@@ -1,5 +1,5 @@
 import BaseScene from './baseScene.js';
-import Character from '../character.js';
+import Character from '../gameObjects/character.js';
 import EventDispatcher from '../eventDispatcher.js'
 
 export default class Test extends BaseScene {
@@ -15,10 +15,10 @@ export default class Test extends BaseScene {
 
 
         // Pone una imagen de fondo con las dimensiones del canvas
-        let bg = this.add.image(this.CANVAS_WIDTH / 2, 0, 'bg').setOrigin(0.5, 0);
+        let bg = this.add.image(0, 0, 'bg').setOrigin(0, 0);
         let scale = this.CANVAS_HEIGHT / bg.height;
         bg.setScale(scale);
-
+        
         bg.setInteractive();
         // bg.on('pointerdown', (pointer) => {
         //     this.dialogManager.textbox.activate(false);
@@ -26,6 +26,7 @@ export default class Test extends BaseScene {
 
         //     super.changeScene("Test2");
         // });
+        this.rightBound = bg.displayWidth - this.CANVAS_WIDTH;
 
         let tr = {
             x: this.CANVAS_WIDTH / 3.5,
@@ -53,10 +54,15 @@ export default class Test extends BaseScene {
         // IMPORTANTE: LLAMARLO CUANDO SE HAYA CREADO LA ESCENA
         this.dialogManager.changeScene(this);
 
+        
         let dispatcher = EventDispatcher.getInstance();
         dispatcher.add("talked", this, (obj) => {
             console.log(obj);
             this.gameManager.setValue("talked", true);
+        });
+        dispatcher.addOnce("r", this, (obj) => {
+            console.log(obj);
+            this.gameManager.setValue("talked", false);
         });
 
         // dispatcher.add("prueba", this, () => {

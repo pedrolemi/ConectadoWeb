@@ -8,12 +8,15 @@ export default class TextBox extends DialogObject {
     */
     constructor(scene) {
         super(scene);
+        this.CANVAS_WIDTH = this.scene.sys.game.canvas.width
+        this.CANVAS_HEIGHT = this.scene.sys.game.canvas.height;
+
         // Configuracion de la imagen de la caja de texto
         this.padding = 10;        // Espacio entre la caja y los bordes del canvas
 
         // Imagen de la caja
-        this.box = this.scene.add.image(this.scene.sys.game.canvas.width / 2, this.scene.sys.game.canvas.height - this.padding, 'dialog', 'textbox.png').setOrigin(0.5, 1);
-        let horizontalScale = (this.scene.sys.game.canvas.width - this.padding * 2) / this.box.width;
+        this.box = this.scene.add.image(this.CANVAS_WIDTH / 2, this.CANVAS_HEIGHT - this.padding, 'dialog', 'textbox.png').setOrigin(0.5, 1);
+        let horizontalScale = (this.CANVAS_WIDTH - this.padding * 2) / this.box.width;
         this.box.setScale(horizontalScale, 1);
         this.box.visible = true;
 
@@ -23,14 +26,14 @@ export default class TextBox extends DialogObject {
         });
 
         // Imagen de la caja del nombre
-        this.nameBox = this.scene.add.image(this.scene.sys.game.canvas.width / 2, this.scene.sys.game.canvas.height - this.padding, 'dialog', 'textboxName.png').setOrigin(0.5, 1);
+        this.nameBox = this.scene.add.image(this.CANVAS_WIDTH / 2, this.CANVAS_HEIGHT - this.padding, 'dialog', 'textboxName.png').setOrigin(0.5, 1);
         this.nameBox.setScale(horizontalScale, 1);
         this.nameBox.visible = true;
 
         this.height = 135;      // Alto que va a ocupar el texto
         // this.graphics = this.scene.add.graphics();
         // this.graphics.fillStyle('black', 1);
-        // this.graphics.fillRect(230 , this.scene.sys.game.canvas.height / 1.28, (this.scene.sys.game.canvas.width - this.padding) / 1.53, this.height);
+        // this.graphics.fillRect(230 , this.CANVAS_HEIGHT / 1.28, (this.CANVAS_WIDTH - this.padding) / 1.53, this.height);
 
 
         // Configuracion del texto de la caja
@@ -63,6 +66,17 @@ export default class TextBox extends DialogObject {
         this.emptyPortrait = new Phaser.GameObjects.Container(scene, 0, 0);
         this.portrait = this.emptyPortrait;
         this.playerTalking = false;
+    }
+
+    getTransform() {
+        return {
+            x: this.box.x,
+            y: this.box.y,
+            originX: this.box.originX,
+            originY: this.box.originY,
+            scaleX: this.box.scaleX,
+            scaleY: this.box.scaleY
+        }
     }
 
     shutdown() {
@@ -123,13 +137,13 @@ export default class TextBox extends DialogObject {
     createText(text, character) {
         let x = 230;
         let y = 660;
-        let width = (this.scene.sys.game.canvas.width - this.padding) / 1.53;
+        let width = (this.CANVAS_WIDTH - this.padding) / 1.53;
 
         // Si el personaje que habla es el jugador, modifica la posicion
         // y los margenes del texto porque no hace falta mostrar su retrato
         if (character === "player") {
             x = 110;
-            width = (this.scene.sys.game.canvas.width - this.padding) / 1.30;
+            width = (this.CANVAS_WIDTH - this.padding) / 1.30;
         }
         // Crea el texto en la escena
         this.currText = super.createText(x, y, text, this.normalTextConfig, width);
@@ -154,11 +168,19 @@ export default class TextBox extends DialogObject {
     }
 
     /**
+    * Devuelve si el texto de la caja supera la altura maxima
+    * @return {boolean} - true si la caja supera la altura maxima, false en caso contrario
+    */
+    textTooBig() {
+        return (this.currText.getBounds().height > this.height);
+    }
+
+    /**
     * Cambia el retrato del personaje hablando
     * @param {string} character - id del personaje que habla
     */
     setPortrait(character) {
-        this.portrait = this.scene.portraits.get(character);
+        this.portrait = this.scene.getPortrait(character);
         if (character == "player" || !this.portrait) this.portrait = this.emptyPortrait;
     }
 

@@ -1,5 +1,5 @@
-import DialogNode from '../dialog/dialogNode.js'
-import GameManager from '../gameManager.js'
+import DialogNode from '../UI/dialog/dialogNode.js'
+import GameManager from '../managers/gameManager.js'
 
 export default class BaseScene extends Phaser.Scene {
     constructor(name) {
@@ -29,16 +29,11 @@ export default class BaseScene extends Phaser.Scene {
             y: this.portraitY,
             scale: this.portraitScale
         };
-    }
 
-    /**
-    * Metodo para cambiar de escena 
-    * @param {Phaser.Scene / String} scene - nombre o instancia de la escena a la que se va a pasar
-    */
-    changeScene(scene) {
-        this.dialogManager.clearPortraits();
-        this.scene.start(scene);
+        this.leftBound = 0;
+        this.rightBound = 0;
     }
+    
 
     /**
     * Va leyendo el json y creando los nodos de manera recursiva
@@ -196,10 +191,10 @@ export default class BaseScene extends Phaser.Scene {
             currText = dialogs[i].text;
             dialogCopy = { ...dialogs[i] };
             dialogCopy.text = currText;
-            this.dialogManager.textbox.setText(dialogCopy, false);
+            this.dialogManager.setText(dialogCopy, false);
 
             // Si la altura del texto supera la de la caja de texto 
-            if (this.dialogManager.textbox.currText.getBounds().height > this.dialogManager.textbox.height) {
+            if (this.dialogManager.textTooBig()) {
                 // Se separan todas las palabras del dialogo por espacios
                 let words = currText.split(' ');
                 let prevText = "";          // Texto antes de coger la siguiente palabra del dialogo
@@ -216,10 +211,10 @@ export default class BaseScene extends Phaser.Scene {
                     // Cambia el texto por el nuevo para calcular sus dimensiones
                     dialogCopy = { ...dialogs[i] };
                     dialogCopy.text = newText;
-                    this.dialogManager.textbox.setText(dialogCopy, false);
+                    this.dialogManager.setText(dialogCopy, false);
 
                     // Si no supera la altura de la caja de texto, saca la palabra del array
-                    if (this.dialogManager.textbox.currText.getBounds().height <= this.dialogManager.textbox.height) {
+                    if (!this.dialogManager.textTooBig()) {
                         words.shift();
                         currWord = words[0];
                     }
@@ -257,7 +252,7 @@ export default class BaseScene extends Phaser.Scene {
             name: ""
         }
 
-        this.dialogManager.textbox.setText(emptyDialog, false);
+        this.dialogManager.setText(emptyDialog, false);
         return newDialogs;
     }
 

@@ -1,5 +1,4 @@
-import FlagButton from '../flagButton.js'
-import GameManager from '../gameManager.js'
+import FlagButton from '../gameObjects/flagButton.js'
 
 export default class LanguageMenu extends Phaser.Scene {
     /**

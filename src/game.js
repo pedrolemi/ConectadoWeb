@@ -3,7 +3,7 @@ import LanguageMenu from './scenes/languageMenu.js'
 import Test from './scenes/test.js'
 import Test2 from './scenes/test2.js'
 
-import DialogManager from './dialog/dialogManager.js'
+import DialogManager from './managers/dialogManager.js'
 
 const max_w = 1129, max_h = 847, min_w = 320, min_h = 240;
 

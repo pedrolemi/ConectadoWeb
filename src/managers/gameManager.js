@@ -2,6 +2,9 @@
 // - Se puede acceder desde cualquier parte del modulo, pero no es visible
 // al no pertencen a la clase y no ser exportada
 // - No cambia con las instancia puesto que no pertenece a la clase, sino
+
+import UIManager from "./UIManager.js";
+
 // al modulo y solo existe un modulo
 let instance = null;
 
@@ -57,23 +60,30 @@ export default class GameManager {
     startGame() {
         // IMPORTANTE: HAY QUE LANZAR PRIMERO EL DIALOGMANAGER PARA QUE LOS 
         // RETRATOS DE LOS PERSONAJES SE PINTEN POR ENCIMA DE LA CAJA DE TEXTO
-        let auxDialog = 'DialogManager';
-        this.currentScene.scene.launch(auxDialog);
-        this.dialogManager = this.currentScene.scene.get(auxDialog);
+        this.UIManager = new UIManager(this.currentScene);
 
-        let aux = 'Test';
-        this.currentScene.scene.start(aux);
-        this.currentScene = this.currentScene.scene.get(aux);
-    }
-
-    getDialogManager() {
-        return this.dialogManager;
+        let sceneName = 'Test';
+        this.changeScene(sceneName);
+        this.currentScene = this.currentScene.scene.get(sceneName);
     }
 
     startLangMenu() {
-        let aux = 'LanguageMenu';
-        this.currentScene.scene.start(aux);
-        this.currentScene = this.currentScene.scene.get(aux);
+        let sceneName = 'LanguageMenu';
+        this.changeScene(sceneName);
+        this.currentScene = this.currentScene.scene.get(sceneName);
+    }
+    
+    getDialogManager() {
+        return this.UIManager.getDialogManager();
+    }
+
+    /**
+    * Metodo para cambiar de escena 
+    * @param {Phaser.Scene / String} scene - nombre o instancia de la escena a la que se va a pasar
+    */
+    changeScene(scene) {
+        if (this.UIManager) this.getDialogManager().clearPortraits();
+        this.currentScene.scene.start(scene);
     }
 
 
@@ -86,7 +96,7 @@ export default class GameManager {
     }
 
     /**
-    * @returns {boolean} - si el dialogo esta activo o no
+    * @returns {boolean} - true si el dialogo esta activo, false en caso contrario
     */
     isTalking() {
         return this.talking;
@@ -109,7 +119,7 @@ export default class GameManager {
 
     /**
     * Metodo que setea un valor en el mapa de propiedades
-    * @returns {boolean} - indica si se ha sobrescrito un valor o no
+    * @returns {boolean} - true si se ha sobrescrito un valor, false en caso contrario
     */
     setValue(key, value) {
         let exists = false;
@@ -122,7 +132,7 @@ export default class GameManager {
 
     /**
     * Indica si un valor existe o no en el mapa de propiedades
-    * @returns {boolean} - indica si existe el valor
+    * @returns {boolean} - true si existe el valor, false en caso contrario
     */
     hasValue(key) {
         return this.map.has(key);

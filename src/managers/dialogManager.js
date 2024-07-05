@@ -1,6 +1,6 @@
-import TextBox from './textbox.js'
-import OptionBox from './optionBox.js'
-import GameManager from '../gameManager.js'
+import TextBox from '../UI/dialog/textbox.js';
+import OptionBox from '../UI/dialog/optionBox.js'
+import GameManager from './gameManager.js'
 import EventDispatcher from '../eventDispatcher.js';
 
 export default class DialogManager extends Phaser.Scene {
@@ -20,21 +20,21 @@ export default class DialogManager extends Phaser.Scene {
     }
 
     create() {
+        this.gameManager = GameManager.getInstance();
+        this.dispatcher = EventDispatcher.getInstance();
+
         this.textbox = new TextBox(this);
         this.textbox.activate(false);
         this.activateOptions(false);
 
         // Mascara para los retratos de los personajes (para que no se pinten fuera de la caja de texto)
-        let mask = this.add.image(this.textbox.box.x, this.textbox.box.y, 'textboxMask');
+        let mask = this.add.image(this.textbox.getTransform().x, this.textbox.getTransform().y, 'textboxMask');
         // let mask = this.add.image(this.textbox.box.x, this.textbox.box.y, 'dialog', 'textboxMask.png');
-        mask.setOrigin(this.textbox.box.originX, this.textbox.box.originY);
-        mask.setScale(this.textbox.box.scaleX, this.textbox.box.scaleY);
+        mask.setOrigin(this.textbox.getTransform().originX, this.textbox.getTransform().originY);
+        mask.setScale(this.textbox.getTransform().scaleX, this.textbox.getTransform().scaleY);
         mask.setCrop(0, 0, 160, mask.displayHeight);
         mask.visible = false;
         this.portraitMask = mask.createBitmapMask();
-
-        this.gameManager = GameManager.getInstance();
-        this.dispatcher = EventDispatcher.getInstance();
     }
 
 
@@ -68,47 +68,32 @@ export default class DialogManager extends Phaser.Scene {
         this.activateOptions(false);
     }
 
-    /**
-    * Crea las opciones de eleccion multiple
-    * @param {Array} opts - array con los strings con el texto a mostrar en las opciones
-    */
-    createOptions(opts) {
-        // Limpia las opciones que hubiera anteriormente
-        this.options.forEach((option) => { option.activate(false); });
-        this.options = [];
 
-        // Crea las opciones y las guarda en el array
-        for (let i = 0; i < opts.length; i++) {
-            this.options.push(new OptionBox(this, i, opts.length, opts[i]));
-        }
+    /**
+    * Devuelve el retrato del personaje indicado
+    * @param {string} character - id del personaje
+    * @return {Phaser.Image} - imagen con el retrato del personaje. 
+    *                          Devuelve null si la id no esta en el mapa de retratos 
+    */
+    getPortrait(character) {
+        return this.portraits.get(character);
     }
 
     /**
-    * Activa/desactiva las cajas de opcion multiple
-    * @param {Boolean} active - si se van a activar o no las opciones
-    * @param {function} onComplete - funcion a la que llamar cuando acabe la animacion
-    * @param {number} delay - tiempo en ms que tarda en llamarse a onComplete
+    * Cambia el texto de la caja
+    * @param {string} text - texto a escribir
+    * @param {boolean} animate - si se va a animar el texto o no
     */
-    activateOptions(active, onComplete, delay) {
-        this.options.forEach((option) => { option.activate(active, onComplete, delay); });
+    setText(dialogInfo, animate) {
+        this.textbox.setText(dialogInfo, animate);
     }
 
     /**
-    * Elige la opcion sobre la que se ha hecho click (llamado desde la instancia correspondiente de OptionBox)
-    * @param {Number} index - indice elegido
+    * Devuelve si el texto de la caja supera la altura maxima
+    * @return {boolean} - true si la caja supera la altura maxima, false en caso contrario
     */
-    selectOption(index) {
-        // Desactiva las opciones
-        this.activateOptions(false);
-
-        // Actualiza el nodo actual
-        this.currNode.nextInd = index;
-        this.processNextNode();
-
-        // Si el nodo actual es valido, actualiza el retrato del personaje por si acaso
-        if (this.currNode) {
-            this.textbox.setPortrait(this.currNode.character);
-        }
+    textTooBig() {
+        return (this.textbox.textTooBig());
     }
 
     /**
@@ -137,13 +122,14 @@ export default class DialogManager extends Phaser.Scene {
 
 
     }
-
+    
+    
 
     // Dependiendo del tipo del nodo actual, actualiza cual es el indice del nodo al que tiene que ir despues
     nextNode() {
         // Actualiza el ultimo personaje que tuvo un dialogo
         this.lastCharacter = this.currNode.character;
-        
+
         // Si el nodo es un nodo condicional
         if (this.currNode.type === "condition") {
             let conditionMet = false;
@@ -209,14 +195,14 @@ export default class DialogManager extends Phaser.Scene {
 
                 // Si aun no se han mostrado todos los dialogos del nodo, muestra el siguiente dialogo
                 if (this.currNode.currDialog < this.currNode.dialogs.length) {
-                    this.textbox.setText(this.currNode.dialogs[this.currNode.currDialog], true);
+                    this.setText(this.currNode.dialogs[this.currNode.currDialog], true);
                     this.textbox.activate(true);
                 }
                 // Si ya se han mostrado todos los dialogos del nodo,
                 else {
                     // Se reinicia el dialogo del nodo actual
                     this.currNode.currDialog = 0;
-                    
+
                     // Si es un nodo de tipo texto, 
                     if (this.currNode.type === "text") {
                         // Un nodo de tipo texto (unicamente con texto, sin opciones ni condiciones) solo puede llevar
@@ -248,6 +234,7 @@ export default class DialogManager extends Phaser.Scene {
 
     }
 
+    // Actualiza el nodo por el nodo siguiente y gestiona los cambios correspondientes
     processNextNode() {
         for (let i = 0; i < this.currNode.signals.length; i++) {
             let evtName = this.currNode.signals[i].name;
@@ -278,19 +265,63 @@ export default class DialogManager extends Phaser.Scene {
                         // Se oculta la caja de dialogo y una vez termine la animacion,
                         // se actualiza el texto a mostrar y se vuelve a mostrar la caja
                         this.textbox.activate(false, () => {
-                            this.textbox.setText(this.currNode.dialogs[this.currNode.currDialog], true);
+                            this.setText(this.currNode.dialogs[this.currNode.currDialog], true);
                             this.textbox.activate(true);
                         });
                     }
                     // Si el personaje es el mismo, se actualiza la caja de dialogo
                     else {
-                        this.textbox.setText(this.currNode.dialogs[this.currNode.currDialog], true);
+                        this.setText(this.currNode.dialogs[this.currNode.currDialog], true);
                     }
-    
+
                 }
             }
         }
 
+    }
+    
+
+    /**
+    * Crea las opciones de eleccion multiple
+    * @param {Array} opts - array con los strings con el texto a mostrar en las opciones
+    */
+    createOptions(opts) {
+        // Limpia las opciones que hubiera anteriormente
+        this.options.forEach((option) => { option.activate(false); });
+        this.options = [];
+
+        // Crea las opciones y las guarda en el array
+        for (let i = 0; i < opts.length; i++) {
+            this.options.push(new OptionBox(this, i, opts.length, opts[i]));
+        }
+    }
+
+    /**
+    * Activa/desactiva las cajas de opcion multiple
+    * @param {Boolean} active - si se van a activar o no las opciones
+    * @param {function} onComplete - funcion a la que llamar cuando acabe la animacion
+    * @param {number} delay - tiempo en ms que tarda en llamarse a onComplete
+    */
+    activateOptions(active, onComplete, delay) {
+        this.options.forEach((option) => { option.activate(active, onComplete, delay); });
+    }
+
+    /**
+    * Elige la opcion sobre la que se ha hecho click (llamado desde la instancia correspondiente de OptionBox)
+    * @param {Number} index - indice elegido
+    */
+    selectOption(index) {
+        // Desactiva las opciones
+        this.activateOptions(false);
+
+        // Actualiza el nodo actual
+        this.currNode.nextInd = index;
+        this.processNextNode();
+
+        // Si el nodo actual es valido, actualiza el retrato del personaje por si acaso
+        if (this.currNode) {
+            this.textbox.setPortrait(this.currNode.character);
+        }
     }
 
 

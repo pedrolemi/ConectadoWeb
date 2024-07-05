@@ -1,5 +1,4 @@
 import BaseScene from './baseScene.js';
-import Character from '../character.js';
 
 export default class Test2 extends BaseScene {
     constructor() {

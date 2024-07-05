@@ -3,7 +3,7 @@ import LanguageMenu from './scenes/languageMenu.js'
 import Test from './scenes/test.js'
 import Test2 from './scenes/test2.js'
 
-import DialogManager from './managers/dialogManager.js'
+import UIManager from './managers/UIManager.js'
 
 const max_w = 1129, max_h = 847, min_w = 320, min_h = 240;
 
@@ -13,7 +13,7 @@ const config = {
     backgroundColor: '#4488aa',
 
     type: Phaser.AUTO,
-    scene: [BootScene, LanguageMenu, Test, Test2, DialogManager],
+    scene: [BootScene, LanguageMenu, Test, Test2, UIManager],
     autoFocus: true,
     disableContextMenu: true,        // Desactivar que aparezca el menu de inspeccionar al hacer click derecho
     render: {

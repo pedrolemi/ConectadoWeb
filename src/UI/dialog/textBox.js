@@ -6,32 +6,34 @@ export default class TextBox extends DialogObject {
     * @extends DialogObject
     * @param {Phaser.Scene} scene - escena a la que pertenece
     */
-    constructor(scene) {
+    constructor(scene, dialogManager) {
         super(scene);
-        this.CANVAS_WIDTH = this.scene.sys.game.canvas.width
-        this.CANVAS_HEIGHT = this.scene.sys.game.canvas.height;
+        this.scene = scene;
+
+        this.CANVAS_WIDTH = scene.sys.game.canvas.width
+        this.CANVAS_HEIGHT = scene.sys.game.canvas.height;
 
         // Configuracion de la imagen de la caja de texto
         this.padding = 10;        // Espacio entre la caja y los bordes del canvas
 
         // Imagen de la caja
-        this.box = this.scene.add.image(this.CANVAS_WIDTH / 2, this.CANVAS_HEIGHT - this.padding, 'dialog', 'textbox.png').setOrigin(0.5, 1);
+        this.box = scene.add.image(this.CANVAS_WIDTH / 2, this.CANVAS_HEIGHT - this.padding, 'dialog', 'textbox.png').setOrigin(0.5, 1);
         let horizontalScale = (this.CANVAS_WIDTH - this.padding * 2) / this.box.width;
         this.box.setScale(horizontalScale, 1);
         this.box.visible = true;
 
         this.box.setInteractive();
         this.box.on('pointerdown', (pointer) => {
-            this.scene.nextNode();
+            dialogManager.nextNode();
         });
 
         // Imagen de la caja del nombre
-        this.nameBox = this.scene.add.image(this.CANVAS_WIDTH / 2, this.CANVAS_HEIGHT - this.padding, 'dialog', 'textboxName.png').setOrigin(0.5, 1);
+        this.nameBox = scene.add.image(this.CANVAS_WIDTH / 2, this.CANVAS_HEIGHT - this.padding, 'dialog', 'textboxName.png').setOrigin(0.5, 1);
         this.nameBox.setScale(horizontalScale, 1);
         this.nameBox.visible = true;
 
         this.height = 135;      // Alto que va a ocupar el texto
-        // this.graphics = this.scene.add.graphics();
+        // this.graphics = scene.add.graphics();
         // this.graphics.fillStyle('black', 1);
         // this.graphics.fillRect(230 , this.CANVAS_HEIGHT / 1.28, (this.CANVAS_WIDTH - this.padding) / 1.53, this.height);
 
@@ -177,11 +179,11 @@ export default class TextBox extends DialogObject {
 
     /**
     * Cambia el retrato del personaje hablando
-    * @param {string} character - id del personaje que habla
+    * @param {Phaser.Image} portrait - retrato personaje que habla
     */
-    setPortrait(character) {
-        this.portrait = this.scene.getPortrait(character);
-        if (character == "player" || !this.portrait) this.portrait = this.emptyPortrait;
+    setPortrait(portrait) {
+        this.portrait = portrait;
+        if (!this.portrait) this.portrait = this.emptyPortrait;
     }
 
     // Anima el texto para que vaya apareciendo caracter a caracter

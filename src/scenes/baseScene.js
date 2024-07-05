@@ -31,9 +31,31 @@ export default class BaseScene extends Phaser.Scene {
         };
 
         this.leftBound = 0;
-        this.rightBound = 0;
+        this.rightBound = this.CANVAS_WIDTH;
+        this.START_SCROLLING = 100;
+        this.CAMERA_SPEED = 3;
     }
     
+    preUpdate(t, dt) {
+        super.preUpdate(t, dt);
+    }
+
+    update(t, dt) {
+        super.update(t, dt);
+
+        // Scroll de la camara. Si el raton esta a la izquierda y el scroll de la camara no es inferior al del
+        // extremo izquierdo, la mueve hacia la izquierda y lo mismo para el extremo derecho del canvas
+        if (this.game.input.mousePointer.x < this.START_SCROLLING && this.cameras.main.scrollX > this.leftBound + this.CAMERA_SPEED) {
+            this.cameras.main.scrollX -= this.CAMERA_SPEED;
+        }
+        else if (this.game.input.mousePointer.x > this.CANVAS_WIDTH - this.START_SCROLLING 
+                 && this.cameras.main.scrollX < this.rightBound - this.CANVAS_WIDTH - this.CAMERA_SPEED)
+        {
+            this.cameras.main.scrollX += this.CAMERA_SPEED;
+        }
+    }
+
+
 
     /**
     * Va leyendo el json y creando los nodos de manera recursiva

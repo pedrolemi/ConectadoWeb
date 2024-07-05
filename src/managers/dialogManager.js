@@ -3,32 +3,29 @@ import OptionBox from '../UI/dialog/optionBox.js'
 import GameManager from './gameManager.js'
 import EventDispatcher from '../eventDispatcher.js';
 
-export default class DialogManager extends Phaser.Scene {
+export default class DialogManager  {
     /**
     * Gestor de los dialogos. Crea la caja de texto/opciones con su texto y se encarga de actualizarlos.
     * Los nodos de dialogos tienen que estar creados con antelacion (deberia hacerse en la constructora de la escena)
-    * @extends Phaser.Scene
     */
-    constructor() {
-        super({ key: 'DialogManager' });
+    constructor(scene) {
+        this.scene = scene;
 
         this.textbox = null;                // Instancia de la caja de dialogo
         this.lastCharacter = "";            // Ultimo personaje que hablo
         this.options = [];                  // Cajas de opcion multiple
         this.currNode = null;               // Nodo actual
         this.portraits = new Map();         // Mapa para guardar los retratos en esta escena
-    }
 
-    create() {
         this.gameManager = GameManager.getInstance();
         this.dispatcher = EventDispatcher.getInstance();
 
-        this.textbox = new TextBox(this);
+        this.textbox = new TextBox(scene, this);
         this.textbox.activate(false);
         this.activateOptions(false);
 
         // Mascara para los retratos de los personajes (para que no se pinten fuera de la caja de texto)
-        let mask = this.add.image(this.textbox.getTransform().x, this.textbox.getTransform().y, 'textboxMask');
+        let mask = scene.add.image(this.textbox.getTransform().x, this.textbox.getTransform().y, 'textboxMask');
         // let mask = this.add.image(this.textbox.box.x, this.textbox.box.y, 'dialog', 'textboxMask.png');
         mask.setOrigin(this.textbox.getTransform().originX, this.textbox.getTransform().originY);
         mask.setScale(this.textbox.getTransform().scaleX, this.textbox.getTransform().scaleY);
@@ -36,7 +33,6 @@ export default class DialogManager extends Phaser.Scene {
         mask.visible = false;
         this.portraitMask = mask.createBitmapMask();
     }
-
 
     // IMPORTANTE: SE TIENE QUE LLAMAR ANTES DE CAMBIAR LA ESCENA
     // Destruye de la escena todos los retratos de los personajes para que
@@ -56,7 +52,7 @@ export default class DialogManager extends Phaser.Scene {
         // Coge todos los retratos de los personajes de la escena, 
         // los copia en esta escena, y les aplica la mascara
         scene.portraits.forEach((value, key) => {
-            let p = this.add.existing(value);
+            let p = this.scene.add.existing(value);
             this.portraits.set(key, p);
 
             value.alpha = 0;
@@ -225,7 +221,7 @@ export default class DialogManager extends Phaser.Scene {
 
         // Si el nodo actual es valido, se actualiza el retrato a mostrar
         if (this.currNode) {
-            this.textbox.setPortrait(this.currNode.character);
+            this.textbox.setPortrait(this.portraits.get(this.currNode.character));
         }
         // Si no, se ha acabado el dialogo y lo avisa al gameManager
         else {
@@ -292,7 +288,7 @@ export default class DialogManager extends Phaser.Scene {
 
         // Crea las opciones y las guarda en el array
         for (let i = 0; i < opts.length; i++) {
-            this.options.push(new OptionBox(this, i, opts.length, opts[i]));
+            this.options.push(new OptionBox(this.scene, this, i, opts.length, opts[i]));
         }
     }
 
@@ -320,7 +316,7 @@ export default class DialogManager extends Phaser.Scene {
 
         // Si el nodo actual es valido, actualiza el retrato del personaje por si acaso
         if (this.currNode) {
-            this.textbox.setPortrait(this.currNode.character);
+            this.textbox.setPortrait(this.portraits.get(this.currNode.character));
         }
     }
 

@@ -58,11 +58,13 @@ export default class GameManager {
     /// Metodos para cambiar de escena ///
     //////////////////////////////////////
     startGame() {
-        // IMPORTANTE: HAY QUE LANZAR PRIMERO EL DIALOGMANAGER PARA QUE LOS 
-        // RETRATOS DE LOS PERSONAJES SE PINTEN POR ENCIMA DE LA CAJA DE TEXTO
-        this.UIManager = new UIManager(this.currentScene);
+        // IMPORTANTE: Hay que lanzar primero el UIManager para que se inicialice
+        // el DialogManager y las escenas puedan crear los dialogos correctamente
+        let sceneName = 'UIManager';
+        this.currentScene.scene.launch(sceneName);
+        this.UIManager = this.currentScene.scene.get(sceneName);
 
-        let sceneName = 'Test';
+        sceneName = 'Test';
         this.changeScene(sceneName);
         this.currentScene = this.currentScene.scene.get(sceneName);
     }
@@ -82,7 +84,7 @@ export default class GameManager {
     * @param {Phaser.Scene / String} scene - nombre o instancia de la escena a la que se va a pasar
     */
     changeScene(scene) {
-        if (this.UIManager) this.getDialogManager().clearPortraits();
+        // if (this.UIManager) this.getDialogManager().clearPortraits();
         this.currentScene.scene.start(scene);
     }
 

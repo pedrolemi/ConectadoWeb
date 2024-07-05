@@ -1,8 +1,13 @@
-export default class UIManager{
+import DialogManager from "./dialogManager.js";
+
+export default class UIManager extends Phaser.Scene {
     constructor(scene) {
-        let sceneName = 'DialogManager';
-        scene.scene.launch(sceneName);
-        this.dialogManager = scene.scene.get(sceneName);
+        super({ key: 'UIManager' });
+    }
+
+    create() {
+        this.dialogManager = new DialogManager(this);
+        
     }
 
     getDialogManager() {

@@ -10,15 +10,14 @@ export default class OptionBox extends DialogObject {
     * @param {number} numOpts - numero total de elecciones
     * @param {string} text - texto de la opcion
     */
-    constructor(scene, index, numOpts, text) {
-        super(scene, 0, 0);
-        this.scene = scene;
+    constructor(scene, dialogManager, index, numOpts, text) {
+        super(scene);
 
-        this.CANVAS_WIDTH = this.scene.sys.game.canvas.width
-        this.CANVAS_HEIGHT = this.scene.sys.game.canvas.height;
+        this.CANVAS_WIDTH = scene.sys.game.canvas.width
+        this.CANVAS_HEIGHT = scene.sys.game.canvas.height;
 
         let padding = 10;
-        this.box = this.scene.add.image(this.CANVAS_WIDTH / 2, 0, 'dialog', 'optionBg.png').setOrigin(0.5, 0);
+        this.box = scene.add.image(this.CANVAS_WIDTH / 2, 0, 'dialog', 'optionBg.png').setOrigin(0.5, 0);
         let scale = this.CANVAS_WIDTH / (this.box.width + padding);
         this.box.setScale(scale);
 
@@ -46,7 +45,7 @@ export default class OptionBox extends DialogObject {
 
         // Hace fade del color de la caja al pasar o quitar el raton por encima
         this.box.on('pointerover', () => {
-            this.scene.tweens.add({
+            scene.tweens.add({
                 targets: [this.box],
                 tintR: 0x00,
                 tintG: 0xFF,
@@ -56,7 +55,7 @@ export default class OptionBox extends DialogObject {
             });
         });
         this.box.on('pointerout', () => {
-            this.scene.tweens.add({
+            scene.tweens.add({
                 targets: [this.box],
                 tintR: 0xFF,
                 tintG: 0xFF,
@@ -70,7 +69,7 @@ export default class OptionBox extends DialogObject {
         // y avisa a la escena de la opcion elegida 
         this.box.on('pointerdown', (pointer) => {
             this.box.disableInteractive();
-            let fadeColor = this.scene.tweens.add({
+            let fadeColor = scene.tweens.add({
                 targets: [this.box],
                 tintR: 0xFF,
                 tintG: 0xFF,
@@ -79,7 +78,7 @@ export default class OptionBox extends DialogObject {
                 repeat: 0,
             });
             fadeColor.on('complete', () => {
-                this.scene.selectOption(index);
+                dialogManager.selectOption(index);
             });
         });
 

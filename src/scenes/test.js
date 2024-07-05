@@ -26,7 +26,7 @@ export default class Test extends BaseScene {
 
         //     super.changeScene("Test2");
         // });
-        this.rightBound = bg.displayWidth - this.CANVAS_WIDTH;
+        this.rightBound = bg.displayWidth;
 
         let tr = {
             x: this.CANVAS_WIDTH / 3.5,
@@ -54,7 +54,7 @@ export default class Test extends BaseScene {
         // IMPORTANTE: LLAMARLO CUANDO SE HAYA CREADO LA ESCENA
         this.dialogManager.changeScene(this);
 
-        
+
         let dispatcher = EventDispatcher.getInstance();
         dispatcher.add("talked", this, (obj) => {
             console.log(obj);

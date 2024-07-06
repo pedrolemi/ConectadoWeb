@@ -37,8 +37,6 @@ export default class BootScene extends Phaser.Scene {
         this.load.image('messagesBg', './UI/phone/messagesBg.png');
         this.load.image('chatBG', './UI/phone/chatBG.png');
 
-
-
         // comprimir texturas (toma mucha menos memoria, aunque los archivos pueden ocupa mas tam)
         // Se comprueba de arriba a abajo hasta encontrar el primero que funcione en el dispositivo, si no, se usa png
         // formatos de compresion: ETC, ETC1, ATC, ASTC, BPTC, RGTC, PVRTC, S3TC, and S3TCSRB
@@ -54,9 +52,13 @@ export default class BootScene extends Phaser.Scene {
         });
 
 
-        // Fondo menu de idiomas
+        // Fondos
         this.load.image('basePC', 'languageMenu/BasePCsq.png');
         this.load.image('PCscreen', 'languageMenu/ScreenWithoutBlack.png');
+
+        // Menu principal
+        this.load.image('powerOff', 'mainMenu/power_off.png');
+        this.load.image('logoWT', 'mainMenu/logoWT.png');
 
         // Banderas idiomas
         this.load.image('frFlag', 'languageMenu/frFlag.png');
@@ -71,8 +73,6 @@ export default class BootScene extends Phaser.Scene {
         this.load.spine("mom", 'characters/mom/Front.json', 'characters/mom/Front.atlas')
         // [Idle01, IdleBase]
         this.load.spine("dad", 'characters/dad/Front 34.json', 'characters/dad/Front 34.atlas')
-
-
 
         // PLUGINS
         // Precarga el plugin para hacer fade de colores
@@ -113,6 +113,7 @@ export default class BootScene extends Phaser.Scene {
     create() {
         let gameManager = GameManager.create(this);
         gameManager.startLangMenu();
+        //this.scene.start('MenuTest');
     }
 
 }

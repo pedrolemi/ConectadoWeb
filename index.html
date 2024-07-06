@@ -26,6 +26,14 @@
 
 
 <body>
+    <!-- Precargar las fuentes para asegurar que ya estan cargadas se usen en Phaser.
+     Las fuentes pueden tardar un tiempo en cargarse y si se usan antes, no se van a encontrar.
+     Por lo tanto, se usan en una etiqueta invisible para que HTML las traiga y asegurar que
+     ya estan cargadas cuando se usan en Phaser -->
+    <div style="font-family:kimberley_bl; position:absolute; left:-1000px; visibility:hidden;">.</div>
+    <div style="font-family:AUdimat-Regular; position:absolute; left:-1000px; visibility:hidden;">.</div>
+    <div style="font-family:Gidolinya-Regular; position:absolute; left:-1000px; visibility:hidden;">.</div>
+
     <!-- Contenedor del juego -->
     <div id="game">
         <script src="./src/game.js" type="module"></script>

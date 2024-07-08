@@ -44,6 +44,7 @@ export default class FlagButton extends Phaser.GameObjects.Image {
         this.setInteractive();
         this.on('pointerdown', () => {
             i18next.changeLanguage(language);
+            // gameManager.startTitleMenu();
             gameManager.startGame();
         });
 

@@ -4,19 +4,20 @@ import PhoneManager from "../UI/phone/phoneManager.js";
 export default class UIManager extends Phaser.Scene {
     constructor(scene) {
         super({ key: 'UIManager' });
+        
     }
 
     create() {
         // Configuracion de texto por defecto
         this.textConfig = {
-            fontFamily: 'Arial',          // Fuente (tiene que estar precargada en el html o el css)
-            fontSize: 25 + 'px',               // Tamano de la fuente del dialogo
+            fontFamily: 'Arial',        // Fuente (tiene que estar precargada en el html o el css)
+            fontSize: 25 + 'px',        // Tamano de la fuente del dialogo
             fontStyle: 'bold',          // Estilo de la fuente
-            backgroundColor: null,          // Color del fondo del texto
-            color: '#fff',          // Color del texto
-            stroke: '#000',    // Color del borde del texto
-            strokeThickness: 5,          // Grosor del borde del texto 
-            align: 'left',           // Alineacion del texto ('left', 'center', 'right', 'justify')
+            backgroundColor: null,      // Color del fondo del texto
+            color: '#fff',              // Color del texto
+            stroke: '#000',             // Color del borde del texto
+            strokeThickness: 5,         // Grosor del borde del texto 
+            align: 'left',              // Alineacion del texto ('left', 'center', 'right', 'justify')
             wordWrap: null,
         }
 

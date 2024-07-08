@@ -134,26 +134,40 @@ export default class GameManager {
     ///////////////////////////////////////
     /// Metodos para cambiar de escena ///
     //////////////////////////////////////
-    startGame() {
-        // IMPORTANTE: Hay que lanzar primero el UIManager para que se inicialice
-        // el DialogManager y las escenas puedan crear los dialogos correctamente
-        let sceneName = 'UIManager';
-        this.currentScene.scene.launch(sceneName);
-        this.UIManager = this.currentScene.scene.get(sceneName);
-
-        sceneName = 'Test';
-        this.changeScene(sceneName);
-        this.currentScene = this.currentScene.scene.get(sceneName);
-    }
-
     startLangMenu() {
         let sceneName = 'LanguageMenu';
         this.changeScene(sceneName);
         this.currentScene = this.currentScene.scene.get(sceneName);
     }
     
+    startTitleMenu() {
+        let sceneName = 'TitleMenu';
+        this.changeScene(sceneName);
+        this.currentScene = this.currentScene.scene.get(sceneName);
+    }
+    
+    startUserInfoMenu() {
+        let sceneName = 'UserInfoMenu';
+        this.changeScene(sceneName);
+        this.currentScene = this.currentScene.scene.get(sceneName);
+    }
+
+    startGame() {
+        // IMPORTANTE: Hay que lanzar primero el UIManager para que se inicialice
+        // el DialogManager y las escenas puedan crear los dialogos correctamente
+        let sceneName = 'UIManager';
+        this.currentScene.scene.launch(sceneName);
+        this.UIManager = this.currentScene.scene.get(sceneName);
+        
+        sceneName = 'Test';
+        this.changeScene(sceneName);
+        this.currentScene = this.currentScene.scene.get(sceneName);
+    }
+
+    
     getDialogManager() {
-        return this.UIManager.getDialogManager();
+        if (this.UIManager) return this.UIManager.getDialogManager();
+        else return null;
     }
 
     /**
@@ -161,7 +175,7 @@ export default class GameManager {
     * @param {Phaser.Scene / String} scene - nombre o instancia de la escena a la que se va a pasar
     */
     changeScene(scene) {
-        // if (this.UIManager) this.getDialogManager().clearPortraits();
+        if (this.UIManager && this.getDialogManager()) this.getDialogManager().clearPortraits();
         this.currentScene.scene.start(scene);
     }
 

@@ -5,11 +5,11 @@ import RadioButtonGroup from '../UI/radioButtonGroup.js'
 import TextInput from '../UI/textInput.js'
 
 export default class UserInfoMenu extends Phaser.Scene {
-    constructor(){
-        super({key: 'UserInfoMenu'});
+    constructor() {
+        super({ key: 'UserInfoMenu' });
     }
 
-    create(){
+    create() {
         const CANVAS_WIDTH = this.sys.game.canvas.width;
         const CANVAS_HEIGHT = this.sys.game.canvas.height;
 
@@ -46,10 +46,10 @@ export default class UserInfoMenu extends Phaser.Scene {
         circle.setInteractive();
         circle.on('pointerdown', () => {
             circleStyle.pressed = !circleStyle.pressed;
-            if(circleStyle.pressed){
+            if (circleStyle.pressed) {
                 circle.setFillStyle(circleStyle.pressedColor);
             }
-            else{
+            else {
                 circle.setFillStyle(circleStyle.normalColor);
             }
         });
@@ -62,18 +62,18 @@ export default class UserInfoMenu extends Phaser.Scene {
         });
 
         let backTextStyle = {
-            fontFamily: 'AUdimat-Regular', 
-            fontSize: '35px', 
-            fontStyle: 'normal', 
+            fontFamily: 'AUdimat-regular',
+            fontSize: '35px',
+            fontStyle: 'normal',
             color: '#FFFFFF'
         }
         let backText = this.add.text(backButton.x + 80, backButton.y, "Atrás", backTextStyle);
         backText.setOrigin(0.5, 0);
 
         let mainTextStyle = {
-            fontFamily: 'AUdimat-Regular', 
-            fontSize: '56px', 
-            fontStyle: 'normal', 
+            fontFamily: 'AUdimat-regular',
+            fontSize: '56px',
+            fontStyle: 'normal',
             color: '#FFFFFF'
         }
         let mainText = this.add.text(CANVAS_WIDTH - 75, CANVAS_HEIGHT / 5.5, "¡Conecta con tus amigos!", mainTextStyle);
@@ -93,7 +93,7 @@ export default class UserInfoMenu extends Phaser.Scene {
         let passwordText = this.createTextInputSet(2.1 * CANVAS_WIDTH / 3, 1.80 * CANVAS_HEIGHT / 5 + offset, 0.60, "Contraseña", "Tu contraseña");
 
         let errorTextStyle = {
-            fontFamily: 'adventpro-regular', 
+            fontFamily: 'advent pro',
             fontSize: '31px',
             fontStyle: 'normal',
             color: '#FF0000'
@@ -105,36 +105,37 @@ export default class UserInfoMenu extends Phaser.Scene {
         // Botón de jugar
         new Button(this, CANVAS_WIDTH - 208, 2.85 * CANVAS_HEIGHT / 4, 0.75, () => {
             let aux = this.handleErrors(genderGroup, nameText, userText, passwordText);
-            if(aux){
+            if (aux) {
                 errorText.setVisible(true);
                 errorText.setText(aux);
             }
-            else{
+            else {
                 let userInfo = {
                     name: nameText.getText(),
                     userName: userText.getText(),
                     password: passwordText.getText(),
                     gender: genderGroup.getIndexSelButton(),
                 }
-                if(userInfo.gender === 0){
+                if (userInfo.gender === 0) {
                     userInfo.gender = "male";
                 }
-                else if(userInfo.gender === 1){
+                else if (userInfo.gender === 1) {
                     userInfo.gender = "female";
                 }
                 console.log("jugarrrr");
+                this.gameManager.startGame();
             }
-        }, 
-        this.gameManager.textBox.fillName, {R: 145, G: 209, B: 226}, {R: 134, G: 193, B: 208}, {R: 200, G: 200, B: 200},
-        "Empezar", {font: 'AUdimat-Regular', size: 50, style: 'bold', color: '#FFFFFF'}, this.gameManager.textBox.edgeName, 
-        {
-            area: new Phaser.Geom.Rectangle(this.gameManager.textBox.offset, this.gameManager.textBox.offset, 
-                this.gameManager.textBox.width, this.gameManager.textBox.height),
-            callback: Phaser.Geom.Rectangle.Contains
-        });
+        },
+            this.gameManager.textBox.fillName, { R: 145, G: 209, B: 226 }, { R: 134, G: 193, B: 208 }, { R: 200, G: 200, B: 200 },
+            "Empezar", { font: 'AUdimat-regular', size: 50, style: 'bold', color: '#FFFFFF' }, this.gameManager.textBox.edgeName,
+            {
+                area: new Phaser.Geom.Rectangle(this.gameManager.textBox.offset, this.gameManager.textBox.offset,
+                    this.gameManager.textBox.width, this.gameManager.textBox.height),
+                callback: Phaser.Geom.Rectangle.Contains
+            });
 
         let warningTextStyle = {
-            fontFamily: 'adventpro-regular', 
+            fontFamily: 'advent pro',
             fontSize: '31px',
             fontStyle: 'normal',
             color: '#FFFFFF',
@@ -153,7 +154,7 @@ export default class UserInfoMenu extends Phaser.Scene {
 
         let aux = "No introduzcas una contraseña que ya uses. Piensa en una buena. Sólo será utilizada dentro del juego."
         let keyTextStyle = {
-            fontFamily: 'adventpro-regular', 
+            fontFamily: 'advent pro',
             fontSize: '28px',
             fontStyle: 'normal',
             color: '#FFFFFF',
@@ -171,7 +172,7 @@ export default class UserInfoMenu extends Phaser.Scene {
         this.add.text(CANVAS_WIDTH / 4.85, warningText.y + 34, aux, keyTextStyle).setOrigin(0.5, 0);
     }
 
-    handleErrors(genderGroup, nameText, userText, passwordText){
+    handleErrors(genderGroup, nameText, userText, passwordText) {
         if (!nameText.isValid()) {
             return "Hace falta tu nombre";
         }
@@ -187,14 +188,13 @@ export default class UserInfoMenu extends Phaser.Scene {
         if (userText.getText().length > 16 || passwordText.getText().length > 16) {
             return "Usuario y contraseña no pueden tener más de 16 caracteres"
         }
-        if (genderGroup.getIndexSelButton() === -1)
-        {
+        if (genderGroup.getIndexSelButton() === -1) {
             return "Hace falta que selecciones tu género"
         }
         return null;
     }
 
-    createGenderCheckbox(x, y, scale, iconSprite){
+    createGenderCheckbox(x, y, scale, iconSprite) {
         let container = this.add.container(x, y);
         let icon = this.add.image(0, 0, iconSprite);
         container.add(icon);
@@ -214,7 +214,7 @@ export default class UserInfoMenu extends Phaser.Scene {
         rectangle.centerY = this.gameManager.roundedSquare.height / 2 + this.gameManager.roundedSquare.offset - checkBoxParams.offsetY / checkBoxParams.scale;
 
         let checkBox = new CheckBox(this, checkBoxParams.offsetX, checkBoxParams.offsetY, checkBoxParams.scale, '#000000',
-             {R: 200, G: 200, B: 200}, this.gameManager.roundedSquare.fillName, this.gameManager.roundedSquare.edgeName,
+            { R: 200, G: 200, B: 200 }, this.gameManager.roundedSquare.fillName, this.gameManager.roundedSquare.edgeName,
             {
                 area: rectangle,
                 callback: Phaser.Geom.Rectangle.Contains
@@ -227,11 +227,11 @@ export default class UserInfoMenu extends Phaser.Scene {
         return checkBox;
     }
 
-    createTextInputSet(x, y, scale, sideText, defaultText){
+    createTextInputSet(x, y, scale, sideText, defaultText) {
         let container = this.add.container(x, y);
 
         let style = {
-            fontFamily: 'adventpro-regular', 
+            fontFamily: 'advent pro',
             fontSize: '55px',
             fontStyle: 'normal',
             color: '#FFFFFF'
@@ -241,10 +241,10 @@ export default class UserInfoMenu extends Phaser.Scene {
         text.setOrigin(1, 0.5);
         container.add(text);
 
-        let textInput = new TextInput(this, 0, 0, 1, defaultText, 23, {R: 200, G: 200, B: 200},
-            this.gameManager.inputBox.fillName, this.gameManager.inputBox.edgeName, 'adventpro-regular',
+        let textInput = new TextInput(this, 0, 0, 1, defaultText, 23, { R: 200, G: 200, B: 200 },
+            this.gameManager.inputBox.fillName, this.gameManager.inputBox.edgeName, 'advent pro',
             {
-                area: new Phaser.Geom.Rectangle(this.gameManager.inputBox.offset, this.gameManager.inputBox.offset, 
+                area: new Phaser.Geom.Rectangle(this.gameManager.inputBox.offset, this.gameManager.inputBox.offset,
                     this.gameManager.inputBox.width, this.gameManager.inputBox.height),
                 callback: Phaser.Geom.Rectangle.Contains
             });

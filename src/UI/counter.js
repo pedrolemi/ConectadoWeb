@@ -1,17 +1,15 @@
 import GameManager from '../managers/gameManager.js'
 
 export default class Counter extends Phaser.GameObjects.Container {
-    constructor(scene, x, y, scale, fill, edge, particle, font, limit, updateTimer, waitTimer, timeIncrease, fillColor){
+    constructor(scene, x, y, scale, fill, edge, particle, font, limit, waitTimer, increase, fillColor){
         super(scene, x, y);
 
         this.scene.add.existing(this);
 
         this.elapsedTime = 0;
-        this.timeIncrease = timeIncrease;
-        this.updateTimer = updateTimer;
-        this.updateTimerAux = this.updateTimer; 
         this.waitTimer = waitTimer;
         this.limit = limit;
+        this.increase = increase;
 
         let gameManager = GameManager.getInstance();
         this.fillImg = this.scene.add.image(0, 0, fill);
@@ -30,13 +28,13 @@ export default class Counter extends Phaser.GameObjects.Container {
             color: '#ffffff'
         }
 
-        this.cont = 1;
+        this.cont = 0;
         this.text = this.scene.add.text(0, 0, this.cont, style);
         this.text.setOrigin(0.5);
         this.add(this.text);
 
         this.emitter = this.scene.add.particles(0, 0, particle, {
-            lifespan: 4000,
+            lifespan: 3000,
             speed: { min: 750, max: 1000 },
             scale: { start: 0.4, end: 0 },
             frequency: -1,
@@ -50,32 +48,26 @@ export default class Counter extends Phaser.GameObjects.Container {
     }
 
     preUpdate(t, dt) {
+        this.elapsedTime += dt;
+        
         if(this.cont < this.limit){
-            this.elapsedTime += dt;
-            this.elapsedTime *= this.timeIncrease;
+            this.cont = Math.pow(this.elapsedTime / 1000, this.increase);
+            this.cont = Math.ceil(this.cont);
 
-            if(this.elapsedTime > this.updateTimerAux){
-                ++this.cont;              
-                if(this.cont < this.limit){
-                    this.text.setText(this.cont);
-                    this.updateTimerAux += this.elapsedTime;
-                }
-                else{
-                    this.elapsedTime = 0;
-                    this.updateTimerAux = this.updateTimer;
-                    this.makeVisible(false);
-                    this.emitter.explode();
-                }
+            if(this.cont < this.limit){
+                this.text.setText(this.cont);
+            }
+            else{
+                this.elapsedTime = 0;
+                this.makeVisible(false);
+                this.emitter.explode();
             }
         }
-        else{
-            this.elapsedTime += dt;
-            if(this.elapsedTime > this.waitTimer){
-                this.elapsedTime = 0;
-                this.cont = 1;
-                this.text.setText(this.cont);
-                this.makeVisible(true);
-            }
+        else if (this.elapsedTime > this.waitTimer) {
+            this.elapsedTime = 0;
+            this.cont = 0;
+            this.text.setText(this.cont);
+            this.makeVisible(true);
         }
     }
 

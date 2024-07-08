@@ -51,14 +51,19 @@ export default class BootScene extends Phaser.Scene {
             'IMG': { textureURL: 'UI/dialog/dialog-img/dialog-img.png', atlasURL: 'UI/dialog/dialog-img/dialog-img.json' },
         });
 
-
         // Fondos
         this.load.image('basePC', 'languageMenu/BasePCsq.png');
         this.load.image('PCscreen', 'languageMenu/ScreenWithoutBlack.png');
 
         // Menu principal
-        this.load.image('powerOff', 'mainMenu/power_off.png');
-        this.load.image('logoWT', 'mainMenu/logoWT.png');
+        this.load.image('powerOff', 'titleMenu/power_off.png');
+        this.load.image('logoWT', 'titleMenu/logoWT.png');
+
+        // Menu donde introducir la informacion
+        this.load.image('loginBg', 'userInfoMenu/LoginBackground.png');
+        this.load.image('backButton', 'userInfoMenu/backChatButton.png');
+        this.load.image('boyIcon', 'userInfoMenu/ChicoSelect.png');
+        this.load.image('girlIcon', 'userInfoMenu/ChicaSelect.png');
 
         // Banderas idiomas
         this.load.image('frFlag', 'languageMenu/frFlag.png');
@@ -113,7 +118,7 @@ export default class BootScene extends Phaser.Scene {
     create() {
         let gameManager = GameManager.create(this);
         gameManager.startLangMenu();
-        //this.scene.start('MenuTest');
+        //this.scene.start('UserInfoMenu');
     }
 
 }

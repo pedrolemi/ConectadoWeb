@@ -17,7 +17,7 @@ export default class TextInput extends Phaser.GameObjects.Container {
         else{
             this.fillImg.setInteractive();
         }
-        this.scene.input.enableDebug(this.fillImg, '0xffff00');
+        //this.scene.input.enableDebug(this.fillImg, '0xffff00');
         this.add(this.fillImg);
 
         if(edge){
@@ -31,7 +31,7 @@ export default class TextInput extends Phaser.GameObjects.Container {
         }
         let style = {
             fontFamily: font, 
-            fontSize: '40px',
+            fontSize: '42px',
             fontStyle: 'normal',
             color: '#000000'
         }
@@ -41,9 +41,11 @@ export default class TextInput extends Phaser.GameObjects.Container {
         this.defaultTextAlpha = 0.3;
         this.defaultText = defaultText;
 
-        this.currentText = this.defaultText;
+        //this.currentText = this.defaultText;
+        this.currentText = "";
 
-        this.text = this.scene.add.text(this.offset, 0, this.currentText, style);
+        this.text = this.scene.add.text(this.offset, 0, this.defaultText, style);
+        //this.text = this.scene.add.text(this.offset, 0, this.currentText, style);
         this.text.setAlpha(this.defaultTextAlpha).setOrigin(0, 0.5).setFontStyle('italic');
         this.add(this.text);
 
@@ -65,8 +67,9 @@ export default class TextInput extends Phaser.GameObjects.Container {
 
         this.fillImg.on('pointerup', () => {
             if(!this.isEnteringName){
-                if(this.currentText === this.defaultText){
-                    this.currentText = "";
+                //if(this.currentText === this.defaultText){
+                if(this.currentText === ""){
+                    //this.currentText = "";
                     this.setText(this.currentText);
                     this.text.setAlpha(1).setFontStyle('normal');
                 }
@@ -101,7 +104,7 @@ export default class TextInput extends Phaser.GameObjects.Container {
                     hasChanged = true;
                     this.currentText = this.currentText.slice(0, -1);
                 } 
-                else if (event.key.length === 1 && event.key.match(/[a-zA-Z0-9\s]/)) {
+                else if (event.key.length === 1 && event.key.match(/[a-zA-Z0-9]/)) {
                     hasChanged = true;
                     this.currentText += event.key;
                 }
@@ -137,7 +140,7 @@ export default class TextInput extends Phaser.GameObjects.Container {
                 this.isEnteringName = false;
                 
                 if(!this.currentText){
-                    this.currentText = this.defaultText;
+                    //this.currentText = this.defaultText;
                     this.setText(this.defaultText);
                     this.text.setAlpha(this.defaultTextAlpha).setFontStyle('italic');
                 }
@@ -155,5 +158,10 @@ export default class TextInput extends Phaser.GameObjects.Container {
 
     getText(){
         return this.currentText;
+    }
+
+    isValid(){
+        let aux = this.currentText !== "";
+        return aux;
     }
 }

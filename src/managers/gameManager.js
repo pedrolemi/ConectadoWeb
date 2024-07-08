@@ -3,8 +3,6 @@
 // al no pertencen a la clase y no ser exportada
 // - No cambia con las instancia puesto que no pertenece a la clase, sino
 
-import UIManager from "./UIManager.js";
-
 // al modulo y solo existe un modulo
 let instance = null;
 
@@ -26,7 +24,7 @@ export default class GameManager {
         // Por lo tanto, se aprovecha para mantener la escena actual
         // El SceneManager tb incluye el cambio de escena, pero no es recomendable segun
         // la docu manejarlo a traves de el
-        this.currentScene = scene
+        this.currentScene = scene;
 
         this.tintrgb = this.currentScene.plugins.get('rextintrgbplugin');
         this.i18next = this.currentScene.plugins.get('rextexttranslationplugin');
@@ -39,6 +37,8 @@ export default class GameManager {
         this.map.set("bag", false);
 
         this.talking = false;
+
+        this.generateTextures();
     }
 
     // metodo para generar y coger la instancia
@@ -52,6 +52,83 @@ export default class GameManager {
     // metodo para generar y coger la instancia
     static getInstance() {
         return this.create();
+    }
+
+    ///////////////////////////////////////
+    /// Metodos para generar texturas ////
+    //////////////////////////////////////
+    generateTextures(){
+        this.circleParticle = {
+            name: 'circleParticle',
+            radius: 50,
+            color: 0xFF0808
+        }
+        // (x, y, width, height)
+        let rt = this.currentScene.add.renderTexture(this.circleParticle.radius, this.circleParticle.radius, this.circleParticle.radius * 2, this.circleParticle.radius * 2);
+        let circle = this.currentScene.add.circle(0, 0, this.circleParticle.radius, this.circleParticle.color);
+        rt.draw(circle, this.circleParticle.radius, this.circleParticle.radius);
+        rt.saveTexture(this.circleParticle.name);
+        circle.destroy();
+
+        this.graphics = this.currentScene.add.graphics();
+
+        this.roundedSquare = {
+            fillName: 'fillSquare',
+            edgeName: 'edgeSquare',
+            width: 100,
+            height: 100,
+            radius: 10,
+            fillColor: 0xffffff,
+            edgeColor: 0x000000,
+            edgeWith: 2.6,
+            offset: 10
+        }
+        this.generateBox(this.roundedSquare);
+
+        this.textBox = {
+            fillName: 'fillText',
+            edgeName: 'edgeText',
+            width: 335,
+            height: 80,
+            radius: 10,
+            fillColor: 0xffffff,
+            edgeColor: 0x000000,
+            edgeWith: 1,
+            offset: 10
+        }
+
+        this.generateBox(this.textBox);
+
+        this.inputBox = {
+            fillName: 'fillInput',
+            edgeName: 'edgeInput',
+            width: 420,
+            height: 100,
+            radius: 10,
+            fillColor: 0xffffff,
+            edgeColor: 0x000000,
+            edgeWith: 2,
+            offset: 10
+        }
+
+        this.generateBox(this.inputBox);
+
+        rt.destroy();
+        this.graphics.destroy();
+    }
+
+    generateBox(boxParams){
+        // parte interior
+        this.graphics.fillStyle(boxParams.fillColor, 1);
+        this.graphics.fillRoundedRect(boxParams.offset, boxParams.offset, boxParams.width, boxParams.height, boxParams.radius);
+        this.graphics.generateTexture(boxParams.fillName, boxParams.width + boxParams.offset * 2, boxParams.height + boxParams.offset * 2);
+        this.graphics.clear();
+
+        // borde
+        this.graphics.lineStyle(boxParams.edgeWith, boxParams.edgeColor, 1);
+        this.graphics.strokeRoundedRect(boxParams.offset, boxParams.offset, boxParams.width, boxParams.height, boxParams.radius);
+        this.graphics.generateTexture(boxParams.edgeName, boxParams.width + boxParams.offset * 2, boxParams.height + boxParams.offset * 2);
+        this.graphics.clear();
     }
 
     ///////////////////////////////////////
@@ -103,7 +180,6 @@ export default class GameManager {
     isTalking() {
         return this.talking;
     }
-
 
     ///////////////////////////////////////
     ///// Metodos para la blackboard /////

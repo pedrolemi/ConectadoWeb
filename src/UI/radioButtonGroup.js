@@ -1,9 +1,5 @@
-export default class RadioButtonGroup extends Phaser.GameObjects.Container {
-    constructor(scene, x, y, radioButtons){
-        super(scene, x, y);
-
-        this.scene.add.existing(this);
-
+export default class RadioButtonGroup {
+    constructor(radioButtons){
         this.radioButtons = radioButtons;
         this.selectedButton = null;
         this.buttonsMap = new Map();
@@ -14,7 +10,6 @@ export default class RadioButtonGroup extends Phaser.GameObjects.Container {
             button.setChecked(false);
             this.buttonsMap.set(button, cont);
             ++cont;
-            this.add(button);
         })
     }
 

@@ -15,3 +15,8 @@ Fuentes que se usan en Phaser
     font-family: "kimberley_bl";
     src: url('assets/fonts/kimberley_bl.otf');
 }
+
+@font-face {
+    font-family: "adventpro-regular";
+    src: url('assets/fonts/adventpro-regular.ttf');
+}

@@ -23,7 +23,7 @@ export default class Button extends Phaser.GameObjects.Container {
         }
         //this.scene.input.enableDebug(fillImg, '0xffff00');
 
-        let tintFadeTime = 15;
+        let tintFadeTime = 25;
 
         if(highlightedCol){
             fillImg.on('pointerover', () => {
@@ -52,7 +52,7 @@ export default class Button extends Phaser.GameObjects.Container {
         }
 
         fillImg.on('pointerdown', (pointer) => {
-            fillImg.disableInteractive();
+            //fillImg.disableInteractive();
             if(pressedCol){
                 let down = scene.tweens.add({
                     targets: fillImg,
@@ -61,6 +61,7 @@ export default class Button extends Phaser.GameObjects.Container {
                     tintB: pressedCol.B,
                     duration: tintFadeTime,
                     repeat: 0,
+                    yoyo: true
                 });
                 down.on('complete', () => {
                     fn();
@@ -82,7 +83,7 @@ export default class Button extends Phaser.GameObjects.Container {
             let style = {
                 fontFamily: fontParams.font, 
                 fontSize: fontParams.size + 'px',
-                fontStyle: 'normal', 
+                fontStyle: fontParams.style, 
                 color: fontParams.color
             }
 

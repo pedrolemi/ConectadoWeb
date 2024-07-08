@@ -24,7 +24,7 @@ export default class CheckBox extends Phaser.GameObjects.Container {
         else{
             fillImg.setInteractive();
         }
-        this.scene.input.enableDebug(fillImg, '0xffff00');
+        //this.scene.input.enableDebug(fillImg, '0xffff00');
         fillImg.on('pointerdown', () => {
             let down = scene.tweens.add({
                 targets: fillImg,

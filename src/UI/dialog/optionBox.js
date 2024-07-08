@@ -24,16 +24,15 @@ export default class OptionBox extends DialogObject {
         this.box.y = this.CANVAS_HEIGHT - (this.box.displayHeight * numOpts) + (this.box.displayHeight * index);
 
         // Configuracion del texto de la caja
-        this.textConfig = { ...this.textConfig };
-        this.textConfig.size = 20;
+        this.textConfig = { ...scene.textConfig };
+        this.textConfig.fontSize = 20 + 'px';
 
         let x = 50;
         let y = this.box.y + this.box.displayHeight / 2;
 
-        // Crea el texto en la escena
-        this.text = super.createText(x, y, text, this.textConfig);
+        // Crea el texto
+        this.text = scene.createText(x, y, text, this.textConfig);
         this.text.setOrigin(0, 0.5);
-        this.text.text = text;
 
         this.box.setInteractive();
 

@@ -37,6 +37,17 @@ export default class BootScene extends Phaser.Scene {
         this.load.image('messagesBg', './UI/phone/messagesBg.png');
         this.load.image('chatBG', './UI/phone/chatBG.png');
 
+        // Botones del telefono
+        this.load.image('returnButton', './UI/phone/triangle.png');
+        this.load.image('homeButton', './UI/phone/circle.png');
+        this.load.image('uselessButton', './UI/phone/square.png');
+        
+        this.load.image('statusIcon', './UI/phone/statusIcon.png');
+        this.load.image('chatIcon', './UI/phone/chatIcon.png');
+        this.load.image('settingsIcon', './UI/phone/settingsIcon.png');
+
+
+
         // comprimir texturas (toma mucha menos memoria, aunque los archivos pueden ocupa mas tam)
         // Se comprueba de arriba a abajo hasta encontrar el primero que funcione en el dispositivo, si no, se usa png
         // formatos de compresion: ETC, ETC1, ATC, ASTC, BPTC, RGTC, PVRTC, S3TC, and S3TCSRB

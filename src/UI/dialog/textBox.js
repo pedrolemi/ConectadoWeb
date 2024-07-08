@@ -39,25 +39,23 @@ export default class TextBox extends DialogObject {
 
 
         // Configuracion del texto de la caja
-        this.normalTextConfig = { ...this.textConfig };
-        this.normalTextConfig.size = 20;
+        this.normalTextConfig = { ...scene.textConfig };
+        this.normalTextConfig.fontSize = 20 + 'px';
 
-        this.nameTextConfig = { ...this.textConfig };
-        this.nameTextConfig.size = 25;
+        this.nameTextConfig = { ...scene.textConfig };
+        this.nameTextConfig.fontSize = 25 + 'px';
+        
 
         // Animacion del texto
-        this.textDelay = 30;                  // Tiempo que tarda en aparecer cada letra en milisegundos
-        this.currText = null;                 // Texto escrito hasta el momento
-        this.fulltext = "";                   // Texto completo a escribir
-        this.fullTextSplit = null;            // Texto completo a escribir separado por palabras
-        this.letterCount = 0;                 // Numero de letras del texto completo escritas
-        this.finished = false;                // Si ha terminado de mostrar el texto o no
+        this.textDelay = 30;                                                        // Tiempo que tarda en aparecer cada letra en milisegundos
+        this.currText = scene.createText(0, 0, "aaa", this.normalTextConfig);       // Texto escrito hasta el momento
+        this.fulltext = "";                                                         // Texto completo a escribir
+        this.fullTextSplit = null;                                                  // Texto completo a escribir separado por palabras
+        this.letterCount = 0;                                                       // Numero de letras del texto completo escritas
+        this.finished = false;                                                      // Si ha terminado de mostrar el texto o no
 
-        this.nameText = null;
+        this.nameText = scene.createText(0, 0, "aaa", this.nameText);
         this.canWrite = false;
-
-        this.createText("");
-        this.createName("");
 
         this.box.alpha = 0;
         this.nameBox.alpha = 0;
@@ -147,26 +145,29 @@ export default class TextBox extends DialogObject {
             x = 110;
             width = (this.CANVAS_WIDTH - this.padding) / 1.30;
         }
+        this.normalTextConfig.wordWrap = {
+            width: width,
+            useAdvancedWrap: true
+        }
+
         // Crea el texto en la escena
-        this.currText = super.createText(x, y, text, this.normalTextConfig, width);
+        this.currText = this.scene.createText(x, y, text, this.normalTextConfig);
+        this.currText.setText(text);
     }
 
     /**
     * Crea el texto del nombre del personaje hablando
     * @param {string} name - nombre del personaje
-    * @param {string} character - id del personaje que habla
     */
-    createName(name, character) {
+    createName(name) {
         let x = 290;
         let y = 622;
-        let charName = name;
 
-        // Crea el texto en la escena
-        this.nameText = super.createText(x, y, name, this.nameTextConfig);
-        this.nameText.setOrigin(0.5, 0.5);
+        // // Crea el texto en la escena
+        this.nameText = this.scene.createText(x, y, name, this.nameTextConfig).setOrigin(0.5, 0.5);
 
-        // Cambia el texto del objeto
-        this.nameText.text = charName;
+        // // Cambia el texto del objeto
+        this.nameText.setText(name);
     }
 
     /**

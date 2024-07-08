@@ -1,8 +1,16 @@
-export default class Phone extends Phaser.GameObjects.Container  {
+import AlarmScreen from "./alarmScreen.js";
+import MainScreen from "./mainScreen.js";
+import StatusScreen from "./statusScreen.js";
+import MessagesScreen from "./messagesScreen.js";
+import ChatScreen from "./chatScreen.js";
+import SettingsScreen from "./settingsScreen.js";
+
+export default class Phone extends Phaser.GameObjects.Container {
     constructor(scene) {
         super(scene, 0, 0);
         this.scene = scene;
 
+        // Configuracion de las posiciones y dimensiones
         this.CANVAS_WIDTH = scene.sys.game.canvas.width
         this.CANVAS_HEIGHT = scene.sys.game.canvas.height;
 
@@ -12,24 +20,39 @@ export default class Phone extends Phaser.GameObjects.Container  {
         this.BG_X = this.CANVAS_WIDTH / 2 + 36;
         this.BG_Y = this.CANVAS_HEIGHT / 2 + 6;
 
-        this.phone = scene.add.image(this.PHONE_X, this.PHONE_Y, 'phone');
-        this.add(this.phone);
 
-        this.bgs = [
-            scene.add.image(this.BG_X, this.BG_Y, 'alarmBg'),
-            // scene.add.image(this.BG_X, this.BG_Y, 'mainScreenBg'),
-            // scene.add.image(this.BG_X, this.BG_Y, 'statusBG'),
-            // scene.add.image(this.BG_X, this.BG_Y, 'messagesBg'),
-            scene.add.image(this.BG_X, this.BG_Y, 'chatBG'),
+        // Se crean las imagenes y diferentes pantallas
+        this.phone = scene.add.image(this.PHONE_X, this.PHONE_Y, 'phone');
+        this.alarmScreen = new AlarmScreen(scene, this, 'alarmBg', null);
+        this.mainScreen = new MainScreen(scene, this, 'mainScreenBg', null);
+        this.statusScreen = new StatusScreen(scene, this, 'statusBG', this.mainScreen);
+        this.messagesScreen = new MessagesScreen(scene, this, 'messagesBg', this.mainScreen);
+        this.chatScreen = new ChatScreen(scene, this, 'chatBG', this.messagesScreen);
+        this.settingsScreen = new SettingsScreen(scene, this, ' ', this.mainScreen);
+
+        // Se anaden las pantallas a un array para poder iterar sobre ellas mas rapidamente
+        let screens = [
+            this.alarmScreen,
+            this.mainScreen,
+            this.statusScreen,
+            this.messagesScreen,
+            this.chatScreen,
+            this.settingsScreen
         ]
-        
-        this.bgs.forEach((bg) => {
-            this.add(bg);
-            // bg.visible = false;
+
+        // Se anade la imagen del telefono y las pantallas a la escena
+        this.add(this.phone);
+        screens.forEach((screen) => {
+            this.add(screen);
+            screen.visible = false;
         });
-        
+
+        // Se pone la imagen del telefono por encima de todo
         this.bringToTop(this.phone);
-        this.scene.add.existing(this);
+
+        this.currScreen = null;
+        this.toMainScreen();
+        scene.add.existing(this);
     }
 
     getPhoneTransform() {
@@ -43,5 +66,41 @@ export default class Phone extends Phaser.GameObjects.Container  {
         }
     }
 
-    
+    changeScreen(nextScreen) {
+        if (this.currScreen !== nextScreen) {
+            if ( this.currScreen) {
+                this.currScreen.visible = false;
+            }
+            this.currScreen = nextScreen;
+            this.currScreen.visible = true;
+        }
+        
+    }
+
+    toPrevScreen() {
+        if (this.currScreen.prevScreen) {
+            this.changeScreen(this.currScreen.prevScreen);
+        }
+    }
+
+
+    toMainScreen() {
+        this.changeScreen(this.mainScreen);
+    }
+
+    toStatusScreen() {
+        this.changeScreen(this.statusScreen);
+    }
+
+    toMsgScreen() {
+        this.changeScreen(this.messagesScreen);
+    }
+
+    toChatScreen() {
+        this.changeScreen(this.chatScreen);
+    }
+
+    toSettingsScreen() {
+        this.changeScreen(this.settingsScreen);
+    }
 }

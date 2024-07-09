@@ -87,8 +87,8 @@ export default class TextInput extends Phaser.GameObjects.Container {
                     onUpdate: (tween) => {
                         const value = tween.getValue();
                         let col = Phaser.Display.Color.Interpolate.ColorWithColor(nCol, pCol, 100, value);
-                        let colourInt = Phaser.Display.Color.GetColor(col.r, col.g, col.b);
-                        this.fillImg.setTint(colourInt);
+                        let colInt = Phaser.Display.Color.GetColor(col.r, col.g, col.b);
+                        this.fillImg.setTint(colInt);
                     },
                     duration: 50,
                     repeat: 0,

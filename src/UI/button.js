@@ -35,8 +35,8 @@ export default class Button extends Phaser.GameObjects.Container {
                     onUpdate: (tween) => {
                         const value = tween.getValue();
                         let col = Phaser.Display.Color.Interpolate.ColorWithColor(nCol, hCol, 100, value);
-                        let colourInt = Phaser.Display.Color.GetColor(col.r, col.g, col.b);
-                        fillImg.setTint(colourInt);
+                        let colInt = Phaser.Display.Color.GetColor(col.r, col.g, col.b);
+                        fillImg.setTint(colInt);
                     },
                     duration: tintFadeTime,
                     repeat: 0,
@@ -52,8 +52,8 @@ export default class Button extends Phaser.GameObjects.Container {
                     onUpdate: (tween) => {
                         const value = tween.getValue();
                         let col = Phaser.Display.Color.Interpolate.ColorWithColor(hCol, nCol, 100, value);
-                        let colourInt = Phaser.Display.Color.GetColor(col.r, col.g, col.b);
-                        fillImg.setTint(colourInt);
+                        let colInt = Phaser.Display.Color.GetColor(col.r, col.g, col.b);
+                        fillImg.setTint(colInt);
                     },
                     duration: tintFadeTime,
                     repeat: 0,
@@ -71,8 +71,8 @@ export default class Button extends Phaser.GameObjects.Container {
                     onUpdate: (tween) => {
                         const value = tween.getValue();
                         let col = Phaser.Display.Color.Interpolate.ColorWithColor(hCol, pCol, 100, value);
-                        let colourInt = Phaser.Display.Color.GetColor(col.r, col.g, col.b);
-                        fillImg.setTint(colourInt);
+                        let colInt = Phaser.Display.Color.GetColor(col.r, col.g, col.b);
+                        fillImg.setTint(colInt);
                     },
                     duration: tintFadeTime,
                     repeat: 0,

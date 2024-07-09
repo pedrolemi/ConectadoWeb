@@ -3,7 +3,7 @@ import Phone from '../UI/phone/phone.js';
 export default class PhoneManager {
     constructor(scene) {
         this.scene = scene;
-        this.phone = new Phone(scene);
+        this.phone = new Phone(scene, this);
 
         this.CANVAS_WIDTH = scene.sys.game.canvas.width
         this.CANVAS_HEIGHT = scene.sys.game.canvas.height;
@@ -52,6 +52,11 @@ export default class PhoneManager {
         
         this.toggling = false;
         this.setDayInfo("01:40", "Martes, Día 14")
+        
+        this.togglePhone();
+        this.toggling = false;
+        this.phone.visible = false;
+        this.bgBlock.disableInteractive();
     }
 
 

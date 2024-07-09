@@ -6,9 +6,10 @@ import ChatScreen from "./chatScreen.js";
 import SettingsScreen from "./settingsScreen.js";
 
 export default class Phone extends Phaser.GameObjects.Container {
-    constructor(scene) {
+    constructor(scene, phoneManager) {
         super(scene, 0, 0);
         this.scene = scene;
+        this.phoneManager = phoneManager;
 
         // Configuracion de las posiciones y dimensiones
         this.CANVAS_WIDTH = scene.sys.game.canvas.width
@@ -52,6 +53,9 @@ export default class Phone extends Phaser.GameObjects.Container {
 
         this.currScreen = null;
         this.toMainScreen();
+
+        this.toStatusScreen();
+        
         scene.add.existing(this);
     }
 
@@ -78,6 +82,9 @@ export default class Phone extends Phaser.GameObjects.Container {
     }
 
     toPrevScreen() {
+        if (this.currScreen === this.mainScreen) {
+            this.phoneManager.togglePhone();
+        }
         if (this.currScreen.prevScreen) {
             this.changeScreen(this.currScreen.prevScreen);
         }

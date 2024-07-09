@@ -34,8 +34,8 @@ export default class CheckBox extends Phaser.GameObjects.Container {
                 onUpdate: (tween) => {
                     const value = tween.getValue();
                     let col = Phaser.Display.Color.Interpolate.ColorWithColor(nCol, pCol, 100, value);
-                    let colourInt = Phaser.Display.Color.GetColor(col.r, col.g, col.b);
-                    fillImg.setTint(colourInt);
+                    let colInt = Phaser.Display.Color.GetColor(col.r, col.g, col.b);
+                    fillImg.setTint(colInt);
                 },
                 duration: 80,
                 repeat: 0,

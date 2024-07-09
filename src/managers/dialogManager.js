@@ -1,6 +1,6 @@
 import TextBox from '../UI/dialog/textbox.js';
-import OptionBox from '../UI/dialog/optionBox.js'
-import GameManager from './gameManager.js'
+import OptionBox from '../UI/dialog/optionBox.js';
+import GameManager from './gameManager.js';
 import EventDispatcher from '../eventDispatcher.js';
 
 export default class DialogManager  {
@@ -32,6 +32,8 @@ export default class DialogManager  {
         mask.setCrop(0, 0, 160, mask.displayHeight);
         mask.visible = false;
         this.portraitMask = mask.createBitmapMask();
+
+        this.talking = false;
     }
 
     // IMPORTANTE: SE TIENE QUE LLAMAR ANTES DE CAMBIAR LA ESCENA
@@ -98,9 +100,9 @@ export default class DialogManager  {
     */
     setNode(node) {
         // Si no hay ningun dialogo activo
-        if (!this.gameManager.isTalking()) {
+        if (!this.isTalking()) {
             // Avisa al gameManager de que ha empezado uno
-            this.gameManager.setTalking(true);
+            this.talking = true;
 
             // Desactiva la caja de texto y las opciones (por si acaso)
             if (this.textbox) this.textbox.activate(false);
@@ -225,7 +227,7 @@ export default class DialogManager  {
         }
         // Si no, se ha acabado el dialogo y lo avisa al gameManager
         else {
-            this.gameManager.setTalking(false);
+            this.talking = false;
         }
 
     }
@@ -318,6 +320,22 @@ export default class DialogManager  {
         if (this.currNode) {
             this.textbox.setPortrait(this.portraits.get(this.currNode.character));
         }
+    }
+
+    /**
+    * Metodo que se llama cuando inicia o termina un dialogo 
+    * @param {boolean} talking - true si el dialogo inicia, false si acaba
+    */
+    setTalking(talking) {
+        this.talking = talking;
+    }
+
+    /**
+    * Metodo para comprobar si un dialogo esta activo o no
+    * @return {boolean} - true si hay un dialogo activo, false en caso contrario
+    */
+    isTalking() {
+        return this.talking;
     }
 
 

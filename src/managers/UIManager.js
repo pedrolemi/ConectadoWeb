@@ -1,5 +1,5 @@
 import DialogManager from "./dialogManager.js";
-import PhoneManager from "../UI/phone/phoneManager.js";
+import PhoneManager from "./phoneManager.js";
 
 export default class UIManager extends Phaser.Scene {
     constructor(scene) {

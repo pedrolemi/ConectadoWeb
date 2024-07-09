@@ -103,4 +103,8 @@ export default class Phone extends Phaser.GameObjects.Container {
     toSettingsScreen() {
         this.changeScreen(this.settingsScreen);
     }
+
+    setDayInfo(hour, dayText) {
+        this.mainScreen.setDayInfo(hour, dayText);
+    }
 }

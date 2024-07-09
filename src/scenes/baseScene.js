@@ -1,5 +1,5 @@
-import DialogNode from '../UI/dialog/dialogNode.js'
-import GameManager from '../managers/gameManager.js'
+import DialogNode from '../UI/dialog/dialogNode.js';
+import GameManager from '../managers/gameManager.js';
 
 export default class BaseScene extends Phaser.Scene {
     constructor(name) {

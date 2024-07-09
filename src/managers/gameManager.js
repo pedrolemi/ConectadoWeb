@@ -35,9 +35,7 @@ export default class GameManager {
         // almacena los valores que van a tener que ser usados desde fuera
         this.map = new Map();
         this.map.set("bag", false);
-
-        this.talking = false;
-
+        
         this.generateTextures();
     }
 
@@ -138,6 +136,9 @@ export default class GameManager {
         let sceneName = 'LanguageMenu';
         this.changeScene(sceneName);
         this.currentScene = this.currentScene.scene.get(sceneName);
+
+        sceneName = 'UIManager';
+        this.currentScene.scene.stop(sceneName);
     }
     
     startTitleMenu() {
@@ -179,22 +180,7 @@ export default class GameManager {
         this.currentScene.scene.start(scene);
     }
 
-
-    /**
-    * Metodo que se llama cuando inicia o termina un dialogo 
-    * @param {boolean} talking - si hay un dialogo activo o no
-    */
-    setTalking(talking) {
-        this.talking = talking;
-    }
-
-    /**
-    * @returns {boolean} - true si el dialogo esta activo, false en caso contrario
-    */
-    isTalking() {
-        return this.talking;
-    }
-
+    
     ///////////////////////////////////////
     ///// Metodos para la blackboard /////
     //////////////////////////////////////

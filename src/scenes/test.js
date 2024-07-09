@@ -1,6 +1,6 @@
 import BaseScene from './baseScene.js';
 import Character from '../gameObjects/character.js';
-import EventDispatcher from '../eventDispatcher.js'
+import EventDispatcher from '../eventDispatcher.js';
 
 export default class Test extends BaseScene {
     constructor() {
@@ -10,7 +10,7 @@ export default class Test extends BaseScene {
     create() {
         super.create();
 
-        let dadNode = super.readNodes("root", "ohi", "Johanna", "female", true);
+        let dadNode = super.readNodes("root", "test2", "Johanna", "female", true);
         let momNode = super.readNodes("root", "test1", "Johanna", "female", true);
 
 
@@ -23,8 +23,6 @@ export default class Test extends BaseScene {
         // bg.on('pointerdown', (pointer) => {
         //     this.dialogManager.textbox.activate(false);
         //     this.dialogManager.activateOptions(false);
-
-        //     super.changeScene("Test2");
         // });
         this.rightBound = bg.displayWidth;
 

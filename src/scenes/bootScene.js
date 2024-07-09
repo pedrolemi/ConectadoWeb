@@ -1,4 +1,4 @@
-import GameManager from '../managers/gameManager.js'
+import GameManager from '../managers/gameManager.js';
 
 export default class BootScene extends Phaser.Scene {
     constructor() {
@@ -110,7 +110,7 @@ export default class BootScene extends Phaser.Scene {
             // en cualquier idioma (aunque o existiese)
             supportedLngs: ['en', 'es'],
             // namespaces que se cargan para cada uno de los idiomas
-            ns: ['day1', 'day2', 'test1', 'ohi'],
+            ns: ['test1', 'test2'],
             preload: ['en', 'es'],
             // mostrar informacion de ayuda por consola
             debug: false,
@@ -128,8 +128,7 @@ export default class BootScene extends Phaser.Scene {
 
     create() {
         let gameManager = GameManager.create(this);
-        gameManager.startTitleMenu();
-        //gameManager.startLangMenu();
+        gameManager.startLangMenu();
     }
 
 }

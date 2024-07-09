@@ -1,5 +1,5 @@
 export default class RadioButtonGroup {
-    constructor(radioButtons){
+    constructor(radioButtons) {
         this.radioButtons = radioButtons;
         this.selectedButton = null;
         this.buttonsMap = new Map();
@@ -13,18 +13,18 @@ export default class RadioButtonGroup {
         })
     }
 
-    checkButton(button){
+    checkButton(button) {
         this.selectedButton = button;
         this.radioButtons.forEach(button => {
-            if(button != this.selectedButton){
+            if (button != this.selectedButton) {
                 button.setChecked(false);
             }
         });
     }
 
-    getIndexSelButton(){
-        if(this.selectedButton){
-            if(this.buttonsMap.has(this.selectedButton)){
+    getIndexSelButton() {
+        if (this.selectedButton) {
+            if (this.buttonsMap.has(this.selectedButton)) {
                 return this.buttonsMap.get(this.selectedButton);
             }
         }

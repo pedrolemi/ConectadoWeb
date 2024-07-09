@@ -1,5 +1,4 @@
 import DialogObject from './dialogObject.js';
-import GameManager from '../../managers/gameManager.js'
 
 export default class OptionBox extends DialogObject {
     /**
@@ -36,29 +35,39 @@ export default class OptionBox extends DialogObject {
 
         this.box.setInteractive();
 
-        let gameManager = GameManager.getInstance();
-
         // Configuracion de las animaciones
         let tintFadeTime = 50;
-        gameManager.tintrgb.add(this.box);
+
+        let noTint = Phaser.Display.Color.HexStringToColor('#ffffff');
+        let pointerOverColor = Phaser.Display.Color.HexStringToColor('#00ff56');
 
         // Hace fade del color de la caja al pasar o quitar el raton por encima
         this.box.on('pointerover', () => {
-            scene.tweens.add({
+            scene.tweens.addCounter({
                 targets: [this.box],
-                tintR: 0x00,
-                tintG: 0xFF,
-                tintB: 0x56,
+                from: 0,
+                to: 100,
+                onUpdate: (tween) => {
+                    const value = tween.getValue();
+                    let col = Phaser.Display.Color.Interpolate.ColorWithColor(noTint, pointerOverColor, 100, value);
+                    let colourInt = Phaser.Display.Color.GetColor(col.r, col.g, col.b);
+                    this.box.setTint(colourInt);
+                },
                 duration: tintFadeTime,
                 repeat: 0,
             });
         });
         this.box.on('pointerout', () => {
-            scene.tweens.add({
+            scene.tweens.addCounter({
                 targets: [this.box],
-                tintR: 0xFF,
-                tintG: 0xFF,
-                tintB: 0xFF,
+                from: 0,
+                to: 100,
+                onUpdate: (tween) => {
+                    const value = tween.getValue();
+                    let col = Phaser.Display.Color.Interpolate.ColorWithColor(pointerOverColor, noTint, 100, value);
+                    let colourInt = Phaser.Display.Color.GetColor(col.r, col.g, col.b);
+                    this.box.setTint(colourInt);
+                },
                 duration: tintFadeTime,
                 repeat: 0,
             });
@@ -68,11 +77,16 @@ export default class OptionBox extends DialogObject {
         // y avisa a la escena de la opcion elegida 
         this.box.on('pointerdown', (pointer) => {
             this.box.disableInteractive();
-            let fadeColor = scene.tweens.add({
+            let fadeColor = scene.tweens.addCounter({
                 targets: [this.box],
-                tintR: 0xFF,
-                tintG: 0xFF,
-                tintB: 0xFF,
+                from: 0,
+                to: 100,
+                onUpdate: (tween) => {
+                    const value = tween.getValue();
+                    let col = Phaser.Display.Color.Interpolate.ColorWithColor(noTint, pointerOverColor, 100, value);
+                    let colourInt = Phaser.Display.Color.GetColor(col.r, col.g, col.b);
+                    this.box.setTint(colourInt);
+                },
                 duration: tintFadeTime,
                 repeat: 0,
             });

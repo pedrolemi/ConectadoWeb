@@ -26,7 +26,6 @@ export default class GameManager {
         // la docu manejarlo a traves de el
         this.currentScene = scene;
 
-        this.tintrgb = this.currentScene.plugins.get('rextintrgbplugin');
         this.i18next = this.currentScene.plugins.get('rextexttranslationplugin');
 
         // indica el dia del juego

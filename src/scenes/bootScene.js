@@ -91,9 +91,6 @@ export default class BootScene extends Phaser.Scene {
         this.load.spine("dad", 'characters/dad/Front 34.json', 'characters/dad/Front 34.atlas')
 
         // PLUGINS
-        // Precarga el plugin para hacer fade de colores
-        // (sin el plugin el fade colores funciona algo mal)
-        this.load.plugin('rextintrgbplugin', 'https://raw.githubusercontent.com/rexrainbow/phaser3-rex-notes/master/dist/rextintrgbplugin.min.js', true);
 
         // Se inicializa el plugin i18next
         // Inicialmente solo se carga el idioma inicial y los de respaldo

@@ -1,5 +1,3 @@
-import GameManager from "../../managers/gameManager.js";
-
 export default class BaseScreen extends Phaser.GameObjects.Container {
     constructor(scene, phone, bgImage, prevScreen) {
         super(scene, 0, 0);
@@ -17,14 +15,14 @@ export default class BaseScreen extends Phaser.GameObjects.Container {
 
         this.BUTTON_Y = this.CANVAS_HEIGHT * 0.85 + 3;
         this.BUTTON_SCALE = 0.34;
-        
+
 
         // Se ponen las imagenes en la pantalla
         let bg = scene.add.image(this.BG_X, this.BG_Y, bgImage);
         let returnButton = scene.add.image(this.BG_X - this.BG_X / 6, this.BUTTON_Y, 'returnButton').setScale(this.BUTTON_SCALE);
         let homeButton = scene.add.image(this.BG_X, this.BUTTON_Y, 'homeButton').setScale(this.BUTTON_SCALE);
         let uselessButton = scene.add.image(this.BG_X + this.BG_X / 6, this.BUTTON_Y, 'uselessButton').setScale(this.BUTTON_SCALE);
-        
+
         // Se anaden las imagenes a la escena
         this.add(bg);
         this.add(returnButton);
@@ -45,11 +43,6 @@ export default class BaseScreen extends Phaser.GameObjects.Container {
     animateButton(button, onClick) {
         // Se hace interactivo
         button.setInteractive();
-
-        // Para hacer fade de los colores
-        let gameManager = GameManager.getInstance();
-        gameManager.tintrgb.add(button);
-
         let originalScale = button.scale
 
         // Al pasar el raton por encima, el icono se hace mas grande,

@@ -1,50 +1,60 @@
-import GameManager from "../managers/gameManager.js";
-
 export default class Button extends Phaser.GameObjects.Container {
-    constructor(scene, x, y, scale, fn, fill, normalCol, highlightedCol, pressedCol, text, fontParams, edge, hitArea){
+    constructor(scene, x, y, scale, fn, fill, normalCol, highlightedCol, pressedCol, text, fontParams, edge, hitArea) {
         super(scene, x, y);
-
         this.scene.add.existing(this);
 
-        let gameManager = GameManager.getInstance();
-
         let fillImg = this.scene.add.image(0, 0, fill);
-        gameManager.tintrgb.add(fillImg);
-        if(normalCol){
-            fillImg.tintR = normalCol.R;
-            fillImg.tintG = normalCol.G;
-            fillImg.tintB = normalCol.B;
+
+        let nCol = Phaser.Display.Color.GetColor(normalCol.R, normalCol.G, normalCol.B);
+        nCol = Phaser.Display.Color.IntegerToRGB(nCol);
+        let hCol = Phaser.Display.Color.GetColor(highlightedCol.R, highlightedCol.G, highlightedCol.B);
+        hCol = Phaser.Display.Color.IntegerToRGB(hCol);
+        let pCol = Phaser.Display.Color.GetColor(pressedCol.R, pressedCol.G, pressedCol.B);
+        pCol = Phaser.Display.Color.IntegerToRGB(pCol);
+
+        if (normalCol) {
+            fillImg.setTint(Phaser.Display.Color.GetColor(nCol.r, nCol.g, nCol.b));
         }
-        if(hitArea){
+        if (hitArea) {
             fillImg.setInteractive(hitArea.area, hitArea.callback);
         }
-        else{
+        else {
             fillImg.setInteractive();
         }
         //this.scene.input.enableDebug(fillImg, '0xffff00');
 
         let tintFadeTime = 25;
 
-        if(highlightedCol){
+
+        if (highlightedCol) {
             fillImg.on('pointerover', () => {
-                this.scene.tweens.add({
-                    targets: fillImg,
-                    tintR: highlightedCol.R,
-                    tintG: highlightedCol.G,
-                    tintB: highlightedCol.B,
+                scene.tweens.addCounter({
+                    targets: [fillImg],
+                    from: 0,
+                    to: 100,
+                    onUpdate: (tween) => {
+                        const value = tween.getValue();
+                        let col = Phaser.Display.Color.Interpolate.ColorWithColor(nCol, hCol, 100, value);
+                        let colourInt = Phaser.Display.Color.GetColor(col.r, col.g, col.b);
+                        fillImg.setTint(colourInt);
+                    },
                     duration: tintFadeTime,
                     repeat: 0,
                 });
             });
         }
-
-        if(normalCol){
+        if (normalCol) {
             fillImg.on('pointerout', () => {
-                scene.tweens.add({
-                    targets: fillImg,
-                    tintR: normalCol.R,
-                    tintG: normalCol.G,
-                    tintB: normalCol.B,
+                scene.tweens.addCounter({
+                    targets: [fillImg],
+                    from: 0,
+                    to: 100,
+                    onUpdate: (tween) => {
+                        const value = tween.getValue();
+                        let col = Phaser.Display.Color.Interpolate.ColorWithColor(hCol, nCol, 100, value);
+                        let colourInt = Phaser.Display.Color.GetColor(col.r, col.g, col.b);
+                        fillImg.setTint(colourInt);
+                    },
                     duration: tintFadeTime,
                     repeat: 0,
                 });
@@ -53,37 +63,41 @@ export default class Button extends Phaser.GameObjects.Container {
 
         fillImg.on('pointerdown', (pointer) => {
             //fillImg.disableInteractive();
-            if(pressedCol){
-                let down = scene.tweens.add({
-                    targets: fillImg,
-                    tintR: pressedCol.R,
-                    tintG: pressedCol.G,
-                    tintB: pressedCol.B,
+            if (pressedCol) {
+                let down = scene.tweens.addCounter({
+                    targets: [fillImg],
+                    from: 0,
+                    to: 100,
+                    onUpdate: (tween) => {
+                        const value = tween.getValue();
+                        let col = Phaser.Display.Color.Interpolate.ColorWithColor(hCol, pCol, 100, value);
+                        let colourInt = Phaser.Display.Color.GetColor(col.r, col.g, col.b);
+                        fillImg.setTint(colourInt);
+                    },
                     duration: tintFadeTime,
                     repeat: 0,
-                    yoyo: true
                 });
                 down.on('complete', () => {
                     fn();
                 });
             }
-            else{
+            else {
                 fn();
             }
         });
 
         this.add(fillImg);
-        
-        if(edge){
+
+        if (edge) {
             let edgeImg = this.scene.add.image(0, 0, edge);
             this.add(edgeImg);
         }
 
-        if(text){
+        if (text) {
             let style = {
-                fontFamily: fontParams.font, 
+                fontFamily: fontParams.font,
                 fontSize: fontParams.size + 'px',
-                fontStyle: fontParams.style, 
+                fontStyle: fontParams.style,
                 color: fontParams.color
             }
 

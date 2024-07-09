@@ -1,7 +1,5 @@
-import GameManager from '../managers/gameManager.js'
-
 export default class CheckBox extends Phaser.GameObjects.Container {
-    constructor(scene, x, y, scale, tickColor, pressedColor, fill, edge, hitArea){
+    constructor(scene, x, y, scale, tickColor, pressedColor, fill, edge, hitArea) {
         super(scene, x, y);
 
         this.scene.add.existing(this);
@@ -12,49 +10,57 @@ export default class CheckBox extends Phaser.GameObjects.Container {
         // Entonces, funciona como un radio button
         this.group = null;
 
-        let gameManager = GameManager.getInstance();
-
         let fillImg = this.scene.add.image(0, 0, fill);
-        gameManager.tintrgb.add(fillImg);
         this.add(fillImg);
 
-        if(hitArea){
+        if (hitArea) {
             fillImg.setInteractive(hitArea.area, hitArea.callback);
         }
-        else{
+        else {
             fillImg.setInteractive();
         }
+
         //this.scene.input.enableDebug(fillImg, '0xffff00');
+
+        let nCol = Phaser.Display.Color.HexStringToColor('#ffffff');
+        let pCol = Phaser.Display.Color.GetColor(pressedColor.R, pressedColor.G, pressedColor.B);
+        pCol = Phaser.Display.Color.IntegerToRGB(pCol);
+
         fillImg.on('pointerdown', () => {
-            let down = scene.tweens.add({
+            let down = scene.tweens.addCounter({
                 targets: fillImg,
-                tintR: pressedColor.R,
-                tintG: pressedColor.G,
-                tintB: pressedColor.B,
+                from: 0,
+                to: 100,
+                onUpdate: (tween) => {
+                    const value = tween.getValue();
+                    let col = Phaser.Display.Color.Interpolate.ColorWithColor(nCol, pCol, 100, value);
+                    let colourInt = Phaser.Display.Color.GetColor(col.r, col.g, col.b);
+                    fillImg.setTint(colourInt);
+                },
                 duration: 80,
                 repeat: 0,
                 yoyo: true
             });
             down.on('complete', () => {
-                if(this.group){
+                if (this.group) {
                     this.group.checkButton(this);
                     this.setChecked(true);
                 }
-                else{
+                else {
                     this.toggleChecked();
                 }
             });
         });
 
-        if(edge){
+        if (edge) {
             let edgeImg = this.scene.add.image(0, 0, edge);
             this.add(edgeImg);
         }
 
         let style = {
-            fontFamily: 'Arial', 
+            fontFamily: 'Arial',
             fontSize: '75px',
-            fontStyle: 'bold', 
+            fontStyle: 'bold',
             color: tickColor
         }
         this.tickText = this.scene.add.text(0, 0, '✓', style).setOrigin(0.5).setVisible(false);
@@ -63,18 +69,18 @@ export default class CheckBox extends Phaser.GameObjects.Container {
         this.setScale(scale);
     }
 
-    setChecked(checked){
+    setChecked(checked) {
         this.checked = checked;
         this.tickText.setVisible(this.checked);
     }
 
-    toggleChecked(){
+    toggleChecked() {
         this.checked = !this.checked;
         this.tickText.setVisible(this.checked);
     }
 
-    setGroup(group){
-        if(!this.group){
+    setGroup(group) {
+        if (!this.group) {
             this.group = group;
         }
     }

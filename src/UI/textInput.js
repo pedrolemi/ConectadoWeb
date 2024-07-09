@@ -1,41 +1,38 @@
-import GameManager from "../managers/gameManager.js";
-
 export default class TextInput extends Phaser.GameObjects.Container {
-    constructor(scene, x, y, scale, defaultText, offset, pressedColor, fill, edge, font, hitArea){
+    constructor(scene, x, y, scale, defaultText, offset, pressedColor, fill, edge, font, hitArea) {
         super(scene, x, y);
 
         this.scene.add.existing(this);
 
-        let gameManager = GameManager.getInstance();
 
         this.fillImg = this.scene.add.image(0, 0, fill);
-        gameManager.tintrgb.add(this.fillImg);
+
         this.fillImg.setOrigin(0, 0.5);
-        if(hitArea){
+        if (hitArea) {
             this.fillImg.setInteractive(hitArea.area, hitArea.callback);
         }
-        else{
+        else {
             this.fillImg.setInteractive();
         }
         //this.scene.input.enableDebug(this.fillImg, '0xffff00');
         this.add(this.fillImg);
 
-        if(edge){
+        if (edge) {
             let edgeImg = this.scene.add.image(0, 0, edge);
             edgeImg.setOrigin(0, 0.5);
             this.add(edgeImg);
         }
 
-        if(!font){
+        if (!font) {
             font = 'Arial';
         }
         let style = {
-            fontFamily: font, 
+            fontFamily: font,
             fontSize: '42px',
             fontStyle: 'normal',
             color: '#000000'
         }
-        
+
         this.offset = offset;
 
         this.defaultTextAlpha = 0.3;
@@ -65,10 +62,16 @@ export default class TextInput extends Phaser.GameObjects.Container {
             paused: true
         });
 
+
+        let nCol = Phaser.Display.Color.HexStringToColor('#ffffff');
+        let pCol = Phaser.Display.Color.GetColor(pressedColor.R, pressedColor.G, pressedColor.B);
+        pCol = Phaser.Display.Color.IntegerToRGB(pCol);
+
+
         this.fillImg.on('pointerup', () => {
-            if(!this.isEnteringName){
+            if (!this.isEnteringName) {
                 //if(this.currentText === this.defaultText){
-                if(this.currentText === ""){
+                if (this.currentText === "") {
                     //this.currentText = "";
                     this.setText(this.currentText);
                     this.text.setAlpha(1).setFontStyle('normal');
@@ -77,11 +80,16 @@ export default class TextInput extends Phaser.GameObjects.Container {
                 this.cursor.setAlpha(0);
                 this.cursorTween.resume();
 
-                let down = scene.tweens.add({
+                let down = scene.tweens.addCounter({
                     targets: this.fillImg,
-                    tintR: pressedColor.R,
-                    tintG: pressedColor.G,
-                    tintB: pressedColor.B,
+                    from: 0,
+                    to: 100,
+                    onUpdate: (tween) => {
+                        const value = tween.getValue();
+                        let col = Phaser.Display.Color.Interpolate.ColorWithColor(nCol, pCol, 100, value);
+                        let colourInt = Phaser.Display.Color.GetColor(col.r, col.g, col.b);
+                        this.fillImg.setTint(colourInt);
+                    },
                     duration: 50,
                     repeat: 0,
                     yoyo: true
@@ -103,16 +111,16 @@ export default class TextInput extends Phaser.GameObjects.Container {
                 if (event.keyCode === 8 && this.currentText.length > 0) {
                     hasChanged = true;
                     this.currentText = this.currentText.slice(0, -1);
-                } 
+                }
                 else if (event.key.length === 1 && event.key.match(/[a-zA-Z0-9]/)) {
                     hasChanged = true;
                     this.currentText += event.key;
                 }
 
-                if(hasChanged){
+                if (hasChanged) {
                     this.setText(this.currentText);
                     let cont = 1;
-                    while(this.text.width >= this.fillImg.displayWidth - this.offset * 2){
+                    while (this.text.width >= this.fillImg.displayWidth - this.offset * 2) {
                         let aux = this.currentText.slice(-(this.currentText.length - cont));
                         this.setText(aux);
                         ++cont;
@@ -127,7 +135,7 @@ export default class TextInput extends Phaser.GameObjects.Container {
                     }
                     */
                 }
-            }    
+            }
         });
 
         this.setScale(scale);
@@ -136,31 +144,31 @@ export default class TextInput extends Phaser.GameObjects.Container {
     deactiveInput() {
         this.scene.input.off('pointerup');
         this.scene.input.once('pointerup', () => {
-            if(this.isEnteringName){
+            if (this.isEnteringName) {
                 this.isEnteringName = false;
-                
-                if(!this.currentText){
+
+                if (!this.currentText) {
                     //this.currentText = this.defaultText;
                     this.setText(this.defaultText);
                     this.text.setAlpha(this.defaultTextAlpha).setFontStyle('italic');
                 }
-                
+
                 this.cursor.setAlpha(0);
                 this.cursorTween.pause();
             }
         })
     }
 
-    setText(text){
+    setText(text) {
         this.text.setText(text);
         this.cursor.x = this.text.x + this.text.width - 4;
     }
 
-    getText(){
+    getText() {
         return this.currentText;
     }
 
-    isValid(){
+    isValid() {
         let aux = this.currentText !== "";
         return aux;
     }

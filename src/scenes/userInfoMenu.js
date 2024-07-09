@@ -88,9 +88,9 @@ export default class UserInfoMenu extends Phaser.Scene {
         let genderGroup = new RadioButtonGroup(checkBoxes);
 
         let offset = 75;
-        let nameText = this.createTextInputSet(2.1 * CANVAS_WIDTH / 3, 1.80 * CANVAS_HEIGHT / 5 - offset, 0.60, "Nombre", "Tu nombre");
-        let userText = this.createTextInputSet(2.1 * CANVAS_WIDTH / 3, 1.80 * CANVAS_HEIGHT / 5, 0.60, "Usuario", "Tu usuario");
-        let passwordText = this.createTextInputSet(2.1 * CANVAS_WIDTH / 3, 1.80 * CANVAS_HEIGHT / 5 + offset, 0.60, "Contraseña", "Tu contraseña");
+        let nameText = this.createTextInputSet(2.1 * CANVAS_WIDTH / 3, 1.80 * CANVAS_HEIGHT / 5 - offset, 0.60, "Nombre", "Tu nombre ");
+        let userText = this.createTextInputSet(2.1 * CANVAS_WIDTH / 3, 1.80 * CANVAS_HEIGHT / 5, 0.60, "Usuario", "Tu usuario ");
+        let passwordText = this.createTextInputSet(2.1 * CANVAS_WIDTH / 3, 1.80 * CANVAS_HEIGHT / 5 + offset, 0.60, "Contraseña", "Tu contraseña ");
 
         let errorTextStyle = {
             fontFamily: 'advent pro',

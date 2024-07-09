@@ -81,28 +81,5 @@ export default class TitleMenu extends Phaser.Scene {
         new Counter(this, 2 * CANVAS_WIDTH / 3 + 20, CANVAS_HEIGHT / 4 + 30 + offset, 0.4,
             gameManager.roundedSquare.fillName, gameManager.roundedSquare.edgeName,
             gameManager.circleParticle.name, 'gidolinya', 100, 3000, 1.8, 0xFF0808);
-
-        /*
-        new TextInput(this, CANVAS_WIDTH / 2, CANVAS_HEIGHT / 2 + 200, 1, "Hola Juan", 23, {R: 200, G: 200, B: 200},
-            'fillInput', 'edgeInput', 'gidolinya',
-            {
-                area: new Phaser.Geom.Rectangle(inputBox.offset, inputBox.offset, inputBox.width, inputBox.height),
-                callback: Phaser.Geom.Rectangle.Contains
-            });
-        */
-    }
-
-    generateBox(boxParams) {
-        // parte interior
-        this.graphics.fillStyle(boxParams.fillColor, 1);
-        this.graphics.fillRoundedRect(boxParams.offset, boxParams.offset, boxParams.width, boxParams.height, boxParams.radius);
-        this.graphics.generateTexture(boxParams.fillName, boxParams.width + boxParams.offset * 2, boxParams.height + boxParams.offset * 2);
-        this.graphics.clear();
-
-        // borde
-        this.graphics.lineStyle(boxParams.edgeWith, boxParams.edgeColor, 1);
-        this.graphics.strokeRoundedRect(boxParams.offset, boxParams.offset, boxParams.width, boxParams.height, boxParams.radius);
-        this.graphics.generateTexture(boxParams.edgeName, boxParams.width + boxParams.offset * 2, boxParams.height + boxParams.offset * 2);
-        this.graphics.clear();
     }
 }

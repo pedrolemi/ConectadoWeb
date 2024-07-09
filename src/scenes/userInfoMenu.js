@@ -58,7 +58,7 @@ export default class UserInfoMenu extends Phaser.Scene {
         backButton.setInteractive();
         backButton.on('pointerdown', () => {
             console.log("atrasss");
-            this.gameManager.startLangMenu();
+            this.gameManager.startTitleMenu();
         });
 
         let backTextStyle = {

@@ -82,7 +82,7 @@ export default class TextInput extends Phaser.GameObjects.Container {
                     tintR: pressedColor.R,
                     tintG: pressedColor.G,
                     tintB: pressedColor.B,
-                    duration: 140,
+                    duration: 50,
                     repeat: 0,
                     yoyo: true
                 });
@@ -92,7 +92,7 @@ export default class TextInput extends Phaser.GameObjects.Container {
 
                     setTimeout(() => {
                         this.deactiveInput();
-                    }, 200);
+                    }, 10);
                 });
             }
         })

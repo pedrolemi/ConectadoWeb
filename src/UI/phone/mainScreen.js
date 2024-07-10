@@ -26,12 +26,12 @@ export default class MainScreen extends BaseScreen {
 
         // Configuracion de texto por defecto
         let hourTextConfig  = { ...scene.textConfig };
-        hourTextConfig.fontFamily = 'gidole';
+        hourTextConfig.fontFamily = 'gidole-regular';
         hourTextConfig.fontSize = 100 + 'px';
         hourTextConfig.strokeThickness = 0;
 
         let dayTextConfig  = { ...scene.textConfig };
-        dayTextConfig.fontFamily = 'gidole';
+        dayTextConfig.fontFamily = 'gidole-regular';
         dayTextConfig.strokeThickness = 0;
 
         // Crea el texto y lo anade a la escena

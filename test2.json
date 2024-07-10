@@ -1,0 +1,16 @@
+{
+    "root": {
+        "type": "text",
+        "character": "mom",
+        "next": "dadText"
+    },
+    "dadText": {
+        "type": "text",
+        "character": "dad",
+        "next": "myText"
+    },
+    "myText": {
+        "type": "text",
+        "character": "player"
+    }
+}

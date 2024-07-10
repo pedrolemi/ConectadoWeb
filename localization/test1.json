@@ -1,0 +1,78 @@
+{
+    "root": {
+        "type": "condition", 
+        "conditions": [
+            {
+                "next": "notTalked",
+                "talked": {
+                    "value": false,
+                    "operator": "equal",
+                    "type": "boolean"
+                },
+                "sponsored": {
+                    "value": false,
+                    "operator": "equal",
+                    "type": "boolean"
+                }
+            },
+            {
+                "next": "talked",
+                "talked": {
+                    "value": true,
+                    "operator": "equal",
+                    "type": "boolean"
+                }
+            }
+        ]
+    },
+    "notTalked": {
+        "type": "text",
+        "character": "mom",
+        "next": "choices1"
+    }, 
+    "talked": {
+        "type": "text",
+        "character": "mom",
+        "next": "setNotTalked"
+    },
+
+    "choices1": {
+        "type": "choice",
+        "choices":[
+            { "next": "dadChoice1" },
+            { "next": "dadChoice2" }
+        ]
+    },
+    "dadChoice1": {
+        "type": "text",
+        "character": "dad",
+        "next": "setTalked"
+    },
+    "dadChoice2": {
+        "type": "text",
+        "character": "dad",
+        "next": "setTalked"
+    },
+    "setTalked": {
+        "type": "event",
+        "events": [
+            { "talked": { } },
+            { "b": { "String": "ddsad" } },
+            { "c": { 
+                "Vector2": {
+                    "x": "1",
+                    "y": "1"
+                    }
+                } 
+            },
+            { "d": { "Number": "1" }}
+
+        ]
+    },
+    "setNotTalked": {
+        "type": "event",
+        "events": [
+            { "r": { } }
+        ]
+    }
+}

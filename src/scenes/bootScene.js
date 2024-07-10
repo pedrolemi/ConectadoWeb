@@ -107,7 +107,7 @@ export default class BootScene extends Phaser.Scene {
             // en cualquier idioma (aunque o existiese)
             supportedLngs: ['en', 'es'],
             // namespaces que se cargan para cada uno de los idiomas
-            ns: ['test1', 'test2'],
+            ns: ['test1', 'test2', 'names', 'test1', 'test2'],
             preload: ['en', 'es'],
             // mostrar informacion de ayuda por consola
             debug: false,
@@ -120,6 +120,10 @@ export default class BootScene extends Phaser.Scene {
             }
         })
 
+
+        // Archivos de dialogos
+        this.load.json('test1', '../localization/test1.json');
+        this.load.json('test2', '../test2.json');
 
     }
 

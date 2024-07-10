@@ -93,7 +93,7 @@ export default class UserInfoMenu extends Phaser.Scene {
         let passwordText = this.createTextInputSet(2.1 * CANVAS_WIDTH / 3, 1.80 * CANVAS_HEIGHT / 5 + offset, 0.60, "Contraseña", "Tu contraseña ");
 
         let errorTextStyle = {
-            fontFamily: 'advent pro',
+            fontFamily: 'adventpro-regular',
             fontSize: '31px',
             fontStyle: 'normal',
             color: '#FF0000'
@@ -135,7 +135,7 @@ export default class UserInfoMenu extends Phaser.Scene {
             });
 
         let warningTextStyle = {
-            fontFamily: 'advent pro',
+            fontFamily: 'adventpro-regular',
             fontSize: '31px',
             fontStyle: 'normal',
             color: '#FFFFFF',
@@ -154,7 +154,7 @@ export default class UserInfoMenu extends Phaser.Scene {
 
         let aux = "No introduzcas una contraseña que ya uses. Piensa en una buena. Sólo será utilizada dentro del juego."
         let keyTextStyle = {
-            fontFamily: 'advent pro',
+            fontFamily: 'adventpro-regular',
             fontSize: '28px',
             fontStyle: 'normal',
             color: '#FFFFFF',
@@ -231,7 +231,7 @@ export default class UserInfoMenu extends Phaser.Scene {
         let container = this.add.container(x, y);
 
         let style = {
-            fontFamily: 'advent pro',
+            fontFamily: 'adventpro-regular',
             fontSize: '55px',
             fontStyle: 'normal',
             color: '#FFFFFF'
@@ -242,7 +242,7 @@ export default class UserInfoMenu extends Phaser.Scene {
         container.add(text);
 
         let textInput = new TextInput(this, 0, 0, 1, defaultText, 23, { R: 200, G: 200, B: 200 },
-            this.gameManager.inputBox.fillName, this.gameManager.inputBox.edgeName, 'advent pro',
+            this.gameManager.inputBox.fillName, this.gameManager.inputBox.edgeName, 'adventpro-regular',
             {
                 area: new Phaser.Geom.Rectangle(this.gameManager.inputBox.offset, this.gameManager.inputBox.offset,
                     this.gameManager.inputBox.width, this.gameManager.inputBox.height),

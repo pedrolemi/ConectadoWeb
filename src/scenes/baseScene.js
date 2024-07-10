@@ -35,7 +35,7 @@ export default class BaseScene extends Phaser.Scene {
         this.START_SCROLLING = 50;
         this.CAMERA_SPEED = 3;
     }
-    
+
     preUpdate(t, dt) {
         super.preUpdate(t, dt);
     }
@@ -48,76 +48,54 @@ export default class BaseScene extends Phaser.Scene {
         if (this.game.input.mousePointer.x < this.START_SCROLLING && this.cameras.main.scrollX > this.leftBound + this.CAMERA_SPEED) {
             this.cameras.main.scrollX -= this.CAMERA_SPEED;
         }
-        else if (this.game.input.mousePointer.x > this.CANVAS_WIDTH - this.START_SCROLLING 
-                 && this.cameras.main.scrollX < this.rightBound - this.CANVAS_WIDTH - this.CAMERA_SPEED)
-        {
+        else if (this.game.input.mousePointer.x > this.CANVAS_WIDTH - this.START_SCROLLING
+            && this.cameras.main.scrollX < this.rightBound - this.CANVAS_WIDTH - this.CAMERA_SPEED) {
             this.cameras.main.scrollX += this.CAMERA_SPEED;
         }
     }
 
 
-
     /**
-    * Va leyendo el json y creando los nodos de manera recursiva
-    * 
-    * IMPORTANTE 1: Si para ir al siguiente nodo hay una condicion o seleccion de
-    * opcion previa, las condiciones u opciones se guardan en el nodo actual,
-    * haciendo que dicho nodo tenga las propiedades choices o conditions.
-    * Esto implica que, aunque un nodo tenga texto, si tiene esas propiedades,
-    * no se lo catalogara como nodo de tipo texto, por lo que un nodo de
-    * tipo texto solo tiene un nodo siguiente y es de tipo texto
-    * En principio, un nodo solo puede ser de opcion o de condicion a la vez.
-    * 
-    * IMPORTANTE 2: En un nodo con condiciones, cada condicion lleva a otro nodo distinto.
-    * Al momento de llegar a un nodo condicion, el siguiente nodo al nodo con condiciones
-    * sera el nodo indicado como siguiente en la primera condicion que se cumpla (se van 
-    * comprobando en el orden en el que se han leido). Cada condicion puede tener varios 
-    * requisitos (variables), en cuyo caso, la condicion solo se cumplira si todos sus
-    * requisitos se cumplen (operador &&. De momento no hay soporte para el operador || ) 
-    * 
-    * 
+    * Va leyendo el json (el archivo se lee una sola vez y se pasa el objeto obtenido como parametro)
+    * y creando el arbol de nodos de manera recursiva
+    *
     * @param {String} id - id del nodo que se lee. El nodo inicial es root
-    * @param {String} namespace - nombre del archivo del que se va a leer
+    * @param {Object} file - objeto obtenido como resultado de leer el json
+    * @param {String} namespace - nombre del archivo de localizacion del que se va a leer
     * @param {String} playerName - nombre del jugador
     * @param {String} context - contexto en el que se va a referir al personaje (male / female)
     * @param {boolean} getObjs - si se quiere devolver el nodo leido como un objeto 
+    *
+    * 
+    *  IMPORTANTE: En un nodo con condiciones, cada condicion lleva a otro nodo distinto.
+    * Al momento de llegar a un nodo condicion, el siguiente nodo sera el indicado como siguiente
+    * en la primera condicion que se cumpla (se van comprobando en el orden en el que se han leido).
+    * Cada condicion puede tener varios requisitos (variables), en cuyo caso, la condicion solo 
+    * se cumplira si todos sus requisitos se cumplen (operador &&. De momento no hay soporte para el operador || ) 
+    * 
+    * IMPORTANTE 2: La estructura de nodos es comun a todos los idiomas y se tiene que guardar con anterioridad
+    * al momento de crear la escena para luego pasarlo como parametro file. El archivo del que se van a leer las
+    * traducciones es el que se pasa en el parametro namespace, y tiene que pasarse un string con el nombre del
+    * archivo sin la extension .json
     */
-    readNodes(id, namespace, playerName, context, getObjs) {
-        // Lee el nodo del json con la id indicada
-        let jsonNode = this.i18next.t(id, { ns: namespace, name: playerName, context: context, returnObjects: getObjs });
-
+    readNodes(id, file, namespace, playerName, context, getObjs) {
         // Crea el nodo y establece sus atributos
         let currNode = new DialogNode();
-        currNode.name = jsonNode.name;
-        currNode.character = jsonNode.character_uuid;
-        currNode.parent = jsonNode.parent;
         currNode.id = id;
-        currNode.type = "text";
+        currNode.type = file[id].type;
+        currNode.character = file[id].character;
 
-        // Si el nodo tiene la propiedad choices, 
-        if (jsonNode.hasOwnProperty("choices")) {
-            currNode.type = "choice";
-
-            // Se leen todas las opciones disponibles
-            for (let i = 0; i < jsonNode.choices.length; i++) {
-                // Se guarda el texto de la eleccion y se crea de manera recursiva
-                //  el nodo siguiente que corresponde a elegir dicha opcion
-                currNode.choices.push(jsonNode.choices[i].text);
-                currNode.next.push(this.readNodes(jsonNode.choices[i].next, namespace, playerName, context, getObjs))
-            }
-        }
-        // Si el nodo tiene la propiedad conditions
-        else if (jsonNode.hasOwnProperty("conditions")) {
-            currNode.type = "condition";
-
+        // Obtiene el nombre del personaje del archivo de nombres localizados
+        currNode.name = this.i18next.t(file[id].character, { ns: "names", returnObjects: getObjs });
+        
+        // Si el nodo es de tipo condicion
+        if (currNode.type === "condition") {
             // Se leen todas las condiciones. Cada condicion lleva a un nodo distinto y 
             // en una condicion se pueden comprobar multiples variables
-            for (let i = 0; i < jsonNode.conditions.length; i++) {
-
-                // Obtiene el nombre de las variables a comprobar
-                // (suprimiendo las propiedades parent y next)
-                let obj = Object.keys(jsonNode.conditions[i]);
-                let vars = obj.filter(key => key !== "parent" && key !== "next");
+            for (let i = 0; i < file[id].conditions.length; i++) {
+                // Obtiene el nombre de las variables a comprobar (suprimiendo la propiedad next)
+                let obj = Object.keys(file[id].conditions[i]);
+                let vars = obj.filter(key => key !== "next");
 
                 let nodeConditions = [];
 
@@ -127,9 +105,9 @@ export default class BaseScene extends Phaser.Scene {
                     let varName = vars[j];
 
                     // Obtiene el objeto que guarda las propiedades que tiene que cumplir la variable
-                    let obj = jsonNode.conditions[i][varName];
+                    let obj = file[id].conditions[i][varName];
 
-                    // Crea un objeto igual que obj, pero que tamiben guarda su nombre
+                    // Crea un objeto igual que obj, pero que tambien guarda su nombre
                     let condition = obj;
                     obj.key = varName
 
@@ -142,56 +120,69 @@ export default class BaseScene extends Phaser.Scene {
                     }
                 }
 
-                // Se guardan las condiciones y se crea de manera recursiva
-                // el nodo siguiente que corresponde a cumplir dichas condiciones
+                // Se guardan las condiciones 
                 currNode.conditions.push(nodeConditions);
-                currNode.next.push(this.readNodes(jsonNode.conditions[i].next, namespace, playerName, context, getObjs))
+
+                // Si hay un nodo despues de este, se crea de manera recursiva el nodo siguiente que corresponde a cumplir dichas condiciones
+                if (file[id].conditions[i].next) {
+                    currNode.next.push(this.readNodes(file[id].conditions[i].next, file, namespace, playerName, context, getObjs));
+                }
             }
         }
-        // Si el nodo no es ni de opciones ni de condiciones, es de texto puro
-        else if (jsonNode.hasOwnProperty("next")) {
-            // Se crea de manera recursiva el nodo siguiente y se pone por defecto
-            // que el indice del siguiente nodo sea el primer elemento del array
-            currNode.next = [this.readNodes(jsonNode.next, namespace, playerName, context, getObjs)];
-        }
-
-        // Si tambien tiene la propiedad text
-        if (jsonNode.hasOwnProperty("text")) {
+        // Si el nodo es de tipo texto
+        else if (currNode.type === "text") {
             // Se crea un dialogo con todo el texto a mostrar
             let split = {
-                text: jsonNode.text,
+                // Obtiene el texto del archivo de textos traducidos
+                text: this.i18next.t(id + ".text", { ns: namespace, name: playerName, context: context, returnObjects: getObjs }),
                 character: currNode.character,
                 name: currNode.name
             }
-            // Se obtiene todo el texto separado en varios dialogos si es demasiado largo
+            // // Se obtiene todo el texto separado en varios dialogos si es demasiado largo
             currNode.dialogs = this.splitDialogs([split]);
             currNode.currDialog = 0;
-        }
 
-        // Si tambien tiene la propiedad singals
-        if (jsonNode.hasOwnProperty("signals")) {
-            // Obtiene el nombre de los eventos a llamar
-            // (suprimiendo las propiedades parent y next)
-            let obj = Object.keys(jsonNode.signals);
-            let eventNames = obj.filter(key => key !== "parent" && key !== "next");
-
-            // Recorre todas las variables obtenidas
-            for (let i = 0; i < eventNames.length; i++) {
-                // Lee el nombre del evento
-                let evtName = eventNames[i];
-
-                // Obtiene el objeto que guarda los parametros del evento 
-                let obj = jsonNode.signals[evtName];
-
-                // Crea un objeto igual que obj, pero que tamiben guarda su nombre
-                let evt = obj;
-                evt.name = evtName;
-
-                // Lo mete en las variables del nodo
-                currNode.signals.push(evt);
+            // Si hay un nodo despues de este, se crea de manera recursiva
+            if (file[id].next) {
+                currNode.next.push(this.readNodes(file[id].next, file, namespace, playerName, context, getObjs));
             }
 
         }
+        // Si el nodo es de tipo opcion multiple
+        else if (currNode.type === "choice") {
+            // Se obtienen los textos de las opciones del archivo de textos traducidos
+            let texts = this.i18next.t(id, { ns: namespace, name: playerName, context: context, returnObjects: getObjs })
+
+            for (let i = 0; i < file[id].choices.length; i++) {
+                // Se guarda el texto de la eleccion y se crea de manera recursiva
+                // el nodo siguiente que corresponde a elegir dicha opcion
+                currNode.choices.push(texts[i].text);
+
+                // Si hay un nodo despues de este, se crea de manera recursiva
+                if (file[id].choices[i].next) {
+                    currNode.next.push(this.readNodes(file[id].choices[i].next, file, namespace, playerName, context, getObjs));
+                }
+            }
+        }
+        
+        else if (currNode.type === "event") {
+            // Recorre todas las variables obtenidas
+            for (let i = 0; i < file[id].events.length; i++) {
+                // // Lee el nombre del evento
+                let evtName = Object.keys(file[id].events[i]);
+                
+                // Obtiene el objeto que guarda los parametros del evento 
+                let obj = file[id].events[i][evtName];
+
+                // Crea un objeto igual que obj, pero que tambien guarda su nombre
+                let evt = { ... obj };
+                evt.name = evtName[0];
+
+                // Lo mete en las variables del nodo
+                currNode.events.push(evt);
+            }
+        }
+
         return currNode;
     }
 

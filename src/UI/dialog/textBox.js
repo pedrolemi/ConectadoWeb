@@ -24,7 +24,7 @@ export default class TextBox extends DialogObject {
 
         this.box.setInteractive();
         this.box.on('pointerdown', (pointer) => {
-            dialogManager.nextNode();
+            dialogManager.nextDialog();
         });
 
         // Imagen de la caja del nombre

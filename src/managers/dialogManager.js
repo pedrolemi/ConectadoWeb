@@ -3,7 +3,7 @@ import OptionBox from '../UI/dialog/optionBox.js';
 import GameManager from './gameManager.js';
 import EventDispatcher from '../eventDispatcher.js';
 
-export default class DialogManager  {
+export default class DialogManager {
     /**
     * Gestor de los dialogos. Crea la caja de texto/opciones con su texto y se encarga de actualizarlos.
     * Los nodos de dialogos tienen que estar creados con antelacion (deberia hacerse en la constructora de la escena)
@@ -110,174 +110,133 @@ export default class DialogManager  {
 
             // Cambia el nodo por el indicado
             this.currNode = node;
-
-            // Si el nodo es la raiz, pasa al siguiente nodo, ya que la
-            // raiz solo contiene informacion de los nodos siguientes
-            if (node.id === "root") {
-                this.nextNode();
-            }
+            this.processNode();
         }
-
 
     }
-    
-    
 
-    // Dependiendo del tipo del nodo actual, actualiza cual es el indice del nodo al que tiene que ir despues
-    nextNode() {
-        // Actualiza el ultimo personaje que tuvo un dialogo
-        this.lastCharacter = this.currNode.character;
+    // Procesa el nodo actual dependiendo de su tipo
+    processNode() {
+        // Si el nodo actual es valido
+        if (this.currNode) {
+            // Si el nodo es un nodo condicional
+            if (this.currNode.type === "condition") {
+                let conditionMet = false;
+                let i = 0;
 
-        // Si el nodo es un nodo condicional
-        if (this.currNode.type === "condition") {
-            let conditionMet = false;
-            let i = 0;
+                // Recorre todas las condiciones hasta que se haya cumplido la primera
+                while (i < this.currNode.conditions.length && !conditionMet) {
+                    let allConditionsMet = true;
+                    let j = 0;
 
-            // Recorre todas las condiciones hasta que se haya cumplido la primera
-            while (i < this.currNode.conditions.length && !conditionMet) {
-                let allConditionsMet = true;
-                let j = 0;
+                    // Se recorren todas las variables de la condicion mientras se cumplan todas
+                    while (j < this.currNode.conditions[i].length && allConditionsMet) {
+                        // Coge el nombre de la variable, el operador y el valor esperado 
+                        let variable = this.currNode.conditions[i][j].key;
+                        let operator = this.currNode.conditions[i][j].operator;
+                        let expectedValue = this.currNode.conditions[i][j].value;
 
-                // Se recorren todas las variables de la condicion mientras se cumplan todas
-                while (j < this.currNode.conditions[i].length && allConditionsMet) {
-                    // Coge el nombre de la variable, el operador y el valor esperado 
-                    let variable = this.currNode.conditions[i][j].key;
-                    let operator = this.currNode.conditions[i][j].operator;
-                    let expectedValue = this.currNode.conditions[i][j].value;
+                        // Busca el valor de la variable en el gameManager
+                        let variableValue = this.gameManager.getValue(variable);
 
-                    // Busca el valor de la variable en el gameManager
-                    let variableValue = this.gameManager.getValue(variable);
+                        if (operator === "equal") {
+                            conditionMet = variableValue === expectedValue;
+                        }
+                        else if (operator === "greater") {
+                            conditionMet = variableValue >= expectedValue;
 
-                    if (operator === "equal") {
-                        conditionMet = variableValue === expectedValue;
+                        }
+                        else if (operator === "lower") {
+                            conditionMet = variableValue <= expectedValue;
+
+                        }
+                        else if (operator === "different") {
+                            conditionMet = variableValue !== expectedValue;
+                        }
+
+                        // Se habran cumplido todas las condiciones si todas las condiciones
+                        // se han cumplido anteriormente y esta tambien se ha cumplido
+                        allConditionsMet &= conditionMet;
+
+                        j++;
                     }
-                    else if (operator === "greater") {
-                        conditionMet = variableValue >= expectedValue;
 
-                    }
-                    else if (operator === "lower") {
-                        conditionMet = variableValue <= expectedValue;
-
-                    }
-                    else if (operator === "different") {
-                        conditionMet = variableValue !== expectedValue;
-                    }
-
-                    // Se habran cumplido todas las condiciones si todas las condiciones
-                    // se han cumplido anteriormente y esta tambien se ha cumplido
-                    allConditionsMet &= conditionMet;
-
-                    j++;
+                    // Si no se ha cumplido ninguna condicion, pasa a la siguiente
+                    if (!conditionMet) i++;
                 }
 
-                // Si no se ha cumplido ninguna condicion, pasa a la siguiente
-                if (!conditionMet) i++;
+                // El indice del siguiente nodo sera el primero que cumpla una de las condiciones
+                this.currNode = this.currNode.next[i];
+
+                // Pasa al siguiente nodo
+                this.processNode();
             }
-
-            // El indice del siguiente nodo sera el primero que cumpla una de las condiciones
-            this.currNode.nextInd = i;
-
-            // Procesa el siguiente nodo
-            this.processNextNode()
-        }
-        // Si es un nodo de texto o de opcion multiple
-        else if (this.currNode.type === "text" || this.currNode.type === "choice") {
-            // Si no se ha acabado de escribir todo el texto, lo muestra entero de golpe
-            if (!this.textbox.finished) {
-                this.textbox.forceFinish();
+            else if (this.currNode.type === "choice") {
+                this.createOptions(this.currNode.choices);
+                this.activateOptions(true);
             }
-            // Si ya se ha mostrado todo el texto,
-            else {
-                // Actualiza el dialogo del nodo actual que se esta mostrando
-                this.currNode.currDialog++;
-
-                // Si aun no se han mostrado todos los dialogos del nodo, muestra el siguiente dialogo
-                if (this.currNode.currDialog < this.currNode.dialogs.length) {
+            else if (this.currNode.type === "text") {
+                // // Si el nodo no tiene texto, se lo salta y pasa al siguiente nodo
+                // IMPORTANTE: DESPUES DE UN NODO DE DIALOGO SOLO HAY UN NODO, POR LO QUE 
+                // EL SIGUIENTE NODO SERA EL PRIMER NODO DEL ARRAY DE NODOS SIGUIENTES
+                if (this.currNode.dialogs[this.currNode.currDialog].text.length < 1) {
+                    this.currNode = this.currNode.next[0];
+                    this.processNode();
+                }
+                else {
+                    this.textbox.setPortrait(this.portraits.get(this.currNode.character));
                     this.setText(this.currNode.dialogs[this.currNode.currDialog], true);
                     this.textbox.activate(true);
+                    this.talking = true;
                 }
-                // Si ya se han mostrado todos los dialogos del nodo,
-                else {
-                    // Se reinicia el dialogo del nodo actual
+            }
+            else if (this.currNode.type === "event") {
+                // Recorre todos los eventos del nodo y les hace dispatch
+                for (let i = 0; i < this.currNode.events.length; i++) {
+                    let evtName = this.currNode.events[i].name;
+                    this.dispatcher.dispatch(evtName, this.currNode.events[i]);
+                }
+
+            }
+        }
+
+    }
+
+    // Pasa al siguiente dialogo
+    // (llamado al hacer click en la caja de texto)
+    nextDialog() {
+        // Si aun no ha acabado de mostrarse todo el texto, lo muestra de golpe
+        if (!this.textbox.finished) {
+            this.textbox.forceFinish();
+        }
+        // Si ha acabado de mostrarse todo el dialogo
+        else {
+            // Actualiza el dialogo que se esta mostrando del nodo actual
+            this.currNode.currDialog++;
+
+            // Si aun no se han mostrado todos los dialogos del nodo, muestra el siguiente dialogo
+            if (this.currNode.currDialog < this.currNode.dialogs.length) {
+                this.setText(this.currNode.dialogs[this.currNode.currDialog], true);
+            }
+            // Si ya se han mostrado todos los dialogos
+            else {
+                // Se oculta la caja de texto y una vez terminada la animacion,
+                // reinicia el dialogo del nodo actual y actualiza el nodo al siguiente
+                this.textbox.activate(false, () => {
                     this.currNode.currDialog = 0;
 
-                    // Si es un nodo de tipo texto, 
-                    if (this.currNode.type === "text") {
-                        // Un nodo de tipo texto (unicamente con texto, sin opciones ni condiciones) solo puede llevar
-                        // a un unico nodo, por lo que el siguiente nodo sera el primero de la lista de nodos siguientes
-                        this.currNode.nextInd = 0;
-                        this.processNextNode();
-                    }
-                    // Si es un nodo de opcion multiple 
-                    else if (this.currNode.type === "choice") {
-                        // Desactiva la caja de texto y una vez desaparece, hace aparecer las opciones
-                        this.textbox.activate(false, () => {
-                            this.createOptions(this.currNode.choices);
-                            this.activateOptions(true);
-                        });
-                    }
-                }
+                    // IMPORTANTE: DESPUES DE UN NODO DE DIALOGO SOLO HAY UN NODO, POR LO QUE 
+                    // EL SIGUIENTE NODO SERA EL PRIMER NODO DEL ARRAY DE NODOS SIGUIENTES
+                    this.currNode = this.currNode.next[0];
+
+                    this.talking = false;
+                    this.processNode();
+                }, 0);
             }
-
         }
-
-        // Si el nodo actual es valido, se actualiza el retrato a mostrar
-        if (this.currNode) {
-            this.textbox.setPortrait(this.portraits.get(this.currNode.character));
-        }
-        // Si no, se ha acabado el dialogo y lo avisa al gameManager
-        else {
-            this.talking = false;
-        }
-
     }
 
-    // Actualiza el nodo por el nodo siguiente y gestiona los cambios correspondientes
-    processNextNode() {
-        for (let i = 0; i < this.currNode.signals.length; i++) {
-            let evtName = this.currNode.signals[i].name;
-            this.dispatcher.dispatch(evtName, this.currNode.signals[i]);
-        }
 
-        // Actualiza el nodo actual
-        this.currNode = this.currNode.next[this.currNode.nextInd];
-
-        // Si el nodo no es valido, se oculta la caja de texto
-        if (!this.currNode || !this.currNode.id) {
-            this.textbox.activate(false);
-        }
-        else {
-            if (this.currNode.type === "condition") {
-                this.nextNode();
-            }
-            // Si es un nodo de texto o de opcion multiple
-            else if (this.currNode.type == "text" || this.currNode.type === "choice") {
-                // Si el nodo no tiene texto, se lo salta
-                if (this.currNode.dialogs[this.currNode.currDialog].text.length < 1) {
-                    this.nextNode();
-                }
-                else {
-                    // Si el ultimo personaje que hablo no es el mismo que el personaje 
-                    // que va a hablar (deberia serlo, pero se comprueba por si acaso)
-                    if (this.lastCharacter !== this.currNode.character) {
-                        // Se oculta la caja de dialogo y una vez termine la animacion,
-                        // se actualiza el texto a mostrar y se vuelve a mostrar la caja
-                        this.textbox.activate(false, () => {
-                            this.setText(this.currNode.dialogs[this.currNode.currDialog], true);
-                            this.textbox.activate(true);
-                        });
-                    }
-                    // Si el personaje es el mismo, se actualiza la caja de dialogo
-                    else {
-                        this.setText(this.currNode.dialogs[this.currNode.currDialog], true);
-                    }
-
-                }
-            }
-        }
-
-    }
-    
 
     /**
     * Crea las opciones de eleccion multiple
@@ -312,9 +271,9 @@ export default class DialogManager  {
         // Desactiva las opciones
         this.activateOptions(false);
 
-        // Actualiza el nodo actual
-        this.currNode.nextInd = index;
-        this.processNextNode();
+        // Actualiza el nodo actual y lo procesa
+        this.currNode = this.currNode.next[index];
+        this.processNode();
 
         // Si el nodo actual es valido, actualiza el retrato del personaje por si acaso
         if (this.currNode) {

@@ -10,8 +10,11 @@ export default class Test extends BaseScene {
     create() {
         super.create();
 
-        let dadNode = super.readNodes("root", "test2", "Johanna", "female", true);
-        let momNode = super.readNodes("root", "test1", "Johanna", "female", true);
+        let test1 = this.cache.json.get('test1');
+        let test2 = this.cache.json.get('test2');
+
+        let momNode = super.readNodes("root", test1, "test1", "Johan", "male", true);
+        let dadNode = super.readNodes("root", test2, "test2", "Johan", "male", true);
 
 
         // Pone una imagen de fondo con las dimensiones del canvas
@@ -63,16 +66,6 @@ export default class Test extends BaseScene {
             this.gameManager.setValue("talked", false);
         });
 
-        // dispatcher.add("prueba", this, () => {
-        //     console.log("prueba");
-        // })
-        // dispatcher.removeByOwner(this);
-        // dispatcher.removeByEvent("prueba");
-        // dispatcher.add("hola", this, (nombre) => {
-        //     console.log(nombre);
-        //     gameManager.startLangMenu();
-        // });
-        // dispatcher.dispatch("hola", "juan");
     }
 
 

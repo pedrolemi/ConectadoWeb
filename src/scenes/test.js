@@ -10,11 +10,11 @@ export default class Test extends BaseScene {
     create() {
         super.create();
 
-        let test1 = this.cache.json.get('test1');
-        let test2 = this.cache.json.get('test2');
+        let test1 = this.cache.json.get('momDialog');
+        let test2 = this.cache.json.get('dadDialog');
 
-        let momNode = super.readNodes("root", test1, "test1", "Johan", "male", true);
-        let dadNode = super.readNodes("root", test2, "test2", "Johan", "male", true);
+        let momNode = super.readNodes("root", test1, "momDialog", "Johan", "male", true);
+        let dadNode = super.readNodes("root", test2, "dadDialog", "Johan", "male", true);
 
 
         // Pone una imagen de fondo con las dimensiones del canvas

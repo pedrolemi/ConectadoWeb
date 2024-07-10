@@ -7,18 +7,18 @@
     "talked": {
         "text": "Go talk to your dad"
     },
-    "choices1": {
-        "choices1-1": {
+    "choices1": [
+        {
             "text": "",
             "text_male": "My name is {{name}} and I'm a healthy boy",
             "text_female": "My name is {{name}} and I'm a healthy girl"
         },
-        "choices1-2": {
+        {
             "text": "",
             "text_male": "I'm {{name}} and I'm a boy on life support",
             "text_female": "I'm {{name}} and I'm a girl on life support"
         }
-    },
+    ],
     "dadChoice1": {
         "text": "How was your day?"
     },

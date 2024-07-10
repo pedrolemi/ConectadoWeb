@@ -86,7 +86,11 @@ export default class BaseScene extends Phaser.Scene {
 
         // Obtiene el nombre del personaje del archivo de nombres localizados
         currNode.name = this.i18next.t(file[id].character, { ns: "names", returnObjects: getObjs });
-        
+        if (currNode.character === "player") {
+            currNode.name = this.gameManager.getUserInfo().name;
+        }
+
+
         // Si el nodo es de tipo condicion
         if (currNode.type === "condition") {
             // Se leen todas las condiciones. Cada condicion lleva a un nodo distinto y 
@@ -137,7 +141,7 @@ export default class BaseScene extends Phaser.Scene {
                 character: currNode.character,
                 name: currNode.name
             }
-            // // Se obtiene todo el texto separado en varios dialogos si es demasiado largo
+            // Se obtiene todo el texto separado en varios dialogos si es demasiado largo
             currNode.dialogs = this.splitDialogs([split]);
             currNode.currDialog = 0;
 

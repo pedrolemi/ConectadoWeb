@@ -88,6 +88,6 @@ export default class TitleMenu extends Phaser.Scene {
         // (Crear el ultimo para que las particulas aparezcan por delante)
         new Counter(this, 2 * CANVAS_WIDTH / 3 + 20, CANVAS_HEIGHT / 4 + 30 + offset, 0.4,
             gameManager.roundedSquare.fillName, gameManager.roundedSquare.edgeName,
-            gameManager.circleParticle.name, 'gidolinya', 100, 3000, 1.8, 0xFF0808);
+            gameManager.circleParticle.name, 'Gidolinya-Regular', 100, 3000, 1.8, 0xFF0808);
     }
 }

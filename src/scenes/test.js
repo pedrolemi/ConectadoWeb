@@ -7,20 +7,14 @@ export default class Test extends BaseScene {
         super('Test');
     }
 
-    init(userInfo){
-        // Tiene las siguientes propiedades: name, username, password y gender
-        this.userInfo = userInfo;
-    }
-
     create() {
         super.create();
 
         let test1 = this.cache.json.get('momDialog');
         let test2 = this.cache.json.get('dadDialog');
 
-        let momNode = super.readNodes("root", test1, "momDialog", "Johan", "male", true);
-        let dadNode = super.readNodes("root", test2, "dadDialog", "Johan", "male", true);
-
+        let momNode = super.readNodes("root", test1, "momDialog", this.gameManager.getUserInfo().name, this.gameManager.getUserInfo().gender, true);
+        let dadNode = super.readNodes("root", test2, "dadDialog", this.gameManager.getUserInfo().name, this.gameManager.getUserInfo().gender, true);
 
         // Pone una imagen de fondo con las dimensiones del canvas
         let bg = this.add.image(0, 0, 'bg').setOrigin(0, 0);

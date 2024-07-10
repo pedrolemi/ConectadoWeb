@@ -101,7 +101,7 @@ export default class DialogManager {
     setNode(node) {
         // Si no hay ningun dialogo activo
         if (!this.isTalking()) {
-            // Avisa al gameManager de que ha empezado uno
+            // Indica que ha empezado un dialogo
             this.talking = true;
 
             // Desactiva la caja de texto y las opciones (por si acaso)
@@ -176,7 +176,7 @@ export default class DialogManager {
                 this.activateOptions(true);
             }
             else if (this.currNode.type === "text") {
-                // // Si el nodo no tiene texto, se lo salta y pasa al siguiente nodo
+                // Si el nodo no tiene texto, se lo salta y pasa al siguiente nodo
                 // IMPORTANTE: DESPUES DE UN NODO DE DIALOGO SOLO HAY UN NODO, POR LO QUE 
                 // EL SIGUIENTE NODO SERA EL PRIMER NODO DEL ARRAY DE NODOS SIGUIENTES
                 if (this.currNode.dialogs[this.currNode.currDialog].text.length < 1) {
@@ -187,7 +187,6 @@ export default class DialogManager {
                     this.textbox.setPortrait(this.portraits.get(this.currNode.character));
                     this.setText(this.currNode.dialogs[this.currNode.currDialog], true);
                     this.textbox.activate(true);
-                    this.talking = true;
                 }
             }
             else if (this.currNode.type === "event") {
@@ -197,9 +196,15 @@ export default class DialogManager {
                     this.dispatcher.dispatch(evtName, this.currNode.events[i]);
                 }
 
+                // IMPORTANTE: DESPUES DE UN NODO DE EVENTO SOLO HAY UN NODO, POR LO QUE 
+                // EL SIGUIENTE NODO SERA EL PRIMER NODO DEL ARRAY DE NODOS SIGUIENTES
+                this.currNode = this.currNode.next[0];
+                this.processNode();
             }
         }
-
+        else {
+            this.talking = false;
+        }
     }
 
     // Pasa al siguiente dialogo
@@ -213,6 +218,7 @@ export default class DialogManager {
         else {
             // Actualiza el dialogo que se esta mostrando del nodo actual
             this.currNode.currDialog++;
+            console.log(this.currNode);
 
             // Si aun no se han mostrado todos los dialogos del nodo, muestra el siguiente dialogo
             if (this.currNode.currDialog < this.currNode.dialogs.length) {
@@ -228,8 +234,6 @@ export default class DialogManager {
                     // IMPORTANTE: DESPUES DE UN NODO DE DIALOGO SOLO HAY UN NODO, POR LO QUE 
                     // EL SIGUIENTE NODO SERA EL PRIMER NODO DEL ARRAY DE NODOS SIGUIENTES
                     this.currNode = this.currNode.next[0];
-
-                    this.talking = false;
                     this.processNode();
                 }, 0);
             }

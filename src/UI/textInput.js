@@ -100,7 +100,7 @@ export default class TextInput extends Phaser.GameObjects.Container {
                 this.cursorTween.resume();
 
                 // Se realiza la animacion de la caja cuando se ha clicado
-                let down = scene.tweens.addCounter({
+                scene.tweens.addCounter({
                     targets: this.fillImg,
                     from: 0,
                     to: 100,
@@ -115,17 +115,15 @@ export default class TextInput extends Phaser.GameObjects.Container {
                     yoyo: true
                 });
 
-                // Cuando termina la animacion, es que ya se puede escribir
-                down.on('complete', () => {
-                    this.isEnteringName = true;
+                this.isEnteringName = true;
 
-                    // Habilitar el salir de la caja y dejar de escribir
-                    // Se tiene que hacer con un pequeño temporizador porque sino saltarian los dos eventos
-                    // de pointerup a la vez y entonces, no se podria llegar a escribir
-                    setTimeout(() => {
-                        this.deactiveInput();
-                    }, 10);
-                });
+                // Habilitar el salir de la caja y dejar de escribir
+                // Se tiene que hacer con un pequeño temporizador porque sino saltarian los dos eventos
+                // de pointerup a la vez y entonces, no se podria llegar a escribir
+                setTimeout(() => {
+                    this.deactiveInput();
+                }, 10);
+                
             }
         })
 

@@ -36,6 +36,8 @@ export default class GameManager {
         this.map.set("bag", false);
         
         this.generateTextures();
+
+        this.userInfo = null;
     }
 
     // metodo para generar y coger la instancia
@@ -183,6 +185,8 @@ export default class GameManager {
     }
 
     startGame(userInfo) {
+        this.userInfo = userInfo
+        
         // IMPORTANTE: Hay que lanzar primero el UIManager para que se inicialice
         // el DialogManager y las escenas puedan crear los dialogos correctamente
         let sceneName = 'UIManager';
@@ -190,14 +194,8 @@ export default class GameManager {
         this.UIManager = this.currentScene.scene.get(sceneName);
         
         sceneName = 'Test';
-        this.changeScene(sceneName, userInfo);
-        this.currentScene = this.currentScene.scene.get(sceneName, userInfo);
-    }
-
-    
-    getDialogManager() {
-        if (this.UIManager) return this.UIManager.getDialogManager();
-        else return null;
+        this.changeScene(sceneName);
+        this.currentScene = this.currentScene.scene.get(sceneName);
     }
 
     /**
@@ -205,11 +203,23 @@ export default class GameManager {
     * @param {Phaser.Scene / String} scene - nombre o instancia de la escena a la que se va a pasar
     * @param {object} - informacion que pasar a la escena (opcional)
     */
-    changeScene(scene, data) {
+    changeScene(scene) {
         if (this.UIManager && this.getDialogManager()) this.getDialogManager().clearPortraits();
-        this.currentScene.scene.start(scene, data);
+        this.currentScene.scene.start(scene);
     }
-    
+
+    getDialogManager() {
+        if (this.UIManager) return this.UIManager.getDialogManager();
+        else return null;
+    }
+
+    getUserInfo() {
+        return this.userInfo;
+    }
+
+
+
+
     ///////////////////////////////////////
     ///// Metodos para la blackboard /////
     //////////////////////////////////////

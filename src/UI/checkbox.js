@@ -1,9 +1,22 @@
 export default class CheckBox extends Phaser.GameObjects.Container {
+    /**
+    * Clase que permite crear una checkbox o radiobutons si se unen varias checkboxes en un grupo
+    * @param {Phaser.Scene} scene - escena a la que pertenece
+    * @param {number} x - posicion x
+    * @param {number} y - posicion y
+    * @param {number} scale - escala del objeto
+    * @param {color} tickColor - color hexadecimal del tick
+    * @param {color} pressedCol - color RGB de la checkbox que se utiliza en la animacion cuando se clica en ella
+    * @param {string} fill - sprite que se usa para el relleno
+    * @param {string} edge - sprite que se usa para el borde (opcional)
+    * @param {string} hitArea - cambiar el area de colision (opcional)
+    */
     constructor(scene, x, y, scale, tickColor, pressedColor, fill, edge, hitArea) {
         super(scene, x, y);
 
         this.scene.add.existing(this);
 
+        // indicar si la checkbox esta activada o no
         this.checked = false;
 
         // si es distinto de null pertenece a algun grupo
@@ -19,7 +32,6 @@ export default class CheckBox extends Phaser.GameObjects.Container {
         else {
             fillImg.setInteractive();
         }
-
         //this.scene.input.enableDebug(fillImg, '0xffff00');
 
         let nCol = Phaser.Display.Color.HexStringToColor('#ffffff');
@@ -42,10 +54,12 @@ export default class CheckBox extends Phaser.GameObjects.Container {
                 yoyo: true
             });
             down.on('complete', () => {
+                // Si funciona como un radio button, se activa y se desactiva el resto del grupo
                 if (this.group) {
                     this.group.checkButton(this);
                     this.setChecked(true);
                 }
+                // Si funciona simplemente como una checkbox, se hace toggle
                 else {
                     this.toggleChecked();
                 }

@@ -12,8 +12,9 @@ export default class TitleMenu extends Phaser.Scene {
         const CANVAS_HEIGHT = this.sys.game.canvas.height;
 
         let gameManager = GameManager.getInstance();
+        let i18next = gameManager.i18next;
+        let namespace = 'titleMenu';
 
-        // OBJETOS
         // Fondo escalado en cuanto al canvas
         let bg = this.add.image(CANVAS_WIDTH / 2, CANVAS_HEIGHT / 2, 'basePC');
         let scale = CANVAS_WIDTH / bg.width;
@@ -27,49 +28,56 @@ export default class TitleMenu extends Phaser.Scene {
 
         // Boton de jugar
         let offset = 50;
+        let playTranslation = i18next.t("playButton", { ns: namespace });
         new Button(this, CANVAS_WIDTH / 2, 2 * CANVAS_HEIGHT / 3 - offset - 10, 0.9, () => {
             gameManager.startUserInfoMenu();
-            console.log("jugarrr");
         },
             gameManager.textBox.fillName, { R: 255, G: 255, B: 255 }, { R: 64, G: 142, B: 134 }, { R: 200, G: 200, B: 200 },
-            "Jugar", { font: 'kimberley', size: 57, style: 'normal', color: '#004E46' }, gameManager.textBox.edgeName,
+            playTranslation, { font: 'kimberley', size: 57, style: 'normal', color: '#004E46' }, gameManager.textBox.edgeName,
             {
+                // La textura generada con el objeto grafico es un pelin mas grande que el dibujo en si. Por lo tanto,
+                // si la caja de colision por defecto es un pelin mas grande. Es por eso que se pasa una que se ajuste
+                // a las medidas reales
                 area: new Phaser.Geom.Rectangle(gameManager.textBox.offset, gameManager.textBox.offset,
                     gameManager.textBox.width, gameManager.textBox.height),
                 callback: Phaser.Geom.Rectangle.Contains
             });
 
-        // Botón de créditos
+        // Botón de creditos
+        let creditsTranslation = i18next.t("creditsButton", { ns: namespace });
         new Button(this, CANVAS_WIDTH / 2, 2 * CANVAS_HEIGHT / 3 + offset, 0.9, () => {
             console.log("creditosss");
         },
             gameManager.textBox.fillName, { R: 255, G: 255, B: 255 }, { R: 64, G: 142, B: 134 }, { R: 200, G: 200, B: 200 },
-            "Créditos", { font: 'kimberley', size: 57, style: 'normal', color: '#004E46' }, gameManager.textBox.edgeName,
+            creditsTranslation, { font: 'kimberley', size: 57, style: 'normal', color: '#004E46' }, gameManager.textBox.edgeName,
             {
                 area: new Phaser.Geom.Rectangle(gameManager.textBox.offset, gameManager.textBox.offset,
                     gameManager.textBox.width, gameManager.textBox.height),
                 callback: Phaser.Geom.Rectangle.Contains
             });
-
+        
         // Boton de salir
+        let exitTranslation = i18next.t("exitText", { ns: namespace });
         let exitButton = new Button(this, 100, 3 * CANVAS_HEIGHT / 4 + 10, 0.5, () => {
             gameManager.startLangMenu();
         },
             'powerOff', { R: 64, G: 142, B: 134 }, { R: 0, G: 104, B: 93 }, { R: 200, G: 200, B: 200 });
 
-        this.add.text(exitButton.x + 60, exitButton.y, "Salir", {
+        this.add.text(exitButton.x + 60, exitButton.y, exitTranslation, {
             fontFamily: 'kimberley',
             fontSize: '40px',
             fontStyle: 'normal',
             color: '#004E46'
         }).setOrigin(0, 0.5);
 
-        this.add.text(CANVAS_WIDTH - 80, 3 * CANVAS_HEIGHT / 4 + 40, "V 1.7.0", {
+        // Se obtiene la version del juego (especificada en los parametros de configuracion de game)
+        let gameVersion = this.sys.game.config.gameVersion;
+        this.add.text(CANVAS_WIDTH - 55, 3 * CANVAS_HEIGHT / 4 + 40, "V " + gameVersion, {
             fontFamily: 'AUdimat-Regular',
             fontSize: '22px',
             fontStyle: 'normal',
             color: '#323232'
-        }).setOrigin(0.5, 0.5);
+        }).setOrigin(1, 0.5);
 
         // Logo
         offset = -20;

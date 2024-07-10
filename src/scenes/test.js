@@ -7,6 +7,11 @@ export default class Test extends BaseScene {
         super('Test');
     }
 
+    init(userInfo){
+        // Tiene las siguientes propiedades: name, username, password y gender
+        this.userInfo = userInfo;
+    }
+
     create() {
         super.create();
 

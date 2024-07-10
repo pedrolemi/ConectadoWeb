@@ -12,6 +12,7 @@ const config = {
     width: max_w,
     height: max_h,
     backgroundColor: '#4488aa',
+    version: "1.0",
 
     type: Phaser.AUTO,
     scene: [BootScene, LanguageMenu, Test, UIManager, TitleMenu, UserInfoMenu],
@@ -50,7 +51,7 @@ const config = {
         },
         zoom: 1,
         parent: 'game',
-    },
+    }
 }
 
 const game = new Phaser.Game(config);

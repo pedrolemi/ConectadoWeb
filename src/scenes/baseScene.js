@@ -54,7 +54,6 @@ export default class BaseScene extends Phaser.Scene {
         }
     }
 
-
     /**
     * Va leyendo el json (el archivo se lee una sola vez y se pasa el objeto obtenido como parametro)
     * y creando el arbol de nodos de manera recursiva

@@ -46,8 +46,6 @@ export default class BootScene extends Phaser.Scene {
         this.load.image('chatIcon', './UI/phone/chatIcon.png');
         this.load.image('settingsIcon', './UI/phone/settingsIcon.png');
 
-
-
         // comprimir texturas (toma mucha menos memoria, aunque los archivos pueden ocupa mas tam)
         // Se comprueba de arriba a abajo hasta encontrar el primero que funcione en el dispositivo, si no, se usa png
         // formatos de compresion: ETC, ETC1, ATC, ASTC, BPTC, RGTC, PVRTC, S3TC, and S3TCSRB
@@ -63,23 +61,24 @@ export default class BootScene extends Phaser.Scene {
         });
 
         // Fondos
-        this.load.image('basePC', 'languageMenu/BasePCsq.png');
-        this.load.image('PCscreen', 'languageMenu/ScreenWithoutBlack.png');
+        this.load.image('basePC', 'UI/menuBgs/BasePCsq.png');
+        this.load.image('PCscreen', 'UI/menuBgs/ScreenWithoutBlack.png');
 
         // Menu principal
-        this.load.image('powerOff', 'titleMenu/power_off.png');
-        this.load.image('logoWT', 'titleMenu/logoWT.png');
+        this.load.image('powerOff', 'UI/titleMenu/power_off.png');
+        this.load.image('logoWT', 'UI/titleMenu/logoWT.png');
 
         // Menu donde introducir la informacion
-        this.load.image('loginBg', 'userInfoMenu/LoginBackground.png');
-        this.load.image('backButton', 'userInfoMenu/backChatButton.png');
-        this.load.image('boyIcon', 'userInfoMenu/ChicoSelect.png');
-        this.load.image('girlIcon', 'userInfoMenu/ChicaSelect.png');
+        this.load.image('loginBg', 'UI/userInfoMenu/LoginBackground.png');
+        this.load.image('backButton', 'UI/userInfoMenu/backChatButton.png');
+        this.load.image('boyIcon', 'UI/userInfoMenu/ChicoSelect.png');
+        this.load.image('girlIcon', 'UI/userInfoMenu/ChicaSelect.png');
 
         // Banderas idiomas
-        this.load.image('frFlag', 'languageMenu/frFlag.png');
-        this.load.image('spFlag', 'languageMenu/spFlag.png');
-        this.load.image('ukFlag', 'languageMenu/ukFlag.png');
+        this.load.image('frFlag', 'UI/languageMenu/frFlag.png');
+        this.load.image('spFlag', 'UI/languageMenu/spFlag.png');
+        this.load.image('ukFlag', 'UI/languageMenu/ukFlag.png');
+        this.load.image('poFlag', 'UI/languageMenu/poFlag.png');
 
         // Test
         this.load.image('bg', 'patio.png');
@@ -107,7 +106,7 @@ export default class BootScene extends Phaser.Scene {
             // en cualquier idioma (aunque o existiese)
             supportedLngs: ['en', 'es'],
             // namespaces que se cargan para cada uno de los idiomas
-            ns: ['names', 'momDialog', 'dadDialog'],
+            ns: ['names', 'momDialog', 'dadDialog', 'userInfoMenu', 'titleMenu'],
             preload: ['en', 'es'],
             // mostrar informacion de ayuda por consola
             debug: false,
@@ -120,10 +119,10 @@ export default class BootScene extends Phaser.Scene {
             }
         })
 
-
         // Archivos de dialogos
-        this.load.json('momDialog', '../localization/momDialog.json');
-        this.load.json('dadDialog', '../localization/dadDialog.json');
+        this.load.setPath('./localization');
+        this.load.json('momDialog', './momDialog.json');
+        this.load.json('dadDialog', './dadDialog.json');
     }
 
     create() {

@@ -1,0 +1,27 @@
+{
+    "mainText": "Connect with your friends!",   
+    "startButton": "Start",
+    "backButton": "Back",
+    "warningText": "IMPORTANT!",
+    "inscriptionText": "Don't submit a password you already use. Make up a good one. It will only be used inside the game.",
+    "nameInput": {
+        "sideText": "Name",
+        "defaultText": "Your name "
+    },
+    "userInput": {
+        "sideText": "User",
+        "defaultText": "Your username "
+    }, 
+    "passwordInput": {
+        "sideText": "Password",
+        "defaultText": "Your password "
+    },
+    "errorTexts": {
+        "invalidName": "Your name is required ",
+        "invalidUser": "Your username is required",
+        "invalidPassword": "A password is required",
+        "shorterName": "Your name can't have more than {{number}} characters",
+        "shorterUserOrPassword": "Username and password can't have more than {{number}} characters",
+        "invalidGender": "It's required you select your gender"
+    }
+}

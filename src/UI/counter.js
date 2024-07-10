@@ -1,9 +1,26 @@
 export default class Counter extends Phaser.GameObjects.Container {
+    /**
+    * Clase que activa un contador y al llegar a un numero creando explota creando particulas
+    * Luego de un rato, reaparece y vuelve a funcionar de la misma manera
+    * @param {Phaser.Scene} scene - escena a la que pertenece
+    * @param {number} x - posicion x del contador (numero, imagen, donde salen las particulas)
+    * @param {number} y - posicion y del contador (numero, imagen, desde donde salen las particulas)
+    * @param {number} scale - escala del objeto
+    * @param {string} fill - sprite que se usa para el relleno del contador
+    * @param {string} edge - sprite que se usa para el borde del contador
+    * @param {string} particle - sprite que se usa para las particulas
+    * @param {string} font - tipografica que se usa para los numeros del contador
+    * @param {number} limit - cuando se llega a este numero (no incluido) el contador desaparece y se produce una explosion
+    * @param {number} increase - el contador escala segun una funcion exponencial (ej. 2^x). Este valor es la x
+    * @param {number} waitTimer - despues de que el contador haya desaparecido, este es el tiempo que tarda en volver a aparecer
+    * @param {color} fillColor - color del relleno en formato RGB (opcional)
+    */
     constructor(scene, x, y, scale, fill, edge, particle, font, limit, waitTimer, increase, fillColor) {
         super(scene, x, y);
 
         this.scene.add.existing(this);
 
+        // Inicializacion
         this.elapsedTime = 0;
         this.waitTimer = waitTimer;
         this.limit = limit;
@@ -30,16 +47,19 @@ export default class Counter extends Phaser.GameObjects.Container {
         this.text.setOrigin(0.5);
         this.add(this.text);
 
+        // Se crea el emisor de particula que funciona en modo explosion
+        // Es decir, emite particulas de golpe cuando se llama a una funcion
         this.emitter = this.scene.add.particles(0, 0, particle, {
-            lifespan: 3000,
-            speed: { min: 750, max: 1000 },
-            scale: { start: 0.4, end: 0 },
-            frequency: -1,
-            quantity: 22
+            lifespan: 3000,                     // duracion de cada particula
+            speed: { min: 750, max: 1000 },     // velocidad de cada particula en x, y. Valor aleatorio entre los dos especificados
+            scale: { start: 0.4, end: 0 },      // las particulas vas reduciendo su tam hasta desaparecer
+            frequency: -1,                      // modo explosion
+            quantity: 22                        // particulas generadas cada vez
         });
 
         this.add(this.emitter);
 
+        // Se agrega el contenedor a la lista de actualizados para poder usar el preUpdate
         this.addToUpdateList()
         this.setScale(scale);
     }
@@ -47,19 +67,25 @@ export default class Counter extends Phaser.GameObjects.Container {
     preUpdate(t, dt) {
         this.elapsedTime += dt;
 
+        // Mientras el numero de particulas es menor que el permitido, sigue aumentado el contador
         if (this.cont < this.limit) {
+            // El contador responde a una funcion exponencial del modo dt^x, siendo x = increase
             this.cont = Math.pow(this.elapsedTime / 1000, this.increase);
+            // Se aproxima al mayor
             this.cont = Math.ceil(this.cont);
 
+            // Si no ha llegado al limite, se actualiza
             if (this.cont < this.limit) {
                 this.text.setText(this.cont);
             }
+            // En caso contrario, desaparece el contador y se produce la explosion
             else {
                 this.elapsedTime = 0;
                 this.makeVisible(false);
                 this.emitter.explode();
             }
         }
+        // Timer para hacer que vuelve a aparecer el contador
         else if (this.elapsedTime > this.waitTimer) {
             this.elapsedTime = 0;
             this.cont = 0;

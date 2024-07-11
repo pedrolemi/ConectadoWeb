@@ -10,6 +10,8 @@ export default class Test extends BaseScene {
     create() {
         super.create();
 
+        this.phoneManager.setDayInfo("01:40", "Martes, Día 14")
+
         let test1 = this.cache.json.get('momDialog');
         let test2 = this.cache.json.get('dadDialog');
 

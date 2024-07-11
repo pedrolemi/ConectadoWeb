@@ -21,10 +21,8 @@ export default class UIManager extends Phaser.Scene {
             wordWrap: null,
         }
 
-
         this.phoneManager = new PhoneManager(this)
         this.dialogManager = new DialogManager(this);
-
     }
 
     getDialogManager() {

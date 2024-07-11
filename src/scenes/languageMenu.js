@@ -8,7 +8,7 @@ export default class LanguageMenu extends Phaser.Scene {
     constructor() {
         super({ key: 'LanguageMenu' });
     }
-    
+
     create() {
         const CANVAS_WIDTH = this.sys.game.canvas.width;
         const CANVAS_HEIGHT = this.sys.game.canvas.height;
@@ -30,14 +30,14 @@ export default class LanguageMenu extends Phaser.Scene {
         // Botones con las banderas
         let height = CANVAS_HEIGHT / 7.5;
         let tweenTime = 7;
-        let increase = 1.3; 
-        this.createFlagButton(1.2 * CANVAS_WIDTH / 4, 1.1 * CANVAS_HEIGHT / 4, 
+        let increase = 1.3;
+        this.createFlagButton(1.2 * CANVAS_WIDTH / 4, 1.1 * CANVAS_HEIGHT / 4,
             height, 'frFlag', 'en', tweenTime, increase);
-        this.createFlagButton(2.8 * CANVAS_WIDTH / 4, 1.1 * CANVAS_HEIGHT / 4, 
-            height, 'poFlag', 'en', tweenTime, increase);
-        this.createFlagButton(1.2 * CANVAS_WIDTH / 4, 2.4 * CANVAS_HEIGHT / 4, 
+        this.createFlagButton(2.8 * CANVAS_WIDTH / 4, 1.1 * CANVAS_HEIGHT / 4,
+            height, 'ptFlag', 'en', tweenTime, increase);
+        this.createFlagButton(1.2 * CANVAS_WIDTH / 4, 2.4 * CANVAS_HEIGHT / 4,
             height, 'spFlag', 'es', tweenTime, increase);
-        this.createFlagButton(2.8 * CANVAS_WIDTH / 4, 2.4 * CANVAS_HEIGHT / 4, 
+        this.createFlagButton(2.8 * CANVAS_WIDTH / 4, 2.4 * CANVAS_HEIGHT / 4,
             height, 'ukFlag', 'en', tweenTime, increase);
     }
 
@@ -50,9 +50,9 @@ export default class LanguageMenu extends Phaser.Scene {
      * @param {number} tweenTime - tiempo que dura el tween de escalado tanto cuando se coloca el cursor encima como cuando se quita
      * @param {number} scaleIncrease - cuanto se escala cuando se realiza el tween de escalado al colocar el cursor encima 
      */
-    createFlagButton(x, y, height, sprite, language, tweenTime, scaleIncrease){
+    createFlagButton(x, y, height, sprite, language, tweenTime, scaleIncrease) {
         let button = this.add.image(x, y, sprite);
-        
+
         let scale = height / button.height;
         button.setScale(scale);
 
@@ -79,6 +79,15 @@ export default class LanguageMenu extends Phaser.Scene {
             // Se cambia el idioma y se pasa a la pantalal de titulo
             this.i18next.changeLanguage(language);
             this.gameManager.startTitleMenu();
+
+            // TEST
+            let userInfo = {
+                name: "John",
+                username: "a",
+                password: "a",
+                gender: "male"
+            }
+            this.gameManager.startGame(userInfo);
         });
     }
 }

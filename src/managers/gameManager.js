@@ -212,7 +212,10 @@ export default class GameManager {
         if (this.UIManager) return this.UIManager.getDialogManager();
         else return null;
     }
-
+    getPhoneManager() {
+        if (this.UIManager) return this.UIManager.getPhoneManager();
+        else return null;
+    }
     getUserInfo() {
         return this.userInfo;
     }

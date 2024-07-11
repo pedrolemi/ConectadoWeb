@@ -25,7 +25,7 @@ export default class MainScreen extends BaseScreen {
 
 
         // Configuracion de texto por defecto
-        let hourTextConfig  = { ...scene.textConfig };
+        let hourTextConfig = { ...scene.textConfig };
         hourTextConfig.fontFamily = 'gidole-regular';
         hourTextConfig.fontSize = 100 + 'px';
         hourTextConfig.strokeThickness = 0;
@@ -40,8 +40,6 @@ export default class MainScreen extends BaseScreen {
 
         this.add(this.hourText);
         this.add(this.dayText);
-
-
     }
 
     setDayInfo(hour, dayText) {

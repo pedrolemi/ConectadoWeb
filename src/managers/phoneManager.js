@@ -51,12 +51,11 @@ export default class PhoneManager {
         });
         
         this.toggling = false;
-        this.setDayInfo("01:40", "Martes, Día 14")
         
-        this.togglePhone();
-        this.toggling = false;
-        this.phone.visible = false;
-        this.bgBlock.disableInteractive();
+        // this.togglePhone();
+        // this.toggling = false;
+        // this.phone.visible = false;
+        // this.bgBlock.disableInteractive();
     }
 
 

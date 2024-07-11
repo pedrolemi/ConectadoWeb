@@ -33,9 +33,10 @@ export default class BootScene extends Phaser.Scene {
         this.load.image('phone', './UI/phone/phone.png');
         this.load.image('alarmBg', './UI/phone/alarmBg.png');
         this.load.image('mainScreenBg', './UI/phone/mainScreenBg.png');
-        this.load.image('statusBG', './UI/phone/statusBG.png');
+        this.load.image('statusBG', './UI/phone/statusBg.png');
         this.load.image('messagesBg', './UI/phone/messagesBg.png');
-        this.load.image('chatBG', './UI/phone/chatBG.png');
+        this.load.image('chatBG', './UI/phone/chatBg.png');
+        this.load.image('settingsBg', './UI/phone/settingsBg.png');
 
         // Botones del telefono
         this.load.image('returnButton', './UI/phone/triangle.png');
@@ -78,7 +79,7 @@ export default class BootScene extends Phaser.Scene {
         this.load.image('frFlag', 'UI/languageMenu/frFlag.png');
         this.load.image('spFlag', 'UI/languageMenu/spFlag.png');
         this.load.image('ukFlag', 'UI/languageMenu/ukFlag.png');
-        this.load.image('poFlag', 'UI/languageMenu/poFlag.png');
+        this.load.image('ptFlag', 'UI/languageMenu/ptFlag.png');
 
         // Test
         this.load.image('bg', 'patio.png');
@@ -106,7 +107,7 @@ export default class BootScene extends Phaser.Scene {
             // en cualquier idioma (aunque o existiese)
             supportedLngs: ['en', 'es'],
             // namespaces que se cargan para cada uno de los idiomas
-            ns: ['names', 'momDialog', 'dadDialog', 'userInfoMenu', 'titleMenu'],
+            ns: ['names', 'momDialog', 'dadDialog', 'userInfoMenu', 'titleMenu', 'phone'],
             preload: ['en', 'es'],
             // mostrar informacion de ayuda por consola
             debug: false,

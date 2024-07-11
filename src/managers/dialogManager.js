@@ -218,7 +218,6 @@ export default class DialogManager {
         else {
             // Actualiza el dialogo que se esta mostrando del nodo actual
             this.currNode.currDialog++;
-            console.log(this.currNode);
 
             // Si aun no se han mostrado todos los dialogos del nodo, muestra el siguiente dialogo
             if (this.currNode.currDialog < this.currNode.dialogs.length) {

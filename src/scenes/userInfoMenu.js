@@ -119,38 +119,39 @@ export default class UserInfoMenu extends Phaser.Scene {
 
         // BOTON DE JUGAR
         let startTranslation = this.i18next.t("startButton", { ns: this.namespace });
-        new Button(this, CANVAS_WIDTH - 208, 2.85 * CANVAS_HEIGHT / 4, 0.75, () => {
-            // Se comprueba segun el texto introducido si alguno de los datos es incorrecto
-            let aux = this.handleErrors(genderGroup, nameText, userText, passwordText);
-            // Si es incorrecto, se muestra un mensaje de error
-            if (aux) {
-                errorText.setVisible(true);
-                errorText.setText(aux);
-            }
-            // Si es correcto, se pasa a la siguiente escena con la informacion recabada
-            else {
-                let userInfo = {
-                    name: nameText.getText(),
-                    username: userText.getText(),
-                    password: passwordText.getText(),
-                    gender: genderGroup.getIndexSelButton(),
+        new Button(this, CANVAS_WIDTH - 208, 2.85 * CANVAS_HEIGHT / 4, 0.75, 
+            () => {
+                // Se comprueba segun el texto introducido si alguno de los datos es incorrecto
+                let aux = this.handleErrors(genderGroup, nameText, userText, passwordText);
+                // Si es incorrecto, se muestra un mensaje de error
+                if (aux) {
+                    errorText.setVisible(true);
+                    errorText.setText(aux);
                 }
-                if (userInfo.gender === 0) {
-                    userInfo.gender = "male";
+                // Si es correcto, se pasa a la siguiente escena con la informacion recabada
+                else {
+                    let userInfo = {
+                        name: nameText.getText(),
+                        username: userText.getText(),
+                        password: passwordText.getText(),
+                        gender: genderGroup.getIndexSelButton(),
+                    }
+                    if (userInfo.gender === 0) {
+                        userInfo.gender = "male";
+                    }
+                    else if (userInfo.gender === 1) {
+                        userInfo.gender = "female";
+                    }
+                    this.gameManager.startGame(userInfo);
                 }
-                else if (userInfo.gender === 1) {
-                    userInfo.gender = "female";
-                }
-                this.gameManager.startGame(userInfo);
-            }
-        },
+            },
             this.gameManager.textBox.fillName, { R: 145, G: 209, B: 226 }, { R: 134, G: 193, B: 208 }, { R: 200, G: 200, B: 200 },
             startTranslation, { font: 'AUdimat-regular', size: 50, style: 'bold', color: '#FFFFFF' }, this.gameManager.textBox.edgeName,
             {
-                area: new Phaser.Geom.Rectangle(this.gameManager.textBox.offset, this.gameManager.textBox.offset,
-                    this.gameManager.textBox.width, this.gameManager.textBox.height),
+                area: new Phaser.Geom.Rectangle(this.gameManager.textBox.offset, this.gameManager.textBox.offset, this.gameManager.textBox.width, this.gameManager.textBox.height),
                 callback: Phaser.Geom.Rectangle.Contains
-            });
+            }
+        );
 
         // TEXTOS CON INFORMACION QUE APARECEN A LA IZQUIERDA
         // Titulo
@@ -309,8 +310,7 @@ export default class UserInfoMenu extends Phaser.Scene {
         let textInput = new TextInput(this, 0, 0, 1, defaultText, 23, { R: 200, G: 200, B: 200 },
             this.gameManager.inputBox.fillName, this.gameManager.inputBox.edgeName, 'adventpro-regular',
             {
-                area: new Phaser.Geom.Rectangle(this.gameManager.inputBox.offset, this.gameManager.inputBox.offset,
-                    this.gameManager.inputBox.width, this.gameManager.inputBox.height),
+                area: new Phaser.Geom.Rectangle(this.gameManager.inputBox.offset, this.gameManager.inputBox.offset, this.gameManager.inputBox.width, this.gameManager.inputBox.height),
                 callback: Phaser.Geom.Rectangle.Contains
             });
         container.add(textInput);

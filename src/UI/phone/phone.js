@@ -29,7 +29,7 @@ export default class Phone extends Phaser.GameObjects.Container {
         this.statusScreen = new StatusScreen(scene, this, 'statusBG', this.mainScreen);
         this.messagesScreen = new MessagesScreen(scene, this, 'messagesBg', this.mainScreen);
         this.chatScreen = new ChatScreen(scene, this, 'chatBG', this.messagesScreen);
-        this.settingsScreen = new SettingsScreen(scene, this, ' ', this.mainScreen);
+        this.settingsScreen = new SettingsScreen(scene, this, 'settingsBg', this.mainScreen);
 
         // Se anaden las pantallas a un array para poder iterar sobre ellas mas rapidamente
         let screens = [
@@ -54,7 +54,6 @@ export default class Phone extends Phaser.GameObjects.Container {
         this.currScreen = null;
         this.toMainScreen();
 
-        this.toStatusScreen();
         
         scene.add.existing(this);
     }

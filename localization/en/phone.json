@@ -1,0 +1,17 @@
+{
+    "alarm": "Alarma",
+    "clock": {
+        
+    },
+    "statusScreen": {
+
+    },
+    "textMessages": {
+
+    },
+    "settings": {
+        "text": "You will return to the main screen. Are you sure?",
+        "yes": "Yes",
+        "no": "No" 
+    }
+}

@@ -13,7 +13,8 @@ export default class BaseScene extends Phaser.Scene {
         // Obtiene el dialogManager (tendria que haberse iniciado antes que la escena)
         this.gameManager = GameManager.getInstance();
         this.dialogManager = this.gameManager.getDialogManager();
-
+        this.phoneManager = this.gameManager.getPhoneManager();
+        
         // Obtiene el plugin de i18n del GameManager
         this.i18next = this.gameManager.i18next;
 

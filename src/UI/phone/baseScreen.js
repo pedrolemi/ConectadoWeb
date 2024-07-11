@@ -18,25 +18,25 @@ export default class BaseScreen extends Phaser.GameObjects.Container {
 
 
         // Se ponen las imagenes en la pantalla
-        let bg = scene.add.image(this.BG_X, this.BG_Y, bgImage);
+        this.bg = scene.add.image(this.BG_X, this.BG_Y, bgImage);
         let returnButton = scene.add.image(this.BG_X - this.BG_X / 6, this.BUTTON_Y, 'returnButton').setScale(this.BUTTON_SCALE);
         let homeButton = scene.add.image(this.BG_X, this.BUTTON_Y, 'homeButton').setScale(this.BUTTON_SCALE);
         let uselessButton = scene.add.image(this.BG_X + this.BG_X / 6, this.BUTTON_Y, 'uselessButton').setScale(this.BUTTON_SCALE);
 
         // Se anaden las imagenes a la escena
-        this.add(bg);
+        this.add(this.bg);
         this.add(returnButton);
         this.add(homeButton);
         this.add(uselessButton);
 
-        this.sendToBack(bg);
+        this.sendToBack(this.bg);
 
         // Se anima y se da funcionalidad a los botones
         this.animateButton(returnButton, () => { phone.toPrevScreen(); });
         this.animateButton(homeButton, () => { phone.toMainScreen(); });
         this.animateButton(uselessButton);
 
-        bg.setInteractive();
+        this.bg.setInteractive();
     }
 
 

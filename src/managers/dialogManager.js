@@ -1,4 +1,4 @@
-import TextBox from '../UI/dialog/textbox.js';
+import TextBox from '../UI/dialog/textBox.js';
 import OptionBox from '../UI/dialog/optionBox.js';
 import GameManager from './gameManager.js';
 import EventDispatcher from '../eventDispatcher.js';

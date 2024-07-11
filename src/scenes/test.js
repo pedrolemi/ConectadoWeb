@@ -70,7 +70,4 @@ export default class Test extends BaseScene {
         });
 
     }
-
-
-
 }

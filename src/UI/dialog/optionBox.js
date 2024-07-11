@@ -83,12 +83,13 @@ export default class OptionBox extends DialogObject {
                 to: 100,
                 onUpdate: (tween) => {
                     const value = tween.getValue();
-                    let col = Phaser.Display.Color.Interpolate.ColorWithColor(noTint, pointerOverColor, 100, value);
+                    let col = Phaser.Display.Color.Interpolate.ColorWithColor(pointerOverColor, noTint, 100, value);
                     let colInt = Phaser.Display.Color.GetColor(col.r, col.g, col.b);
                     this.box.setTint(colInt);
                 },
                 duration: tintFadeTime,
                 repeat: 0,
+                yoyo: true
             });
             fadeColor.on('complete', () => {
                 dialogManager.selectOption(index);

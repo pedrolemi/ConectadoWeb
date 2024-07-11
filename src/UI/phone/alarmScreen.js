@@ -1,5 +1,4 @@
 import BaseScreen from "./baseScreen.js";
-import GameManager from "../../managers/gameManager.js";
 
 export default class AlarmScreen extends BaseScreen {
     constructor(scene, phone, bgImage, prevScreen) {
@@ -11,10 +10,7 @@ export default class AlarmScreen extends BaseScreen {
         this.returnButton.destroy();
         this.homeButton.destroy();
         this.uselessButton.destroy();
-
-        let gameManager = GameManager.getInstance();
-        let i18next = gameManager.i18next;
-
+        
         // Configuracion de texto para la el texto de ll titulo
         let textConfig = { ...scene.textConfig };
         textConfig.fontFamily = 'gidole-regular';
@@ -23,7 +19,7 @@ export default class AlarmScreen extends BaseScreen {
         textConfig.strokeThickness = 0;
 
         // Se coge el texto del archivo de traducciones y se pone en pantalla 
-        let text = i18next.t("alarm", { ns: "phone" })
+        let text = this.i18next.t("alarm", { ns: "phone" })
         let alarmText = scene.createText(this.BG_X, this.BG_Y * 0.4, text, textConfig).setOrigin(0.5, 0.5);
 
 

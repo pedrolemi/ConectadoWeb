@@ -53,8 +53,7 @@ export default class Phone extends Phaser.GameObjects.Container {
 
         this.currScreen = null;
         this.toMainScreen();
-
-        this.toAlarmScreen();
+        
         scene.add.existing(this);
     }
 
@@ -116,5 +115,9 @@ export default class Phone extends Phaser.GameObjects.Container {
     setDayInfo(hour, dayText) {
         this.alarmScreen.setDayInfo(hour, dayText);
         this.mainScreen.setDayInfo(hour, dayText);
+    }
+
+    setNotifications(amount) {
+        this.mainScreen.setNotifications(amount);
     }
 }

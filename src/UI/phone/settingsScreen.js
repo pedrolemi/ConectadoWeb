@@ -1,13 +1,9 @@
 import BaseScreen from "./baseScreen.js";
-import GameManager from "../../managers/gameManager.js";
 import Button from "../button.js"
 
 export default class SettingsScreen extends BaseScreen {
     constructor(scene, phone, bgImage, prevScreen) {
         super(scene, phone, bgImage, prevScreen);
-
-        let gameManager = GameManager.getInstance();
-        let i18next = gameManager.i18next;
 
         // Configuracion de texto para la advertencia
         let textConfig = { ...scene.textConfig };
@@ -20,7 +16,7 @@ export default class SettingsScreen extends BaseScreen {
         }
 
         // Se coge el texto del archivo de traducciones y se pone en pantalla 
-        let text = i18next.t("settings.text", { ns: "phone", context: gameManager.getUserInfo().gender })
+        let text = this.i18next.t("settings.text", { ns: "phone", context: this.gameManager.getUserInfo().gender })
         let warningText = scene.createText(this.BG_X, this.BG_Y * 0.65, text, textConfig).setOrigin(0.5, 0.5);
 
         // Configuracion de texto y colores del boton
@@ -30,33 +26,33 @@ export default class SettingsScreen extends BaseScreen {
         let pressedColor = { R: 200, G: 200, B: 200 }
         
         // Se coge el texto de los botones del archivo de traducciones y crea los botones
-        let yesText = i18next.t("settings.yes", { ns: "phone" })
+        let yesText = this.i18next.t("settings.yes", { ns: "phone" })
         let yesButton = new Button(scene, this.BG_X, this.BG_Y * 1.1, 1,
             () => {
-                gameManager.startLangMenu();
+                this.gameManager.startLangMenu();
             }, 
-            gameManager.textBox.fillName, normalColor, hoverColor, pressedColor,
-            yesText, buttonTextConfig, gameManager.textBox.edgeName,
+            this.gameManager.textBox.fillName, normalColor, hoverColor, pressedColor,
+            yesText, buttonTextConfig, this.gameManager.textBox.edgeName,
             {
                 // La textura generada con el objeto grafico es un pelin mas grande que el dibujo en si. Por lo tanto,
                 // si la caja de colision por defecto es un pelin mas grande. Es por eso que se pasa una que se ajuste
                 // a las medidas reales
-                area: new Phaser.Geom.Rectangle(gameManager.textBox.offset, gameManager.textBox.offset, gameManager.textBox.width, gameManager.textBox.height),
+                area: new Phaser.Geom.Rectangle(this.gameManager.textBox.offset, this.gameManager.textBox.offset, this.gameManager.textBox.width, this.gameManager.textBox.height),
                 callback: Phaser.Geom.Rectangle.Contains
             }
         );
-        let noText = i18next.t("settings.no", { ns: "phone" })
+        let noText = this.i18next.t("settings.no", { ns: "phone" })
         let noButton = new Button(scene, this.BG_X, this.BG_Y * 1.4, 1,
             () => {
                 phone.toPrevScreen();
             }, 
-            gameManager.textBox.fillName, normalColor, hoverColor, pressedColor,
-            noText, buttonTextConfig, gameManager.textBox.edgeName,
+            this.gameManager.textBox.fillName, normalColor, hoverColor, pressedColor,
+            noText, buttonTextConfig, this.gameManager.textBox.edgeName,
             {
                 // La textura generada con el objeto grafico es un pelin mas grande que el dibujo en si. Por lo tanto,
                 // si la caja de colision por defecto es un pelin mas grande. Es por eso que se pasa una que se ajuste
                 // a las medidas reales
-                area: new Phaser.Geom.Rectangle(gameManager.textBox.offset, gameManager.textBox.offset, gameManager.textBox.width, gameManager.textBox.height),
+                area: new Phaser.Geom.Rectangle(this.gameManager.textBox.offset, this.gameManager.textBox.offset, this.gameManager.textBox.width, this.gameManager.textBox.height),
                 callback: Phaser.Geom.Rectangle.Contains
             }
         );

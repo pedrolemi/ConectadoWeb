@@ -1,3 +1,5 @@
+import GameManager from "../../managers/gameManager.js";
+
 export default class BaseScreen extends Phaser.GameObjects.Container {
     /**
      * Pantalla base para las distintas pantallas del telefono
@@ -11,6 +13,9 @@ export default class BaseScreen extends Phaser.GameObjects.Container {
         super(scene, 0, 0);
         this.scene = scene;
         this.phone = phone;
+
+        this.gameManager = GameManager.getInstance();
+        this.i18next = this.gameManager.i18next;
 
         this.prevScreen = prevScreen;
 

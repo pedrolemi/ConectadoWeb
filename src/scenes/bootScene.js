@@ -46,6 +46,10 @@ export default class BootScene extends Phaser.Scene {
         this.load.image('statusIcon', './UI/phone/statusIcon.png');
         this.load.image('chatIcon', './UI/phone/chatIcon.png');
         this.load.image('settingsIcon', './UI/phone/settingsIcon.png');
+        this.load.image('chatButton', './UI/phone/chatButton.png');
+
+        this.load.image('testIcon', './UI/AlexAvatar.png');
+
 
         // comprimir texturas (toma mucha menos memoria, aunque los archivos pueden ocupa mas tam)
         // Se comprueba de arriba a abajo hasta encontrar el primero que funcione en el dispositivo, si no, se usa png

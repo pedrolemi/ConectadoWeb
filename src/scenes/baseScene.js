@@ -37,6 +37,12 @@ export default class BaseScene extends Phaser.Scene {
         this.CAMERA_SPEED = 3;
     }
 
+    shutdown() {
+        super.shutdown();
+
+        dispatcher.removeAll();
+    }
+
     preUpdate(t, dt) {
         super.preUpdate(t, dt);
     }

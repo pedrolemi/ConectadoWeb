@@ -7,17 +7,23 @@ export default class PhoneManager {
     */
     constructor(scene) {
         this.scene = scene;
-        this.phone = new Phone(scene, this);
-
+        this.gameManager = GameManager.getInstance();
+        
         this.CANVAS_WIDTH = scene.sys.game.canvas.width
         this.CANVAS_HEIGHT = scene.sys.game.canvas.height;
         let OFFSET = 80;
         let ICON_SCALE = 0.3;
-        this.TOGGLE_SPEED = 600;
+        this.TOGGLE_SPEED = 500;
         this.SLEEP_DELAY = 500;
 
         this.icon = scene.add.image(this.CANVAS_WIDTH - OFFSET, this.CANVAS_HEIGHT - OFFSET, 'phoneIcon').setScale(ICON_SCALE);
         this.icon.setInteractive();
+
+        let notifObj = this.createNotification(this.icon.x + this.icon.displayWidth / 2, this.icon.y - this.icon.displayHeight / 2);
+        this.notifications = notifObj.container;
+        this.notificationText = notifObj.text;
+
+        this.phone = new Phone(scene, this);
         this.icon.setDepth(this.phone.depth - 1)
 
         this.bgBlock = scene.add.rectangle(0, 0, this.CANVAS_WIDTH, this.CANVAS_HEIGHT, 0xfff, 0).setOrigin(0, 0);
@@ -57,11 +63,12 @@ export default class PhoneManager {
 
         this.activeTween = null;
         this.toggling = false;
-
+        
         // this.togglePhone();
         // this.toggling = false;
         // this.phone.visible = false;
         // this.bgBlock.disableInteractive();
+        this.setNotifications(0);
     }
 
     // Muestra/oculta el telefono
@@ -73,6 +80,7 @@ export default class PhoneManager {
 
             // Si el telefono es visible
             if (this.phone.visible) {
+
                 // Se mueve hacia abajo a la izquierda
                 let deactivate = this.scene.tweens.add({
                     targets: [this.phone],
@@ -105,7 +113,6 @@ export default class PhoneManager {
                     x: 0,
                     y: 0,
                     duration: this.TOGGLE_SPEED,
-                    visible: true,
                     repeat: 0,
                 });
                 this.activeTween = activate;
@@ -120,6 +127,42 @@ export default class PhoneManager {
     }
 
     /**
+     * Crea el icono de las notificaciones
+     * @param {Number} x - posicion x del icono 
+     * @param {Number} y - posicion y del icono
+     * @returns {Object} - objeto con el contenedor y el objeto de texto
+     */
+    createNotification(x, y) {
+        let notificationColor = 0xf55d5d
+
+        let fillImg = this.scene.add.image(0, 0, this.gameManager.roundedSquare.fillName);
+        fillImg.setTint(notificationColor);
+        let edgeImg = this.scene.add.image(0, 0, this.gameManager.roundedSquare.edgeName);
+
+        // Configuracion de texto para las notificaciones
+        let notifTextConfig = { ...this.scene.textConfig };
+        notifTextConfig.fontFamily = 'arial';
+        notifTextConfig.fontSize = 60 + 'px';
+        notifTextConfig.strokeThickness = 0;
+
+        let textObj = this.scene.createText(0, 0, "", notifTextConfig).setOrigin(0.5, 0.5);
+
+        let notifications = this.scene.add.container(0, 0)
+        notifications.add(fillImg);
+        notifications.add(edgeImg);
+        notifications.add(textObj);
+        notifications.setScale(0.3);
+        notifications.x = x;
+        notifications.y = y;
+
+        return {
+            container: notifications,
+            text: textObj
+        };
+    }
+
+
+    /**
      * Cambia el texto del dia y la hora
      * @param {String} hour - Hora
      * @param {String} dayText - Informacion del dia
@@ -128,24 +171,41 @@ export default class PhoneManager {
         this.phone.setDayInfo(hour, dayText);
     }
 
+    /**
+     * Establece las notificaciones que hay
+     * @param {Number} amount - Numero de notificaciones a poner
+     */
+    setNotifications(amount) {
+        // Si son mas de 0, activa las notificaciones y cambia el texto
+        if (amount > 0) {
+            this.notifications.visible = true;
+            this.notificationText.setText(amount);
+        }
+        // Si no, las desactiva
+        else {
+            this.notifications.visible = false;
+            this.notificationText.setText("");
+        }
+        this.phone.setNotifications(amount);
+    }
+
     // Funcion llamada al aplazar la alarma
     // (WIP)
     sleep() {
         this.togglePhone();
         if (this.activeTween) {
             this.activeTween.on('complete', () => {
-                let gameManager = GameManager.getInstance();
-                let i18next = gameManager.i18next;
+                let i18next = this.gameManager.i18next;
 
                 let hour = "10:20";
                 let day = i18next.t("clock.lateTest", { ns: "phone" });
-                
+
                 this.setDayInfo(hour, day)
                 setTimeout(() => {
                     this.togglePhone();
                     this.phone.toAlarmScreen();
                 }, this.SLEEP_DELAY)
-                
+
             });
         }
     }

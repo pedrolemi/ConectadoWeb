@@ -19,7 +19,7 @@ export default class MainScreen extends BaseScreen {
         this.add(settingsButton);
 
         // Se anima y se da funcionalidad a los botones
-        super.animateButton(statusButton,() => { phone.toStatusScreen(); });
+        super.animateButton(statusButton, () => { phone.toStatusScreen(); });
         super.animateButton(chatButton, () => { phone.toMsgScreen(); });
         super.animateButton(settingsButton, () => { phone.toSettingsScreen(); });
 
@@ -30,7 +30,7 @@ export default class MainScreen extends BaseScreen {
         hourTextConfig.fontSize = 100 + 'px';
         hourTextConfig.strokeThickness = 0;
 
-        let dayTextConfig  = { ...scene.textConfig };
+        let dayTextConfig = { ...scene.textConfig };
         dayTextConfig.fontFamily = 'gidole-regular';
         dayTextConfig.strokeThickness = 0;
 
@@ -38,11 +38,19 @@ export default class MainScreen extends BaseScreen {
         this.hourText = scene.createText(this.BG_X, this.BG_Y * 0.65, "", hourTextConfig).setOrigin(0.5, 0.5);
         this.dayText = scene.createText(this.BG_X, this.BG_Y * 0.8, "", dayTextConfig).setOrigin(0.5, 0.5);
 
+
+        // Crea el icono de las notificaciones
+        let notifObj = phone.phoneManager.createNotification(chatButton.x + chatButton.displayWidth / 3, chatButton.y - chatButton.displayHeight / 3);
+        this.notifications = notifObj.container;
+        this.notificationText = notifObj.text;
+
+
         this.add(this.hourText);
         this.add(this.dayText);
+        this.add(this.notifications);
     }
 
-    
+
     /**
      * Cambia el texto del dia y la hora
      * @param {String} hour - Hora
@@ -53,5 +61,20 @@ export default class MainScreen extends BaseScreen {
         this.dayText.setText(dayText);
     }
 
-    
+    /**
+     * Establece las notificaciones que hay
+     * @param {Number} amount - Numero de notificaciones a poner
+     */
+    setNotifications(amount) {
+        // Si son mas de 0, activa las notificaciones y cambia el texto
+        if (amount > 0) {
+            this.notifications.visible = true;
+            this.notificationText.setText(amount);
+        }
+        // Si no, las desactiva
+        else {
+            this.notifications.visible = false;
+            this.notificationText.setText("");
+        }
+    }
 }

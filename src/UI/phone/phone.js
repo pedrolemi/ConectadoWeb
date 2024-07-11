@@ -54,7 +54,7 @@ export default class Phone extends Phaser.GameObjects.Container {
         this.currScreen = null;
         this.toMainScreen();
 
-        
+        this.toAlarmScreen();
         scene.add.existing(this);
     }
 
@@ -71,7 +71,7 @@ export default class Phone extends Phaser.GameObjects.Container {
 
     changeScreen(nextScreen) {
         if (this.currScreen !== nextScreen) {
-            if ( this.currScreen) {
+            if (this.currScreen) {
                 this.currScreen.visible = false;
             }
             this.currScreen = nextScreen;
@@ -89,6 +89,9 @@ export default class Phone extends Phaser.GameObjects.Container {
         }
     }
 
+    toAlarmScreen() {
+        this.changeScreen(this.alarmScreen);
+    }
 
     toMainScreen() {
         this.changeScreen(this.mainScreen);
@@ -111,6 +114,7 @@ export default class Phone extends Phaser.GameObjects.Container {
     }
 
     setDayInfo(hour, dayText) {
+        this.alarmScreen.setDayInfo(hour, dayText);
         this.mainScreen.setDayInfo(hour, dayText);
     }
 }

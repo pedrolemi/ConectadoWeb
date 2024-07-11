@@ -2,9 +2,13 @@ import DialogManager from "./dialogManager.js";
 import PhoneManager from "./phoneManager.js";
 
 export default class UIManager extends Phaser.Scene {
+    /**
+    * Gestor de la interfaz. Contiene el PhoneManager y el DialogManager.
+    * Tambien se encarga de la creacion de textos
+    * @extends Phaser.Scene
+    */
     constructor(scene) {
-        super({ key: 'UIManager' });
-        
+        super({ key: 'UIManager' });  
     }
 
     create() {

@@ -9,7 +9,7 @@ export default class SettingsScreen extends BaseScreen {
         let gameManager = GameManager.getInstance();
         let i18next = gameManager.i18next;
 
-        // Configuracion de texto por defecto
+        // Configuracion de texto para la advertencia
         let textConfig = { ...scene.textConfig };
         textConfig.fontFamily = 'gidole-regular';
         textConfig.fontSize = 40 + 'px';
@@ -19,16 +19,17 @@ export default class SettingsScreen extends BaseScreen {
             useAdvancedWrap: true
         }
 
+        // Se coge el texto del archivo de traducciones y se pone en pantalla 
         let text = i18next.t("settings.text", { ns: "phone", context: gameManager.getUserInfo().gender })
         let warningText = scene.createText(this.BG_X, this.BG_Y * 0.65, text, textConfig).setOrigin(0.5, 0.5);
 
-
+        // Configuracion de texto y colores del boton
         let buttonTextConfig = { font: 'gidole-regular', size: 45, style: 'bold', color: '#000' }
         let normalColor = { R: 255, G: 255, B: 255 };
         let hoverColor = { R: 64, G: 142, B: 134 };
         let pressedColor = { R: 200, G: 200, B: 200 }
         
-        
+        // Se coge el texto de los botones del archivo de traducciones y crea los botones
         let yesText = i18next.t("settings.yes", { ns: "phone" })
         let yesButton = new Button(scene, this.BG_X, this.BG_Y * 1.1, 1,
             () => {
@@ -44,7 +45,6 @@ export default class SettingsScreen extends BaseScreen {
                 callback: Phaser.Geom.Rectangle.Contains
             }
         );
-
         let noText = i18next.t("settings.no", { ns: "phone" })
         let noButton = new Button(scene, this.BG_X, this.BG_Y * 1.4, 1,
             () => {
@@ -63,7 +63,6 @@ export default class SettingsScreen extends BaseScreen {
         
         yesButton.setScale(0.9, 1);
         noButton.setScale(0.9, 1);
-
 
         this.add(yesButton);
         this.add(noButton);

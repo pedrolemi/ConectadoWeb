@@ -1,7 +1,8 @@
 {
     "alarm": "Alarma",
     "clock": {
-        
+        "test": "Martes, Día 15",
+        "lateTest": "Te dormiste"
     },
     "statusScreen": {
 

@@ -1,4 +1,12 @@
 export default class BaseScreen extends Phaser.GameObjects.Container {
+    /**
+     * Pantalla base para las distintas pantallas del telefono
+     * @extends {Phaser.Scene}
+     * @param {*} scene - Escena a la que pertenece (UIManager)
+     * @param {*} phone - Telefono
+     * @param {*} bgImage - id de la imagen de fondo
+     * @param {*} prevScreen - Pantalla anterior
+     */
     constructor(scene, phone, bgImage, prevScreen) {
         super(scene, 0, 0);
         this.scene = scene;
@@ -19,27 +27,31 @@ export default class BaseScreen extends Phaser.GameObjects.Container {
 
         // Se ponen las imagenes en la pantalla
         this.bg = scene.add.image(this.BG_X, this.BG_Y, bgImage);
-        let returnButton = scene.add.image(this.BG_X - this.BG_X / 6, this.BUTTON_Y, 'returnButton').setScale(this.BUTTON_SCALE);
-        let homeButton = scene.add.image(this.BG_X, this.BUTTON_Y, 'homeButton').setScale(this.BUTTON_SCALE);
-        let uselessButton = scene.add.image(this.BG_X + this.BG_X / 6, this.BUTTON_Y, 'uselessButton').setScale(this.BUTTON_SCALE);
+        this.returnButton = scene.add.image(this.BG_X - this.BG_X / 6, this.BUTTON_Y, 'returnButton').setScale(this.BUTTON_SCALE);
+        this.homeButton = scene.add.image(this.BG_X, this.BUTTON_Y, 'homeButton').setScale(this.BUTTON_SCALE);
+        this.uselessButton = scene.add.image(this.BG_X + this.BG_X / 6, this.BUTTON_Y, 'uselessButton').setScale(this.BUTTON_SCALE);
 
         // Se anaden las imagenes a la escena
         this.add(this.bg);
-        this.add(returnButton);
-        this.add(homeButton);
-        this.add(uselessButton);
+        this.add(this.returnButton);
+        this.add(this.homeButton);
+        this.add(this.uselessButton);
 
         this.sendToBack(this.bg);
 
         // Se anima y se da funcionalidad a los botones
-        this.animateButton(returnButton, () => { phone.toPrevScreen(); });
-        this.animateButton(homeButton, () => { phone.toMainScreen(); });
-        this.animateButton(uselessButton);
+        this.animateButton(this.returnButton, () => { phone.toPrevScreen(); });
+        this.animateButton(this.homeButton, () => { phone.toMainScreen(); });
+        this.animateButton(this.uselessButton);
 
         this.bg.setInteractive();
     }
 
-
+    /**
+     * Anade al boton la animacion y la funcion a la que debe llamar
+     * @param {Phaser.Image} button - Imagen que animar
+     * @param {Function} onClick - Funcion a la que llama el boton al pulsarlo
+     */
     animateButton(button, onClick) {
         // Se hace interactivo
         button.setInteractive();

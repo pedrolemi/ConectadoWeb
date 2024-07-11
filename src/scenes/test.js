@@ -10,7 +10,9 @@ export default class Test extends BaseScene {
     create() {
         super.create();
 
-        this.phoneManager.setDayInfo("01:40", "Martes, Día 14")
+        let hour = "5:20";
+        let day = this.i18next.t("clock.test", { ns: "phone" });
+        this.phoneManager.setDayInfo(hour, day)
 
         let test1 = this.cache.json.get('momDialog');
         let test2 = this.cache.json.get('dadDialog');

@@ -24,7 +24,7 @@ export default class MainScreen extends BaseScreen {
         super.animateButton(settingsButton, () => { phone.toSettingsScreen(); });
 
 
-        // Configuracion de texto por defecto
+        // Configuracion de texto para el reloj
         let hourTextConfig = { ...scene.textConfig };
         hourTextConfig.fontFamily = 'gidole-regular';
         hourTextConfig.fontSize = 100 + 'px';
@@ -42,6 +42,12 @@ export default class MainScreen extends BaseScreen {
         this.add(this.dayText);
     }
 
+    
+    /**
+     * Cambia el texto del dia y la hora
+     * @param {String} hour - Hora
+     * @param {String} dayText - Informacion del dia
+     */
     setDayInfo(hour, dayText) {
         this.hourText.setText(hour);
         this.dayText.setText(dayText);

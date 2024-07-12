@@ -42,7 +42,7 @@ export default class BootScene extends Phaser.Scene {
         this.load.image('returnButton', './UI/phone/triangle.png');
         this.load.image('homeButton', './UI/phone/circle.png');
         this.load.image('uselessButton', './UI/phone/square.png');
-        
+
         this.load.image('statusIcon', './UI/phone/statusIcon.png');
         this.load.image('chatIcon', './UI/phone/chatIcon.png');
         this.load.image('settingsIcon', './UI/phone/settingsIcon.png');

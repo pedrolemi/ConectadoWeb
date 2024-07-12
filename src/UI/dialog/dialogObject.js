@@ -14,7 +14,7 @@ export default class DialogObject {
             fadeEase: 'linear'
         }
     }
-    
+
     /**
     * Activa o desactiva los objetos indicados
     * @param {boolean} active - si se va a activar el objeto

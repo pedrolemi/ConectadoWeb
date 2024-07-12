@@ -123,7 +123,7 @@ export default class TextInput extends Phaser.GameObjects.Container {
                 setTimeout(() => {
                     this.deactiveInput();
                 }, 10);
-                
+
             }
         })
 

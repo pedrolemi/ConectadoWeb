@@ -8,7 +8,7 @@ export default class UIManager extends Phaser.Scene {
     * @extends Phaser.Scene
     */
     constructor(scene) {
-        super({ key: 'UIManager' });  
+        super({ key: 'UIManager' });
     }
 
     create() {
@@ -48,7 +48,7 @@ export default class UIManager extends Phaser.Scene {
         }
         // Crea el texto en la escena y lo devuelve
         let textObj = this.make.text({
-            x, y, text, 
+            x, y, text,
             style: {
                 fontFamily: config.fontFamily,
                 fontSize: config.fontSize,

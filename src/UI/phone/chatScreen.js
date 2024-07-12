@@ -23,8 +23,6 @@ export default class ChatScreen extends BaseScreen {
         this.homeButton.destroy();
         this.uselessButton.destroy();
 
-        this.options = [];
-
         // Crea la caja de respuesta y el boton de volver hacia atras
         this.createTextBox();
         this.createReturnButton();
@@ -48,6 +46,7 @@ export default class ChatScreen extends BaseScreen {
         this.notifications = null;
         this.notificationAmount = 0;
 
+        this.node = null;
 
         this.add(this.nameText);
         this.add(this.iconImage);
@@ -116,8 +115,7 @@ export default class ChatScreen extends BaseScreen {
             // el dialogManager cree las opciones para responder y las active
             if (fadeColor) {
                 fadeColor.on('complete', () => {
-                    this.gameManager.getDialogManager().createOptions(this.options);
-                    this.gameManager.getDialogManager().activateOptions();
+                    this.gameManager.getDialogManager().setNode(this.node);
                 });
 
             }
@@ -197,5 +195,13 @@ export default class ChatScreen extends BaseScreen {
             this.notifications.container.visible = true;
             this.notifications.text.setText(this.notificationAmount);
         }
+    }
+
+    /**
+     * Cambia el nodo de dialogo
+     * @param {DialogNode} node - nodo de dialogo que se va a reproducir
+     */
+    setNode(node) {
+        this.node = node;
     }
 }

@@ -29,9 +29,9 @@ export default class TitleMenu extends Phaser.Scene {
         // Boton de jugar
         let offset = 50;
         let playTranslation = i18next.t("playButton", { ns: namespace });
-        new Button(this, CANVAS_WIDTH / 2, 2 * CANVAS_HEIGHT / 3 - offset - 10, 0.9, 
+        new Button(this, CANVAS_WIDTH / 2, 2 * CANVAS_HEIGHT / 3 - offset - 10, 0.9,
             () => {
-            gameManager.startUserInfoMenu();
+                gameManager.startUserInfoMenu();
             },
             gameManager.textBox.fillName, { R: 255, G: 255, B: 255 }, { R: 64, G: 142, B: 134 }, { R: 200, G: 200, B: 200 },
             playTranslation, { font: 'kimberley', size: 57, style: 'normal', color: '#004E46' }, gameManager.textBox.edgeName,
@@ -46,7 +46,7 @@ export default class TitleMenu extends Phaser.Scene {
 
         // Botón de creditos
         let creditsTranslation = i18next.t("creditsButton", { ns: namespace });
-        new Button(this, CANVAS_WIDTH / 2, 2 * CANVAS_HEIGHT / 3 + offset, 0.9, 
+        new Button(this, CANVAS_WIDTH / 2, 2 * CANVAS_HEIGHT / 3 + offset, 0.9,
             () => {
                 console.log("creditosss");
             },
@@ -60,7 +60,7 @@ export default class TitleMenu extends Phaser.Scene {
 
         // Boton de salir
         let exitTranslation = i18next.t("exitText", { ns: namespace });
-        let exitButton = new Button(this, 100, 3 * CANVAS_HEIGHT / 4 + 10, 0.5, 
+        let exitButton = new Button(this, 100, 3 * CANVAS_HEIGHT / 4 + 10, 0.5,
             () => {
                 gameManager.startLangMenu();
             },

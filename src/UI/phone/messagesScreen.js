@@ -24,6 +24,12 @@ export default class MessagesScreen extends BaseScreen {
         this.chatTextConfig.fontSize = 20 + 'px';
         this.chatTextConfig.style = 'normal';
 
+        // Se crea el array con los callbacks para crear cada pantalla de chat
+        this.chats = [
+            () => { this.showChat1(); },
+            () => { this.showChat2(); }
+        ]
+
         this.add(titleText);
     }
 
@@ -120,7 +126,7 @@ export default class MessagesScreen extends BaseScreen {
         this.add(iconImage);
 
         // Crea el icono de las notificaciones
-        let notifObj = this.phone.phoneManager.createNotification(this.BG_X + this.bg.displayWidth * 0.4,  button.y);
+        let notifObj = this.phone.phoneManager.createNotification(this.BG_X + this.bg.displayWidth * 0.4, button.y);
         this.add(notifObj.container);
         notifObj.container.visible = false;
 
@@ -128,38 +134,56 @@ export default class MessagesScreen extends BaseScreen {
     }
 
 
-    // Crea las pantallas de los chats y las anade al telefono, borrando las que tenia
-    // previamente establecidas por defecto (ya que antes de llamar a estos metodos no existen)
-    // Tambien guarda los iconos de las notificaciones en la pantalla de su chat correspondiente
-    showChat1() {
-        let chatNames = this.i18next.t("textMessages", { ns: "phone", returnObjects: true });
+    /**
+     * Llama al callback en el indice indicado para mostrar el chat
+     * @param {Number} chat - indice del chat que crear 
+     */
+    showChat(chat) {
+        if (this.chats[chat]) {
+            this.chats[chat]();
+        }
+    }
 
-        this.phone.remove(this.phone.chat1Screen);
-        this.phone.chat1Screen = new Chat1Screen(this.scene, this.phone, this, chatNames.chat1.name, "testIcon");
-        this.phone.add(this.phone.chat1Screen);
-        this.phone.chat1Screen.visible = false;
+    /**
+     * Anade la pantalla (creada previamente) indicada en el parametro
+     * screen al telefono y anade el boton del chat en esta pantalla 
+     * @param {} screen - pantalla del chat a anadir 
+     * @param {*} icon - foto de perfil del contacto
+     * @param {*} name - nombre del contacto
+     */
+    addChatToPhone(screen, icon, name) {
+        // Anade la pantalla al contenedor del telefono y la hace invisible
+        this.phone.add(screen);
+        screen.visible = false;
         this.phone.bringToTop(this.phone.phone);
 
-        let notifObj = this.createChat("testIcon", chatNames.chat1.name, this.chatTextConfig, () => {
-            this.phone.toChat1Screen();
-            this.phone.chat1Screen.clearNotifications();
+        // Crea el boton del chat y su icono de notificaciones en esta pantalla 
+        let index = this.phone.chats.length;
+        let notifObj = this.createChat(icon, name, this.chatTextConfig, () => {
+            // Al pulsar el boton, se cambiara a la pantalla creada y se
+            // llamara al metodo clearNotifications de dicha pantalla
+            this.phone.toChatScreen(index);
+            screen.clearNotifications();
         });
-        this.phone.chat1Screen.notifications = notifObj;
+
+        // Establece el objeto notifications de la pantalla creada
+        screen.notifications = notifObj;
+
+        // Anade la pantalla al array de chats del telefono
+        this.phone.chats.push(screen);
+    }
+
+    // Metodos para crear los chats 1 y 2
+    showChat1() {
+        let chatNames = this.i18next.t("textMessages", { ns: "phone", returnObjects: true });
+        let screen = new Chat1Screen(this.scene, this.phone, this, chatNames.chat1.name, "testIcon");
+        this.addChatToPhone(screen, "testIcon", chatNames.chat1.name)
     }
     showChat2() {
         let chatNames = this.i18next.t("textMessages", { ns: "phone", returnObjects: true });
-
-        this.phone.remove(this.phone.chat2Screen);
-        this.phone.chat2Screen = new Chat2Screen(this.scene, this.phone, this, chatNames.chat2.name, "testIcon");
-        this.phone.add(this.phone.chat2Screen);
-        this.phone.chat2Screen.visible = false;
-        this.phone.bringToTop(this.phone.phone);
-
-        let notifObj = this.createChat("testIcon", chatNames.chat2.name, this.chatTextConfig, () => {
-            this.phone.toChat2Screen();
-            this.phone.chat2Screen.clearNotifications();
-        });
-        this.phone.chat2Screen.notifications = notifObj;
+        let screen = new Chat2Screen(this.scene, this.phone, this, chatNames.chat2.name, "testIcon");
+        this.addChatToPhone(screen, "testIcon", chatNames.chat2.name)
     }
+
 
 }

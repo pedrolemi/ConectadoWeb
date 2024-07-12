@@ -1,5 +1,6 @@
 import DialogNode from '../UI/dialog/dialogNode.js';
 import GameManager from '../managers/gameManager.js';
+import EventDispatcher from '../eventDispatcher.js';
 
 export default class BaseScene extends Phaser.Scene {
     constructor(name) {
@@ -14,7 +15,9 @@ export default class BaseScene extends Phaser.Scene {
         this.gameManager = GameManager.getInstance();
         this.dialogManager = this.gameManager.getDialogManager();
         this.phoneManager = this.gameManager.getPhoneManager();
-        
+
+        this.dispatcher = EventDispatcher.getInstance();
+
         // Obtiene el plugin de i18n del GameManager
         this.i18next = this.gameManager.i18next;
 
@@ -35,13 +38,22 @@ export default class BaseScene extends Phaser.Scene {
         this.rightBound = this.CANVAS_WIDTH;
         this.START_SCROLLING = 50;
         this.CAMERA_SPEED = 3;
+
+        this.events.on('shutdown', this.shutdown, this);
+        this.events.on('create', this.onCreate, this);
     }
 
+    // Metodo que se llama al terminar de crear la escena. Se encarga de 
+    // anadir los retratos de la escena actual en el dialogManager 
+    onCreate() {
+        this.dialogManager.changeScene(this.gameManager.currentScene);
+    }
+
+    // Metodo que se llama al borrar la escena. Se encarga de limpiar los eventos del dispatcher
     shutdown() {
-        super.shutdown();
-
-        dispatcher.removeAll();
+        this.dispatcher.removeAll();
     }
+
 
     preUpdate(t, dt) {
         super.preUpdate(t, dt);
@@ -174,18 +186,18 @@ export default class BaseScene extends Phaser.Scene {
                 }
             }
         }
-        
+
         else if (currNode.type === "event") {
             // Recorre todas las variables obtenidas
             for (let i = 0; i < file[id].events.length; i++) {
                 // // Lee el nombre del evento
                 let evtName = Object.keys(file[id].events[i]);
-                
+
                 // Obtiene el objeto que guarda los parametros del evento 
                 let obj = file[id].events[i][evtName];
 
                 // Crea un objeto igual que obj, pero que tambien guarda su nombre
-                let evt = { ... obj };
+                let evt = { ...obj };
                 evt.name = evtName[0];
 
                 // Lo mete en las variables del nodo

@@ -99,8 +99,8 @@ export default class DialogManager {
     * @param {DialogNode} node - nodo que se va a poner como nodo actual
     */
     setNode(node) {
-        // Si no hay ningun dialogo activo
-        if (!this.isTalking()) {
+        // Si no hay ningun dialogo activo y el nodo a poner es valido
+        if (!this.isTalking() && node) {
             // Indica que ha empezado un dialogo
             this.talking = true;
 

@@ -44,7 +44,7 @@ export default class TextBox extends DialogObject {
 
         this.nameTextConfig = { ...scene.textConfig };
         this.nameTextConfig.fontSize = 25 + 'px';
-        
+
 
         // Animacion del texto
         this.textDelay = 30;                                                        // Tiempo que tarda en aparecer cada letra en milisegundos

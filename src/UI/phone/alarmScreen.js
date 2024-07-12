@@ -11,8 +11,8 @@ export default class AlarmScreen extends BaseScreen {
         this.returnButton.destroy();
         this.homeButton.destroy();
         this.uselessButton.destroy();
-        
-        
+
+
         // Configuracion de texto para la el texto de ll titulo
         let textConfig = { ...scene.textConfig };
         textConfig.fontFamily = 'gidole-regular';
@@ -32,7 +32,7 @@ export default class AlarmScreen extends BaseScreen {
         hourTextConfig.fontStyle = 'normal'
         hourTextConfig.strokeThickness = 0;
 
-        let dayTextConfig  = { ...scene.textConfig };
+        let dayTextConfig = { ...scene.textConfig };
         dayTextConfig.fontFamily = 'gidole-regular';
         dayTextConfig.fontStyle = 'normal'
         dayTextConfig.strokeThickness = 0;
@@ -40,7 +40,7 @@ export default class AlarmScreen extends BaseScreen {
         // Crea el texto y lo anade a la escena
         this.hourText = scene.createText(this.BG_X, this.BG_Y * 0.65, "", hourTextConfig).setOrigin(0.5, 0.5);
         this.dayText = scene.createText(this.BG_X, this.BG_Y * 0.8, "", dayTextConfig).setOrigin(0.5, 0.5);
-        
+
 
         // Se ponen la imagen del deslizable en la pantalla
         let scrollable = scene.add.image(this.BG_X, this.BG_Y * 1.18, 'homeButton').setScale(this.ICON_SCALE);
@@ -49,7 +49,7 @@ export default class AlarmScreen extends BaseScreen {
         // Limites de hasta donde se puede deslizar el icono
         let leftBound = this.BG_X - this.bg.displayWidth / 2 + scrollable.displayWidth / 2;
         let rightBound = this.BG_X + this.bg.displayWidth / 2 - scrollable.displayWidth / 2;
-        
+
         // Bloquea el deslizamiento para que solo se pueda mover horizontalmente hasta los limites
         scrollable.on('drag', (pointer, dragX, dragY) => {
             dragX = Phaser.Math.Clamp(dragX, leftBound, rightBound);
@@ -61,12 +61,12 @@ export default class AlarmScreen extends BaseScreen {
             // Si se ha deslizado hasta la izquierda, llama a la funcion para quedarse dormido 
             if (scrollable.x === leftBound) {
                 phone.phoneManager.sleep();
-            } 
+            }
             // Si se ha deslizado hasta la derecha, llama a la funcion para despertarse
             else if (scrollable.x === rightBound) {
                 phone.phoneManager.wakeUp();
             }
-            
+
             // Se pone el icono de nuevo en su posicion original
             scrollable.x = this.BG_X;
         });

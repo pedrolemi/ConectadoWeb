@@ -34,7 +34,7 @@ export default class GameManager {
         // almacena los valores que van a tener que ser usados desde fuera
         this.map = new Map();
         this.map.set("bag", false);
-        
+
         this.generateTextures();
 
         this.userInfo = null;
@@ -61,7 +61,7 @@ export default class GameManager {
      * Se utiliza para generar las diferentes texturas que se van a usar en los menus y poder
      * tener un sencillo acceso a los diferentes parametros de cada una (nombre, tam...)
      */
-    generateTextures(){
+    generateTextures() {
         // Se genera una textura en forma de circulo
         // Es necesario porque el emisor de particulas solo admite texturas, pero no shapes
         this.circleParticle = {
@@ -146,7 +146,7 @@ export default class GameManager {
      * textura sea un poquito mas grande que la textura en si
      * Nota: a la hora de crear una forma primitiva con un objeto grafico, el (0, 0) esta arriba a la izquierda
      */
-    generateBox(boxParams){
+    generateBox(boxParams) {
         // parte interior
         this.graphics.fillStyle(boxParams.fillColor, 1);
         this.graphics.fillRoundedRect(boxParams.offset, boxParams.offset, boxParams.width, boxParams.height, boxParams.radius);
@@ -166,38 +166,33 @@ export default class GameManager {
     startLangMenu() {
         let sceneName = 'LanguageMenu';
         this.changeScene(sceneName);
-        this.currentScene = this.currentScene.scene.get(sceneName);
 
         sceneName = 'UIManager';
         this.currentScene.scene.stop(sceneName);
-
         this.map.clear();
     }
-    
+
     startTitleMenu() {
         let sceneName = 'TitleMenu';
         this.changeScene(sceneName);
-        this.currentScene = this.currentScene.scene.get(sceneName);
     }
-    
+
     startUserInfoMenu() {
         let sceneName = 'UserInfoMenu';
         this.changeScene(sceneName);
-        this.currentScene = this.currentScene.scene.get(sceneName);
     }
 
     startGame(userInfo) {
         this.userInfo = userInfo
-        
+
         // IMPORTANTE: Hay que lanzar primero el UIManager para que se inicialice
         // el DialogManager y las escenas puedan crear los dialogos correctamente
         let sceneName = 'UIManager';
         this.currentScene.scene.launch(sceneName);
         this.UIManager = this.currentScene.scene.get(sceneName);
-        
+
         sceneName = 'Test';
         this.changeScene(sceneName);
-        this.currentScene = this.currentScene.scene.get(sceneName);
     }
 
     /**
@@ -206,8 +201,13 @@ export default class GameManager {
     * @param {object} - informacion que pasar a la escena (opcional)
     */
     changeScene(scene) {
-        if (this.UIManager && this.getDialogManager()) this.getDialogManager().clearPortraits();
+        this.currentScene.scene.stop();
         this.currentScene.scene.start(scene);
+        this.currentScene = this.currentScene.scene.get(scene);
+        if (this.UIManager && this.getDialogManager()) {
+            this.getDialogManager().clearPortraits();
+        }
+
     }
 
     getDialogManager() {

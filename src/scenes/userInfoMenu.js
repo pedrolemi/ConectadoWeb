@@ -96,15 +96,15 @@ export default class UserInfoMenu extends Phaser.Scene {
         // CAJAS DONDE INTRODUCIR LOS DATOS DEL PERSONAJE (NOMBRE, USUARIO Y CONTRASENA)
         let offset = 75;
         let nameTranslation = this.i18next.t("nameInput", { ns: this.namespace, returnObjects: true });
-        let nameText = this.createTextInputSet(2.1 * CANVAS_WIDTH / 3, 1.80 * CANVAS_HEIGHT / 5 - offset, 0.60, 
+        let nameText = this.createTextInputSet(2.1 * CANVAS_WIDTH / 3, 1.80 * CANVAS_HEIGHT / 5 - offset, 0.60,
             nameTranslation.sideText, nameTranslation.defaultText);
 
         let userTranslation = this.i18next.t("userInput", { ns: this.namespace, returnObjects: true });
-        let userText = this.createTextInputSet(2.1 * CANVAS_WIDTH / 3, 1.80 * CANVAS_HEIGHT / 5, 0.60, 
+        let userText = this.createTextInputSet(2.1 * CANVAS_WIDTH / 3, 1.80 * CANVAS_HEIGHT / 5, 0.60,
             userTranslation.sideText, userTranslation.defaultText);
 
         let passwordTranslation = this.i18next.t("passwordInput", { ns: this.namespace, returnObjects: true });
-        let passwordText = this.createTextInputSet(2.1 * CANVAS_WIDTH / 3, 1.80 * CANVAS_HEIGHT / 5 + offset, 0.60, 
+        let passwordText = this.createTextInputSet(2.1 * CANVAS_WIDTH / 3, 1.80 * CANVAS_HEIGHT / 5 + offset, 0.60,
             passwordTranslation.sideText, passwordTranslation.defaultText);
 
         // TEXTO DE ERROR QUE APARCE SI ALGUNO DE LOS PARAMETROS INTRODUCIDOS ES INCORRECTO
@@ -119,7 +119,7 @@ export default class UserInfoMenu extends Phaser.Scene {
 
         // BOTON DE JUGAR
         let startTranslation = this.i18next.t("startButton", { ns: this.namespace });
-        new Button(this, CANVAS_WIDTH - 208, 2.85 * CANVAS_HEIGHT / 4, 0.75, 
+        new Button(this, CANVAS_WIDTH - 208, 2.85 * CANVAS_HEIGHT / 4, 0.75,
             () => {
                 // Se comprueba segun el texto introducido si alguno de los datos es incorrecto
                 let aux = this.handleErrors(genderGroup, nameText, userText, passwordText);
@@ -199,7 +199,7 @@ export default class UserInfoMenu extends Phaser.Scene {
      * Metodo para crear un boton que sirve para volver a la pantalla anterior
      * y que tiene animaciones de escalado a la hora de interactuar con el
      */
-    createBackButton(x, y, tweenTime, scaleIncrease){
+    createBackButton(x, y, tweenTime, scaleIncrease) {
         let button = this.add.image(x, y, 'backButton');
         let origScale = button.scale;
         button.setInteractive();

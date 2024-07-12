@@ -8,7 +8,7 @@ export default class PhoneManager {
     constructor(scene) {
         this.scene = scene;
         this.gameManager = GameManager.getInstance();
-        
+
         // Configuracion de las dimensiones, posiciones y animaciones
         this.CANVAS_WIDTH = scene.sys.game.canvas.width
         this.CANVAS_HEIGHT = scene.sys.game.canvas.height;
@@ -71,7 +71,7 @@ export default class PhoneManager {
 
         this.activeTween = null;
         this.toggling = false;
-        
+
         // this.togglePhone();
         // this.toggling = false;
         // this.phone.visible = false;
@@ -80,7 +80,7 @@ export default class PhoneManager {
         this.setNotifications();
     }
 
-    
+
     // Muestra/oculta el telefono
     togglePhone() {
         // Si no hay una animacion reproduciendose
@@ -173,15 +173,6 @@ export default class PhoneManager {
 
 
     /**
-     * Cambia el texto del dia y la hora
-     * @param {String} hour - Hora
-     * @param {String} dayText - Informacion del dia
-     */
-    setDayInfo(hour, dayText) {
-        this.phone.setDayInfo(hour, dayText);
-    }
-
-    /**
      * Anade notificaciones a las que ya habia
      * @param {Number} amount - cantidad de notificaciones que anadir a la cantidad actual 
      */
@@ -189,7 +180,7 @@ export default class PhoneManager {
         this.notificationAmount += amount;
         this.setNotifications();
     }
-    
+
     // Establece las notificaciones que hay
     setNotifications() {
         // Si son mas de 0, activa las notificaciones y cambia el texto
@@ -232,4 +223,5 @@ export default class PhoneManager {
         console.log("wakeUp");
         this.togglePhone();
     }
+
 }

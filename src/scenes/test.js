@@ -10,21 +10,27 @@ export default class Test extends BaseScene {
     create() {
         super.create();
 
-        let hour = "5:20";
-        let day = this.i18next.t("clock.test", { ns: "phone" });
-        this.phoneManager.setDayInfo(hour, day)
-
         let test1 = this.cache.json.get('momDialog');
         let test2 = this.cache.json.get('dadDialog');
 
         let momNode = super.readNodes("root", test1, "momDialog", this.gameManager.getUserInfo().name, this.gameManager.getUserInfo().gender, true);
         let dadNode = super.readNodes("root", test2, "dadDialog", this.gameManager.getUserInfo().name, this.gameManager.getUserInfo().gender, true);
 
+        let choices = super.readNodes("choices1", test1, "momDialog", this.gameManager.getUserInfo().name, this.gameManager.getUserInfo().gender, true);
+
+        let hour = "5:20";
+        let day = this.i18next.t("clock.test", { ns: "phone" });
+        this.phoneManager.phone.setDayInfo(hour, day)
+        this.phoneManager.phone.showChat(0);
+        this.phoneManager.phone.setChatNode(0, choices);
+        this.phoneManager.phone.showChat(1);
+        this.phoneManager.phone.setChatNode(1, choices);
+
         // Pone una imagen de fondo con las dimensiones del canvas
         let bg = this.add.image(0, 0, 'bg').setOrigin(0, 0);
         let scale = this.CANVAS_HEIGHT / bg.height;
         bg.setScale(scale);
-        
+
         bg.setInteractive();
         // bg.on('pointerdown', (pointer) => {
         //     this.dialogManager.textbox.activate(false);
@@ -54,17 +60,11 @@ export default class Test extends BaseScene {
         this.portraits.set("dad", dad.getPortrait());
 
 
-
-        // IMPORTANTE: LLAMARLO CUANDO SE HAYA CREADO LA ESCENA
-        this.dialogManager.changeScene(this);
-
-
-        let dispatcher = EventDispatcher.getInstance();
-        dispatcher.add("talked", this, (obj) => {
+        this.dispatcher.add("talked", this, (obj) => {
             console.log(obj);
             this.gameManager.setValue("talked", true);
         });
-        dispatcher.addOnce("r", this, (obj) => {
+        this.dispatcher.addOnce("r", this, (obj) => {
             console.log(obj);
             this.gameManager.setValue("talked", false);
         });

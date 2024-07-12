@@ -24,13 +24,13 @@ export default class SettingsScreen extends BaseScreen {
         let normalColor = { R: 255, G: 255, B: 255 };
         let hoverColor = { R: 64, G: 142, B: 134 };
         let pressedColor = { R: 200, G: 200, B: 200 }
-        
+
         // Se coge el texto de los botones del archivo de traducciones y crea los botones
         let yesText = this.i18next.t("settings.yes", { ns: "phone" })
         let yesButton = new Button(scene, this.BG_X, this.BG_Y * 1.1, 1,
             () => {
                 this.gameManager.startLangMenu();
-            }, 
+            },
             this.gameManager.textBox.fillName, normalColor, hoverColor, pressedColor,
             yesText, buttonTextConfig, this.gameManager.textBox.edgeName,
             {
@@ -45,7 +45,7 @@ export default class SettingsScreen extends BaseScreen {
         let noButton = new Button(scene, this.BG_X, this.BG_Y * 1.4, 1,
             () => {
                 phone.toPrevScreen();
-            }, 
+            },
             this.gameManager.textBox.fillName, normalColor, hoverColor, pressedColor,
             noText, buttonTextConfig, this.gameManager.textBox.edgeName,
             {
@@ -56,7 +56,7 @@ export default class SettingsScreen extends BaseScreen {
                 callback: Phaser.Geom.Rectangle.Contains
             }
         );
-        
+
         yesButton.setScale(0.9, 1);
         noButton.setScale(0.9, 1);
 

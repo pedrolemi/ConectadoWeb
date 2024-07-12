@@ -170,6 +170,8 @@ export default class GameManager {
 
         sceneName = 'UIManager';
         this.currentScene.scene.stop(sceneName);
+
+        this.map.clear();
     }
     
     startTitleMenu() {

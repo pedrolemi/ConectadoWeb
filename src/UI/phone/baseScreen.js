@@ -4,10 +4,10 @@ export default class BaseScreen extends Phaser.GameObjects.Container {
     /**
      * Pantalla base para las distintas pantallas del telefono
      * @extends {Phaser.Scene}
-     * @param {*} scene - Escena a la que pertenece (UIManager)
-     * @param {*} phone - Telefono
+     * @param {*} scene - escena a la que pertenece (UIManager)
+     * @param {*} phone - telefono
      * @param {*} bgImage - id de la imagen de fondo
-     * @param {*} prevScreen - Pantalla anterior
+     * @param {*} prevScreen - pantalla anterior
      */
     constructor(scene, phone, bgImage, prevScreen) {
         super(scene, 0, 0);

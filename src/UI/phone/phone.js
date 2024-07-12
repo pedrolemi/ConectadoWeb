@@ -2,7 +2,7 @@ import AlarmScreen from "./alarmScreen.js";
 import MainScreen from "./mainScreen.js";
 import StatusScreen from "./statusScreen.js";
 import MessagesScreen from "./messagesScreen.js";
-import ChatScreen from "./chatScreen.js";
+import Chat1Screen from "./chat1Screen.js";
 import SettingsScreen from "./settingsScreen.js";
 
 export default class Phone extends Phaser.GameObjects.Container {
@@ -24,12 +24,13 @@ export default class Phone extends Phaser.GameObjects.Container {
 
         // Se crean las imagenes y diferentes pantallas
         this.phone = scene.add.image(this.PHONE_X, this.PHONE_Y, 'phone');
-        this.alarmScreen = new AlarmScreen(scene, this, 'alarmBg', null);
-        this.mainScreen = new MainScreen(scene, this, 'mainScreenBg', null);
-        this.statusScreen = new StatusScreen(scene, this, 'statusBG', this.mainScreen);
-        this.messagesScreen = new MessagesScreen(scene, this, 'messagesBg', this.mainScreen);
-        this.chatScreen = new ChatScreen(scene, this, 'chatBG', this.messagesScreen);
-        this.settingsScreen = new SettingsScreen(scene, this, 'settingsBg', this.mainScreen);
+        this.alarmScreen = new AlarmScreen(scene, this, null);
+        this.mainScreen = new MainScreen(scene, this, null);
+        this.statusScreen = new StatusScreen(scene, this, this.mainScreen);
+        this.messagesScreen = new MessagesScreen(scene, this, this.mainScreen);
+        this.chat1Screen = new Phaser.GameObjects.Container(scene, 0, 0);;
+        this.chat2Screen = new Phaser.GameObjects.Container(scene, 0, 0);
+        this.settingsScreen = new SettingsScreen(scene, this, this.mainScreen);
 
         // Se anaden las pantallas a un array para poder iterar sobre ellas mas rapidamente
         let screens = [
@@ -37,7 +38,7 @@ export default class Phone extends Phaser.GameObjects.Container {
             this.mainScreen,
             this.statusScreen,
             this.messagesScreen,
-            this.chatScreen,
+            this.chat1Screen,
             this.settingsScreen
         ]
 
@@ -53,10 +54,14 @@ export default class Phone extends Phaser.GameObjects.Container {
 
         this.currScreen = null;
         this.toMainScreen();
-        
+
         scene.add.existing(this);
     }
 
+    /**
+     * Metodo para obtener las dimensiones de la imagen del telefono
+     * @returns - objeto con la posicion, origen y escala de la imagen del telefono
+     */
     getPhoneTransform() {
         return {
             x: this.phone.x,
@@ -68,55 +73,91 @@ export default class Phone extends Phaser.GameObjects.Container {
         }
     }
 
+    /**
+     * Cambia a la pantalla indicada
+     * @param {BaseScreen} nextScreen - pantalla a la que se va a cambiar
+     */
     changeScreen(nextScreen) {
+        // Si la pantalla actual no es la misma que la siguiente
         if (this.currScreen !== nextScreen) {
+            // Si hay una pantalla actual, la oculta
             if (this.currScreen) {
                 this.currScreen.visible = false;
             }
+
+            // Hace que la pantalla actual sea a la que se va a cambiar
             this.currScreen = nextScreen;
+
+            // Muestra la pantalla actual
             this.currScreen.visible = true;
         }
-        
+
     }
 
+
+    // Pasa a la pantalla anterior
     toPrevScreen() {
+        // Si la pantalla actual es la pantalla principal, se guarda el movil
         if (this.currScreen === this.mainScreen) {
             this.phoneManager.togglePhone();
         }
-        if (this.currScreen.prevScreen) {
+        // Si no, si la pantalla actual tiene pantalla anterior, se cambia a esa pantalla
+        else if (this.currScreen.prevScreen) {
             this.changeScreen(this.currScreen.prevScreen);
         }
     }
 
+    // Cambia a la pantalla de la alarma
     toAlarmScreen() {
         this.changeScreen(this.alarmScreen);
     }
 
+    // Cambia a la pantalla principal
     toMainScreen() {
         this.changeScreen(this.mainScreen);
     }
 
+    // Cambia a la pantalla de estado
     toStatusScreen() {
         this.changeScreen(this.statusScreen);
     }
 
+    // Cambia a la pantalla de mensajes
     toMsgScreen() {
         this.changeScreen(this.messagesScreen);
     }
 
-    toChatScreen() {
-        this.changeScreen(this.chatScreen);
+    // Cambia a la pantalla del chat1
+    toChat1Screen() {
+        this.changeScreen(this.chat1Screen);
+    }
+    // Cambia a la pantalla del chat 2
+    toChat2Screen() {
+        this.changeScreen(this.chat2Screen);
     }
 
+    // Cambia a la pantalla de ajustes
     toSettingsScreen() {
         this.changeScreen(this.settingsScreen);
     }
 
+
+    // Muestra en la pantalla de mensajes los chats 1 y 2
+    showChat1() {
+        this.messagesScreen.showChat1();
+    }
+    showChat2() {
+        this.messagesScreen.showChat2();
+    }
+
+    
+    // Cambia la hora y el dia de las pantallas de alarma y principal
     setDayInfo(hour, dayText) {
         this.alarmScreen.setDayInfo(hour, dayText);
         this.mainScreen.setDayInfo(hour, dayText);
     }
 
+    // Cambia la cantidad de notificaciones de la pantalla principal
     setNotifications(amount) {
         this.mainScreen.setNotifications(amount);
     }

@@ -9,6 +9,7 @@ export default class PhoneManager {
         this.scene = scene;
         this.gameManager = GameManager.getInstance();
         
+        // Configuracion de las dimensiones, posiciones y animaciones
         this.CANVAS_WIDTH = scene.sys.game.canvas.width
         this.CANVAS_HEIGHT = scene.sys.game.canvas.height;
         let OFFSET = 80;
@@ -16,20 +17,27 @@ export default class PhoneManager {
         this.TOGGLE_SPEED = 500;
         this.SLEEP_DELAY = 500;
 
+        // Anade el icono del telefono
         this.icon = scene.add.image(this.CANVAS_WIDTH - OFFSET, this.CANVAS_HEIGHT - OFFSET, 'phoneIcon').setScale(ICON_SCALE);
         this.icon.setInteractive();
 
+        // Anade el icono de las notificaciones
         let notifObj = this.createNotification(this.icon.x + this.icon.displayWidth / 2, this.icon.y - this.icon.displayHeight / 2);
         this.notifications = notifObj.container;
         this.notificationText = notifObj.text;
 
+        // Anade el telefono 
         this.phone = new Phone(scene, this);
-        this.icon.setDepth(this.phone.depth - 1)
 
+        // Anade un rectangulo para bloquear la interaccion con los elementos del fondo
         this.bgBlock = scene.add.rectangle(0, 0, this.CANVAS_WIDTH, this.CANVAS_HEIGHT, 0xfff, 0).setOrigin(0, 0);
         this.bgBlock.setInteractive();
         this.bgBlock.setDepth(this.icon.depth - 1);
 
+
+        // Al pasar el raton por encima del icono, se hace mas grande,
+        // al quitar el raton de encima vuelve a su tamano original,
+        // y al hacer click, se hace pequeno y grande de nuevo
         this.icon.on('pointerover', () => {
             if (!this.scene.getDialogManager().isTalking()) {
                 scene.tweens.add({
@@ -68,9 +76,11 @@ export default class PhoneManager {
         // this.toggling = false;
         // this.phone.visible = false;
         // this.bgBlock.disableInteractive();
-        this.setNotifications(0);
+        this.notificationAmount = 0;
+        this.setNotifications();
     }
 
+    
     // Muestra/oculta el telefono
     togglePhone() {
         // Si no hay una animacion reproduciendose
@@ -172,21 +182,27 @@ export default class PhoneManager {
     }
 
     /**
-     * Establece las notificaciones que hay
-     * @param {Number} amount - Numero de notificaciones a poner
+     * Anade notificaciones a las que ya habia
+     * @param {Number} amount - cantidad de notificaciones que anadir a la cantidad actual 
      */
-    setNotifications(amount) {
+    addNotifications(amount) {
+        this.notificationAmount += amount;
+        this.setNotifications();
+    }
+    
+    // Establece las notificaciones que hay
+    setNotifications() {
         // Si son mas de 0, activa las notificaciones y cambia el texto
-        if (amount > 0) {
+        if (this.notificationAmount > 0) {
             this.notifications.visible = true;
-            this.notificationText.setText(amount);
+            this.notificationText.setText(this.notificationAmount);
         }
         // Si no, las desactiva
         else {
             this.notifications.visible = false;
             this.notificationText.setText("");
         }
-        this.phone.setNotifications(amount);
+        this.phone.setNotifications(this.notificationAmount);
     }
 
     // Funcion llamada al aplazar la alarma

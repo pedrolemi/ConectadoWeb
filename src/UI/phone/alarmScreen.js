@@ -1,15 +1,17 @@
 import BaseScreen from "./baseScreen.js";
 
 export default class AlarmScreen extends BaseScreen {
-    constructor(scene, phone, bgImage, prevScreen) {
-        super(scene, phone, bgImage, prevScreen);
+    constructor(scene, phone, prevScreen) {
+        super(scene, phone, 'alarmBg', prevScreen);
 
+        // Quita los botones de la parte inferior
         this.remove(this.returnButton);
         this.remove(this.homeButton);
         this.remove(this.uselessButton);
         this.returnButton.destroy();
         this.homeButton.destroy();
         this.uselessButton.destroy();
+        
         
         // Configuracion de texto para la el texto de ll titulo
         let textConfig = { ...scene.textConfig };

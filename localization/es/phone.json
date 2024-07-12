@@ -8,7 +8,21 @@
 
     },
     "textMessages": {
-        "title": "CONVERSACIONES"
+        "title": "CONVERSACIONES",
+        "chat1": {
+            "name": "Alison clase",
+            "options": [
+                "Bruh",
+                "AAAAAAAA"
+            ]
+        },
+        "chat2": {
+            "name": "Clase",
+            "options": [
+                "._.",
+                "xdddd"
+            ]
+        }
     },
     "settings": {
         "text": "",

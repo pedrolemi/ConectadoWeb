@@ -1,8 +1,8 @@
 import BaseScreen from "./baseScreen.js";
 
 export default class MainScreen extends BaseScreen {
-    constructor(scene, phone, bgImage, prevScreen) {
-        super(scene, phone, bgImage, prevScreen);
+    constructor(scene, phone, prevScreen) {
+        super(scene, phone, 'mainScreenBg', prevScreen);
 
         // Configuracion de las posiciones y dimensiones
         this.ICON_SCALE = 0.45;
@@ -43,7 +43,6 @@ export default class MainScreen extends BaseScreen {
         let notifObj = phone.phoneManager.createNotification(chatButton.x + chatButton.displayWidth / 3, chatButton.y - chatButton.displayHeight / 3);
         this.notifications = notifObj.container;
         this.notificationText = notifObj.text;
-
 
         this.add(this.hourText);
         this.add(this.dayText);

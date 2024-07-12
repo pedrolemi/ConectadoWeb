@@ -2,8 +2,8 @@ import BaseScreen from "./baseScreen.js";
 import Button from "../button.js"
 
 export default class SettingsScreen extends BaseScreen {
-    constructor(scene, phone, bgImage, prevScreen) {
-        super(scene, phone, bgImage, prevScreen);
+    constructor(scene, phone, prevScreen) {
+        super(scene, phone, 'settingsBg', prevScreen);
 
         // Configuracion de texto para la advertencia
         let textConfig = { ...scene.textConfig };

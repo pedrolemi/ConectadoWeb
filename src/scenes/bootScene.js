@@ -47,7 +47,7 @@ export default class BootScene extends Phaser.Scene {
         this.load.image('chatIcon', './UI/phone/chatIcon.png');
         this.load.image('settingsIcon', './UI/phone/settingsIcon.png');
         this.load.image('chatButton', './UI/phone/chatButton.png');
-
+        this.load.image('chatTextBox', './UI/phone/chatTextBox.png');
         this.load.image('testIcon', './UI/AlexAvatar.png');
 
 

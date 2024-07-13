@@ -60,7 +60,7 @@ export default class Counter extends Phaser.GameObjects.Container {
         this.add(this.emitter);
 
         // Se agrega el contenedor a la lista de actualizados para poder usar el preUpdate
-        this.addToUpdateList()
+        this.addToUpdateList();
         this.setScale(scale);
     }
 

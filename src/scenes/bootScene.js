@@ -132,7 +132,8 @@ export default class BootScene extends Phaser.Scene {
 
     create() {
         let gameManager = GameManager.create(this);
-        gameManager.startLangMenu();
+        //gameManager.startLangMenu();
+        this.scene.start('TestMenu');
     }
 
 }

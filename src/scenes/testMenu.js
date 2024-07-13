@@ -10,14 +10,25 @@ export default class TestMenu extends Phaser.Scene {
         const CANVAS_WIDTH = this.sys.game.canvas.width;
         const CANVAS_HEIGHT = this.sys.game.canvas.height;
 
-        // Notas: se puede tanto agrandar como los elementos como el propio listview porque todas las areas
-        // de colision son globales
-        let v = new VerticalListView(this, CANVAS_WIDTH / 2, CANVAS_HEIGHT / 2 - 200, 0.9, 10, {width: 400, height: 400});
+        let v = this.createListView(CANVAS_WIDTH / 2, CANVAS_HEIGHT / 2 - 200, 0.9);
+        let subV = this.createListView(0, 0, 0.8);
+        let subV2 = this.createListView(CANVAS_WIDTH / 2 - 400, CANVAS_HEIGHT / 2 - 200, 0.3);
+        v.addItem(subV);
+        subV.addItem(subV2);
 
-        // SUB LIST VIEW
-        let scale = 0.5;
-        let subV = new VerticalListView(this, CANVAS_WIDTH / 2 - 400, CANVAS_HEIGHT / 2 - 200, scale, 10, {width: 400, height: 400});
-        // imagen 2 (sub)
+        v.init();
+
+        //subV.removeByIndex(2);
+        //subV.cropItems();
+
+        //v.removeByIndex(2);
+        //v.cropItems();
+    }
+
+    createListView(x, y, scale){
+        let v = new VerticalListView(this, x, y, scale, 10, {width: 400, height: 400});
+
+        // imagen 1
         let image = this.add.image(0, 0, 'spFlag');
         image.setAlpha(0.5);
         image.setScale(1.1);
@@ -26,47 +37,15 @@ export default class TestMenu extends Phaser.Scene {
             console.log("auch");
         })
         image.h = image.displayHeight;
-        subV.addItem(image, [hit]);
-        // imagen 3 (sub)
-        image = this.add.image(0, 0, 'spFlag');
-        image.setAlpha(0.5);
-        image.setScale(1.1);
-        image.h = image.displayHeight;
-        subV.addItem(image);
-        // image 4 (sub)
-        image = this.add.image(0, 0, 'spFlag');
-        image.setAlpha(0.5);
-        image.setScale(1.1);
-        image.h = image.displayHeight;
-        subV.addItem(image);
-        subV.h = subV.boundedZone.displayHeight * scale;
-        // se recorta con la list view principal
-        v.addItem(subV);
+        v.addItem(image, [hit]);
 
-        // imagen 1 (no importa las pos)
-        let image2 = this.add.image(CANVAS_WIDTH / 2, CANVAS_HEIGHT / 2, 'spFlag');
-        image2.setAlpha(0.5);
-        image2.setScale(1.1);
-        image2.setOrigin(0.5, 0);
-        hit = new HitListElement(this, image2);
-        hit.on('pointerdown', () => {
-            console.log("me han tocadoo");
-        })
-        image2.h = image2.displayHeight;
-        v.addItem(image2, [hit]);
-
-        // imagen 5
+        // imagen 2
         image = this.add.image(0, 0, 'spFlag');
         image.setAlpha(0.5);
         image.setScale(1.1);
         image.h = image.displayHeight;
         v.addItem(image);
 
-        //subV.removeByIndex(0);
-        //v.removeChild(image2);
-        //v.removeByIndex(1);
-
-        subV.cropItems();
-        v.cropItems();
+        return v;
     }
 }

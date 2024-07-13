@@ -18,16 +18,23 @@ export default class VerticalListView extends Phaser.GameObjects.Container {
      * @param {boolean} autocull - hacer que un los elementos que se salgan de los borden se vuelvan invisibles.
      *                              No supone un cambio visual ni funcional, pero si mejora el rendimiento 
      */
-    constructor(scene, x, y, scale, padding, boundaries, autocull = true){
+    constructor(scene, x, y, scale, padding, boundaries, bgSprite, autocull = true){
         super(scene, x, y);
 
-        this.scene.add.existing(this);        
+        this.scene.add.existing(this);
         // poder usar el preupdate
         this.addToUpdateList();
 
         this.setScale(scale);
         
-        // TODO: falta el bg (pero es mera decoracion)
+        // bg (es mera decoracion)
+        if(bgSprite) {
+            let bg = this.scene.add.image(0, 0, bgSprite);
+            bg.setOrigin(0.5, 0);
+            bg.displayWidth = boundaries.width;
+            bg.displayHeight = boundaries.height;
+            this.add(bg);
+        }
 
         // limites de la listview
         this.boundedZone = this.scene.add.zone(0, 0, boundaries.width, boundaries.height);
@@ -38,19 +45,24 @@ export default class VerticalListView extends Phaser.GameObjects.Container {
         // final en cuanto a tam del borde (propiedad personalizada)
         this.boundedZone.end = this.boundedZone.y + this.boundedZone.displayHeight;
         
-        // mascara
+        // Mascara
         // Importante: tiene que ser un elemento de la escena, no puede estar dentro de ningun lado
         this.rectangleMask = this.scene.add.rectangle(0, 0)
-            .setAlpha(0.5).setOrigin(0).setFillStyle('0x000000');
+            .setAlpha(0).setOrigin(0).setFillStyle('0x000000');
         
+        // PARAMETROS
+        // distancia entre los diferentes items de la lista
         this.padding = padding
         this.autocull = autocull;
 
         // deslizar la lista
+        this.h = boundaries.height * scale;
         let previousDrag = 0;
         this.currentDrag = 0;
         
         // estructuras de datos
+        // si se encuentra dentro de otro item que es una listview
+        this.parentListView = null;
         // items que son listviews (poder hacer recursion)
         this.childrenListViews = new Set();
         // ultimo elem (poder colocar al sig correctamente)
@@ -127,6 +139,12 @@ export default class VerticalListView extends Phaser.GameObjects.Container {
         });
     }
 
+    setParentListview(listview){
+        if(this.parentListView === null){
+            this.parentListView = listview;
+        }
+    }
+
     /**
      * Calcula el rectangulo definido por los limites de la listview en coordenadas globales
      * (sirve tanto para ir recalculando la mascara como para calcular el area disponible interactuable
@@ -143,30 +161,42 @@ export default class VerticalListView extends Phaser.GameObjects.Container {
             this.boundedZone.width * matrix.scaleX, this.boundedZone.height * matrix.scaleY);
     }
 
+    getCurrentBoundingRectAndAbove(){
+        let rects = [];
+        rects.push(this.getBoundingRect());
+
+        if(this.parentListView !== null){
+            rects = rects.concat(this.parentListView.getCurrentBoundingRectAndAbove());
+        }
+
+        return rects;
+    }
+
     /**
      * Actualizar la mascara de renderizado
      * Es necesario recalcular cada vez que se realiza un movimiento porque podria haber 
      * una listview en movimiento (por ejemplo, una listview dentro de otra)
      */
     updateMask(){
-        if(this.rectangleMask !== null){    // cuando se elimina una listview y su mascara, evitar que se produzca un error
-            // se hallar a partir del rectangulo que define los limites
-            let rect = this.getBoundingRect();
-            // Nota: usar estas funciones y no setear estos valores directamente
-            this.rectangleMask.setPosition(rect.x, rect.y);
-            this.rectangleMask.setSize(rect.width, rect.height);
-            // bitmapmask --> alpha
-            // geomtrymask --> interseccion
-            let mask = this.rectangleMask.createGeometryMask();
-            this.itemsCont.setMask(mask);
-            
-            // se hace recursion para los hijos porque si se desplaza la listview
-            // principal, la listivew que es un item ha cambiado su pos y, por lo tanto,
-            // la mascara tb
-            this.childrenListViews.forEach((child) => {
-                child.updateMask();
-            })
-        }
+        // se hallar a partir del rectangulo que define los limites
+        let rect = this.getBoundingRect();
+        // Nota: usar estas funciones y no setear estos valores directamente
+        this.rectangleMask.setPosition(rect.x, rect.y);
+        this.rectangleMask.setSize(rect.width, rect.height);
+        // bitmapmask --> alpha
+        // geomtrymask --> interseccion
+        let mask = this.rectangleMask.createGeometryMask();
+        this.itemsCont.setMask(mask);
+    }
+
+    /**
+     * Actualizar la mascara de renderiado de todos sus hijos y subhijos
+     */
+    updateChildrenMask(){
+        this.childrenListViews.forEach((child) => {
+            child.updateMask();
+            child.updateChildrenMask();
+        });
     }
 
     /**
@@ -191,42 +221,45 @@ export default class VerticalListView extends Phaser.GameObjects.Container {
      * ajusten a los limites de las listviews
      */
     cropItems(){
+        let rects = this.getCurrentBoundingRectAndAbove();
         // AREAS DE COLISION
         // Propio objeto
         if(this.autocull){
             // se hace el culling
-            this.cull();
+            this.cull(rects);
         }
         else{
             // no se hace culling, por lo tanto, solo se calculan las nuevas areas de colision
-            let rect = this.getBoundingRect();
             // items con colliders
             this.itemsHits.forEach((hits, item) => {
                 // colliders
                 hits.forEach((hit) => {
                     // solo se recortan los colliders de acuerdo a los limites de la propia listview
-                    hit.intersect([rect]);
+                    hit.intersect(rects);
                 })
             });
         }
-        // Items listviews hijos
-        let rect = this.getBoundingRect();
-        // en cada hijo hay que tener en cuenta los limites propios de su
-        // listivew y de cada uno de sus antecesores
-        // Nota: para los hijos no hace falta hacer culling
-        this.cropChildrenHits([rect]);
 
-        // AJUSTAR RENDERIZADO
-        this.updateMask();
+        // AJUSTAR COLISIONES DE LOS HIJOS
+        // en cada hijo hay que tener en cuenta los limites propios de su
+        // listview y de sus antecesores
+        // Nota: para los hijos no tiene sentido hacer culling puesto que sus items
+        // no se han movido y es imposible que se salgan de los limities
+        this.cropChildrenHits(rects);
+
+        // AJUSTAR RENDERIZADO DE LOS HIJOS
+        // solo se necesita actualizar la de los hijos porque el listview
+        // actual no se ha movido
+        this.updateChildrenMask();
     }
 
     /**
-     * Nota: aunque se podria prescindir de los dos ifs de arriba y dejar simplemente la logica de abajo
+     * Culling: se podria prescindir de los dos ifs de arriba y dejar simplemente la logica de abajo
      * pues la mascara va a tapar al render y un area de colision de tam 0 no va a poder ser interactuable,
      * el culling mejora el rendimiento ya que se evita estar calculando todo el rato las intersecciones
      * con la mascara y con el area interactuable (boundZone)
      */
-    cull(){
+    cull(boundingRects){
         this.items.forEach((item) => {
             let itemStart = this.itemsCont.y + item.y;
             let itemEnd = itemStart + item.h;
@@ -244,37 +277,38 @@ export default class VerticalListView extends Phaser.GameObjects.Container {
 
                 // recortar colliders de los diferentes items
                 if(this.itemsHits.has(item)){
-                    let rect = this.getBoundingRect();
                     let hits = this.itemsHits.get(item);
                     hits.forEach((hit) => {
-                        hit.intersect([rect]);
+                        hit.intersect(boundingRects);
                     })
                 }
             }
         });
     }
 
-    cropChildrenHits(rects){
-        let rectsAux = [...rects];
-        // si hay listviews hijas
+    cropChildrenHits(boudingRects){
+        let rects = [...boudingRects];
+        // listviews hijas
         this.childrenListViews.forEach((child) => {
-            // si las listviews hijas tienen items con colision
-            if(child.itemsHits.size > 0){
-                // se agrega el limite del listview hija
-                rectsAux.push(child.getBoundingRect());
-                // se intersecciona cada una de los items con colliders del listview hijo
-                child.itemsHits.forEach((hits, item) => {
-                    hits.forEach((hit) => {
-                        hit.intersect(rectsAux);
-                    })
-                });
-                // para los hijos del listview hija
-                child.cropChildrenHits(rectsAux);
-                // se quita los limites del listview hija actual puesto
-                // que se va a pasar al sig hijo
-                rectsAux.pop();
-            }
+            // se agrega el limite de la listview hija
+            rects.push(child.getBoundingRect());
+            // se recalcular el area de los items con collider de la listview hija
+            child.itemsHits.forEach((hits, item) => {
+                hits.forEach((hit) => {
+                    hit.intersect(rects);
+                })
+            });
+            // para los hijos del listview hija
+            child.cropChildrenHits(rects);
+            // se quita los limites del listview hija actual puesto
+            // que se va a pasar al sig hijo
+            rects.pop();
         })
+    }
+
+    init(){
+        this.updateMask();
+        this.cropItems();
     }
 
     /**
@@ -351,6 +385,7 @@ export default class VerticalListView extends Phaser.GameObjects.Container {
             // se trata de un item listview
             if(item instanceof VerticalListView){
                 this.childrenListViews.add(item);
+                item.setParentListview(this);
             }
 
             // este item tiene colliders
@@ -359,10 +394,33 @@ export default class VerticalListView extends Phaser.GameObjects.Container {
             }
         }
     }
-
-    destroy(){
+    
+    /**
+     * Eliminar los elementos que estan en la escena (mascara y colisiones)
+     * y los de todos sus listviews hijos en el caso de que tengan
+     */
+    destoryMaskAndHits(){
         this.rectangleMask.destroy();
         this.rectangleMask = null;
+
+        this.itemsHits.forEach((hits, item) => {
+            hits.forEach((hit) => {
+                hit.destroy();
+                hit = null;
+            });
+        });
+        this.itemsHits.clear();
+    }
+
+    destroy(){
+        this.destoryMaskAndHits();
+        this.parentListView = null;
+        this.childrenListViews.clear();
+        this.lastItem = null;
+        this.items.forEach((item) => {
+            item.destroy();
+        })
+        this.items = [];
         super.destroy();
     }
 
@@ -383,7 +441,7 @@ export default class VerticalListView extends Phaser.GameObjects.Container {
                 this.itemsHits.delete(item);
             }
 
-            // se destruye el listview en caso de que lo sea
+            // se elimina el listview en caso de que lo sea
             if(this.childrenListViews.has){
                 this.childrenListViews.delete(item);
             }

@@ -60,7 +60,7 @@ export default class VerticalListView extends Phaser.GameObjects.Container {
         let previousDrag = 0;
         this.currentDrag = 0;
         
-        // estructuras de datos
+        // ESTRUCTURAS DE DATOS
         // si se encuentra dentro de otro item que es una listview
         this.parentListView = null;
         // items que son listviews (poder hacer recursion)
@@ -68,16 +68,25 @@ export default class VerticalListView extends Phaser.GameObjects.Container {
         // ultimo elem (poder colocar al sig correctamente)
         this.lastItem = null;
         // items
+        // Se usa principalmente para eliminar objetos por indice facilmente
+        // y para que cuando se elimina un objeto se recoloquen los siguientes facilmente
         this.items = [];
         // (item, hits) --> solo items con areas de colision
-        // Importante: los hits no tienen puramente los del propio item
-        // por ejemplo, si hay un container con dos cubos, cada uno con dos areas de colision
-        // el item podria ser el propio container y los hits, las areas de los dos cubos
+        // Nota: los hits no tienen porque ser exactamente los del propio item
+        // Por ejemplo, si hay un contenedor con dos cubos, el item podria ser
+        // el propio contenedor y los hits, las areas de colision de cada cubo
         this.itemsHits = new Map();
+        // (item, listviews) --> listviews hijas que puede tener un item
+        // Se usa principalmente para gestionar correctamente la eliminancion de items
+        // Nota: se hace de esta forma porque las listviews hijas puede ser tanto
+        // el propio item como elementos que tenga el item dentro
+        this.itemsListViews = new Map();
         // container con los diferentes items (moverlo todo de golpe facilmente)
+        // Importante: se tiene que crear el ultimo
         this.itemsCont = this.scene.add.container(0, 0);
         this.add(this.itemsCont);
 
+        // PARAMETROS
         // deslizamiento con inercia una vez acabado el drag
         this.isBeingDragged = false;
         this.movingSpeed = 0;
@@ -85,6 +94,8 @@ export default class VerticalListView extends Phaser.GameObjects.Container {
         this.friction = 0.99;
         this.speedMul = 0.7;
         this.minDistance = 1.8;
+
+        this.updateMask();
 
         this.boundedZone.on('dragenter', (pointer, x, y) => {
             this.isBeingDragged = true;
@@ -146,9 +157,8 @@ export default class VerticalListView extends Phaser.GameObjects.Container {
     }
 
     /**
-     * Calcula el rectangulo definido por los limites de la listview en coordenadas globales
-     * (sirve tanto para ir recalculando la mascara como para calcular el area disponible interactuable
-     * para cada uno de los items)
+     * Calcular el rectangulo definido por los limites de la listview en coordenadas globales
+     * (sirve tanto para ir recalcundo la mascara como el area de colision de cada uno de los items)
      * @returns rectangulo que representa los limites de la listview
      */
     getBoundingRect(){
@@ -161,6 +171,11 @@ export default class VerticalListView extends Phaser.GameObjects.Container {
             this.boundedZone.width * matrix.scaleX, this.boundedZone.height * matrix.scaleY);
     }
 
+    /**
+     * Calcular los limites del listiview actual y superior
+     * Se utiliza a la hora de recalcular los colliders de los items
+     * @returns limites del listview actual y superiroes
+     */
     getCurrentBoundingRectAndAbove(){
         let rects = [];
         rects.push(this.getBoundingRect());
@@ -174,16 +189,14 @@ export default class VerticalListView extends Phaser.GameObjects.Container {
 
     /**
      * Actualizar la mascara de renderizado
-     * Es necesario recalcular cada vez que se realiza un movimiento porque podria haber 
-     * una listview en movimiento (por ejemplo, una listview dentro de otra)
      */
     updateMask(){
         // se hallar a partir del rectangulo que define los limites
         let rect = this.getBoundingRect();
-        // Nota: usar estas funciones y no setear estos valores directamente
+        // Nota: usar estas funciones y no setear los valores directamente
         this.rectangleMask.setPosition(rect.x, rect.y);
         this.rectangleMask.setSize(rect.width, rect.height);
-        // bitmapmask --> alpha
+        // bitmapmask --> alfa
         // geomtrymask --> interseccion
         let mask = this.rectangleMask.createGeometryMask();
         this.itemsCont.setMask(mask);
@@ -219,10 +232,12 @@ export default class VerticalListView extends Phaser.GameObjects.Container {
     /**
      * Recortar los items en cuanto a renderizado y areas de colision para que se
      * ajusten a los limites de las listviews
+     * IMPORTANTE: HAY QUE LLAMARLO SIEMPRE DESPUES DE AGREGAR O ELIMINAR NUEVOS ITEMS
      */
     cropItems(){
+        // hay que tener en cuenta la listview actual y las de orden superior
         let rects = this.getCurrentBoundingRectAndAbove();
-        // AREAS DE COLISION
+
         // Propio objeto
         if(this.autocull){
             // se hace el culling
@@ -234,7 +249,6 @@ export default class VerticalListView extends Phaser.GameObjects.Container {
             this.itemsHits.forEach((hits, item) => {
                 // colliders
                 hits.forEach((hit) => {
-                    // solo se recortan los colliders de acuerdo a los limites de la propia listview
                     hit.intersect(rects);
                 })
             });
@@ -254,9 +268,8 @@ export default class VerticalListView extends Phaser.GameObjects.Container {
     }
 
     /**
-     * Culling: se podria prescindir de los dos ifs de arriba y dejar simplemente la logica de abajo
-     * pues la mascara va a tapar al render y un area de colision de tam 0 no va a poder ser interactuable,
-     * el culling mejora el rendimiento ya que se evita estar calculando todo el rato las intersecciones
+     * Culling: supone una mejora de rendimiento ya que al volver invisibles los items
+     * que se encuentran fuera de los limites, se calculando todo el rato las intersecciones
      * con la mascara y con el area interactuable (boundZone)
      */
     cull(boundingRects){
@@ -286,19 +299,23 @@ export default class VerticalListView extends Phaser.GameObjects.Container {
         });
     }
 
+    /**
+     * Recortar los collider de los items de las listviews hijas
+     * @param {Array} boudingRects - limites de las listiviews anteriores 
+     */
     cropChildrenHits(boudingRects){
         let rects = [...boudingRects];
         // listviews hijas
         this.childrenListViews.forEach((child) => {
-            // se agrega el limite de la listview hija
+            // se agrega el limite de la list view hija actual
             rects.push(child.getBoundingRect());
-            // se recalcular el area de los items con collider de la listview hija
+            // se recalcula el collider de los items
             child.itemsHits.forEach((hits, item) => {
                 hits.forEach((hit) => {
                     hit.intersect(rects);
                 })
             });
-            // para los hijos del listview hija
+            // mismo proceso para sus hijos
             child.cropChildrenHits(rects);
             // se quita los limites del listview hija actual puesto
             // que se va a pasar al sig hijo
@@ -306,10 +323,19 @@ export default class VerticalListView extends Phaser.GameObjects.Container {
         })
     }
 
+    /**
+     * Inicializar
+     * IMPORTANTE:
+     * - Se debe despues de llamar despues de agregar objetos por primera vez
+     * - Si se han anidado list views, con llamarlo solo para la de orden superior funciona
+     */
+    /*
     init(){
+        // (mejor hacerlo despues de haber añadido los objetos para que todo este colocado definitivamente)
         this.updateMask();
         this.cropItems();
     }
+    */
 
     /**
      * Deslizamiento con inercia
@@ -365,9 +391,11 @@ export default class VerticalListView extends Phaser.GameObjects.Container {
      * Agregar un elemento
      * Importante: definir la propiedad .h, que es la altura completa del elemento
      * @param {object} item - origen(0.5, 0)
-     * @param {Array} hits
+     * @param {Array} hits - hits que tiene el item (y sus elementos)
+     * @param {Array} listviews - listviews que tiene el item (y sus elementos)
+     *                              Nota: el propio item podria ser una listview
      */
-    addItem(item, hits){
+    addItem(item, hits, listviews){
         if(item.hasOwnProperty('h')){            
             // ?. --> si la funcion no existe, no se llama
             item.setOrigin?.(0.5, 0);
@@ -383,10 +411,22 @@ export default class VerticalListView extends Phaser.GameObjects.Container {
             this.items.push(item);
             this.lastItem = item;
             // se trata de un item listview
+            /*
             if(item instanceof VerticalListView){
                 this.childrenListViews.add(item);
                 item.setParentListview(this);
             }
+            */
+           if(listviews){
+                listviews.forEach((listview) => {
+                    // se agrega a la lista de list views
+                    this.childrenListViews.add(listview)
+                    // se establece el padre de cada listview
+                    listview.setParentListview(this);
+                });
+                // se guarda en el mapa
+                this.itemsListViews.set(item, listviews);
+           }
 
             // este item tiene colliders
             if(hits){
@@ -399,9 +439,14 @@ export default class VerticalListView extends Phaser.GameObjects.Container {
      * Eliminar los elementos que estan en la escena (mascara y colisiones)
      * y los de todos sus listviews hijos en el caso de que tengan
      */
-    destoryMaskAndHits(){
-        this.rectangleMask.destroy();
-        this.rectangleMask = null;
+    destroyMaskAndHits(){
+        // este if es para evitar que se produza un error si el propio item
+        // es de por si una list view porque ya se habra destruido y se tratara
+        // de destruir dos veces
+        if(this.rectangleMask !== null){
+            this.rectangleMask.destroy();
+            this.rectangleMask = null;
+        }
 
         this.itemsHits.forEach((hits, item) => {
             hits.forEach((hit) => {
@@ -413,14 +458,20 @@ export default class VerticalListView extends Phaser.GameObjects.Container {
     }
 
     destroy(){
-        this.destoryMaskAndHits();
+        this.destroyMaskAndHits();
         this.parentListView = null;
-        this.childrenListViews.clear();
         this.lastItem = null;
         this.items.forEach((item) => {
-            item.destroy();
+            // evitar que si el propio item es una listview se elimine dos veces y se produzca error
+            if(!this.childrenListViews.has(item)){
+                item.destroy();
+            }
         })
         this.items = [];
+        this.childrenListViews.forEach((child) => {
+            child.destroy();
+        });
+        this.childrenListViews.clear();
         super.destroy();
     }
 
@@ -442,14 +493,33 @@ export default class VerticalListView extends Phaser.GameObjects.Container {
             }
 
             // se elimina el listview en caso de que lo sea
-            if(this.childrenListViews.has){
+            /*
+            if(this.childrenListViews.has(item)){
                 this.childrenListViews.delete(item);
+            }
+            */
+
+            if(this.itemsListViews.has(item)){
+                // se destruyen las listviews hijas
+                let listviews = this.itemsListViews.get(item);
+                listviews.forEach((listview) => {
+                    if(this.childrenListViews.has(listview)){
+                        this.childrenListViews.delete(listview);
+                    }
+                    listview.destroy();
+                });
+                this.itemsListViews.delete(item);
             }
 
             // eliminar el item del array (funciona como un remove)
             this.items.splice(index, 1);    // 1 --> solo una ocurrencia
 
             item.destroy();
+            
+            // establecer ultimo elemento
+            if(this.items.length > 0){
+                this.lastItem = this.items[this.items.length - 1];
+            }
         }
     }
 

@@ -13,10 +13,13 @@ export default class TestMenu extends Phaser.Scene {
         let v = this.createListView(CANVAS_WIDTH / 2, CANVAS_HEIGHT / 2 - 200, 0.9);
         let subV = this.createListView(0, 0, 0.8);
         let subV2 = this.createListView(CANVAS_WIDTH / 2 - 400, CANVAS_HEIGHT / 2 - 200, 0.3);
-        v.addItem(subV);
-        subV.addItem(subV2);
+        v.addItem(subV, null, [subV]);
+        subV.addItem(subV2, null, [subV2]);
 
-        v.init();
+        let image = this.createImage();
+        subV2.addItem(image);
+
+        v.cropItems();
 
         //subV.removeByIndex(2);
         //subV.cropItems();
@@ -29,23 +32,25 @@ export default class TestMenu extends Phaser.Scene {
         let v = new VerticalListView(this, x, y, scale, 10, {width: 400, height: 400});
 
         // imagen 1
-        let image = this.add.image(0, 0, 'spFlag');
-        image.setAlpha(0.5);
-        image.setScale(1.1);
+        let image = this.createImage();
         let hit = new HitListElement(this, image);
         hit.on('pointerdown', () => {
             console.log("auch");
         })
-        image.h = image.displayHeight;
         v.addItem(image, [hit]);
 
         // imagen 2
-        image = this.add.image(0, 0, 'spFlag');
-        image.setAlpha(0.5);
-        image.setScale(1.1);
-        image.h = image.displayHeight;
+        image = this.createImage();
         v.addItem(image);
 
         return v;
+    }
+
+    createImage(){
+        let image = this.add.image(0, 0, 'spFlag');
+        image.setAlpha(0.5);
+        image.setScale(1.1);
+        image.h = image.displayHeight;
+        return image;
     }
 }

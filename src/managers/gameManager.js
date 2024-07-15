@@ -183,7 +183,7 @@ export default class GameManager {
     }
 
     startGame(userInfo) {
-        this.userInfo = userInfo
+        this.setUserInfo(userInfo);
 
         // IMPORTANTE: Hay que lanzar primero el UIManager para que se inicialice
         // el DialogManager y las escenas puedan crear los dialogos correctamente
@@ -193,6 +193,10 @@ export default class GameManager {
 
         sceneName = 'Test';
         this.changeScene(sceneName);
+    }
+
+    setUserInfo(userInfo){
+        this.userInfo = userInfo;
     }
 
     /**
@@ -207,7 +211,24 @@ export default class GameManager {
         if (this.UIManager && this.getDialogManager()) {
             this.getDialogManager().clearPortraits();
         }
+    }
 
+    switchToComputer(){
+        // se duerme la escena actual (se deja de actualizar y renderizar)
+        // (luego se va a poder despertar)
+        this.currentScene.scene.sleep();
+        // se cambia a la escena del ordenador
+        // run tiene 3 opciones:
+        // - si esta pausada (no se actualiza), se reanuda
+        // - si esta dormida (no se actualiza ni renderiza), se despierta
+        // - si no esta corriendo, se inicia
+        // La primera vez sucede que se inicio y luego, se va a despertar
+        this.currentScene.scene.run('ComputerScene');
+    }
+
+    leaveComputer(){
+        this.currentScene.scene.sleep('ComputerScene');
+        this.currentScene.scene.wake();
     }
 
     getDialogManager() {
@@ -218,12 +239,10 @@ export default class GameManager {
         if (this.UIManager) return this.UIManager.getPhoneManager();
         else return null;
     }
+    // tiene los campos: name, username, password, gender
     getUserInfo() {
         return this.userInfo;
     }
-
-
-
 
     ///////////////////////////////////////
     ///// Metodos para la blackboard /////

@@ -25,3 +25,8 @@ Fuentes que se usan en Phaser
     font-family: "gidole-regular";
     src: url('assets/fonts/Gidole-Regular.otf');
 }
+
+@font-face {
+    font-family: "dadha";
+    src: url('assets/fonts/dadha___.ttf');
+}

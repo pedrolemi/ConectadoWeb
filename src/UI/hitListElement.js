@@ -10,14 +10,35 @@ export default class HitListElement extends Phaser.GameObjects.Zone {
      */
     constructor(scene, renderObject){
         super(scene, 0, 0);
-
+        
         this.scene.add.existing(this);
-
+        
+        renderObject.setOrigin(0.5, 0);
         this.base = renderObject;
+        
+        this.setOrigin(0);
+        this.setInteractive();
+        // la interaccion con los objetos esta por encima del scrolling
+        this.setDepth(2);
 
-        this.setOrigin(0).setInteractive();
-        this.scene.input.enableDebug(this, '0xffffA0');
+        this.resetToBoundingRect();
+    }
 
+    getBoundingRect(){
+        // rectangulo del propio elemento
+        let matrix = this.base.getWorldTransformMatrix();
+        let x = matrix.tx - this.base.width / 2 * matrix.scaleX;
+        let y = matrix.ty - this.base.height / 2 * matrix.scaleY;
+        // el offset en y es para ponerlo origen(0.5, 0)
+        return new Phaser.Geom.Rectangle(x, y + (this.base.height * matrix.scaleY) / 2, 
+        this.base.width * matrix.scaleX, this.base.height * matrix.scaleY);
+    }
+
+    resetToBoundingRect(){
+        let rect = this.getBoundingRect();
+        this.setPosition(rect.x, rect.y);
+        this.setSize(rect.width, rect.height);
+        this.scene.input.enableDebug(this, '0x000000');
     }
 
     /**
@@ -27,13 +48,7 @@ export default class HitListElement extends Phaser.GameObjects.Zone {
      */
     intersect(boundingRects){
         if(boundingRects.length > 0){
-            // rectangulo del propio elemento
-            let matrix = this.base.getWorldTransformMatrix();
-            let x = matrix.tx - this.base.width / 2 * matrix.scaleX;
-            let y = matrix.ty - this.base.height / 2 * matrix.scaleY;
-            // el offset en y es para ponerlo origen(0.5, 0)
-            let rect = new Phaser.Geom.Rectangle(x, y + (this.base.height * matrix.scaleY) / 2, 
-            this.base.width * matrix.scaleX, this.base.height * matrix.scaleY);
+            let rect = this.getBoundingRect();
 
             let intersection = new Phaser.Geom.Rectangle();
             
@@ -50,8 +65,8 @@ export default class HitListElement extends Phaser.GameObjects.Zone {
             this.setSize(rect.width, rect.height);
             
             // se reajusta el input para que corresponda a la nueva zona
-            this.setInteractive();
-            this.scene.input.enableDebug(this, '0xffffA0');
+            //this.setInteractive();
+            this.scene.input.enableDebug(this, '0x000000');
         }
     }
 }

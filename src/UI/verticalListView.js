@@ -40,7 +40,10 @@ export default class VerticalListView extends Phaser.GameObjects.Container {
         this.boundedZone = this.scene.add.zone(0, 0, boundaries.width, boundaries.height);
         this.boundedZone.setOrigin(0.5, 0);
         this.boundedZone.setInteractive({draggable: true});
-        this.scene.input.enableDebug(this.boundedZone, '0xffffA0');
+        // el scrolling esta por encima de cualquier asset
+        // entonces, se va a poder scrollear sobre la propia listviewe
+        this.boundedZone.setDepth(1);
+        this.scene.input.enableDebug(this.boundedZone, '0x000000');
         this.add(this.boundedZone);
         // final en cuanto a tam del borde (propiedad personalizada)
         this.boundedZone.end = this.boundedZone.y + this.boundedZone.displayHeight;
@@ -467,6 +470,7 @@ export default class VerticalListView extends Phaser.GameObjects.Container {
                 item.destroy();
             }
         })
+        // eliminar listviews hijas
         this.items = [];
         this.childrenListViews.forEach((child) => {
             child.destroy();
@@ -523,10 +527,38 @@ export default class VerticalListView extends Phaser.GameObjects.Container {
         }
     }
 
-    removeChild(child){
-        let index = this.items.indexOf(child);
+    removeItem(item){
+        let index = this.items.indexOf(item);
         if (index > -1) {
             this.removeByIndex(index);
         }
+    }
+
+    /**
+     * Hacer la mascara y las areas de colision visibles o invisibles
+     * Aunque se cambie la visibilidad del container, la de estos elementos no cambia
+     * porque pertenecen a la escena
+     * @param {boolean} visible - visible o invisible 
+     */
+    setVisibleMaskAndHits(visible){
+        this.rectangleMask.setVisible(visible);
+        this.itemsHits.forEach((hits, item) => {
+            hits.forEach((hit) => {
+                hit.setVisible(visible);
+            });
+        });
+    }
+
+    setVisible(visible){
+        // no hace falta hacer invisible uno por uno cada item
+        // porque como estan en el container, si el container se
+        // hace invisible, ellos tb se vuelven invisibles
+        super.setVisible(visible);
+        this.setVisibleMaskAndHits(visible);
+        // se hacen invisible todos las listiviews hijas
+        // (para que se puedan hacer su mascara y sus areas de colision invisibles)
+        this.childrenListViews.forEach((child => {
+            child.setVisible(visible);
+        }));
     }
 }

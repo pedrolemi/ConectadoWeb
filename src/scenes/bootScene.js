@@ -18,6 +18,7 @@ export default class BootScene extends Phaser.Scene {
     }
 
     preload() {
+        // ASSETS
         this.load.setPath('./assets');
 
         // Caja de texto y de opcion multiple
@@ -50,7 +51,6 @@ export default class BootScene extends Phaser.Scene {
         this.load.image('chatTextBox', './UI/phone/chatTextBox.png');
         this.load.image('testIcon', './UI/AlexAvatar.png');
 
-
         // comprimir texturas (toma mucha menos memoria, aunque los archivos pueden ocupa mas tam)
         // Se comprueba de arriba a abajo hasta encontrar el primero que funcione en el dispositivo, si no, se usa png
         // formatos de compresion: ETC, ETC1, ATC, ASTC, BPTC, RGTC, PVRTC, S3TC, and S3TCSRB
@@ -73,7 +73,7 @@ export default class BootScene extends Phaser.Scene {
         this.load.image('powerOff', 'UI/titleMenu/power_off.png');
         this.load.image('logoWT', 'UI/titleMenu/logoWT.png');
 
-        // Menu donde introducir la informacion
+        // Menu de login
         this.load.image('loginBg', 'UI/userInfoMenu/LoginBackground.png');
         this.load.image('backButton', 'UI/userInfoMenu/backChatButton.png');
         this.load.image('boyIcon', 'UI/userInfoMenu/ChicoSelect.png');
@@ -84,6 +84,35 @@ export default class BootScene extends Phaser.Scene {
         this.load.image('spFlag', 'UI/languageMenu/spFlag.png');
         this.load.image('ukFlag', 'UI/languageMenu/ukFlag.png');
         this.load.image('ptFlag', 'UI/languageMenu/ptFlag.png');
+
+        // Ordenador
+        this.load.image('buttonBg', 'UI/computer/ButtonBg.png');
+        this.load.image('postit', 'UI/computer/postit.png')
+        this.load.image('closerBrowser', 'UI/computer/closerBrowser.png');
+        this.load.image('socialNetLogo', 'UI/computer/SocialNetLogo.png');
+        this.load.image('computerMainView', 'UI/computer/MainViewBackground.png');
+        this.load.image('buttonBg', 'UI/computer/ButtonBg.png');
+        this.load.image('friendsIcon', 'UI/computer/Friends.png');
+        this.load.image('dialogBubbleIcon', 'UI/computer/Home.png');
+        this.load.image('photosIcon', 'UI/computer/Photos.png');
+        this.load.image('pfpM', 'UI/computer/profilePhotoH.png');
+        this.load.image('pfpF', 'UI/computer/profilePhotoM.png');
+        //this.load.image('buttonAcceptBg', 'UI/computer/buttonAcceptBg.png')
+        this.load.image('newFriendBg', 'UI/computer/NewFriendBG.png');
+        this.load.image('oldFriendBg', 'UI/computer/OldFriendBG.png');
+        this.load.image('block', 'UI/computer/Block.png');
+
+        // Avatares de los personajes
+        this.load.image('alexAvatar', 'UI/charactersAvatars/AlexAvatar.png');
+        this.load.image('alisonAvatar', 'UI/charactersAvatars/AlisonAvatar.png');
+        this.load.image('anaAvatar', 'UI/charactersAvatars/AnaAvatar.png');
+        this.load.image('boyAvatar', 'UI/charactersAvatars/BoyAvatar.png');
+        this.load.image('girlAvatar', 'UI/charactersAvatars/GirlAvatar.png');
+        this.load.image('guilleAvatar', 'UI/charactersAvatars/GuilleAvatar.png');
+        this.load.image('joseAvatar', 'UI/charactersAvatars/JoseAvatar.png');
+        this.load.image('mariaAvatar', 'UI/charactersAvatars/MariaAvatar.png');
+        this.load.image('parentsAvatar', 'UI/charactersAvatars/ParentsAvatar.png');
+        this.load.image('teacherAvatar', 'UI/charactersAvatars/TeacherAvatar.png');
 
         // Test
         this.load.image('bg', 'patio.png');
@@ -124,7 +153,8 @@ export default class BootScene extends Phaser.Scene {
             }
         })
 
-        // Archivos de dialogos
+        // ARCHIVOS DE DIALOGOS
+
         this.load.setPath('./localization');
         this.load.json('momDialog', './momDialog.json');
         this.load.json('dadDialog', './dadDialog.json');
@@ -132,8 +162,18 @@ export default class BootScene extends Phaser.Scene {
 
     create() {
         let gameManager = GameManager.create(this);
-        //gameManager.startLangMenu();
-        this.scene.start('TestMenu');
+        gameManager.startLangMenu();
+        // TEST
+        /*
+        let userInfo = {
+            name: "Laura",
+            username: "lauritaloka",
+            password: "hola123",
+            gender: "female"
+        }
+        gameManager.setUserInfo(userInfo);
+        this.scene.start('ComputerScene');
+        */
     }
 
 }

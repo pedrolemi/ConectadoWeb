@@ -181,8 +181,9 @@ export default class TextInput extends Phaser.GameObjects.Container {
                 // Se deja el texto ya escrito o si no se ha escrito ningun
                 // texto, se vuelve al texto por defecto
                 if (!this.currentText) {
-                    this.setText(this.defaultText);
-                    this.text.setAlpha(this.defaultTextAlpha).setFontStyle('italic');
+                    this.setDefaultText();
+                    //this.setText(this.defaultText);
+                    //this.text.setAlpha(this.defaultTextAlpha).setFontStyle('italic');
                 }
 
                 // Se desactiva el cursor
@@ -204,5 +205,18 @@ export default class TextInput extends Phaser.GameObjects.Container {
     isValid() {
         let aux = this.currentText !== "";
         return aux;
+    }
+
+    reset(){
+        this.isEnteringName = false;
+        this.currentText = "";
+        this.setDefaultText();
+        this.cursor.setAlpha(0);
+        this.cursorTween.pause();
+    }
+
+    setDefaultText(){
+        this.setText(this.defaultText);
+        this.text.setAlpha(this.defaultTextAlpha).setFontStyle('italic');
     }
 }

@@ -1,0 +1,22 @@
+{
+    "root": {
+        "type": "choice",
+        "choices":[
+            { "next": "answer", "chat": 0, "reply": true },
+            { "next": "answer" }
+        ]
+    },
+    "answer": {
+        "type": "textMessage",
+        "character": "mom",
+        "chat": 0,
+        "replyDelay": 1000,
+        "next": "answer2"
+    },
+    "answer2": {
+        "type": "textMessage",
+        "character": "player",
+        "chat": 0,
+        "replyDelay": 1000
+    }
+}

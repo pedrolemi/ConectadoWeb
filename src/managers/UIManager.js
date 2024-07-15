@@ -12,6 +12,9 @@ export default class UIManager extends Phaser.Scene {
     }
 
     create() {
+        this.CANVAS_WIDTH = this.sys.game.canvas.width
+        this.CANVAS_HEIGHT = this.sys.game.canvas.height;
+
         // Configuracion de texto por defecto
         this.textConfig = {
             fontFamily: 'Arial',        // Fuente (tiene que estar precargada en el html o el css)

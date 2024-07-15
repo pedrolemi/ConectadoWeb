@@ -56,7 +56,7 @@
     "setTalked": {
         "type": "event",
         "events": [
-            { "talked": { } },
+            { "talked": { "delay": 20 } },
             { "b": { "String": "ddsad" } },
             { "c": { 
                 "Vector2": {

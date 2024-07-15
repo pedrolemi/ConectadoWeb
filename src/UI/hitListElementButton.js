@@ -1,9 +1,9 @@
 import HitListElement from './hitListElement.js';
 
 export default class HitListElementButton extends HitListElement {
-    constructor(scene, renderObject, normalCol, highlightedCol, pressedCol, fn){
+    constructor(scene, renderObject, normalCol, highlightedCol, pressedCol, fn) {
         super(scene, renderObject);
-        
+
         let nCol = Phaser.Display.Color.GetColor(normalCol.R, normalCol.G, normalCol.B);
         nCol = Phaser.Display.Color.IntegerToRGB(nCol);
         let hCol = Phaser.Display.Color.GetColor(highlightedCol.R, highlightedCol.G, highlightedCol.B);

@@ -1,7 +1,5 @@
 import BaseScreen from "./baseScreen.js";
-import Chat1Screen from "./chat1Screen.js";
-import Chat2Screen from "./chat2Screen.js";
-
+import ChatScreen from "./chatScreen.js";
 
 export default class MessagesScreen extends BaseScreen {
     constructor(scene, phone, prevScreen) {
@@ -147,9 +145,9 @@ export default class MessagesScreen extends BaseScreen {
     /**
      * Anade la pantalla (creada previamente) indicada en el parametro
      * screen al telefono y anade el boton del chat en esta pantalla 
-     * @param {} screen - pantalla del chat a anadir 
-     * @param {*} icon - foto de perfil del contacto
-     * @param {*} name - nombre del contacto
+     * @param {Phaser.Scene} screen - pantalla del chat a anadir 
+     * @param {String} icon - id de la imagen con la foto de perfil del contacto
+     * @param {String} name - nombre del contacto
      */
     addChatToPhone(screen, icon, name) {
         // Anade la pantalla al contenedor del telefono y la hace invisible
@@ -176,13 +174,13 @@ export default class MessagesScreen extends BaseScreen {
     // Metodos para crear los chats 1 y 2
     showChat1() {
         let chatNames = this.i18next.t("textMessages", { ns: "phone", returnObjects: true });
-        let screen = new Chat1Screen(this.scene, this.phone, this, chatNames.chat1.name, "testIcon");
-        this.addChatToPhone(screen, "testIcon", chatNames.chat1.name)
+        let screen = new ChatScreen(this.scene, this.phone, this, chatNames.chat1, "testIcon");
+        this.addChatToPhone(screen, "testIcon", chatNames.chat1)
     }
     showChat2() {
         let chatNames = this.i18next.t("textMessages", { ns: "phone", returnObjects: true });
-        let screen = new Chat2Screen(this.scene, this.phone, this, chatNames.chat2.name, "testIcon");
-        this.addChatToPhone(screen, "testIcon", chatNames.chat2.name)
+        let screen = new ChatScreen(this.scene, this.phone, this, chatNames.chat2, "testIcon");
+        this.addChatToPhone(screen, "testIcon", chatNames.chat2)
     }
 
 

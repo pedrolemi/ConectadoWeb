@@ -34,10 +34,12 @@ export default class BootScene extends Phaser.Scene {
         this.load.image('phone', './UI/phone/phone.png');
         this.load.image('alarmBg', './UI/phone/alarmBg.png');
         this.load.image('mainScreenBg', './UI/phone/mainScreenBg.png');
-        this.load.image('statusBG', './UI/phone/statusBg.png');
+        this.load.image('statusBg', './UI/phone/statusBg.png');
         this.load.image('messagesBg', './UI/phone/messagesBg.png');
-        this.load.image('chatBG', './UI/phone/chatBg.png');
+        this.load.image('chatBg', './UI/phone/chatBg.png');
         this.load.image('settingsBg', './UI/phone/settingsBg.png');
+        this.load.image('chatBgTop', './UI/phone/chatBgTop.png');
+
 
         // Botones del telefono
         this.load.image('returnButton', './UI/phone/triangle.png');
@@ -50,6 +52,10 @@ export default class BootScene extends Phaser.Scene {
         this.load.image('chatButton', './UI/phone/chatButton.png');
         this.load.image('chatTextBox', './UI/phone/chatTextBox.png');
         this.load.image('testIcon', './UI/AlexAvatar.png');
+
+        this.load.image('myBubble', './UI/phone/9slicePlaeyrs.png');
+        this.load.image('othersBubble', './UI/phone/9sliceOthers.png');
+        this.load.image('commentBubble', './UI/9sliceComments.png');
 
         // comprimir texturas (toma mucha menos memoria, aunque los archivos pueden ocupa mas tam)
         // Se comprueba de arriba a abajo hasta encontrar el primero que funcione en el dispositivo, si no, se usa png
@@ -140,7 +146,7 @@ export default class BootScene extends Phaser.Scene {
             // en cualquier idioma (aunque o existiese)
             supportedLngs: ['en', 'es'],
             // namespaces que se cargan para cada uno de los idiomas
-            ns: ['names', 'momDialog', 'dadDialog', 'userInfoMenu', 'titleMenu', 'phone'],
+            ns: ['names', 'userInfoMenu', 'titleMenu', 'phone', 'momDialog', 'dadDialog', 'chat1'],
             preload: ['en', 'es'],
             // mostrar informacion de ayuda por consola
             debug: false,
@@ -158,13 +164,14 @@ export default class BootScene extends Phaser.Scene {
         this.load.setPath('./localization');
         this.load.json('momDialog', './momDialog.json');
         this.load.json('dadDialog', './dadDialog.json');
+        this.load.json('chat1', './chat1.json');
+
     }
 
     create() {
         let gameManager = GameManager.create(this);
-        gameManager.startLangMenu();
+        
         // TEST
-        /*
         let userInfo = {
             name: "Laura",
             username: "lauritaloka",
@@ -172,8 +179,9 @@ export default class BootScene extends Phaser.Scene {
             gender: "female"
         }
         gameManager.setUserInfo(userInfo);
-        this.scene.start('ComputerScene');
-        */
+        // this.scene.start('ComputerScene');
+        gameManager.startLangMenu();
+
     }
 
 }

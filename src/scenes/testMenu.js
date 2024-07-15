@@ -2,11 +2,11 @@ import VerticalListView from '../UI/verticalListView.js'
 import HitListElement from '../UI/hitListElement.js'
 
 export default class TestMenu extends Phaser.Scene {
-    constructor(){
-        super({key: 'TestMenu'});
+    constructor() {
+        super({ key: 'TestMenu' });
     }
 
-    create(){
+    create() {
         const CANVAS_WIDTH = this.sys.game.canvas.width;
         const CANVAS_HEIGHT = this.sys.game.canvas.height;
 
@@ -28,8 +28,8 @@ export default class TestMenu extends Phaser.Scene {
         //v.cropItems();
     }
 
-    createListView(x, y, scale){
-        let v = new VerticalListView(this, x, y, scale, 10, {width: 400, height: 400});
+    createListView(x, y, scale) {
+        let v = new VerticalListView(this, x, y, scale, 10, { width: 400, height: 400 });
 
         // imagen 1
         let image = this.createImage();
@@ -46,7 +46,7 @@ export default class TestMenu extends Phaser.Scene {
         return v;
     }
 
-    createImage(){
+    createImage() {
         let image = this.add.image(0, 0, 'spFlag');
         image.setAlpha(0.5);
         image.setScale(1.1);

@@ -9,20 +9,8 @@
     },
     "textMessages": {
         "title": "CHATS",
-        "chat1": {
-            "name": "Alison class",
-            "options": [
-                "Bruh",
-                "AAAAAAAA"
-            ]
-        },
-        "chat2": {
-            "name": "Class",
-            "options": [
-                "._.",
-                "xdddd"
-            ]
-        }
+        "chat1": "Alison class",
+        "chat2": "Class"
     },
     "settings": {
         "text": "You will return to the main screen. Are you sure?",

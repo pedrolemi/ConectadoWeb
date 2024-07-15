@@ -9,16 +9,13 @@ export default class TextBox extends DialogObject {
     constructor(scene, dialogManager) {
         super(scene);
         this.scene = scene;
-
-        this.CANVAS_WIDTH = scene.sys.game.canvas.width
-        this.CANVAS_HEIGHT = scene.sys.game.canvas.height;
-
+        
         // Configuracion de la imagen de la caja de texto
         this.padding = 10;        // Espacio entre la caja y los bordes del canvas
 
         // Imagen de la caja
-        this.box = scene.add.image(this.CANVAS_WIDTH / 2, this.CANVAS_HEIGHT - this.padding, 'dialog', 'textbox.png').setOrigin(0.5, 1);
-        let horizontalScale = (this.CANVAS_WIDTH - this.padding * 2) / this.box.width;
+        this.box = scene.add.image(this.scene.CANVAS_WIDTH / 2, this.scene.CANVAS_HEIGHT - this.padding, 'dialog', 'textbox.png').setOrigin(0.5, 1);
+        let horizontalScale = (this.scene.CANVAS_WIDTH - this.padding * 2) / this.box.width;
         this.box.setScale(horizontalScale, 1);
         this.box.visible = true;
 
@@ -28,14 +25,14 @@ export default class TextBox extends DialogObject {
         });
 
         // Imagen de la caja del nombre
-        this.nameBox = scene.add.image(this.CANVAS_WIDTH / 2, this.CANVAS_HEIGHT - this.padding, 'dialog', 'textboxName.png').setOrigin(0.5, 1);
+        this.nameBox = scene.add.image(this.scene.CANVAS_WIDTH / 2, this.scene.CANVAS_HEIGHT - this.padding, 'dialog', 'textboxName.png').setOrigin(0.5, 1);
         this.nameBox.setScale(horizontalScale, 1);
         this.nameBox.visible = true;
 
         this.height = 135;      // Alto que va a ocupar el texto
         // this.graphics = scene.add.graphics();
         // this.graphics.fillStyle('black', 1);
-        // this.graphics.fillRect(230 , this.CANVAS_HEIGHT / 1.28, (this.CANVAS_WIDTH - this.padding) / 1.53, this.height);
+        // this.graphics.fillRect(230 , this.scene.CANVAS_HEIGHT / 1.28, (this.scene.CANVAS_WIDTH - this.padding) / 1.53, this.height);
 
 
         // Configuracion del texto de la caja
@@ -137,13 +134,13 @@ export default class TextBox extends DialogObject {
     createText(text, character) {
         let x = 230;
         let y = 660;
-        let width = (this.CANVAS_WIDTH - this.padding) / 1.53;
+        let width = (this.scene.CANVAS_WIDTH - this.padding) / 1.53;
 
         // Si el personaje que habla es el jugador, modifica la posicion
         // y los margenes del texto porque no hace falta mostrar su retrato
         if (character === "player") {
             x = 110;
-            width = (this.CANVAS_WIDTH - this.padding) / 1.30;
+            width = (this.scene.CANVAS_WIDTH - this.padding) / 1.30;
         }
         this.normalTextConfig.wordWrap = {
             width: width,

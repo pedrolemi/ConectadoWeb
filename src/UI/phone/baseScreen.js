@@ -3,11 +3,11 @@ import GameManager from "../../managers/gameManager.js";
 export default class BaseScreen extends Phaser.GameObjects.Container {
     /**
      * Pantalla base para las distintas pantallas del telefono
-     * @extends {Phaser.Scene}
-     * @param {*} scene - escena a la que pertenece (UIManager)
-     * @param {*} phone - telefono
-     * @param {*} bgImage - id de la imagen de fondo
-     * @param {*} prevScreen - pantalla anterior
+     * @extends {Phaser.GameObjects.Container}
+     * @param {Phaser.Scene} scene - escena a la que pertenece (UIManager)
+     * @param {Phone} phone - telefono
+     * @param {String} bgImage - id de la imagen de fondo
+     * @param {BaseScreen} prevScreen - pantalla anterior
      */
     constructor(scene, phone, bgImage, prevScreen) {
         super(scene, 0, 0);

@@ -1,4 +1,6 @@
 import BaseScreen from "./baseScreen.js";
+import VerticalListView from "../verticalListView.js";
+import messageBox from "../messageBox.js";
 
 export default class ChatScreen extends BaseScreen {
     /**
@@ -13,7 +15,7 @@ export default class ChatScreen extends BaseScreen {
      * @param {String} icon - icono del contacto
      */
     constructor(scene, phone, prevScreen, name, icon) {
-        super(scene, phone, 'chatBG', prevScreen);
+        super(scene, phone, 'chatBg', prevScreen);
 
         // Quita los botones de la parte inferior
         this.remove(this.returnButton);
@@ -29,7 +31,8 @@ export default class ChatScreen extends BaseScreen {
 
         // Configuracion de texto para la el texto de el titulo
         let textConfig = { ...scene.textConfig };
-        textConfig.fontFamily = 'arial';
+        textConfig.fontFamily = 'roboto';
+        textConfig.style = 'normal';
         textConfig.fontSize = 25 + 'px';
         textConfig.color = '#000';
         textConfig.strokeThickness = 0;
@@ -42,15 +45,37 @@ export default class ChatScreen extends BaseScreen {
         this.iconImage.setScale((this.nameText.displayHeight / this.iconImage.displayHeight) * 1.5);
         this.iconImage.x -= this.iconImage.displayWidth;
 
-
+        // Icono de las notificaciones y cantidad de notificaciones
         this.notifications = null;
         this.notificationAmount = 0;
 
-        this.node = null;
+        // Nodo de texto que se reproducira al pulsar el boton de erespuesta
+        this.currNode = null;
 
+        // Partes de la pantalla que tapan el chat
+        this.topArea = scene.add.image(this.BG_X, this.BG_Y, 'chatBgTop');
+
+
+        // Lista con los mensajes
+        this.messagesListView = new VerticalListView(this.scene, this.BG_X, this.iconImage.displayHeight * 1.5 + (this.BG_Y - this.bg.displayHeight / 2),
+            1, 10, { width: this.bg.displayWidth, height: this.bg.displayHeight - this.iconImage.displayHeight * 3 }
+        );
+
+        this.add(this.topArea);
         this.add(this.nameText);
         this.add(this.iconImage);
+        this.add(this.messagesListView);
+
+
+        // Deja los mensajes debajo por si acaso
+        this.bringToTop(this.messagesListView);
+        this.bringToTop(this.topArea);
+        this.bringToTop(this.textBox);
+        this.bringToTop(this.returnButton);
+        this.bringToTop(this.nameText);
+        this.bringToTop(this.iconImage);
     }
+
 
     // Crea la caja de respuesta
     createTextBox() {
@@ -65,60 +90,69 @@ export default class ChatScreen extends BaseScreen {
 
         // Hace fade del color de la caja al pasar o quitar el raton por encima
         this.textBox.on('pointerover', () => {
-            this.scene.tweens.addCounter({
-                targets: [this.textBox],
-                from: 0,
-                to: 100,
-                onUpdate: (tween) => {
-                    const value = tween.getValue();
-                    let col = Phaser.Display.Color.Interpolate.ColorWithColor(noTint, pointerOverColor, 100, value);
-                    let colInt = Phaser.Display.Color.GetColor(col.r, col.g, col.b);
-                    this.textBox.setTint(colInt);
-                },
-                duration: tintFadeTime,
-                repeat: 0,
-            });
+            if (!this.scene.getDialogManager().isTalking()) {
+                this.scene.tweens.addCounter({
+                    targets: [this.textBox],
+                    from: 0,
+                    to: 100,
+                    onUpdate: (tween) => {
+                        const value = tween.getValue();
+                        let col = Phaser.Display.Color.Interpolate.ColorWithColor(noTint, pointerOverColor, 100, value);
+                        let colInt = Phaser.Display.Color.GetColor(col.r, col.g, col.b);
+                        this.textBox.setTint(colInt);
+                    },
+                    duration: tintFadeTime,
+                    repeat: 0,
+                });
+            }
+
         });
         this.textBox.on('pointerout', () => {
-            this.scene.tweens.addCounter({
-                targets: [this.textBox],
-                from: 0,
-                to: 100,
-                onUpdate: (tween) => {
-                    const value = tween.getValue();
-                    let col = Phaser.Display.Color.Interpolate.ColorWithColor(pointerOverColor, noTint, 100, value);
-                    let colInt = Phaser.Display.Color.GetColor(col.r, col.g, col.b);
-                    this.textBox.setTint(colInt);
-                },
-                duration: tintFadeTime,
-                repeat: 0,
-            });
+            if (!this.scene.getDialogManager().isTalking()) {
+                this.scene.tweens.addCounter({
+                    targets: [this.textBox],
+                    from: 0,
+                    to: 100,
+                    onUpdate: (tween) => {
+                        const value = tween.getValue();
+                        let col = Phaser.Display.Color.Interpolate.ColorWithColor(pointerOverColor, noTint, 100, value);
+                        let colInt = Phaser.Display.Color.GetColor(col.r, col.g, col.b);
+                        this.textBox.setTint(colInt);
+                    },
+                    duration: tintFadeTime,
+                    repeat: 0,
+                });
+            }
         });
 
         // Al hacer click, vuelve a cambiar el color de la caja al original
         this.textBox.on('pointerdown', (pointer) => {
-            let fadeColor = this.scene.tweens.addCounter({
-                targets: [this.textBox],
-                from: 0,
-                to: 100,
-                onUpdate: (tween) => {
-                    const value = tween.getValue();
-                    let col = Phaser.Display.Color.Interpolate.ColorWithColor(noTint, pointerOverColor, 100, value);
-                    let colInt = Phaser.Display.Color.GetColor(col.r, col.g, col.b);
-                    this.textBox.setTint(colInt);
+            if (!this.scene.getDialogManager().isTalking()) {
+                let fadeColor = this.scene.tweens.addCounter({
+                    targets: [this.textBox],
+                    from: 0,
+                    to: 100,
+                    onUpdate: (tween) => {
+                        const value = tween.getValue();
+                        let col = Phaser.Display.Color.Interpolate.ColorWithColor(noTint, pointerOverColor, 100, value);
+                        let colInt = Phaser.Display.Color.GetColor(col.r, col.g, col.b);
+                        this.textBox.setTint(colInt);
+                    },
+                    duration: tintFadeTime,
+                    repeat: 0,
                     yoyo: true
-                },
-                duration: tintFadeTime,
-                repeat: 0,
-            });
-            // Si se ha hecho la animacion, al terminar la animacion hace que
-            // el dialogManager cree las opciones para responder y las active
-            if (fadeColor) {
-                fadeColor.on('complete', () => {
-                    this.gameManager.getDialogManager().setNode(this.node);
                 });
+                // Si se ha hecho la animacion, al terminar la animacion hace que
+                // el dialogManager cree las opciones para responder y las active
+                if (fadeColor) {
+                    let hasRun = false;
+                    fadeColor.on('complete', () => {
+                        this.gameManager.getDialogManager().setNode(this.currNode);
+                    });
 
+                }
             }
+
         });
 
         this.add(this.textBox);
@@ -137,34 +171,43 @@ export default class ChatScreen extends BaseScreen {
         // al quitar el raton de encima vuelve a su tamano original,
         // y al hacer click, se hace pequeno y grande de nuevo
         this.returnButton.on('pointerover', () => {
-            this.scene.tweens.add({
-                targets: [this.returnButton],
-                scale: originalScale * 1.2,
-                duration: 0,
-                repeat: 0,
-            });
+            if (!this.scene.getDialogManager().isTalking()) {
+                this.scene.tweens.add({
+                    targets: [this.returnButton],
+                    scale: originalScale * 1.2,
+                    duration: 0,
+                    repeat: 0,
+                });
+
+            }
         });
         this.returnButton.on('pointerout', () => {
-            this.scene.tweens.add({
-                targets: [this.returnButton],
-                scale: originalScale,
-                duration: 0,
-                repeat: 0,
-            });
+            if (!this.scene.getDialogManager().isTalking()) {
+                this.scene.tweens.add({
+                    targets: [this.returnButton],
+                    scale: originalScale,
+                    duration: 0,
+                    repeat: 0,
+                });
+            }
+
         });
         this.returnButton.on('pointerdown', (pointer) => {
-            let anim = this.scene.tweens.add({
-                targets: [this.returnButton],
-                scale: originalScale,
-                duration: 20,
-                repeat: 0,
-                yoyo: true
-            });
+            if (!this.scene.getDialogManager().isTalking()) {
+                let anim = this.scene.tweens.add({
+                    targets: [this.returnButton],
+                    scale: originalScale,
+                    duration: 20,
+                    repeat: 0,
+                    yoyo: true
+                });
 
-            // Cuando termina la animacion, vuelve a la pantalla anterior
-            anim.on('complete', () => {
-                this.phone.toPrevScreen();
-            })
+                // Cuando termina la animacion, vuelve a la pantalla anterior
+                anim.on('complete', () => {
+                    this.phone.toPrevScreen();
+                });
+            }
+
         });
 
         this.add(this.returnButton);
@@ -175,6 +218,7 @@ export default class ChatScreen extends BaseScreen {
     // (genera -notificationAmount para quitarlas todas)
     clearNotifications() {
         this.generateNotifications(-this.notificationAmount);
+        console.log(this.currNode)
     }
 
     /**
@@ -202,6 +246,23 @@ export default class ChatScreen extends BaseScreen {
      * @param {DialogNode} node - nodo de dialogo que se va a reproducir
      */
     setNode(node) {
-        this.node = node;
+        this.currNode = node;
+    }
+
+    /**
+     * Anade el mensaje a la lista de mensajes
+     * @param {String} text - texto del mensaje
+     * @param {String} character - id del personaje que envia el mensaje
+     * @param {String} name - nombre del personaje que envia el mensaje
+     */
+    addMessage(text, character, name) {
+        // Si la pantalla actual no es la del chat, se genera una notificacion
+        if (this.phone.currScreen !== this) {
+            this.generateNotifications(1);
+        }
+
+        // Crea la caja del mensaje y la anade a la lista
+        let msg = new messageBox(this.scene, text, character, name, 0, this.bg.displayWidth);
+        this.messagesListView.addItem(msg);
     }
 }

@@ -1,4 +1,4 @@
-import DialogNode from '../UI/dialog/dialogNode.js';
+import { TextNode, ChoiceNode, ConditionNode, EventNode, ChatNode } from '../UI/dialog/dialogNode.js';
 import GameManager from '../managers/gameManager.js';
 import EventDispatcher from '../eventDispatcher.js';
 
@@ -97,21 +97,23 @@ export default class BaseScene extends Phaser.Scene {
     * archivo sin la extension .json
     */
     readNodes(id, file, namespace, playerName, context, getObjs) {
-        // Crea el nodo y establece sus atributos
-        let currNode = new DialogNode();
-        currNode.id = id;
-        currNode.type = file[id].type;
-        currNode.character = file[id].character;
+        // Crea el nodo y guarda sus atributos (se estableceran en el nodo al final)
+        let node = null;
+        let nodeId = id;
+        let type = file[id].type;
+        let character = file[id].character;
 
         // Obtiene el nombre del personaje del archivo de nombres localizados
-        currNode.name = this.i18next.t(file[id].character, { ns: "names", returnObjects: getObjs });
-        if (currNode.character === "player") {
-            currNode.name = this.gameManager.getUserInfo().name;
+        let name = this.i18next.t(file[id].character, { ns: "names", returnObjects: getObjs });
+        if (name === "player") {
+            name = this.gameManager.getUserInfo().name;
         }
 
 
         // Si el nodo es de tipo condicion
-        if (currNode.type === "condition") {
+        if (type === "condition") {
+            node = new ConditionNode();
+
             // Se leen todas las condiciones. Cada condicion lleva a un nodo distinto y 
             // en una condicion se pueden comprobar multiples variables
             for (let i = 0; i < file[id].conditions.length; i++) {
@@ -143,51 +145,68 @@ export default class BaseScene extends Phaser.Scene {
                 }
 
                 // Se guardan las condiciones 
-                currNode.conditions.push(nodeConditions);
+                node.conditions.push(nodeConditions);
 
                 // Si hay un nodo despues de este, se crea de manera recursiva el nodo siguiente que corresponde a cumplir dichas condiciones
                 if (file[id].conditions[i].next) {
-                    currNode.next.push(this.readNodes(file[id].conditions[i].next, file, namespace, playerName, context, getObjs));
+                    node.next.push(this.readNodes(file[id].conditions[i].next, file, namespace, playerName, context, getObjs));
                 }
             }
         }
         // Si el nodo es de tipo texto
-        else if (currNode.type === "text") {
+        else if (type === "text") {
+            node = new TextNode(); 
             // Se crea un dialogo con todo el texto a mostrar
             let split = {
                 // Obtiene el texto del archivo de textos traducidos
                 text: this.i18next.t(id + ".text", { ns: namespace, name: playerName, context: context, returnObjects: getObjs }),
-                character: currNode.character,
-                name: currNode.name
+                character: character,
+                name: name
             }
             // Se obtiene todo el texto separado en varios dialogos si es demasiado largo
-            currNode.dialogs = this.splitDialogs([split]);
-            currNode.currDialog = 0;
+            node.dialogs = this.splitDialogs([split]);
+            node.currDialog = 0;
 
             // Si hay un nodo despues de este, se crea de manera recursiva
             if (file[id].next) {
-                currNode.next.push(this.readNodes(file[id].next, file, namespace, playerName, context, getObjs));
+                node.next.push(this.readNodes(file[id].next, file, namespace, playerName, context, getObjs));
             }
-
         }
         // Si el nodo es de tipo opcion multiple
-        else if (currNode.type === "choice") {
+        else if (type === "choice") {
+            node = new ChoiceNode();
+            
             // Se obtienen los textos de las opciones del archivo de textos traducidos
             let texts = this.i18next.t(id, { ns: namespace, name: playerName, context: context, returnObjects: getObjs })
 
             for (let i = 0; i < file[id].choices.length; i++) {
                 // Se guarda el texto de la eleccion y se crea de manera recursiva
                 // el nodo siguiente que corresponde a elegir dicha opcion
-                currNode.choices.push(texts[i].text);
+                let choice = {
+                    text: texts[i].text,
+                    reply: false,
+                    chat: null
+                }
+
+                // Si es una respuesta de un mensaje de texto, guarda si elegir la 
+                // opcion conlleva a responder el mensaje de texto o no
+                if (file[id].choices[i].reply) {
+                    choice.reply = file[id].choices[i].reply;
+                    choice.chat = file[id].choices[i].chat;
+                }
+
+                node.choices.push(choice);
 
                 // Si hay un nodo despues de este, se crea de manera recursiva
                 if (file[id].choices[i].next) {
-                    currNode.next.push(this.readNodes(file[id].choices[i].next, file, namespace, playerName, context, getObjs));
+                    node.next.push(this.readNodes(file[id].choices[i].next, file, namespace, playerName, context, getObjs));
                 }
             }
         }
-
-        else if (currNode.type === "event") {
+        // Si el nodo es de tipo evento
+        else if (type === "event") {
+            node = new EventNode();
+            
             // Recorre todas las variables obtenidas
             for (let i = 0; i < file[id].events.length; i++) {
                 // // Lee el nombre del evento
@@ -201,11 +220,40 @@ export default class BaseScene extends Phaser.Scene {
                 evt.name = evtName[0];
 
                 // Lo mete en las variables del nodo
-                currNode.events.push(evt);
+                node.events.push(evt);
+            }
+            
+            // Si hay un nodo despues de este, se crea de manera recursiva
+            if (file[id].next) {
+                node.next.push(this.readNodes(file[id].next, file, namespace, playerName, context, getObjs));
+            }
+        }
+        // Si el nodo es de tipo mensaje de texto
+        else if (type === "textMessage") {
+            node = new ChatNode();
+
+            // Obtiene el texto del archivo de textos traducidos y lo guarda
+            let text = this.i18next.t(id + ".text", { ns: namespace, name: playerName, context: context, returnObjects: getObjs });
+            node.text = text;
+
+            // Guarda el chat en el que tiene que ir la respuesta y el retardo con el que se envia
+            node.chat = file[id].chat;
+            if (file[id].replyDelay) {
+                node.replyDelay = file[id].replyDelay;
+            }
+
+            // Si hay un nodo despues de este, se crea de manera recursiva
+            if (file[id].next) {
+                node.next.push(this.readNodes(file[id].next, file, namespace, playerName, context, getObjs));
             }
         }
 
-        return currNode;
+        // Guarda los atributos basicos del nodo despues de haber decidido que tipo de nodo se va a crear
+        node.character = character;
+        node.name = name;
+        node.id = nodeId;
+
+        return node;
     }
 
     /**

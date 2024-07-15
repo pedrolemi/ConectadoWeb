@@ -12,15 +12,12 @@ export default class OptionBox extends DialogObject {
     constructor(scene, dialogManager, index, numOpts, text) {
         super(scene);
 
-        this.CANVAS_WIDTH = scene.sys.game.canvas.width
-        this.CANVAS_HEIGHT = scene.sys.game.canvas.height;
-
         let padding = 10;
-        this.box = scene.add.image(this.CANVAS_WIDTH / 2, 0, 'dialog', 'optionBg.png').setOrigin(0.5, 0);
-        let scale = this.CANVAS_WIDTH / (this.box.width + padding);
+        this.box = scene.add.image(this.scene.CANVAS_WIDTH / 2, 0, 'dialog', 'optionBg.png').setOrigin(0.5, 0);
+        let scale = this.scene.CANVAS_WIDTH / (this.box.width + padding);
         this.box.setScale(scale);
 
-        this.box.y = this.CANVAS_HEIGHT - (this.box.displayHeight * numOpts) + (this.box.displayHeight * index);
+        this.box.y = this.scene.CANVAS_HEIGHT - (this.box.displayHeight * numOpts) + (this.box.displayHeight * index);
 
         // Configuracion del texto de la caja
         this.textConfig = { ...scene.textConfig };

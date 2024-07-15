@@ -2,7 +2,6 @@ import AlarmScreen from "./alarmScreen.js";
 import MainScreen from "./mainScreen.js";
 import StatusScreen from "./statusScreen.js";
 import MessagesScreen from "./messagesScreen.js";
-import Chat1Screen from "./chat1Screen.js";
 import SettingsScreen from "./settingsScreen.js";
 
 export default class Phone extends Phaser.GameObjects.Container {
@@ -12,14 +11,11 @@ export default class Phone extends Phaser.GameObjects.Container {
         this.phoneManager = phoneManager;
 
         // Configuracion de las posiciones y dimensiones
-        this.CANVAS_WIDTH = scene.sys.game.canvas.width
-        this.CANVAS_HEIGHT = scene.sys.game.canvas.height;
-
         this.PHONE_X = 450;
         this.PHONE_Y = 800;
 
-        this.BG_X = this.CANVAS_WIDTH / 2 + 36;
-        this.BG_Y = this.CANVAS_HEIGHT / 2 + 6;
+        this.BG_X = this.scene.CANVAS_WIDTH / 2 + 36;
+        this.BG_Y = this.scene.CANVAS_HEIGHT / 2 + 6;
 
 
         // Se crean las imagenes y diferentes pantallas
@@ -53,7 +49,6 @@ export default class Phone extends Phaser.GameObjects.Container {
         this.bringToTop(this.phone);
 
         this.currScreen = null;
-        this.toMainScreen();
 
         scene.add.existing(this);
     }
@@ -174,6 +169,19 @@ export default class Phone extends Phaser.GameObjects.Container {
     setChatNode(chat, node) {
         if (this.chats[chat]) {
             this.chats[chat].setNode(node);
+        }
+    }
+
+    /**
+     * Anade el mensaje al chat indicado
+     * @param {Number} chat - indice del chat en el que anadir el mensaje 
+     * @param {String} text - texto del mensaje
+     * @param {String} character - id del personaje que envia el mensaje
+     * @param {String} name - nombre del personaje que envia el mensaje
+     */
+    addMessage(chat, text, character, name) {
+        if (this.chats[chat]) {
+            this.chats[chat].addMessage(text, character, name);
         }
     }
 }

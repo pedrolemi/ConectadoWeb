@@ -9,16 +9,14 @@ export default class PhoneManager {
         this.scene = scene;
         this.gameManager = GameManager.getInstance();
 
-        // Configuracion de las dimensiones, posiciones y animaciones
-        this.CANVAS_WIDTH = scene.sys.game.canvas.width
-        this.CANVAS_HEIGHT = scene.sys.game.canvas.height;
+        // Configuracion de las posiciones y animaciones
         let OFFSET = 80;
         let ICON_SCALE = 0.3;
         this.TOGGLE_SPEED = 500;
         this.SLEEP_DELAY = 500;
 
         // Anade el icono del telefono
-        this.icon = scene.add.image(this.CANVAS_WIDTH - OFFSET, this.CANVAS_HEIGHT - OFFSET, 'phoneIcon').setScale(ICON_SCALE);
+        this.icon = scene.add.image(this.scene.CANVAS_WIDTH - OFFSET, this.scene.CANVAS_HEIGHT - OFFSET, 'phoneIcon').setScale(ICON_SCALE);
         this.icon.setInteractive();
 
         // Anade el icono de las notificaciones
@@ -30,7 +28,7 @@ export default class PhoneManager {
         this.phone = new Phone(scene, this);
 
         // Anade un rectangulo para bloquear la interaccion con los elementos del fondo
-        this.bgBlock = scene.add.rectangle(0, 0, this.CANVAS_WIDTH, this.CANVAS_HEIGHT, 0xfff, 0).setOrigin(0, 0);
+        this.bgBlock = scene.add.rectangle(0, 0, this.scene.CANVAS_WIDTH, this.scene.CANVAS_HEIGHT, 0xfff, 0).setOrigin(0, 0);
         this.bgBlock.setInteractive();
         this.bgBlock.setDepth(this.icon.depth - 1);
 
@@ -72,13 +70,14 @@ export default class PhoneManager {
         this.activeTween = null;
         this.toggling = false;
 
-        // this.togglePhone();
-        // this.toggling = false;
-        // this.phone.visible = false;
-        // this.bgBlock.disableInteractive();
+        this.togglePhone();
+        this.toggling = false;
+        this.phone.visible = false;
+        this.bgBlock.disableInteractive();
         this.notificationAmount = 0;
         this.setNotifications();
     }
+
 
 
     // Muestra/oculta el telefono
@@ -94,8 +93,8 @@ export default class PhoneManager {
                 // Se mueve hacia abajo a la izquierda
                 let deactivate = this.scene.tweens.add({
                     targets: [this.phone],
-                    x: - this.CANVAS_WIDTH * 0.75,
-                    y: this.CANVAS_HEIGHT,
+                    x: - this.scene.CANVAS_WIDTH * 0.75,
+                    y: this.scene.CANVAS_HEIGHT,
                     duration: this.TOGGLE_SPEED,
                     repeat: 0,
                 });

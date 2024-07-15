@@ -1,0 +1,20 @@
+{
+    "root": [
+        {
+            "text": "",
+            "text_male": "Me llamo {{name}} y estoy sano",
+            "text_female": "Me llamo {{name}} y estoy sana"
+        },
+        {
+            "text": "",
+            "text_male": "Me llamo {{name}} y estoy moribundo",
+            "text_female": "Me llamo {{name}} y estoy moribunda"
+        }
+    ],
+    "answer": {
+        "text": "Voy a llamar a la policía."
+    },
+    "answer2": {
+        "text": "Por favor y gracias."
+    }
+}

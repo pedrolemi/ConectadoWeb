@@ -58,7 +58,7 @@ export default class DialogManager {
             this.portraits.set(key, p);
 
             value.alpha = 0;
-            value.setMask(this.portraitMask)
+            value.setMask(this.portraitMask);
         });
 
         // Desactiva la caja de texto y las opciones (por si acaso)
@@ -190,16 +190,30 @@ export default class DialogManager {
                 }
             }
             else if (this.currNode.type === "event") {
-                // Recorre todos los eventos del nodo y les hace dispatch
+                // Recorre todos los eventos del nodo y les hace dispatch con el delay establecido (si tienen)
                 for (let i = 0; i < this.currNode.events.length; i++) {
-                    let evtName = this.currNode.events[i].name;
-                    this.dispatcher.dispatch(evtName, this.currNode.events[i]);
+                    let evt = this.currNode.events[i];
+
+                    let delay = 0
+                    if (evt.delay) {
+                        delay = evt.delay;
+                    }
+                    setTimeout(() => {
+                        this.dispatcher.dispatch(evt.name, evt);
+                    }, delay);
                 }
 
                 // IMPORTANTE: DESPUES DE UN NODO DE EVENTO SOLO HAY UN NODO, POR LO QUE 
                 // EL SIGUIENTE NODO SERA EL PRIMER NODO DEL ARRAY DE NODOS SIGUIENTES
                 this.currNode = this.currNode.next[0];
                 this.processNode();
+            }
+            else if (this.currNode.type === "textMessage") {
+                setTimeout(() => {
+                    this.scene.getPhoneManager().phone.addMessage(this.currNode.chat, this.currNode.text, this.currNode.character, this.currNode.name);
+                    this.currNode = this.currNode.next[0];
+                    this.processNode();
+                }, this.currNode.replyDelay);
             }
         }
         else {
@@ -243,7 +257,7 @@ export default class DialogManager {
 
     /**
     * Crea las opciones de eleccion multiple
-    * @param {Array} opts - array con los strings con el texto a mostrar en las opciones
+    * @param {Array} opts - array con los strings/opciones a mostrar
     */
     createOptions(opts) {
         // Limpia las opciones que hubiera anteriormente
@@ -252,7 +266,17 @@ export default class DialogManager {
 
         // Crea las opciones y las guarda en el array
         for (let i = 0; i < opts.length; i++) {
-            this.options.push(new OptionBox(this.scene, this, i, opts.length, opts[i]));
+            let text = "";
+
+            // Si se ha pasado un arary de opciones (con parametros next/chat/reply)
+            if (opts[i].text) {
+                text = opts[i].text;
+            }
+            // Si se ha pasado un array de strings
+            else {
+                text = opts[i];
+            }
+            this.options.push(new OptionBox(this.scene, this, i, opts.length, text));
         }
     }
 
@@ -274,7 +298,13 @@ export default class DialogManager {
         // Desactiva las opciones
         this.activateOptions(false);
 
-        // Actualiza el nodo actual y lo procesa
+        // Si el telefono esta activo, es que se ha elegido una respuesta para el chat
+        if (this.currNode.choices[index].reply) {
+            this.scene.getPhoneManager().phone.addMessage(this.currNode.choices[index].chat, this.currNode.choices[index].text, this.currNode.character, this.currNode.name);
+        }
+
+        // Actualiza el nodo actual y lo procesa            
+        this.currNode.selectedOption = index;
         this.currNode = this.currNode.next[index];
         this.processNode();
 

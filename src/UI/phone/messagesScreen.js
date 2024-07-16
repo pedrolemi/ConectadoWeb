@@ -158,10 +158,8 @@ export default class MessagesScreen extends BaseScreen {
         // Crea el boton del chat y su icono de notificaciones en esta pantalla 
         let index = this.phone.chats.length;
         let notifObj = this.createChat(icon, name, this.chatTextConfig, () => {
-            // Al pulsar el boton, se cambiara a la pantalla creada y se
-            // llamara al metodo clearNotifications de dicha pantalla
+            // Al pulsar el boton, se cambiara a la pantalla creada
             this.phone.toChatScreen(index);
-            screen.clearNotifications();
         });
 
         // Establece el objeto notifications de la pantalla creada

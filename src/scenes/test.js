@@ -27,7 +27,9 @@ export default class Test extends BaseScene {
         this.phoneManager.phone.showChat(1);
 
         this.phoneManager.phone.toMainScreen();
-        this.phoneManager.phone.addMessage(0, "aaaa", "a", "aaaaaaaaaa" );
+        this.phoneManager.phone.addMessage(0, "aawequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbaa", "a", "aaaaaaaaaa" );
+        this.phoneManager.phone.addMessage(0, "ssadasda", "a", "jjjjjj" );
+        this.phoneManager.phone.addMessage(0, "wequkb", "a", "dddd" );
 
         // Pone una imagen de fondo con las dimensiones del canvas
         let bg = this.add.image(0, 0, 'bg').setOrigin(0, 0);

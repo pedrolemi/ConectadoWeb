@@ -129,6 +129,7 @@ export default class Phone extends Phaser.GameObjects.Container {
     toChatScreen(chat) {
         if (this.chats[chat]) {
             this.changeScreen(this.chats[chat]);
+            this.chats[chat].clearNotifications();
         }
     }
 

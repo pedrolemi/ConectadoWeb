@@ -70,7 +70,7 @@ export default class PhoneManager {
         this.activeTween = null;
         this.toggling = false;
 
-        this.togglePhone();
+        this.togglePhone(0);
         this.toggling = false;
         this.phone.visible = false;
         this.bgBlock.disableInteractive();
@@ -81,7 +81,11 @@ export default class PhoneManager {
 
 
     // Muestra/oculta el telefono
-    togglePhone() {
+    togglePhone(speed) {
+        if (!speed) {
+            speed = this.TOGGLE_SPEED;
+        }
+
         // Si no hay una animacion reproduciendose
         if (!this.toggling) {
             // Se indica que va a empezar una
@@ -95,7 +99,7 @@ export default class PhoneManager {
                     targets: [this.phone],
                     x: - this.scene.CANVAS_WIDTH * 0.75,
                     y: this.scene.CANVAS_HEIGHT,
-                    duration: this.TOGGLE_SPEED,
+                    duration: speed,
                     repeat: 0,
                 });
                 this.activeTween = deactivate;
@@ -121,7 +125,7 @@ export default class PhoneManager {
                     targets: [this.phone],
                     x: 0,
                     y: 0,
-                    duration: this.TOGGLE_SPEED,
+                    duration: speed,
                     repeat: 0,
                 });
                 this.activeTween = activate;

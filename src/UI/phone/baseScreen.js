@@ -3,7 +3,7 @@ import GameManager from "../../managers/gameManager.js";
 export default class BaseScreen extends Phaser.GameObjects.Container {
     /**
      * Pantalla base para las distintas pantallas del telefono
-     * @extends {Phaser.GameObjects.Container}
+     * @extends Phaser.GameObjects.Container
      * @param {Phaser.Scene} scene - escena a la que pertenece (UIManager)
      * @param {Phone} phone - telefono
      * @param {String} bgImage - id de la imagen de fondo

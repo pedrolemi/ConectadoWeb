@@ -7,7 +7,7 @@ export default class ChatScreen extends BaseScreen {
      * Pantalla base para los chats. Tiene metodos para actualizar
      * el numero de notificaciones del telefono en base a las
      * notificaciones que haya en el chat
-     * @extends {BaseScreen}
+     * @extends BaseScreen
      * @param {Phaser.Scene} scene - escena a la que pertenece (UIManager)
      * @param {Phone} phone - telefono
      * @param {BaseScreen} prevScreen - pantalla anterior
@@ -29,7 +29,7 @@ export default class ChatScreen extends BaseScreen {
         this.createTextBox();
         this.createReturnButton();
 
-        // Configuracion de texto para la el texto de el titulo
+        // Configuracion de texto para la el texto del titulo
         let textConfig = { ...scene.textConfig };
         textConfig.fontFamily = 'roboto';
         textConfig.style = 'normal';
@@ -218,7 +218,6 @@ export default class ChatScreen extends BaseScreen {
     // (genera -notificationAmount para quitarlas todas)
     clearNotifications() {
         this.generateNotifications(-this.notificationAmount);
-        console.log(this.currNode)
     }
 
     /**
@@ -250,7 +249,7 @@ export default class ChatScreen extends BaseScreen {
     }
 
     /**
-     * Anade el mensaje a la lista de mensajes
+     * Anade el mensaje a la listView de mensajes
      * @param {String} text - texto del mensaje
      * @param {String} character - id del personaje que envia el mensaje
      * @param {String} name - nombre del personaje que envia el mensaje
@@ -264,5 +263,6 @@ export default class ChatScreen extends BaseScreen {
         // Crea la caja del mensaje y la anade a la lista
         let msg = new messageBox(this.scene, text, character, name, 0, this.bg.displayWidth);
         this.messagesListView.addItem(msg);
+        this.messagesListView.cropItems();
     }
 }

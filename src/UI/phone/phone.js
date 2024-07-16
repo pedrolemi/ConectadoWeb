@@ -11,15 +11,11 @@ export default class Phone extends Phaser.GameObjects.Container {
         this.phoneManager = phoneManager;
 
         // Configuracion de las posiciones y dimensiones
-        this.PHONE_X = 450;
+        this.PHONE_X = 415;
         this.PHONE_Y = 800;
 
-        this.BG_X = this.scene.CANVAS_WIDTH / 2 + 36;
-        this.BG_Y = this.scene.CANVAS_HEIGHT / 2 + 6;
-
-
         // Se crean las imagenes y diferentes pantallas
-        this.phone = scene.add.image(this.PHONE_X, this.PHONE_Y, 'phone');
+        this.phone = scene.add.image(this.PHONE_X, this.PHONE_Y, 'phone')
         this.alarmScreen = new AlarmScreen(scene, this, null);
         this.mainScreen = new MainScreen(scene, this, null);
         this.statusScreen = new StatusScreen(scene, this, this.mainScreen);

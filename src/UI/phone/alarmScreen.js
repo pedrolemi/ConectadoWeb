@@ -21,7 +21,7 @@ export default class AlarmScreen extends BaseScreen {
         textConfig.strokeThickness = 0;
 
         // Se coge el texto del archivo de traducciones y se pone en pantalla 
-        let text = this.i18next.t("alarm", { ns: "phoneInfo" })
+        let text = this.i18next.t("alarm.title", { ns: "phoneInfo" })
         let alarmText = scene.createText(this.BG_X, this.BG_Y * 0.4, text, textConfig).setOrigin(0.5, 0.5);
 
 

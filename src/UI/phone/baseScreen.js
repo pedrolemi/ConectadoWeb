@@ -20,13 +20,10 @@ export default class BaseScreen extends Phaser.GameObjects.Container {
         this.prevScreen = prevScreen;
 
         // Configuracion de las posiciones y dimensiones
-        this.CANVAS_WIDTH = scene.sys.game.canvas.width
-        this.CANVAS_HEIGHT = scene.sys.game.canvas.height;
+        this.BG_X = this.scene.CANVAS_WIDTH / 2;
+        this.BG_Y = this.scene.CANVAS_HEIGHT / 2 + 6;
 
-        this.BG_X = this.CANVAS_WIDTH / 2 + 36;
-        this.BG_Y = this.CANVAS_HEIGHT / 2 + 6;
-
-        this.BUTTON_Y = this.CANVAS_HEIGHT * 0.85 + 3;
+        this.BUTTON_Y = this.scene.CANVAS_HEIGHT * 0.85 + 3;
         this.BUTTON_SCALE = 0.34;
 
 

@@ -2,8 +2,6 @@ import GameManager from "../../managers/gameManager.js";
 
 export default class StatusBar {
     constructor(scene, screen, x, y, w, h) {
-        let gameManager = GameManager.getInstance();
-
         let bgCol = 0xc0c0c0;
         let borderCol = 0x000000;
         let borderThickness = 2;

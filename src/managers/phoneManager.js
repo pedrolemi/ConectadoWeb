@@ -8,16 +8,16 @@ export default class PhoneManager {
     constructor(scene) {
         this.scene = scene;
         this.gameManager = GameManager.getInstance();
+        this.i18next = this.gameManager.i18next;
 
         // Configuracion de las posiciones y animaciones
-        let OFFSET = 80;
-        let ICON_SCALE = 0.3;
+        this.OFFSET = 80;
+        this.ICON_SCALE = 0.3;
         this.TOGGLE_SPEED = 500;
         this.SLEEP_DELAY = 500;
 
-        // Anade el icono del telefono
-        this.icon = scene.add.image(this.scene.CANVAS_WIDTH - OFFSET, this.scene.CANVAS_HEIGHT - OFFSET, 'phoneIcon').setScale(ICON_SCALE);
-        this.icon.setInteractive();
+        // Crea el icono del telefono y lo guarda en la variable this.icon
+        this.createIcon();
 
         // Anade el icono de las notificaciones
         let notifObj = this.createNotification(this.icon.x + this.icon.displayWidth / 2, this.icon.y - this.icon.displayHeight / 2);
@@ -32,47 +32,13 @@ export default class PhoneManager {
         this.bgBlock.setInteractive();
         this.bgBlock.setDepth(this.icon.depth - 1);
 
-
-        // Al pasar el raton por encima del icono, se hace mas grande,
-        // al quitar el raton de encima vuelve a su tamano original,
-        // y al hacer click, se hace pequeno y grande de nuevo
-        this.icon.on('pointerover', () => {
-            if (!this.scene.getDialogManager().isTalking()) {
-                scene.tweens.add({
-                    targets: [this.icon],
-                    scale: ICON_SCALE * 1.1,
-                    duration: 0,
-                    repeat: 0,
-                });
-            }
-        });
-        this.icon.on('pointerout', () => {
-            scene.tweens.add({
-                targets: [this.icon],
-                scale: ICON_SCALE,
-                duration: 0,
-                repeat: 0,
-            });
-        });
-        this.icon.on('pointerdown', (pointer) => {
-            if (!this.scene.getDialogManager().isTalking()) {
-                this.togglePhone();
-                scene.tweens.add({
-                    targets: [this.icon],
-                    scale: ICON_SCALE,
-                    duration: 20,
-                    repeat: 0,
-                    yoyo: true
-                });
-            }
-        });
-
         // Si se pulsa fuera del telefono cuando esta sacado, se guarda
         this.bgBlock.on('pointerdown', (pointer) => {
             if (this.phone.visible) {
                 this.togglePhone();
             }
         });
+
 
         this.activeTween = null;
         this.bgBlock.disableInteractive();
@@ -90,9 +56,55 @@ export default class PhoneManager {
         if (!this.gameManager.hasValue(this.sleptVar)) {
             this.gameManager.setValue(this.sleptVar, false);
         }
+
+        
+        // Crea el mensaje de despertarse y lo guarda en la variable this.wakeUpMessage
+        this.createMessage();
+        this.wakeUpMessage.visible = false;
     }
 
 
+    // Crea el icono
+    createIcon() {
+        // Anade el icono del telefono
+        this.icon = this.scene.add.image(this.scene.CANVAS_WIDTH - this.OFFSET, this.scene.CANVAS_HEIGHT - this.OFFSET, 'phoneIcon').setScale(this.ICON_SCALE);
+        this.icon.setInteractive();
+
+        // Al pasar el raton por encima del icono, se hace mas grande,
+        // al quitar el raton de encima vuelve a su tamano original,
+        // y al hacer click, se hace pequeno y grande de nuevo
+        this.icon.on('pointerover', () => {
+            if (!this.scene.getDialogManager().isTalking()) {
+                this.scene.tweens.add({
+                    targets: [this.icon],
+                    scale: this.ICON_SCALE * 1.1,
+                    duration: 0,
+                    repeat: 0,
+                });
+            }
+        });
+        this.icon.on('pointerout', () => {
+            this.scene.tweens.add({
+                targets: [this.icon],
+                scale: this.ICON_SCALE,
+                duration: 0,
+                repeat: 0,
+            });
+        });
+        this.icon.on('pointerdown', (pointer) => {
+            if (!this.scene.getDialogManager().isTalking()) {
+                this.togglePhone();
+                this.scene.tweens.add({
+                    targets: [this.icon],
+                    scale: this.ICON_SCALE,
+                    duration: 20,
+                    repeat: 0,
+                    yoyo: true
+                });
+            }
+        });
+
+    }
 
     /**
      * Reproduce la animacion de ocultar/mostrar el movil
@@ -166,17 +178,38 @@ export default class PhoneManager {
         }
     }
 
-    /**
-     * Activa/desactiva el telefono de manera inmediata
-     * @param {Boolean} active - true si se va a activar, false en caso contrario
-     */
-    activate(active) {
-        if ((this.phone.visible && !active) || (!this.phone.visible && active)) {
-            this.toggling = false;
-            this.togglePhone(0);
-        }
-    }
+    
+    // Crea el mensaje de despertarse
+    createMessage() {
+        let textConfig = { ...this.scene.textConfig };
+        textConfig.fontFamily = 'gidole-regular';
+        textConfig.fontSize = 40 + 'px';
+        textConfig.fontStyle = 'normal'
+        textConfig.strokeThickness = 0;
+        textConfig.align = 'center';
+        
+        let text = this.i18next.t("alarm.message", { ns: "phoneInfo" })
+        let wakeUpText = this.scene.createText(this.scene.CANVAS_WIDTH / 2, 0, text, textConfig).setOrigin(0.5, 0.5);
+        wakeUpText.y += wakeUpText.displayHeight;
 
+        let bgCol = 0xFFB61E1E;
+        let borderCol = 0x000000;
+        let borderThickness = 2;
+
+        let w = wakeUpText.displayWidth * 1.15;
+        let h = wakeUpText.displayHeight * 1.5;
+        let min = Math.min(w, h);
+        let radius = min * 0.1;
+
+        let bgGraphics = this.scene.make.graphics().fillStyle(bgCol, 1).fillRoundedRect(0, 0, w, h, radius).lineStyle(borderThickness, borderCol, 1).strokeRoundedRect(0, 0, w, h, radius)
+        bgGraphics.generateTexture('alarmMsgBg', w, h);
+        let bg = this.scene.add.image(wakeUpText.x, wakeUpText.y, 'alarmMsgBg').setOrigin(0.5, 0.5);
+
+        this.wakeUpMessage = this.scene.add.container(0, 0);
+        this.wakeUpMessage.add(wakeUpText);
+        this.wakeUpMessage.add(bg);
+        this.wakeUpMessage.bringToTop(wakeUpText);
+    }
 
     /**
      * Crea el icono de las notificaciones
@@ -199,7 +232,7 @@ export default class PhoneManager {
 
         let textObj = this.scene.createText(0, 0, "", notifTextConfig).setOrigin(0.5, 0.5);
 
-        let notifications = this.scene.add.container(0, 0)
+        let notifications = this.scene.add.container(0, 0);
         notifications.add(fillImg);
         notifications.add(edgeImg);
         notifications.add(textObj);
@@ -211,6 +244,17 @@ export default class PhoneManager {
             container: notifications,
             text: textObj
         };
+    }
+
+    /**
+     * Activa/desactiva el telefono de manera inmediata
+     * @param {Boolean} active - true si se va a activar, false en caso contrario
+     */
+    activate(active) {
+        if ((this.phone.visible && !active) || (!this.phone.visible && active)) {
+            this.toggling = false;
+            this.togglePhone(0);
+        }
     }
 
 
@@ -254,7 +298,7 @@ export default class PhoneManager {
             }
         }
         else {
-
+            this.wakeUpMessage.visible = true;
         }
 
     }
@@ -265,6 +309,7 @@ export default class PhoneManager {
         this.togglePhone(1500);
         if (this.activeTween) {
             this.activeTween.on('complete', () => {
+                this.wakeUpMessage.visible = false;
                 this.icon.visible = true;
                 this.notifications.visible = true;
             });
@@ -410,8 +455,7 @@ export default class PhoneManager {
         anim.on('complete', () => {
             setTimeout(() => {
                 this.openEyesAnimation();
-                let i18next = this.gameManager.i18next;
-                let hour = i18next.t("clock.alarmLateHour", { ns: "phoneInfo" });
+                let hour = this.i18next.t("clock.alarmLateHour", { ns: "phoneInfo" });
                 this.phone.setDayInfo(hour, "");
             }, this.SLEEP_DELAY * 2);
 

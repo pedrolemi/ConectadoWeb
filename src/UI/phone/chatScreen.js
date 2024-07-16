@@ -25,7 +25,8 @@ export default class ChatScreen extends BaseScreen {
         this.homeButton.destroy();
         this.uselessButton.destroy();
 
-        // Crea la caja de respuesta y el boton de volver hacia atras
+        // Crea la caja de respuesta y el boton de volver hacia atras y los guarda
+        // en las variables this.textBox y this.returnButton respectivamente
         this.createTextBox();
         this.createReturnButton();
 
@@ -77,7 +78,7 @@ export default class ChatScreen extends BaseScreen {
     }
 
 
-    // Crea la caja de respuesta
+    // Crea la caja de respuesta y la guarda en la variable this.textBox
     createTextBox() {
         // Anade la imagen de la caja
         this.textBox = this.scene.add.image(this.BG_X, this.BG_Y * 1.67, 'chatTextBox').setScale(0.6);
@@ -159,7 +160,7 @@ export default class ChatScreen extends BaseScreen {
 
     }
 
-    // Crea el boton de volver atras
+    // Crea el boton de volver atras y lo guarda en la variable this.returnButton
     createReturnButton() {
         // Anade la imagen del boton
         this.returnButton = this.scene.add.image(this.BG_X * 0.77, this.BG_Y * 0.36, 'backButton').setScale(0.7);

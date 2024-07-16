@@ -1,5 +1,8 @@
 {
-    "alarm": "Alarm",
+    "alarm": {
+        "title": "Alarm",
+        "message": "You are unable to sleep more.\nYou should wake up now."
+    },
     "clock": {
         "alarmHour": "07:30",
         "alarmLateHour": "08:05",

@@ -16,7 +16,7 @@ export default class SettingsScreen extends BaseScreen {
         }
 
         // Se coge el texto del archivo de traducciones y se pone en pantalla 
-        let text = this.i18next.t("settings.text", { ns: "phone", context: this.gameManager.getUserInfo().gender })
+        let text = this.i18next.t("settings.text", { ns: "phoneInfo", context: this.gameManager.getUserInfo().gender })
         let warningText = scene.createText(this.BG_X, this.BG_Y * 0.65, text, textConfig).setOrigin(0.5, 0.5);
 
         // Configuracion de texto y colores del boton
@@ -26,7 +26,7 @@ export default class SettingsScreen extends BaseScreen {
         let pressedColor = { R: 200, G: 200, B: 200 }
 
         // Se coge el texto de los botones del archivo de traducciones y crea los botones
-        let yesText = this.i18next.t("settings.yes", { ns: "phone" })
+        let yesText = this.i18next.t("settings.yes", { ns: "phoneInfo" })
         let yesButton = new Button(scene, this.BG_X, this.BG_Y * 1.1, 1,
             () => {
                 this.gameManager.startLangMenu();
@@ -41,7 +41,7 @@ export default class SettingsScreen extends BaseScreen {
                 callback: Phaser.Geom.Rectangle.Contains
             }
         );
-        let noText = this.i18next.t("settings.no", { ns: "phone" })
+        let noText = this.i18next.t("settings.no", { ns: "phoneInfo" })
         let noButton = new Button(scene, this.BG_X, this.BG_Y * 1.4, 1,
             () => {
                 phone.toPrevScreen();

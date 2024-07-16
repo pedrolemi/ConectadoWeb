@@ -54,8 +54,8 @@ export default class BaseScreen extends Phaser.GameObjects.Container {
 
     /**
      * Anade al boton la animacion y la funcion a la que debe llamar
-     * @param {Phaser.Image} button - Imagen que animar
-     * @param {Function} onClick - Funcion a la que llama el boton al pulsarlo
+     * @param {Phaser.Image} button - imagen que animar
+     * @param {Function} onClick - funcion a la que llama el boton al pulsarlo
      */
     animateButton(button, onClick) {
         // Se hace interactivo

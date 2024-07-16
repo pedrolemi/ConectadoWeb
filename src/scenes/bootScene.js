@@ -146,7 +146,7 @@ export default class BootScene extends Phaser.Scene {
             // en cualquier idioma (aunque o existiese)
             supportedLngs: ['en', 'es'],
             // namespaces que se cargan para cada uno de los idiomas
-            ns: ['names', 'userInfoMenu', 'titleMenu', 'phone', 'momDialog', 'dadDialog', 'chat1'],
+            ns: ['names', 'userInfoMenu', 'titleMenu', 'phoneInfo', 'momDialog', 'dadDialog', 'chat1'],
             preload: ['en', 'es'],
             // mostrar informacion de ayuda por consola
             debug: false,

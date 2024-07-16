@@ -13,7 +13,7 @@ export default class MessagesScreen extends BaseScreen {
         textConfig.strokeThickness = 0;
 
         // Se coge el texto del archivo de traducciones y se pone en pantalla 
-        let text = this.i18next.t("textMessages.title", { ns: "phone" })
+        let text = this.i18next.t("textMessages.title", { ns: "phoneInfo" });
         let titleText = scene.createText(this.BG_X, this.BG_Y * 0.365, text, textConfig).setOrigin(0.5, 0.5);
 
         this.chatNum = 0;
@@ -21,12 +21,6 @@ export default class MessagesScreen extends BaseScreen {
         // chatTextConfig.fontFamily = 'gidole-regular';
         this.chatTextConfig.fontSize = 20 + 'px';
         this.chatTextConfig.style = 'normal';
-
-        // Se crea el array con los callbacks para crear cada pantalla de chat
-        this.chats = [
-            () => { this.showChat1(); },
-            () => { this.showChat2(); }
-        ]
 
         this.add(titleText);
     }
@@ -39,7 +33,7 @@ export default class MessagesScreen extends BaseScreen {
      * @param {Function} onClick - funcion que se llamara al hacer click en el boton
      * @returns {Object} - objeto con el contenedor y el objeto de texto de las notificaciones
      */
-    createChat(icon, name, textConfig, onClick) {
+    createChatButton(icon, name, textConfig, onClick) {
         // Anade la imagen del boton. Dependiendo del numero de chats que haya, se iran creando abajo
         let button = this.scene.add.image(this.BG_X, this.BG_Y * 0.5, 'chatButton').setScale(0.6);
         button.y += (button.displayHeight + 7) * this.chatNum;
@@ -133,23 +127,15 @@ export default class MessagesScreen extends BaseScreen {
 
 
     /**
-     * Llama al callback en el indice indicado para mostrar el chat
-     * @param {Number} chat - indice del chat que crear 
-     */
-    showChat(chat) {
-        if (this.chats[chat]) {
-            this.chats[chat]();
-        }
-    }
-
-    /**
-     * Anade la pantalla (creada previamente) indicada en el parametro
-     * screen al telefono y anade el boton del chat en esta pantalla 
-     * @param {Phaser.Scene} screen - pantalla del chat a anadir 
-     * @param {String} icon - id de la imagen con la foto de perfil del contacto
+     * Anade la pantalla del chat al telefono y anade el boton 
+     * para entrar a ese chat en esta pantalla 
      * @param {String} name - nombre del contacto
+     * @param {String} icon - id de la imagen con la foto de perfil del contacto
      */
-    addChatToPhone(screen, icon, name) {
+    addChat(name, icon) {
+        // Crea la pantalla
+        let screen = new ChatScreen(this.scene, this.phone, this, name, icon);
+
         // Anade la pantalla al contenedor del telefono y la hace invisible
         this.phone.add(screen);
         screen.visible = false;
@@ -157,29 +143,16 @@ export default class MessagesScreen extends BaseScreen {
 
         // Crea el boton del chat y su icono de notificaciones en esta pantalla 
         let index = this.phone.chats.length;
-        let notifObj = this.createChat(icon, name, this.chatTextConfig, () => {
+        let notifObj = this.createChatButton(icon, name, this.chatTextConfig, () => {
             // Al pulsar el boton, se cambiara a la pantalla creada
-            this.phone.toChatScreen(index);
+            this.phone.toChatScreen(name);
         });
 
         // Establece el objeto notifications de la pantalla creada
         screen.notifications = notifObj;
 
-        // Anade la pantalla al array de chats del telefono
-        this.phone.chats.push(screen);
+        // Anade la pantalla al mapa de chats del telefono con la key del nombre del chat
+        this.phone.chats.set(name, screen);
     }
-
-    // Metodos para crear los chats 1 y 2
-    showChat1() {
-        let chatNames = this.i18next.t("textMessages", { ns: "phone", returnObjects: true });
-        let screen = new ChatScreen(this.scene, this.phone, this, chatNames.chat1, "testIcon");
-        this.addChatToPhone(screen, "testIcon", chatNames.chat1)
-    }
-    showChat2() {
-        let chatNames = this.i18next.t("textMessages", { ns: "phone", returnObjects: true });
-        let screen = new ChatScreen(this.scene, this.phone, this, chatNames.chat2, "testIcon");
-        this.addChatToPhone(screen, "testIcon", chatNames.chat2)
-    }
-
 
 }

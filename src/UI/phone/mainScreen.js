@@ -52,17 +52,21 @@ export default class MainScreen extends BaseScreen {
 
     /**
      * Cambia el texto del dia y la hora
-     * @param {String} hour - Hora
-     * @param {String} dayText - Informacion del dia
+     * @param {String} hour - hora
+     * @param {String} dayText - informacion del dia
      */
     setDayInfo(hour, dayText) {
-        this.hourText.setText(hour);
-        this.dayText.setText(dayText);
+        if (hour !== "") {
+            this.hourText.setText(hour);
+        }
+        if (dayText !== "") {
+            this.dayText.setText(dayText);
+        }
     }
 
     /**
      * Establece las notificaciones que hay
-     * @param {Number} amount - Numero de notificaciones a poner
+     * @param {Number} amount - numero de notificaciones a poner
      */
     setNotifications(amount) {
         // Si son mas de 0, activa las notificaciones y cambia el texto

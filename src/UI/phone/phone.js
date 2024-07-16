@@ -35,8 +35,8 @@ export default class Phone extends Phaser.GameObjects.Container {
             this.settingsScreen
         ]
 
-        // Se crea el array que guardara las pantallas de chat
-        this.chats = [];
+        // Se crea el mapa que guardara las pantallas de chat
+        this.chats = new Map();
 
         // Se anade la imagen del telefono y las pantallas a la escena
         this.add(this.phone);
@@ -124,12 +124,12 @@ export default class Phone extends Phaser.GameObjects.Container {
 
     /**
      * Cambia a la pantalla del chat indicado
-     * @param {Number} chat - indice del chat
+     * @param {String} chat - id del chat
      */
     toChatScreen(chat) {
-        if (this.chats[chat]) {
-            this.changeScreen(this.chats[chat]);
-            this.chats[chat].clearNotifications();
+        if (this.chats.has(chat)) {
+            this.changeScreen(this.chats.get(chat));
+            this.chats.get(chat).clearNotifications();
         }
     }
 
@@ -140,20 +140,28 @@ export default class Phone extends Phaser.GameObjects.Container {
 
     /**
      * Muestra en la pantalla de mensajes el chat indicado
-     * @param {Number} chat - indice del chat del que cambiar el dialogo
+     * @param {String} name - nombre del contacto
+     * @param {String} icon - id de la imagen con la foto de perfil del contacto
      */
-    showChat(chat) {
-        this.messagesScreen.showChat(chat);
+    addChat(name, icon) {
+        this.messagesScreen.addChat(name, icon);
     }
 
 
-    // Cambia la hora y el dia de las pantallas de alarma y principal
+    /**
+     * Cambia la hora y el dia de las pantallas de alarma y principal
+     * @param {String} hour - hora
+     * @param {String} dayText - informacion del dia
+     */
     setDayInfo(hour, dayText) {
         this.alarmScreen.setDayInfo(hour, dayText);
         this.mainScreen.setDayInfo(hour, dayText);
     }
 
-    // Cambia la cantidad de notificaciones de la pantalla principal
+    /**
+     * Cambia la cantidad de notificaciones de la pantalla principal
+     * @param {Number} amount - cantidad de notificaciones
+     */
     setNotifications(amount) {
         this.mainScreen.setNotifications(amount);
     }
@@ -162,27 +170,27 @@ export default class Phone extends Phaser.GameObjects.Container {
      * Cambia el nodo de dialogo en el chat indicado
      * 
      * IMPORTANTE: Antes de poder llamar a este metodo, se tiene que haber
-     * llamado al metodo showChat para que chatScreen tenga el metodo setNode
+     * llamado al metodo addChat para que chatScreen tenga el metodo setNode
      * 
-     * @param {Number} chat - indice del chat del que cambiar el dialogo
+     * @param {String} chat - id del chat en el que anadir el mensaje 
      * @param {DialogNode} node - nodo de dialogo que se va a reproducir
      */
     setChatNode(chat, node) {
-        if (this.chats[chat]) {
-            this.chats[chat].setNode(node);
+        if (this.chats.has(chat)) {
+            this.chats.get(chat).setNode(node);
         }
     }
 
     /**
      * Anade el mensaje al chat indicado
-     * @param {Number} chat - indice del chat en el que anadir el mensaje 
+     * @param {String} chat - id del chat en el que anadir el mensaje 
      * @param {String} text - texto del mensaje
      * @param {String} character - id del personaje que envia el mensaje
      * @param {String} name - nombre del personaje que envia el mensaje
      */
     addMessage(chat, text, character, name) {
-        if (this.chats[chat]) {
-            this.chats[chat].addMessage(text, character, name);
+        if (this.chats.has(chat)) {
+            this.chats.get(chat).addMessage(text, character, name);
         }
     }
 }

@@ -2,21 +2,21 @@
     "root": {
         "type": "choice",
         "choices":[
-            { "next": "answer", "chat": 0, "reply": true },
+            { "next": "answer", "chat": "chat1", "reply": true },
             { "next": "answer" }
         ]
     },
     "answer": {
         "type": "textMessage",
         "character": "mom",
-        "chat": 0,
+        "chat": "chat1",
         "replyDelay": 1000,
         "next": "answer2"
     },
     "answer2": {
         "type": "textMessage",
         "character": "player",
-        "chat": 0,
+        "chat": "chat1",
         "replyDelay": 1000
     }
 }

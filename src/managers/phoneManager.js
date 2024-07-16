@@ -67,22 +67,39 @@ export default class PhoneManager {
             }
         });
 
-        this.activeTween = null;
-        this.toggling = false;
+        // Si se pulsa fuera del telefono cuando esta sacado, se guarda
+        this.bgBlock.on('pointerdown', (pointer) => {
+            if (this.phone.visible) {
+                this.togglePhone();
+            }
+        });
 
-        this.togglePhone(0);
-        this.toggling = false;
-        this.phone.visible = false;
+        this.activeTween = null;
         this.bgBlock.disableInteractive();
         this.notificationAmount = 0;
         this.setNotifications();
+
+
+        this.topLid = scene.add.rectangle(0, 0, this.scene.CANVAS_WIDTH, this.scene.CANVAS_HEIGHT / 2, 0x000, 1).setOrigin(0, 0);
+        this.topLid.setDepth(100);
+        this.bottomLid = scene.add.rectangle(0, this.scene.CANVAS_HEIGHT / 2, this.scene.CANVAS_WIDTH, this.scene.CANVAS_HEIGHT / 2, 0x000, 1).setOrigin(0, 0);
+        this.bottomLid.setDepth(100);
+
+        this.sleptVar = "isLate";
+        
+        if (!this.gameManager.hasValue(this.sleptVar)) {
+            this.gameManager.setValue(this.sleptVar, false);
+        }
     }
 
 
 
-    // Muestra/oculta el telefono
+    /**
+     * Reproduce la animacion de ocultar/mostrar el movil
+     * @param {Number} speed - velolcidad a la que se reproduce la animacion (en ms) 
+     */
     togglePhone(speed) {
-        if (!speed) {
+        if (!speed && speed !== 0) {
             speed = this.TOGGLE_SPEED;
         }
 
@@ -93,7 +110,6 @@ export default class PhoneManager {
 
             // Si el telefono es visible
             if (this.phone.visible) {
-
                 // Se mueve hacia abajo a la izquierda
                 let deactivate = this.scene.tweens.add({
                     targets: [this.phone],
@@ -104,27 +120,39 @@ export default class PhoneManager {
                 });
                 this.activeTween = deactivate;
 
-                // Una vez terminada la animacion, se oculta el telefono, se indica que ya ha 
-                // terminado y se reactiva la interaccion con los elementos del fondo
+                // Una vez terminada la animacion, se oculta el telefono, se indica que ya ha terminado, se 
+                // reactiva la interaccion con los elementos del fondo y vuelve a la pantalla de inicio
                 deactivate.on('complete', () => {
                     this.phone.visible = false;
                     this.toggling = false;
                     this.bgBlock.disableInteractive();
+                    this.phone.toMainScreen();
+
                 });
             }
             // Si el telefono no es visible
             else {
-                // Se hace visible, se vuelve a la pantalla de inicio y se
-                // bloquea la interaccion con los elementos del fondo
+                // Se hace visible y se bloquea la interaccion con los elementos del fondo
                 this.phone.visible = true;
-                this.phone.toMainScreen();
                 this.bgBlock.setInteractive();
+
+                let x = 0;
+                let y = 0;
+                this.phone.setScale(1);
+
+                // Si el telefono esta en la pantalla de alarma, se hace mas pequeno
+                // y se ajusta el movimiento para que el movil quede en el centro
+                if (this.phone.currScreen === this.phone.alarmScreen) {
+                    this.phone.setScale(0.8);
+                    x += this.phone.phone.displayWidth * 0.15;
+                    y += this.phone.phone.displayHeight * 0.1;
+                }
 
                 // Se mueve hacia el centro de la pantalla
                 let activate = this.scene.tweens.add({
                     targets: [this.phone],
-                    x: 0,
-                    y: 0,
+                    x: x,
+                    y: y,
                     duration: speed,
                     repeat: 0,
                 });
@@ -136,8 +164,19 @@ export default class PhoneManager {
                 });
             }
         }
-
     }
+
+    /**
+     * Activa/desactiva el telefono de manera inmediata
+     * @param {Boolean} active - true si se va a activar, false en caso contrario
+     */
+    activate(active) {
+        if ((this.phone.visible && !active) || (!this.phone.visible && active)) {
+            this.toggling = false;
+            this.togglePhone(0);
+        }
+    }
+
 
     /**
      * Crea el icono de las notificaciones
@@ -199,32 +238,185 @@ export default class PhoneManager {
         this.phone.setNotifications(this.notificationAmount);
     }
 
-    // Funcion llamada al aplazar la alarma
-    // (WIP)
+    // Funcion llamada al aplazar la alarma. Si no se ha dormido antes, guarda el telefono
+    // y al terminar la animacion, vuelve a reproducir la animacion de cerrar los ojos
     sleep() {
-        this.togglePhone();
+            if (!this.gameManager.getValue(this.sleptVar)) {
+            this.togglePhone(1500);
+            if (this.activeTween) {
+                this.activeTween.on('complete', () => {
+                    setTimeout(() => {
+                        this.gameManager.setValue(this.sleptVar, true);
+                        this.closeEyesAnimation();
+                    }, this.SLEEP_DELAY);
+    
+                });
+            }
+        }
+        else {
+
+        }
+
+    }
+
+    // Funcion llamada al apagar la alarma y despertarse. Se guarda el telefono y
+    // cuando termina de guardarse el telefono, se hace activo el icono
+    wakeUp() {
+        this.togglePhone(1500);
         if (this.activeTween) {
             this.activeTween.on('complete', () => {
-                let i18next = this.gameManager.i18next;
-
-                let hour = "10:20";
-                let day = i18next.t("clock.lateTest", { ns: "phone" });
-
-                this.setDayInfo(hour, day)
-                setTimeout(() => {
-                    this.togglePhone();
-                    this.phone.toAlarmScreen();
-                }, this.SLEEP_DELAY)
-
+                this.icon.visible = true;
+                this.notifications.visible = true;
             });
         }
     }
 
-    // Funcion llamada al apagar la alarma y despertarse
-    // (WIP)
-    wakeUp() {
-        console.log("wakeUp");
-        this.togglePhone();
+    // Animacion de abrir los ojos. Mueve los parpados varias
+    // veces y cuando termina, saca el movil con la alarma
+    openEyesAnimation() {
+        this.icon.visible = false;
+        this.notifications.visible = false;
+        this.activate(false);
+
+        let speed = 1000;
+        let lastTopPos = this.topLid.y;
+        let lastBotPos = this.bottomLid.y;
+        let movement = this.topLid.displayHeight / 4;
+
+        // Abre los ojos
+        let anim = this.scene.tweens.add({
+            targets: [this.topLid],
+            y: { from: lastTopPos, to: lastTopPos - movement },
+            duration: speed,
+            repeat: 0,
+        });
+        this.scene.tweens.add({
+            targets: [this.bottomLid],
+            y: { from: lastBotPos, to: lastBotPos + movement },
+            duration: speed,
+            repeat: 0,
+        });
+
+        anim.on('complete', () => {
+            speed = 500
+            lastTopPos = this.topLid.y;
+            lastBotPos = this.bottomLid.y;
+            movement = this.topLid.displayHeight / 10;
+
+            // Cierra un poco los ojos
+            anim = this.scene.tweens.add({
+                targets: [this.topLid],
+                y: { from: lastTopPos, to: lastTopPos + movement },
+                duration: speed,
+                repeat: 0,
+            });
+            this.scene.tweens.add({
+                targets: [this.bottomLid],
+                y: { from: lastBotPos, to: lastBotPos - movement },
+                duration: speed,
+                repeat: 0,
+            });
+
+            anim.on('complete', () => {
+                speed = 500
+                lastTopPos = this.topLid.y;
+                lastBotPos = this.bottomLid.y;
+                movement = this.topLid.displayHeight / 9;
+
+                // Vuelve a abrir los ojos
+                anim = this.scene.tweens.add({
+                    targets: [this.topLid],
+                    y: { from: lastTopPos, to: lastTopPos - movement },
+                    duration: speed,
+                    repeat: 0,
+                });
+                this.scene.tweens.add({
+                    targets: [this.bottomLid],
+                    y: { from: lastBotPos, to: lastBotPos + movement },
+                    duration: speed,
+                    repeat: 0,
+                });
+
+                anim.on('complete', () => {
+                    speed = 500
+                    lastTopPos = this.topLid.y;
+                    lastBotPos = this.bottomLid.y;
+                    movement = this.topLid.displayHeight / 5;
+
+                    // Cierra los ojos un poco mas
+                    anim = this.scene.tweens.add({
+                        targets: [this.topLid],
+                        y: { from: lastTopPos, to: lastTopPos + movement },
+                        duration: speed,
+                        repeat: 0,
+                    });
+                    this.scene.tweens.add({
+                        targets: [this.bottomLid],
+                        y: { from: lastBotPos, to: lastBotPos - movement },
+                        duration: speed,
+                        repeat: 0,
+                    });
+
+                    anim.on('complete', () => {
+                        speed = 1500
+                        lastTopPos = this.topLid.y;
+                        lastBotPos = this.bottomLid.y;
+
+                        // Abre los ojos completamente
+                        anim = this.scene.tweens.add({
+                            targets: [this.topLid],
+                            y: { from: lastTopPos, to: -this.scene.CANVAS_HEIGHT / 2 },
+                            duration: speed,
+                            repeat: 0,
+                        });
+                        this.scene.tweens.add({
+                            targets: [this.bottomLid],
+                            y: { from: lastBotPos, to: this.scene.CANVAS_HEIGHT },
+                            duration: speed,
+                            repeat: 0,
+                        });
+
+                        anim.on('complete', () => {
+                            this.phone.toAlarmScreen();
+                            this.togglePhone(1500);
+                        });
+
+                    });
+                });
+            });
+        });
     }
+
+    // Animacion de cerrar los ojos. Cierra los parpados y cuando termina, vuelve a 
+    // reproducir la animacion de abrir los ojos y cambia la hora del telefono
+    closeEyesAnimation() {
+        let speed = 2000;
+        let lastTopPos = this.topLid.y;
+        let lastBotPos = this.bottomLid.y;
+
+        let anim = this.scene.tweens.add({
+            targets: [this.topLid],
+            y: { from: lastTopPos, to: 0 },
+            duration: speed,
+            repeat: 0,
+        });
+        this.scene.tweens.add({
+            targets: [this.bottomLid],
+            y: { from: lastBotPos, to: this.scene.CANVAS_HEIGHT / 2 },
+            duration: speed,
+            repeat: 0,
+        });
+        
+        anim.on('complete', () => {
+            setTimeout(() => {
+                this.openEyesAnimation();
+                let i18next = this.gameManager.i18next;
+                let hour = i18next.t("clock.alarmLateHour", { ns: "phoneInfo" });
+                this.phone.setDayInfo(hour, "");
+            }, this.SLEEP_DELAY * 2);
+
+        });
+    }
+
 
 }

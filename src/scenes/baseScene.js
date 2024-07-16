@@ -192,7 +192,7 @@ export default class BaseScene extends Phaser.Scene {
                 // opcion conlleva a responder el mensaje de texto o no
                 if (file[id].choices[i].reply) {
                     choice.reply = file[id].choices[i].reply;
-                    choice.chat = file[id].choices[i].chat;
+                    choice.chat = this.i18next.t("textMessages" + "." + file[id].choices[i].chat, { ns: "phoneInfo" });
                 }
 
                 node.choices.push(choice);
@@ -237,7 +237,8 @@ export default class BaseScene extends Phaser.Scene {
             node.text = text;
 
             // Guarda el chat en el que tiene que ir la respuesta y el retardo con el que se envia
-            node.chat = file[id].chat;
+            node.chat = this.i18next.t("textMessages" + "." + file[id].chat, { ns: "phoneInfo" });
+
             if (file[id].replyDelay) {
                 node.replyDelay = file[id].replyDelay;
             }

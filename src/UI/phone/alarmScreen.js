@@ -21,7 +21,7 @@ export default class AlarmScreen extends BaseScreen {
         textConfig.strokeThickness = 0;
 
         // Se coge el texto del archivo de traducciones y se pone en pantalla 
-        let text = this.i18next.t("alarm", { ns: "phone" })
+        let text = this.i18next.t("alarm", { ns: "phoneInfo" })
         let alarmText = scene.createText(this.BG_X, this.BG_Y * 0.4, text, textConfig).setOrigin(0.5, 0.5);
 
 
@@ -79,12 +79,16 @@ export default class AlarmScreen extends BaseScreen {
 
     /**
      * Cambia el texto del dia y la hora
-     * @param {String} hour - Hora
-     * @param {String} dayText - Informacion del dia
+     * @param {String} hour - hora
+     * @param {String} dayText - informacion del dia
      */
     setDayInfo(hour, dayText) {
-        this.hourText.setText(hour);
-        this.dayText.setText(dayText);
+        if (hour !== "") {
+            this.hourText.setText(hour);
+        }
+        if (dayText !== "") {
+            this.dayText.setText(dayText);
+        }
     }
 
 }

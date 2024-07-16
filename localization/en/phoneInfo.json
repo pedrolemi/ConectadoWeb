@@ -1,0 +1,41 @@
+{
+    "alarm": "Alarm",
+    "clock": {
+        "alarmHour": "07:30",
+        "alarmLateHour": "08:05",
+        "pcLateHour": "08:10",
+        
+        "playgroundMorning": "08:20",
+        "classStart": "08:30",
+        "playgroundMorningLate": "08:40",
+        
+        "startBreak": "11:05",
+        "midBreak": "11:10",
+        "endBreak": "11:20",
+
+        "endClass": "14:02",
+        "returnHome": "15:00",
+
+        "day3": {
+            "endClass": "14:05",
+            "corridor": "14:08"
+        },
+
+        "night": "21:30"
+    },
+    "statusScreen": {
+
+    },
+    "textMessages": {
+        "title": "CHATS",
+        "chat1": "Alison class",
+        "chat2": "Class",
+        "chat3": "Maria",
+        "chat4": "Alex"
+    },
+    "settings": {
+        "text": "You will return to the main screen. Are you sure?",
+        "yes": "Yes",
+        "no": "No" 
+    }
+}

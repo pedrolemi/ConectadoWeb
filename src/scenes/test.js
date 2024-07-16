@@ -6,8 +6,17 @@ export default class Test extends BaseScene {
         super('Test');
     }
 
+    // Metodo que se llama al terminar de crear la escena. 
+    onCreate() {
+        super.onCreate();
+        // this.phoneManager.activate(true);
+        this.phoneManager.openEyesAnimation();
+        this.phoneManager.phone.toAlarmScreen();
+    }
+
     create() {
         super.create();
+
 
         let test1 = this.cache.json.get('momDialog');
         let test2 = this.cache.json.get('dadDialog');
@@ -18,18 +27,22 @@ export default class Test extends BaseScene {
 
         let choices = super.readNodes("root", test3, "chat1", this.gameManager.getUserInfo().name, this.gameManager.getUserInfo().gender, true);
 
-        let hour = "5:20";
-        let day = this.i18next.t("clock.test", { ns: "phone" });
+        let hour = this.i18next.t("clock.alarmHour", { ns: "phoneInfo" });
+        let day = this.i18next.t("clock.test", { ns: "phoneInfo" });
         
         this.phoneManager.phone.setDayInfo(hour, day)
-        this.phoneManager.phone.showChat(0);
-        this.phoneManager.phone.setChatNode(0, choices);
-        this.phoneManager.phone.showChat(1);
+        let chatName = this.i18next.t("textMessages.chat1", { ns: "phoneInfo", returnObjects: true });
+        this.phoneManager.phone.addChat(chatName, "testIcon");
+        this.phoneManager.phone.setChatNode(chatName, choices);
+        
+        this.phoneManager.phone.addMessage(chatName, "aawequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbaa", "a", "aaaaaaaaaa" );
+        this.phoneManager.phone.addMessage(chatName, "ssadasda", "a", "jjjjjj" );
+        this.phoneManager.phone.addMessage(chatName, "wequkb", "a", "dddd" );
 
-        this.phoneManager.phone.toMainScreen();
-        this.phoneManager.phone.addMessage(0, "aawequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbaa", "a", "aaaaaaaaaa" );
-        this.phoneManager.phone.addMessage(0, "ssadasda", "a", "jjjjjj" );
-        this.phoneManager.phone.addMessage(0, "wequkb", "a", "dddd" );
+        chatName = this.i18next.t("textMessages.chat2", { ns: "phoneInfo", returnObjects: true });
+        this.phoneManager.phone.addChat(chatName, "testIcon");
+
+       
 
         // Pone una imagen de fondo con las dimensiones del canvas
         let bg = this.add.image(0, 0, 'bg').setOrigin(0, 0);

@@ -53,8 +53,57 @@ export class ChoiceNode extends DialogNode {
         super();
 
         this.type = "choice";
+        this.subtype = null;
         this.choices = [];              // Opciones (texto y si es un mensaje, de que chat y si que hay que responder)
         this.selectedOption = null;     // indice de la opcion seleccionada
+    }
+}
+
+export class ChatChoiceNode extends ChoiceNode {
+    /**
+     * Clase para los nodos de opcion multiple en los mensajes de texto del movil
+     * Hay dos tipos de efectos: respuesta o no
+     * Ejemplo:
+        {
+            "type": "choice",
+            "subtype": "phone"
+            "chat:" 0
+            "choices":[
+                { "next": "choice1", "effect": "reply" },
+                { "next": "choice1" }
+            ]
+        }
+     */
+    constructor(){
+        super();
+
+        this.subtype = "phone";
+        this.chat = null;
+    }
+}
+
+export class SocialNetChoiceNode extends ChoiceNode {
+     /**
+     * Clase para los nodos de opcion multiple en los mensajes de la red social
+     * Hay tres tipos de efectos: respuesta, no respuesta o borrar post
+     * Ejemplo:
+        {
+            "type": "choice",
+            "subtype": "socialNetwork"
+            "user": mom     // id del personaje
+            "post": 0
+            "choices":[
+                { "next": "choice1", "effect": "reply" },
+                { "next": "choice1" }
+            ]
+        }
+     */
+    constructor(){
+        super();
+
+        this.subtype = "socialNetwork";
+        this.user = null;
+        this.post = null;
     }
 }
 
@@ -127,25 +176,64 @@ export class EventNode extends DialogNode {
     }
 }
 
-export class ChatNode extends DialogNode {
+export class MessageNode extends DialogNode {
     /**
     * Clase para la informacion de los nodos de chat
+    * Funciona como una clase abstracta, nunca se van a crear instancias de esta clase
     * @extends DialogNode
-    * 
-    * Ejemplo:
-        {
-            "type": "textMessage",
-            "character": "mom",
-            "chat": 0,
-            "replyDelay": 1000
-        }
     */
     constructor() {
         super();
         
         this.type = "textMessage";
-        this.text = null;               // texto del mensaje
-        this.chat = null;               // chat en el que se escribe el mensaje
+        this.subtype = null;
+        this.message = null;            // texto del mensaje
         this.replyDelay = 0;            // retardo con el que se enviara el mensaje
+    }
+}
+
+export class ChatNode extends MessageNode {
+    /**
+    * Clase para la informacion de los nodos de chat del movil
+    * @extends MessageNode
+    * 
+    * Ejemplo:
+        {
+            "type": "textMessage",
+            "subtype": "phone"
+            "character": "mom",
+            "chat": 0,
+            "replyDelay": 1000
+        }
+    */
+    constructor(){
+        super();
+
+        this.subtype = "phone";
+        this.chat = null;               // chat en el que se escribe el mensaje
+    }
+}
+
+export class SocialNetNode extends MessageNode {
+    /**
+    * Clase para la informacion de los nodos de chat de la red social
+    * @extends MessageNode
+    * 
+    * Ejemplo:
+        {
+            "type": "textMessage",
+            "subtype": "socialNetwork"
+            "character": "mom",
+            "user": 0,
+            "post": 0,
+            "replyDelay": 1000
+        }
+    */
+    constructor(){
+        super();
+
+        this.subtype = "socialNetwork";
+        this.user = null;
+        this.post = null;
     }
 }

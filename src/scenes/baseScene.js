@@ -1,4 +1,4 @@
-import { TextNode, ChoiceNode, ConditionNode, EventNode, ChatNode } from '../UI/dialog/dialogNode.js';
+import { TextNode, ChoiceNode, ConditionNode, EventNode, ChatNode, ChatChoiceNode, SocialNetChoiceNode, SocialNetNode } from '../UI/dialog/dialogNode.js';
 import GameManager from '../managers/gameManager.js';
 import EventDispatcher from '../eventDispatcher.js';
 
@@ -174,7 +174,19 @@ export default class BaseScene extends Phaser.Scene {
         }
         // Si el nodo es de tipo opcion multiple
         else if (type === "choice") {
-            node = new ChoiceNode();
+            let subtype = file[id].subtype;
+            if(subtype === "phone"){
+                node = new ChatChoiceNode();
+                node.chat = this.i18next.t("textMessages" + "." + file[id].chat, { ns: "phoneInfo" });
+            }
+            else if(subtype === "socialNetwork"){
+                node = new SocialNetChoiceNode();
+                node.user = file[id].user;
+                node.post = filed[id].post;
+            }
+            else {
+                node = new ChoiceNode();
+            }
             
             // Se obtienen los textos de las opciones del archivo de textos traducidos
             let texts = this.i18next.t(id, { ns: namespace, name: playerName, context: context, returnObjects: getObjs })
@@ -182,17 +194,34 @@ export default class BaseScene extends Phaser.Scene {
             for (let i = 0; i < file[id].choices.length; i++) {
                 // Se guarda el texto de la eleccion y se crea de manera recursiva
                 // el nodo siguiente que corresponde a elegir dicha opcion
+                let choice = {};
+                choice.text = texts[i].text;
+                /*
                 let choice = {
                     text: texts[i].text,
                     reply: false,
                     chat: null
                 }
+                */
 
                 // Si es una respuesta de un mensaje de texto, guarda si elegir la 
                 // opcion conlleva a responder el mensaje de texto o no
+                /*
                 if (file[id].choices[i].reply) {
                     choice.reply = file[id].choices[i].reply;
                     choice.chat = this.i18next.t("textMessages" + "." + file[id].choices[i].chat, { ns: "phoneInfo" });
+                }
+                */
+                
+                if(file[id].choices[i].effect){
+                    // Si hay un mensaje, se coge ese. Si no, se coge el propio texto
+                    choice.effect = file[id].choices[i].effect;
+                    if(choice.effect === "reply") {
+                        choice.message = texts[i].text;
+                        if(texts[i].message){
+                            choice.message = texts[i].message;
+                        }
+                    }
                 }
 
                 node.choices.push(choice);
@@ -205,6 +234,7 @@ export default class BaseScene extends Phaser.Scene {
         }
         // Si el nodo es de tipo evento
         else if (type === "event") {
+            let subtype = file[id].subtype;
             node = new EventNode();
             
             // Recorre todas las variables obtenidas
@@ -230,14 +260,23 @@ export default class BaseScene extends Phaser.Scene {
         }
         // Si el nodo es de tipo mensaje de texto
         else if (type === "textMessage") {
-            node = new ChatNode();
+            let subtype = file[id].subtype;
+            if(subtype === "phone"){
+                node = new ChatNode();
+                node.chat = this.i18next.t("textMessages" + "." + file[id].chat, { ns: "phoneInfo" });
+            }
+            else if(subtype === "socialNetwork"){
+                node = new SocialNetNode();
+                node.user = file[id].user;
+                node.post = filed[id].post;
+            }
 
             // Obtiene el texto del archivo de textos traducidos y lo guarda
-            let text = this.i18next.t(id + ".text", { ns: namespace, name: playerName, context: context, returnObjects: getObjs });
-            node.text = text;
+            let message = this.i18next.t(id + ".message", { ns: namespace, name: playerName, context: context, returnObjects: getObjs });
+            node.message = message;
 
             // Guarda el chat en el que tiene que ir la respuesta y el retardo con el que se envia
-            node.chat = this.i18next.t("textMessages" + "." + file[id].chat, { ns: "phoneInfo" });
+            //node.chat = this.i18next.t("textMessages" + "." + file[id].chat, { ns: "phoneInfo" });
 
             if (file[id].replyDelay) {
                 node.replyDelay = file[id].replyDelay;

@@ -3,7 +3,10 @@
         {
             "text": "",
             "text_male": "Me llamo {{name}} y estoy sano",
-            "text_female": "Me llamo {{name}} y estoy sana"
+            "text_female": "Me llamo {{name}} y estoy sana",
+            "message": "",
+            "message_male": "Hola {{name}}, este es el mensaje real maboy",
+            "message_female": "Hola {{name}}, este es el mensaje real magirl"
         },
         {
             "text": "",
@@ -12,9 +15,9 @@
         }
     ],
     "answer": {
-        "text": "Voy a llamar a la policía."
+        "message": "Voy a llamar a la policía."
     },
     "answer2": {
-        "text": "Por favor y gracias."
+        "message": "Por favor y gracias."
     }
 }

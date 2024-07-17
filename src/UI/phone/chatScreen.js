@@ -31,7 +31,7 @@ export default class ChatScreen extends BaseScreen {
         this.createReturnButton();
 
         // Configuracion de texto para la el texto del titulo
-        let textConfig = { ...scene.textConfig };
+        let textConfig = { ...scene.gameManager.textConfig };
         textConfig.fontFamily = 'roboto';
         textConfig.style = 'normal';
         textConfig.fontSize = 25 + 'px';
@@ -148,7 +148,7 @@ export default class ChatScreen extends BaseScreen {
                 if (fadeColor) {
                     let hasRun = false;
                     fadeColor.on('complete', () => {
-                        this.gameManager.getDialogManager().setNode(this.currNode);
+                        this.scene.getDialogManager().setNode(this.currNode);
                     });
 
                 }

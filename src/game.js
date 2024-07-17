@@ -1,11 +1,16 @@
 import BootScene from './scenes/bootScene.js';
 import LanguageMenu from './scenes/languageMenu.js';
-import UIManager from './managers/UIManager.js';
 import TitleMenu from './scenes/titleMenu.js';
 import UserInfoMenu from './scenes/userInfoMenu.js';
+
+import TextOnlyScene from './scenes/textOnlyScene.js';
+import AlarmScene from './scenes/alarmScene.js';
+import ComputerScene from './scenes/computerScene.js'
+
+import UIManager from './managers/UIManager.js';
+
 import Test from './scenes/test.js';
 import TestMenu from './scenes/testMenu.js'
-import ComputerScene from './scenes/computerScene.js'
 
 const max_w = 1129, max_h = 847, min_w = 320, min_h = 240;
 
@@ -17,7 +22,11 @@ const config = {
 
     type: Phaser.AUTO,
     // Nota: el orden de las escenas es relevante. Las que se encuentran delante, se renderizan delante
-    scene: [BootScene, LanguageMenu, Test, ComputerScene, UIManager, TitleMenu, UserInfoMenu, TestMenu],
+    scene: [
+        BootScene, LanguageMenu, TitleMenu, UserInfoMenu,
+        TextOnlyScene, AlarmScene, 
+        Test, TestMenu, ComputerScene, 
+        UIManager, ],
     autoFocus: true,
     disableContextMenu: true,        // Desactivar que aparezca el menu de inspeccionar al hacer click derecho
     render: {

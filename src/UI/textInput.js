@@ -2,16 +2,16 @@ export default class TextInput extends Phaser.GameObjects.Container {
     /**
     * Clase que permite crear una caja de texto donde poder escribir
     * @param {Phaser.Scene} scene - escena a la que pertenece
-    * @param {number} x - posicion x
-    * @param {number} y - posicion y
-    * @param {number} scale - escala del objeto
-    * @param {string} defaultText - texto por defecto que aparece en la caja si no se ha escrito nada aun
-    * @param {number} offset - punto a partir del cual se comienza a escribir el texto para que todo este bien ajustado
-    * @param {color} pressedCol - color RGB al que se cambia cuando se produce la animacion de comenzar a escribir en la caja
-    * @param {string} fill - sprite que se usa para el relleno
-    * @param {string} edge - sprite que se usa para el borde (opcional)
-    * @param {string} font - tipografia (opcional). En caso de que no se especifique ninguna, se usa 'Arial'
-    * @param {string} hitArea - cambiar el area de colision para que corresponda con el del relleno del boton (opcional)
+    * @param {Number} x - posicion x
+    * @param {Number} y - posicion y
+    * @param {Number} scale - escala del objeto
+    * @param {String} defaultText - texto por defecto que aparece en la caja si no se ha escrito nada aun
+    * @param {Number} offset - punto a partir del cual se comienza a escribir el texto para que todo este bien ajustado
+    * @param {Color} pressedCol - color RGB al que se cambia cuando se produce la animacion de comenzar a escribir en la caja
+    * @param {String} fill - sprite que se usa para el relleno
+    * @param {String} edge - sprite que se usa para el borde (opcional)
+    * @param {String} font - tipografia (opcional). En caso de que no se especifique ninguna, se usa 'Arial'
+    * @param {String} hitArea - cambiar el area de colision para que corresponda con el del relleno del boton (opcional)
     */
     constructor(scene, x, y, scale, defaultText, offset, pressedColor, fill, edge, font, hitArea) {
         super(scene, x, y);

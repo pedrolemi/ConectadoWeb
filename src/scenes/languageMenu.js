@@ -43,12 +43,12 @@ export default class LanguageMenu extends Phaser.Scene {
 
     /**
      * Metodo para crear un boton que cambie al idioma seleccionado
-     * @param {number} x - posicion x
-     * @param {number} y - posicion y
-     * @param {number} height - altura del boton
-     * @param {string} sprite - imagen que se va a usar para mostrar al boton
-     * @param {number} tweenTime - tiempo que dura el tween de escalado tanto cuando se coloca el cursor encima como cuando se quita
-     * @param {number} scaleIncrease - cuanto se escala cuando se realiza el tween de escalado al colocar el cursor encima 
+     * @param {Number} x - posicion x
+     * @param {Number} y - posicion y
+     * @param {Number} height - altura del boton
+     * @param {String} sprite - imagen que se va a usar para mostrar al boton
+     * @param {Number} tweenTime - tiempo que dura el tween de escalado tanto cuando se coloca el cursor encima como cuando se quita
+     * @param {Number} scaleIncrease - cuanto se escala cuando se realiza el tween de escalado al colocar el cursor encima 
      */
     createFlagButton(x, y, height, sprite, language, tweenTime, scaleIncrease) {
         let button = this.add.image(x, y, sprite);

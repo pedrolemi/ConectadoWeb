@@ -25,12 +25,12 @@ export default class MainScreen extends BaseScreen {
 
 
         // Configuracion de texto para el reloj
-        let hourTextConfig = { ...scene.textConfig };
+        let hourTextConfig = { ...scene.gameManager.textConfig };
         hourTextConfig.fontFamily = 'gidole-regular';
         hourTextConfig.fontSize = 100 + 'px';
         hourTextConfig.strokeThickness = 0;
 
-        let dayTextConfig = { ...scene.textConfig };
+        let dayTextConfig = { ...scene.gameManager.textConfig };
         dayTextConfig.fontFamily = 'gidole-regular';
         dayTextConfig.strokeThickness = 0;
 

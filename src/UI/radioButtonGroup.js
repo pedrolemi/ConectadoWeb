@@ -1,7 +1,7 @@
 export default class RadioButtonGroup {
     /**
      * Clase que permite crear un conjunto de radio buttons a partir de checkboxes
-     * @param {array} - array con las checkboxes que constituyen este grupo
+     * @param {Array} - array con las checkboxes que constituyen este grupo
      */
     constructor(radioButtons) {
         this.radioButtons = radioButtons;
@@ -24,7 +24,7 @@ export default class RadioButtonGroup {
 
     /**
      * Activar el boton del grupo indicado y desactivar el resto
-     * @param {checkBox} - boton que se va a activar
+     * @param {CheckBox} - boton que se va a activar
      */
     checkButton(button) {
         this.selectedButton = button;

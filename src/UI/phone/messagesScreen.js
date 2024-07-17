@@ -6,7 +6,7 @@ export default class MessagesScreen extends BaseScreen {
         super(scene, phone, 'messagesBg', prevScreen);
 
         // Configuracion de texto para la el texto de ll titulo
-        let textConfig = { ...scene.textConfig };
+        let textConfig = { ...scene.gameManager.textConfig };
         textConfig.fontFamily = 'arial';
         textConfig.fontSize = 25 + 'px';
         textConfig.color = '#000';
@@ -118,7 +118,7 @@ export default class MessagesScreen extends BaseScreen {
         this.add(iconImage);
 
         // Crea el icono de las notificaciones
-        let notifObj = this.phone.phoneManager.createNotification(this.BG_X + this.bg.displayWidth * 0.4, button.y);
+        let notifObj = this.phone.phoneManager.createNotification(this.BG_X + this.bg.displayWidth * 0.4, button.y, true);
         this.add(notifObj.container);
         notifObj.container.visible = false;
 

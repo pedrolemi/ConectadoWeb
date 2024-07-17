@@ -6,7 +6,7 @@ export default class SettingsScreen extends BaseScreen {
         super(scene, phone, 'settingsBg', prevScreen);
 
         // Configuracion de texto para la advertencia
-        let textConfig = { ...scene.textConfig };
+        let textConfig = { ...scene.gameManager.textConfig };
         textConfig.fontFamily = 'gidole-regular';
         textConfig.fontSize = 40 + 'px';
         textConfig.align = 'center';

@@ -11,7 +11,7 @@ export default class Phone extends Phaser.GameObjects.Container {
         this.phoneManager = phoneManager;
 
         // Configuracion de las posiciones y dimensiones
-        this.PHONE_X = 415;
+        this.PHONE_X = 400 + 10;
         this.PHONE_Y = 800;
 
         // Se crean las imagenes y diferentes pantallas

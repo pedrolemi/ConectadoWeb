@@ -2,11 +2,11 @@ export default class Character {
     /**
     * Clase para un personaje y su retrato 
     * @param {Phaser.Scene} scene - escena a la que pertenece
-    * @param {string} key - identifica al personaje y sus respectivas animaciones
-    * @param {object} trans - posicion y escala del personaje
-    * @param {object} portraitTrans - posicion y escala del retrato
-    * @param {object} dialogContext - contexto de la funcion del dialogo
-    * @param {function} dialog - funcion con el dialogo que reproduce el personaje
+    * @param {String} key - identifica al personaje y sus respectivas animaciones
+    * @param {Object} trans - posicion y escala del personaje
+    * @param {Object} portraitTrans - posicion y escala del retrato
+    * @param {Object} dialogContext - contexto de la funcion del dialogo
+    * @param {Function} dialog - funcion con el dialogo que reproduce el personaje
     */
     constructor(scene, key, trans, portraitTrans, dialog) {
         this.scene = scene;

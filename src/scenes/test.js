@@ -10,13 +10,14 @@ export default class Test extends BaseScene {
     onCreate() {
         super.onCreate();
         // this.phoneManager.activate(true);
-        this.phoneManager.openEyesAnimation();
-        this.phoneManager.phone.toAlarmScreen();
+        // this.phoneManager.openEyesAnimation();
+        // this.phoneManager.phone.toAlarmScreen();
+        this.phoneManager.topLid.visible = false;
+        this.phoneManager.botLid.visible = false;
     }
 
     create() {
         super.create();
-
 
         let test1 = this.cache.json.get('momDialog');
         let test2 = this.cache.json.get('dadDialog');
@@ -88,11 +89,11 @@ export default class Test extends BaseScene {
             
         });
 
-        let rect = this.add.rectangle(0, 0, 200, 200, '0x000000');
-        rect.setInteractive();
-        rect.setOrigin(0);
-        rect.on('pointerdown', () => {
-            this.gameManager.switchToComputer();
-        });
+        // let rect = this.add.rectangle(0, 0, 200, 200, '0x000000');
+        // rect.setInteractive();
+        // rect.setOrigin(0);
+        // rect.on('pointerdown', () => {
+        //     this.gameManager.switchToComputer();
+        // });
     }
 }

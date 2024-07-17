@@ -10,12 +10,12 @@ export default class VerticalListView extends Phaser.GameObjects.Container {
      *      para marcar este area de colision
      * - Llamar a cropItems() despues de agregar o eliminar objetos
      * @param {Phaser.scene} scene 
-     * @param {number} x 
-     * @param {number} y 
-     * @param {number} scale 
-     * @param {number} padding - separacion entre los diferentes elementos de la listivew 
-     * @param {object} boundaries - limites de la listview (tanto para interactuar como para renderizar) 
-     * @param {boolean} autocull - hacer que un los elementos que se salgan de los borden se vuelvan invisibles.
+     * @param {Number} x 
+     * @param {Number} y 
+     * @param {Number} scale 
+     * @param {Number} padding - separacion entre los diferentes elementos de la listivew 
+     * @param {Object} boundaries - limites de la listview (tanto para interactuar como para renderizar) 
+     * @param {Boolean} autocull - hacer que un los elementos que se salgan de los borden se vuelvan invisibles.
      *                              No supone un cambio visual ni funcional, pero si mejora el rendimiento 
      */
     constructor(scene, x, y, scale, padding, boundaries, bgSprite, autocull = true) {
@@ -219,8 +219,8 @@ export default class VerticalListView extends Phaser.GameObjects.Container {
      * Hacer un item y los colliders vinculados visibles o no
      * Se utiliza para el culling
      * Nota: si algo es setVisible(false) tp es interactuable
-     * @param {object} item 
-     * @param {boolean} visible 
+     * @param {Object} item 
+     * @param {Boolean} visible 
      */
     makeItemVisible(item, visible) {
         item.setVisible(visible);
@@ -393,7 +393,7 @@ export default class VerticalListView extends Phaser.GameObjects.Container {
     /**
      * Agregar un elemento
      * Importante: definir la propiedad .h, que es la altura completa del elemento
-     * @param {object} item - origen(0.5, 0)
+     * @param {Object} item - origen(0.5, 0)
      * @param {Array} hits - hits que tiene el item (y sus elementos)
      * @param {Array} listviews - listviews que tiene el item (y sus elementos)
      *                              Nota: el propio item podria ser una listview
@@ -538,7 +538,7 @@ export default class VerticalListView extends Phaser.GameObjects.Container {
      * Hacer la mascara y las areas de colision visibles o invisibles
      * Aunque se cambie la visibilidad del container, la de estos elementos no cambia
      * porque pertenecen a la escena
-     * @param {boolean} visible - visible o invisible 
+     * @param {Boolean} visible - visible o invisible 
      */
     setVisibleMaskAndHits(visible) {
         this.rectangleMask.setVisible(visible);

@@ -1,6 +1,10 @@
 import GameManager from '../managers/gameManager.js';
 
 export default class BootScene extends Phaser.Scene {
+    /**
+    * Escena inicial en la que se cargan todos los recursos
+    * @extends Phaser.Scene
+    */
     constructor() {
         super({
             key: 'BootScene',
@@ -29,34 +33,6 @@ export default class BootScene extends Phaser.Scene {
         */
         this.load.image('textboxMask', './UI/dialog/textboxMask.png');
 
-        // Telefono
-        this.load.image('phoneIcon', './UI/phone/phoneIcon.png');
-        this.load.image('phone', './UI/phone/phone.png');
-        this.load.image('alarmBg', './UI/phone/alarmBg.png');
-        this.load.image('mainScreenBg', './UI/phone/mainScreenBg.png');
-        this.load.image('statusBg', './UI/phone/statusBg.png');
-        this.load.image('messagesBg', './UI/phone/messagesBg.png');
-        this.load.image('chatBg', './UI/phone/chatBg.png');
-        this.load.image('settingsBg', './UI/phone/settingsBg.png');
-        this.load.image('chatBgTop', './UI/phone/chatBgTop.png');
-
-
-        // Botones del telefono
-        this.load.image('returnButton', './UI/phone/triangle.png');
-        this.load.image('homeButton', './UI/phone/circle.png');
-        this.load.image('uselessButton', './UI/phone/square.png');
-
-        this.load.image('statusIcon', './UI/phone/statusIcon.png');
-        this.load.image('chatIcon', './UI/phone/chatIcon.png');
-        this.load.image('settingsIcon', './UI/phone/settingsIcon.png');
-        this.load.image('chatButton', './UI/phone/chatButton.png');
-        this.load.image('chatTextBox', './UI/phone/chatTextBox.png');
-        this.load.image('testIcon', './UI/AlexAvatar.png');
-
-        this.load.image('myBubble', './UI/phone/9slicePlaeyrs.png');
-        this.load.image('othersBubble', './UI/phone/9sliceOthers.png');
-        this.load.image('commentBubble', './UI/9sliceComments.png');
-
         // comprimir texturas (toma mucha menos memoria, aunque los archivos pueden ocupa mas tam)
         // Se comprueba de arriba a abajo hasta encontrar el primero que funcione en el dispositivo, si no, se usa png
         // formatos de compresion: ETC, ETC1, ATC, ASTC, BPTC, RGTC, PVRTC, S3TC, and S3TCSRB
@@ -71,9 +47,39 @@ export default class BootScene extends Phaser.Scene {
             'IMG': { textureURL: 'UI/dialog/dialog-img/dialog-img.png', atlasURL: 'UI/dialog/dialog-img/dialog-img.json' },
         });
 
+        // Telefono
+        this.load.image('phoneIcon', './UI/phone/phoneIcon.png');
+        this.load.image('phone', './UI/phone/phone.png');
+        this.load.image('alarmBg', './UI/phone/alarmBg.png');
+        this.load.image('mainScreenBg', './UI/phone/mainScreenBg.png');
+        this.load.image('statusBg', './UI/phone/statusBg.png');
+        this.load.image('messagesBg', './UI/phone/messagesBg.png');
+        this.load.image('chatBg', './UI/phone/chatBg.png');
+        this.load.image('settingsBg', './UI/phone/settingsBg.png');
+        this.load.image('chatBgTop', './UI/phone/chatBgTop.png');
+
+        // Botones del telefono
+        this.load.image('returnButton', './UI/phone/triangle.png');
+        this.load.image('homeButton', './UI/phone/circle.png');
+        this.load.image('uselessButton', './UI/phone/square.png');
+
+        this.load.image('statusIcon', './UI/phone/statusIcon.png');
+        this.load.image('chatIcon', './UI/phone/chatIcon.png');
+        this.load.image('settingsIcon', './UI/phone/settingsIcon.png');
+        this.load.image('chatButton', './UI/phone/chatButton.png');
+        this.load.image('chatTextBox', './UI/phone/chatTextBox.png');
+
+        this.load.image('myBubble', './UI/phone/9slicePlaeyrs.png');
+        this.load.image('othersBubble', './UI/phone/9sliceOthers.png');
+        this.load.image('commentBubble', './UI/9sliceComments.png');
+
+        
+
         // Fondos
         this.load.image('basePC', 'UI/menuBgs/BasePCsq.png');
         this.load.image('PCscreen', 'UI/menuBgs/ScreenWithoutBlack.png');
+        this.load.image('bedroomCeiling', 'backgrounds/bedroomCeilingBg.png');
+
 
         // Menu principal
         this.load.image('powerOff', 'UI/titleMenu/power_off.png');
@@ -122,6 +128,8 @@ export default class BootScene extends Phaser.Scene {
 
         // Test
         this.load.image('bg', 'patio.png');
+        this.load.image('testIcon', './UI/AlexAvatar.png');
+
 
         // Personajes y sus respectivas animaciones esqueletales de Spine
         // [Idle01, IdleBase, Walk]
@@ -146,7 +154,8 @@ export default class BootScene extends Phaser.Scene {
             // en cualquier idioma (aunque o existiese)
             supportedLngs: ['en', 'es'],
             // namespaces que se cargan para cada uno de los idiomas
-            ns: ['names', 'userInfoMenu', 'titleMenu', 'phoneInfo', 'momDialog', 'dadDialog', 'chat1'],
+            ns: ['titleMenu', 'userInfoMenu', 'names', 'phoneInfo', 'transitionScenes',
+                'momDialog', 'dadDialog', 'chat1'],   // TEST
             preload: ['en', 'es'],
             // mostrar informacion de ayuda por consola
             debug: false,

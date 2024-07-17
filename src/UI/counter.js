@@ -3,17 +3,17 @@ export default class Counter extends Phaser.GameObjects.Container {
     * Clase que activa un contador y al llegar a un numero creando explota creando particulas
     * Luego de un rato, reaparece y vuelve a funcionar de la misma manera
     * @param {Phaser.Scene} scene - escena a la que pertenece
-    * @param {number} x - posicion x del contador (numero, imagen, donde salen las particulas)
-    * @param {number} y - posicion y del contador (numero, imagen, desde donde salen las particulas)
-    * @param {number} scale - escala del objeto
-    * @param {string} fill - sprite que se usa para el relleno del contador
-    * @param {string} edge - sprite que se usa para el borde del contador
-    * @param {string} particle - sprite que se usa para las particulas
-    * @param {string} font - tipografica que se usa para los numeros del contador
-    * @param {number} limit - cuando se llega a este numero (no incluido) el contador desaparece y se produce una explosion
-    * @param {number} increase - el contador escala segun una funcion exponencial (ej. 2^x). Este valor es la x
-    * @param {number} waitTimer - despues de que el contador haya desaparecido, este es el tiempo que tarda en volver a aparecer
-    * @param {color} fillColor - color del relleno en formato RGB (opcional)
+    * @param {Number} x - posicion x del contador (numero, imagen, donde salen las particulas)
+    * @param {Number} y - posicion y del contador (numero, imagen, desde donde salen las particulas)
+    * @param {Number} scale - escala del objeto
+    * @param {String} fill - sprite que se usa para el relleno del contador
+    * @param {String} edge - sprite que se usa para el borde del contador
+    * @param {String} particle - sprite que se usa para las particulas
+    * @param {String} font - tipografica que se usa para los numeros del contador
+    * @param {Number} limit - cuando se llega a este numero (no incluido) el contador desaparece y se produce una explosion
+    * @param {Number} increase - el contador escala segun una funcion exponencial (ej. 2^x). Este valor es la x
+    * @param {Number} waitTimer - despues de que el contador haya desaparecido, este es el tiempo que tarda en volver a aparecer
+    * @param {Color} fillColor - color del relleno en formato RGB (opcional)
     */
     constructor(scene, x, y, scale, fill, edge, particle, font, limit, waitTimer, increase, fillColor) {
         super(scene, x, y);

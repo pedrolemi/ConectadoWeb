@@ -6,7 +6,7 @@ export default class HitListElement extends Phaser.GameObjects.Zone {
      * Nota: se hace en posiciones globales
      * Importante: se tiene que colocar en la escena y no dentro de ningun otro elemento
      * @param {Phaser.scene} scene
-     * @param {object} renderObject - origen(0.5, 0)
+     * @param {Object} renderObject - origen(0.5, 0)
      */
     constructor(scene, renderObject) {
         super(scene, 0, 0);

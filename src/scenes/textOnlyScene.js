@@ -1,0 +1,113 @@
+import BaseScene from './baseScene.js';
+
+export default class TextOnlyScene extends BaseScene {
+    /**
+     * Escena para las transiciones en las que solo hay texto,  
+     * @extends Phaser.Scene
+     * @param {Object} params - parametros de la escena. Debe contener text, onComplete y onCompleteDelay.
+     * 
+     * IMPORTANTE: Esta escena es general para todas las transiciones, por lo que hay que especificar
+     * en los parametros tanto el texto que debera aparecer en la escena, como que se debe ejecutar una
+     * vez termine. Generalmente, en la funcion onComplete se llamaria al changeScene del gameManager con
+     * la siguiente escena, pero no se hace directamente porque dependiendo de la escena a la que se quiera
+     * cambiar, podria hacer falta pasarle unos parametros distintos 
+     */
+    constructor(params) {
+        super('TextOnlyScene');
+    }
+
+    onCreate() {
+        super.onCreate();
+
+        let DEFAULT_TIME = 5000;
+        setTimeout(() => {
+            if (!this.exiting) {
+                this.exiting = true;
+                this.cameras.main.fadeOut(this.FADE_TIME, 0, 0, 0);
+            }
+        }, DEFAULT_TIME);
+    }
+
+    create(params) {
+        super.create();
+
+        let text = "";
+        let onComplete = () => { };
+        let onCompleteDelay = 0;
+        if (params.text) {
+            text = params.text
+        }
+        if (params.onComplete) {
+            onComplete = params.onComplete;
+        }
+        if (params.onCompleteDelay) {
+            onCompleteDelay = params.onCompleteDelay;
+        }
+
+
+        // Hace invisible el UIManager entero
+        this.scene.setVisible(false, this.UIManager);
+
+        // Establece las animaciones de fade in y fade out
+        this.FADE_TIME = 300;
+        this.cameras.main.fadeIn(this.FADE_TIME, 0, 0, 0);
+        // Una vez terminado el fade out, se vuelve a hacer visible el UIManager 
+        // y se llama a la funcion que se haya pasado por los parametros
+        this.cameras.main.once(Phaser.Cameras.Scene2D.Events.FADE_OUT_COMPLETE, (cam, effect) => {
+            this.scene.setVisible(true, this.UIManager);
+            setTimeout(() => {
+                onComplete();
+            }, onCompleteDelay);
+        });
+
+        // Anade la imagen del fondo
+        let bg = this.add.rectangle(0, 0, this.CANVAS_WIDTH, this.CANVAS_HEIGHT, 0x000, 1).setOrigin(0, 0);
+        bg.setInteractive();
+
+        this.exiting = false;
+        // Se anade el evento de hacer clicke sobre el fondo para que solo se pueda ejecutar una vez.
+        // Si no se hace click sobre el fondo, se pone un temporizador para que haga fade out 
+        // automaticamente tras un tiempo. El temporizador empezara cuando la escena este creada
+        bg.once('pointerdown', (pointer) => {
+            // Al hacer click en la imagen del fondo, comienza el fade out
+            if (!this.exiting) {
+                this.exiting = true;
+                this.cameras.main.fadeOut(this.FADE_TIME, 0, 0, 0);
+            }
+        });
+
+
+        // Configuracion de texto
+        let fontSize = 100;
+        let textConfig = { ...this.gameManager.textConfig };
+        // textConfig.fontFamily = 'gidole-regular';
+        textConfig.fontSize = fontSize + 'px';
+        textConfig.fontStyle = 'normal';
+        textConfig.strokeThickness = 0;
+        textConfig.align = 'center';
+        textConfig.wordWrap = {
+            width: this.CANVAS_WIDTH - 100,
+            useAdvancedWrap: true
+        }
+
+        // Crea el texto
+        let screenText = this.gameManager.createText(this, this.CANVAS_WIDTH / 2, this.CANVAS_HEIGHT / 2, text, textConfig).setOrigin(0.5, 0.5);
+
+        // En caso de que el texto sea demasiado largo y se salga de la 
+        // pantalla, se va reduciendo el tamano de la fuente hasta que quepa
+        
+        // IMPORTANTE: SE REALIZA DE ESTA MANERA EN VEZ DE ESCALANDO EL
+        // TEXTO PORQUE SI EL TEXTO ES DEMASIADO GRANDE, HABRA DEMASIADOS SALTOS
+        // DE LINEA. SIN EMBARGO, ESTE PROCESO TOMARA MUCHO TIEMPO CUANTO MAS GRANDE
+        // SEA EL TAMANO DE LA FUENTE, YA QUE VA REDUCIENDOLO POCO A POCO Y CREANDO
+        // Y DESTRUYENDO EL TEXTO HASTA ENCONTRAR UN TAMANO CON EL QUE QUEPA.
+
+        if (screenText.displayHeight > this.CANVAS_HEIGHT) {
+            fontSize -= 5;
+            textConfig.fontSize = fontSize + 'px';
+            screenText.destroy();
+            screenText = this.gameManager.createText(this, this.CANVAS_WIDTH / 2, this.CANVAS_HEIGHT / 2, text, textConfig).setOrigin(0.5, 0.5);
+        }
+    }
+
+}

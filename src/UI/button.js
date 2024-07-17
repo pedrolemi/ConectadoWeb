@@ -2,18 +2,18 @@ export default class Button extends Phaser.GameObjects.Container {
     /**
     * Clase que permite crear un boton personalizable con animaciones para las diferentes interacciones
     * @param {Phaser.Scene} scene - escena a la que pertenece
-    * @param {number} x - posicion x
-    * @param {number} y - posicion y
-    * @param {number} scale - escala del objeto
-    * @param {function} fn - funcion que se ejecuta cuando se clica en el boton
-    * @param {string} fill - sprite que se usa para el relleno
-    * @param {color} normalCol - color RGB del boton cuando no se esta interactuando con el (opcional)
-    * @param {color} highlightedCol - color RGB cuando se pasa el puntero por encima (opcional)
-    * @param {color} pressedCol - color RGB del boton cuando se clica en el (opcional)
-    * @param {text} text - texto que se escribe en el boton (opcional)
-    * @param {object} fontParams - distintos parametros (tipografia, tam, estilo, color) para personalizar el texto anterior (opcional)
-    * @param {string} edge - sprite que se usa para el borde (opcional)
-    * @param {string} hitArea - cambiar el area de colision (opcional)
+    * @param {Number} x - posicion x
+    * @param {Number} y - posicion y
+    * @param {Number} scale - escala del objeto
+    * @param {Function} fn - funcion que se ejecuta cuando se clica en el boton
+    * @param {String} fill - sprite que se usa para el relleno
+    * @param {Color} normalCol - color RGB del boton cuando no se esta interactuando con el (opcional)
+    * @param {Color} highlightedCol - color RGB cuando se pasa el puntero por encima (opcional)
+    * @param {Color} pressedCol - color RGB del boton cuando se clica en el (opcional)
+    * @param {Text} text - texto que se escribe en el boton (opcional)
+    * @param {Object} fontParams - distintos parametros (tipografia, tam, estilo, color) para personalizar el texto anterior (opcional)
+    * @param {String} edge - sprite que se usa para el borde (opcional)
+    * @param {String} hitArea - cambiar el area de colision (opcional)
     */
     constructor(scene, x, y, scale, fn, fill, normalCol, highlightedCol, pressedCol, text, fontParams, edge, hitArea) {
         super(scene, x, y);

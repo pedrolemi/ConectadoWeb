@@ -18,7 +18,7 @@ export default class DialogManager {
         this.portraits = new Map();         // Mapa para guardar los retratos en esta escena
 
         this.gameManager = GameManager.getInstance();
-        this.dispatcher = EventDispatcher.getInstance();
+        this.dispatcher = this.gameManager.dispatcher;
 
         this.textbox = new TextBox(scene, this);
         this.textbox.activate(false);
@@ -69,7 +69,7 @@ export default class DialogManager {
 
     /**
     * Devuelve el retrato del personaje indicado
-    * @param {string} character - id del personaje
+    * @param {String} character - id del personaje
     * @return {Phaser.Image} - imagen con el retrato del personaje. 
     *                          Devuelve null si la id no esta en el mapa de retratos 
     */
@@ -79,8 +79,8 @@ export default class DialogManager {
 
     /**
     * Cambia el texto de la caja
-    * @param {string} text - texto a escribir
-    * @param {boolean} animate - si se va a animar el texto o no
+    * @param {String} text - texto a escribir
+    * @param {Boolean} animate - si se va a animar el texto o no
     */
     setText(dialogInfo, animate) {
         this.textbox.setText(dialogInfo, animate);
@@ -211,7 +211,7 @@ export default class DialogManager {
             else if (this.currNode.type === "textMessage") {
                 setTimeout(() => {
                     if(this.currNode.subtype == "phone"){
-                        this.scene.getPhoneManager().phone.addMessage(this.currNode.chat, this.currNode.message, this.currNode.character, this.currNode.name);
+                        this.scene.phoneManager.phone.addMessage(this.currNode.chat, this.currNode.message, this.currNode.character, this.currNode.name);
                     }
                     else if(this.currNode.subtype == "socialNetwork"){
                         // escribir en la red social en el post del usuario con el character
@@ -288,8 +288,8 @@ export default class DialogManager {
     /**
     * Activa/desactiva las cajas de opcion multiple
     * @param {Boolean} active - si se van a activar o no las opciones
-    * @param {function} onComplete - funcion a la que llamar cuando acabe la animacion
-    * @param {number} delay - tiempo en ms que tarda en llamarse a onComplete
+    * @param {Function} onComplete - funcion a la que llamar cuando acabe la animacion
+    * @param {Number} delay - tiempo en ms que tarda en llamarse a onComplete
     */
     activateOptions(active, onComplete, delay) {
         this.options.forEach((option) => { option.activate(active, onComplete, delay); });
@@ -306,14 +306,14 @@ export default class DialogManager {
         // Si el telefono esta activo, es que se ha elegido una respuesta para el chat
         /*
         if (this.currNode.choices[index].reply) {
-            this.scene.getPhoneManager().phone.addMessage(this.currNode.choices[index].chat, this.currNode.choices[index].text, this.currNode.character, this.currNode.name);
+            this.scene.phoneManager.phone.addMessage(this.currNode.choices[index].chat, this.currNode.choices[index].text, this.currNode.character, this.currNode.name);
         }
         */
         // Se de una interaccion en el telefono
         if(this.currNode.subtype === "phone"){
             // Interaccion de enviar el mensaje (el completo o el propio texto)
             if(this.currNode.choices[index].effect === "reply"){
-                this.scene.getPhoneManager().phone.addMessage(this.currNode.chat, this.currNode.choices[index].message, this.currNode.character, this.currNode.name);
+                this.scene.phoneManager.phone.addMessage(this.currNode.chat, this.currNode.choices[index].message, this.currNode.character, this.currNode.name);
             }
         }
         else if(this.currNode.subtype === "socialNetwork"){
@@ -338,7 +338,7 @@ export default class DialogManager {
 
     /**
     * Metodo que se llama cuando inicia o termina un dialogo 
-    * @param {boolean} talking - true si el dialogo inicia, false si acaba
+    * @param {Boolean} talking - true si el dialogo inicia, false si acaba
     */
     setTalking(talking) {
         this.talking = talking;

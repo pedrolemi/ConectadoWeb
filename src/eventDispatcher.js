@@ -32,8 +32,8 @@ export default class EventDispatcher {
 
     /**
     * Metodo para emitir un evento
-    * @param {string} event - nombre del evento
-    * @param {object} obj - objeto que reciben los objetos suscritos al evento (opcional)
+    * @param {String} event - nombre del evento
+    * @param {Object} obj - objeto que reciben los objetos suscritos al evento (opcional)
     */
     dispatch(event, obj) {
         this.emitter.emit(event, obj);
@@ -42,9 +42,9 @@ export default class EventDispatcher {
 
     /**
     * Metodo para suscribir un objeto a un evento de forma indefinida
-    * @param {string} event - nombre del evento
-    * @param {object} owner - objeto que se suscribe al evento
-    * @param {fn} fn - funcion que se ejecuta cuando se produce el evento
+    * @param {String} event - nombre del evento
+    * @param {Object} owner - objeto que se suscribe al evento
+    * @param {Fn} fn - funcion que se ejecuta cuando se produce el evento
     */
     add(event, owner, fn) {
         // se agregan los difereentes elementos a los mapas
@@ -69,9 +69,9 @@ export default class EventDispatcher {
 
     /**
     * Metodo para suscribir un objeto a un evento una sola vez
-    * @param {string} event - nombre del evento
-    * @param {object} owner - objeto que se suscribe al evento
-    * @param {fn} fn - funcion que se ejecuta cuando se produce el evento
+    * @param {String} event - nombre del evento
+    * @param {Object} owner - objeto que se suscribe al evento
+    * @param {Fn} fn - funcion que se ejecuta cuando se produce el evento
     */
     addOnce(event, owner, fn) {
         if (!this.eventsMap.has(event)) {
@@ -92,7 +92,7 @@ export default class EventDispatcher {
 
     /**
     * Metodo para desuscribir a todos los objetos de un evento concreto
-    * @param {string} event - nombre del evento
+    * @param {String} event - nombre del evento
     */
     removeByEvent(event) {
         if (this.eventsMap.has(event)) {
@@ -112,7 +112,7 @@ export default class EventDispatcher {
 
     /**
     * Metodo para desuscribir a un objeto de todos sus eventos
-    * @param {object} owner - objeto suscrito a algun evento
+    * @param {Object} owner - objeto suscrito a algun evento
     */
     removeByOwner(owner) {
         if (this.ownersMap.has(owner)) {
@@ -138,8 +138,8 @@ export default class EventDispatcher {
 
     /**
     * Metodo para desuscribir a un objeto de un evento concreto
-    * @param {string} event - nombre del evento
-    * @param {object} owner - objeto suscrito al evento
+    * @param {String} event - nombre del evento
+    * @param {Object} owner - objeto suscrito al evento
     */
     remove(event, owner) {
         // se comprueba si ese objeto tiene ese evento

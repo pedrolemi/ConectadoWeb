@@ -17,10 +17,10 @@ export default class DialogObject {
 
     /**
     * Activa o desactiva los objetos indicados
-    * @param {boolean} active - si se va a activar el objeto
+    * @param {Boolean} active - si se va a activar el objeto
     * @param {Array} objects - array de objetos a activar/desactivar
-    * @param {function} onComplete - funcion a la que llamar cuando acabe la animacion
-    * @param {number} delay - tiempo en ms que tarda en llamarse a onComplete
+    * @param {Function} onComplete - funcion a la que llamar cuando acabe la animacion
+    * @param {Number} delay - tiempo en ms que tarda en llamarse a onComplete
     */
     activate(active, objects, onComplete, delay) {
         let fade;

@@ -5,9 +5,9 @@ export default class OptionBox extends DialogObject {
     * Caja de texto para la opcion multiple
     * @extends DialogObject
     * @param {Phaser.Scene} scene - escena a la que pertenece
-    * @param {number} index - indice de la opcion
-    * @param {number} numOpts - numero total de elecciones
-    * @param {string} text - texto de la opcion
+    * @param {Number} index - indice de la opcion
+    * @param {Number} numOpts - numero total de elecciones
+    * @param {String} text - texto de la opcion
     */
     constructor(scene, dialogManager, index, numOpts, text) {
         super(scene);
@@ -20,7 +20,7 @@ export default class OptionBox extends DialogObject {
         this.box.y = this.scene.CANVAS_HEIGHT - (this.box.displayHeight * numOpts) + (this.box.displayHeight * index);
 
         // Configuracion del texto de la caja
-        this.textConfig = { ...scene.textConfig };
+        this.textConfig = { ...scene.gameManager.textConfig };
         this.textConfig.fontSize = 20 + 'px';
 
         let x = 50;
@@ -101,9 +101,9 @@ export default class OptionBox extends DialogObject {
     /**
     * Activa/desactiva la caja y ejecuta la funcion o lambda que se le
     * pase como parametro una vez haya terminado la animacion y el retardo indicado
-    * @param {boolean} active - si se va a activar
-    * @param {function} onComplete - funcion a la que llamar cuando acabe la animacion
-    * @param {number} delay - tiempo en ms que tarda en llamarse a onComplete
+    * @param {Boolean} active - si se va a activar
+    * @param {Function} onComplete - funcion a la que llamar cuando acabe la animacion
+    * @param {Number} delay - tiempo en ms que tarda en llamarse a onComplete
     */
     activate(active, onComplete, delay) {
         // Es visible si el alpha de la caja es 1

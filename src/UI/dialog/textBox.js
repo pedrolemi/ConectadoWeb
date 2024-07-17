@@ -36,10 +36,10 @@ export default class TextBox extends DialogObject {
 
 
         // Configuracion del texto de la caja
-        this.normalTextConfig = { ...scene.textConfig };
+        this.normalTextConfig = { ...scene.gameManager.textConfig };
         this.normalTextConfig.fontSize = 20 + 'px';
 
-        this.nameTextConfig = { ...scene.textConfig };
+        this.nameTextConfig = { ...scene.gameManager.textConfig };
         this.nameTextConfig.fontSize = 25 + 'px';
 
 
@@ -85,8 +85,8 @@ export default class TextBox extends DialogObject {
 
     /**
     * Cambia el texto de la caja
-    * @param {string} text - texto a escribir
-    * @param {boolean} animate - si se va a animar el texto o no
+    * @param {String} text - texto a escribir
+    * @param {Boolean} animate - si se va a animar el texto o no
     */
     setText(dialogInfo, animate) {
         this.shutdown();
@@ -128,8 +128,8 @@ export default class TextBox extends DialogObject {
 
     /**
     * Crea el texto que se muestra por pantalla
-    * @param {string} text - texto a escribir
-    * @param {string} character - id del personaje que habla
+    * @param {String} text - texto a escribir
+    * @param {String} character - id del personaje que habla
     */
     createText(text, character) {
         let x = 230;
@@ -154,7 +154,7 @@ export default class TextBox extends DialogObject {
 
     /**
     * Crea el texto del nombre del personaje hablando
-    * @param {string} name - nombre del personaje
+    * @param {String} name - nombre del personaje
     */
     createName(name) {
         let x = 290;
@@ -212,9 +212,9 @@ export default class TextBox extends DialogObject {
     /**
     * Activa/desactiva el cuadro de texto y ejecuta la funcion o lambda que se le
     * pase como parametro una vez haya terminado la animacion y el retardo indicado
-    * @param {boolean} active - si se va a activar
-    * @param {function} onComplete - funcion a la que llamar cuando acabe la animacion
-    * @param {number} delay - tiempo en ms que tarda en llamarse a onComplete
+    * @param {Boolean} active - si se va a activar
+    * @param {Function} onComplete - funcion a la que llamar cuando acabe la animacion
+    * @param {Number} delay - tiempo en ms que tarda en llamarse a onComplete
     */
     activate(active, onComplete, delay) {
         // Es visible si el alpha de la caja es 1

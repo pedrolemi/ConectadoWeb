@@ -1,3 +1,5 @@
+import EventDispatcher from "../eventDispatcher.js";
+
 // variable de nivel de modulo
 // - Se puede acceder desde cualquier parte del modulo, pero no es visible
 // al no pertencen a la clase y no ser exportada
@@ -9,7 +11,7 @@ let instance = null;
 export default class GameManager {
     /**
     * Maneja el flujo de juego y variables de uso comun
-    * @param {scene} - se necesita una escena para poder acceder al ScenePlugin y cambiar de escena
+    * @param {Scene} - se necesita una escena para poder acceder al ScenePlugin y cambiar de escena
     */
     constructor(scene) {
         // no deberia suceder, pero por si acaso se hace el new de la clase desde fuera
@@ -27,6 +29,7 @@ export default class GameManager {
         this.currentScene = scene;
 
         this.i18next = this.currentScene.plugins.get('rextexttranslationplugin');
+        this.dispatcher = EventDispatcher.getInstance();
 
         // indica el dia del juego
         this.day = 1;
@@ -34,6 +37,9 @@ export default class GameManager {
         // almacena los valores que van a tener que ser usados desde fuera
         this.map = new Map();
         this.map.set("bag", false);
+
+        this.isLate = "isLate";
+        this.map.set(this.isLate, false);
 
         this.generateTextures();
 
@@ -160,6 +166,52 @@ export default class GameManager {
         this.graphics.clear();
     }
 
+
+    /**
+    * Crea el texto que se muestra por pantalla. Tambien se encarga de guardar 
+    * y definir la configuracion de texto por defecto en la variable this.textconfig
+    * 
+    * @param {String}
+    * @param {String} text - texto a escribir
+    * @return {String} - texto creado por la funcion
+    */
+    createText(scene, x, y, text, config) {
+        // Configuracion de texto por defecto
+        this.textConfig = {
+            fontFamily: 'Arial',        // Fuente (tiene que estar precargada en el html o el css)
+            fontSize: 25 + 'px',        // Tamano de la fuente del dialogo
+            fontStyle: 'bold',          // Estilo de la fuente
+            backgroundColor: null,      // Color del fondo del texto
+            color: '#fff',              // Color del texto
+            stroke: '#000',             // Color del borde del texto
+            strokeThickness: 5,         // Grosor del borde del texto 
+            align: 'left',              // Alineacion del texto ('left', 'center', 'right', 'justify')
+            wordWrap: null,
+        }
+
+        if (!config) {
+            config = this.textConfig;
+        }
+
+        // Crea el texto en la escena y lo devuelve
+        let textObj = scene.make.text({
+            x, y, text,
+            style: {
+                fontFamily: config.fontFamily,
+                fontSize: config.fontSize,
+                fontStyle: config.fontStyle,
+                backgroundColor: config.backgroundColor,
+                color: config.color,
+                stroke: config.stroke,
+                strokeThickness: config.strokeThickness,
+                align: config.align,
+                wordWrap: config.wordWrap
+            }
+        });
+
+        return textObj;
+    }
+
     ///////////////////////////////////////
     /// Metodos para cambiar de escena ///
     //////////////////////////////////////
@@ -191,29 +243,47 @@ export default class GameManager {
         this.currentScene.scene.launch(sceneName);
         this.UIManager = this.currentScene.scene.get(sceneName);
 
+        // Pasa a la escena inicial con los parametros text, onComplete y onCompleteDelay
+        // sceneName = 'TextOnlyScene';
+        // this.changeScene(sceneName, {
+        //     // El texto de se coge del a archivo de traducciones
+        //     text: this.i18next.t("day1.start", { ns: "transitionScenes", returnObjects: true }),
+        //     onComplete: () => {
+        //         // Al llamar a onComplete, se cambiara a la escena de la alarma
+        //         // Con el parametro day, que se coge del archivo de traducciones
+        //         let days = this.i18next.t("clock.days", { ns: "phoneInfo", returnObjects: true });
+        //         this.changeScene('AlarmScene', {
+        //             day: days[0],
+        //             nextScene: 'Test'
+        //         });
+        //     },
+        //     onCompleteDelay: 500
+        // });
+
         sceneName = 'Test';
         this.changeScene(sceneName);
     }
 
-    setUserInfo(userInfo){
+    setUserInfo(userInfo) {
         this.userInfo = userInfo;
     }
 
     /**
     * Metodo para cambiar de escena 
-    * @param {Phaser.Scene / String} scene - nombre o instancia de la escena a la que se va a pasar
-    * @param {object} - informacion que pasar a la escena (opcional)
+    * @param {String} scene - key de la escena a la que se va a pasar
+    * @param {Object} - informacion que pasar a la escena (opcional)
     */
-    changeScene(scene) {
+    changeScene(scene, params) {
         this.currentScene.scene.stop();
-        this.currentScene.scene.start(scene);
+        this.currentScene.scene.start(scene, params);
         this.currentScene = this.currentScene.scene.get(scene);
-        if (this.UIManager && this.getDialogManager()) {
-            this.getDialogManager().clearPortraits();
+
+        if (this.UIManager && this.UIManager.dialogManager) {
+            this.UIManager.dialogManager.clearPortraits();
         }
     }
 
-    switchToComputer(){
+    switchToComputer() {
         // se duerme la escena actual (se deja de actualizar y renderizar)
         // (luego se va a poder despertar)
         this.currentScene.scene.sleep();
@@ -226,19 +296,11 @@ export default class GameManager {
         this.currentScene.scene.run('ComputerScene');
     }
 
-    leaveComputer(){
+    leaveComputer() {
         this.currentScene.scene.sleep('ComputerScene');
         this.currentScene.scene.wake();
     }
 
-    getDialogManager() {
-        if (this.UIManager) return this.UIManager.getDialogManager();
-        else return null;
-    }
-    getPhoneManager() {
-        if (this.UIManager) return this.UIManager.getPhoneManager();
-        else return null;
-    }
     // tiene los campos: name, username, password, gender
     getUserInfo() {
         return this.userInfo;

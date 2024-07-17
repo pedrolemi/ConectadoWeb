@@ -4,6 +4,14 @@
         "message": "You are unable to sleep more.\nYou should wake up now."
     },
     "clock": {
+        "days": [
+            "Monday, Day 1",
+            "Tuesday, Day 2",
+            "Wednesay, Day 3",
+            "Thursday, Day 4",
+            "Friday, Day 5"
+        ],
+        
         "alarmHour": "07:30",
         "alarmLateHour": "08:05",
         "pcLateHour": "08:10",

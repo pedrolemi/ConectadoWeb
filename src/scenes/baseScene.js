@@ -3,6 +3,12 @@ import GameManager from '../managers/gameManager.js';
 import EventDispatcher from '../eventDispatcher.js';
 
 export default class BaseScene extends Phaser.Scene {
+    /**
+     * Escena base para las escenas del juego. Guarda parametros como las dimensiones 
+     * del canvas o los managers y posiciones de los retratos de los personajes 
+     * @extends Phaser.Scene
+     * @param {String} name - id de la escena
+     */
     constructor(name) {
         super({ key: name });
     }
@@ -13,11 +19,13 @@ export default class BaseScene extends Phaser.Scene {
 
         // Obtiene el dialogManager (tendria que haberse iniciado antes que la escena)
         this.gameManager = GameManager.getInstance();
-        this.dialogManager = this.gameManager.getDialogManager();
-        this.phoneManager = this.gameManager.getPhoneManager();
 
-        this.dispatcher = EventDispatcher.getInstance();
+        this.UIManager = this.gameManager.UIManager;
+        this.dialogManager = this.gameManager.UIManager.dialogManager;
+        this.phoneManager = this.gameManager.UIManager.phoneManager;
 
+        this.dispatcher = this.gameManager.dispatcher;
+        
         // Obtiene el plugin de i18n del GameManager
         this.i18next = this.gameManager.i18next;
 
@@ -82,7 +90,7 @@ export default class BaseScene extends Phaser.Scene {
     * @param {String} namespace - nombre del archivo de localizacion del que se va a leer
     * @param {String} playerName - nombre del jugador
     * @param {String} context - contexto en el que se va a referir al personaje (male / female)
-    * @param {boolean} getObjs - si se quiere devolver el nodo leido como un objeto 
+    * @param {Boolean} getObjs - si se quiere devolver el nodo leido como un objeto 
     *
     * 
     *  IMPORTANTE: En un nodo con condiciones, cada condicion lleva a otro nodo distinto.

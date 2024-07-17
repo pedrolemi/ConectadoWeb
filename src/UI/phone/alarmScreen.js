@@ -14,7 +14,7 @@ export default class AlarmScreen extends BaseScreen {
 
 
         // Configuracion de texto para la el texto de ll titulo
-        let textConfig = { ...scene.textConfig };
+        let textConfig = { ...scene.gameManager.textConfig };
         textConfig.fontFamily = 'gidole-regular';
         textConfig.fontSize = 40 + 'px';
         textConfig.fontStyle = 'normal'
@@ -26,13 +26,13 @@ export default class AlarmScreen extends BaseScreen {
 
 
         // Configuracion de texto para el reloj
-        let hourTextConfig = { ...scene.textConfig };
+        let hourTextConfig = { ...scene.gameManager.textConfig };
         hourTextConfig.fontFamily = 'gidole-regular';
         hourTextConfig.fontSize = 100 + 'px';
         hourTextConfig.fontStyle = 'normal'
         hourTextConfig.strokeThickness = 0;
 
-        let dayTextConfig = { ...scene.textConfig };
+        let dayTextConfig = { ...scene.gameManager.textConfig };
         dayTextConfig.fontFamily = 'gidole-regular';
         dayTextConfig.fontStyle = 'normal'
         dayTextConfig.strokeThickness = 0;

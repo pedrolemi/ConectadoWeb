@@ -1,6 +1,5 @@
-import { TextNode, ChoiceNode, ConditionNode, EventNode, ChatNode, ChatChoiceNode, SocialNetChoiceNode, SocialNetNode } from '../UI/dialog/dialogNode.js';
+import { TextNode, ChoiceNode, ConditionNode, EventNode, ChatNode, SocialNetNode } from '../UI/dialog/dialogNode.js';
 import GameManager from '../managers/gameManager.js';
-import EventDispatcher from '../eventDispatcher.js';
 
 export default class BaseScene extends Phaser.Scene {
     /**
@@ -25,7 +24,7 @@ export default class BaseScene extends Phaser.Scene {
         this.phoneManager = this.gameManager.UIManager.phoneManager;
 
         this.dispatcher = this.gameManager.dispatcher;
-        
+
         // Obtiene el plugin de i18n del GameManager
         this.i18next = this.gameManager.i18next;
 
@@ -109,14 +108,6 @@ export default class BaseScene extends Phaser.Scene {
         let node = null;
         let nodeId = id;
         let type = file[id].type;
-        let character = file[id].character;
-
-        // Obtiene el nombre del personaje del archivo de nombres localizados
-        let name = this.i18next.t(file[id].character, { ns: "names", returnObjects: getObjs });
-        if (name === "player") {
-            name = this.gameManager.getUserInfo().name;
-        }
-
 
         // Si el nodo es de tipo condicion
         if (type === "condition") {
@@ -163,13 +154,25 @@ export default class BaseScene extends Phaser.Scene {
         }
         // Si el nodo es de tipo texto
         else if (type === "text") {
-            node = new TextNode(); 
+            node = new TextNode();
+
+            // Obtiene el nombre del personaje del archivo de nombres localizados
+            // En el caso de que se trate del jugador, obtiene su nombre
+            let character = file[id].character;
+            if (character === "player") {
+                node.name = this.gameManager.getUserInfo().name;
+            }
+            else {
+                node.name = this.i18next.t(file[id].character, { ns: "names", returnObjects: getObjs });
+            }
+            node.character = character;
+
             // Se crea un dialogo con todo el texto a mostrar
             let split = {
                 // Obtiene el texto del archivo de textos traducidos
                 text: this.i18next.t(id + ".text", { ns: namespace, name: playerName, context: context, returnObjects: getObjs }),
                 character: character,
-                name: name
+                name: node.name
             }
             // Se obtiene todo el texto separado en varios dialogos si es demasiado largo
             node.dialogs = this.splitDialogs([split]);
@@ -182,54 +185,16 @@ export default class BaseScene extends Phaser.Scene {
         }
         // Si el nodo es de tipo opcion multiple
         else if (type === "choice") {
-            let subtype = file[id].subtype;
-            if(subtype === "phone"){
-                node = new ChatChoiceNode();
-                node.chat = this.i18next.t("textMessages" + "." + file[id].chat, { ns: "phoneInfo" });
-            }
-            else if(subtype === "socialNetwork"){
-                node = new SocialNetChoiceNode();
-                node.user = file[id].user;
-                node.post = filed[id].post;
-            }
-            else {
-                node = new ChoiceNode();
-            }
-            
+            node = new ChoiceNode();
+
             // Se obtienen los textos de las opciones del archivo de textos traducidos
             let texts = this.i18next.t(id, { ns: namespace, name: playerName, context: context, returnObjects: getObjs })
 
             for (let i = 0; i < file[id].choices.length; i++) {
                 // Se guarda el texto de la eleccion y se crea de manera recursiva
                 // el nodo siguiente que corresponde a elegir dicha opcion
-                let choice = {};
-                choice.text = texts[i].text;
-                /*
                 let choice = {
-                    text: texts[i].text,
-                    reply: false,
-                    chat: null
-                }
-                */
-
-                // Si es una respuesta de un mensaje de texto, guarda si elegir la 
-                // opcion conlleva a responder el mensaje de texto o no
-                /*
-                if (file[id].choices[i].reply) {
-                    choice.reply = file[id].choices[i].reply;
-                    choice.chat = this.i18next.t("textMessages" + "." + file[id].choices[i].chat, { ns: "phoneInfo" });
-                }
-                */
-                
-                if(file[id].choices[i].effect){
-                    // Si hay un mensaje, se coge ese. Si no, se coge el propio texto
-                    choice.effect = file[id].choices[i].effect;
-                    if(choice.effect === "reply") {
-                        choice.message = texts[i].text;
-                        if(texts[i].message){
-                            choice.message = texts[i].message;
-                        }
-                    }
+                    text: texts[i].text
                 }
 
                 node.choices.push(choice);
@@ -242,12 +207,11 @@ export default class BaseScene extends Phaser.Scene {
         }
         // Si el nodo es de tipo evento
         else if (type === "event") {
-            let subtype = file[id].subtype;
             node = new EventNode();
-            
+
             // Recorre todas las variables obtenidas
             for (let i = 0; i < file[id].events.length; i++) {
-                // // Lee el nombre del evento
+                // Lee el nombre del evento
                 let evtName = Object.keys(file[id].events[i]);
 
                 // Obtiene el objeto que guarda los parametros del evento 
@@ -260,31 +224,33 @@ export default class BaseScene extends Phaser.Scene {
                 // Lo mete en las variables del nodo
                 node.events.push(evt);
             }
-            
+
             // Si hay un nodo despues de este, se crea de manera recursiva
             if (file[id].next) {
                 node.next.push(this.readNodes(file[id].next, file, namespace, playerName, context, getObjs));
             }
         }
         // Si el nodo es de tipo mensaje de texto
-        else if (type === "textMessage") {
-            let subtype = file[id].subtype;
-            if(subtype === "phone"){
-                node = new ChatNode();
-                node.chat = this.i18next.t("textMessages" + "." + file[id].chat, { ns: "phoneInfo" });
-            }
-            else if(subtype === "socialNetwork"){
-                node = new SocialNetNode();
-                node.user = file[id].user;
-                node.post = filed[id].post;
-            }
+        else if (type === "chatMessage") {
+            node = new ChatNode();
 
             // Obtiene el texto del archivo de textos traducidos y lo guarda
-            let message = this.i18next.t(id + ".message", { ns: namespace, name: playerName, context: context, returnObjects: getObjs });
-            node.message = message;
+            let text = this.i18next.t(id + ".text", { ns: namespace, name: playerName, context: context, returnObjects: getObjs });
+            node.text = text;
+
+            // Obtiene el nombre del personaje del archivo de nombres localizados
+            // En el caso de que se trate del jugador, obtiene su nombre
+            let character = file[id].character;
+            if (character === "player") {
+                node.name = this.gameManager.getUserInfo().name;
+            }
+            else {
+                node.name = this.i18next.t(file[id].character, { ns: "names" });
+            }
+            node.character = character;
 
             // Guarda el chat en el que tiene que ir la respuesta y el retardo con el que se envia
-            //node.chat = this.i18next.t("textMessages" + "." + file[id].chat, { ns: "phoneInfo" });
+            node.chat = this.i18next.t("textMessages" + "." + file[id].chat, { ns: "phoneInfo" });
 
             if (file[id].replyDelay) {
                 node.replyDelay = file[id].replyDelay;
@@ -295,10 +261,33 @@ export default class BaseScene extends Phaser.Scene {
                 node.next.push(this.readNodes(file[id].next, file, namespace, playerName, context, getObjs));
             }
         }
+        // Si el nodo es de tipo mensaje de texto
+        else if (type === "socialNetMessage") {
+            node = new SocialNetNode();
+
+            // Obtiene el texto del archivo de textos traducidos y lo guarda
+            let text = this.i18next.t(id + ".text", { ns: namespace, name: playerName, context: context, returnObjects: getObjs });
+            node.text = text;
+
+            node.character = file[id].character;
+            // Obtiene el nombre del jugador del archivo de nombres localizados
+            // En el caso de se trate del propio del jugador, obtiene el pronombre personal Tu
+            // traducido en el idioma correspondiente
+            node.name = this.i18next.t(file[id].character, { ns: "names" });
+
+            // Guarda el usuario que ha subido el post
+            node.user = file[id].user;
+
+            // Guarda el numero del post del usuario
+            node.post = filed[id].post;
+
+            // Si hay un nodo despues de este, se crea de manera recursiva
+            if (file[id].next) {
+                node.next.push(this.readNodes(file[id].next, file, namespace, playerName, context, getObjs));
+            }
+        }
 
         // Guarda los atributos basicos del nodo despues de haber decidido que tipo de nodo se va a crear
-        node.character = character;
-        node.name = name;
         node.id = nodeId;
 
         return node;

@@ -156,7 +156,7 @@ export default class BootScene extends Phaser.Scene {
                 'momDialog', 'dadDialog', 'chat1'],   // TEST
             preload: ['en', 'es'],
             // mostrar informacion de ayuda por consola
-            debug: false,
+            debug: true,
             // cargar las traducciones de un servidor especificado en vez de ponerlas directamente
             backend: {
                 // La ruta desde donde cargamos las traducciones

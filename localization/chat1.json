@@ -1,24 +1,20 @@
 {
     "root": {
         "type": "choice",
-        "subtype": "phone",
-        "chat": "chat1",
         "choices":[
-            { "next": "answer", "effect": "reply" },
-            { "next": "answer" }
+            { "next": "answer" },
+            { "next": "answer2" }
         ]
     },
     "answer": {
-        "type": "textMessage",
-        "subtype": "phone",
+        "type": "chatMessage",
         "character": "mom",
         "chat": "chat1",
         "replyDelay": 1000,
         "next": "answer2"
     },
     "answer2": {
-        "type": "textMessage",
-        "subtype": "phone",
+        "type": "chatMessage",
         "character": "player",
         "chat": "chat1",
         "replyDelay": 1000

@@ -3,10 +3,7 @@ export default class DialogNode {
     * Clase base para la informacion de los nodos de dialogo. Inicialmente esta todo vacio
     */
     constructor() {
-        this.type = null;               // dialog, choice, condition, event, textMessage
-
-        this.character = null;          // id del personaje que habla
-        this.name = null;               // nombre del personaje que habla
+        this.type = null;               // dialog, choice, condition, event, chatMessage, socialNetMessage
 
         this.id = null;                 // id de este nodo
         this.next = [];                 // posibles nodos siguientes
@@ -27,10 +24,12 @@ export class TextNode extends DialogNode {
     */
     constructor() {
         super();
-        
+
         this.type = "text";
         this.dialogs = [];              // serie de dialogos que se van a mostrar
         this.currDialog = null;         // indice del dialogo que se esta mostrando
+        this.character = null;          // id del personaje que habla
+        this.name = null;               // nombre del personaje que habla
     }
 }
 
@@ -44,7 +43,7 @@ export class ChoiceNode extends DialogNode {
         {
             "type": "choice",
             "choices":[
-                { "next": "choice1", "chat": 0, "reply": true },
+                { "next": "choice1" },
                 { "next": "choice1" }
             ]
         }
@@ -53,57 +52,8 @@ export class ChoiceNode extends DialogNode {
         super();
 
         this.type = "choice";
-        this.subtype = null;
         this.choices = [];              // Opciones (texto y si es un mensaje, de que chat y si que hay que responder)
         this.selectedOption = null;     // indice de la opcion seleccionada
-    }
-}
-
-export class ChatChoiceNode extends ChoiceNode {
-    /**
-     * Clase para los nodos de opcion multiple en los mensajes de texto del movil
-     * Hay dos tipos de efectos: respuesta o no
-     * Ejemplo:
-        {
-            "type": "choice",
-            "subtype": "phone"
-            "chat:" 0
-            "choices":[
-                { "next": "choice1", "effect": "reply" },
-                { "next": "choice1" }
-            ]
-        }
-     */
-    constructor(){
-        super();
-
-        this.subtype = "phone";
-        this.chat = null;
-    }
-}
-
-export class SocialNetChoiceNode extends ChoiceNode {
-     /**
-     * Clase para los nodos de opcion multiple en los mensajes de la red social
-     * Hay tres tipos de efectos: respuesta, no respuesta o borrar post
-     * Ejemplo:
-        {
-            "type": "choice",
-            "subtype": "socialNetwork"
-            "user": mom     // id del personaje
-            "post": 0
-            "choices":[
-                { "next": "choice1", "effect": "reply" },
-                { "next": "choice1" }
-            ]
-        }
-     */
-    constructor(){
-        super();
-
-        this.subtype = "socialNetwork";
-        this.user = null;
-        this.post = null;
     }
 }
 
@@ -176,64 +126,51 @@ export class EventNode extends DialogNode {
     }
 }
 
-export class MessageNode extends DialogNode {
+export class ChatNode extends DialogNode {
     /**
-    * Clase para la informacion de los nodos de chat
-    * Funciona como una clase abstracta, nunca se van a crear instancias de esta clase
+    * Clase para la informacion de los nodos de los mensajes de los chats del movil
     * @extends DialogNode
+    * Ejemplo:
+        {
+            "type": "chatMessage",
+            "character": "player",
+            "chat": "chat1",
+            "replyDelay": 1000
+        }
     */
     constructor() {
         super();
-        
-        this.type = "textMessage";
-        this.subtype = null;
-        this.message = null;            // texto del mensaje
+
+        this.type = "chatMessage";
+        this.text = null;               // texto del mensaje
+        this.character = null;          // id del personaje que envia el mensaje
+        this.name = null;               // nombre del personaje que envia el mensaje
+        this.chat = null;               // chat al que corresponde el mensaje
         this.replyDelay = 0;            // retardo con el que se enviara el mensaje
     }
 }
 
-export class ChatNode extends MessageNode {
+export class SocialNetNode extends DialogNode {
     /**
-    * Clase para la informacion de los nodos de chat del movil
-    * @extends MessageNode
-    * 
+     * Clase para la informacion de los nodos de los mensajes de las publicaciones
+     * de la red social
+     * @extends DialogNode
     * Ejemplo:
         {
-            "type": "textMessage",
-            "subtype": "phone"
-            "character": "mom",
-            "chat": 0,
-            "replyDelay": 1000
+            "type": "socialNetMessaage",
+            "character": "player",
+            "user": "mom",
+            "post": 0
         }
-    */
-    constructor(){
+     */
+    constructor() {
         super();
 
-        this.subtype = "phone";
-        this.chat = null;               // chat en el que se escribe el mensaje
-    }
-}
-
-export class SocialNetNode extends MessageNode {
-    /**
-    * Clase para la informacion de los nodos de chat de la red social
-    * @extends MessageNode
-    * 
-    * Ejemplo:
-        {
-            "type": "textMessage",
-            "subtype": "socialNetwork"
-            "character": "mom",
-            "user": 0,
-            "post": 0,
-            "replyDelay": 1000
-        }
-    */
-    constructor(){
-        super();
-
-        this.subtype = "socialNetwork";
-        this.user = null;
-        this.post = null;
+        this.type = "socialNetMessage";
+        this.text = null;               // texto del mensaje
+        this.character = null;          // id del personaje que publica escribe en la publicacion
+        this.name = null;               // nombre del personaje que escribe en la publicacion
+        this.user = null;               // usuario que ha hecho la publicacion (corresponde con los ids de los personajes)
+        this.post = null;               // numero de la publicacion (inamovible aunque se borren publicaciones)
     }
 }

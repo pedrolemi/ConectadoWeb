@@ -88,7 +88,7 @@ export default class ChatScreen extends BaseScreen {
 
         // Hace fade del color de la caja al pasar o quitar el raton por encima
         this.textBox.on('pointerover', () => {
-            if (!this.scene.getDialogManager().isTalking()) {
+            if (!this.scene.dialogManager.isTalking()) {
                 this.scene.tweens.addCounter({
                     targets: [this.textBox],
                     from: 0,
@@ -106,7 +106,7 @@ export default class ChatScreen extends BaseScreen {
 
         });
         this.textBox.on('pointerout', () => {
-            if (!this.scene.getDialogManager().isTalking()) {
+            if (!this.scene.dialogManager.isTalking()) {
                 this.scene.tweens.addCounter({
                     targets: [this.textBox],
                     from: 0,
@@ -125,7 +125,7 @@ export default class ChatScreen extends BaseScreen {
 
         // Al hacer click, vuelve a cambiar el color de la caja al original
         this.textBox.on('pointerdown', (pointer) => {
-            if (!this.scene.getDialogManager().isTalking()) {
+            if (!this.scene.dialogManager.isTalking()) {
                 let fadeColor = this.scene.tweens.addCounter({
                     targets: [this.textBox],
                     from: 0,
@@ -145,7 +145,7 @@ export default class ChatScreen extends BaseScreen {
                 if (fadeColor) {
                     let hasRun = false;
                     fadeColor.on('complete', () => {
-                        this.scene.getDialogManager().setNode(this.currNode);
+                        this.scene.dialogManager.setNode(this.currNode);
                     });
 
                 }
@@ -169,7 +169,7 @@ export default class ChatScreen extends BaseScreen {
         // al quitar el raton de encima vuelve a su tamano original,
         // y al hacer click, se hace pequeno y grande de nuevo
         this.returnButton.on('pointerover', () => {
-            if (!this.scene.getDialogManager().isTalking()) {
+            if (!this.scene.dialogManager.isTalking()) {
                 this.scene.tweens.add({
                     targets: [this.returnButton],
                     scale: originalScale * 1.2,
@@ -180,7 +180,7 @@ export default class ChatScreen extends BaseScreen {
             }
         });
         this.returnButton.on('pointerout', () => {
-            if (!this.scene.getDialogManager().isTalking()) {
+            if (!this.scene.dialogManager.isTalking()) {
                 this.scene.tweens.add({
                     targets: [this.returnButton],
                     scale: originalScale,
@@ -191,7 +191,7 @@ export default class ChatScreen extends BaseScreen {
 
         });
         this.returnButton.on('pointerdown', (pointer) => {
-            if (!this.scene.getDialogManager().isTalking()) {
+            if (!this.scene.dialogManager.isTalking()) {
                 let anim = this.scene.tweens.add({
                     targets: [this.returnButton],
                     scale: originalScale,

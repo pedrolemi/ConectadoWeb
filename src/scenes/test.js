@@ -88,12 +88,5 @@ export default class Test extends BaseScene {
             this.gameManager.setValue("talked", false);
             
         });
-
-        // let rect = this.add.rectangle(0, 0, 200, 200, '0x000000');
-        // rect.setInteractive();
-        // rect.setOrigin(0);
-        // rect.on('pointerdown', () => {
-        //     this.gameManager.switchToComputer();
-        // });
     }
 }

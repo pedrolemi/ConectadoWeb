@@ -25,7 +25,7 @@ export default class messageBox extends Phaser.GameObjects.Container {
         let heightMultiplier = 3;
         let charName = "";
 
-        // Configuracion d e la burbuja de texto si es un mensaje de chat y el personaje 
+        // Configuracion de la burbuja de texto si es un mensaje de chat y el personaje 
         // que escribe no es el jugador O si es un comentario de la red social
         if ((character !== "player" && character && type === 0) || type === 1) {
             if (type === 0) {

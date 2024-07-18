@@ -1,7 +1,6 @@
 import TextBox from '../UI/dialog/textBox.js';
 import OptionBox from '../UI/dialog/optionBox.js';
 import GameManager from './gameManager.js';
-import EventDispatcher from '../eventDispatcher.js';
 
 export default class DialogManager {
     /**
@@ -208,17 +207,18 @@ export default class DialogManager {
                 this.currNode = this.currNode.next[0];
                 this.processNode();
             }
-            else if (this.currNode.type === "textMessage") {
+            else if (this.currNode.type === "chatMessage") {
                 setTimeout(() => {
-                    if(this.currNode.subtype == "phone"){
-                        this.scene.phoneManager.phone.addMessage(this.currNode.chat, this.currNode.message, this.currNode.character, this.currNode.name);
-                    }
-                    else if(this.currNode.subtype == "socialNetwork"){
-                        // escribir en la red social en el post del usuario con el character
-                    }
+                    this.scene.phoneManager.phone.addMessage(this.currNode.chat, this.currNode.text, this.currNode.character, this.currNode.name);
                     this.currNode = this.currNode.next[0];
                     this.processNode();
                 }, this.currNode.replyDelay);
+            }
+            else if (this.currNode.type === "socialNetMessage") {
+                // escribir en la red social
+
+                this.currNode = this.currNode.next[0];
+                this.processNode();
             }
         }
         else {
@@ -303,28 +303,6 @@ export default class DialogManager {
         // Desactiva las opciones
         this.activateOptions(false);
 
-        // Si el telefono esta activo, es que se ha elegido una respuesta para el chat
-        /*
-        if (this.currNode.choices[index].reply) {
-            this.scene.phoneManager.phone.addMessage(this.currNode.choices[index].chat, this.currNode.choices[index].text, this.currNode.character, this.currNode.name);
-        }
-        */
-        // Se de una interaccion en el telefono
-        if(this.currNode.subtype === "phone"){
-            // Interaccion de enviar el mensaje (el completo o el propio texto)
-            if(this.currNode.choices[index].effect === "reply"){
-                this.scene.phoneManager.phone.addMessage(this.currNode.chat, this.currNode.choices[index].message, this.currNode.character, this.currNode.name);
-            }
-        }
-        else if(this.currNode.subtype === "socialNetwork"){
-            if(this.currNode.choices[index].effect === "reply"){
-                // se escribe mensaje en la red social
-            }
-            else if(this.currNode.choices[index].effect === "erase"){
-                // se borra post de la red social
-            }
-        }
-
         // Actualiza el nodo actual y lo procesa            
         this.currNode.selectedOption = index;
         this.currNode = this.currNode.next[index];
@@ -351,6 +329,4 @@ export default class DialogManager {
     isTalking() {
         return this.talking;
     }
-
-
 }

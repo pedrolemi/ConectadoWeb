@@ -29,7 +29,7 @@ export class TextNode extends DialogNode {
         this.dialogs = [];              // serie de dialogos que se van a mostrar
         this.currDialog = null;         // indice del dialogo que se esta mostrando
         this.character = null;          // id del personaje que habla
-        this.name = null;               // nombre del personaje que habla
+        this.name = null;               // nombre del personaje que habla (si se trata del player, es el nombre elegido en la pantalla de login)
     }
 }
 
@@ -144,7 +144,7 @@ export class ChatNode extends DialogNode {
         this.type = "chatMessage";
         this.text = null;               // texto del mensaje
         this.character = null;          // id del personaje que envia el mensaje
-        this.name = null;               // nombre del personaje que envia el mensaje
+        this.name = null;               // nombre del personaje que envia el mensaje (si se trata del jugador, es el nombre elegido en la pantalla de login)
         this.chat = null;               // chat al que corresponde el mensaje
         this.replyDelay = 0;            // retardo con el que se enviara el mensaje
     }
@@ -169,7 +169,7 @@ export class SocialNetNode extends DialogNode {
         this.type = "socialNetMessage";
         this.text = null;               // texto del mensaje
         this.character = null;          // id del personaje que publica escribe en la publicacion
-        this.name = null;               // nombre del personaje que escribe en la publicacion
+        this.name = null;               // nombre del personaje que escribe en la publicacion (si se trata del jugador, es el pronombre personal Tu)
         this.user = null;               // usuario que ha hecho la publicacion (corresponde con los ids de los personajes)
         this.post = null;               // numero de la publicacion (inamovible aunque se borren publicaciones)
     }

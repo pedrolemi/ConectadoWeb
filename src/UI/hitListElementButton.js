@@ -1,6 +1,18 @@
 import HitListElement from './hitListElement.js';
 
 export default class HitListElementButton extends HitListElement {
+    /**
+     * Boton formado a partir de una imagen y texto que tiene como area de colision un HitListElementna
+     * Por lo tanto, es un boton que se puede usar en una ListView
+     * @param {Phaser.scene} scene 
+     * @param {Object} renderObject - imagen para el boton y que corresponde con el area de colision
+     *                                  Importante
+     * @param {Color} normalCol - color de la imagen cuando no se esta interactuando con ella
+     * @param {Color} highlightedCol - color de la imagen cuando se pasa el raton por encima
+     * @param {Color} pressedCol - color de la imagen cuando se hace clic sobre ella
+     * @param {*} fn - funcion que se ejecuta al clicar sobre el boton
+     * @extends HitListElement
+     */
     constructor(scene, renderObject, normalCol, highlightedCol, pressedCol, fn) {
         super(scene, renderObject);
 

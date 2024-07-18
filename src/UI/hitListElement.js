@@ -1,6 +1,6 @@
 export default class HitListElement extends Phaser.GameObjects.Zone {
     /**
-     * Collider de los elementos que se colocan en una listview
+     * Collide que se puede usar en los elementos que se colocan en una listview
      * Se trata como un objeto aparte y no se hace dentro del propio objeto para que
      * sea mas sencillo manipularlo y modificarlo
      * Nota: se hace en posiciones globales
@@ -13,17 +13,23 @@ export default class HitListElement extends Phaser.GameObjects.Zone {
 
         this.scene.add.existing(this);
 
+        // Importante: la imagen debe tener origen (0.5, 0) para que se ajuste bien este collider
+        // y el elemento en conjunto se coloque correctamente en la listview
         renderObject.setOrigin(0.5, 0);
         this.base = renderObject;
 
         this.setOrigin(0);
         this.setInteractive();
-        // la interaccion con los objetos esta por encima del scrolling
+        // La interaccion con los objetos esta por encima del scrolling
         this.setDepth(2);
 
         this.resetToBoundingRect();
     }
 
+    /**
+     * Devuelve el rectangulo que coincide con la imagen
+     * @returns rectangulo de la imagen
+     */
     getBoundingRect() {
         // rectangulo del propio elemento
         let matrix = this.base.getWorldTransformMatrix();
@@ -34,6 +40,9 @@ export default class HitListElement extends Phaser.GameObjects.Zone {
             this.base.width * matrix.scaleX, this.base.height * matrix.scaleY);
     }
 
+    /**
+     * Se cambia la zona para que coincide con el area de la iamgen
+     */
     resetToBoundingRect() {
         let rect = this.getBoundingRect();
         this.setPosition(rect.x, rect.y);
@@ -60,12 +69,12 @@ export default class HitListElement extends Phaser.GameObjects.Zone {
                 intersection = new Phaser.Geom.Rectangle();
             });
 
-            // se reajusta la zona de acuerdo a la interseccion
+            // Se reajusta la zona de acuerdo a la interseccion
             this.setPosition(rect.x, rect.y);
             this.setSize(rect.width, rect.height);
 
-            // se reajusta el input para que corresponda a la nueva zona
-            //this.setInteractive();
+            // Cada vez que se cambia la zona, hay que volver a llamar al enableDebug
+            // para que el area de colision se pinte correctamente
             this.scene.input.enableDebug(this, '0x000000');
         }
     }

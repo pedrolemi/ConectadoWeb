@@ -20,11 +20,10 @@ export default class CheckBox extends Phaser.GameObjects.Container {
 
         let gameManager = GameManager.getInstance();
 
-        // indicar si la checkbox esta activada o no
+        // Indicar si la checkbox esta activada o no
         this.checked = false;
 
-        // si es distinto de null pertenece a algun grupo
-        // Entonces, funciona como un radio button
+        // Si es distinto de null pertenece a algun grupo y funciona como un radio button
         this.group = null;
 
         let fillImg = this.scene.add.image(0, 0, fill);
@@ -58,8 +57,8 @@ export default class CheckBox extends Phaser.GameObjects.Container {
                 yoyo: true
             });
             down.on('complete', () => {
-                // Si funciona como un radio button, se activa y se desactiva el resto del grupo
                 if (this.group) {
+                    // Si funciona como un radio button, se desactiva el resto del gruop
                     this.group.checkButton(this);
                     this.setChecked(true);
                 }

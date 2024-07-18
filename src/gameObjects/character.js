@@ -13,25 +13,21 @@ export default class Character {
 
         this.anims = [];
 
-        // se crear el personaje y sus animaciones esqueletales de Spine
-        // nota: el origen es (0.5, 1). No se puede modificar
+        // Se crea el personaje y sus animaciones esqueletales de Spine
+        // Nota: el origen es (0.5, 1). No se puede modificar
         this.char = this.scene.add.spine(trans.x, trans.y, key);
         this.char.setScale(trans.scale);
         this.char.setInteractive();
         this.anims.push(this.char);
 
-        // Prueba
         this.dialog = dialog;
         this.char.on('pointerdown', () => {
-            // llamar a la funcion con el contexto adecuado
-            // en caso de no especificar el contexto se llamaria con this
-            //dialog.call(dialogContext);
             this.dialog();
         });
 
-        // se crea el retrato y sus animaciones esquelates de Spine
-        // el retrato se almacena en un contenedor especial para objetos de tipo Spine
-        // para poder disponer de una mascara
+        // Se crea el retrato y sus animaciones esquelates de Spine
+        // El retrato se almacena en un contenedor especial para objetos de tipo Spine
+        // para poder ponerle una mascara
         this.portrait = this.scene.add.spineContainer();
         this.maxSize = 1;
         this.imgPortrait = this.scene.add.spine(0, 0, key);

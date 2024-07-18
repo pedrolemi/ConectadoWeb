@@ -49,7 +49,7 @@ export default class Counter extends Phaser.GameObjects.Container {
         this.add(this.text);
 
         // Se crea el emisor de particula que funciona en modo explosion
-        // Es decir, emite particulas de golpe cuando se llama a una funcion
+        // Es decir, emite particulas de golpe al realizar una llamada a una funcion
         this.emitter = this.scene.add.particles(0, 0, particle, {
             lifespan: 3000,                     // duracion de cada particula
             speed: { min: 750, max: 1000 },     // velocidad de cada particula en x, y. Valor aleatorio entre los dos especificados

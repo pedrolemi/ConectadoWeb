@@ -60,8 +60,7 @@ export default class TextInput extends Phaser.GameObjects.Container {
         // Inicialmente no hay texto escrito
         this.currentText = "";
 
-        // TEXTO DONDE SE ESCRIBE
-        // Inicialmente es el texto por defecto
+        // Texto donde se escribe (inicialmetne esta vacio)
         this.text = this.scene.add.text(this.offset, 0, this.defaultText, style);
         this.text.setAlpha(this.defaultTextAlpha).setOrigin(0, 0.5).setFontStyle('italic');
         this.add(this.text);
@@ -69,7 +68,8 @@ export default class TextInput extends Phaser.GameObjects.Container {
         // Indicar si el usuario esta escribiendo o no
         this.isEnteringName = false;
 
-        // TEXTO PARA SIMULAR EL CURSOR QUE APARECE Y DESAPARECE
+        // Texto para simular el cursor
+        // (se trata como un elemento aparte para poder acercarle mas al texto escrito)
         this.cursor = this.scene.add.text(0, 0, '|', style);
         this.cursor.setAlpha(0).setOrigin(0, 0.5);
         this.add(this.cursor);

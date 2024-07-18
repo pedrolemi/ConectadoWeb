@@ -1,6 +1,6 @@
 import EventDispatcher from "../eventDispatcher.js";
 
-// variable de nivel de modulo
+// Variable de nivel de modulo
 // - Se puede acceder desde cualquier parte del modulo, pero no es visible
 // al no pertencen a la clase y no ser exportada
 // - No cambia con las instancia puesto que no pertenece a la clase, sino
@@ -22,7 +22,7 @@ export default class GameManager {
             throw new Error('GameManager is a Singleton class!');
         }
 
-        // se necestia una escena para poder acceder al ScenePlugin y cambiar de escena
+        // Se necesita una escena para poder acceder al ScenePlugin y cambiar de escena
         // Por lo tanto, se aprovecha para mantener la escena actual
         // El SceneManager tb incluye el cambio de escena, pero no es recomendable segun
         // la docu manejarlo a traves de el
@@ -31,10 +31,10 @@ export default class GameManager {
         this.i18next = this.currentScene.plugins.get('rextexttranslationplugin');
         this.dispatcher = EventDispatcher.getInstance();
 
-        // indica el dia del juego
+        // Indica el dia del juego
         this.day = 1;
 
-        // almacena los valores que van a tener que ser usados desde fuera
+        // Blackboard
         this.map = new Map();
         this.map.set("bag", false);
 
@@ -49,14 +49,14 @@ export default class GameManager {
         this.textConfig = {
             fontFamily: 'Arial',        // Fuente (tiene que estar precargada en el html o el css)
             fontSize: 25 + 'px',        // Tamano de la fuente del dialogo
-            fontStyle: 'normal',          // Estilo de la fuente
+            fontStyle: 'normal',        // Estilo de la fuente
             backgroundColor: null,      // Color del fondo del texto
-            color: '#ffffff',              // Color del texto
-            stroke: '#000000',             // Color del borde del texto
+            color: '#ffffff',           // Color del texto
+            stroke: '#000000',          // Color del borde del texto
             strokeThickness: 0,         // Grosor del borde del texto 
             align: 'left',              // Alineacion del texto ('left', 'center', 'right', 'justify')
             wordWrap: null,
-            padding: null
+            padding: null               // Separacion con el fondo (en el caso de que haya fondo)
         }
     }
 
@@ -278,8 +278,8 @@ export default class GameManager {
     ///// Metodos para la blackboard /////
     //////////////////////////////////////
     /**
-    * Devuelve el valor buscado en el mapa de propiedades
-    * @returns {object} - el objeto buscado en caso de que exista. En caso contrario, devuelve null
+    * Devuelve el valor buscado en la blackboard
+    * @returns {object} - el objeto buscado en caso de que exista. null en caso contrario
     */
     getValue(key) {
         if (this.map.has(key)) {
@@ -289,8 +289,8 @@ export default class GameManager {
     }
 
     /**
-    * Metodo que setea un valor en el mapa de propiedades
-    * @returns {boolean} - true si se ha sobrescrito un valor, false en caso contrario
+    * Metodo que setea un valor en la blackboard
+    * @returns {boolean} - true si se ha sobrescrito un valor. false en caso contrario
     */
     setValue(key, value) {
         let exists = false;
@@ -302,8 +302,8 @@ export default class GameManager {
     }
 
     /**
-    * Indica si un valor existe o no en el mapa de propiedades
-    * @returns {boolean} - true si existe el valor, false en caso contrario
+    * Indica si un valor existe o no en la blackboard
+    * @returns {boolean} - true si existe el valor. false en caso contrario
     */
     hasValue(key) {
         return this.map.has(key);

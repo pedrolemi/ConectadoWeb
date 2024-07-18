@@ -3,6 +3,10 @@ import Button from '../UI/button.js'
 import Counter from '../UI/counter.js'
 
 export default class TitleMenu extends Phaser.Scene {
+    /**
+     * Pantalla principal
+     * @extends Phaser.Scene
+     */
     constructor() {
         super({ key: 'TitleMenu' });
     }

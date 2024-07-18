@@ -47,14 +47,14 @@ export default class EventDispatcher {
     * @param {Fn} fn - funcion que se ejecuta cuando se produce el evento
     */
     add(event, owner, fn) {
-        // se agregan los difereentes elementos a los mapas
-        // mapa de eventos
+        // Se agregan los difereentes elementos a los mapas
+        // Mapa de eventos
         if (!this.eventsMap.has(event)) {
             this.eventsMap.set(event, new Set());
         }
         this.eventsMap.get(event).add(owner);
 
-        // mapa de propietarios
+        // Mapa de propietarios
         if (!this.ownersMap.has(owner)) {
             this.ownersMap.set(owner, new Map());
         }
@@ -63,7 +63,7 @@ export default class EventDispatcher {
         }
         this.ownersMap.get(owner).get(event).add(fn);
 
-        // se emite el evento
+        // Se emite el evento
         this.emitter.on(event, fn, owner);
     }
 
@@ -96,16 +96,16 @@ export default class EventDispatcher {
     */
     removeByEvent(event) {
         if (this.eventsMap.has(event)) {
-            // se actualiza el mapa de propietarios
+            // Se actualiza el mapa de propietarios
             let owners = this.eventsMap.get(event);
             owners.forEach(owner => {
                 this.ownersMap.get(owner).delete(event);
             });
 
-            // se elimina el evento
+            // Se elimina el evento
             this.emitter.off(event);
 
-            // se actualiza el mapa de eventos
+            // Se actualiza el mapa de eventos
             this.eventsMap.delete(event);
         }
     }
@@ -116,14 +116,14 @@ export default class EventDispatcher {
     */
     removeByOwner(owner) {
         if (this.ownersMap.has(owner)) {
-            // se obtienen todos los eventos del objeto
+            // Se obtienen todos los eventos del objeto
             let events = this.ownersMap.get(owner);
-            // se recorren
+            // Se recorren
             events.forEach((value, key) => {
-                // se elimina de cada evento ese objeto
+                // Se elimina de cada evento ese objeto
                 this.eventsMap.get(key).delete(owner);
 
-                // se va desuscribiendo el objeto del evento por cada funcion que tenga
+                // Se va desuscribiendo el objeto del evento por cada funcion que tenga
                 // (no es lo habitual, pero podria darse el caso que un
                 // mismo objeto estuviera suscrito a un mismo evento con varias funciones)
                 value.forEach(fn => {
@@ -131,7 +131,7 @@ export default class EventDispatcher {
                 });
             });
 
-            // se actualiza el mapa de propietarios
+            // Se actualiza el mapa de propietarios
             this.ownersMap.delete(owner);
         }
     }
@@ -142,19 +142,20 @@ export default class EventDispatcher {
     * @param {Object} owner - objeto suscrito al evento
     */
     remove(event, owner) {
-        // se comprueba si ese objeto tiene ese evento
+        // Se comprueba si ese objeto tiene ese evento
         if (this.eventsMap.has(event)) {
             if (this.eventsMap.get(event).has(owner)) {
-                // se actualiza el mapa de eventos
+                // Se actualiza el mapa de eventos
                 this.eventsMap.get(event).delete(owner);
 
-                // se da de baja de ese evento el objeto por cada funcion que tenga
+                // Se da de baja al objeto del evento
                 let aux = this.ownersMap.get(owner).get(event);
+                // Se dan de baja todas las funciones
                 aux.forEach(fn => {
                     this.emitter.off(event, fn, owner);
                 });
 
-                // se actualiza el mapa de propietarios
+                // Se actualiza el mapa de propietarios
                 this.ownersMap.get(owner).delete(event);
             }
         }
@@ -162,8 +163,8 @@ export default class EventDispatcher {
 
     /**
     * Metodo para eliminar todos los eventos
-    * Ademas de uso principal, es recomendable hacerlo por cada
-    * cambio de escena para mejorar el rendimiento
+    * Nota: si no hay comunicacion entre escenas, es recomendable llamarlo por cada
+    * cambio de escenas para mejorar el rendimiento
     */
     removeAll() {
         this.emitter.shutdown();

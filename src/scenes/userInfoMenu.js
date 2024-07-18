@@ -5,6 +5,10 @@ import RadioButtonGroup from '../UI/radioButtonGroup.js'
 import TextInput from '../UI/textInput.js'
 
 export default class UserInfoMenu extends Phaser.Scene {
+    /**
+     * Menu donde el jugador introduce su informacion
+     * @extends Phaser.Scene
+     */
     constructor() {
         super({ key: 'UserInfoMenu' });
     }
@@ -19,7 +23,6 @@ export default class UserInfoMenu extends Phaser.Scene {
         this.maxNameCharacters = 10;
         this.maxUserCharacters = 16;
 
-        // FONDOS
         // Mesa
         let bg = this.add.image(CANVAS_WIDTH / 2, CANVAS_HEIGHT / 2, 'basePC');
         let scale = CANVAS_WIDTH / bg.width;
@@ -37,7 +40,7 @@ export default class UserInfoMenu extends Phaser.Scene {
         let screen = this.add.image(CANVAS_WIDTH / 2, CANVAS_HEIGHT / 2, 'PCscreen');
         screen.setDisplaySize(CANVAS_WIDTH, CANVAS_HEIGHT);
 
-        // BOTON DE ATRAS
+        // Botone atras
         let backButton = this.createBackButton(102, 3 * CANVAS_HEIGHT / 4 + 15, 4, 1.18);
         let backTranslation = this.i18next.t("backButton", { ns: this.namespace });
         let backTextStyle = { ...this.gameManager.textConfig };
@@ -46,7 +49,7 @@ export default class UserInfoMenu extends Phaser.Scene {
         let backText = this.add.text(backButton.x + 80, backButton.y, backTranslation, backTextStyle);
         backText.setOrigin(0.5, 0);
 
-        // TITULO
+        // Titulo princiapl
         let mainTranslation = this.i18next.t("mainText", { ns: this.namespace });
         let mainTextStyle = { ...this.gameManager.textConfig };
         mainTextStyle.fontFamily = 'AUdimat-regular';
@@ -54,7 +57,7 @@ export default class UserInfoMenu extends Phaser.Scene {
         let mainText = this.add.text(CANVAS_WIDTH - 75, CANVAS_HEIGHT / 5.5, mainTranslation, mainTextStyle);
         mainText.setOrigin(1, 0.5);
 
-        // CAJAS DE SELECCION DEL GENERO
+        // Cajas de seleccion de genero
         let checkBoxes = [];
         // chico
         checkBoxes.push(this.createGenderCheckbox(CANVAS_WIDTH - 122, 1.68 * CANVAS_HEIGHT / 3, 0.74, 'boyIcon'));
@@ -76,7 +79,7 @@ export default class UserInfoMenu extends Phaser.Scene {
         let passwordText = this.createTextInputSet(2.1 * CANVAS_WIDTH / 3, 1.80 * CANVAS_HEIGHT / 5 + offset, 0.60,
             passwordTranslation.sideText, passwordTranslation.defaultText);
 
-        // TEXTO DE ERROR QUE APARCE SI ALGUNO DE LOS PARAMETROS INTRODUCIDOS ES INCORRECTO
+        // Texto de error si alguno de los parametros es incorrecto
         let errorTextStyle = { ...this.gameManager.textConfig };
         errorTextStyle.fontFamily = 'adventpro-regular';
         errorTextStyle.fontSize = '27px';
@@ -84,7 +87,7 @@ export default class UserInfoMenu extends Phaser.Scene {
         let errorText = this.add.text(CANVAS_WIDTH - 83, 3.86 * CANVAS_HEIGHT / 6, " ", errorTextStyle);
         errorText.setVisible(false).setOrigin(1, 0.5);
 
-        // BOTON DE JUGAR
+        // Boton de jugar
         let startTranslation = this.i18next.t("startButton", { ns: this.namespace });
         new Button(this, CANVAS_WIDTH - 208, 2.85 * CANVAS_HEIGHT / 4, 0.75,
             () => {
@@ -120,26 +123,7 @@ export default class UserInfoMenu extends Phaser.Scene {
             }
         );
 
-        // TEXTOS CON INFORMACION QUE APARECEN A LA IZQUIERDA
-        // Titulo
-        /*
-        let warningTextStyle = {
-            fontFamily: 'adventpro-regular',
-            fontSize: '31px',
-            fontStyle: 'normal',
-            color: '#FFFFFF',
-            backgroundColor: 'rgba(255, 0, 0, 0.7)',
-            align: 'center',
-            wordWrap: {
-                width: 270,
-                useAdvancedWrap: true
-            },
-            padding: {
-                left: 63,
-                top: 8,
-            }
-        }
-        */
+        // Titulo que aparece a la izquierda
         let warningTextStyle = { ...this.gameManager.textConfig };
         warningTextStyle.fontFamily = 'adventpro-regular';
         warningTextStyle.fontSize = '31px';
@@ -156,26 +140,9 @@ export default class UserInfoMenu extends Phaser.Scene {
         let warningTranslation = this.i18next.t("warningText", { ns: this.namespace });
         let warningText = this.add.text(CANVAS_WIDTH / 4.85, CANVAS_HEIGHT / 4, warningTranslation, warningTextStyle).setOrigin(0.5);
 
-        // Texto explicativo
+        // Texto explicativo que acompana al titulo de la izquierda
         let inscriptionTranslation = this.i18next.t("inscriptionText", { ns: this.namespace });
-        /*
-        let inscriptionStyle = {
-            fontFamily: 'adventpro-regular',
-            fontSize: '28px',
-            fontStyle: 'normal',
-            color: '#FFFFFF',
-            backgroundColor: 'rgba(0, 0, 0, 0.7)',
-            align: 'center',
-            wordWrap: {
-                width: 270,
-                useAdvancedWrap: true
-            },
-            padding: {
-                left: 20,
-                top: 20,
-            }
-        }
-        */
+
         let inscriptionStyle = { ...this.gameManager.textConfig };
         inscriptionStyle.fontFamily = 'adventpro-regular';
         inscriptionStyle.fontSize = '28px';
@@ -236,11 +203,9 @@ export default class UserInfoMenu extends Phaser.Scene {
         if (!passwordText.isValid()) {
             return this.i18next.t(aux + ".invalidPassword", { ns: this.namespace });
         }
-        // MAXIMO 10 CARACTERES DE NOMBRE
         if (nameText.getText().length > this.maxNameCharacters) {
             return this.i18next.t(aux + ".shorterName", { ns: this.namespace, number: this.maxNameCharacters });
         }
-        // MAXIMO 16 CARACTERES USUARIO Y CONTRASENA
         if (userText.getText().length > this.maxUserCharacters || passwordText.getText().length > this.maxUserCharacters) {
             return this.i18next.t(aux + ".shorterUserOrPassword", { ns: this.namespace, number: this.maxUserCharacters });
         }

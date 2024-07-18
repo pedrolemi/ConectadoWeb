@@ -27,7 +27,7 @@ export default class messageBox extends Phaser.GameObjects.Container {
 
         // Configuracion d e la burbuja de texto si es un mensaje de chat y el personaje 
         // que escribe no es el jugador O si es un comentario de la red social
-        if (( character !== "player" && character  && type === 0) || type === 1) {
+        if ((character !== "player" && character && type === 0) || type === 1) {
             if (type === 0) {
                 img = "othersBubble";
                 leftWidth = 50;
@@ -51,10 +51,8 @@ export default class messageBox extends Phaser.GameObjects.Container {
         // Configuracion de texto para la el texto del mensaje
         let textConfig = { ...scene.gameManager.textConfig };
         textConfig.fontFamily = 'roboto';
-        textConfig.style = 'normal';
         textConfig.fontSize = 15 + 'px';
         textConfig.color = '#000';
-        textConfig.strokeThickness = 0;
         textConfig.wordWrap = {
             width: maxWidth - (BOX_PADDING * 2 + TEXT_PADDING * 3),
             useAdvancedWrap: true
@@ -63,11 +61,11 @@ export default class messageBox extends Phaser.GameObjects.Container {
         // Configuracion de texto para el nombre del contacto
         let nameTextConfig = { ...textConfig };
         nameTextConfig.color = '#5333bb';
-        
+
         // Crea el texto y el nombre
-        let text = scene.createText(0, - TEXT_PADDING / 3, msgText, textConfig).setOrigin(0, 0.5);
-        let nameText = scene.createText(0, - TEXT_PADDING / 3, charName, nameTextConfig).setOrigin(0, 0.5);
-        
+        let text = this.scene.add.text(0, - TEXT_PADDING / 3, msgText, textConfig).setOrigin(0, 0.5);
+        let nameText = this.scene.add.text(0, - TEXT_PADDING / 3, charName, nameTextConfig).setOrigin(0, 0.5);
+
         // Crea la imagen de la burbuja de texto para obtener su ancho y calcula el ancho que deberia tener la caja
         // (el ancho de lo que ocupe mas espacio entre el nombre, el texto, o la propia caja)
         let boxImg = scene.add.image(0, 0, img);

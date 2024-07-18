@@ -67,21 +67,21 @@ export default class TitleMenu extends Phaser.Scene {
             'powerOff', { R: 64, G: 142, B: 134 }, { R: 0, G: 104, B: 93 }, { R: 200, G: 200, B: 200 }
         );
 
-        this.add.text(exitButton.x + 60, exitButton.y, exitTranslation, {
-            fontFamily: 'kimberley',
-            fontSize: '40px',
-            fontStyle: 'normal',
-            color: '#004E46'
-        }).setOrigin(0, 0.5);
+        // Texto que esta al lado del boton de salir
+        let exitTextStyle = { ...gameManager.textConfig };
+        exitTextStyle.fontFamily = 'kimberley';
+        exitTextStyle.fontSize = '40px';
+        exitTextStyle.color = '#004E46';
+
+        this.add.text(exitButton.x + 60, exitButton.y, exitTranslation, exitTextStyle).setOrigin(0, 0.5);
 
         // Se obtiene la version del juego (especificada en los parametros de configuracion de game)
         let gameVersion = this.sys.game.config.gameVersion;
-        this.add.text(CANVAS_WIDTH - 55, 3 * CANVAS_HEIGHT / 4 + 40, "V " + gameVersion, {
-            fontFamily: 'AUdimat-Regular',
-            fontSize: '22px',
-            fontStyle: 'normal',
-            color: '#323232'
-        }).setOrigin(1, 0.5);
+        let gameVersionTextStyle = { ...gameManager.textConfig };
+        gameVersionTextStyle.fontFamily = 'AUdimat-Regular';
+        gameVersionTextStyle.fontSize = '22px';
+        gameVersionTextStyle.color = '#323232';
+        this.add.text(CANVAS_WIDTH - 55, 3 * CANVAS_HEIGHT / 4 + 40, "V " + gameVersion, gameVersionTextStyle).setOrigin(1, 0.5);
 
         // Logo
         offset = -20;

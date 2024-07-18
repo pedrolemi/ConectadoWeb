@@ -211,12 +211,10 @@ export default class PhoneManager {
         let textConfig = { ...this.scene.gameManager.textConfig };
         textConfig.fontFamily = 'gidole-regular';
         textConfig.fontSize = 40 + 'px';
-        textConfig.fontStyle = 'normal'
-        textConfig.strokeThickness = 0;
         textConfig.align = 'center';
 
         let text = this.i18next.t("alarm.message", { ns: "phoneInfo" })
-        let wakeUpText = this.scene.createText(this.scene.CANVAS_WIDTH / 2, 0, text, textConfig).setOrigin(0.5, 0.5);
+        let wakeUpText = this.scene.add.text(this.scene.CANVAS_WIDTH / 2, 0, text, textConfig).setOrigin(0.5, 0.5);
         wakeUpText.y += wakeUpText.displayHeight;
 
         let bgCol = 0xFFB61E1E;
@@ -266,15 +264,12 @@ export default class PhoneManager {
             edgeImg = this.scene.add.circle(0, 0, radius + borderThickness, borderColor);
         }
 
-
         // Configuracion de texto para las notificaciones
         let notifTextConfig = { ...this.scene.gameManager.textConfig };
-        notifTextConfig.fontFamily = 'arial';
         notifTextConfig.fontSize = 60 + 'px';
-        notifTextConfig.strokeThickness = 0;
 
         // Crea el texto con el numero de notificaciones
-        let textObj = this.scene.createText(0, 0, "AAAAAAA", notifTextConfig).setOrigin(0.5, 0.5);
+        let textObj = this.scene.add.text(0, 0, "AAAAAAA", notifTextConfig).setOrigin(0.5, 0.5);
 
         // Crea el contenedor para todos los elementos y los andae 
         let notifications = this.scene.add.container(0, 0);
@@ -334,7 +329,7 @@ export default class PhoneManager {
         }
         this.phone.setNotifications(this.notificationAmount);
     }
-    
+
 
     // Funcion llamada al aplazar la alarma
     sleep() {

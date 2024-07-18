@@ -9,7 +9,7 @@ export default class TextBox extends DialogObject {
     constructor(scene, dialogManager) {
         super(scene);
         this.scene = scene;
-        
+
         // Configuracion de la imagen de la caja de texto
         this.padding = 10;        // Espacio entre la caja y los bordes del canvas
 
@@ -34,24 +34,25 @@ export default class TextBox extends DialogObject {
         // this.graphics.fillStyle('black', 1);
         // this.graphics.fillRect(230 , this.scene.CANVAS_HEIGHT / 1.28, (this.scene.CANVAS_WIDTH - this.padding) / 1.53, this.height);
 
-
         // Configuracion del texto de la caja
         this.normalTextConfig = { ...scene.gameManager.textConfig };
         this.normalTextConfig.fontSize = 20 + 'px';
+        this.normalTextConfig.fontStyle = 'bold';
+        this.normalTextConfig.strokeThickness = 5;
 
         this.nameTextConfig = { ...scene.gameManager.textConfig };
-        this.nameTextConfig.fontSize = 25 + 'px';
-
+        this.nameTextConfig.fontStyle = 'bold';
+        this.nameTextConfig.strokeThickness = 5;
 
         // Animacion del texto
         this.textDelay = 30;                                                        // Tiempo que tarda en aparecer cada letra en milisegundos
-        this.currText = scene.createText(0, 0, "aaa", this.normalTextConfig);       // Texto escrito hasta el momento
+        this.currText = this.scene.add.text(0, 0, "aaa", this.normalTextConfig);       // Texto escrito hasta el momento
         this.fulltext = "";                                                         // Texto completo a escribir
         this.fullTextSplit = null;                                                  // Texto completo a escribir separado por palabras
         this.letterCount = 0;                                                       // Numero de letras del texto completo escritas
         this.finished = false;                                                      // Si ha terminado de mostrar el texto o no
 
-        this.nameText = scene.createText(0, 0, "aaa", this.nameText);
+        this.nameText = this.scene.add.text(0, 0, "aaa", this.nameTextConfig);
         this.canWrite = false;
 
         this.box.alpha = 0;
@@ -148,7 +149,7 @@ export default class TextBox extends DialogObject {
         }
 
         // Crea el texto en la escena
-        this.currText = this.scene.createText(x, y, text, this.normalTextConfig);
+        this.currText = this.scene.add.text(x, y, text, this.normalTextConfig);
         this.currText.setText(text);
     }
 
@@ -161,7 +162,7 @@ export default class TextBox extends DialogObject {
         let y = 622;
 
         // // Crea el texto en la escena
-        this.nameText = this.scene.createText(x, y, name, this.nameTextConfig).setOrigin(0.5, 0.5);
+        this.nameText = this.scene.add.text(x, y, name, this.nameTextConfig).setOrigin(0.5, 0.5);
 
         // // Cambia el texto del objeto
         this.nameText.setText(name);
@@ -274,7 +275,4 @@ export default class TextBox extends DialogObject {
             }
         }
     }
-
-
-
 }

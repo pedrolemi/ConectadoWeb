@@ -22,12 +22,14 @@ export default class OptionBox extends DialogObject {
         // Configuracion del texto de la caja
         this.textConfig = { ...scene.gameManager.textConfig };
         this.textConfig.fontSize = 20 + 'px';
+        this.textConfig.fontStyle = 'bold';
+        this.textConfig.strokeThickness = 5;
 
         let x = 50;
         let y = this.box.y + this.box.displayHeight / 2;
 
         // Crea el texto
-        this.text = scene.createText(x, y, text, this.textConfig);
+        this.text = this.scene.add.text(x, y, text, this.textConfig);
         this.text.setOrigin(0, 0.5);
 
         this.box.setInteractive();

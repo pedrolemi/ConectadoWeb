@@ -10,7 +10,7 @@ export default class LoginScreen extends Phaser.GameObjects.Group {
         const CANVAS_HEIGHT = this.scene.sys.game.canvas.height;
 
         this.gameManager = GameManager.getInstance();
-        
+
         // Fondo de login del ordenador
         let loginBg = this.scene.add.image(0.23 * CANVAS_WIDTH / 5, 4.1 * CANVAS_HEIGHT / 5, 'loginBg');
         loginBg.setOrigin(0, 1).setScale(0.61);
@@ -21,12 +21,9 @@ export default class LoginScreen extends Phaser.GameObjects.Group {
         socialNetLogo.setOrigin(0.5, 0).setScale(1.1);
         this.add(socialNetLogo);
 
-        let keyTextStyle = {
-            fontFamily: 'AUdimat-regular',
-            fontSize: '27px',
-            fontStyle: 'normal',
-            color: '#FFFFFF'
-        }
+        let keyTextStyle = { ...this.gameManager.textConfig };
+        keyTextStyle.fontFamily = 'AUdimat-regular';
+        keyTextStyle.fontSize = '27px';
         let keyText = this.scene.add.text(socialNetLogo.x, socialNetLogo.y + socialNetLogo.displayHeight + 10, "¡CONECTA CON TUS AMIGOS!", keyTextStyle);
         keyText.setOrigin(0.5, 0).setScale(1.1);
         this.add(keyText);
@@ -34,23 +31,21 @@ export default class LoginScreen extends Phaser.GameObjects.Group {
         this.userInput = this.createTextInputSet(2.5 * CANVAS_WIDTH / 4, keyText.y + keyText.displayHeight + 80, 0.57, "Usuario", "User ");
         this.passwordInput = this.createTextInputSet(2.5 * CANVAS_WIDTH / 4, keyText.y + keyText.displayHeight + 160, 0.57, "Contraseña", "Pass ");
 
-        let errorTextStyle = {
-            fontFamily: 'adventpro-regular',
-            fontSize: '23.5px',
-            fontStyle: 'normal',
-            color: '#FF0000'
-        }
+        let errorTextStyle = { ...this.gameManager.textConfig };
+        errorTextStyle.fontFamily = 'AUdimat-regular';
+        errorTextStyle.fontSize = '27px';
+        errorTextStyle.color = '#ff0000';
         this.errorText = this.scene.add.text(4.22 * CANVAS_WIDTH / 5, keyText.y + keyText.displayHeight + 227, "El usuario/contraseña introducidos son incorrectos", errorTextStyle);
         this.errorText.setVisible(false).setOrigin(1, 0.5);
         this.add(this.errorText);
 
         let enterButton = new Button(this.scene, 3.81 * CANVAS_WIDTH / 5, this.errorText.y + 55, 0.55,
             () => {
-                if(this.handleErrors(this.userInput, this.passwordInput)){
+                if (this.handleErrors(this.userInput, this.passwordInput)) {
                     this.setVisible(false);
                     fn();
                 }
-                else{
+                else {
                     this.errorText.setVisible(true);
                 }
             },
@@ -67,16 +62,16 @@ export default class LoginScreen extends Phaser.GameObjects.Group {
         this.add(enterButton);
     }
 
-    handleErrors(userInput, passwordInput){
+    handleErrors(userInput, passwordInput) {
         let userInfo = this.gameManager.getUserInfo();
-        if(!userInput.isValid()){
+        if (!userInput.isValid()) {
             return false;
         }
-        if(!passwordInput.isValid()){
+        if (!passwordInput.isValid()) {
             return false;
         }
-        if(userInput.getText() === userInfo.username &&
-            passwordInput.getText() === userInfo.password){
+        if (userInput.getText() === userInfo.username &&
+            passwordInput.getText() === userInfo.password) {
             return true;
         }
         else {
@@ -87,12 +82,9 @@ export default class LoginScreen extends Phaser.GameObjects.Group {
     createTextInputSet(x, y, scale, sideText, defaultText) {
         let container = this.scene.add.container(x, y);
 
-        let style = {
-            fontFamily: 'adventpro-regular',
-            fontSize: '55px',
-            fontStyle: 'normal',
-            color: '#FFFFFF'
-        }
+        let style = { ...this.gameManager.textConfig };
+        style.fontFamily = 'adventpro-regular';
+        style.fontSize = '55px';
 
         let text = this.scene.add.text(-100, 0, sideText, style);
         text.setOrigin(1, 0.5);
@@ -113,7 +105,7 @@ export default class LoginScreen extends Phaser.GameObjects.Group {
         return textInput;
     }
 
-    reset(){
+    reset() {
         this.userInput.reset();
         this.passwordInput.reset();
         this.errorText.setVisible(false);

@@ -1,3 +1,5 @@
+import GameManager from "../managers/gameManager.js";
+
 export default class Counter extends Phaser.GameObjects.Container {
     /**
     * Clase que activa un contador y al llegar a un numero creando explota creando particulas
@@ -20,6 +22,8 @@ export default class Counter extends Phaser.GameObjects.Container {
 
         this.scene.add.existing(this);
 
+        let gameManager = GameManager.getInstance();
+
         // Inicializacion
         this.elapsedTime = 0;
         this.waitTimer = waitTimer;
@@ -35,12 +39,9 @@ export default class Counter extends Phaser.GameObjects.Container {
         this.edgeImg = this.scene.add.image(0, 0, edge);
         this.add(this.edgeImg);
 
-        let style = {
-            fontFamily: font,
-            fontSize: '90px',
-            fontStyle: 'normal',
-            color: '#ffffff'
-        }
+        let style = { ...gameManager.textConfig };
+        style.fontFamily = font;
+        style.fontSize = '90px';
 
         this.cont = 0;
         this.text = this.scene.add.text(0, 0, this.cont, style);

@@ -73,8 +73,6 @@ export default class BootScene extends Phaser.Scene {
         this.load.image('othersBubble', './UI/phone/9sliceOthers.png');
         this.load.image('commentBubble', './UI/9sliceComments.png');
 
-        
-
         // Fondos
         this.load.image('basePC', 'UI/menuBgs/BasePCsq.png');
         this.load.image('PCscreen', 'UI/menuBgs/ScreenWithoutBlack.png');
@@ -179,18 +177,7 @@ export default class BootScene extends Phaser.Scene {
 
     create() {
         let gameManager = GameManager.create(this);
-        
-        // TEST
-        let userInfo = {
-            name: "Laura",
-            username: "lauritaloka",
-            password: "hola123",
-            gender: "female"
-        }
-        gameManager.setUserInfo(userInfo);
-        // this.scene.start('ComputerScene');
+
         gameManager.startLangMenu();
-
     }
-
 }

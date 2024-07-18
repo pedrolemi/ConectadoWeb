@@ -16,13 +16,8 @@ export default class UIManager extends Phaser.Scene {
         this.CANVAS_WIDTH = this.sys.game.canvas.width
         this.CANVAS_HEIGHT = this.sys.game.canvas.height;
 
-        this.gameManager = GameManager.getInstance(); 
+        this.gameManager = GameManager.getInstance();
         this.phoneManager = new PhoneManager(this);
         this.dialogManager = new DialogManager(this);
     }
-
-    createText(x, y, text, config) {
-        return this.gameManager.createText(this, x, y, text, config);
-    }
-
 }

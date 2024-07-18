@@ -1,11 +1,14 @@
 import HitListElementButton from '../hitListElementButton.js';
+import GameManager from '../../managers/gameManager.js';
 
 export default class FriendRequest extends Phaser.GameObjects.Container {
-    constructor(scene, x, y, scale, character, charName, bio, denyFn, acceptFn, blockFn){
+    constructor(scene, x, y, scale, character, charName, bio, denyFn, acceptFn, blockFn) {
         super(scene, x, y);
 
         this.scene.add.existing(this);
-        
+
+        let gameManager = GameManager.getInstance();
+
         this.scale = scale;
         this.setScale(scale);
 
@@ -30,26 +33,23 @@ export default class FriendRequest extends Phaser.GameObjects.Container {
         avatarIcon.setScale(0.265);
         this.add(avatarIcon);
 
-        let nameTextStyle = {
-            fontFamily: 'AUdimat-regular',
-            fontSize: '33px',
-            fontStyle: 'normal',
-            color: '#323232'
-        }
+        let nameTextStyle = { ...gameManager.textConfig };
+        nameTextStyle.fontFamily = 'AUdimat-regular';
+        nameTextStyle.fontSize = '33px';
+        //nameTextStyle.fontStyle = 'normal';
+        nameTextStyle.color = '#323232';
         let nameText = this.scene.add.text(-180, 45, charName, nameTextStyle);
         nameText.setOrigin(0, 0.5);
         this.add(nameText);
 
-        let bioTextStyle = {
-            fontFamily: 'AUdimat-regular',
-            fontSize: '26px',
-            fontStyle: 'normal',
-            color: '#323232',
-            align: 'justify',
-            wordWrap: {
-                width: 480,
-                useAdvancedWrap: true
-            }
+        let bioTextStyle = { ...gameManager.textConfig };
+        bioTextStyle.fontFamily = 'AUdimat-regular';
+        bioTextStyle.fontSize = '26px';
+        bioTextStyle.color = '#323232';
+        bioTextStyle.align = 'justify';
+        bioTextStyle.wordWrap = {
+            width: 480,
+            useAdvancedWrap: true
         }
         let bioText = this.scene.add.text(nameText.x, nameText.y + 20, "Hola me llamo juan, como te llamas tu mi un dos jajaj, te amo tanto", bioTextStyle);
         bioText.setOrigin(0);
@@ -58,20 +58,20 @@ export default class FriendRequest extends Phaser.GameObjects.Container {
         this.createBlockButton(287, 17, 0.73);
     }
 
-    createBlockButton(x, y, scale, blockFn){
+    createBlockButton(x, y, scale, blockFn) {
         let img = this.scene.add.image(x, y, 'block');
         img.setScale(scale);
         this.add(img);
 
-        let hit = new HitListElementButton(this.scene, img, {R: 255, G: 255, B: 255}, {R: 200, G: 200, B: 200}, {R: 150, G: 150, B: 150},
+        let hit = new HitListElementButton(this.scene, img, { R: 255, G: 255, B: 255 }, { R: 200, G: 200, B: 200 }, { R: 150, G: 150, B: 150 },
             () => {
                 console.log("holaaa");
             });
-        
+
         this.hits.push(hit);
     }
 
-    getWidth(){
+    getWidth() {
         return this.newFriendBg.displayWidth * this.scale;
     }
 }

@@ -1,3 +1,5 @@
+import GameManager from "../managers/gameManager.js";
+
 export default class TextInput extends Phaser.GameObjects.Container {
     /**
     * Clase que permite crear una caja de texto donde poder escribir
@@ -17,6 +19,8 @@ export default class TextInput extends Phaser.GameObjects.Container {
         super(scene, x, y);
 
         this.scene.add.existing(this);
+
+        let gameManager = GameManager.getInstance();
 
         // Relleno del cuadro de texto
         // Es la parte interactuable
@@ -41,12 +45,11 @@ export default class TextInput extends Phaser.GameObjects.Container {
         if (!font) {
             font = 'Arial';
         }
-        let style = {
-            fontFamily: font,
-            fontSize: '42px',
-            fontStyle: 'normal',
-            color: '#000000'
-        }
+
+        let style = { ...gameManager.textConfig };
+        style.fontFamily = font;
+        style.fontSize = '42px';
+        style.color = '#000000';
 
         this.offset = offset;
 
@@ -207,7 +210,7 @@ export default class TextInput extends Phaser.GameObjects.Container {
         return aux;
     }
 
-    reset(){
+    reset() {
         this.isEnteringName = false;
         this.currentText = "";
         this.setDefaultText();
@@ -215,7 +218,7 @@ export default class TextInput extends Phaser.GameObjects.Container {
         this.cursorTween.pause();
     }
 
-    setDefaultText(){
+    setDefaultText() {
         this.setText(this.defaultText);
         this.text.setAlpha(this.defaultTextAlpha).setFontStyle('italic');
     }

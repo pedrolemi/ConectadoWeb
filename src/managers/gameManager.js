@@ -44,6 +44,20 @@ export default class GameManager {
         this.generateTextures();
 
         this.userInfo = null;
+
+        // Configuracion de texto por defecto
+        this.textConfig = {
+            fontFamily: 'Arial',        // Fuente (tiene que estar precargada en el html o el css)
+            fontSize: 25 + 'px',        // Tamano de la fuente del dialogo
+            fontStyle: 'normal',          // Estilo de la fuente
+            backgroundColor: null,      // Color del fondo del texto
+            color: '#ffffff',              // Color del texto
+            stroke: '#000000',             // Color del borde del texto
+            strokeThickness: 0,         // Grosor del borde del texto 
+            align: 'left',              // Alineacion del texto ('left', 'center', 'right', 'justify')
+            wordWrap: null,
+            padding: null
+        }
     }
 
     // metodo para generar y coger la instancia
@@ -164,52 +178,6 @@ export default class GameManager {
         this.graphics.strokeRoundedRect(boxParams.offset, boxParams.offset, boxParams.width, boxParams.height, boxParams.radius);
         this.graphics.generateTexture(boxParams.edgeName, boxParams.width + boxParams.offset * 2, boxParams.height + boxParams.offset * 2);
         this.graphics.clear();
-    }
-
-
-    /**
-    * Crea el texto que se muestra por pantalla. Tambien se encarga de guardar 
-    * y definir la configuracion de texto por defecto en la variable this.textconfig
-    * 
-    * @param {String}
-    * @param {String} text - texto a escribir
-    * @return {String} - texto creado por la funcion
-    */
-    createText(scene, x, y, text, config) {
-        // Configuracion de texto por defecto
-        this.textConfig = {
-            fontFamily: 'Arial',        // Fuente (tiene que estar precargada en el html o el css)
-            fontSize: 25 + 'px',        // Tamano de la fuente del dialogo
-            fontStyle: 'bold',          // Estilo de la fuente
-            backgroundColor: null,      // Color del fondo del texto
-            color: '#fff',              // Color del texto
-            stroke: '#000',             // Color del borde del texto
-            strokeThickness: 5,         // Grosor del borde del texto 
-            align: 'left',              // Alineacion del texto ('left', 'center', 'right', 'justify')
-            wordWrap: null,
-        }
-
-        if (!config) {
-            config = this.textConfig;
-        }
-
-        // Crea el texto en la escena y lo devuelve
-        let textObj = scene.make.text({
-            x, y, text,
-            style: {
-                fontFamily: config.fontFamily,
-                fontSize: config.fontSize,
-                fontStyle: config.fontStyle,
-                backgroundColor: config.backgroundColor,
-                color: config.color,
-                stroke: config.stroke,
-                strokeThickness: config.strokeThickness,
-                align: config.align,
-                wordWrap: config.wordWrap
-            }
-        });
-
-        return textObj;
     }
 
     ///////////////////////////////////////

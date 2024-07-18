@@ -1,3 +1,5 @@
+import GameManager from "../managers/gameManager.js";
+
 export default class CheckBox extends Phaser.GameObjects.Container {
     /**
     * Clase que permite crear una checkbox o radiobutons si se unen varias checkboxes en un grupo
@@ -15,6 +17,8 @@ export default class CheckBox extends Phaser.GameObjects.Container {
         super(scene, x, y);
 
         this.scene.add.existing(this);
+
+        let gameManager = GameManager.getInstance();
 
         // indicar si la checkbox esta activada o no
         this.checked = false;
@@ -71,12 +75,10 @@ export default class CheckBox extends Phaser.GameObjects.Container {
             this.add(edgeImg);
         }
 
-        let style = {
-            fontFamily: 'Arial',
-            fontSize: '75px',
-            fontStyle: 'bold',
-            color: tickColor
-        }
+        let style = { ...gameManager.textConfig };
+        style.fontSize = '75px';
+        style.fontStyle = 'bold';
+        style.color = tickColor;
         this.tickText = this.scene.add.text(0, 0, '✓', style).setOrigin(0.5).setVisible(false);
         this.add(this.tickText);
 

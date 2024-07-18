@@ -7,14 +7,12 @@ export default class MessagesScreen extends BaseScreen {
 
         // Configuracion de texto para la el texto de ll titulo
         let textConfig = { ...scene.gameManager.textConfig };
-        textConfig.fontFamily = 'arial';
-        textConfig.fontSize = 25 + 'px';
+        textConfig.fontStyle = 'bold';
         textConfig.color = '#000';
-        textConfig.strokeThickness = 0;
 
         // Se coge el texto del archivo de traducciones y se pone en pantalla 
         let text = this.i18next.t("textMessages.title", { ns: "phoneInfo" });
-        let titleText = scene.createText(this.BG_X, this.BG_Y * 0.365, text, textConfig).setOrigin(0.5, 0.5);
+        let titleText = this.scene.add.text(this.BG_X, this.BG_Y * 0.365, text, textConfig).setOrigin(0.5, 0.5);
 
         this.chatNum = 0;
         this.chatTextConfig = { ...textConfig }
@@ -40,7 +38,7 @@ export default class MessagesScreen extends BaseScreen {
         button.setInteractive();
 
         // Anade el texto
-        let nameText = this.scene.createText(button.x - button.displayWidth / 3.5, button.y, name, textConfig).setOrigin(0, 0.5);
+        let nameText = this.scene.add.text(button.x - button.displayWidth / 3.5, button.y, name, textConfig).setOrigin(0, 0.5);
         let iconImage = this.scene.add.image(button.x - button.displayWidth / 2, button.y, icon);
         iconImage.setScale(button.displayHeight / iconImage.displayHeight);
         iconImage.x += iconImage.displayWidth / 2;
@@ -142,7 +140,6 @@ export default class MessagesScreen extends BaseScreen {
         this.phone.bringToTop(this.phone.phone);
 
         // Crea el boton del chat y su icono de notificaciones en esta pantalla 
-        let index = this.phone.chats.length;
         let notifObj = this.createChatButton(icon, name, this.chatTextConfig, () => {
             // Al pulsar el boton, se cambiara a la pantalla creada
             this.phone.toChatScreen(name);

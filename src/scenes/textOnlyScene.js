@@ -82,8 +82,6 @@ export default class TextOnlyScene extends BaseScene {
         let textConfig = { ...this.gameManager.textConfig };
         // textConfig.fontFamily = 'gidole-regular';
         textConfig.fontSize = fontSize + 'px';
-        textConfig.fontStyle = 'normal';
-        textConfig.strokeThickness = 0;
         textConfig.align = 'center';
         textConfig.wordWrap = {
             width: this.CANVAS_WIDTH - 100,
@@ -91,11 +89,11 @@ export default class TextOnlyScene extends BaseScene {
         }
 
         // Crea el texto
-        let screenText = this.gameManager.createText(this, this.CANVAS_WIDTH / 2, this.CANVAS_HEIGHT / 2, text, textConfig).setOrigin(0.5, 0.5);
+        let screenText = this.scene.add.text(this.CANVAS_WIDTH / 2, this.CANVAS_HEIGHT / 2, text, textConfig).setOrigin(0.5, 0.5);
 
         // En caso de que el texto sea demasiado largo y se salga de la 
         // pantalla, se va reduciendo el tamano de la fuente hasta que quepa
-        
+
         // IMPORTANTE: SE REALIZA DE ESTA MANERA EN VEZ DE ESCALANDO EL
         // TEXTO PORQUE SI EL TEXTO ES DEMASIADO GRANDE, HABRA DEMASIADOS SALTOS
         // DE LINEA. SIN EMBARGO, ESTE PROCESO TOMARA MUCHO TIEMPO CUANTO MAS GRANDE
@@ -106,7 +104,7 @@ export default class TextOnlyScene extends BaseScene {
             fontSize -= 5;
             textConfig.fontSize = fontSize + 'px';
             screenText.destroy();
-            screenText = this.gameManager.createText(this, this.CANVAS_WIDTH / 2, this.CANVAS_HEIGHT / 2, text, textConfig).setOrigin(0.5, 0.5);
+            screenText = this.scene.add.text(this.CANVAS_WIDTH / 2, this.CANVAS_HEIGHT / 2, text, textConfig).setOrigin(0.5, 0.5);
         }
     }
 

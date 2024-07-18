@@ -76,8 +76,18 @@ export default class LanguageMenu extends Phaser.Scene {
             });
         });
         button.on('pointerdown', () => {
-            // Se cambia el idioma y se pasa a la pantalal de titulo
+            // Se cambia el idioma y se pasa a la pantalla de titulo
             this.i18next.changeLanguage(language);
+            /*
+            let userInfo = {
+                name: "Laura",
+                username: "lauu",
+                password: "hola123",
+                gender: "female"
+            }
+            this.gameManager.setUserInfo(userInfo);
+            this.scene.start('ComputerScene');
+            */
             this.gameManager.startTitleMenu();
         });
     }

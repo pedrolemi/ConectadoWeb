@@ -3,13 +3,13 @@ import FriendsScreen from './friendsScreen.js'
 import FeedScren from './feedScreen.js'
 
 export default class SocialNetworkScreen extends Phaser.GameObjects.Group {
-    constructor(scene){
+    constructor(scene) {
         super(scene);
 
         const CANVAS_WIDTH = this.scene.sys.game.canvas.width;
         const CANVAS_HEIGHT = this.scene.sys.game.canvas.height;
 
-        let gameManager = GameManager.getInstance();
+        this.gameManager = GameManager.getInstance();
 
         // Fondo de login del ordenador
         let mainViewBg = this.scene.add.image(0.23 * CANVAS_WIDTH / 5, 4.1 * CANVAS_HEIGHT / 5, 'computerMainView');
@@ -34,25 +34,23 @@ export default class SocialNetworkScreen extends Phaser.GameObjects.Group {
             console.log("no tengo nada q publicar")
         });
 
-        let userInfo = gameManager.getUserInfo();
+        let userInfo = this.gameManager.getUserInfo();
         let genderPfp = "";
-        if(userInfo.gender ==='male') {
+        if (userInfo.gender === 'male') {
             genderPfp = 'pfpM';
         }
-        else if(userInfo.gender === 'female'){
+        else if (userInfo.gender === 'female') {
             genderPfp = 'pfpF'
         }
-        if(genderPfp !== ""){
+        if (genderPfp !== "") {
             let pfp = this.scene.add.image(tabParams.x, 1.03 * CANVAS_HEIGHT / 7, genderPfp);
             pfp.setOrigin(0.5, 0).setScale(0.7);
             this.add(pfp);
 
-            let nameTextStyle = {
-                fontFamily: 'AUdimat-regular',
-                fontSize: '27px',
-                fontStyle: 'normal',
-                color: '#323232'
-            }
+            let nameTextStyle = { ...this.gameManager.textConfig };
+            nameTextStyle.fontFamily = 'AUdimat-regular';
+            nameTextStyle.fontSize = '27px';
+            nameTextStyle.color = '#323232';
             let nameText = this.scene.add.text(CANVAS_WIDTH / 11, pfp.y + pfp.displayHeight + 25, userInfo.name, nameTextStyle);
             nameText.setOrigin(0, 0.5);
             this.add(nameText);
@@ -67,18 +65,16 @@ export default class SocialNetworkScreen extends Phaser.GameObjects.Group {
         this.createFriendRequestNotificacion(3 * CANVAS_WIDTH / 5, 4.5 * CANVAS_HEIGHT / 6, 0.9);
     }
 
-    createFriendRequestNotificacion(x, y, scale){
+    createFriendRequestNotificacion(x, y, scale) {
         let container = this.scene.add.container(x, y);
         let buttonBg = this.scene.add.image(0, 0, 'buttonBg');
         buttonBg.setScale(6, 0.68);
         container.add(buttonBg);
 
-        let style = {
-            fontFamily: 'AUdimat-regular',
-            fontSize: '28px',
-            fontStyle: 'normal',
-            color: '#FF0000'
-        }
+        let style = { ...this.gameManager.textConfig };
+        style.fontFamily = 'AUdimat-regular';
+        style.fontSize = '28px';
+        style.color = '#ff0000';
         let text = this.scene.add.text(0, 0, '¡Tienes nuevas peticiones de amistad!', style);
         text.setOrigin(0.5);
         container.add(text);
@@ -98,7 +94,7 @@ export default class SocialNetworkScreen extends Phaser.GameObjects.Group {
         container.add(rightIcon);
     }
 
-    createTab(x, y, scale, icon, text, fn){
+    createTab(x, y, scale, icon, text, fn) {
         let container = this.scene.add.container(x, y);
 
         let buttonBg = this.scene.add.image(0, 0, 'buttonBg');
@@ -173,13 +169,11 @@ export default class SocialNetworkScreen extends Phaser.GameObjects.Group {
         iconImg.setScale(0.85);
         iconImg.setOrigin(1, 0.5);
         container.add(iconImg);
-        
-        let style = {
-            fontFamily: 'AUdimat-regular',
-            fontSize: '27px',
-            fontStyle: 'normal',
-            color: '#323232'
-        }
+
+        let style = { ...this.gameManager.textConfig };
+        style.fontFamily = 'AUdimat-regular';
+        style.fontSize = '27px';
+        style.color = '#323232';
         offset += 8.5;
         let sideText = this.scene.add.text(offset, 0, text, style);
         sideText.setOrigin(0, 0.5);
@@ -191,13 +185,13 @@ export default class SocialNetworkScreen extends Phaser.GameObjects.Group {
         return buttonBg.displayHeight * scale;
     }
 
-    setVisible(enable){
+    setVisible(enable) {
         this.feedScreen.setVisible(enable);
         this.friendsScreen.setVisible(enable);
         super.setVisible(enable);
     }
 
-    reset(){
+    reset() {
         this.friendsScreen.setVisible(false);
         this.feedScreen.setVisible(true);
     }

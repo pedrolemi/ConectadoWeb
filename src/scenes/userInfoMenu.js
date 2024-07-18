@@ -37,51 +37,20 @@ export default class UserInfoMenu extends Phaser.Scene {
         let screen = this.add.image(CANVAS_WIDTH / 2, CANVAS_HEIGHT / 2, 'PCscreen');
         screen.setDisplaySize(CANVAS_WIDTH, CANVAS_HEIGHT);
 
-        /*
-        let circleStyle = {
-            x: 120.5,
-            y: 81.5,
-            radius: 10,
-            normalColor: 0xFFFFFF,
-            pressedColor: 0xFF0000,
-            edgeWidth: 1,
-            edgeColor: 0x000000,
-            pressed: false,
-        }
-        let circle = this.add.circle(circleStyle.x, circleStyle.y, circleStyle.radius, circleStyle.normalColor);
-        circle.setStrokeStyle(circleStyle.edgeWidth, circleStyle.edgeColor);
-        circle.setInteractive();
-        circle.on('pointerdown', () => {
-            circleStyle.pressed = !circleStyle.pressed;
-            if (circleStyle.pressed) {
-                circle.setFillStyle(circleStyle.pressedColor);
-            }
-            else {
-                circle.setFillStyle(circleStyle.normalColor);
-            }
-        });
-        */
-
         // BOTON DE ATRAS
         let backButton = this.createBackButton(102, 3 * CANVAS_HEIGHT / 4 + 15, 4, 1.18);
         let backTranslation = this.i18next.t("backButton", { ns: this.namespace });
-        let backTextStyle = {
-            fontFamily: 'AUdimat-regular',
-            fontSize: '35px',
-            fontStyle: 'normal',
-            color: '#FFFFFF'
-        }
+        let backTextStyle = { ...this.gameManager.textConfig };
+        backTextStyle.fontFamily = 'AUdimat-regular';
+        backTextStyle.fontSize = '35px';
         let backText = this.add.text(backButton.x + 80, backButton.y, backTranslation, backTextStyle);
         backText.setOrigin(0.5, 0);
 
         // TITULO
         let mainTranslation = this.i18next.t("mainText", { ns: this.namespace });
-        let mainTextStyle = {
-            fontFamily: 'AUdimat-regular',
-            fontSize: '56px',
-            fontStyle: 'normal',
-            color: '#FFFFFF'
-        }
+        let mainTextStyle = { ...this.gameManager.textConfig };
+        mainTextStyle.fontFamily = 'AUdimat-regular';
+        mainTextStyle.fontSize = '56px';
         let mainText = this.add.text(CANVAS_WIDTH - 75, CANVAS_HEIGHT / 5.5, mainTranslation, mainTextStyle);
         mainText.setOrigin(1, 0.5);
 
@@ -108,12 +77,10 @@ export default class UserInfoMenu extends Phaser.Scene {
             passwordTranslation.sideText, passwordTranslation.defaultText);
 
         // TEXTO DE ERROR QUE APARCE SI ALGUNO DE LOS PARAMETROS INTRODUCIDOS ES INCORRECTO
-        let errorTextStyle = {
-            fontFamily: 'adventpro-regular',
-            fontSize: '27px',
-            fontStyle: 'normal',
-            color: '#FF0000'
-        }
+        let errorTextStyle = { ...this.gameManager.textConfig };
+        errorTextStyle.fontFamily = 'adventpro-regular';
+        errorTextStyle.fontSize = '27px';
+        errorTextStyle.color = '#ff0000';
         let errorText = this.add.text(CANVAS_WIDTH - 83, 3.86 * CANVAS_HEIGHT / 6, " ", errorTextStyle);
         errorText.setVisible(false).setOrigin(1, 0.5);
 
@@ -155,6 +122,7 @@ export default class UserInfoMenu extends Phaser.Scene {
 
         // TEXTOS CON INFORMACION QUE APARECEN A LA IZQUIERDA
         // Titulo
+        /*
         let warningTextStyle = {
             fontFamily: 'adventpro-regular',
             fontSize: '31px',
@@ -171,11 +139,26 @@ export default class UserInfoMenu extends Phaser.Scene {
                 top: 8,
             }
         }
+        */
+        let warningTextStyle = { ...this.gameManager.textConfig };
+        warningTextStyle.fontFamily = 'adventpro-regular';
+        warningTextStyle.fontSize = '31px';
+        warningTextStyle.backgroundColor = 'rgba(255, 0, 0, 0.7)';
+        warningTextStyle.align = 'center';
+        warningTextStyle.wordWrap = {
+            width: 270,
+            useAdvancedWrap: true
+        }
+        warningTextStyle.padding = {
+            left: 63,
+            top: 8
+        }
         let warningTranslation = this.i18next.t("warningText", { ns: this.namespace });
         let warningText = this.add.text(CANVAS_WIDTH / 4.85, CANVAS_HEIGHT / 4, warningTranslation, warningTextStyle).setOrigin(0.5);
 
         // Texto explicativo
         let inscriptionTranslation = this.i18next.t("inscriptionText", { ns: this.namespace });
+        /*
         let inscriptionStyle = {
             fontFamily: 'adventpro-regular',
             fontSize: '28px',
@@ -191,6 +174,20 @@ export default class UserInfoMenu extends Phaser.Scene {
                 left: 20,
                 top: 20,
             }
+        }
+        */
+        let inscriptionStyle = { ...this.gameManager.textConfig };
+        inscriptionStyle.fontFamily = 'adventpro-regular';
+        inscriptionStyle.fontSize = '28px';
+        inscriptionStyle.backgroundColor = 'rgba(0, 0, 0, 0.7';
+        inscriptionStyle.align = 'center';
+        inscriptionStyle.wordWrap = {
+            width: 270,
+            useAdvancedWrap: true
+        }
+        inscriptionStyle.padding = {
+            left: 20,
+            top: 20
         }
         this.add.text(CANVAS_WIDTH / 4.85, warningText.y + 34, inscriptionTranslation, inscriptionStyle).setOrigin(0.5, 0);
     }
@@ -296,12 +293,9 @@ export default class UserInfoMenu extends Phaser.Scene {
     createTextInputSet(x, y, scale, sideText, defaultText) {
         let container = this.add.container(x, y);
 
-        let style = {
-            fontFamily: 'adventpro-regular',
-            fontSize: '55px',
-            fontStyle: 'normal',
-            color: '#FFFFFF'
-        }
+        let style = { ...this.gameManager.textConfig };
+        style.fontFamily = 'adventpro-regular';
+        style.fontSize = '55px';
 
         let text = this.add.text(-10, 0, sideText, style);
         text.setOrigin(1, 0.5);

@@ -9,7 +9,9 @@ export default class SettingsScreen extends BaseScreen {
         let textConfig = { ...scene.gameManager.textConfig };
         textConfig.fontFamily = 'gidole-regular';
         textConfig.fontSize = 40 + 'px';
-        textConfig.align = 'center';
+        textConfig.fontStyle = 'bold';
+        textConfig.strokeThickness = 5,
+            textConfig.align = 'center';
         textConfig.wordWrap = {
             width: this.bg.displayWidth,
             useAdvancedWrap: true
@@ -17,7 +19,7 @@ export default class SettingsScreen extends BaseScreen {
 
         // Se coge el texto del archivo de traducciones y se pone en pantalla 
         let text = this.i18next.t("settings.text", { ns: "phoneInfo", context: this.gameManager.getUserInfo().gender })
-        let warningText = scene.createText(this.BG_X, this.BG_Y * 0.65, text, textConfig).setOrigin(0.5, 0.5);
+        let warningText = this.scene.add.text(this.BG_X, this.BG_Y * 0.65, text, textConfig).setOrigin(0.5, 0.5);
 
         // Configuracion de texto y colores del boton
         let buttonTextConfig = { font: 'gidole-regular', size: 45, style: 'bold', color: '#000' }

@@ -1,3 +1,5 @@
+import GameManager from "../managers/gameManager.js";
+
 export default class Button extends Phaser.GameObjects.Container {
     /**
     * Clase que permite crear un boton personalizable con animaciones para las diferentes interacciones
@@ -18,6 +20,8 @@ export default class Button extends Phaser.GameObjects.Container {
     constructor(scene, x, y, scale, fn, fill, normalCol, highlightedCol, pressedCol, text, fontParams, edge, hitArea) {
         super(scene, x, y);
         this.scene.add.existing(this);
+
+        let gameManager = GameManager.getInstance();
 
         this.fillImg = this.scene.add.image(0, 0, fill);
 
@@ -116,12 +120,11 @@ export default class Button extends Phaser.GameObjects.Container {
         }
 
         if (text) {
-            let style = {
-                fontFamily: fontParams.font,
-                fontSize: fontParams.size + 'px',
-                fontStyle: fontParams.style,
-                color: fontParams.color
-            }
+            let style = { ...gameManager.textConfig };
+            style.fontFamily = fontParams.font;
+            style.fontSize = fontParams.size + 'px';
+            style.fontStyle = fontParams.style;
+            style.color = fontParams.color;
 
             let buttonText = this.scene.add.text(0, 0, text, style);
             buttonText.setOrigin(0.5);
@@ -131,7 +134,7 @@ export default class Button extends Phaser.GameObjects.Container {
         this.setScale(scale);
     }
 
-    setHitArea(hitArea){
+    setHitArea(hitArea) {
         this.fillImg.removeInteractive();
         this.hitArea = hitArea;
         this.fillImg.setInteractive(hitArea.area, hitArea.callback);

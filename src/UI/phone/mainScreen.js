@@ -28,16 +28,15 @@ export default class MainScreen extends BaseScreen {
         let hourTextConfig = { ...scene.gameManager.textConfig };
         hourTextConfig.fontFamily = 'gidole-regular';
         hourTextConfig.fontSize = 100 + 'px';
-        hourTextConfig.strokeThickness = 0;
+        hourTextConfig.fontStyle = 'bold';
 
         let dayTextConfig = { ...scene.gameManager.textConfig };
         dayTextConfig.fontFamily = 'gidole-regular';
-        dayTextConfig.strokeThickness = 0;
+        dayTextConfig.fontStyle = 'bold';
 
         // Crea el texto y lo anade a la escena
-        this.hourText = scene.createText(this.BG_X, this.BG_Y * 0.65, "", hourTextConfig).setOrigin(0.5, 0.5);
-        this.dayText = scene.createText(this.BG_X, this.BG_Y * 0.8, "", dayTextConfig).setOrigin(0.5, 0.5);
-
+        this.hourText = this.scene.add.text(this.BG_X, this.BG_Y * 0.65, "", hourTextConfig).setOrigin(0.5, 0.5);
+        this.dayText = this.scene.add.text(this.BG_X, this.BG_Y * 0.8, "", dayTextConfig).setOrigin(0.5, 0.5);
 
         // Crea el icono de las notificaciones
         let notifObj = phone.phoneManager.createNotification(chatButton.x + chatButton.displayWidth / 3, chatButton.y - chatButton.displayHeight / 3);

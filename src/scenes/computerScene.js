@@ -4,11 +4,11 @@ import LoginScreen from '../UI/computer/loginScreen.js'
 import SocialNetworkScreen from '../UI/computer/socialNetworkScreen.js'
 
 export default class ComputerScene extends Phaser.Scene {
-    constructor(){
-        super({key: 'ComputerScene'});
+    constructor() {
+        super({ key: 'ComputerScene' });
     }
-    
-    create(){
+
+    create() {
         const CANVAS_WIDTH = this.sys.game.canvas.width;
         const CANVAS_HEIGHT = this.sys.game.canvas.height;
 
@@ -60,12 +60,11 @@ export default class ComputerScene extends Phaser.Scene {
 
         let userInfo = gameManager.getUserInfo();
 
-        let postitTextInfoStyle = {
-            fontFamily: 'dadha',
-            fontSize: '60px',
-            fontStyle: 'normal',
-            color: '#323232'
-        }
+        let postitTextInfoStyle = { ...gameManager.textConfig };
+        postitTextInfoStyle.fontFamily = 'dadha';
+        postitTextInfoStyle.fontSize = '60px';
+        postitTextInfoStyle.color = '#323232';
+
         let postitTextStyle = postitTextInfoStyle;
         postitTextStyle.fontSize = '52px';
 
@@ -80,25 +79,25 @@ export default class ComputerScene extends Phaser.Scene {
         yourUserText.setOrigin(0, 0.5);
         postitCont.add(yourUserText);
 
-        let userText = this.add.text(postitTextsPos.x + postitTextsPos.offsetX, 
+        let userText = this.add.text(postitTextsPos.x + postitTextsPos.offsetX,
             postitTextsPos.firstTextY + postitTextsPos.offsetY, userInfo.username, postitTextStyle);
         userText.setOrigin(1, 0.5);
         postitCont.add(userText);
 
-        let yourPasswordText = this.add.text(-postitTextsPos.x, 
+        let yourPasswordText = this.add.text(-postitTextsPos.x,
             postitTextsPos.secondTextY, "Tu contraseña", postitTextInfoStyle);
         yourPasswordText.setOrigin(0, 0.5);
         postitCont.add(yourPasswordText);
 
-        let passwordText = this.add.text(postitTextsPos.x + postitTextsPos.offsetX, 
+        let passwordText = this.add.text(postitTextsPos.x + postitTextsPos.offsetX,
             postitTextsPos.secondTextY + postitTextsPos.offsetY, userInfo.password, postitTextStyle);
         passwordText.setOrigin(1, 0.5);
         postitCont.add(passwordText);
 
         postitCont.setScale(0.37);
     }
-    
-    reset(){
+
+    reset() {
         this.socialNetScreen.setVisible(false);
         this.loginScreen.reset();
         this.loginScreen.setVisible(true);

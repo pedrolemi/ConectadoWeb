@@ -33,13 +33,10 @@ export default class ChatScreen extends BaseScreen {
         // Configuracion de texto para la el texto del titulo
         let textConfig = { ...scene.gameManager.textConfig };
         textConfig.fontFamily = 'roboto';
-        textConfig.style = 'normal';
-        textConfig.fontSize = 25 + 'px';
         textConfig.color = '#000';
-        textConfig.strokeThickness = 0;
 
         // Crea el texto del nombre de la persona
-        this.nameText = scene.createText(this.BG_X - this.bg.displayWidth * 0.15, this.BG_Y * 0.36, name, textConfig).setOrigin(0, 0.5);
+        this.nameText = this.scene.add.text(this.BG_X - this.bg.displayWidth * 0.15, this.BG_Y * 0.36, name, textConfig).setOrigin(0, 0.5);
 
         // Crea el icono
         this.iconImage = this.scene.add.image(this.nameText.x, this.nameText.y, icon);

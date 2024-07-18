@@ -17,30 +17,22 @@ export default class AlarmScreen extends BaseScreen {
         let textConfig = { ...scene.gameManager.textConfig };
         textConfig.fontFamily = 'gidole-regular';
         textConfig.fontSize = 40 + 'px';
-        textConfig.fontStyle = 'normal'
-        textConfig.strokeThickness = 0;
 
         // Se coge el texto del archivo de traducciones y se pone en pantalla 
         let text = this.i18next.t("alarm.title", { ns: "phoneInfo" })
-        let alarmText = scene.createText(this.BG_X, this.BG_Y * 0.4, text, textConfig).setOrigin(0.5, 0.5);
-
+        let alarmText = this.scene.add.text(this.BG_X, this.BG_Y * 0.4, text, textConfig).setOrigin(0.5, 0.5);
 
         // Configuracion de texto para el reloj
         let hourTextConfig = { ...scene.gameManager.textConfig };
         hourTextConfig.fontFamily = 'gidole-regular';
         hourTextConfig.fontSize = 100 + 'px';
-        hourTextConfig.fontStyle = 'normal'
-        hourTextConfig.strokeThickness = 0;
 
         let dayTextConfig = { ...scene.gameManager.textConfig };
         dayTextConfig.fontFamily = 'gidole-regular';
-        dayTextConfig.fontStyle = 'normal'
-        dayTextConfig.strokeThickness = 0;
 
         // Crea el texto y lo anade a la escena
-        this.hourText = scene.createText(this.BG_X, this.BG_Y * 0.65, "", hourTextConfig).setOrigin(0.5, 0.5);
-        this.dayText = scene.createText(this.BG_X, this.BG_Y * 0.8, "", dayTextConfig).setOrigin(0.5, 0.5);
-
+        this.hourText = this.scene.add.text(this.BG_X, this.BG_Y * 0.65, "", hourTextConfig).setOrigin(0.5, 0.5);
+        this.dayText = this.scene.add.text(this.BG_X, this.BG_Y * 0.8, "", dayTextConfig).setOrigin(0.5, 0.5);
 
         // Se ponen la imagen del deslizable en la pantalla
         let scrollable = scene.add.image(this.BG_X, this.BG_Y * 1.18, 'homeButton').setScale(this.ICON_SCALE);

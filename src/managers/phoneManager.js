@@ -76,7 +76,7 @@ export default class PhoneManager {
         this.resetCamEvent = "resetCam";
         this.wakeUpEvent = "wakeUp";
 
-        this.activate(false);
+        this.showPhone(false);
     }
 
 
@@ -301,12 +301,23 @@ export default class PhoneManager {
 
     }
 
+
     /**
-     * Activa/desactiva el telefono de manera inmediata
-     * @param {Boolean} active - true si se va a activar, false en caso contrario
+     * Muestra/oculta toda la interfaz del telefono (incluyendo el icono y las notificaciones) 
+     * @param {Boolean} active - true si se va a mostrar, false en caso contrario
      */
     activate(active) {
-        if ((this.phone.visible && !active) || (!this.phone.visible && active)) {
+        this.showPhone(false);
+        this.icon.visible = active;
+        this.notifications.visible = this.notificationAmount > 0;
+    }
+    
+    /**
+     * Muestra/oculta el telefono de manera inmediata
+     * @param {Boolean} active - true si se va a activar, false en caso contrario
+     */
+    showPhone(show) {
+        if ((this.phone.visible && !show) || (!this.phone.visible && show)) {
             this.toggling = false;
             this.togglePhone(0);
         }
@@ -382,12 +393,8 @@ export default class PhoneManager {
                 this.wakeUpMessage.visible = false;
                 this.icon.visible = true;
 
-                if (this.notificationAmount > 0) {
-                    this.notifications.visible = true;
-                }
-                else {
-                    this.notifications.visible = false;
-                }
+                this.notifications.visible = this.notificationAmount > 0;
+                
                 // Envia el evento de reiniciar la camara y el de despertarse
                 this.dispatcher.dispatch(this.resetCamEvent, {});
                 this.dispatcher.dispatch(this.wakeUpEvent, {});
@@ -406,7 +413,7 @@ export default class PhoneManager {
         // Oculta el icono del movil, las notificaciones, y el propio movil
         this.icon.visible = false;
         this.notifications.visible = false;
-        this.activate(false);
+        this.showPhone(false);
 
         // Cuando termina la animacion de desactivarse, va a la pantalla de la alarma y
         // activa el bloqueo del fondo (hay que hacerlo cuando termine la animacion aunque

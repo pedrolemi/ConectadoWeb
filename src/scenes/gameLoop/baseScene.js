@@ -41,6 +41,8 @@ export default class BaseScene extends Phaser.Scene {
             scale: this.portraitScale
         };
 
+        this.scale = 1;
+        
         this.leftBound = 0;
         this.rightBound = this.CANVAS_WIDTH;
         this.START_SCROLLING = 30;
@@ -103,7 +105,10 @@ export default class BaseScene extends Phaser.Scene {
     * traducciones es el que se pasa en el parametro namespace, y tiene que pasarse un string con el nombre del
     * archivo sin la extension .json
     */
-    readNodes(id, file, namespace, playerName, context, getObjs) {
+    readNodes(id, file, namespace, getObjs) {
+        let playerName = this.gameManager.getUserInfo().name;
+        let context = this.gameManager.getUserInfo().gender; 
+
         // Crea el nodo y guarda sus atributos (se estableceran en el nodo al final)
         let node = null;
         let nodeId = id;

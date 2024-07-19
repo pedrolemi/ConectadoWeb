@@ -9,7 +9,7 @@ export default class Test extends BaseScene {
     // Metodo que se llama al terminar de crear la escena. 
     onCreate() {
         super.onCreate();
-        // this.phoneManager.activate(true);
+        // this.phoneManager.showPhone(true);
         // this.phoneManager.openEyesAnimation();
         // this.phoneManager.phone.toAlarmScreen();
         this.phoneManager.topLid.visible = false;
@@ -24,10 +24,10 @@ export default class Test extends BaseScene {
         let test3 = this.cache.json.get('chat1');
         let computerTest = this.cache.json.get('computer');
 
-        let momNode = super.readNodes("root", test1, "momDialog", this.gameManager.getUserInfo().name, this.gameManager.getUserInfo().gender, true);
-        let dadNode = super.readNodes("root", test2, "dadDialog", this.gameManager.getUserInfo().name, this.gameManager.getUserInfo().gender, true);
-        let choices = super.readNodes("root", test3, "chat1", this.gameManager.getUserInfo().name, this.gameManager.getUserInfo().gender, true);
-        let computerNode = super.readNodes("root1", computerTest, "computer", this.gameManager.getUserInfo().name, this.gameManager.getUserInfo().gender, true);
+        let momNode = super.readNodes("root", test1, "momDialog", true);
+        let dadNode = super.readNodes("root", test2, "dadDialog", true);
+        let choices = super.readNodes("root", test3, "chat1", true);
+        let computerNode = super.readNodes("root1", computerTest, "computer", true);
 
         // Telefono
         let chatName = this.i18next.t("textMessages.chat1", { ns: "phoneInfo", returnObjects: true });

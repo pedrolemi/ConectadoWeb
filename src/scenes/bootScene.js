@@ -128,7 +128,8 @@ export default class BootScene extends Phaser.Scene {
             // en cualquier idioma (aunque o existiese)
             supportedLngs: ['en', 'es'],
             // namespaces que se cargan para cada uno de los idiomas
-            ns: ['titleMenu', 'userInfoMenu', 'names', 'phoneInfo', 'transitionScenes',
+            ns: ['titleMenu', 'userInfoMenu', 'names', 'phoneInfo', 
+                'transitionScenes', 'day1/bedroomMorningDay1',
                 'momDialog', 'dadDialog', 'chat1', 'computer'],   // TEST
             preload: ['en', 'es'],
             // mostrar informacion de ayuda por consola
@@ -170,6 +171,7 @@ export default class BootScene extends Phaser.Scene {
         this.load.json('dadDialog', './dadDialog.json');
         this.load.json('chat1', './chat1.json');
         this.load.json('computer', './computer.json');
+        this.load.json('bedroomMorningDay1', './day1/bedroomMorningDay1.json');
     }
 
     loadSpinalAnims() {
@@ -189,6 +191,8 @@ export default class BootScene extends Phaser.Scene {
         this.load.image('bedroomCeiling', 'bedroom/bedroomCeiling.png');
         this.load.image('bedroomBg', 'bedroom/bedroomBase.png');
         this.load.image('bed', 'bedroom/bed.png');
+        this.load.image('bag', 'bedroom/bag.png');
+        this.load.image('bedroomChair', 'bedroom/bedroomChair.png');
         this.load.image('bedroomDoorClosed', 'bedroom/bedroomDoorClosed.png');
         this.load.image('bedroomDoorOpened', 'bedroom/bedroomDoorOpened.png');
         this.load.image('bedroomJacket', 'bedroom/bedroomJacket.png');
@@ -201,7 +205,6 @@ export default class BootScene extends Phaser.Scene {
         this.load.image('wardrobeDoor2Opened', 'bedroom/wardrobeDoor2Opened.png');
         this.load.image('wardrobeDoor3Closed', 'bedroom/wardrobeDoor3Closed.png');
         this.load.image('wardrobeDoor3Opened', 'bedroom/wardrobeDoor3Opened.png');
-
 
     }
 

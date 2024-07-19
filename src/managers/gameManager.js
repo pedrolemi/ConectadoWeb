@@ -36,7 +36,9 @@ export default class GameManager {
 
         // Blackboard
         this.map = new Map();
-        this.map.set("bag", false);
+        
+        this.bagPicked = "bagPicked";
+        this.map.set("bagPicked", false);
 
         this.isLate = "isLate";
         this.map.set(this.isLate, false);
@@ -223,20 +225,22 @@ export default class GameManager {
         this.computerScene = this.currentScene.scene.get(computerSceneName);
         this.computerScene.scene.sleep();
 
-        // Pasa a la escena inicial con los parametros text, onComplete y onCompleteDelay
-        let sceneName = 'TextOnlyScene';
-        this.changeScene(sceneName, {
-            // El texto de se coge del a archivo de traducciones
-            text: this.i18next.t("day1.start", { ns: "transitionScenes", returnObjects: true }),
-            onComplete: () => {
-                // Al llamar a onComplete, se cambiara a la escena de la alarma
-                this.changeScene('AlarmScene');
-            },
-            onCompleteDelay: 500
-        });
 
-        // let sceneName = 'BedroomDay1';
-        // this.changeScene(sceneName);
+        let sceneName = 'BedroomMorningDay1';
+
+        // Pasa a la escena inicial con los parametros text, onComplete y onCompleteDelay
+        // let sceneName = 'TextOnlyScene';
+        // this.changeScene(sceneName, {
+        //     // El texto de se coge del a archivo de traducciones
+        //     text: this.i18next.t("day1.start", { ns: "transitionScenes", returnObjects: true }),
+        //     onComplete: () => {
+        //         // Al llamar a onComplete, se cambiara a la escena de la alarma
+        //         this.changeScene('AlarmScene');
+        //     },
+        //     onCompleteDelay: 500
+        // });
+        
+        this.changeScene(sceneName);
     }
 
     setUserInfo(userInfo) {
@@ -259,6 +263,8 @@ export default class GameManager {
     }
 
     switchToComputer() {
+        this.UIManager.phoneManager.activate(false);
+        
         // se duerme la escena actual
         this.currentScene.scene.sleep();
         // se cambia a la escena del ordenador
@@ -267,6 +273,8 @@ export default class GameManager {
     }
 
     leaveComputer() {
+        this.UIManager.phoneManager.activate(true);
+
         this.computerScene.scene.sleep();
         this.currentScene.scene.wake();
     }

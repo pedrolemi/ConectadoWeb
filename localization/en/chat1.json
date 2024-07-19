@@ -11,10 +11,20 @@
             "text_female": "I'm {{name}} and I'm a girl on life support"
         }
     ],
-    "answer": {
+    "message1": {
+        "text": "I'm going to rob your will to live."
+    },
+    "message2": {
+        "text": "Please call an ambulance I'm bleeding."
+    },
+    "answer1": {
         "text": "I'm calling the police."
     },
     "answer2": {
-        "text": "Yes please."
+        "text": "Keep it up."
+    },
+    "finalMessage": {
+        "text": "I wish."
     }
+
 }

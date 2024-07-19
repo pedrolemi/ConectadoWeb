@@ -82,7 +82,7 @@ export default class BootScene extends Phaser.Scene {
         this.load.image('chatButton', 'chatButton.png');
         this.load.image('chatTextBox', 'chatTextBox.png');
 
-        this.load.image('myBubble', '9slicePlaeyrs.png');
+        this.load.image('myBubble', '9slicePlayer.png');
         this.load.image('othersBubble', '9sliceOthers.png');
     }
 
@@ -182,6 +182,29 @@ export default class BootScene extends Phaser.Scene {
         this.load.spine("dad", 'dad/Front 34.json', 'dad/Front 34.atlas')
     }
 
+    loadBackgrounds() {
+        this.load.setPath('./assets/backgrounds');
+
+        // Habitacion
+        this.load.image('bedroomCeiling', 'bedroom/bedroomCeiling.png');
+        this.load.image('bedroomBg', 'bedroom/bedroomBase.png');
+        this.load.image('bed', 'bedroom/bed.png');
+        this.load.image('bedroomDoorClosed', 'bedroom/bedroomDoorClosed.png');
+        this.load.image('bedroomDoorOpened', 'bedroom/bedroomDoorOpened.png');
+        this.load.image('bedroomJacket', 'bedroom/bedroomJacket.png');
+        this.load.image('clothes1', 'bedroom/clothes1.png');
+        this.load.image('clothes2', 'bedroom/clothes2.png');
+        this.load.image('clothes3', 'bedroom/clothes3.png');
+        this.load.image('wardrobeDoor1Closed', 'bedroom/wardrobeDoor1Closed.png');
+        this.load.image('wardrobeDoor1Opened', 'bedroom/wardrobeDoor1Opened.png');
+        this.load.image('wardrobeDoor2Closed', 'bedroom/wardrobeDoor2Closed.png');
+        this.load.image('wardrobeDoor2Opened', 'bedroom/wardrobeDoor2Opened.png');
+        this.load.image('wardrobeDoor3Closed', 'bedroom/wardrobeDoor3Closed.png');
+        this.load.image('wardrobeDoor3Opened', 'bedroom/wardrobeDoor3Opened.png');
+
+
+    }
+
     preload() {
         this.loadComputersAssets();
         this.loadPhoneAssets();
@@ -189,11 +212,10 @@ export default class BootScene extends Phaser.Scene {
         this.loadAvatars();
         this.loadDialogs();
         this.loadSpinalAnims();
+        this.loadBackgrounds();
 
         this.load.setPath('./assets');
 
-        // Fondos
-        this.load.image('bedroomCeiling', 'backgrounds/bedroomCeilingBg.png');
 
         // Test
         this.load.image('bg', 'patio.png');

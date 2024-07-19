@@ -11,10 +11,20 @@
             "text_female": "Me llamo {{name}} y estoy moribunda"
         }
     ],
-    "answer": {
+    "message1": {
+        "text": "Te voy a robar hasta las ganas de vivir."
+    },
+    "message2": {
+        "text": "Por favor llama a una ambulancia, me estoy desangrando."
+    },
+    "answer1": {
         "text": "Voy a llamar a la policía."
     },
     "answer2": {
-        "text": "Por favor y gracias."
+        "text": "Sigue así."
+    },
+    "finalMessage": {
+        "text": "Ojalá."
     }
+
 }

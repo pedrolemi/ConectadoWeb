@@ -1,4 +1,4 @@
-import BaseScene from './baseScene.js';
+import BaseScene from './gameLoop/baseScene.js';
 import Character from '../gameObjects/character.js';
 
 export default class Test extends BaseScene {
@@ -30,10 +30,6 @@ export default class Test extends BaseScene {
         let computerNode = super.readNodes("root1", computerTest, "computer", this.gameManager.getUserInfo().name, this.gameManager.getUserInfo().gender, true);
 
         // Telefono
-        let hour = this.i18next.t("clock.alarmHour", { ns: "phoneInfo" });
-        let day = this.i18next.t("clock.test", { ns: "phoneInfo" });
-        
-        this.phoneManager.phone.setDayInfo(hour, day)
         let chatName = this.i18next.t("textMessages.chat1", { ns: "phoneInfo", returnObjects: true });
         this.phoneManager.phone.addChat(chatName, "testIcon");
         this.phoneManager.phone.setChatNode(chatName, choices);
@@ -49,12 +45,6 @@ export default class Test extends BaseScene {
         let bg = this.add.image(0, 0, 'bg').setOrigin(0, 0);
         let scale = this.CANVAS_HEIGHT / bg.height;
         bg.setScale(scale);
-
-        bg.setInteractive();
-        // bg.on('pointerdown', (pointer) => {
-        //     this.dialogManager.textbox.activate(false);
-        //     this.dialogManager.activateOptions(false);
-        // });
         this.rightBound = bg.displayWidth;
 
         // Personaje

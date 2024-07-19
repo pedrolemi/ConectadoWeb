@@ -52,6 +52,7 @@ export default class messageBox extends Phaser.GameObjects.Container {
         let textConfig = { ...scene.gameManager.textConfig };
         textConfig.fontFamily = 'roboto';
         textConfig.fontSize = 15 + 'px';
+        textConfig.fontStyle = 'bold';
         textConfig.color = '#000';
         textConfig.wordWrap = {
             width: maxWidth - (BOX_PADDING * 2 + TEXT_PADDING * 3),

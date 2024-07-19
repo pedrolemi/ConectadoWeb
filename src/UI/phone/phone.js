@@ -15,7 +15,7 @@ export default class Phone extends Phaser.GameObjects.Container {
         this.PHONE_Y = 800;
 
         // Se crean las imagenes y diferentes pantallas
-        this.phone = scene.add.image(this.PHONE_X, this.PHONE_Y, 'phone')
+        this.phone = scene.add.image(this.PHONE_X, this.PHONE_Y, 'phone');
         this.alarmScreen = new AlarmScreen(scene, this, null);
         this.mainScreen = new MainScreen(scene, this, null);
         this.statusScreen = new StatusScreen(scene, this, this.mainScreen);
@@ -40,11 +40,33 @@ export default class Phone extends Phaser.GameObjects.Container {
             this.add(screen);
             screen.visible = false;
         });
-
         // Se pone la imagen del telefono por encima de todo
         this.bringToTop(this.phone);
 
         this.currScreen = null;
+
+
+        // Forma personalizada de la silueta de la mano para 
+        // evitar que se guarde el telefono si se hace click 
+        // fuera del telefono pero dentro de la imagen de la mano
+        let graphics = scene.add.graphics(0, 0);
+        let polygon = new Phaser.Geom.Polygon([
+            358, 282,
+            245, 403,
+            228, 705,
+            -200, 1050,
+            579, 1050,
+            847, 558,
+            800, 262
+        ]);
+        // graphics.lineStyle(5, 0xFF00FF, 1.0).fillStyle(0xFFFFFF, 1.0).fillPoints(polygon.points, true);
+        graphics.generateTexture('hand', graphics.displayWidth, graphics.displayHeight);
+        let hand = scene.add.image(0, 0, 'hand').setOrigin(0, 0);
+        this.add(hand);
+        this.sendToBack(hand);
+        hand.setInteractive(polygon, Phaser.Geom.Polygon.Contains);
+        graphics.destroy();
+
 
         scene.add.existing(this);
     }

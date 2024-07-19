@@ -2,18 +2,39 @@
     "root": {
         "type": "choice",
         "choices":[
-            { "next": "answer" },
-            { "next": "answer2" }
+            { "next": "message1" },
+            { "next": "message2" }
         ]
     },
-    "answer": {
+    "message1": {
+        "type": "chatMessage",
+        "character": "player",
+        "chat": "chat1",
+        "replyDelay": 0,
+        "next": "answer1"
+    },
+    "message2": {
+        "type": "chatMessage",
+        "character": "player",
+        "chat": "chat1",
+        "replyDelay": 0,
+        "next": "answer2"
+    },
+    "answer1": {
         "type": "chatMessage",
         "character": "mom",
         "chat": "chat1",
         "replyDelay": 1000,
-        "next": "answer2"
+        "next": "finalMessage"
     },
     "answer2": {
+        "type": "chatMessage",
+        "character": "mom",
+        "chat": "chat1",
+        "replyDelay": 1000,
+        "next": "finalMessage"
+    },
+    "finalMessage": {
         "type": "chatMessage",
         "character": "player",
         "chat": "chat1",

@@ -1,4 +1,4 @@
-import BaseScene from './baseScene.js';
+import BaseScene from './gameLoop/baseScene.js';
 
 export default class TextOnlyScene extends BaseScene {
     /**
@@ -60,9 +60,13 @@ export default class TextOnlyScene extends BaseScene {
             }, onCompleteDelay);
         });
 
-        // Anade la imagen del fondo
+        // Anade la imagen del fondo 
         let bg = this.add.rectangle(0, 0, this.CANVAS_WIDTH, this.CANVAS_HEIGHT, 0x000, 1).setOrigin(0, 0);
-        bg.setInteractive();
+
+        // Se puede hacer click en la imagen de fondo una vez termine el fade in
+        this.cameras.main.once(Phaser.Cameras.Scene2D.Events.FADE_IN_COMPLETE, (cam, effect) => {
+            bg.setInteractive();
+        });
 
         this.exiting = false;
         // Se anade el evento de hacer clicke sobre el fondo para que solo se pueda ejecutar una vez.
@@ -89,7 +93,7 @@ export default class TextOnlyScene extends BaseScene {
         }
 
         // Crea el texto
-        let screenText = this.scene.add.text(this.CANVAS_WIDTH / 2, this.CANVAS_HEIGHT / 2, text, textConfig).setOrigin(0.5, 0.5);
+        let screenText = this.add.text(this.CANVAS_WIDTH / 2, this.CANVAS_HEIGHT / 2, text, textConfig).setOrigin(0.5, 0.5);
 
         // En caso de que el texto sea demasiado largo y se salga de la 
         // pantalla, se va reduciendo el tamano de la fuente hasta que quepa
@@ -104,7 +108,7 @@ export default class TextOnlyScene extends BaseScene {
             fontSize -= 5;
             textConfig.fontSize = fontSize + 'px';
             screenText.destroy();
-            screenText = this.scene.add.text(this.CANVAS_WIDTH / 2, this.CANVAS_HEIGHT / 2, text, textConfig).setOrigin(0.5, 0.5);
+            screenText = this.add.text(this.CANVAS_WIDTH / 2, this.CANVAS_HEIGHT / 2, text, textConfig).setOrigin(0.5, 0.5);
         }
     }
 

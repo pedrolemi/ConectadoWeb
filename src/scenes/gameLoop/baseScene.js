@@ -1,5 +1,5 @@
-import { TextNode, ChoiceNode, ConditionNode, EventNode, ChatNode, SocialNetNode } from '../UI/dialog/dialogNode.js';
-import GameManager from '../managers/gameManager.js';
+import { TextNode, ChoiceNode, ConditionNode, EventNode, ChatNode, SocialNetNode } from '../../UI/dialog/dialogNode.js';
+import GameManager from '../../managers/gameManager.js';
 
 export default class BaseScene extends Phaser.Scene {
     /**
@@ -43,7 +43,7 @@ export default class BaseScene extends Phaser.Scene {
 
         this.leftBound = 0;
         this.rightBound = this.CANVAS_WIDTH;
-        this.START_SCROLLING = 50;
+        this.START_SCROLLING = 30;
         this.CAMERA_SPEED = 3;
 
         this.events.on('shutdown', this.shutdown, this);
@@ -372,4 +372,34 @@ export default class BaseScene extends Phaser.Scene {
         return newDialogs;
     }
 
+
+    /**
+     * Cambia la imagen de la puerta cerrada por la puerta abierta o viceversa
+     * al interactuar con ella (al hacer click o al pasar/sacar el raton por encima)
+     * @param {Phaser.Image} closed - imagen de la puerta cerrada
+     * @param {Phaser.Image} opened - imagen de la puerta abierta 
+     * @param {Boolean} click - true si la imagen se cambia al hacer click, false si lo hace al pasar/sacar el raton por encima
+     */
+    toggleDoor(closed, opened, click = true) {
+        closed.setInteractive();
+        opened.setInteractive();
+
+        opened.visible = false;
+        let openEvt = 'pointerdown';
+        let closeEvt = 'pointerdown';
+
+        if (!click) {
+            openEvt = 'pointerover';
+            closeEvt = 'pointerout';
+        }
+
+        closed.on(openEvt, () => {
+            closed.visible = false;
+            opened.visible = true;
+        });
+        opened.on(closeEvt, () => {
+            opened.visible = false;
+            closed.visible = true;
+        });
+    }
 }

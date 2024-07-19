@@ -66,7 +66,6 @@ export default class PhoneManager {
         this.botLid = scene.add.rectangle(0, this.scene.CANVAS_HEIGHT / 2, this.scene.CANVAS_WIDTH, this.scene.CANVAS_HEIGHT / 2, 0x000, 1).setOrigin(0, 0);
         this.botLid.setDepth(100).setScrollFactor(0);
 
-
         // Crea el mensaje de despertarse y lo guarda en la variable this.wakeUpMessage
         this.createMessage();
         this.wakeUpMessage.setScrollFactor(0);
@@ -267,9 +266,10 @@ export default class PhoneManager {
         // Configuracion de texto para las notificaciones
         let notifTextConfig = { ...this.scene.gameManager.textConfig };
         notifTextConfig.fontSize = 60 + 'px';
+        notifTextConfig.fontStyle = 'bold';
 
         // Crea el texto con el numero de notificaciones
-        let textObj = this.scene.add.text(0, 0, "AAAAAAA", notifTextConfig).setOrigin(0.5, 0.5);
+        let textObj = this.scene.add.text(0, 0, "", notifTextConfig).setOrigin(0.5, 0.5);
 
         // Crea el contenedor para todos los elementos y los andae 
         let notifications = this.scene.add.container(0, 0);
@@ -278,7 +278,14 @@ export default class PhoneManager {
         notifications.add(textObj);
 
         // Reordena los elementos
-        notifications.bringToTop(fillImg);
+        if (!circle) {
+            notifications.bringToTop(fillImg);
+            notifications.bringToTop(edgeImg);
+        }
+        else {
+            notifications.bringToTop(edgeImg);
+            notifications.bringToTop(fillImg);
+        }
         notifications.bringToTop(textObj);
 
         // Redimensiona el contenedor
@@ -374,8 +381,13 @@ export default class PhoneManager {
             this.activeTween.on('complete', () => {
                 this.wakeUpMessage.visible = false;
                 this.icon.visible = true;
-                this.notifications.visible = true;
 
+                if (this.notificationAmount > 0) {
+                    this.notifications.visible = true;
+                }
+                else {
+                    this.notifications.visible = false;
+                }
                 // Envia el evento de reiniciar la camara y el de despertarse
                 this.dispatcher.dispatch(this.resetCamEvent, {});
                 this.dispatcher.dispatch(this.wakeUpEvent, {});

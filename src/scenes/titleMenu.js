@@ -48,7 +48,7 @@ export default class TitleMenu extends Phaser.Scene {
             }
         );
 
-        // Botón de creditos
+        // Boton de creditos
         let creditsTranslation = i18next.t("creditsButton", { ns: namespace });
         new Button(this, CANVAS_WIDTH / 2, 2 * CANVAS_HEIGHT / 3 + offset, 0.9,
             () => {

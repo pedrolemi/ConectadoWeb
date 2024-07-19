@@ -224,24 +224,19 @@ export default class GameManager {
         this.computerScene.scene.sleep();
 
         // Pasa a la escena inicial con los parametros text, onComplete y onCompleteDelay
-        // sceneName = 'TextOnlyScene';
-        // this.changeScene(sceneName, {
-        //     // El texto de se coge del a archivo de traducciones
-        //     text: this.i18next.t("day1.start", { ns: "transitionScenes", returnObjects: true }),
-        //     onComplete: () => {
-        //         // Al llamar a onComplete, se cambiara a la escena de la alarma
-        //         // Con el parametro day, que se coge del archivo de traducciones
-        //         let days = this.i18next.t("clock.days", { ns: "phoneInfo", returnObjects: true });
-        //         this.changeScene('AlarmScene', {
-        //             day: days[0],
-        //             nextScene: 'Test'
-        //         });
-        //     },
-        //     onCompleteDelay: 500
-        // });
+        let sceneName = 'TextOnlyScene';
+        this.changeScene(sceneName, {
+            // El texto de se coge del a archivo de traducciones
+            text: this.i18next.t("day1.start", { ns: "transitionScenes", returnObjects: true }),
+            onComplete: () => {
+                // Al llamar a onComplete, se cambiara a la escena de la alarma
+                this.changeScene('AlarmScene');
+            },
+            onCompleteDelay: 500
+        });
 
-        let sceneName = 'Test';
-        this.changeScene(sceneName);
+        // let sceneName = 'BedroomDay1';
+        // this.changeScene(sceneName);
     }
 
     setUserInfo(userInfo) {

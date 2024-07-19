@@ -6,10 +6,10 @@ export default class AlarmScene extends BaseScene {
      * @extends Phaser.Scene
      * @param {Object} params - parametros de la escena. Debe contener day y nextScene
      * 
-     * IMPORTANTE: Esta escena es general para todos los dias, por lo que hay que indicar en los parametros
-     * el dia que es y la escena a la que se cambiara una vez apagada la alarma. A diferencia de la escena
-     * de solo texto, esta escena solo deberia cambiar a la habitacion de cada dia, por lo que no haria
-     * falta pasar parametros adicionales y se podria cambiar directamente llamando al changeScene del gameManager
+     * IMPORTANTE: Esta escena es general para todos los dias, pero a diferencia de la escena de 
+     * solo texto, esta escena solo deberia cambiar a la habitacion de por la manana cada dia, por 
+     * lo que no hace falta pasar parametros adicionales y se puede cambiar de escena directamente 
+     * llamando al changeScene del gameManager en lugar de tener que pasar un callback
      */
     constructor() {
         super('AlarmScene');
@@ -25,17 +25,12 @@ export default class AlarmScene extends BaseScene {
     create(params) {
         super.create();
 
-        this.day = "";
-        this.nextScene = "";
-        if (params.day) {
-            this.day = params.day;
-        }
-        if (params.nextScene) {
-            this.nextScene = params.nextScene;
-        }
+        let days = this.i18next.t("clock.days", { ns: "phoneInfo", returnObjects: true });
+        let day = days[this.gameManager.day - 1];
+
         // Cambia el dia y la hora del telefono
         let hour = this.i18next.t("clock.alarmHour", { ns: "phoneInfo", returnObjects: true });
-        this.phoneManager.phone.setDayInfo(hour, this.day);
+        this.phoneManager.phone.setDayInfo(hour, day);
 
         // Pone la imagen de fondo con las dimensiones del canvas
         let bg = this.add.image(0, 0, 'bedroomCeiling').setOrigin(0.5, 0);
@@ -56,7 +51,7 @@ export default class AlarmScene extends BaseScene {
             this.UIManager.cameras.main.scrollX = 0;
         });
         this.dispatcher.add(this.phoneManager.wakeUpEvent, this, (obj) => {
-            this.gameManager.changeScene(this.nextScene);
+            this.gameManager.changeScene('BedroomMorningDay' + this.gameManager.day);
         });
 
     }

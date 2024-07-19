@@ -9,9 +9,9 @@ export default class Button extends Phaser.GameObjects.Container {
     * @param {Number} scale - escala del objeto
     * @param {Function} fn - funcion que se ejecuta cuando se clica en el boton
     * @param {String} fill - sprite que se usa para el relleno
-    * @param {Color} normalCol - color RGB del boton cuando no se esta interactuando con el (opcional)
-    * @param {Color} highlightedCol - color RGB cuando se pasa el puntero por encima (opcional)
-    * @param {Color} pressedCol - color RGB del boton cuando se clica en el (opcional)
+    * @param {Color} normalCol - color RGB del boton cuando no se esta interactuando con el
+    * @param {Color} highlightedCol - color RGB cuando se pasa el puntero por encima
+    * @param {Color} pressedCol - color RGB del boton cuando se clica en el
     * @param {Text} text - texto que se escribe en el boton (opcional)
     * @param {Object} fontParams - distintos parametros (tipografia, tam, estilo, color) para personalizar el texto anterior (opcional)
     * @param {String} edge - sprite que se usa para el borde (opcional)
@@ -25,16 +25,14 @@ export default class Button extends Phaser.GameObjects.Container {
 
         this.fillImg = this.scene.add.image(0, 0, fill);
 
-        let nCol = Phaser.Display.Color.GetColor(normalCol.R, normalCol.G, normalCol.B);
-        nCol = Phaser.Display.Color.IntegerToRGB(nCol);
+        this.nCol = Phaser.Display.Color.GetColor(normalCol.R, normalCol.G, normalCol.B);
+        this.nCol = Phaser.Display.Color.IntegerToRGB(this.nCol);
         let hCol = Phaser.Display.Color.GetColor(highlightedCol.R, highlightedCol.G, highlightedCol.B);
         hCol = Phaser.Display.Color.IntegerToRGB(hCol);
         let pCol = Phaser.Display.Color.GetColor(pressedCol.R, pressedCol.G, pressedCol.B);
         pCol = Phaser.Display.Color.IntegerToRGB(pCol);
 
-        if (normalCol) {
-            this.fillImg.setTint(Phaser.Display.Color.GetColor(nCol.r, nCol.g, nCol.b));
-        }
+        this.fillImg.setTint(Phaser.Display.Color.GetColor(this.nCol.r, this.nCol.g, this.nCol.b));
 
         this.hitArea = null;
         if (hitArea) {
@@ -49,67 +47,58 @@ export default class Button extends Phaser.GameObjects.Container {
 
         let tintFadeTime = 25;
 
-        if (highlightedCol) {
-            this.fillImg.on('pointerover', () => {
-                scene.tweens.addCounter({
-                    targets: [this.fillImg],
-                    from: 0,
-                    to: 100,
-                    onUpdate: (tween) => {
-                        const value = tween.getValue();
-                        let col = Phaser.Display.Color.Interpolate.ColorWithColor(nCol, hCol, 100, value);
-                        let colInt = Phaser.Display.Color.GetColor(col.r, col.g, col.b);
-                        this.fillImg.setTint(colInt);
-                    },
-                    duration: tintFadeTime,
-                    repeat: 0,
-                });
+        this.fillImg.on('pointerover', () => {
+            scene.tweens.addCounter({
+                targets: [this.fillImg],
+                from: 0,
+                to: 100,
+                onUpdate: (tween) => {
+                    const value = tween.getValue();
+                    let col = Phaser.Display.Color.Interpolate.ColorWithColor(this.nCol, hCol, 100, value);
+                    let colInt = Phaser.Display.Color.GetColor(col.r, col.g, col.b);
+                    this.fillImg.setTint(colInt);
+                },
+                duration: tintFadeTime,
+                repeat: 0,
             });
-        }
+        });
 
-        if (normalCol) {
-            this.fillImg.on('pointerout', () => {
-                scene.tweens.addCounter({
-                    targets: [this.fillImg],
-                    from: 0,
-                    to: 100,
-                    onUpdate: (tween) => {
-                        const value = tween.getValue();
-                        let col = Phaser.Display.Color.Interpolate.ColorWithColor(hCol, nCol, 100, value);
-                        let colInt = Phaser.Display.Color.GetColor(col.r, col.g, col.b);
-                        this.fillImg.setTint(colInt);
-                    },
-                    duration: tintFadeTime,
-                    repeat: 0,
-                });
+        this.fillImg.on('pointerout', () => {
+            scene.tweens.addCounter({
+                targets: [this.fillImg],
+                from: 0,
+                to: 100,
+                onUpdate: (tween) => {
+                    const value = tween.getValue();
+                    let col = Phaser.Display.Color.Interpolate.ColorWithColor(hCol, this.nCol, 100, value);
+                    let colInt = Phaser.Display.Color.GetColor(col.r, col.g, col.b);
+                    this.fillImg.setTint(colInt);
+                },
+                duration: tintFadeTime,
+                repeat: 0,
             });
-        }
+        });
 
         this.fillImg.on('pointerdown', (pointer) => {
             this.fillImg.disableInteractive();
-            if (pressedCol) {
-                let down = scene.tweens.addCounter({
-                    targets: [this.fillImg],
-                    from: 0,
-                    to: 100,
-                    onUpdate: (tween) => {
-                        const value = tween.getValue();
-                        let col = Phaser.Display.Color.Interpolate.ColorWithColor(hCol, pCol, 100, value);
-                        let colInt = Phaser.Display.Color.GetColor(col.r, col.g, col.b);
-                        this.fillImg.setTint(colInt);
-                    },
-                    duration: tintFadeTime,
-                    repeat: 0,
-                    yoyo: true,
-                });
-                down.on('complete', () => {
-                    this.fillImg.setInteractive();
-                    fn();
-                });
-            }
-            else {
+            let down = scene.tweens.addCounter({
+                targets: [this.fillImg],
+                from: 0,
+                to: 100,
+                onUpdate: (tween) => {
+                    const value = tween.getValue();
+                    let col = Phaser.Display.Color.Interpolate.ColorWithColor(hCol, pCol, 100, value);
+                    let colInt = Phaser.Display.Color.GetColor(col.r, col.g, col.b);
+                    this.fillImg.setTint(colInt);
+                },
+                duration: tintFadeTime,
+                repeat: 0,
+                yoyo: true,
+            });
+            down.on('complete', () => {
+                this.fillImg.setInteractive();
                 fn();
-            }
+            });
         });
 
         this.add(this.fillImg);
@@ -139,5 +128,9 @@ export default class Button extends Phaser.GameObjects.Container {
         this.hitArea = hitArea;
         this.fillImg.setInteractive(hitArea.area, hitArea.callback);
         //this.scene.input.enableDebug(this.fillImg, '0xffff00');
+    }
+
+    reset() {
+        this.fillImg.setTint(Phaser.Display.Color.GetColor(this.nCol.r, this.nCol.g, this.nCol.b));
     }
 }

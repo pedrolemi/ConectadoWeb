@@ -1,5 +1,10 @@
 {
     "mom": "Mamá",
     "dad": "Papá",
-    "player": "Tú"
+    "player": "Tú",
+    "computer": "Ordenador",
+    "Maria": "María",
+    "Alex": "Alex",
+    "Alison": "Alison",
+    "Guille": "Guille"
 }

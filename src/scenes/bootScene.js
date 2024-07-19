@@ -41,6 +41,7 @@ export default class BootScene extends Phaser.Scene {
 
         // Elementos del menu del ordenador
         this.load.image('buttonBg', 'ButtonBg.png');
+        this.load.image('buttonAcceptBg', 'buttonAcceptBg.png');
         this.load.image('postit', 'postit.png')
         this.load.image('closerBrowser', 'closerBrowser.png');
         this.load.image('socialNetLogo', 'SocialNetLogo.png');
@@ -99,14 +100,14 @@ export default class BootScene extends Phaser.Scene {
         this.load.setPath('./assets/UI/avatars');
 
         // Avatares de los personajes
-        this.load.image('alexAvatar', 'AlexAvatar.png');
-        this.load.image('alisonAvatar', 'AlisonAvatar.png');
-        this.load.image('anaAvatar', 'AnaAvatar.png');
+        this.load.image('AlexAvatar', 'AlexAvatar.png');
+        this.load.image('AlisonAvatar', 'AlisonAvatar.png');
+        this.load.image('AnaAvatar', 'AnaAvatar.png');
         this.load.image('boyAvatar', 'BoyAvatar.png');
         this.load.image('girlAvatar', 'GirlAvatar.png');
-        this.load.image('guilleAvatar', 'GuilleAvatar.png');
-        this.load.image('joseAvatar', 'JoseAvatar.png');
-        this.load.image('mariaAvatar', 'MariaAvatar.png');
+        this.load.image('GuilleAvatar', 'GuilleAvatar.png');
+        this.load.image('JoseAvatar', 'JoseAvatar.png');
+        this.load.image('MariaAvatar', 'MariaAvatar.png');
         this.load.image('parentsAvatar', 'ParentsAvatar.png');
         this.load.image('teacherAvatar', 'TeacherAvatar.png');
     }
@@ -128,7 +129,7 @@ export default class BootScene extends Phaser.Scene {
             supportedLngs: ['en', 'es'],
             // namespaces que se cargan para cada uno de los idiomas
             ns: ['titleMenu', 'userInfoMenu', 'names', 'phoneInfo', 'transitionScenes',
-                'momDialog', 'dadDialog', 'chat1'],   // TEST
+                'momDialog', 'dadDialog', 'chat1', 'computer'],   // TEST
             preload: ['en', 'es'],
             // mostrar informacion de ayuda por consola
             debug: true,
@@ -168,6 +169,7 @@ export default class BootScene extends Phaser.Scene {
         this.load.json('momDialog', './momDialog.json');
         this.load.json('dadDialog', './dadDialog.json');
         this.load.json('chat1', './chat1.json');
+        this.load.json('computer', './computer.json');
     }
 
     loadSpinalAnims() {
@@ -196,6 +198,7 @@ export default class BootScene extends Phaser.Scene {
         // Test
         this.load.image('bg', 'patio.png');
         this.load.image('testIcon', './UI/AlexAvatar.png');
+        this.load.image('computerImg', 'Computer.png');
 
         this.loadPlugins();
     }

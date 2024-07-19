@@ -171,7 +171,7 @@ export default class BaseScene extends Phaser.Scene {
             let split = {
                 // Obtiene el texto del archivo de textos traducidos
                 text: this.i18next.t(id + ".text", { ns: namespace, name: playerName, context: context, returnObjects: getObjs }),
-                character: character,
+                //character: character,
                 name: node.name
             }
             // Se obtiene todo el texto separado en varios dialogos si es demasiado largo
@@ -193,11 +193,7 @@ export default class BaseScene extends Phaser.Scene {
             for (let i = 0; i < file[id].choices.length; i++) {
                 // Se guarda el texto de la eleccion y se crea de manera recursiva
                 // el nodo siguiente que corresponde a elegir dicha opcion
-                let choice = {
-                    text: texts[i].text
-                }
-
-                node.choices.push(choice);
+                node.choices.push(texts[i].text);
 
                 // Si hay un nodo despues de este, se crea de manera recursiva
                 if (file[id].choices[i].next) {

@@ -42,7 +42,7 @@ export default class VerticalListView extends Phaser.GameObjects.Container {
         // El scrolling esta por encima de cualquier asset
         // De esta forma, se va a poder scrollear sobre la propia listiview
         this.boundedZone.setDepth(1);
-        this.scene.input.enableDebug(this.boundedZone, '0x000000');
+        //this.scene.input.enableDebug(this.boundedZone, '0x000000');
         this.add(this.boundedZone);
         // Final de los limites de la listview
         this.boundedZone.end = this.boundedZone.y + this.boundedZone.displayHeight;
@@ -273,7 +273,7 @@ export default class VerticalListView extends Phaser.GameObjects.Container {
     /**
      * Culling: supone una mejora de rendimiento ya que al volver invisibles los items
      * que se encuentran fuera de los limites, se evita calcular todo el rato las intersecciones
-     * con la mascara y con el area interactuable (boundZone)
+     * con la mascara y con el area interactuable (boundedZone)
      */
     cull(boundingRects) {
         this.items.forEach((item) => {
@@ -379,14 +379,14 @@ export default class VerticalListView extends Phaser.GameObjects.Container {
     }
 
     /**
-     * Agregar un elemento
+     * Agregar un elemento al final del listview
      * Importante: definir la propiedad .h, que es la altura completa del elemento
      * @param {Object} item - origen(0.5, 0)
-     * @param {Array} hits - hits que tiene el item (y sus elementos)
-     * @param {Array} listviews - listviews que tiene el item (y sus elementos)
+     * @param {Array} hits - hits que tiene el item (y sus elementos) (opcional)
+     * @param {Array} listviews - listviews que tiene el item (y sus elementos) (opcional)
      *                              Nota: el propio item podria ser una listview
      */
-    addItem(item, hits, listviews) {
+    addLastItem(item, hits, listviews) {
         if (item.hasOwnProperty('h')) {
             // ?. --> si la funcion no existe, no se llama
             item.setOrigin?.(0.5, 0);
@@ -402,22 +402,58 @@ export default class VerticalListView extends Phaser.GameObjects.Container {
             this.items.push(item);
             this.lastItem = item;
 
-            // Este items tiene listviews
-            if (listviews) {
-                listviews.forEach((listview) => {
-                    // Se agrega a la lista de list views
-                    this.childrenListViews.add(listview)
-                    // Se establece el padre de cada listview
-                    listview.setParentListview(this);
-                });
-                // Se guarda en el mapa
-                this.itemsListViews.set(item, listviews);
+            this.addItemElems(item, hits, listviews);
+        }
+    }
+
+    /**
+     * Agregar un elemento al principio de la listview
+     * @param {Object} item - origen(0.5, 0)
+     * @param {Array} hits - hits que tiene el item (y sus elementos) (opcional)
+     * @param {Array} listviews - listviews que tiene el item (y sus elementos) (opcional)
+     *                              Nota: el propio item podria ser una listview
+     */
+    addFirstItem(item, hits, listviews) {
+        if (item.hasOwnProperty('h')) {
+            // ?. --> si la funcion no existe, no se llama
+            item.setOrigin?.(0.5, 0);
+            this.itemsCont.add(item);
+            // Colocar el item
+            // El primero se coloca al borde los limities
+            item.x = 0;
+            item.y = 0;
+            if (this.lastItem !== null) {
+                // Se recolocan todos los items
+                for (let i = 0; i < this.items.length; ++i) {
+                    this.items[i].y += item.y + item.h + this.padding;
+                }
             }
 
-            // Este item tiene colliders
-            if (hits) {
-                this.itemsHits.set(item, hits);
-            }
+            this.items.unshift(item);
+
+            this.addItemElems(item, hits, listviews);
+        }
+    }
+
+    /**
+     * Agregar un las colisiones y las listviews de un item a las estructuras de datos de la clase
+     */
+    addItemElems(item, hits, listviews) {
+        // Este items tiene listviews
+        if (listviews) {
+            listviews.forEach((listview) => {
+                // Se agrega a la lista de list views
+                this.childrenListViews.add(listview)
+                // Se establece el padre de cada listview
+                listview.setParentListview(this);
+            });
+            // Se guarda en el mapa
+            this.itemsListViews.set(item, listviews);
+        }
+
+        // Este item tiene colliders
+        if (hits) {
+            this.itemsHits.set(item, hits);
         }
     }
 
@@ -472,7 +508,7 @@ export default class VerticalListView extends Phaser.GameObjects.Container {
     removeByIndex(index) {
         if (index >= 0 && index < this.items.length) {
             let item = this.items[index];
-            // Se recolocan todos los items que se encuentran por delante
+            // Se recolocan todos los items que se encuentran detras
             for (let i = index + 1; i < this.items.length; ++i) {
                 this.items[i].y = this.items[i].y - item.h - this.padding;
             }
@@ -507,6 +543,9 @@ export default class VerticalListView extends Phaser.GameObjects.Container {
             if (this.items.length > 0) {
                 this.lastItem = this.items[this.items.length - 1];
             }
+            else {
+                this.lastItem = null;
+            }
         }
     }
 
@@ -523,8 +562,8 @@ export default class VerticalListView extends Phaser.GameObjects.Container {
      * porque pertenecen a la escena
      * @param {Boolean} visible - visible o invisible 
      */
-    setVisibleMaskAndHits(visible) {
-        this.rectangleMask.setVisible(visible);
+    setVisibleMaskHits(visible) {
+        //this.rectangleMask.setVisible(visible);
         this.itemsHits.forEach((hits, item) => {
             hits.forEach((hit) => {
                 hit.setVisible(visible);
@@ -532,16 +571,30 @@ export default class VerticalListView extends Phaser.GameObjects.Container {
         });
     }
 
-    setVisible(visible) {
+    setVisibleAux(visible) {
         // No hace falta hacer invisible uno por uno cada item
         // porque como estan en el container, si el container se
         // hace invisible, ellos tb se vuelven invisibles
         super.setVisible(visible);
-        this.setVisibleMaskAndHits(visible);
+        // Se para el deslizamiento
+        this.movingSpeed = 0;
+        // (No deberia hacer falta, sin embargo, si no se hace, la zona no se vuelve invisible)
+        this.boundedZone.setVisible(visible);
+        this.setVisibleMaskHits(visible);
         // Se hacen invisible todos las listiviews hijas
         // (para que se puedan hacer su mascara y sus areas de colision invisibles)
         this.childrenListViews.forEach((child => {
-            child.setVisible(visible);
+            child.setVisibleAux(visible);
         }));
+    }
+
+    setVisible(visible) {
+        this.setVisibleAux(visible);
+        if (visible) {
+            // Luego de volver a hacer la listview visible de nuevo hay que ajustar los collider
+            // porque se han hecho visibles y estan completos, pero es probable que en verdad tengan
+            // que estar recortados
+            this.cropItems();
+        }
     }
 }

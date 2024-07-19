@@ -61,9 +61,9 @@ export default class TextBox extends DialogObject {
         this.nameText.alpha = 0;
 
         // Retrato del personaje que habla
-        this.emptyPortrait = new Phaser.GameObjects.Container(scene, 0, 0);
-        this.portrait = this.emptyPortrait;
-        this.playerTalking = false;
+        //this.emptyPortrait = new Phaser.GameObjects.Container(scene, 0, 0);
+        this.portrait = null; //this.emptyPortrait;
+        this.nonPortraitChar = false;
     }
 
     getTransform() {
@@ -108,12 +108,13 @@ export default class TextBox extends DialogObject {
         }
 
         // Se crea el texto que se va a escribir y el nombre del personaje
-        this.createText(tempText, dialogInfo.character);
-        this.createName(dialogInfo.name, dialogInfo.character);
+        this.createText(tempText);
+        this.createName(dialogInfo.name);
 
-        this.playerTalking = false;
-        if (dialogInfo.character === "player") {
-            this.playerTalking = true;
+        this.nonPortraitChar = false;
+        //if (dialogInfo.character === "player") {
+        if (!this.portrait) {
+            this.nonPortraitChar = true;
         }
 
         if (animate) {
@@ -130,16 +131,16 @@ export default class TextBox extends DialogObject {
     /**
     * Crea el texto que se muestra por pantalla
     * @param {String} text - texto a escribir
-    * @param {String} character - id del personaje que habla
     */
-    createText(text, character) {
+    createText(text) {
         let x = 230;
         let y = 660;
         let width = (this.scene.CANVAS_WIDTH - this.padding) / 1.53;
 
         // Si el personaje que habla es el jugador, modifica la posicion
         // y los margenes del texto porque no hace falta mostrar su retrato
-        if (character === "player") {
+        //if (character === "player") {
+        if (!this.portrait) {
             x = 110;
             width = (this.scene.CANVAS_WIDTH - this.padding) / 1.30;
         }
@@ -178,11 +179,18 @@ export default class TextBox extends DialogObject {
 
     /**
     * Cambia el retrato del personaje hablando
+    * IMPORTANTE: LLAMARLO ANTES QUE setText PARA QUE EL TEXTO SE COLOQUE CORRECTAMENTE EN FUNCION
+    * DE SI HAY RETRATO O NO
+    * en funcion si hay retrato o no
     * @param {Phaser.Image} portrait - retrato personaje que habla
     */
     setPortrait(portrait) {
-        this.portrait = portrait;
-        if (!this.portrait) this.portrait = this.emptyPortrait;
+        // Si el personaje que va a hablar no tiene retrato, no se va a mostrar (null)
+        this.portrait = null;
+        if (portrait) {
+            this.portrait = portrait;
+        }
+        //if (!this.portrait) this.portrait = this.emptyPortrait;
     }
 
     // Anima el texto para que vaya apareciendo caracter a caracter
@@ -222,16 +230,16 @@ export default class TextBox extends DialogObject {
         let isVisible = this.box.alpha == 1;
 
         if (active && isVisible) {
-            if (this.playerTalking) this.portrait.alpha = 0;
+            if (this.nonPortraitChar) this.portrait.alpha = 0;
         }
 
         // Si se va a activar y no es visible, aparece con animacion.
         if (active && !isVisible) {
             this.canWrite = false;
 
-            // Si es el jugador el que va a hablar, no muestra el retrato
-            // del personaje que habla, y si no lo es, lo muestra
-            if (this.playerTalking) {
+            // Si el personaje que va a hablar no tiene retrato, no lo muestra
+            // y si lo tiene, si lo muestra
+            if (this.nonPortraitChar) {
                 this.box.disableInteractive();
                 super.activate(true, [this.box, this.nameBox, this.currText, this.nameText], () => {
                     setTimeout(() => {
@@ -256,9 +264,9 @@ export default class TextBox extends DialogObject {
             this.box.disableInteractive();
             this.canWrite = false;
 
-            // Si es el jugador el que va a hablar, no oculta el retrato del personaje 
-            // que habla, (ya que ya deberia estarlo) y si no lo es, lo oculta
-            if (this.playerTalking) {
+            // Si el personaje que va a hablar no tiene retrato, no lo oculta (ya que ya deberia estarlo)
+            // y si tiene retrato, si lo oculta
+            if (this.nonPortraitChar) {
                 super.activate(false, [this.box, this.nameBox, this.currText, this.nameText], onComplete, delay);
             }
             else {

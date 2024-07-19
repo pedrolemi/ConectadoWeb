@@ -1,0 +1,16 @@
+{
+    "root1": {
+        "text": "¿Quieres encender el ordenador?"
+    },
+    "decision": [
+        {
+            "text": "Si"
+        },
+        {
+            "text": "No"
+        }
+    ],
+    "root2": {
+        "text": "No tengo ninguna nueva foto que subir"
+    }
+}

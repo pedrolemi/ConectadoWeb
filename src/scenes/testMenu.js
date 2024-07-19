@@ -1,5 +1,5 @@
-import VerticalListView from '../UI/verticalListView.js'
-import HitListElement from '../UI/hitListElement.js'
+import VerticalListView from '../UI/listView/verticalListView.js'
+import ListViewHit from '../UI/listView/listViewHit.js'
 
 export default class TestMenu extends Phaser.Scene {
     constructor() {
@@ -33,7 +33,7 @@ export default class TestMenu extends Phaser.Scene {
 
         // imagen 1
         let image = this.createImage();
-        let hit = new HitListElement(this, image);
+        let hit = new ListViewHit(this, image);
         hit.on('pointerdown', () => {
             console.log("auch");
         })

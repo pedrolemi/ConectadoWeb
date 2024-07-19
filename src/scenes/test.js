@@ -22,12 +22,14 @@ export default class Test extends BaseScene {
         let test1 = this.cache.json.get('momDialog');
         let test2 = this.cache.json.get('dadDialog');
         let test3 = this.cache.json.get('chat1');
+        let computerTest = this.cache.json.get('computer');
 
         let momNode = super.readNodes("root", test1, "momDialog", this.gameManager.getUserInfo().name, this.gameManager.getUserInfo().gender, true);
         let dadNode = super.readNodes("root", test2, "dadDialog", this.gameManager.getUserInfo().name, this.gameManager.getUserInfo().gender, true);
-
         let choices = super.readNodes("root", test3, "chat1", this.gameManager.getUserInfo().name, this.gameManager.getUserInfo().gender, true);
+        let computerNode = super.readNodes("root1", computerTest, "computer", this.gameManager.getUserInfo().name, this.gameManager.getUserInfo().gender, true);
 
+        // Telefono
         let hour = this.i18next.t("clock.alarmHour", { ns: "phoneInfo" });
         let day = this.i18next.t("clock.test", { ns: "phoneInfo" });
         
@@ -43,8 +45,6 @@ export default class Test extends BaseScene {
         chatName = this.i18next.t("textMessages.chat2", { ns: "phoneInfo", returnObjects: true });
         this.phoneManager.phone.addChat(chatName, "testIcon");
 
-       
-
         // Pone una imagen de fondo con las dimensiones del canvas
         let bg = this.add.image(0, 0, 'bg').setOrigin(0, 0);
         let scale = this.CANVAS_HEIGHT / bg.height;
@@ -57,6 +57,7 @@ export default class Test extends BaseScene {
         // });
         this.rightBound = bg.displayWidth;
 
+        // Personaje
         let tr = {
             x: this.CANVAS_WIDTH / 3.5,
             y: this.CANVAS_HEIGHT / 1.1,
@@ -87,6 +88,19 @@ export default class Test extends BaseScene {
             console.log(obj);
             this.gameManager.setValue("talked", false);
             
+        });
+
+        // Ordenador
+        let computer = this.add.image(this.CANVAS_WIDTH / 2, this.CANVAS_HEIGHT / 2, 'computerImg');
+        computer.setScale(0.5);
+        computer.setInteractive();
+        computer.on('pointerdown', () => {
+            //this.dialogManager.setNode(computerNode);
+            this.gameManager.switchToComputer();
+        });
+
+        this.dispatcher.add("switchToComputer", this, () => {
+            this.gameManager.switchToComputer();
         });
     }
 }

@@ -41,9 +41,11 @@ export default class GameManager {
         this.isLate = "isLate";
         this.map.set(this.isLate, false);
 
-        this.generateTextures();
-
         this.userInfo = null;
+        this.UIManager = null;
+        this.computerScene = null;
+
+        this.generateTextures();
 
         // Configuracion de texto por defecto
         this.textConfig = {
@@ -207,9 +209,19 @@ export default class GameManager {
 
         // IMPORTANTE: Hay que lanzar primero el UIManager para que se inicialice
         // el DialogManager y las escenas puedan crear los dialogos correctamente
-        let sceneName = 'UIManager';
-        this.currentScene.scene.launch(sceneName);
-        this.UIManager = this.currentScene.scene.get(sceneName);
+        let UIsceneName = 'UIManager';
+        this.currentScene.scene.launch(UIsceneName);
+        this.UIManager = this.currentScene.scene.get(UIsceneName);
+
+        let computerSceneName = 'ComputerScene';
+        // run tiene 3 opciones:
+        // - si esta pausada (no se actualiza), se reanuda
+        // - si esta dormida (no se actualiza ni renderiza), se despierta
+        // - si no esta corriendo, se inicia
+        // La primera vez sucede que se inicio y luego, se va a despertar
+        this.currentScene.scene.run(computerSceneName);
+        this.computerScene = this.currentScene.scene.get(computerSceneName);
+        this.computerScene.scene.sleep();
 
         // Pasa a la escena inicial con los parametros text, onComplete y onCompleteDelay
         // sceneName = 'TextOnlyScene';
@@ -228,7 +240,7 @@ export default class GameManager {
         //     onCompleteDelay: 500
         // });
 
-        sceneName = 'Test';
+        let sceneName = 'Test';
         this.changeScene(sceneName);
     }
 
@@ -252,20 +264,15 @@ export default class GameManager {
     }
 
     switchToComputer() {
-        // se duerme la escena actual (se deja de actualizar y renderizar)
-        // (luego se va a poder despertar)
+        // se duerme la escena actual
         this.currentScene.scene.sleep();
         // se cambia a la escena del ordenador
-        // run tiene 3 opciones:
-        // - si esta pausada (no se actualiza), se reanuda
-        // - si esta dormida (no se actualiza ni renderiza), se despierta
-        // - si no esta corriendo, se inicia
-        // La primera vez sucede que se inicio y luego, se va a despertar
-        this.currentScene.scene.run('ComputerScene');
+        this.computerScene.start();
+        this.computerScene.scene.wake();
     }
 
     leaveComputer() {
-        this.currentScene.scene.sleep('ComputerScene');
+        this.computerScene.scene.sleep();
         this.currentScene.scene.wake();
     }
 

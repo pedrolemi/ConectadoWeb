@@ -1,77 +1,105 @@
-import GameManager from '../../managers/gameManager.js'
-import FriendsScreen from './friendsScreen.js'
-import FeedScren from './feedScreen.js'
+import FriendsTab from './friendsTab.js'
+import FeedTab from './feedTab.js'
+import FriendRequest from './friendRequest.js';
 
 export default class SocialNetworkScreen extends Phaser.GameObjects.Group {
-    constructor(scene) {
-        super(scene);
+    /**
+     * Pantalla de la red social, donde consultar los amigos y sus posts
+     * @param {Phaser.scene} computerScene - escena del ordenador
+     * @extends Phaser.GameObjects.Group 
+     */
+    constructor(computerScene) {
+        super(computerScene);
 
-        const CANVAS_WIDTH = this.scene.sys.game.canvas.width;
-        const CANVAS_HEIGHT = this.scene.sys.game.canvas.height;
-
-        this.gameManager = GameManager.getInstance();
+        let dialogManager = this.scene.gameManager.dialogManager;
+        this.uploadNode = null;
 
         // Fondo de login del ordenador
-        let mainViewBg = this.scene.add.image(0.23 * CANVAS_WIDTH / 5, 4.1 * CANVAS_HEIGHT / 5, 'computerMainView');
+        let mainViewBg = this.scene.add.image(0.23 * this.scene.CANVAS_WIDTH / 5, 4.1 * this.scene.CANVAS_HEIGHT / 5, 'computerMainView');
         mainViewBg.setOrigin(0, 1).setScale(0.61);
         mainViewBg.displayWidth += 20;
         this.add(mainViewBg);
 
-        let tabParams = {
-            x: 1.07 * CANVAS_WIDTH / 7,
-            y: 1.75 * CANVAS_HEIGHT / 4,
+        // Pestana donde aparecen los posts
+        this.feedTab = new FeedTab(this);
+        this.add(this.feedTab);
+        // Pestana dodne aparecen los amigos
+        this.friendsTab = new FriendsTab(this);
+        this.add(this.friendsTab);
+
+        // Botones para intercalar entre las diferentes pestanas
+        let tabTrans = {
+            x: 1.07 * this.scene.CANVAS_WIDTH / 7,
+            y: 1.75 * this.scene.CANVAS_HEIGHT / 4,
             scale: 0.9
         }
-        let displayHeight = this.createTab(tabParams.x, tabParams.y, tabParams.scale, 'dialogBubbleIcon', "Tablón", () => {
-
+        // Amigos
+        let tab = this.createTab(tabTrans.x, tabTrans.y, tabTrans.scale, 'dialogBubbleIcon', "Tablón", () => {
+            this.accessFeedTab();
         });
 
-        this.createTab(tabParams.x, tabParams.y + displayHeight, tabParams.scale, 'friendsIcon', "Amigos", () => {
-
+        // Posts
+        this.createTab(tabTrans.x, tabTrans.y + tab.h, tabTrans.scale, 'friendsIcon', "Amigos", () => {
+            this.accessFriendsTab();
+        });
+        // Subir una foto
+        // (Durante todo el juego no se puede subir ninguna foto, por lo tanto, al clicar este boton
+        // solo aparece un cometnario del personaje)
+        this.createTab(tabTrans.x, tabTrans.y + tab.h * 2, tabTrans.scale, 'photosIcon', "Postear", () => {
+            if (this.uploadNode) {
+                dialogManager.setNode(this.uploadNode);
+            }
         });
 
-        this.createTab(tabParams.x, tabParams.y + displayHeight * 2, tabParams.scale, 'photosIcon', "Postear", () => {
-            console.log("no tengo nada q publicar")
-        });
+        // Crer la foto de perfil junto con el usuario del personaje
+        this.createProfilePhoto(tabTrans.x, 0.93 * this.scene.CANVAS_HEIGHT / 4, 0.71);
 
-        let userInfo = this.gameManager.getUserInfo();
-        let genderPfp = "";
+        // Crear el mensaje que aparece cuando hay invitaciones de amistad pendientes
+        this.friendRequestNot = this.createFriendRequestNotificacion(3 * this.scene.CANVAS_WIDTH / 5, 4.5 * this.scene.CANVAS_HEIGHT / 6, 0.9);
+        this.friendRequestNot.setVisible(false);
+
+        this.friendsTab.test();
+    }
+
+    createProfilePhoto(x, y, scale) {
+        let container = this.scene.add.container(x, y);
+
+        // Foto de perfil dl jugador (varia en funcion de si es chico o chica)
+        let userInfo = this.scene.gameManager.getUserInfo();
+        let genderPfp = null;
         if (userInfo.gender === 'male') {
             genderPfp = 'pfpM';
         }
         else if (userInfo.gender === 'female') {
             genderPfp = 'pfpF'
         }
-        if (genderPfp !== "") {
-            let pfp = this.scene.add.image(tabParams.x, 1.03 * CANVAS_HEIGHT / 7, genderPfp);
-            pfp.setOrigin(0.5, 0).setScale(0.7);
-            this.add(pfp);
+        if (genderPfp) {
+            let pfp = this.scene.add.image(0, 0, genderPfp);
+            container.add(pfp);
 
-            let nameTextStyle = { ...this.gameManager.textConfig };
+            // Texto con el nombre del jugador
+            let nameTextStyle = { ...this.scene.gameManager.textConfig };
             nameTextStyle.fontFamily = 'AUdimat-regular';
-            nameTextStyle.fontSize = '27px';
+            nameTextStyle.fontSize = '35px';
             nameTextStyle.color = '#323232';
-            let nameText = this.scene.add.text(CANVAS_WIDTH / 11, pfp.y + pfp.displayHeight + 25, userInfo.name, nameTextStyle);
+            let nameText = this.scene.add.text(-pfp.displayHeight / 2 + 3, pfp.y + pfp.displayHeight / 2 + 28, userInfo.username, nameTextStyle);
             nameText.setOrigin(0, 0.5);
-            this.add(nameText);
+            container.add(nameText);
         }
 
-        //this.feedScreen = new FeedScren(this.scene);
-        //this.add(this.feedScreen);
-
-        this.friendsScreen = new FriendsScreen(this.scene);
-        this.add(this.friendsScreen);
-
-        this.createFriendRequestNotificacion(3 * CANVAS_WIDTH / 5, 4.5 * CANVAS_HEIGHT / 6, 0.9);
+        container.setScale(scale);
+        this.add(container);
     }
 
     createFriendRequestNotificacion(x, y, scale) {
         let container = this.scene.add.container(x, y);
+        // Background
         let buttonBg = this.scene.add.image(0, 0, 'buttonBg');
         buttonBg.setScale(6, 0.68);
         container.add(buttonBg);
 
-        let style = { ...this.gameManager.textConfig };
+        // Texto que aparece en el centro
+        let style = { ...this.scene.gameManager.textConfig };
         style.fontFamily = 'AUdimat-regular';
         style.fontSize = '28px';
         style.color = '#ff0000';
@@ -79,24 +107,30 @@ export default class SocialNetworkScreen extends Phaser.GameObjects.Group {
         text.setOrigin(0.5);
         container.add(text);
 
-        container.setScale(scale);
-        this.add(container);
         let iconScale = 0.65;
         let iconOffset = 265;
+        // Carita que aparece a la izquierda
         let leftIcon = this.scene.add.image(-iconOffset, 0, 'friendsIcon');
         leftIcon.setTint(Phaser.Display.Color.GetColor(255, 0, 0));
         leftIcon.setScale(iconScale);
         container.add(leftIcon);
 
+        // Carita que aparece a la derecha
         let rightIcon = this.scene.add.image(iconOffset, 0, 'friendsIcon');
         rightIcon.setTint(Phaser.Display.Color.GetColor(255, 0, 0));
         rightIcon.setScale(iconScale);
         container.add(rightIcon);
+
+        container.setScale(scale);
+        this.add(container);
+
+        return container;
     }
 
     createTab(x, y, scale, icon, text, fn) {
         let container = this.scene.add.container(x, y);
 
+        // Fondo
         let buttonBg = this.scene.add.image(0, 0, 'buttonBg');
         buttonBg.setScale(2, 1);
         let nCol = Phaser.Display.Color.GetColor(255, 255, 255);
@@ -109,6 +143,7 @@ export default class SocialNetworkScreen extends Phaser.GameObjects.Group {
 
         let tintFadeTime = 25;
 
+        // Interacciones con el fondo
         buttonBg.on('pointerover', () => {
             this.scene.tweens.addCounter({
                 targets: [buttonBg],
@@ -159,18 +194,20 @@ export default class SocialNetworkScreen extends Phaser.GameObjects.Group {
             });
             down.on('complete', () => {
                 buttonBg.setInteractive();
-                //fn();
+                fn();
             });
         });
         container.add(buttonBg);
 
+        // Icono de la izquierda
         let offset = -5;
         let iconImg = this.scene.add.image(offset, 0, icon);
         iconImg.setScale(0.85);
         iconImg.setOrigin(1, 0.5);
         container.add(iconImg);
 
-        let style = { ...this.gameManager.textConfig };
+        // Texto de la derecha
+        let style = { ...this.scene.gameManager.textConfig };
         style.fontFamily = 'AUdimat-regular';
         style.fontSize = '27px';
         style.color = '#323232';
@@ -182,17 +219,48 @@ export default class SocialNetworkScreen extends Phaser.GameObjects.Group {
         container.setScale(scale);
         this.add(container);
 
-        return buttonBg.displayHeight * scale;
+        // Se establece una propiedad como la altura del contenedor para que los tres iconos
+        // de las pestanas se puedan colocar correctamente
+        container.h = buttonBg.displayHeight * scale;
+
+        return container;
     }
 
-    setVisible(enable) {
-        this.feedScreen.setVisible(enable);
-        this.friendsScreen.setVisible(enable);
-        super.setVisible(enable);
+    changeFriendRequestNotState() {
+        this.friendRequestNot.setVisible(false);
+        if (!this.friendsTab.emptyFriendRequests()) {
+            this.friendRequestNot.setVisible(true);
+        }
     }
 
-    reset() {
-        this.friendsScreen.setVisible(false);
-        this.feedScreen.setVisible(true);
+    start() {
+        this.setVisible(true);
+        // se comprueba si hay peticiones de amistad pendiente o no para saber si activar la notificacion o no
+        this.changeFriendRequestNotState();
+        this.accessFeedTab();
+    }
+
+    accessFriendsTab() {
+        this.feedTab.setVisible(false);
+        this.friendsTab.start();
+        //this.friendsTab.setVisible(true);
+    }
+
+    accessFeedTab() {
+        this.friendsTab.setVisible(false);
+        this.feedTab.setVisible(true);
+    }
+
+    setVisible(visible) {
+        // El setVisible de un grupo solo pone el parametro visible a false de los items del grupo,
+        // pero no llama al setVisible de cada uno de los items
+        // Sin embargo, en este caso es necesario llamar al setVisible de la listview
+        super.setVisible(visible);
+        this.feedTab.setVisible(visible);
+        this.friendsTab.setVisible(visible);
+    }
+
+    setUploadNode(node) {
+        this.uploadNode = node;
     }
 }

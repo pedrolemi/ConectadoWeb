@@ -1,4 +1,4 @@
-export default class HitListElement extends Phaser.GameObjects.Zone {
+export default class ListViewHit extends Phaser.GameObjects.Zone {
     /**
      * Collide que se puede usar en los elementos que se colocan en una listview
      * Se trata como un objeto aparte y no se hace dentro del propio objeto para que

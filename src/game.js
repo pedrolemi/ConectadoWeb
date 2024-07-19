@@ -5,7 +5,7 @@ import UserInfoMenu from './scenes/userInfoMenu.js';
 
 import TextOnlyScene from './scenes/textOnlyScene.js';
 import AlarmScene from './scenes/alarmScene.js';
-import ComputerScene from './scenes/computerScene.js'
+import ComputerScene from './UI/computer/computerScene.js'
 
 import UIManager from './managers/UIManager.js';
 

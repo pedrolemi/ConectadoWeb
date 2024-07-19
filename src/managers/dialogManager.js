@@ -271,16 +271,9 @@ export default class DialogManager {
 
         // Crea las opciones y las guarda en el array
         for (let i = 0; i < opts.length; i++) {
-            let text = "";
-
-            // Si se ha pasado un arary de opciones (con parametros next/chat/reply)
-            if (opts[i].text) {
-                text = opts[i].text;
-            }
             // Si se ha pasado un array de strings
-            else {
-                text = opts[i];
-            }
+            let text = opts[i];
+
             this.options.push(new OptionBox(this.scene, this, i, opts.length, text));
         }
     }

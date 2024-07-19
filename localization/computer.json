@@ -1,0 +1,24 @@
+{
+    "root1": {
+        "type": "text",
+        "character": "computer",
+        "next": "decision"
+    },
+    "decision": {
+        "type": "choice",
+        "choices":[
+            { "next": "accessComputer" },
+            {}
+        ]
+    },
+    "accessComputer": {
+        "type": "event",
+        "events": [
+            { "switchToComputer": { } }
+        ]
+    },
+    "root2": {
+        "type": "text",
+        "character": "player"
+    }
+}

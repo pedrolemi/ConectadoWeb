@@ -1,69 +1,81 @@
-import GameManager from '../../managers/gameManager.js'
 import TextInput from '../../UI/textInput.js'
 import Button from '../../UI/button.js'
 
 export default class LoginScreen extends Phaser.GameObjects.Group {
-    constructor(scene, fn) {
-        super(scene);
-
-        const CANVAS_WIDTH = this.scene.sys.game.canvas.width;
-        const CANVAS_HEIGHT = this.scene.sys.game.canvas.height;
-
-        this.gameManager = GameManager.getInstance();
+    /**
+     * Pantalla de login de la red social
+     * @param {Pahser.scene} computerScene - escena del ordenador
+     * @extends Phaser.GameObjects.Group - se puede modificar todos los objetos de golpe facilmente,
+     *                                      pero sin que el renderizado en conjunto (un grupo es un array extendido) 
+     */
+    constructor(computerScene) {
+        super(computerScene);
 
         // Fondo de login del ordenador
-        let loginBg = this.scene.add.image(0.23 * CANVAS_WIDTH / 5, 4.1 * CANVAS_HEIGHT / 5, 'loginBg');
+        let loginBg = this.scene.add.image(0.23 * this.scene.CANVAS_WIDTH / 5, 4.1 * this.scene.CANVAS_HEIGHT / 5, 'loginBg');
         loginBg.setOrigin(0, 1).setScale(0.61);
         loginBg.displayWidth += 20;
         this.add(loginBg);
 
-        let socialNetLogo = this.scene.add.image(2.67 * CANVAS_WIDTH / 4, CANVAS_HEIGHT / 7, 'socialNetLogo');
+        // Logo de la red social
+        let socialNetLogo = this.scene.add.image(2.67 * this.scene.CANVAS_WIDTH / 4, this.scene.CANVAS_HEIGHT / 7, 'socialNetLogo');
         socialNetLogo.setOrigin(0.5, 0).setScale(1.1);
         this.add(socialNetLogo);
 
-        let keyTextStyle = { ...this.gameManager.textConfig };
+        // Texto que acompana al logo
+        let keyTextStyle = { ...this.scene.gameManager.textConfig };
         keyTextStyle.fontFamily = 'AUdimat-regular';
         keyTextStyle.fontSize = '27px';
         let keyText = this.scene.add.text(socialNetLogo.x, socialNetLogo.y + socialNetLogo.displayHeight + 10, "¡CONECTA CON TUS AMIGOS!", keyTextStyle);
         keyText.setOrigin(0.5, 0).setScale(1.1);
         this.add(keyText);
 
-        this.userInput = this.createTextInputSet(2.5 * CANVAS_WIDTH / 4, keyText.y + keyText.displayHeight + 80, 0.57, "Usuario", "User ");
-        this.passwordInput = this.createTextInputSet(2.5 * CANVAS_WIDTH / 4, keyText.y + keyText.displayHeight + 160, 0.57, "Contraseña", "Pass ");
+        // Caja de texto para introducir el usuario
+        let textInputScale = 0.57;
+        this.userInput = this.createTextInput(2.5 * this.scene.CANVAS_WIDTH / 4, keyText.y + keyText.displayHeight + 80, textInputScale, "Usuario", "User ");
+        // Caja de texto para introducir la contrasena
+        this.passwordInput = this.createTextInput(2.5 * this.scene.CANVAS_WIDTH / 4, keyText.y + keyText.displayHeight + 160, textInputScale, "Contraseña", "Pass ");
 
-        let errorTextStyle = { ...this.gameManager.textConfig };
+        // Texto para informar que los datos introducidos son incorrectos
+        let errorTextStyle = { ...this.scene.gameManager.textConfig };
         errorTextStyle.fontFamily = 'AUdimat-regular';
-        errorTextStyle.fontSize = '27px';
+        errorTextStyle.fontSize = '22px';
         errorTextStyle.color = '#ff0000';
-        this.errorText = this.scene.add.text(4.22 * CANVAS_WIDTH / 5, keyText.y + keyText.displayHeight + 227, "El usuario/contraseña introducidos son incorrectos", errorTextStyle);
+        this.errorText = this.scene.add.text(4.22 * this.scene.CANVAS_WIDTH / 5, keyText.y + keyText.displayHeight + 221, "El usuario/contraseña introducidos son incorrectos", errorTextStyle);
         this.errorText.setVisible(false).setOrigin(1, 0.5);
         this.add(this.errorText);
 
-        let enterButton = new Button(this.scene, 3.81 * CANVAS_WIDTH / 5, this.errorText.y + 55, 0.55,
+        // Boton para acceder a la red social
+        let enterButton = new Button(this.scene, 3.81 * this.scene.CANVAS_WIDTH / 5, this.errorText.y + 55, 0.55,
             () => {
                 if (this.handleErrors(this.userInput, this.passwordInput)) {
-                    this.setVisible(false);
-                    fn();
+                    this.scene.logIntoSocialNet();
                 }
                 else {
                     this.errorText.setVisible(true);
                 }
             },
-            this.gameManager.textBox.fillName, { R: 255, G: 255, B: 255 }, { R: 240, G: 240, B: 240 }, { R: 200, G: 200, B: 200 },
-            "Entrar", { font: 'AUdimat-regular', size: 57, style: 'normal', color: '#323232' }, this.gameManager.textBox.edgeName,
+            this.scene.gameManager.textBox.fillName, { R: 255, G: 255, B: 255 }, { R: 240, G: 240, B: 240 }, { R: 200, G: 200, B: 200 },
+            "Entrar", { font: 'AUdimat-regular', size: 57, style: 'normal', color: '#323232' }, this.scene.gameManager.textBox.edgeName,
             {
                 // La textura generada con el objeto grafico es un pelin mas grande que el dibujo en si. Por lo tanto,
                 // si la caja de colision por defecto es un pelin mas grande. Es por eso que se pasa una que se ajuste
                 // a las medidas reales
-                area: new Phaser.Geom.Rectangle(this.gameManager.textBox.offset, this.gameManager.textBox.offset, this.gameManager.textBox.width, this.gameManager.textBox.height),
+                area: new Phaser.Geom.Rectangle(this.scene.gameManager.textBox.offset, this.scene.gameManager.textBox.offset, this.scene.gameManager.textBox.width, this.scene.gameManager.textBox.height),
                 callback: Phaser.Geom.Rectangle.Contains
             }
         );
         this.add(enterButton);
     }
 
+    /**
+     * Comprobar si el usuario y la contrasena introducidas son correctas
+     * @param {TextInput} userInput - caja de texto donde introducir el usuario 
+     * @param {TextInput} passwordInput - caja de texto donde introducir la contrasena
+     * @returns true en caso de que si se puede acceder, false en caso contrario
+     */
     handleErrors(userInput, passwordInput) {
-        let userInfo = this.gameManager.getUserInfo();
+        let userInfo = this.scene.gameManager.getUserInfo();
         if (!userInput.isValid()) {
             return false;
         }
@@ -79,21 +91,27 @@ export default class LoginScreen extends Phaser.GameObjects.Group {
         }
     }
 
-    createTextInputSet(x, y, scale, sideText, defaultText) {
+    /**
+     * Crear una caja de texto con un texto informativo a la izquierda
+     */
+    createTextInput(x, y, scale, sideText, defaultText) {
         let container = this.scene.add.container(x, y);
 
-        let style = { ...this.gameManager.textConfig };
+        let style = { ...this.scene.gameManager.textConfig };
         style.fontFamily = 'adventpro-regular';
         style.fontSize = '55px';
 
+        // Texto que aparece a la izquierda
         let text = this.scene.add.text(-100, 0, sideText, style);
         text.setOrigin(1, 0.5);
         container.add(text);
 
+        // Text input
         let textInput = new TextInput(this.scene, 0, 0, 1, defaultText, 23, { R: 200, G: 200, B: 200 },
-            this.gameManager.inputBox.fillName, this.gameManager.inputBox.edgeName, 'AUdimat-regular',
+            this.scene.gameManager.inputBox.fillName, this.scene.gameManager.inputBox.edgeName, 'AUdimat-regular',
             {
-                area: new Phaser.Geom.Rectangle(this.gameManager.inputBox.offset, this.gameManager.inputBox.offset, this.gameManager.inputBox.width, this.gameManager.inputBox.height),
+                area: new Phaser.Geom.Rectangle(this.scene.gameManager.inputBox.offset, this.scene.gameManager.inputBox.offset,
+                    this.scene.gameManager.inputBox.width, this.scene.gameManager.inputBox.height),
                 callback: Phaser.Geom.Rectangle.Contains
             });
         container.add(textInput);
@@ -105,9 +123,12 @@ export default class LoginScreen extends Phaser.GameObjects.Group {
         return textInput;
     }
 
-    reset() {
+    start() {
+        // Se hace todo visible (ya que esta escena estaba invisible completamente)
+        this.setVisible(true);
+        this.errorText.setVisible(false);
+        // Se resetean los cuadros de input
         this.userInput.reset();
         this.passwordInput.reset();
-        this.errorText.setVisible(false);
     }
 }

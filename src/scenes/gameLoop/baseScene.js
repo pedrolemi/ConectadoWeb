@@ -89,8 +89,7 @@ export default class BaseScene extends Phaser.Scene {
     * @param {String} id - id del nodo que se lee. El nodo inicial es root
     * @param {Object} file - objeto obtenido como resultado de leer el json
     * @param {String} namespace - nombre del archivo de localizacion del que se va a leer
-    * @param {String} playerName - nombre del jugador
-    * @param {String} context - contexto en el que se va a referir al personaje (male / female)
+    * @param {String} objectName - nombre del objeto en el que esta el dialogo, si es que el json contiene varios dialogos de distintos objetos
     * @param {Boolean} getObjs - si se quiere devolver el nodo leido como un objeto 
     *
     * 
@@ -105,14 +104,30 @@ export default class BaseScene extends Phaser.Scene {
     * traducciones es el que se pasa en el parametro namespace, y tiene que pasarse un string con el nombre del
     * archivo sin la extension .json
     */
-    readNodes(id, file, namespace, getObjs) {
+    readNodes(id, file, namespace, objectName, getObjs) {
         let playerName = this.gameManager.getUserInfo().name;
         let context = this.gameManager.getUserInfo().gender; 
+        
+        let fileObj = file;
+        let translationId = id;
+
+        // Si el dialogo esta dentro de algun objeto, se ajusta tanto el objeto
+        // del json en el que buscar los nodos, como la id que utilizar para encontrar
+        // la traduccion del nodo. Esto es porque la id del nodo debe coincidir tanto
+        // en el json como en el archivo de traducciones, pero al estar dentro de un objeto
+        // con (por ejemplo) nombre object, un nodo con la id name deberia buscarse en el 
+        // archivo de traducciones como object.name, pero la id de nodo seguiria siendo name
+        if (objectName !== "") {
+            fileObj = file[objectName]; 
+            translationId = objectName + "." + id;
+        }
+        // console.log(fileObj);
+        // console.log(this.i18next.t(translationId, { ns: namespace, name: playerName, context: context, returnObjects: getObjs }));
 
         // Crea el nodo y guarda sus atributos (se estableceran en el nodo al final)
         let node = null;
         let nodeId = id;
-        let type = file[id].type;
+        let type = fileObj[id].type;
 
         // Si el nodo es de tipo condicion
         if (type === "condition") {
@@ -120,9 +135,9 @@ export default class BaseScene extends Phaser.Scene {
 
             // Se leen todas las condiciones. Cada condicion lleva a un nodo distinto y 
             // en una condicion se pueden comprobar multiples variables
-            for (let i = 0; i < file[id].conditions.length; i++) {
+            for (let i = 0; i < fileObj[id].conditions.length; i++) {
                 // Obtiene el nombre de las variables a comprobar (suprimiendo la propiedad next)
-                let obj = Object.keys(file[id].conditions[i]);
+                let obj = Object.keys(fileObj[id].conditions[i]);
                 let vars = obj.filter(key => key !== "next");
 
                 let nodeConditions = [];
@@ -133,7 +148,7 @@ export default class BaseScene extends Phaser.Scene {
                     let varName = vars[j];
 
                     // Obtiene el objeto que guarda las propiedades que tiene que cumplir la variable
-                    let obj = file[id].conditions[i][varName];
+                    let obj = fileObj[id].conditions[i][varName];
 
                     // Crea un objeto igual que obj, pero que tambien guarda su nombre
                     let condition = obj;
@@ -152,8 +167,8 @@ export default class BaseScene extends Phaser.Scene {
                 node.conditions.push(nodeConditions);
 
                 // Si hay un nodo despues de este, se crea de manera recursiva el nodo siguiente que corresponde a cumplir dichas condiciones
-                if (file[id].conditions[i].next) {
-                    node.next.push(this.readNodes(file[id].conditions[i].next, file, namespace, playerName, context, getObjs));
+                if (fileObj[id].conditions[i].next) {
+                    node.next.push(this.readNodes(fileObj[id].conditions[i].next, file, namespace, objectName, getObjs));
                 }
             }
         }
@@ -163,19 +178,19 @@ export default class BaseScene extends Phaser.Scene {
 
             // Obtiene el nombre del personaje del archivo de nombres localizados
             // En el caso de que se trate del jugador, obtiene su nombre
-            let character = file[id].character;
+            let character = fileObj[id].character;
             if (character === "player") {
                 node.name = this.gameManager.getUserInfo().name;
             }
             else {
-                node.name = this.i18next.t(file[id].character, { ns: "names", returnObjects: getObjs });
+                node.name = this.i18next.t(fileObj[id].character, { ns: "names", returnObjects: getObjs });
             }
             node.character = character;
 
             // Se crea un dialogo con todo el texto a mostrar
             let split = {
                 // Obtiene el texto del archivo de textos traducidos
-                text: this.i18next.t(id + ".text", { ns: namespace, name: playerName, context: context, returnObjects: getObjs }),
+                text: this.i18next.t(translationId + ".text", { ns: namespace, name: playerName, context: context, returnObjects: getObjs }),
                 //character: character,
                 name: node.name
             }
@@ -184,8 +199,8 @@ export default class BaseScene extends Phaser.Scene {
             node.currDialog = 0;
 
             // Si hay un nodo despues de este, se crea de manera recursiva
-            if (file[id].next) {
-                node.next.push(this.readNodes(file[id].next, file, namespace, playerName, context, getObjs));
+            if (fileObj[id].next) {
+                node.next.push(this.readNodes(fileObj[id].next, file, namespace, objectName, getObjs));
             }
         }
         // Si el nodo es de tipo opcion multiple
@@ -193,16 +208,16 @@ export default class BaseScene extends Phaser.Scene {
             node = new ChoiceNode();
 
             // Se obtienen los textos de las opciones del archivo de textos traducidos
-            let texts = this.i18next.t(id, { ns: namespace, name: playerName, context: context, returnObjects: getObjs })
+            let texts = this.i18next.t(translationId, { ns: namespace, name: playerName, context: context, returnObjects: getObjs })
 
-            for (let i = 0; i < file[id].choices.length; i++) {
+            for (let i = 0; i < fileObj[id].choices.length; i++) {
                 // Se guarda el texto de la eleccion y se crea de manera recursiva
                 // el nodo siguiente que corresponde a elegir dicha opcion
                 node.choices.push(texts[i].text);
 
                 // Si hay un nodo despues de este, se crea de manera recursiva
-                if (file[id].choices[i].next) {
-                    node.next.push(this.readNodes(file[id].choices[i].next, file, namespace, playerName, context, getObjs));
+                if (fileObj[id].choices[i].next) {
+                    node.next.push(this.readNodes(fileObj[id].choices[i].next, file, namespace, objectName, getObjs));
                 }
             }
         }
@@ -211,12 +226,12 @@ export default class BaseScene extends Phaser.Scene {
             node = new EventNode();
 
             // Recorre todas las variables obtenidas
-            for (let i = 0; i < file[id].events.length; i++) {
+            for (let i = 0; i < fileObj[id].events.length; i++) {
                 // Lee el nombre del evento
-                let evtName = Object.keys(file[id].events[i]);
+                let evtName = Object.keys(fileObj[id].events[i]);
 
                 // Obtiene el objeto que guarda los parametros del evento 
-                let obj = file[id].events[i][evtName];
+                let obj = fileObj[id].events[i][evtName];
 
                 // Crea un objeto igual que obj, pero que tambien guarda su nombre
                 let evt = { ...obj };
@@ -227,8 +242,8 @@ export default class BaseScene extends Phaser.Scene {
             }
 
             // Si hay un nodo despues de este, se crea de manera recursiva
-            if (file[id].next) {
-                node.next.push(this.readNodes(file[id].next, file, namespace, playerName, context, getObjs));
+            if (fileObj[id].next) {
+                node.next.push(this.readNodes(fileObj[id].next, file, namespace, objectName, getObjs));
             }
         }
         // Si el nodo es de tipo mensaje de texto
@@ -236,55 +251,55 @@ export default class BaseScene extends Phaser.Scene {
             node = new ChatNode();
 
             // Obtiene el texto del archivo de textos traducidos y lo guarda
-            let text = this.i18next.t(id + ".text", { ns: namespace, name: playerName, context: context, returnObjects: getObjs });
+            let text = this.i18next.t(translationId + ".text", { ns: namespace, name: playerName, context: context, returnObjects: getObjs });
             node.text = text;
 
             // Obtiene el nombre del personaje del archivo de nombres localizados
             // En el caso de que se trate del jugador, obtiene su nombre
-            let character = file[id].character;
+            let character = fileObj[id].character;
             if (character === "player") {
                 node.name = this.gameManager.getUserInfo().name;
             }
             else {
-                node.name = this.i18next.t(file[id].character, { ns: "names" });
+                node.name = this.i18next.t(fileObj[id].character, { ns: "names" });
             }
             node.character = character;
 
             // Guarda el chat en el que tiene que ir la respuesta y el retardo con el que se envia
-            node.chat = this.i18next.t("textMessages" + "." + file[id].chat, { ns: "phoneInfo" });
+            node.chat = this.i18next.t("textMessages" + "." + fileObj[id].chat, { ns: "phoneInfo" });
 
-            if (file[id].replyDelay) {
-                node.replyDelay = file[id].replyDelay;
+            if (fileObj[id].replyDelay) {
+                node.replyDelay = fileObj[id].replyDelay;
             }
 
             // Si hay un nodo despues de este, se crea de manera recursiva
-            if (file[id].next) {
-                node.next.push(this.readNodes(file[id].next, file, namespace, playerName, context, getObjs));
+            if (fileObj[id].next) {
+                node.next.push(this.readNodes(fileObj[id].next, file, namespace, objectName, getObjs));
             }
         }
-        // Si el nodo es de tipo mensaje de texto
+        // Si el nodo es de tipo comentario de la red social
         else if (type === "socialNetMessage") {
             node = new SocialNetNode();
 
             // Obtiene el texto del archivo de textos traducidos y lo guarda
-            let text = this.i18next.t(id + ".text", { ns: namespace, name: playerName, context: context, returnObjects: getObjs });
+            let text = this.i18next.t(translationId + ".text", { ns: namespace, name: playerName, context: context, returnObjects: getObjs });
             node.text = text;
 
-            node.character = file[id].character;
+            node.character = fileObj[id].character;
             // Obtiene el nombre del jugador del archivo de nombres localizados
             // En el caso de se trate del propio del jugador, obtiene el pronombre personal Tu
             // traducido en el idioma correspondiente
-            node.name = this.i18next.t(file[id].character, { ns: "names" });
+            node.name = this.i18next.t(fileObj[id].character, { ns: "names" });
 
             // Guarda el usuario que ha subido el post
-            node.user = file[id].user;
+            node.user = fileObj[id].user;
 
             // Guarda el numero del post del usuario
             node.post = filed[id].post;
 
             // Si hay un nodo despues de este, se crea de manera recursiva
-            if (file[id].next) {
-                node.next.push(this.readNodes(file[id].next, file, namespace, playerName, context, getObjs));
+            if (fileObj[id].next) {
+                node.next.push(this.readNodes(fileObj[id].next, file, namespace, objectName, getObjs));
             }
         }
 

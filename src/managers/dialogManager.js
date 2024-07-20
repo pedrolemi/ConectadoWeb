@@ -20,8 +20,6 @@ export default class DialogManager {
         this.dispatcher = this.gameManager.dispatcher;
 
         this.textbox = new TextBox(scene, this);
-        this.textbox.activate(false);
-        this.activateOptions(false);
 
         // Mascara para los retratos de los personajes (para que no se pinten fuera de la caja de texto)
         let mask = scene.add.image(this.textbox.getTransform().x, this.textbox.getTransform().y, 'textboxMask');
@@ -33,6 +31,17 @@ export default class DialogManager {
         this.portraitMask = mask.createBitmapMask();
 
         this.talking = false;
+
+        // Anade un rectangulo para bloquear la interaccion con los elementos del fondo
+        this.bgBlock = scene.add.rectangle(0, 0, this.scene.CANVAS_WIDTH, this.scene.CANVAS_HEIGHT, 0xfff, 0).setOrigin(0, 0);
+        this.bgBlock.setDepth(this.textbox.box.depth - 1);
+        this.bgBlock.on('pointerdown', () => {
+            this.nextDialog();
+        });
+
+        this.textbox.activate(false);
+        this.activateOptions(false);
+        this.bgBlock.disableInteractive();
     }
 
     // IMPORTANTE: SE TIENE QUE LLAMAR ANTES DE CAMBIAR LA ESCENA
@@ -118,6 +127,7 @@ export default class DialogManager {
     processNode() {
         // Si el nodo actual es valido
         if (this.currNode) {
+            this.bgBlock.setInteractive();
             // Si el nodo es un nodo condicional
             if (this.currNode.type === "condition") {
                 let conditionMet = false;
@@ -223,38 +233,42 @@ export default class DialogManager {
         }
         else {
             this.talking = false;
+            this.bgBlock.disableInteractive();
         }
     }
 
     // Pasa al siguiente dialogo
     // (llamado al hacer click en la caja de texto)
     nextDialog() {
-        // Si aun no ha acabado de mostrarse todo el texto, lo muestra de golpe
-        if (!this.textbox.finished) {
-            this.textbox.forceFinish();
-        }
-        // Si ha acabado de mostrarse todo el dialogo
-        else {
-            // Actualiza el dialogo que se esta mostrando del nodo actual
-            this.currNode.currDialog++;
-
-            // Si aun no se han mostrado todos los dialogos del nodo, muestra el siguiente dialogo
-            if (this.currNode.currDialog < this.currNode.dialogs.length) {
-                this.setText(this.currNode.dialogs[this.currNode.currDialog], true);
+        if (this.currNode.type === "text") {
+            // Si aun no ha acabado de mostrarse todo el texto, lo muestra de golpe
+            if (!this.textbox.finished) {
+                this.textbox.forceFinish();
             }
-            // Si ya se han mostrado todos los dialogos
+            // Si ha acabado de mostrarse todo el dialogo
             else {
-                // Se oculta la caja de texto y una vez terminada la animacion,
-                // reinicia el dialogo del nodo actual y actualiza el nodo al siguiente
-                this.textbox.activate(false, () => {
-                    this.currNode.currDialog = 0;
+                // Actualiza el dialogo que se esta mostrando del nodo actual
+                this.currNode.currDialog++;
 
-                    // IMPORTANTE: DESPUES DE UN NODO DE DIALOGO SOLO HAY UN NODO, POR LO QUE 
-                    // EL SIGUIENTE NODO SERA EL PRIMER NODO DEL ARRAY DE NODOS SIGUIENTES
-                    this.currNode = this.currNode.next[0];
-                    this.processNode();
-                }, 0);
+                // Si aun no se han mostrado todos los dialogos del nodo, muestra el siguiente dialogo
+                if (this.currNode.currDialog < this.currNode.dialogs.length) {
+                    this.setText(this.currNode.dialogs[this.currNode.currDialog], true);
+                }
+                // Si ya se han mostrado todos los dialogos
+                else {
+                    // Se oculta la caja de texto y una vez terminada la animacion,
+                    // reinicia el dialogo del nodo actual y actualiza el nodo al siguiente
+                    this.textbox.activate(false, () => {
+                        this.currNode.currDialog = 0;
+
+                        // IMPORTANTE: DESPUES DE UN NODO DE DIALOGO SOLO HAY UN NODO, POR LO QUE 
+                        // EL SIGUIENTE NODO SERA EL PRIMER NODO DEL ARRAY DE NODOS SIGUIENTES
+                        this.currNode = this.currNode.next[0];
+                        this.processNode();
+                    }, 0);
+                }
             }
+
         }
     }
 

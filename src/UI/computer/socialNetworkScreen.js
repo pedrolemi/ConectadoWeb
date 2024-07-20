@@ -300,6 +300,10 @@ export default class SocialNetworkScreen extends Phaser.GameObjects.Group {
 
     eraseFriend(character) {
         if (this.friends.has(character)) {
+            let friendInfo = this.friends.get(character);
+            friendInfo.pendingPosts((post) => {
+                post.destroy();
+            })
             this.friends.delete(character);
         }
     }
@@ -310,6 +314,15 @@ export default class SocialNetworkScreen extends Phaser.GameObjects.Group {
             if (friendInfo.posts.has(postNumber)) {
                 let name = this.scene.gameManager.i18next.t(character, { ns: "names" });
                 friendInfo.posts.get(postNumber).addMessage(text, character, name);
+            }
+        }
+    }
+
+    setNodeToPost(character, postNumber, node) {
+        if (this.friends.has(character)) {
+            let friendInfo = this.friends.get(character);
+            if (friendInfo.posts.has(postNumber)) {
+                friendInfo.posts.get(postNumber).setCommentNode(node);
             }
         }
     }

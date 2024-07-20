@@ -1,6 +1,6 @@
 import BaseScreen from "./baseScreen.js";
 import VerticalListView from "../listView/verticalListView.js";
-import messageBox from "../messageBox.js";
+import MessageBox from "../messageBox.js";
 
 export default class ChatScreen extends BaseScreen {
     /**
@@ -260,8 +260,8 @@ export default class ChatScreen extends BaseScreen {
         }
 
         // Crea la caja del mensaje y la anade a la lista
-        let msg = new messageBox(this.scene, text, character, name, 0, this.bg.displayWidth);
+        let msg = new MessageBox(this.scene, text, character, name, 0, this.bg.displayWidth);
         this.messagesListView.addLastItem(msg);
-        this.messagesListView.cropItems();
+        //this.messagesListView.cropItems();
     }
 }

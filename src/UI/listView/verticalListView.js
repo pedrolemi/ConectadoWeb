@@ -1,22 +1,24 @@
 export default class VerticalListView extends Phaser.GameObjects.Container {
     /**
      * Clase que permite crear una lista con elementos scrolleables. Se puede incluir cualquier
-     * tipo de elementos renderizable, incluso otra propia listview.
+     * tipo de elementos renderizable, incluso otra propia listview
      * A TENER EN CUENTA:
      * - El "origen" de los elementos debe ser (0.5, 0)
      * - Cada elemento tiene que tener la propiedad .h, que es la altura real del elemento cuando se va a incluir en la listview
      * - Si se quiere que uno de los elementos sea interactuable hay que usar un hitListElement para el area de colision
-     * - Llamar a cropItems() despues de agregar o eliminar objetos
+     * - Llamar a init() despues de haber creado la listview y haber metido los items iniciales. 
+     *      Si hay listviews anidadas con llamar al init() de la mayor es suficente
      * @param {Phaser.scene} scene 
      * @param {Number} x 
      * @param {Number} y 
      * @param {Number} scale 
      * @param {Number} padding - separacion entre los diferentes elementos de la listivew 
      * @param {Object} boundaries - limites de la listview (tanto para interactuar como para renderizar) 
+     * @param {Object} background - fondo y su componente alfa (opcional)
      * @param {Boolean} autocull - hacer que un los elementos que se salgan de los borden se vuelvan invisibles.
-     *                              No supone un cambio visual ni funcional, pero si mejora el rendimiento 
+     *                              No supone un cambio visual ni funcional, pero si mejora el rendimiento (opcional)
      */
-    constructor(scene, x, y, scale, padding, boundaries, bgSprite, autocull = true) {
+    constructor(scene, x, y, scale, padding, boundaries, background, autocull = true) {
         super(scene, x, y);
 
         this.scene.add.existing(this);
@@ -27,9 +29,9 @@ export default class VerticalListView extends Phaser.GameObjects.Container {
         this.setScale(scale);
 
         // bg (es mera decoracion)
-        if (bgSprite) {
-            let bg = this.scene.add.image(0, 0, bgSprite);
-            bg.setOrigin(0.5, 0);
+        if (background) {
+            let bg = this.scene.add.image(0, 0, background.sprite);
+            bg.setOrigin(0.5, 0).setAlpha(background.alpha);
             bg.displayWidth = boundaries.width;
             bg.displayHeight = boundaries.height;
             this.add(bg);
@@ -42,7 +44,7 @@ export default class VerticalListView extends Phaser.GameObjects.Container {
         // El scrolling esta por encima de cualquier asset
         // De esta forma, se va a poder scrollear sobre la propia listiview
         this.boundedZone.setDepth(1);
-        //this.scene.input.enableDebug(this.boundedZone, '0x000000');
+        this.scene.input.enableDebug(this.boundedZone, '0x000000');
         this.add(this.boundedZone);
         // Final de los limites de la listview
         this.boundedZone.end = this.boundedZone.y + this.boundedZone.displayHeight;
@@ -232,10 +234,14 @@ export default class VerticalListView extends Phaser.GameObjects.Container {
         }
     }
 
+    init() {
+        this.updateMask();
+        this.cropItems();
+    }
+
     /**
      * Recortar los items en cuanto a renderizado y areas de colision para que se
      * ajusten a los limites de las listviews
-     * Importante: hay que llamarlo siempre despues de agregar o eliminar nuevos items
      */
     cropItems() {
         // hay que tener en cuenta la listview actual y las de orden superior
@@ -380,6 +386,7 @@ export default class VerticalListView extends Phaser.GameObjects.Container {
 
     /**
      * Agregar un elemento al final del listview
+     * Nota: el elemento queda alineado en el medio de la listview
      * Importante: definir la propiedad .h, que es la altura completa del elemento
      * @param {Object} item - origen(0.5, 0)
      * @param {Array} hits - hits que tiene el item (y sus elementos) (opcional)
@@ -408,6 +415,7 @@ export default class VerticalListView extends Phaser.GameObjects.Container {
 
     /**
      * Agregar un elemento al principio de la listview
+     * Nota: el elemento queda alineado en el medio de la listview
      * @param {Object} item - origen(0.5, 0)
      * @param {Array} hits - hits que tiene el item (y sus elementos) (opcional)
      * @param {Array} listviews - listviews que tiene el item (y sus elementos) (opcional)
@@ -427,6 +435,9 @@ export default class VerticalListView extends Phaser.GameObjects.Container {
                 for (let i = 0; i < this.items.length; ++i) {
                     this.items[i].y += item.y + item.h + this.padding;
                 }
+            }
+            else {
+                this.lastItem = item;
             }
 
             this.items.unshift(item);
@@ -455,6 +466,8 @@ export default class VerticalListView extends Phaser.GameObjects.Container {
         if (hits) {
             this.itemsHits.set(item, hits);
         }
+
+        this.cropItems();
     }
 
     /**
@@ -546,6 +559,8 @@ export default class VerticalListView extends Phaser.GameObjects.Container {
             else {
                 this.lastItem = null;
             }
+
+            this.cropItems();
         }
     }
 

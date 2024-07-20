@@ -116,10 +116,10 @@ export default class ComputerScene extends Phaser.Scene {
         this.powerOffButton.reset();
         this.closeButton.reset();
         // Se inicia la pantalla de login
-        this.socialNetScreen.setVisible(false);
-        this.loginScreen.start();
-        //this.loginScreen.setVisible(false);
-        //this.socialNetScreen.start();
+        //this.socialNetScreen.setVisible(false);
+        //this.loginScreen.start();
+        this.loginScreen.setVisible(false);
+        this.socialNetScreen.start();
     }
 
     logIntoSocialNet() {

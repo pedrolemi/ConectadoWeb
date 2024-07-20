@@ -133,4 +133,9 @@ export default class ListViewButton extends Phaser.GameObjects.Container {
         super.setVisible(visible);
         this.hit.setVisible(visible);
     }
+
+    destroy(){
+        super.destroy();
+        this.hit.destroy();
+    }
 }

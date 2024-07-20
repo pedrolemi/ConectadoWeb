@@ -1,6 +1,5 @@
 import FriendsTab from './friendsTab.js'
 import FeedTab from './feedTab.js'
-import FriendRequest from './friendRequest.js';
 
 export default class SocialNetworkScreen extends Phaser.GameObjects.Group {
     /**
@@ -13,6 +12,8 @@ export default class SocialNetworkScreen extends Phaser.GameObjects.Group {
 
         let dialogManager = this.scene.gameManager.dialogManager;
         this.uploadNode = null;
+
+        this.friends = new Set();
 
         // Fondo de login del ordenador
         let mainViewBg = this.scene.add.image(0.23 * this.scene.CANVAS_WIDTH / 5, 4.1 * this.scene.CANVAS_HEIGHT / 5, 'computerMainView');
@@ -58,7 +59,7 @@ export default class SocialNetworkScreen extends Phaser.GameObjects.Group {
         this.friendRequestNot = this.createFriendRequestNotificacion(3 * this.scene.CANVAS_WIDTH / 5, 4.5 * this.scene.CANVAS_HEIGHT / 6, 0.9);
         this.friendRequestNot.setVisible(false);
 
-        this.friendsTab.test();
+        //this.test();
     }
 
     createProfilePhoto(x, y, scale) {
@@ -224,6 +225,93 @@ export default class SocialNetworkScreen extends Phaser.GameObjects.Group {
         container.h = buttonBg.displayHeight * scale;
 
         return container;
+    }
+
+    test() {
+        this.addFriendRequest("Maria", "Hola me llamo maria");
+        this.addFriendRequest("Alison", "Hola me llamo maria");
+        this.addFriendRequest("Alex", "Hola me llamo maria");
+        this.addFriendRequest("Guille", "Hola me llamo maria");
+
+        this.addPost("Alison", "photoMatch", "Hola jajaja");
+        this.addPost("Alex", "photoMatch", "Hola jajaja");
+        this.addPost("Guille", "photoMatch", "Hola jajaja");
+    }
+
+    tryToCreateFriendInfo(character) {
+        if (!this.friends.has(character)) {
+            let friendInfo = {
+                request: null,
+                pendingPosts: [],
+                nPosts: 0,
+                posts: new Set()
+            };
+            this.friends.set(character, friendInfo);
+        }
+    }
+
+    addFriendRequest(character) {
+        this.tryToCreateFriendInfo();
+
+        let avatar = character + "Avatar";
+        let name = this.scene.gameManager.i18next.t(character, { ns: "names" });
+        let bio = this.scene.gameManager.i18next.t(character, { ns: "socialNetBios" });
+        let friendRequest = this.friendsTab.addFriendRequest(character, avatar, name, bio);
+
+        let friendInfo = this.friends.get(character);
+        friendInfo.request = friendRequest;
+    }
+
+    addPost(character, photo, description) {
+        this.tryToCreateFriendInfo(character);
+
+        let avatar = character + "Avatar";
+        let name = this.scene.gameManager.i18next.t(character, { ns: "names" });
+        let post = this.feedTab.createPost(avatar, name, photo, description);
+
+        let check = this.tryToAddPostToFeed(character, post);
+        if (!check) {
+            let friendInfo = this.friends.get(character);
+            friendInfo.pendingPosts.push(post);
+        }
+
+    }
+
+    tryToAddPostToFeed(character, post) {
+        let friendInfo = this.friends.get(character);
+        if (friendInfo.request) {
+            if (friendInfo.request.isAccepted) {
+                this.feedTab.addPostToFeed(post);
+                friendInfo.posts.set(friendInfo.nPosts, post);
+                ++friendInfo.nPosts;
+                return true;
+            }
+        }
+        return false;
+    }
+
+    addPendingPosts(character) {
+        let friendInfo = this.friends.get(character);
+        friendInfo.pendingPosts.forEach((post) => {
+            this.tryToAddPostToFeed(character, post);
+        });
+        friendInfo.pendingPosts = [];
+    }
+
+    eraseFriend(character) {
+        if (this.friends.has(character)) {
+            this.friends.delete(character);
+        }
+    }
+
+    addCommentToPost(character, postNumber, text) {
+        if (this.friends.has(character)) {
+            let friendInfo = this.friends.get(character);
+            if (friendInfo.posts.has(postNumber)) {
+                let name = this.scene.gameManager.i18next.t(character, { ns: "names" });
+                friendInfo.posts.get(postNumber).addMessage(text, character, name);
+            }
+        }
     }
 
     changeFriendRequestNotState() {

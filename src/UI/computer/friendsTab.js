@@ -17,6 +17,7 @@ export default class FriendsTab extends Phaser.GameObjects.Group {
         this.nFriendRequests = 0;
         this.friendsSet = new Set();
 
+        // Texto con el numero de amigos
         let friendsTextStyle = { ...this.scene.gameManager.textConfig };
         friendsTextStyle.fontFamily = 'AUdimat-regular';
         friendsTextStyle.fontSize = '30px';
@@ -28,6 +29,7 @@ export default class FriendsTab extends Phaser.GameObjects.Group {
         this.setFriends();
         this.add(this.friendsText);
 
+        // Texto con el numero de peticiones de amistad pendientes
         let friendReqTextStyle = friendsTextStyle;
         friendReqTextStyle.color = '#FFA400'
         this.friendRequestsText = this.scene.add.text(3 * this.scene.CANVAS_WIDTH / 5, offsetY, "", friendReqTextStyle);
@@ -37,16 +39,32 @@ export default class FriendsTab extends Phaser.GameObjects.Group {
         this.add(this.friendRequestsText);
 
         // Se crea una para poder calcular el ancho del listview
-        let aux = new FriendRequest(this.scene, 0, 0, 1);
-        this.listView = new VerticalListView(this.scene, 2.2 * this.scene.CANVAS_WIDTH / 4, 1.2 * this.scene.CANVAS_HEIGHT / 5, 1, 0, { width: aux.w, height: 350 }, null, false);
+        let aux = new FriendRequest(this.scene, 0, 0, 1, "AlisonAvatar");
+        this.listView = new VerticalListView(this.scene, 2.2 * this.scene.CANVAS_WIDTH / 4, 1.1 * this.scene.CANVAS_HEIGHT / 5, 1, 0, { width: aux.w, height: 467 }, null, false);
+        this.listView.init();
         aux.destroy();
+
+        this.blockNot = this.createBlockNotification(3 * this.scene.CANVAS_WIDTH / 5, 1.8 * this.scene.CANVAS_HEIGHT / 4, 25);
     }
 
-    test() {
-        this.addFriendRequest("Maria", "Hola me llamo maria");
-        this.addFriendRequest("Alison", "Hola me llamo maria");
-        this.addFriendRequest("Alex", "Hola me llamo maria");
-        this.addFriendRequest("Guille", "Hola me llamo maria");
+    createBlockNotification(x, y, fontSize) {
+        let textStyle = { ...this.scene.gameManager.textConfig };
+        textStyle.fontFamily = 'AUdimat-regular';
+        textStyle.fontStyle = 'bold';
+        textStyle.fontSize = fontSize + 'px';
+        textStyle.backgroundColor = 'rgba(255, 0, 0, 0.85)';
+        textStyle.padding = {
+            left: 20,
+            top: 35
+        }
+        let text = this.scene.add.text(x, y, "¡NO ESTÁ PERMITIDO BLOQUEAR USUARIOS!", textStyle);
+        text.setScale(0).setOrigin(0.5);
+
+        this.add(text);
+
+        this.blockNotTween = null;
+
+        return text;
     }
 
     setFriends() {
@@ -90,27 +108,43 @@ export default class FriendsTab extends Phaser.GameObjects.Group {
         this.listView.setVisible(visible);
     }
 
-    addFriendRequest(character, bio) {
-        let friendRequest = new FriendRequest(this.scene, 0, 0, 1, character, bio,
+    addFriendRequest(character, avatar, name, bio) {
+        let friendRequest = new FriendRequest(this.scene, 0, 0, 1, avatar, name, bio,
             () => {
                 console.log("cancelado");
+                this.socialNetScreen.eraseFriend(character);
                 this.declineFriendRequest(friendRequest);
             },
             () => {
                 console.log("aceptado");
+                this.socialNetScreen.addPendingPost(character);
                 this.decreaseFriendRequests();
                 this.increaseFriends();
             },
             () => {
-                console.log("bloqueado");
+                if (!this.blockNotTween) {
+                    console.log("bloqueado");
+                    this.blockNotTween = this.scene.tweens.add({
+                        targets: this.blockNot,
+                        scale: 1,
+                        yoyo: true,
+                        duration: 200,
+                        hold: 1500,      // tiempo que se pausa el tween hasta que se realiza el yoyo
+                        repeat: 0,
+                    });
+                    this.blockNotTween.on('complete', () => {
+                        this.blockNotTween = null;
+                    });
+                }
             });
-        this.listView.addLastItem(friendRequest, friendRequest.hits);
-        this.listView.cropItems();
+        this.listView.addLastItem(friendRequest, friendRequest.getHits());
 
         this.friendsSet.add(friendRequest);
 
         // aumentar el numero de peticiones
         this.increaseFriendRequests();
+
+        return friendRequest;
     }
 
     declineFriendRequest(friendRequest) {

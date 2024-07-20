@@ -1,4 +1,4 @@
-export default class messageBox extends Phaser.GameObjects.Container {
+export default class MessageBox extends Phaser.GameObjects.Container {
     /**
      * Contenedor para las burbujas de mensajes
      * @extends Phaser.GameObjects.Container

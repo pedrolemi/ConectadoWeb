@@ -2,7 +2,7 @@ import ListViewButton from '../listView/listViewButton.js';
 import GameManager from '../../managers/gameManager.js';
 
 export default class FriendRequest extends Phaser.GameObjects.Container {
-    constructor(scene, x, y, scale, character, bio, refuseFn, acceptFn, blockFn) {
+    constructor(scene, x, y, scale, avatar, name, bio, refuseFn, acceptFn, blockFn) {
         super(scene, x, y);
 
         this.scene.add.existing(this);
@@ -13,7 +13,7 @@ export default class FriendRequest extends Phaser.GameObjects.Container {
 
         this.setScale(scale);
 
-        this.hits = [];
+        this.hitButtons = [];
 
         // Fondos
         let bgScale = {
@@ -34,26 +34,11 @@ export default class FriendRequest extends Phaser.GameObjects.Container {
         this.oldFriendBg.setVisible(false);
         this.add(this.oldFriendBg);
 
-        // Imagen con el avatar de la persona
-        if (character) {
-            let avatarTrans = {
-                x: -257,
-                y: 75,
-                scale: 0.265
-            }
-            let avatar = character + "Avatar";
-            let avatarIcon = this.scene.add.image(avatarTrans.x, avatarTrans.y, avatar);
-            avatarIcon.setScale(avatarTrans.scale);
-            this.add(avatarIcon);
-        }
-
         // Nombre del usuario
-        // Se obtiene del archivo de nombres localizados
         let nameTextPos = {
             x: -185,
             y: 47
         }
-        let name = gameManager.i18next.t(character, { ns: "names" });
         let nameTextStyle = { ...gameManager.textConfig };
         nameTextStyle.fontFamily = 'AUdimat-regular';
         nameTextStyle.fontSize = '37px';
@@ -62,6 +47,16 @@ export default class FriendRequest extends Phaser.GameObjects.Container {
         nameText.setOrigin(0, 0.5);
         this.add(nameText);
 
+        // Imagen con el avatar de la persona
+        let avatarTrans = {
+            x: -257,
+            y: 75,
+            scale: 0.265
+        }
+        let avatarIcon = this.scene.add.image(avatarTrans.x, avatarTrans.y, avatar);
+        avatarIcon.setScale(avatarTrans.scale);
+        this.add(avatarIcon);
+
         // Descripcion del usuario
         let bioTextStyle = { ...gameManager.textConfig };
         bioTextStyle.fontFamily = 'AUdimat-regular';
@@ -69,7 +64,7 @@ export default class FriendRequest extends Phaser.GameObjects.Container {
         bioTextStyle.color = '#323232';
         bioTextStyle.align = 'justify';
         bioTextStyle.wordWrap = {
-            width: 460,
+            width: this.newFriendBg.displayWidth - avatarIcon.displayWidth / 2,
             useAdvancedWrap: true
         }
         this.bioText = this.scene.add.text(nameText.x, nameText.y + 23, bio, bioTextStyle);
@@ -109,7 +104,7 @@ export default class FriendRequest extends Phaser.GameObjects.Container {
         this.addListViewButton(this.refuseButton);
     }
 
-    changeStateAux(enable){
+    changeStateAux(enable) {
         this.newFriendBg.setVisible(!enable);
         this.oldFriendBg.setVisible(enable);
         this.bioText.setVisible(enable);
@@ -124,15 +119,22 @@ export default class FriendRequest extends Phaser.GameObjects.Container {
 
     addListViewButton(button) {
         this.add(button);
-        this.hits.push(button.hit);
+        this.hitButtons.push(button);
         // Como el boton luego de crearse se mete en el container cambia su pos
         // Hay que resetear el collider para que vuelva a coincidir con el boton
         button.hit.resetToBoundingRect();
     }
 
+    getHits() {
+        let hits = [];
+        this.hitButtons.forEach((button) => {
+            hits.push(button.hit);
+        });
+    }
+
     destroy() {
-        this.hits.forEach((hit) => {
-            hit.destroy();
+        this.hitButtons.forEach((button) => {
+            button.destroy();
         });
         super.destroy();
     }

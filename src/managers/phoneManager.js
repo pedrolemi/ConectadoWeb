@@ -47,7 +47,7 @@ export default class PhoneManager {
 
         // Si se pulsa fuera del telefono cuando esta sacado y en otra 
         // pantalla que no sea la pantalla de alarma, se guarda
-        this.bgBlock.on('pointerdown', (pointer) => {
+        this.bgBlock.on('pointerdown', () => {
             if (this.phone.visible && this.phone.currScreen !== this.phone.alarmScreen) {
                 this.togglePhone();
             }
@@ -107,7 +107,7 @@ export default class PhoneManager {
                 repeat: 0,
             });
         });
-        this.icon.on('pointerdown', (pointer) => {
+        this.icon.on('pointerdown', () => {
             if (!this.scene.dialogManager.isTalking()) {
                 this.togglePhone();
                 this.scene.tweens.add({
@@ -311,7 +311,7 @@ export default class PhoneManager {
         this.icon.visible = active;
         this.notifications.visible = this.notificationAmount > 0;
     }
-    
+
     /**
      * Muestra/oculta el telefono de manera inmediata
      * @param {Boolean} active - true si se va a activar, false en caso contrario
@@ -394,7 +394,7 @@ export default class PhoneManager {
                 this.icon.visible = true;
 
                 this.notifications.visible = this.notificationAmount > 0;
-                
+
                 // Envia el evento de reiniciar la camara y el de despertarse
                 this.dispatcher.dispatch(this.resetCamEvent, {});
                 this.dispatcher.dispatch(this.wakeUpEvent, {});

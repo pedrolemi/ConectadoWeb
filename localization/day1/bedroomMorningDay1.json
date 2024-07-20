@@ -36,6 +36,16 @@
     "pc": {
         "root": {
             "type": "text",
+            "character": "player",
+            "next": "playerPc"
+        },
+        "playerPc": {
+            "type": "text",
+            "character": "player",
+            "next": "pcQuestion"
+        },
+        "pcQuestion": {
+            "type": "text",
             "character": "PC",
             "next": "pcChoice"
         },

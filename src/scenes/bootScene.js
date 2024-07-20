@@ -138,7 +138,7 @@ export default class BootScene extends Phaser.Scene {
                 'momDialog', 'dadDialog', 'chat1'],   // TEST
             preload: ['en', 'es'],
             // mostrar informacion de ayuda por consola
-            debug: true,
+            debug: false,
             // cargar las traducciones de un servidor especificado en vez de ponerlas directamente
             backend: {
                 // La ruta desde donde cargamos las traducciones
@@ -198,8 +198,8 @@ export default class BootScene extends Phaser.Scene {
         this.load.image('bed', 'bedroom/bed.png');
         this.load.image('bag', 'bedroom/bag.png');
         this.load.image('bedroomChair', 'bedroom/bedroomChair.png');
-        this.load.image('bedroomDoorClosed', 'bedroom/bedroomDoorClosed.png');
-        this.load.image('bedroomDoorOpened', 'bedroom/bedroomDoorOpened.png');
+        this.load.image('bed_livingDoorClosed', 'bedroom/bedroomDoorClosed.png');
+        this.load.image('bed_livingDoorOpened', 'bedroom/bedroomDoorOpened.png');
         this.load.image('bedroomJacket', 'bedroom/bedroomJacket.png');
         this.load.image('clothes1', 'bedroom/clothes1.png');
         this.load.image('clothes2', 'bedroom/clothes2.png');
@@ -210,6 +210,14 @@ export default class BootScene extends Phaser.Scene {
         this.load.image('wardrobeDoor2Opened', 'bedroom/wardrobeDoor2Opened.png');
         this.load.image('wardrobeDoor3Closed', 'bedroom/wardrobeDoor3Closed.png');
         this.load.image('wardrobeDoor3Opened', 'bedroom/wardrobeDoor3Opened.png');
+
+
+        // Salon
+        this.load.image('livingroomBg', 'livingroom/livingroomBg.png');
+        this.load.image('living_bedDoorClosed', 'livingroom/bedroomDoorClosed.png');
+        this.load.image('living_bedDoorOpened', 'livingroom/bedroomDoorOpened.png');
+        this.load.image('living_playDoorClosed', 'livingroom/livingroomDoorClosed.png');
+        this.load.image('living_playDoorOpened', 'livingroom/livingroomDoorOpened.png');
 
     }
 

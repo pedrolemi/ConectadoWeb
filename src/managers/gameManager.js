@@ -27,6 +27,7 @@ export default class GameManager {
         // El SceneManager tb incluye el cambio de escena, pero no es recomendable segun
         // la docu manejarlo a traves de el
         this.currentScene = scene;
+        this.prevScene = null;
 
         this.i18next = this.currentScene.plugins.get('rextexttranslationplugin');
         this.dispatcher = EventDispatcher.getInstance();
@@ -36,7 +37,7 @@ export default class GameManager {
 
         // Blackboard
         this.map = new Map();
-        
+
         this.bagPicked = "bagPicked";
         this.map.set("bagPicked", false);
 
@@ -226,21 +227,22 @@ export default class GameManager {
         this.computerScene.scene.sleep();
 
 
-        let sceneName = 'Test';
+        // let sceneName = 'LivingroomMorningDay1';
 
         // Pasa a la escena inicial con los parametros text, onComplete y onCompleteDelay
-        // let sceneName = 'TextOnlyScene';
-        // this.changeScene(sceneName, {
-        //     // El texto de se coge del a archivo de traducciones
-        //     text: this.i18next.t("day1.start", { ns: "transitionScenes", returnObjects: true }),
-        //     onComplete: () => {
-        //         // Al llamar a onComplete, se cambiara a la escena de la alarma
-        //         this.changeScene('AlarmScene');
-        //     },
-        //     onCompleteDelay: 500
-        // });
-        
-        this.changeScene(sceneName);
+        let sceneName = 'TextOnlyScene';
+        let params = {
+            // El texto de se coge del a archivo de traducciones
+            text: this.i18next.t("day1.start", { ns: "transitionScenes", returnObjects: true }),
+            onComplete: () => {
+                // Al llamar a onComplete, se cambiara a la escena de la alarma
+                this.changeScene('AlarmScene', null, true);
+            },
+            onCompleteDelay: 500
+        };
+
+        this.changeScene(sceneName, params);
+
     }
 
     setUserInfo(userInfo) {
@@ -248,15 +250,27 @@ export default class GameManager {
     }
 
     /**
-    * Metodo para cambiar de escena 
+    * Metodo para cambiar de escena. Si no
     * @param {String} scene - key de la escena a la que se va a pasar
-    * @param {Object} - informacion que pasar a la escena (opcional)
+    * @param {Object} params - informacion que pasar a la escena (opcional)
+    * @param {Boolean} cantReturn - true si se puede regresar a la escena anterior, false en caso contrario
     */
-    changeScene(scene, params) {
-        this.currentScene.scene.stop();
-        this.currentScene.scene.start(scene, params);
-        this.currentScene = this.currentScene.scene.get(scene);
+    changeScene(scene, params, canReturn = false) {
+        // Si no se puede volver a la escena anterior, se hace start de la nueva
+        // escena (lo que parara la escena anterior y habra que volver a crearla)
+        if (!canReturn) {
+            this.currentScene.scene.start(scene, params);
+        }
+        // Si no, se hace switch de la nueva escena (por lo que se podra volver
+        // a ella haciendo switch de nuevo sin necesidad de volver a crearla)
+        else {
+            this.currentScene.scene.switch(scene, params);
+        }
+        this.prevScene = this.currentScene;
+        this.currentScene = this.currentScene.scene.get(scene, params);
+        this.currentScene.params = params;
 
+        // Si se han inicializado el UIManager y el dialogManager, se limpian los retratos
         if (this.UIManager && this.UIManager.dialogManager) {
             this.UIManager.dialogManager.clearPortraits();
         }
@@ -264,7 +278,7 @@ export default class GameManager {
 
     switchToComputer() {
         this.UIManager.phoneManager.activate(false);
-        
+
         // se duerme la escena actual
         this.currentScene.scene.sleep();
         // se cambia a la escena del ordenador
@@ -276,7 +290,13 @@ export default class GameManager {
         this.UIManager.phoneManager.activate(true);
 
         this.computerScene.scene.sleep();
+
+        let params = {
+            left: true
+        };
         this.currentScene.scene.wake();
+        this.currentScene.params = params;
+
     }
 
     // tiene los campos: name, username, password, gender

@@ -232,6 +232,7 @@ export default class DialogManager {
             }
         }
         else {
+            this.textbox.activate(false)
             this.talking = false;
             this.bgBlock.disableInteractive();
         }
@@ -241,6 +242,8 @@ export default class DialogManager {
     // (llamado al hacer click en la caja de texto)
     nextDialog() {
         if (this.currNode.type === "text") {
+
+
             // Si aun no ha acabado de mostrarse todo el texto, lo muestra de golpe
             if (!this.textbox.finished) {
                 this.textbox.forceFinish();
@@ -249,23 +252,32 @@ export default class DialogManager {
             else {
                 // Actualiza el dialogo que se esta mostrando del nodo actual
                 this.currNode.currDialog++;
-
                 // Si aun no se han mostrado todos los dialogos del nodo, muestra el siguiente dialogo
                 if (this.currNode.currDialog < this.currNode.dialogs.length) {
                     this.setText(this.currNode.dialogs[this.currNode.currDialog], true);
                 }
                 // Si ya se han mostrado todos los dialogos
                 else {
-                    // Se oculta la caja de texto y una vez terminada la animacion,
-                    // reinicia el dialogo del nodo actual y actualiza el nodo al siguiente
-                    this.textbox.activate(false, () => {
-                        this.currNode.currDialog = 0;
+                    this.lastCharacter = this.currNode.character;
 
-                        // IMPORTANTE: DESPUES DE UN NODO DE DIALOGO SOLO HAY UN NODO, POR LO QUE 
-                        // EL SIGUIENTE NODO SERA EL PRIMER NODO DEL ARRAY DE NODOS SIGUIENTES
-                        this.currNode = this.currNode.next[0];
+                    // Se reinicia el dialogo del nodo actual y actualiza el nodo al siguiente
+                    // IMPORTANTE: DESPUES DE UN NODO DE DIALOGO SOLO HAY UN NODO, POR LO QUE 
+                    // EL SIGUIENTE NODO SERA EL PRIMER NODO DEL ARRAY DE NODOS SIGUIENTES
+                    this.currNode.currDialog = 0;
+                    this.currNode = this.currNode.next[0];
+
+                    // Si el nodo es valido y el siguiente personaje que habla no es el mismo que el anterior
+                    // Se oculta la caja de texto y una vez terminada la animacion, procesa el siguiente nodo
+                    if (this.currNode && this.currNode.character && this.currNode.character !== this.lastCharacter) {
+                        console.log("aaaa");
+                        this.textbox.activate(false, () => {
+                            this.processNode();
+                        }, 0);
+                    }
+                    // Si no, procesa el siguiente nodo directamente
+                    else {
                         this.processNode();
-                    }, 0);
+                    }
                 }
             }
 
@@ -299,7 +311,12 @@ export default class DialogManager {
     * @param {Number} delay - tiempo en ms que tarda en llamarse a onComplete
     */
     activateOptions(active, onComplete, delay) {
-        this.options.forEach((option) => { option.activate(active, onComplete, delay); });
+        // Oculta primero la caja de texto por si acaso. Si ya
+        // esta desactivada, las opciones apareceran directamente
+        this.textbox.activate(false, () => {
+            this.options.forEach((option) => { option.activate(active, onComplete, delay); });
+        });
+
     }
 
     /**
@@ -314,11 +331,6 @@ export default class DialogManager {
         this.currNode.selectedOption = index;
         this.currNode = this.currNode.next[index];
         this.processNode();
-
-        // Si el nodo actual es valido, actualiza el retrato del personaje por si acaso
-        if (this.currNode) {
-            this.textbox.setPortrait(this.portraits.get(this.currNode.character));
-        }
     }
 
     /**

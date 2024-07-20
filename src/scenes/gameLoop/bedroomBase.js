@@ -11,18 +11,19 @@ export default class BedroomBase extends BaseScene {
     constructor(name) {
         super(name);
     }
-    
+
     // Metodo que se llama al terminar de crear la escena. 
     onCreate() {
         super.onCreate();
+
         this.phoneManager.topLid.visible = false;
         this.phoneManager.botLid.visible = false;
     }
 
-    create() {
-        super.create();
+    create(params) {
+        super.create(params);
 
-        this.nexScene = "";
+        this.livingroom = "";
 
         // Pone la imagen de fondo con las dimensiones del canvas
         let bg = this.add.image(0, 0, 'bedroomBg').setOrigin(0, 0);
@@ -30,7 +31,7 @@ export default class BedroomBase extends BaseScene {
         bg.setScale(this.scale);
 
         this.rightBound = bg.displayWidth;
-        
+
         // Puerta del armario individual
         let door1Closed = this.add.image(2190 * this.scale, 330 * this.scale, 'wardrobeDoor1Closed').setOrigin(0, 0).setScale(this.scale);
         let door1Opened = this.add.image(2110 * this.scale, 330 * this.scale, 'wardrobeDoor1Opened').setOrigin(0, 0).setScale(this.scale);
@@ -90,7 +91,6 @@ export default class BedroomBase extends BaseScene {
             this.dialogManager.setNode(this.pcNode);
         });
         this.dispatcher.add("turnPC", this, (obj) => {
-            console.log(obj);
             this.gameManager.switchToComputer();
         });
 
@@ -98,15 +98,19 @@ export default class BedroomBase extends BaseScene {
         this.chair = this.add.image(770 * this.scale, 859 * this.scale, 'bedroomChair').setOrigin(0, 0).setScale(this.scale);
 
         // Puerta de la habitacion
-        let doorClosed = this.add.image(6, this.CANVAS_HEIGHT, 'bedroomDoorClosed').setOrigin(0, 1).setScale(this.scale);
-        let doorOpened = this.add.image(6, this.CANVAS_HEIGHT, 'bedroomDoorOpened').setOrigin(0, 1).setScale(this.scale);
+        let doorClosed = this.add.image(6, this.CANVAS_HEIGHT, 'bed_livingDoorClosed').setOrigin(0, 1).setScale(this.scale);
+        let doorOpened = this.add.image(6, this.CANVAS_HEIGHT, 'bed_livingDoorOpened').setOrigin(0, 1).setScale(this.scale);
         super.toggleDoor(doorClosed, doorOpened, false);
 
-        // Al hacer click sobre la puerta abierta, se pasa a la siguiente escena
+        // Al hacer click sobre la puerta abierta, se 
+        // pasa al salon con la camara en la derecha
         doorOpened.on('pointerdown', () => {
-            this.gameManager.changeScene(this.nexScene);
+            let params = {
+                left: false
+            };
+            this.gameManager.changeScene(this.livingroom, params, true);
         });
-        
+
 
         // Cama
         // Al igual que con el interior de los armarios, se recoloca su profundidad y al
@@ -118,33 +122,9 @@ export default class BedroomBase extends BaseScene {
         this.bed.on('pointerdown', () => {
             this.dialogManager.setNode(this.bedNode)
         })
-        
+
 
         this.gameManager.setValue(this.gameManager.bagPicked, false);
-        this.cameras.main.scrollX = bg.displayWidth - this.CANVAS_WIDTH;
 
-    }
-
-    toggleDoor(closed, opened, click = true) {
-        closed.setInteractive();
-        opened.setInteractive();
-
-        opened.visible = false;
-        let openEvt = 'pointerdown';
-        let closeEvt = 'pointerdown';
-
-        if (!click) {
-            openEvt = 'pointerover';
-            closeEvt = 'pointerout';
-        }
-
-        closed.on(openEvt, () => {
-            closed.visible = false;
-            opened.visible = true;
-        });
-        opened.on(closeEvt, () => {
-            opened.visible = false;
-            closed.visible = true;
-        });
     }
 }

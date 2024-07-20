@@ -1,0 +1,53 @@
+{
+    "bag": {
+        "root": {
+            "text": "I think I have everything ready..."
+        },
+        "bag2": {
+            "text": "Aye, I have everything. Better take the backpack and leave now."
+        }
+    },
+
+    "wardrobe1": {
+        "root": {
+            "text": "There is nothing useful."
+        }
+    },
+
+    "wardrobe2": {
+        "root": {
+            "text": "I have to clean all this up eventually, but now i have to go to school."
+        }
+    },
+    
+    "bed": {
+        "root": {
+            "text": "Now that i am already up i should not lay down again."
+        }
+    },
+
+    "pc": {
+        "root":  {
+            "text": "If I turn it on now, I will be late for sure."
+        },
+        "playerPc":  {
+            "text": "Better to wait till afternoon."
+        },
+        "pcQuestion": {
+            "text": "Do you want to turn on the computer?"
+        },
+        "pcChoice": [
+            {
+                "text": "Yes"
+            },
+            {
+                "text": "No"
+            }
+        ],
+        "leavePC":{
+            "text": "I'd better leave now."
+        }
+    }
+
+
+}

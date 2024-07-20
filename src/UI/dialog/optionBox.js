@@ -74,7 +74,7 @@ export default class OptionBox extends DialogObject {
 
         // Al hacer click, vuelve a cambiar el color de la caja al original
         // y avisa a la escena de la opcion elegida 
-        this.box.on('pointerdown', (pointer) => {
+        this.box.on('pointerdown', () => {
             this.box.disableInteractive();
             let fadeColor = scene.tweens.addCounter({
                 targets: [this.box],

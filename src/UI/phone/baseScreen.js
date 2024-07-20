@@ -80,7 +80,7 @@ export default class BaseScreen extends Phaser.GameObjects.Container {
 
         // Al hacer click, se hace mas pequeno y vuelve a 
         // ponerse como estaba originalmente (efecto yoyo)
-        button.on('pointerdown', (pointer) => {
+        button.on('pointerdown', () => {
             let anim = this.scene.tweens.add({
                 targets: [button],
                 scale: originalScale,

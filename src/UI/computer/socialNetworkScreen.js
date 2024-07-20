@@ -177,7 +177,7 @@ export default class SocialNetworkScreen extends Phaser.GameObjects.Group {
             });
         });
 
-        buttonBg.on('pointerdown', (pointer) => {
+        buttonBg.on('pointerdown', () => {
             buttonBg.disableInteractive();
             let down = this.scene.tweens.addCounter({
                 targets: [buttonBg],

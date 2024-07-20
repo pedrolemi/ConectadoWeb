@@ -6,6 +6,7 @@ import UserInfoMenu from './scenes/userInfoMenu.js';
 import TextOnlyScene from './scenes/textOnlyScene.js';
 import AlarmScene from './scenes/gameLoop/alarmScene.js';
 import BedroomMorningDay1 from './scenes/gameLoop/day1/bedroomMorningDay1.js';
+import LivingroomMorningDay1 from './scenes/gameLoop/day1/LivingroomMorningDay1.js';
 
 import ComputerScene from './UI/computer/computerScene.js'
 
@@ -26,9 +27,9 @@ const config = {
     // Nota: el orden de las escenas es relevante. Las que se encuentran delante, se renderizan delante
     scene: [
         BootScene, LanguageMenu, TitleMenu, UserInfoMenu,
-        TextOnlyScene, AlarmScene, BedroomMorningDay1,
-        Test, TestMenu, ComputerScene, 
-        UIManager, ],
+        TextOnlyScene, AlarmScene, BedroomMorningDay1, LivingroomMorningDay1,
+        Test, TestMenu, ComputerScene,
+        UIManager,],
     autoFocus: true,
     disableContextMenu: true,        // Desactivar que aparezca el menu de inspeccionar al hacer click derecho
     render: {

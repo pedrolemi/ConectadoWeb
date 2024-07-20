@@ -29,7 +29,9 @@ export default class TextOnlyScene extends BaseScene {
     }
 
     create(params) {
-        super.create();
+        super.create(params);
+
+        // console.log(this.params);
 
         let text = "";
         let onComplete = () => { };
@@ -43,7 +45,6 @@ export default class TextOnlyScene extends BaseScene {
         if (params.onCompleteDelay) {
             onCompleteDelay = params.onCompleteDelay;
         }
-
 
         // Hace invisible el UIManager entero
         this.scene.setVisible(false, this.UIManager);
@@ -110,6 +111,7 @@ export default class TextOnlyScene extends BaseScene {
             screenText.destroy();
             screenText = this.add.text(this.CANVAS_WIDTH / 2, this.CANVAS_HEIGHT / 2, text, textConfig).setOrigin(0.5, 0.5);
         }
+
     }
 
 }

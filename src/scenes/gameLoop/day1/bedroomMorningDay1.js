@@ -4,12 +4,12 @@ export default class BedroomMorningDay1 extends BedroomBase {
     constructor() {
         super('BedroomMorningDay1');
     }
-    
-    create() {
-        super.create();
 
-        this.nexScene = "Test";
-        
+    create(params) {
+        super.create(params);
+
+        this.livingroom = "LivingroomMorningDay1";
+
         let nodes = this.cache.json.get('bedroomMorningDay1');
 
         this.wardrobe1Node = super.readNodes("root", nodes, "day1\\bedroomMorningDay1", "wardrobe1", true);
@@ -25,22 +25,28 @@ export default class BedroomMorningDay1 extends BedroomBase {
             this.dialogManager.setNode(bagNode)
         });
 
-        // Chaqueta
+        // Ropa
         this.add.image(852 * this.scale + 1, 848 * this.scale - 1, 'bedroomJacket').setOrigin(0, 0).setScale(this.scale);
+        this.add.image(2899 * this.scale + 1, 1296 * this.scale - 1, 'clothes1').setOrigin(0, 0).setScale(this.scale).setDepth(this.bed + 1);
+        this.add.image(2704 * this.scale + 1, 963 * this.scale - 1, 'clothes2').setOrigin(0, 0).setScale(this.scale).setDepth(this.bed + 1);
+        this.add.image(2061 * this.scale + 1, 928 * this.scale - 1, 'clothes3').setOrigin(0, 0).setScale(this.scale);
 
 
         this.dispatcher.add("turnPC", this, (obj) => {
-            console.log(obj);
             this.gameManager.setValue(this.gameManager.isLate, true);
             let hour = this.i18next.t("clock.pcLateHour", { ns: "phoneInfo", returnObjects: true });
             this.phoneManager.phone.setDayInfo(hour, "");
         });
+
         this.dispatcher.add("pickBag", this, (obj) => {
-            console.log(obj);
             this.gameManager.setValue(this.gameManager.bagPicked, true);
-            bag.visible = false;
+            this.tweens.add({
+                targets: bag,
+                alpha: { from: 1, to: 0 },
+                duration: 100,
+                repeat: 0,
+            });
         });
-        
-        this.cameras.main.scrollX = 0;
+
     }
 }

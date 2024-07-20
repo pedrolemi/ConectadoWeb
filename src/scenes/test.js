@@ -16,15 +16,15 @@ export default class Test extends BaseScene {
         this.phoneManager.botLid.visible = false;
     }
 
-    create() {
-        super.create();
+    create(params) {
+        super.create(params);
 
         let test1 = this.cache.json.get('momDialog');
         let test2 = this.cache.json.get('dadDialog');
         let test3 = this.cache.json.get('chat1');
         let computerTest = this.cache.json.get('computer');
 
-        let momNode = super.readNodes("root", test1, "momDialog", "",true);
+        let momNode = super.readNodes("root", test1, "momDialog", "", true);
         let dadNode = super.readNodes("root", test2, "dadDialog", "", true);
         let choices = super.readNodes("root", test3, "chat1", "", true);
         let computerNode = super.readNodes("root1", computerTest, "computer", "", true);
@@ -33,10 +33,10 @@ export default class Test extends BaseScene {
         let chatName = this.i18next.t("textMessages.chat1", { ns: "phoneInfo", returnObjects: true });
         this.phoneManager.phone.addChat(chatName, "testIcon");
         this.phoneManager.phone.setChatNode(chatName, choices);
-        
-        this.phoneManager.phone.addMessage(chatName, "aawequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbaa", "a", "aaaaaaaaaa" );
-        this.phoneManager.phone.addMessage(chatName, "ssadasda", "a", "jjjjjj" );
-        this.phoneManager.phone.addMessage(chatName, "wequkb", "a", "dddd" );
+
+        this.phoneManager.phone.addMessage(chatName, "aawequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbaa", "a", "aaaaaaaaaa");
+        this.phoneManager.phone.addMessage(chatName, "ssadasda", "a", "jjjjjj");
+        this.phoneManager.phone.addMessage(chatName, "wequkb", "a", "dddd");
 
         chatName = this.i18next.t("textMessages.chat2", { ns: "phoneInfo", returnObjects: true });
         this.phoneManager.phone.addChat(chatName, "testIcon");
@@ -77,7 +77,7 @@ export default class Test extends BaseScene {
         this.dispatcher.addOnce("r", this, (obj) => {
             console.log(obj);
             this.gameManager.setValue("talked", false);
-            
+
         });
 
         // Ordenador

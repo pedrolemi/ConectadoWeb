@@ -100,7 +100,7 @@ export default class ListViewButton extends Phaser.GameObjects.Container {
             });
         });
 
-        this.hit.on('pointerdown', (pointer) => {
+        this.hit.on('pointerdown', () => {
             this.hit.disableInteractive();
             let down = this.scene.tweens.addCounter({
                 targets: [image],
@@ -134,7 +134,7 @@ export default class ListViewButton extends Phaser.GameObjects.Container {
         this.hit.setVisible(visible);
     }
 
-    destroy(){
+    destroy() {
         super.destroy();
         this.hit.destroy();
     }

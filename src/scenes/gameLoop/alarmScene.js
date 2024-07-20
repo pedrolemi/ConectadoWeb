@@ -18,6 +18,7 @@ export default class AlarmScene extends BaseScene {
     // Metodo que se llama al terminar de crear la escena. 
     onCreate() {
         super.onCreate();
+
         this.phoneManager.openEyesAnimation();
         this.phoneManager.phone.toAlarmScreen();
     }

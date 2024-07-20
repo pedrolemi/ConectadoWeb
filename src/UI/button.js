@@ -79,7 +79,7 @@ export default class Button extends Phaser.GameObjects.Container {
             });
         });
 
-        this.fillImg.on('pointerdown', (pointer) => {
+        this.fillImg.on('pointerdown', () => {
             this.fillImg.disableInteractive();
             let down = scene.tweens.addCounter({
                 targets: [this.fillImg],

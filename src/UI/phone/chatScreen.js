@@ -125,7 +125,7 @@ export default class ChatScreen extends BaseScreen {
         });
 
         // Al hacer click, vuelve a cambiar el color de la caja al original
-        this.textBox.on('pointerdown', (pointer) => {
+        this.textBox.on('pointerdown', () => {
             if (!this.scene.dialogManager.isTalking()) {
                 let fadeColor = this.scene.tweens.addCounter({
                     targets: [this.textBox],
@@ -191,7 +191,7 @@ export default class ChatScreen extends BaseScreen {
             }
 
         });
-        this.returnButton.on('pointerdown', (pointer) => {
+        this.returnButton.on('pointerdown', () => {
             if (!this.scene.dialogManager.isTalking()) {
                 let anim = this.scene.tweens.add({
                     targets: [this.returnButton],

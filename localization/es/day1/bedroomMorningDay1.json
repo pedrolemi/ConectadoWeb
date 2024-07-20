@@ -24,5 +24,30 @@
         "root": {
             "text": "Ahora que me he conseguido levantar no debería volver a acostarme."
         }
+    },
+
+    "pc": {
+        "root":  {
+            "text": "Si lo enciendo ahora seguro que se me hace tarde."
+        },
+        "playerPc":  {
+            "text": "Será mejor que me espere a por la tarde."
+        },
+        "pcQuestion": {
+            "text": "¿Quieres encender el ordenador?"
+        },
+        "pcChoice": [
+            {
+                "text": "Sí"
+            },
+            {
+                "text": "No"
+            }
+        ],
+        "leavePC":{
+            "text": "Lo mejor será que me vaya."
+        }
     }
+
+
 }

@@ -20,7 +20,7 @@ export default class TextBox extends DialogObject {
         this.box.visible = true;
 
         this.box.setInteractive();
-        this.box.on('pointerdown', (pointer) => {
+        this.box.on('pointerdown', () => {
             dialogManager.nextDialog();
         });
 
@@ -230,7 +230,9 @@ export default class TextBox extends DialogObject {
         let isVisible = this.box.alpha == 1;
 
         if (active && isVisible) {
-            if (this.nonPortraitChar) this.portrait.alpha = 0;
+            if (this.nonPortraitChar && this.portrait) {
+                this.portrait.alpha = 0;
+            }
         }
 
         // Si se va a activar y no es visible, aparece con animacion.

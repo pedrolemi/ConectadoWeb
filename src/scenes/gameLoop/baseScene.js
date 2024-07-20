@@ -12,7 +12,7 @@ export default class BaseScene extends Phaser.Scene {
         super({ key: name });
     }
 
-    create() {
+    create(params) {
         this.CANVAS_WIDTH = this.sys.game.canvas.width;
         this.CANVAS_HEIGHT = this.sys.game.canvas.height;
 
@@ -42,25 +42,47 @@ export default class BaseScene extends Phaser.Scene {
         };
 
         this.scale = 1;
-        
+
         this.leftBound = 0;
         this.rightBound = this.CANVAS_WIDTH;
         this.START_SCROLLING = 30;
         this.CAMERA_SPEED = 3;
 
-        this.events.on('shutdown', this.shutdown, this);
-        this.events.on('create', this.onCreate, this);
+        this.params = params;
+
+        this.events.on('shutdown', this.shutdown);
+        this.events.on('create', () => {
+            this.onCreate();
+        });
+        this.events.on('wake', () => {
+            this.onWake();
+        });
     }
 
     // Metodo que se llama al terminar de crear la escena. Se encarga de 
     // anadir los retratos de la escena actual en el dialogManager 
     onCreate() {
         this.dialogManager.changeScene(this.gameManager.currentScene);
+        this.onWake();
     }
 
+    // Funcion llamada cada vez que se despierta/inicia la escena
+    onWake() {
+        this.dialogManager.changeScene(this.gameManager.currentScene);
+        if (this.params) {
+            if (this.params.left) {
+                this.cameras.main.scrollX = this.leftBound;
+            }
+            else {
+                this.cameras.main.scrollX = this.rightBound - this.CANVAS_WIDTH;
+            }
+        }
+    }
     // Metodo que se llama al borrar la escena. Se encarga de limpiar los eventos del dispatcher
     shutdown() {
-        this.dispatcher.removeAll();
+        if (this.dispatcher) {
+            this.dispatcher.removeAll();
+        }
     }
 
 
@@ -106,8 +128,8 @@ export default class BaseScene extends Phaser.Scene {
     */
     readNodes(id, file, namespace, objectName, getObjs) {
         let playerName = this.gameManager.getUserInfo().name;
-        let context = this.gameManager.getUserInfo().gender; 
-        
+        let context = this.gameManager.getUserInfo().gender;
+
         let fileObj = file;
         let translationId = id;
 
@@ -118,7 +140,7 @@ export default class BaseScene extends Phaser.Scene {
         // con (por ejemplo) nombre object, un nodo con la id name deberia buscarse en el 
         // archivo de traducciones como object.name, pero la id de nodo seguiria siendo name
         if (objectName !== "") {
-            fileObj = file[objectName]; 
+            fileObj = file[objectName];
             translationId = objectName + "." + id;
         }
         // console.log(fileObj);
@@ -179,12 +201,7 @@ export default class BaseScene extends Phaser.Scene {
             // Obtiene el nombre del personaje del archivo de nombres localizados
             // En el caso de que se trate del jugador, obtiene su nombre
             let character = fileObj[id].character;
-            if (character === "player") {
-                node.name = this.gameManager.getUserInfo().name;
-            }
-            else {
-                node.name = this.i18next.t(fileObj[id].character, { ns: "names", returnObjects: getObjs });
-            }
+            node.name = this.i18next.t(fileObj[id].character, { ns: "names", returnObjects: getObjs });
             node.character = character;
 
             // Se crea un dialogo con todo el texto a mostrar

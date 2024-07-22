@@ -9,12 +9,7 @@
             "type": "event",
             "events": [
                 { "pickBag": { } }
-            ],
-            "next": "bag2"
-        },
-        "bag2": {
-            "type": "text",
-            "character": "player"
+            ]
         }
         
     },
@@ -35,11 +30,6 @@
 
     "pc": {
         "root": {
-            "type": "text",
-            "character": "player",
-            "next": "playerPc"
-        },
-        "playerPc": {
             "type": "text",
             "character": "player",
             "next": "pcQuestion"

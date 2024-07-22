@@ -1,5 +1,125 @@
 {
     "mom": {
-        
+        "root": {
+            "type": "condition",
+            "conditions": [
+                {
+                    "next": "notTalkedNormal",
+                    "talked": {
+                        "value": false,
+                        "operator": "equal",
+                        "global": false,
+                        "default": false
+                    },
+                    "isLate": {
+                        "value": false,
+                        "operator": "equal",
+                        "default": false
+                    }
+                },
+                {
+                    "next": "notTalkedLate",
+                    "talked": {
+                        "value": false,
+                        "operator": "equal",
+                        "global": false,
+                        "default": false
+                    },
+                    "isLate": {
+                        "value": true,
+                        "operator": "equal",
+                        "default": false
+                    }
+                },
+
+                {
+                    "next": "talked",
+                    "talked": {
+                        "value": true,
+                        "operator": "equal",
+                        "global": false,
+                        "default": false
+                    }
+                }
+            ]
+        },
+
+        "notTalkedNormal": {
+            "type": "text",
+            "character": "mom",
+            "next": "setTalked"
+        },
+        "notTalkedLate": {
+            "type": "text",
+            "character": "mom",
+            "next": "setTalked"
+        },
+
+        "setTalked": {
+            "type": "event",
+            "events": [
+                {
+                    "setTalked": {}
+                }
+            ]
+        },
+
+        "talked": {
+            "type": "condition",
+            "conditions": [
+                {
+                    "next": "hasBag",
+                    "bagPicked": {
+                        "value": true,
+                        "operator": "equal",
+                        "default": false
+                    }
+                },
+                {
+                    "next": "noBag",
+                    "bagPicked": {
+                        "value": false,
+                        "operator": "equal",
+                        "default": false
+                    }
+                }
+            ]
+        },
+
+        "hasBag": {
+            "type": "condition",
+            "conditions": [
+                {
+                    "next": "hasBagNormal",
+                    "isLate": {
+                        "value": false,
+                        "operator": "equal",
+                        "default": false
+                    }
+                },
+                {
+                    "next": "hasBagLate",
+
+                    "isLate": {
+                        "value": true,
+                        "operator": "equal",
+                        "default": false
+                    }
+                }
+            ]
+        },
+
+        "hasBagNormal": {
+            "type": "text",
+            "character": "mom"
+        },
+        "hasBagLate": {
+            "type": "text",
+            "character": "mom"
+        },
+        "noBag": {
+            "type": "text",
+            "character": "mom"
+        }
     }
 }

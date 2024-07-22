@@ -95,7 +95,7 @@ export default class BaseScene extends Phaser.Scene {
     initialSetup(params) {
         // console.log(params);
 
-        this.dialogManager.changeScene(this.gameManager.currentScene);
+        this.dialogManager.changeScene(this);
         if (params) {
             if (params.left === undefined || params.left === true) {
                 this.cameras.main.scrollX = this.leftBound;
@@ -105,6 +105,7 @@ export default class BaseScene extends Phaser.Scene {
             }
         }
     }
+
 
     update(t, dt) {
         super.update(t, dt);
@@ -153,7 +154,6 @@ export default class BaseScene extends Phaser.Scene {
     readNodes(id, file, namespace, objectName, getObjs) {
         let playerName = this.gameManager.getUserInfo().name;
         let context = this.gameManager.getUserInfo().gender;
-
         let fileObj = file;
         let translationId = id;
 
@@ -169,6 +169,7 @@ export default class BaseScene extends Phaser.Scene {
         }
         // console.log(fileObj);
         // console.log(this.i18next.t(translationId, { ns: namespace, name: playerName, context: context, returnObjects: getObjs }));
+
 
         // Crea el nodo y guarda sus atributos (se estableceran en el nodo al final)
         let node = null;
@@ -241,20 +242,41 @@ export default class BaseScene extends Phaser.Scene {
         else if (type === "text") {
             node = new TextNode();
 
-            // Obtiene el nombre del personaje del archivo de nombres localizados
-            // En el caso de que se trate del jugador, obtiene su nombre
+            // Obtiene la id del personaje y coge su nombre del archivo de nombres localizados
             let character = fileObj[id].character;
-            node.name = this.i18next.t(fileObj[id].character, { ns: "names", returnObjects: getObjs });
             node.character = character;
+            node.name = this.i18next.t(fileObj[id].character, { ns: "names", returnObjects: getObjs });
+            
+            // Obtiene los fragmentos del dialogo
+            let texts = [];
+            let textTranslation = this.i18next.t(translationId, { ns: namespace, name: playerName, context: context, returnObjects: getObjs })
 
-            // Se crea un dialogo con todo el texto a mostrar
-            let split = {
-                // Obtiene el texto del archivo de textos traducidos
-                text: this.i18next.t(translationId + ".text", { ns: namespace, name: playerName, context: context, returnObjects: getObjs }),
-                name: node.name
+            // Si el texto no esta dividido en fragmentos, se guarda directamente en el array de textos
+            if (!Array.isArray(textTranslation)) {
+                texts.push(textTranslation.text);
             }
-            // Se obtiene todo el texto separado en varios dialogos si es demasiado largo
-            node.dialogs = this.splitDialogs([split], character);
+            // Si no, se guarda cada fragmento del dialogo en el array
+            else {
+                for (let i = 0; i < textTranslation.length; i++) {
+                    texts.push(textTranslation[i].text);
+                }
+            }
+            
+            // Se recorren todos los fragmentos de texto
+            for (let i = 0; i < texts.length; i++) {
+                // Se crea un dialogo con todo el texto a mostrar
+                let split = {
+                    text: texts[i],
+                    name: node.name
+                }
+                // Se separa el fragmento en caso de que el texto sea demasiado largo
+                let dialogs = this.splitDialogs([split], character);
+
+                // Se concatenan los fragmentos obtenidos con los que ya habia en el nodo
+                // (se tienen que concatenar, ya que splitDialogs devuelve un array, por
+                // lo que hacer push a node.dialogs meteria los fragmentos en varios arrays)
+                node.dialogs = node.dialogs.concat(dialogs);
+            }
             node.currDialog = 0;
 
             // Si hay un nodo despues de este, se crea de manera recursiva
@@ -266,13 +288,22 @@ export default class BaseScene extends Phaser.Scene {
         else if (type === "choice") {
             node = new ChoiceNode();
 
-            // Se obtienen los textos de las opciones del archivo de textos traducidos
+            // Se obtienen las opciones del archivo de textos traducidos
             let texts = this.i18next.t(translationId, { ns: namespace, name: playerName, context: context, returnObjects: getObjs })
-
+            
             for (let i = 0; i < fileObj[id].choices.length; i++) {
-                // Se guarda el texto de la eleccion y se crea de manera recursiva
+                let repeat = false;
+                if (fileObj[id].choices[i].repeat === undefined || fileObj[id].choices[i].repeat) {
+                    repeat = true;
+                }
+                let choice = {
+                    text: texts[i].text,
+                    repeat: repeat
+                }
+
+                // Se guarda la eleccion y se crea de manera recursiva
                 // el nodo siguiente que corresponde a elegir dicha opcion
-                node.choices.push(texts[i].text);
+                node.choices.push(choice);
 
                 // Si hay un nodo despues de este, se crea de manera recursiva
                 if (fileObj[id].choices[i].next) {

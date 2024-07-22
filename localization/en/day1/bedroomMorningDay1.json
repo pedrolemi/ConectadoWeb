@@ -1,11 +1,13 @@
 {
     "bag": {
-        "root": {
-            "text": "I think I have everything ready..."
-        },
-        "bag2": {
-            "text": "Aye, I have everything. Better take the backpack and leave now."
-        }
+        "root": [
+            {
+                "text": "I think I have everything ready..."
+            },
+            {
+                "text": "Aye, I have everything. Better take the backpack and leave now."
+            }
+        ]
     },
 
     "wardrobe1": {
@@ -27,12 +29,14 @@
     },
 
     "pc": {
-        "root":  {
-            "text": "If I turn it on now, I will be late for sure."
-        },
-        "playerPc":  {
-            "text": "Better to wait till afternoon."
-        },
+        "root": [
+            {
+                "text": "If I turn it on now, I will be late for sure."
+            },
+            {
+                "text": "Better to wait till afternoon."
+            }
+        ],
         "pcQuestion": {
             "text": "Do you want to turn on the computer?"
         },

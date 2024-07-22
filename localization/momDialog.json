@@ -7,14 +7,12 @@
                 "talked": {
                     "value": false,
                     "operator": "equal",
-                    "type": "boolean",
                     "global": false,
                     "default": false
                 },
                 "sponsored": {
                     "value": false,
                     "operator": "equal",
-                    "type": "boolean",
                     "default": false
                 }
             },
@@ -23,7 +21,7 @@
                 "talked": {
                     "value": true,
                     "operator": "equal",
-                    "type": "boolean"
+                    "global": false
                 }
             }
         ]
@@ -42,7 +40,7 @@
     "choices1": {
         "type": "choice",
         "choices":[
-            { "next": "dadChoice1" },
+            { "next": "dadChoice1", "repeat": false },
             { "next": "dadChoice2" }
         ]
     },

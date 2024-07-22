@@ -1,0 +1,47 @@
+{
+    "mom": {
+        "notTalkedNormal": [
+            {
+                "text": "",
+                "text_male": "Veo que ya estás listo para irte.",
+                "text_female": "Veo que ya estás lista para irte."
+            },
+            {
+                "text": "¿Llevas todo?, Acuérdate de coger la mochila."
+            },
+            {
+                "text": "Pórtate bien y haz muchos amigos."
+            }
+        ],
+        "notTalkedLate": [
+            {
+                "text": "¿Has visto la hora que es?"
+            },
+            {
+                "text": "Tu primer día en el nuevo colegio y ya llegas tarde."
+            },
+            {
+                "text": "Venga, coge todo lo que necesites y vete YA!"
+            }
+        ],
+        "hasBag": {
+            "text": "Veo que llevas todo."
+        },
+        "hasBagNormal": {
+            "text": "Vete ya o acabarás llegando tarde."
+        },
+        "hasBagLate":  {
+            "text": "Vete ya, estás llegando tarde."
+        },
+        "noBag": [
+            {
+                "text": "Te dejas la mochila."
+            },
+            {
+                "text": "Está en tu cuarto, cogela y vete ya."
+            }
+        ]
+    }
+    
+
+}

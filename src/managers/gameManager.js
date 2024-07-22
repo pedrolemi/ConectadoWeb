@@ -239,7 +239,7 @@ export default class GameManager {
         this.computerScene.scene.sleep();
 
 
-        let sceneName = 'Test';
+        let sceneName = 'LivingroomMorningDay1';
 
         // Pasa a la escena inicial con los parametros text, onComplete y onCompleteDelay
         // let sceneName = 'TextOnlyScene';
@@ -289,7 +289,7 @@ export default class GameManager {
 
         // Si se han inicializado el UIManager y el dialogManager, se limpian los retratos
         if (this.UIManager && this.UIManager.dialogManager) {
-            this.UIManager.dialogManager.clearPortraits();
+            this.UIManager.dialogManager.clearPortraits(canReturn);
         }
     }
 

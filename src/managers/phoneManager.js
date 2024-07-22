@@ -309,7 +309,7 @@ export default class PhoneManager {
     activate(active) {
         this.showPhone(false);
         this.icon.visible = active;
-        this.notifications.visible = this.notificationAmount > 0;
+        this.notifications.visible = this.notificationAmount > 0 && active;
     }
 
     /**

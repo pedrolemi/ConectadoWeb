@@ -73,15 +73,15 @@ export default class Test extends BaseScene {
         chatName = this.i18next.t("textMessages.chat2", { ns: "phoneInfo", returnObjects: true });
         this.phoneManager.phone.addChat(chatName, "testIcon");
 
-
+        console.log(this.gameManager.blackboard)
 
         this.dispatcher.add("talked", this, (obj) => {
             console.log(obj);
-            this.gameManager.setValue("talked", true);
+            this.gameManager.setValue("talked", true, this.blackboard);
         });
         this.dispatcher.addOnce("r", this, (obj) => {
             console.log(obj);
-            this.gameManager.setValue("talked", false);
+            this.gameManager.setValue("talked", false, this.blackboard);
 
         });
 

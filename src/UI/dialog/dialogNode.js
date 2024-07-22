@@ -71,7 +71,6 @@ export class ConditionNode extends DialogNode {
                     "talked": {
                         "value": false,
                         "operator": "equal",
-                        "type": "boolean",
                         "global": false,
                         "default": true,
                     },
@@ -87,8 +86,7 @@ export class ConditionNode extends DialogNode {
                     "talked": {
                         "value": true,
                         "operator": "equal",
-                        "type": "boolean",
-                    }
+                                            }
                 }
             ]
         }

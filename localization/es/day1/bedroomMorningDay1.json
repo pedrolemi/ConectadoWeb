@@ -1,11 +1,13 @@
 {
     "bag": {
-        "root": {
-            "text": "Creo que tengo todo preparado..."
-        },
-        "bag2": {
-            "text": "Sí, lo llevo todo, será mejor que coja la mochila y me marche ya."
-        }
+        "root": [
+            {
+                "text": "Creo que tengo todo preparado..."
+            },
+            {
+                "text": "Sí, lo llevo todo, será mejor que coja la mochila y me marche ya."
+            }
+        ]
     },
 
     "wardrobe1": {
@@ -27,12 +29,14 @@
     },
 
     "pc": {
-        "root":  {
-            "text": "Si lo enciendo ahora seguro que se me hace tarde."
-        },
-        "playerPc":  {
-            "text": "Será mejor que me espere a por la tarde."
-        },
+        "root": [
+            {
+                "text": "Si lo enciendo ahora seguro que se me hace tarde."
+            },
+            {
+                "text": "Será mejor que me espere a por la tarde."
+            }
+        ],
         "pcQuestion": {
             "text": "¿Quieres encender el ordenador?"
         },

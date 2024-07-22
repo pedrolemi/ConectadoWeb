@@ -44,13 +44,20 @@ export default class DialogManager {
         this.bgBlock.disableInteractive();
     }
 
-    // IMPORTANTE: SE TIENE QUE LLAMAR ANTES DE CAMBIAR LA ESCENA
-    // Destruye de la escena todos los retratos de los personajes para que
-    // no de error al cambiar de escena porque los personajes ya no existan
-    clearPortraits() {
-        this.portraits.forEach((value, key) => {
-            value.destroy();
-        });
+    /**
+     * Cambia los retratos que que pueden aparecer en la escena actual. Si no
+     * se va a poder volver a la escena, se destruyen para que no de error
+     * 
+     * IMPORTANTE: SE TIENE QUE LLAMAR ANTES DE CAMBIAR LA ESCENA
+     * 
+     * @param {Boolean} dontDestroy - true si se puede volver a la escena, false en caso contrario 
+     */
+    clearPortraits(dontDestroy) {
+        if (!dontDestroy) {
+            this.portraits.forEach((value, key) => {
+                value.destroy();
+            });
+        }
         this.portraits.clear();
     }
 
@@ -68,7 +75,6 @@ export default class DialogManager {
             value.alpha = 0;
             value.setMask(this.portraitMask);
         });
-
         // Desactiva la caja de texto y las opciones (por si acaso)
         if (this.textbox) this.textbox.activate(false);
         this.activateOptions(false);
@@ -148,6 +154,7 @@ export default class DialogManager {
                         // Busca el valor de la variable en la blackboard indicada. 
                         // Si no es valida, buscara por defecto en el gameManager
                         let variableValue = this.gameManager.getValue(variable, this.currNode.conditions[i][j].blackboard);
+                        // console.log(variable + " " + variableValue);
 
                         if (operator === "equal") {
                             conditionMet = variableValue === expectedValue;
@@ -297,9 +304,16 @@ export default class DialogManager {
 
         // Crea las opciones y las guarda en el array
         for (let i = 0; i < opts.length; i++) {
-            // Si se ha pasado un array de strings
-            let text = opts[i];
+            let text = "";
 
+            // Si se ha pasado un arary de opciones (con otros parametros ademas de text)
+            if (opts[i].text) {
+                text = opts[i].text;
+            }
+            // Si se ha pasado un array de strings
+            else {
+                text = opts[i];
+            }
             this.options.push(new OptionBox(this.scene, this, i, opts.length, text));
         }
     }
@@ -327,9 +341,18 @@ export default class DialogManager {
         // Desactiva las opciones
         this.activateOptions(false);
 
+        let next = this.currNode.next[index];
+
+        // Si la opcion no se puede elegir de nuevo, elimina tanto la opcion
+        // como el nodo al que lleva de sus arrays correspondientes
+        if (!this.currNode.choices[index].repeat) {
+            this.currNode.choices.splice(index, 1);
+            this.currNode.next.splice(index, 1);
+        }
+
         // Actualiza el nodo actual y lo procesa            
         this.currNode.selectedOption = index;
-        this.currNode = this.currNode.next[index];
+        this.currNode = next;
         this.processNode();
     }
 

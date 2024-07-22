@@ -35,14 +35,14 @@ export default class GameManager {
         // Indica el dia del juego
         this.day = 1;
 
-        // Blackboard
-        this.map = new Map();
+        // Blackboard de variables de todo el juego
+        this.blackboard = new Map();
 
         this.bagPicked = "bagPicked";
-        this.map.set("bagPicked", false);
+        this.blackboard.set("bagPicked", false);
 
         this.isLate = "isLate";
-        this.map.set(this.isLate, false);
+        this.blackboard.set(this.isLate, false);
 
         this.userInfo = null;
         this.UIManager = null;
@@ -207,7 +207,7 @@ export default class GameManager {
 
         sceneName = 'UIManager';
         this.currentScene.scene.stop(sceneName);
-        this.map.clear();
+        this.blackboard.clear();
     }
 
     startTitleMenu() {
@@ -239,7 +239,7 @@ export default class GameManager {
         this.computerScene.scene.sleep();
 
 
-        let sceneName = 'BedroomMorningDay1';
+        let sceneName = 'Test';
 
         // Pasa a la escena inicial con los parametros text, onComplete y onCompleteDelay
         // let sceneName = 'TextOnlyScene';
@@ -329,34 +329,41 @@ export default class GameManager {
     //////////////////////////////////////
     /**
     * Devuelve el valor buscado en la blackboard
+    * @param {String} key - valor buscado
+    * @param {Map} blackboard - blackboard en la que se busca el valor. Por defecto es la del gameManager 
     * @returns {object} - el objeto buscado en caso de que exista. null en caso contrario
     */
-    getValue(key) {
-        if (this.map.has(key)) {
-            return this.map.get(key);
+    getValue(key, blackboard = this.blackboard) {
+        if (blackboard.has(key)) {
+            return blackboard.get(key);
         }
         return null;
     }
 
     /**
     * Metodo que setea un valor en la blackboard
+    * @param {String} key - valor que se va a cambiar
+    * @param {Object} value - valor que se le va a poner al valor a cambiar
+    * @param {Map} blackboard - blackboard en la que se cambia el valor. Por defecto es la del gameManager 
     * @returns {boolean} - true si se ha sobrescrito un valor. false en caso contrario
     */
-    setValue(key, value) {
+    setValue(key, value, blackboard = this.blackboard) {
         let exists = false;
-        if (this.map.has(key)) {
+        if (blackboard.has(key)) {
             exists = true;
         }
-        this.map.set(key, value);
+        blackboard.set(key, value);
         return exists;
     }
 
     /**
     * Indica si un valor existe o no en la blackboard
+    * @param {String} key - valor buscado
+    * @param {Map} blackboard - blackboard en la que se busca el valor. Por defecto es la del gameManager
     * @returns {boolean} - true si existe el valor. false en caso contrario
     */
-    hasValue(key) {
-        return this.map.has(key);
+    hasValue(key, blackboard = this.blackboard) {
+        return blackboard.has(key);
     }
 
 }

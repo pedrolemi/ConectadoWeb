@@ -46,13 +46,13 @@ export default class TextBox extends DialogObject {
 
         // Animacion del texto
         this.textDelay = 30;                                                        // Tiempo que tarda en aparecer cada letra en milisegundos
-        this.currText = this.scene.add.text(0, 0, "aaa", this.normalTextConfig);       // Texto escrito hasta el momento
+        this.currText = this.scene.add.text(0, 0, "", this.normalTextConfig);       // Texto escrito hasta el momento
         this.fulltext = "";                                                         // Texto completo a escribir
         this.fullTextSplit = null;                                                  // Texto completo a escribir separado por palabras
         this.letterCount = 0;                                                       // Numero de letras del texto completo escritas
         this.finished = false;                                                      // Si ha terminado de mostrar el texto o no
 
-        this.nameText = this.scene.add.text(0, 0, "aaa", this.nameTextConfig);
+        this.nameText = this.scene.add.text(0, 0, "", this.nameTextConfig);
         this.canWrite = false;
 
         this.box.alpha = 0;
@@ -77,12 +77,6 @@ export default class TextBox extends DialogObject {
         }
     }
 
-    shutdown() {
-        // Limpia los eventos y el texto
-        if (this.timedEvent) this.timedEvent.remove();
-        if (this.currText) this.currText.destroy();
-        if (this.nameText) this.nameText.destroy();
-    }
 
     /**
     * Cambia el texto de la caja
@@ -90,7 +84,8 @@ export default class TextBox extends DialogObject {
     * @param {Boolean} animate - si se va a animar el texto o no
     */
     setText(dialogInfo, animate) {
-        this.shutdown();
+        // Limpia los eventos
+        if (this.timedEvent) this.timedEvent.remove();
 
         // Reinicia el numero de letras escritas y se separa
         // cada caracter del texto completo en un array
@@ -108,8 +103,8 @@ export default class TextBox extends DialogObject {
         }
 
         // Se crea el texto que se va a escribir y el nombre del personaje
-        this.createText(tempText);
-        this.createName(dialogInfo.name);
+        this.changeText(tempText);
+        this.changeName(dialogInfo.name);
 
         this.nonPortraitChar = false;
         //if (dialogInfo.character === "player") {
@@ -129,10 +124,10 @@ export default class TextBox extends DialogObject {
     }
 
     /**
-    * Crea el texto que se muestra por pantalla
+    * Cambia el texto que se muestra por pantalla
     * @param {String} text - texto a escribir
     */
-    createText(text) {
+    changeText(text) {
         let x = 230;
         let y = 660;
         let width = (this.scene.CANVAS_WIDTH - this.padding) / 1.53;
@@ -150,22 +145,26 @@ export default class TextBox extends DialogObject {
         }
 
         // Crea el texto en la escena
-        this.currText = this.scene.add.text(x, y, text, this.normalTextConfig);
+        this.currText.x = x;
+        this.currText.y = y;
+        this.currText.setStyle(this.normalTextConfig);
         this.currText.setText(text);
     }
 
     /**
-    * Crea el texto del nombre del personaje hablando
+    * Cambia el texto del nombre del personaje hablando
     * @param {String} name - nombre del personaje
     */
-    createName(name) {
+    changeName(name) {
         let x = 290;
         let y = 622;
 
-        // // Crea el texto en la escena
-        this.nameText = this.scene.add.text(x, y, name, this.nameTextConfig).setOrigin(0.5, 0.5);
+        // Crea el texto en la escena
+        this.nameText.setOrigin(0.5, 0.5);
+        this.nameText.x = x;
+        this.nameText.y = y;
 
-        // // Cambia el texto del objeto
+        // Cambia el texto del objeto
         this.nameText.setText(name);
     }
 

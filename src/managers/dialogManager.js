@@ -145,8 +145,9 @@ export default class DialogManager {
                         let operator = this.currNode.conditions[i][j].operator;
                         let expectedValue = this.currNode.conditions[i][j].value;
 
-                        // Busca el valor de la variable en el gameManager
-                        let variableValue = this.gameManager.getValue(variable);
+                        // Busca el valor de la variable en la blackboard indicada. 
+                        // Si no es valida, buscara por defecto en el gameManager
+                        let variableValue = this.gameManager.getValue(variable, this.currNode.conditions[i][j].blackboard);
 
                         if (operator === "equal") {
                             conditionMet = variableValue === expectedValue;

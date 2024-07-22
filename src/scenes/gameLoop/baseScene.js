@@ -41,7 +41,6 @@ export default class BaseScene extends Phaser.Scene {
             scale: this.portraitScale
         };
 
-
         // Parametros del fondo y la camara para el scroll
         this.scale = 1;
         this.leftBound = 0;
@@ -58,6 +57,8 @@ export default class BaseScene extends Phaser.Scene {
         }, this);
         this.events.on('shutdown', this.shutdown, this);
         
+        // Blackboard de variables dela escena actual
+        this.blackboard = new Map();
     }
 
 
@@ -96,7 +97,7 @@ export default class BaseScene extends Phaser.Scene {
 
         this.dialogManager.changeScene(this.gameManager.currentScene);
         if (params) {
-            if (params.left) {
+            if (params.left === undefined || params.left === true) {
                 this.cameras.main.scrollX = this.leftBound;
             }
             else {
@@ -132,16 +133,22 @@ export default class BaseScene extends Phaser.Scene {
     * @param {Boolean} getObjs - si se quiere devolver el nodo leido como un objeto 
     *
     * 
-    *  IMPORTANTE: En un nodo con condiciones, cada condicion lleva a otro nodo distinto.
-    * Al momento de llegar a un nodo condicion, el siguiente nodo sera el indicado como siguiente
-    * en la primera condicion que se cumpla (se van comprobando en el orden en el que se han leido).
-    * Cada condicion puede tener varios requisitos (variables), en cuyo caso, la condicion solo 
-    * se cumplira si todos sus requisitos se cumplen (operador &&. De momento no hay soporte para el operador || ) 
+    * IMPORTANTE: Este metodo tiene que llamarse una vez se han creado los retratos de los personajes,
+    * ya que al momento de separar los textos que sean demasiado largos, es necesario saber si el personaje
+    * es un personaje que va a tener retrato o no para usar el ancho de linea correcto
     * 
     * IMPORTANTE 2: La estructura de nodos es comun a todos los idiomas y se tiene que guardar con anterioridad
     * al momento de crear la escena para luego pasarlo como parametro file. El archivo del que se van a leer las
     * traducciones es el que se pasa en el parametro namespace, y tiene que pasarse un string con el nombre del
     * archivo sin la extension .json
+    * 
+    * IMPORTANTE 3: En un nodo con condiciones, cada condicion lleva a otro nodo distinto.
+    * Al momento de llegar a un nodo condicion, el siguiente nodo sera el indicado como siguiente
+    * en la primera condicion que se cumpla (se van comprobando en el orden en el que se han leido).
+    * Cada condicion puede tener varios requisitos (variables), en cuyo caso, la condicion solo 
+    * se cumplira si todos sus requisitos se cumplen (operador &&. De momento no hay soporte para el operador || ) 
+    * 
+    
     */
     readNodes(id, file, namespace, objectName, getObjs) {
         let playerName = this.gameManager.getUserInfo().name;
@@ -191,15 +198,34 @@ export default class BaseScene extends Phaser.Scene {
 
                     // Crea un objeto igual que obj, pero que tambien guarda su nombre
                     let condition = obj;
-                    obj.key = varName
+                    condition.key = varName
+
+                    // Guarda el valor por defecto del objeto. Si no tiene 
+                    // la propiedad en el json, se pone a false por defecto
+                    let defaultValue = false;
+                    if (obj.default) {
+                        defaultValue = obj.default;
+                    }
+                    
+                    // Si no se ha definido si la variable es global o si se ha definido que si lo es,
+                    // la guarda en el gameManager con su valor por defecto (si no se ha guardado antes)
+                    if (obj.global === undefined || obj.global === true) {
+                        if (!this.gameManager.hasValue(varName)) {
+                            this.gameManager.setValue(varName, defaultValue);
+                        }
+                    }
+                    // Si no, la guarda en la blackboard de la escena con su valor por defecto
+                    // (si no se ha guardado antes) e indica que la blackboard en la que comprobar
+                    // la variable es la de esta escena
+                    else {
+                        if (!this.gameManager.hasValue(varName, this.blackboard)) {
+                            this.gameManager.setValue(varName, defaultValue, this.blackboard);
+                        }
+                        condition.blackboard = this.blackboard;
+                    }
 
                     // Lo mete en las variables del nodo
                     nodeConditions.push(condition);
-
-                    // Si la variable no esta guardada, la guarda en el gameManager a falso por defecto
-                    if (!this.gameManager.hasValue(varName)) {
-                        this.gameManager.setValue(varName, false);
-                    }
                 }
 
                 // Se guardan las condiciones 
@@ -225,11 +251,10 @@ export default class BaseScene extends Phaser.Scene {
             let split = {
                 // Obtiene el texto del archivo de textos traducidos
                 text: this.i18next.t(translationId + ".text", { ns: namespace, name: playerName, context: context, returnObjects: getObjs }),
-                //character: character,
                 name: node.name
             }
             // Se obtiene todo el texto separado en varios dialogos si es demasiado largo
-            node.dialogs = this.splitDialogs([split]);
+            node.dialogs = this.splitDialogs([split], character);
             node.currDialog = 0;
 
             // Si hay un nodo despues de este, se crea de manera recursiva
@@ -348,7 +373,7 @@ export default class BaseScene extends Phaser.Scene {
     * @param {Array} dialogs - array de dialogos a preparar
     * @return {Array} - array con los dialogos ajustados
     */
-    splitDialogs(dialogs) {
+    splitDialogs(dialogs, character) {
         let newDialogs = [];        // Nuevo array de dialogos tras dividir los dialogos demasiado largos
         let i = 0;                  // Indice del dialogo en el array de dialogos
         let dialogCopy = "";        // Copia del dialogo con todos sus atributos
@@ -356,6 +381,10 @@ export default class BaseScene extends Phaser.Scene {
 
         // Mientras no se haya llegado al final de los dialogos
         while (i < dialogs.length) {
+            // Se establece el retrato del personaje en la caja de texto para poder
+            // hacer los saltos de linea con el ancho de linea correspondiente
+            this.dialogManager.textbox.setPortrait(this.portraits.get(character));
+
             // Cambia el texto a mostrar por el dialogo completo para obtener sus dimensiones 
             // (se copia la informacion del dialogo actual, pero se cambia el texto a mostrar)
             currText = dialogs[i].text;
@@ -456,4 +485,5 @@ export default class BaseScene extends Phaser.Scene {
             closed.visible = true;
         });
     }
+    
 }

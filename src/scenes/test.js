@@ -6,9 +6,13 @@ export default class Test extends BaseScene {
         super('Test');
     }
 
-    // Metodo que se llama al terminar de crear la escena. 
-    onCreate(params) {
-        super.onCreate(params);
+    init() {
+        console.log("init");
+
+    }
+    // Metodo que se llama al terminar de crear la escena.
+    onCreate() {
+        super.onCreate();
         // this.phoneManager.showPhone(true);
         // this.phoneManager.openEyesAnimation();
         // this.phoneManager.phone.toAlarmScreen();
@@ -18,28 +22,6 @@ export default class Test extends BaseScene {
 
     create(params) {
         super.create(params);
-
-        let test1 = this.cache.json.get('momDialog');
-        let test2 = this.cache.json.get('dadDialog');
-        let test3 = this.cache.json.get('chat1');
-        let computerTest = this.cache.json.get('computer');
-
-        let momNode = super.readNodes("root", test1, "momDialog", "", true);
-        let dadNode = super.readNodes("root", test2, "dadDialog", "", true);
-        let choices = super.readNodes("root", test3, "chat1", "", true);
-        let computerNode = super.readNodes("root1", computerTest, "computer", "", true);
-
-        // Telefono
-        let chatName = this.i18next.t("textMessages.chat1", { ns: "phoneInfo", returnObjects: true });
-        this.phoneManager.phone.addChat(chatName, "testIcon");
-        this.phoneManager.phone.setChatNode(chatName, choices);
-
-        this.phoneManager.phone.addMessage(chatName, "aawequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbaa", "a", "aaaaaaaaaa");
-        this.phoneManager.phone.addMessage(chatName, "ssadasda", "a", "jjjjjj");
-        this.phoneManager.phone.addMessage(chatName, "wequkb", "a", "dddd");
-
-        chatName = this.i18next.t("textMessages.chat2", { ns: "phoneInfo", returnObjects: true });
-        this.phoneManager.phone.addChat(chatName, "testIcon");
 
         // Pone una imagen de fondo con las dimensiones del canvas
         let bg = this.add.image(0, 0, 'bg').setOrigin(0, 0);
@@ -65,9 +47,32 @@ export default class Test extends BaseScene {
         });
         dad.setAnimation("Idle01", true);
 
-
         this.portraits.set("mom", mom.getPortrait());
         this.portraits.set("dad", dad.getPortrait());
+
+
+        let test1 = this.cache.json.get('momDialog');
+        let test2 = this.cache.json.get('dadDialog');
+        let test3 = this.cache.json.get('chat1');
+        let computerTest = this.cache.json.get('computer');
+
+        let momNode = super.readNodes("root", test1, "momDialog", "", true);
+        let dadNode = super.readNodes("root", test2, "dadDialog", "", true);
+        let choices = super.readNodes("root", test3, "chat1", "", true);
+        let computerNode = super.readNodes("root1", computerTest, "computer", "", true);
+
+        // Telefono
+        let chatName = this.i18next.t("textMessages.chat1", { ns: "phoneInfo", returnObjects: true });
+        this.phoneManager.phone.addChat(chatName, "testIcon");
+        this.phoneManager.phone.setChatNode(chatName, choices);
+
+        this.phoneManager.phone.addMessage(chatName, "aawequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbaa", "a", "aaaaaaaaaa");
+        this.phoneManager.phone.addMessage(chatName, "ssadasda", "a", "jjjjjj");
+        this.phoneManager.phone.addMessage(chatName, "wequkb", "a", "dddd");
+
+        chatName = this.i18next.t("textMessages.chat2", { ns: "phoneInfo", returnObjects: true });
+        this.phoneManager.phone.addChat(chatName, "testIcon");
+
 
 
         this.dispatcher.add("talked", this, (obj) => {

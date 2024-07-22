@@ -134,7 +134,7 @@ export default class BootScene extends Phaser.Scene {
             supportedLngs: ['en', 'es'],
             // namespaces que se cargan para cada uno de los idiomas
             ns: ['titleMenu', 'userInfoMenu', 'names', 'phoneInfo', 'computer',
-                'transitionScenes', 'day1\\bedroomMorningDay1',
+                'transitionScenes', 'day1\\bedroomMorningDay1', 'day1\\livingroomMorningDay1',
                 'momDialog', 'dadDialog', 'chat1'],   // TEST
             preload: ['en', 'es'],
             // mostrar informacion de ayuda por consola
@@ -177,6 +177,7 @@ export default class BootScene extends Phaser.Scene {
         this.load.json('chat1', './chat1.json');
         this.load.json('computer', './computer.json');
         this.load.json('bedroomMorningDay1', './day1/bedroomMorningDay1.json');
+        this.load.json('livingroomMorningDay1', './day1/livingroomMorningDay1.json');
     }
 
     loadSpinalAnims() {

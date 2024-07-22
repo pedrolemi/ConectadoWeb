@@ -16,8 +16,8 @@ export default class TextOnlyScene extends BaseScene {
         super('TextOnlyScene');
     }
 
-    onCreate() {
-        super.onCreate();
+    onCreate(params) {
+        super.onCreate(params);
 
         let DEFAULT_TIME = 5000;
         setTimeout(() => {
@@ -31,7 +31,7 @@ export default class TextOnlyScene extends BaseScene {
     create(params) {
         super.create(params);
 
-        // console.log(this.params);
+        // console.log(params);
 
         let text = "";
         let onComplete = () => { };

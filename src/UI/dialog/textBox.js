@@ -36,7 +36,7 @@ export default class TextBox extends DialogObject {
 
         // Configuracion del texto de la caja
         this.normalTextConfig = { ...scene.gameManager.textConfig };
-        this.normalTextConfig.fontSize = 20 + 'px';
+        this.normalTextConfig.fontSize = 25 + 'px';
         this.normalTextConfig.fontStyle = 'bold';
         this.normalTextConfig.strokeThickness = 5;
 

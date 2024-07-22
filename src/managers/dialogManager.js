@@ -269,7 +269,6 @@ export default class DialogManager {
                     // Si el nodo es valido y el siguiente personaje que habla no es el mismo que el anterior
                     // Se oculta la caja de texto y una vez terminada la animacion, procesa el siguiente nodo
                     if (this.currNode && this.currNode.character && this.currNode.character !== this.lastCharacter) {
-                        console.log("aaaa");
                         this.textbox.activate(false, () => {
                             this.processNode();
                         }, 0);

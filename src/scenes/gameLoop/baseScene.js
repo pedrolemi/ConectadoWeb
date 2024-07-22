@@ -1,6 +1,7 @@
 import { TextNode, ChoiceNode, ConditionNode, EventNode, ChatNode, SocialNetNode } from '../../UI/dialog/dialogNode.js';
 import GameManager from '../../managers/gameManager.js';
 
+
 export default class BaseScene extends Phaser.Scene {
     /**
      * Escena base para las escenas del juego. Guarda parametros como las dimensiones 
@@ -22,7 +23,6 @@ export default class BaseScene extends Phaser.Scene {
         this.UIManager = this.gameManager.UIManager;
         this.dialogManager = this.gameManager.UIManager.dialogManager;
         this.phoneManager = this.gameManager.UIManager.phoneManager;
-
         this.dispatcher = this.gameManager.dispatcher;
 
         // Obtiene el plugin de i18n del GameManager
@@ -41,43 +41,44 @@ export default class BaseScene extends Phaser.Scene {
             scale: this.portraitScale
         };
 
-        this.scale = 1;
 
+        // Parametros del fondo y la camara para el scroll
+        this.scale = 1;
         this.leftBound = 0;
         this.rightBound = this.CANVAS_WIDTH;
         this.START_SCROLLING = 30;
         this.CAMERA_SPEED = 3;
 
-        this.params = params;
-
-        this.events.on('shutdown', this.shutdown);
+        // Se anaden funciones adicionales a las que se llamara al crear, despertar y destruir la escena
         this.events.on('create', () => {
-            this.onCreate();
-        });
-        this.events.on('wake', () => {
-            this.onWake();
-        });
+            this.onCreate(params);
+        }, this);
+        this.events.on('wake', (scene, params) => {
+            this.onWake(params);
+        }, this);
+        this.events.on('shutdown', this.shutdown, this);
+        
     }
 
-    // Metodo que se llama al terminar de crear la escena. Se encarga de 
-    // anadir los retratos de la escena actual en el dialogManager 
-    onCreate() {
-        this.dialogManager.changeScene(this.gameManager.currentScene);
-        this.onWake();
+
+    /**
+     * Metodo que se llama al terminar de crear la escena. Se encarga de llamar initialSetup
+     * @param {Object} params - objeto con los parametros que pasarle a initialSetup 
+     */
+    onCreate(params) {
+        // console.log("onCreate");
+        this.initialSetup(params);
     }
 
-    // Funcion llamada cada vez que se despierta/inicia la escena
-    onWake() {
-        this.dialogManager.changeScene(this.gameManager.currentScene);
-        if (this.params) {
-            if (this.params.left) {
-                this.cameras.main.scrollX = this.leftBound;
-            }
-            else {
-                this.cameras.main.scrollX = this.rightBound - this.CANVAS_WIDTH;
-            }
-        }
+    /**
+     * Metodo que se llama al despertar la escena. Se encarga de llamar initialSetup
+     * @param {Object} params - objeto con los parametros que pasarle a initialSetup 
+     */
+    onWake(params) {
+        // console.log("onWake");
+        this.initialSetup(params);
     }
+
     // Metodo que se llama al borrar la escena. Se encarga de limpiar los eventos del dispatcher
     shutdown() {
         if (this.dispatcher) {
@@ -85,9 +86,23 @@ export default class BaseScene extends Phaser.Scene {
         }
     }
 
+    /**
+     * Se encarga de configurar la escena con los parametros iniciales y
+     * de anadir los retratos de la escena actual en el dialogManager
+     * @param {Object} params - parametros que se le pasan a la configuracion inicial 
+     */
+    initialSetup(params) {
+        // console.log(params);
 
-    preUpdate(t, dt) {
-        super.preUpdate(t, dt);
+        this.dialogManager.changeScene(this.gameManager.currentScene);
+        if (params) {
+            if (params.left) {
+                this.cameras.main.scrollX = this.leftBound;
+            }
+            else {
+                this.cameras.main.scrollX = this.rightBound - this.CANVAS_WIDTH;
+            }
+        }
     }
 
     update(t, dt) {
@@ -103,6 +118,8 @@ export default class BaseScene extends Phaser.Scene {
             this.cameras.main.scrollX += this.CAMERA_SPEED;
         }
     }
+
+
 
     /**
     * Va leyendo el json (el archivo se lee una sola vez y se pasa el objeto obtenido como parametro)

@@ -27,7 +27,7 @@ export default class GameManager {
         // El SceneManager tb incluye el cambio de escena, pero no es recomendable segun
         // la docu manejarlo a traves de el
         this.currentScene = scene;
-        this.prevScene = null;
+        this.runningScenes = new Set();
 
         this.i18next = this.currentScene.plugins.get('rextexttranslationplugin');
         this.dispatcher = EventDispatcher.getInstance();
@@ -185,9 +185,22 @@ export default class GameManager {
         this.graphics.clear();
     }
 
+
+
+    
+    // Tiene los campos: name, username, password, gender
+    setUserInfo(userInfo) {
+        this.userInfo = userInfo;
+    }
+    getUserInfo() {
+        return this.userInfo;
+    }
+
+
     ///////////////////////////////////////
     /// Metodos para cambiar de escena ///
     //////////////////////////////////////
+    
     startLangMenu() {
         let sceneName = 'LanguageMenu';
         this.changeScene(sceneName);
@@ -215,7 +228,6 @@ export default class GameManager {
         let UIsceneName = 'UIManager';
         this.currentScene.scene.launch(UIsceneName);
         this.UIManager = this.currentScene.scene.get(UIsceneName);
-
         let computerSceneName = 'ComputerScene';
         // run tiene 3 opciones:
         // - si esta pausada (no se actualiza), se reanuda
@@ -227,10 +239,10 @@ export default class GameManager {
         this.computerScene.scene.sleep();
 
 
-        // let sceneName = 'LivingroomMorningDay1';
+        let sceneName = 'BedroomMorningDay1';
 
         // Pasa a la escena inicial con los parametros text, onComplete y onCompleteDelay
-        let sceneName = 'TextOnlyScene';
+        // let sceneName = 'TextOnlyScene';
         let params = {
             // El texto de se coge del a archivo de traducciones
             text: this.i18next.t("day1.start", { ns: "transitionScenes", returnObjects: true }),
@@ -245,10 +257,6 @@ export default class GameManager {
 
     }
 
-    setUserInfo(userInfo) {
-        this.userInfo = userInfo;
-    }
-
     /**
     * Metodo para cambiar de escena. Si no
     * @param {String} scene - key de la escena a la que se va a pasar
@@ -256,19 +264,28 @@ export default class GameManager {
     * @param {Boolean} cantReturn - true si se puede regresar a la escena anterior, false en caso contrario
     */
     changeScene(scene, params, canReturn = false) {
-        // Si no se puede volver a la escena anterior, se hace start de la nueva
-        // escena (lo que parara la escena anterior y habra que volver a crearla)
+        // Si no se puede volver a la escena anterior, se detienen todas las
+        // escenas que ya estaban creadas porque ya no van a hacer falta 
         if (!canReturn) {
-            this.currentScene.scene.start(scene, params);
+            this.runningScenes.forEach(sc => { 
+                this.currentScene.scene.stop(sc);
+            });
+            this.runningScenes.clear();
+            this.currentScene.scene.stop();
         }
-        // Si no, se hace switch de la nueva escena (por lo que se podra volver
-        // a ella haciendo switch de nuevo sin necesidad de volver a crearla)
+        // Si no, se se duerme la escena actual en vez de destruirla ya que
+        // habria que mantener su estado por si se quiere volver a ella
         else {
-            this.currentScene.scene.switch(scene, params);
+            this.currentScene.scene.sleep();
         }
-        this.prevScene = this.currentScene;
-        this.currentScene = this.currentScene.scene.get(scene, params);
-        this.currentScene.params = params;
+
+        // Se inicia la escena actual. Con scene.run, si la escena no esta creada,
+        // se crea, pero si esta dormida o pausada, la despierta o la reanuda
+        this.currentScene.scene.run(scene, params);
+        this.currentScene = this.currentScene.scene.get(scene);
+
+        // Se anade la escena a las escenas que estan ejecutandose
+        this.runningScenes.add(this.currentScene.scene.get(scene));
 
         // Si se han inicializado el UIManager y el dialogManager, se limpian los retratos
         if (this.UIManager && this.UIManager.dialogManager) {
@@ -277,32 +294,35 @@ export default class GameManager {
     }
 
     switchToComputer() {
+        // Se desactiva la interfaz del telefono
         this.UIManager.phoneManager.activate(false);
 
-        // se duerme la escena actual
+        // Se duerme la escena actual
         this.currentScene.scene.sleep();
-        // se cambia a la escena del ordenador
+
+        // Se cambia a la escena del ordenador
         this.computerScene.start();
         this.computerScene.scene.wake();
     }
 
     leaveComputer() {
+        // Se reactiva la interfaz del telefono
         this.UIManager.phoneManager.activate(true);
 
+        // Se duerme la escena del ordenador
         this.computerScene.scene.sleep();
 
+        // Se cambia a la escena actual de vuelta, que deberia ser la
+        // habitacion, y deberia ponerse la camara en la izquierda
         let params = {
             left: true
         };
         this.currentScene.scene.wake();
         this.currentScene.params = params;
-
     }
 
-    // tiene los campos: name, username, password, gender
-    getUserInfo() {
-        return this.userInfo;
-    }
+
+
 
     ///////////////////////////////////////
     ///// Metodos para la blackboard /////

@@ -7,8 +7,8 @@ export default class Test extends BaseScene {
     }
 
     // Metodo que se llama al terminar de crear la escena. 
-    onCreate() {
-        super.onCreate();
+    onCreate(params) {
+        super.onCreate(params);
         // this.phoneManager.showPhone(true);
         // this.phoneManager.openEyesAnimation();
         // this.phoneManager.phone.toAlarmScreen();

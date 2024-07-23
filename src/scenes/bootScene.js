@@ -22,7 +22,7 @@ export default class BootScene extends Phaser.Scene {
     }
 
     loadComputersAssets() {
-        this.load.setPath('./assets/UI/computer');
+        this.load.setPath('assets/UI/computer');
 
         // Fondos del ordenador
         this.load.image('basePC', 'backgrounds/BasePCsq.png');
@@ -63,7 +63,7 @@ export default class BootScene extends Phaser.Scene {
     }
 
     loadPhoneAssets() {
-        this.load.setPath('./assets/UI/phone');
+        this.load.setPath('assets/UI/phone');
 
         // Telefono
         this.load.image('phoneIcon', 'phoneIcon.png');
@@ -92,7 +92,7 @@ export default class BootScene extends Phaser.Scene {
     }
 
     loadFlags() {
-        this.load.setPath('./assets/UI/flags');
+        this.load.setPath('assets/UI/flags');
 
         // Banderas idiomas
         this.load.image('frFlag', 'frFlag.png');
@@ -102,7 +102,7 @@ export default class BootScene extends Phaser.Scene {
     }
 
     loadAvatars() {
-        this.load.setPath('./assets/UI/avatars');
+        this.load.setPath('assets/UI/avatars');
 
         // Avatares de los personajes
         this.load.image('AlexAvatar', 'AlexAvatar.png');
@@ -134,7 +134,7 @@ export default class BootScene extends Phaser.Scene {
             supportedLngs: ['en', 'es'],
             // namespaces que se cargan para cada uno de los idiomas
             ns: ['titleMenu', 'userInfoMenu', 'names', 'phoneInfo', 'computer',
-                'transitionScenes', 'day1\\bedroomMorningDay1', 'day1\\livingroomMorningDay1',
+                'transitionScenes', 'everydayDialog', 'day1\\bedroomMorningDay1', 'day1\\livingroomMorningDay1',
                 'momDialog', 'dadDialog', 'chat1'],   // TEST
             preload: ['en', 'es'],
             // mostrar informacion de ayuda por consola
@@ -144,13 +144,13 @@ export default class BootScene extends Phaser.Scene {
                 // La ruta desde donde cargamos las traducciones
                 // {{lng}} --> nombre carpeta de cada uno de los idiomas
                 // {{ns}} --> nombre carpeta de cada uno de los namespaces
-                loadPath: './localization/{{lng}}/{{ns}}.json'
+                loadPath: 'localization/{{lng}}/{{ns}}.json'
             }
         })
     }
 
     loadDialogs() {
-        this.load.setPath('./assets/UI/dialog');
+        this.load.setPath('assets/UI/dialog');
 
         // Assets de la caja de texto y de opcion multiple
         this.load.image('textboxMask', 'textboxMask.png');
@@ -170,18 +170,20 @@ export default class BootScene extends Phaser.Scene {
         });
 
         // Archivos de dialogos (estructura)
-        this.load.setPath('./localization');
+        this.load.setPath('localization');
 
-        this.load.json('momDialog', './momDialog.json');
-        this.load.json('dadDialog', './dadDialog.json');
-        this.load.json('chat1', './chat1.json');
-        this.load.json('computer', './computer.json');
-        this.load.json('bedroomMorningDay1', './day1/bedroomMorningDay1.json');
-        this.load.json('livingroomMorningDay1', './day1/livingroomMorningDay1.json');
+        this.load.json('momDialog', 'momDialog.json');
+        this.load.json('dadDialog', 'dadDialog.json');
+        this.load.json('chat1', 'chat1.json');
+        this.load.json('computer', 'computer.json');
+
+        this.load.json('everydayDialog', 'everydayDialog.json');
+        this.load.json('bedroomMorningDay1', 'day1/bedroomMorningDay1.json');
+        this.load.json('livingroomMorningDay1', 'day1/livingroomMorningDay1.json');
     }
 
     loadSpinalAnims() {
-        this.load.setPath('./assets/characters');
+        this.load.setPath('assets/characters');
 
         // Personajes y sus respectivas animaciones esqueletales de Spine
         // [Idle01, IdleBase, Walk]
@@ -191,7 +193,7 @@ export default class BootScene extends Phaser.Scene {
     }
 
     loadBackgrounds() {
-        this.load.setPath('./assets/backgrounds');
+        this.load.setPath('assets/backgrounds');
 
         // Habitacion
         this.load.image('bedroomCeiling', 'bedroom/bedroomCeiling.png');
@@ -233,21 +235,23 @@ export default class BootScene extends Phaser.Scene {
         
         // Pasillo
         this.load.image('corridorBg', 'corridor/corridorBg.png');
-        // this.load.image('boysDoorClosed', 'corridor/boysDoorClosed.png');
-        // this.load.image('boysDoorOpened', 'corridor/boysDoorOpened.png');
-        // this.load.image('girlsDoorClosed', 'corridor/girlsDoorClosed.png');
-        // this.load.image('girlsDoorOpened', 'corridor/girlsDoorOpened.png');
-        // this.load.image('classDoorClosed', 'corridor/classDoorClosed.png');
-        // this.load.image('classDoorOpened', 'corridor/classDoorOpened.png');
+        this.load.image('boysDoorClosed', 'corridor/boysDoorClosed.png');
+        this.load.image('boysDoorOpened', 'corridor/boysDoorOpened.png');
+        this.load.image('girlsDoorClosed', 'corridor/girlsDoorClosed.png');
+        this.load.image('girlsDoorOpened', 'corridor/girlsDoorOpened.png');
+        this.load.image('classDoorClosed', 'corridor/classDoorClosed.png');
+        this.load.image('classDoorOpened', 'corridor/classDoorOpened.png');
 
         // Banos
         this.load.image('bathroomBg', 'bathroom/bathroomBg.png');
-        // this.load.image('bathroomDoorClosed', 'bathroom/bathroomDoorClosed.png');
-        // this.load.image('bathroomDoorOpened', 'bathroom/bathroomDoorOpened.png');
-        // this.load.image('bathroomStall1Closed', 'bathroom/bathroomStall1Closed.png');
-        // this.load.image('bathroomStall1Opened', 'bathroom/bathroomStall1Opened.png');
-        // this.load.image('bathroomstall2Closed', 'bathroom/bathroomstall2Closed.png');
-        // this.load.image('bathroomstall2Opened', 'bathroom/bathroomstall2Opened.png');
+        this.load.image('bathroomDoorClosed', 'bathroom/bathroomDoorClosed.png');
+        this.load.image('bathroomDoorOpened', 'bathroom/bathroomDoorOpened.png');
+        this.load.image('bathroomStall1Closed', 'bathroom/bathroomStall1Closed.png');
+        this.load.image('bathroomStall1Opened', 'bathroom/bathroomStall1Opened.png');
+        this.load.image('bathroomStall2Closed', 'bathroom/bathroomstall2Closed.png');
+        this.load.image('bathroomStall2Opened', 'bathroom/bathroomstall2Opened.png');
+        this.load.image('stall2', 'bathroom/stall2.png');
+        this.load.image('stall3', 'bathroom/stall3.png');
         // this.load.image('stolenPhone', 'bathroom/stolenPhone.png');
 
         // Clase desde el frente
@@ -267,16 +271,16 @@ export default class BootScene extends Phaser.Scene {
         // this.load.image('frontChar13', 'classFront/frontChar13.png');
         // this.load.image('frontChar14', 'classFront/frontChar14.png');
         // this.load.image('frontChar15', 'classFront/frontChar15.png');
-        // this.load.image('frontRow1Chairs', 'classFront/frontRow1Chairs.png');
-        // this.load.image('frontRow1Tables', 'classFront/frontRow1Tables.png');
-        // this.load.image('frontRow2Chairs', 'classFront/frontRow2Chairs.png');
-        // this.load.image('frontRow2Tables', 'classFront/frontRow2Tables.png');
-        // this.load.image('frontRow3Chairs', 'classFront/frontRow3Chairs.png');
-        // this.load.image('frontRow3Tables', 'classFront/frontRow3Tables.png');
-        // this.load.image('frontRow4Chairs', 'classFront/frontRow4Chairs.png');
-        // this.load.image('frontRow4Tables', 'classFront/frontRow4Tables.png');
-        // this.load.image('frontRow5Chairs', 'classFront/frontRow5Chairs.png');
-        // this.load.image('frontRow5Tables', 'classFront/frontRow5Tables.png');
+        this.load.image('frontRow1Chairs', 'classFront/frontRow1Chairs.png');
+        this.load.image('frontRow1Tables', 'classFront/frontRow1Tables.png');
+        this.load.image('frontRow2Chairs', 'classFront/frontRow2Chairs.png');
+        this.load.image('frontRow2Tables', 'classFront/frontRow2Tables.png');
+        this.load.image('frontRow3Chairs', 'classFront/frontRow3Chairs.png');
+        this.load.image('frontRow3Tables', 'classFront/frontRow3Tables.png');
+        this.load.image('frontRow4Chairs', 'classFront/frontRow4Chairs.png');
+        this.load.image('frontRow4Tables', 'classFront/frontRow4Tables.png');
+        this.load.image('frontRow5Chairs', 'classFront/frontRow5Chairs.png');
+        this.load.image('frontRow5Tables', 'classFront/frontRow5Tables.png');
 
         // Clase desde el fondo
         this.load.image('classBackBg', 'classBack/classBackBg.png');
@@ -328,12 +332,12 @@ export default class BootScene extends Phaser.Scene {
         this.loadSpinalAnims();
         this.loadBackgrounds();
 
-        this.load.setPath('./assets');
+        this.load.setPath('assets');
 
 
         // Test
         this.load.image('bg', 'patio.png');
-        this.load.image('testIcon', './UI/AlexAvatar.png');
+        this.load.image('testIcon', 'UI/AlexAvatar.png');
         this.load.image('computerImg', 'Computer.png');
 
         this.loadPlugins();

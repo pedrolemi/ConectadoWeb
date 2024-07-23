@@ -239,7 +239,7 @@ export default class GameManager {
         this.computerScene.scene.sleep();
 
 
-        let sceneName = 'StairsMorningDay1';
+        let sceneName = 'CorridorMorningDay1';
 
         // Pasa a la escena inicial con los parametros text, onComplete y onCompleteDelay
         // let sceneName = 'TextOnlyScene';

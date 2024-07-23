@@ -14,7 +14,6 @@ export default class BedroomMorningDay1 extends BedroomBase {
 
         this.wardrobe1Node = super.readNodes("root", nodes, "day1\\bedroomMorningDay1", "wardrobe1", true);
         this.wardrobe2Node = super.readNodes("root", nodes, "day1\\bedroomMorningDay1", "wardrobe2", true);
-        this.pcNode = super.readNodes("root", nodes, "day1\\bedroomMorningDay1", "pc", true);
         this.bedNode = super.readNodes("root", nodes, "day1\\bedroomMorningDay1", "bed", true);
 
         // Mochila

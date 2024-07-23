@@ -10,6 +10,8 @@ import LivingroomMorningDay1 from './scenes/gameLoop/day1/livingroomMorningDay1.
 import PlaygroundMorningDay1 from './scenes/gameLoop/day1/playgroundMorningDay1.js';
 import StairsMorningDay1 from './scenes/gameLoop/day1/stairsMorningDay1.js';
 import CorridorMorningDay1 from './scenes/gameLoop/day1/corridorMorningDay1.js';
+import BathroomMorning from './scenes/gameLoop/bathroomMorning.js';
+import ClassFrontMorningDay1 from './scenes/gameLoop/day1/classFontMorningDay1.js';
 
 import ComputerScene from './UI/computer/computerScene.js'
 
@@ -31,7 +33,7 @@ const config = {
     scene: [
         BootScene, LanguageMenu, TitleMenu, UserInfoMenu,
         TextOnlyScene, AlarmScene, 
-        BedroomMorningDay1, LivingroomMorningDay1, PlaygroundMorningDay1, StairsMorningDay1, CorridorMorningDay1,
+        BedroomMorningDay1, LivingroomMorningDay1, PlaygroundMorningDay1, StairsMorningDay1, CorridorMorningDay1, BathroomMorning, ClassFrontMorningDay1,
         Test, TestMenu, 
         ComputerScene, UIManager,],
     autoFocus: true,

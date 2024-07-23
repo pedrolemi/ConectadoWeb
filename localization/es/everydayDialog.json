@@ -1,0 +1,39 @@
+{
+    "bedroom": {
+        "pc": {
+            "root": [
+                {
+                    "text": "Si lo enciendo ahora seguro que se me hace tarde."
+                },
+                {
+                    "text": "Será mejor que me espere a por la tarde."
+                }
+            ],
+            "pcQuestion": {
+                "text": "¿Quieres encender el ordenador?"
+            },
+            "pcChoice": [
+                {
+                    "text": "Sí"
+                },
+                {
+                    "text": "No"
+                }
+            ],
+            "leavePC":{
+                "text": "Lo mejor será que me vaya."
+            }
+        }
+    },
+
+    "corridor": {
+        "bathroom": {
+            "root": {
+                "text": "",
+                "text_male": "No puedo entrar ahí, es el baño de chicas.",
+                "text_female": "No puedo entrar ahí, es el baño de chicos."
+            }
+        }
+
+    }
+}

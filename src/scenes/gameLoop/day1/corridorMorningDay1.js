@@ -11,7 +11,13 @@ export default class CorridorMorningDay1 extends CorridorBase {
         this.stairs = "StairsMorningDay1";
         this.boysBathroom = "";
         this.girlsBathroom = "";
+        this.class = "ClassFrontMorningDay1";
 
-        
+        if (this.gameManager.getUserInfo().gender === "male") {
+            this.boysBathroom = "BathroomMorning";
+        }
+        else {
+            this.girlsBathroom = "BathroomMorning";
+        }
     }
 }

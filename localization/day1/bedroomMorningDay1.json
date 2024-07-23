@@ -28,36 +28,7 @@
         }
     },
 
-    "pc": {
-        "root": {
-            "type": "text",
-            "character": "player",
-            "next": "pcQuestion"
-        },
-        "pcQuestion": {
-            "type": "text",
-            "character": "PC",
-            "next": "pcChoice"
-        },
-        "pcChoice": {
-            "type": "choice",
-            "choices":[
-                { "next": "turnPC" },
-                { "next": "leavePC" }
-            ]
-        },
-        "turnPC": {
-            "type": "event",
-            "events": [
-                { "turnPC": { } }
-            ]
-        },
-        "leavePC": {
-            "type": "text",
-            "character": "player"
-        }
-    },
-
+    
     "bed": {
         "root": {
             "type": "text",

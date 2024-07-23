@@ -69,6 +69,10 @@ export default class BaseScene extends Phaser.Scene {
     onCreate(params) {
         // console.log("onCreate");
         this.initialSetup(params);
+        
+        // TEST
+        this.phoneManager.topLid.visible = false;
+        this.phoneManager.botLid.visible = false;
     }
 
     /**
@@ -153,7 +157,6 @@ export default class BaseScene extends Phaser.Scene {
     * Cada condicion puede tener varios requisitos (variables), en cuyo caso, la condicion solo 
     * se cumplira si todos sus requisitos se cumplen (operador &&. De momento no hay soporte para el operador || ) 
     * 
-    
     */
     readNodes(id, file, namespace, objectName, getObjs) {
         let playerName = this.gameManager.getUserInfo().name;
@@ -168,7 +171,7 @@ export default class BaseScene extends Phaser.Scene {
         // con (por ejemplo) nombre object, un nodo con la id name deberia buscarse en el 
         // archivo de traducciones como object.name, pero la id de nodo seguiria siendo name
         if (objectName !== "") {
-            fileObj = file[objectName];
+            fileObj = this.getObjFromName(file, objectName);
             translationId = objectName + "." + id;
         }
         // console.log(fileObj);
@@ -402,6 +405,23 @@ export default class BaseScene extends Phaser.Scene {
 
         return node;
     }
+
+
+    getObjFromName(obj, prop) {
+        let nestedProperties = prop.split('.');
+        let currObj = obj;
+
+        for(let i = 0; i < nestedProperties.length; i++) {
+            if (!currObj) {
+                return null;
+            }
+            else {
+                currObj = currObj[nestedProperties[i]];
+            }
+        }
+        return currObj;
+    }
+
 
     /**
     * Prepara los dialogos por si alguno es demasiado largo y se sale de la caja de texto

@@ -495,8 +495,8 @@ export default class BaseScene extends Phaser.Scene {
      * @param {Boolean} click - true si la imagen se cambia al hacer click, false si lo hace al pasar/sacar el raton por encima
      */
     toggleDoor(closed, opened, click = true) {
-        closed.setInteractive();
-        opened.setInteractive();
+        closed.setInteractive({ useHandCursor: true  });
+        opened.setInteractive({ useHandCursor: true  });
 
         opened.visible = false;
         let openEvt = 'pointerdown';

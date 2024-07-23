@@ -59,7 +59,7 @@ export default class BedroomBase extends BaseScene {
         door1Closed.setDepth(bg.depth + 3);
         door1Opened.setDepth(door1Closed.depth - 1);
         wardrobe1.setDepth(door1Opened.depth - 1);
-        wardrobe1.setInteractive();
+        wardrobe1.setInteractive({ useHandCursor: true  });
         wardrobe1.on('pointerdown', () => {
             if (door1Opened.visible) {
                 this.dialogManager.setNode(this.wardrobe1Node)
@@ -72,7 +72,7 @@ export default class BedroomBase extends BaseScene {
         door3Closed.setDepth(bg.depth + 3);
         door3Opened.setDepth(door2Closed.depth - 1);
         wardrobe2.setDepth(door2Opened.depth - 1);
-        wardrobe2.setInteractive();
+        wardrobe2.setInteractive({ useHandCursor: true  });
         wardrobe2.on('pointerdown', () => {
             if (door2Opened.visible || door3Opened.visible) {
                 this.dialogManager.setNode(this.wardrobe2Node)
@@ -86,7 +86,7 @@ export default class BedroomBase extends BaseScene {
         this.pcNode = null;
 
         let pc = this.add.rectangle(276, 360, 150, 162, 0xfff, 0).setOrigin(0, 0);
-        pc.setInteractive();
+        pc.setInteractive({ useHandCursor: true  });
         pc.on('pointerdown', () => {
             this.dialogManager.setNode(this.pcNode);
         });
@@ -116,7 +116,7 @@ export default class BedroomBase extends BaseScene {
         // Al igual que con el interior de los armarios, se recoloca su profundidad y al
         // hacer click sobre ella, se cambia el nodo en el dialogManager
         this.bed = this.add.image(bg.displayWidth, this.CANVAS_HEIGHT, 'bed').setOrigin(1, 1).setScale(this.scale);
-        this.bed.setInteractive();
+        this.bed.setInteractive({ useHandCursor: true  });
         this.bed.setDepth(10);
         this.bedNode = null;
         this.bed.on('pointerdown', () => {

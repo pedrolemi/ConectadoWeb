@@ -20,7 +20,7 @@ export default class BedroomMorningDay1 extends BedroomBase {
         // Mochila
         let bagNode = super.readNodes("root", nodes, "day1\\bedroomMorningDay1", "bag", true);
         let bag = this.add.image(170, this.CANVAS_HEIGHT - 170, 'bag').setOrigin(0, 0).setScale(this.scale);
-        bag.setInteractive();
+        bag.setInteractive({ useHandCursor: true  });
         bag.on('pointerdown', () => {
             this.dialogManager.setNode(bagNode)
         });

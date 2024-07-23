@@ -17,7 +17,7 @@ export default class Character {
         // Nota: el origen es (0.5, 1). No se puede modificar
         this.char = this.scene.add.spine(trans.x, trans.y, key);
         this.char.setScale(trans.scale);
-        this.char.setInteractive();
+        this.char.setInteractive({ useHandCursor: true });
         this.anims.push(this.char);
 
         this.dialog = dialog;

@@ -39,7 +39,7 @@ export default class GameManager {
         this.blackboard = new Map();
 
         this.bagPicked = "bagPicked";
-        this.blackboard.set("bagPicked", false);
+        this.blackboard.set(this.bagPicked, false);
 
         this.isLate = "isLate";
         this.blackboard.set(this.isLate, false);
@@ -239,7 +239,7 @@ export default class GameManager {
         this.computerScene.scene.sleep();
 
 
-        let sceneName = 'LivingroomMorningDay1';
+        let sceneName = 'StairsMorningDay1';
 
         // Pasa a la escena inicial con los parametros text, onComplete y onCompleteDelay
         // let sceneName = 'TextOnlyScene';
@@ -315,7 +315,7 @@ export default class GameManager {
         // Se cambia a la escena actual de vuelta, que deberia ser la
         // habitacion, y deberia ponerse la camara en la izquierda
         let params = {
-            left: true
+            camPos: "left"
         };
         this.currentScene.scene.wake();
         this.currentScene.params = params;

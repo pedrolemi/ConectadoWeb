@@ -220,6 +220,103 @@ export default class BootScene extends Phaser.Scene {
         this.load.image('living_playDoorClosed', 'livingroom/livingroomDoorClosed.png');
         this.load.image('living_playDoorOpened', 'livingroom/livingroomDoorOpened.png');
 
+
+        // Patio
+        this.load.image('playgroundClosed', 'playground/playgroundClosed.png');
+        this.load.image('playgroundOpened', 'playground/playgroundOpened.png');
+        // this.load.image('earring', 'playground/earring.png');
+
+        // Escaleras
+        this.load.image('stairsBg', 'stairs/stairsBg.png');
+        this.load.image('stairsDoorClosed', 'stairs/stairsDoorClosed.png');
+        this.load.image('stairsDoorOpened', 'stairs/stairsDoorOpened.png');
+        
+        // Pasillo
+        this.load.image('corridorBg', 'corridor/corridorBg.png');
+        // this.load.image('boysDoorClosed', 'corridor/boysDoorClosed.png');
+        // this.load.image('boysDoorOpened', 'corridor/boysDoorOpened.png');
+        // this.load.image('girlsDoorClosed', 'corridor/girlsDoorClosed.png');
+        // this.load.image('girlsDoorOpened', 'corridor/girlsDoorOpened.png');
+        // this.load.image('classDoorClosed', 'corridor/classDoorClosed.png');
+        // this.load.image('classDoorOpened', 'corridor/classDoorOpened.png');
+
+        // Banos
+        this.load.image('bathroomBg', 'bathroom/bathroomBg.png');
+        // this.load.image('bathroomDoorClosed', 'bathroom/bathroomDoorClosed.png');
+        // this.load.image('bathroomDoorOpened', 'bathroom/bathroomDoorOpened.png');
+        // this.load.image('bathroomStall1Closed', 'bathroom/bathroomStall1Closed.png');
+        // this.load.image('bathroomStall1Opened', 'bathroom/bathroomStall1Opened.png');
+        // this.load.image('bathroomstall2Closed', 'bathroom/bathroomstall2Closed.png');
+        // this.load.image('bathroomstall2Opened', 'bathroom/bathroomstall2Opened.png');
+        // this.load.image('stolenPhone', 'bathroom/stolenPhone.png');
+
+        // Clase desde el frente
+        this.load.image('classFrontBg', 'classFront/classFrontBg.png');
+        // this.load.image('frontChar1', 'classFront/frontChar1.png');
+        // this.load.image('frontChar2', 'classFront/frontChar2.png');
+        // this.load.image('frontChar3', 'classFront/frontChar3.png');
+        // this.load.image('frontChar4', 'classFront/frontChar4.png');
+        // this.load.image('frontChar5', 'classFront/frontChar5.png');
+        // this.load.image('frontChar6', 'classFront/frontChar6.png');
+        // this.load.image('frontChar7', 'classFront/frontChar7.png');
+        // this.load.image('frontChar8', 'classFront/frontChar8.png');
+        // this.load.image('frontChar9', 'classFront/frontChar9.png');
+        // this.load.image('frontChar10', 'classFront/frontChar10.png');
+        // this.load.image('frontChar11', 'classFront/frontChar11.png');
+        // this.load.image('frontChar12', 'classFront/frontChar12.png');
+        // this.load.image('frontChar13', 'classFront/frontChar13.png');
+        // this.load.image('frontChar14', 'classFront/frontChar14.png');
+        // this.load.image('frontChar15', 'classFront/frontChar15.png');
+        // this.load.image('frontRow1Chairs', 'classFront/frontRow1Chairs.png');
+        // this.load.image('frontRow1Tables', 'classFront/frontRow1Tables.png');
+        // this.load.image('frontRow2Chairs', 'classFront/frontRow2Chairs.png');
+        // this.load.image('frontRow2Tables', 'classFront/frontRow2Tables.png');
+        // this.load.image('frontRow3Chairs', 'classFront/frontRow3Chairs.png');
+        // this.load.image('frontRow3Tables', 'classFront/frontRow3Tables.png');
+        // this.load.image('frontRow4Chairs', 'classFront/frontRow4Chairs.png');
+        // this.load.image('frontRow4Tables', 'classFront/frontRow4Tables.png');
+        // this.load.image('frontRow5Chairs', 'classFront/frontRow5Chairs.png');
+        // this.load.image('frontRow5Tables', 'classFront/frontRow5Tables.png');
+
+        // Clase desde el fondo
+        this.load.image('classBackBg', 'classBack/classBackBg.png');
+        // this.load.image('backChar1', 'classBack/backChar1.png');
+        // this.load.image('backChar2', 'classBack/backChar2.png');
+        // this.load.image('backChar3', 'classBack/backChar3.png');
+        // this.load.image('backChar4', 'classBack/backChar4.png');
+        // this.load.image('backChar5', 'classBack/backChar5.png');
+        // this.load.image('backChar6', 'classBack/backChar6.png');
+        // this.load.image('backChar7', 'classBack/backChar7.png');
+        // this.load.image('backChar8', 'classBack/backChar8.png');
+        // this.load.image('backChar9', 'classBack/backChar9.png');
+        // this.load.image('backChar10', 'classBack/backChar10.png');
+        // this.load.image('backChar11', 'classBack/backChar11.png');
+        // this.load.image('backChar12', 'classBack/backChar12.png');
+        // this.load.image('backChar13', 'classBack/backChar13.png');
+        // this.load.image('backChar14', 'classBack/backChar14.png');
+        // this.load.image('backChar15', 'classBack/backChar15.png');
+        // this.load.image('backRow1Chairs', 'classBack/backRow1Chairs.png');
+        // this.load.image('backRow1Tables', 'classBack/backRow1Tables.png');
+        // this.load.image('backRow2Chairs', 'classBack/backRow2Chairs.png');
+        // this.load.image('backRow2Tables', 'classBack/backRow2Tables.png');
+        // this.load.image('backRow3Chairs', 'classBack/backRow3Chairs.png');
+        // this.load.image('backRow3Tables', 'classBack/backRow3Tables.png');
+        // this.load.image('backRow4Chairs', 'classBack/backRow4Chairs.png');
+        // this.load.image('backRow4Tables', 'classBack/backRow4Tables.png');
+        // this.load.image('backRow5Chairs', 'classBack/backRow5Chairs.png');
+        // this.load.image('backRow5Tables', 'classBack/backRow5Tables.png');
+        // this.load.image('blackboardPic1', 'classBack/blackboardPic1.png');
+        // this.load.image('blackboardPic2', 'classBack/blackboardPic2.png');
+        // this.load.image('blackboardPic3', 'classBack/blackboardPic3.png');
+        // this.load.image('class_corridorDoorClosed', 'classBack/classDoorClosed.png');
+        // this.load.image('class_corridorDoorOpened', 'classBack/classDoorOpened.png');
+
+        // Pesadillas
+        this.load.image('nightmaresBg', 'nightmares/nightmaresBg.png');
+        // this.load.image('gum', 'nightmares/gum.png');
+        // this.load.image('gumChair', 'nightmares/gumChair.png');
+        // this.load.image('nightmaresChair', 'nightmares/nightmaresChair.png');
+
     }
 
     preload() {

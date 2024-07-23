@@ -3,23 +3,14 @@ import BaseScene from './baseScene.js';
 
 export default class BedroomBase extends BaseScene {
     /**
-     * Escena base para la habitacion. Coloca los elementos comunes a
-     * la habitacion de todos los dias (cama, puerta, mesa, armarios...)
+     * Escena base para la habitacion. Coloca los elementos que se mantienen igual todos los dias
      * @extends BaseScene
      * @param {String} name - id de la escena
      */
     constructor(name) {
         super(name);
     }
-
-    // Metodo que se llama al terminar de crear la escena. 
-    onCreate(params) {
-        super.onCreate(params);
-
-        this.phoneManager.topLid.visible = false;
-        this.phoneManager.botLid.visible = false;
-    }
-
+    
     create(params) {
         super.create(params);
 
@@ -59,7 +50,7 @@ export default class BedroomBase extends BaseScene {
         door1Closed.setDepth(bg.depth + 3);
         door1Opened.setDepth(door1Closed.depth - 1);
         wardrobe1.setDepth(door1Opened.depth - 1);
-        wardrobe1.setInteractive({ useHandCursor: true  });
+        wardrobe1.setInteractive({ useHandCursor: true });
         wardrobe1.on('pointerdown', () => {
             if (door1Opened.visible) {
                 this.dialogManager.setNode(this.wardrobe1Node)
@@ -72,7 +63,7 @@ export default class BedroomBase extends BaseScene {
         door3Closed.setDepth(bg.depth + 3);
         door3Opened.setDepth(door2Closed.depth - 1);
         wardrobe2.setDepth(door2Opened.depth - 1);
-        wardrobe2.setInteractive({ useHandCursor: true  });
+        wardrobe2.setInteractive({ useHandCursor: true });
         wardrobe2.on('pointerdown', () => {
             if (door2Opened.visible || door3Opened.visible) {
                 this.dialogManager.setNode(this.wardrobe2Node)
@@ -81,12 +72,11 @@ export default class BedroomBase extends BaseScene {
 
 
         // Ordenador
+        this.pcNode = null;
+        let pc = this.add.rectangle(276, 360, 150, 162, 0xfff, 0).setOrigin(0, 0);
+        pc.setInteractive({ useHandCursor: true });
         // Al hacer click sobre el, se cambia el nodo en el dialogManager, y si
         // se lanza el evento turnPC, se cambia a la escena del ordenador
-        this.pcNode = null;
-
-        let pc = this.add.rectangle(276, 360, 150, 162, 0xfff, 0).setOrigin(0, 0);
-        pc.setInteractive({ useHandCursor: true  });
         pc.on('pointerdown', () => {
             this.dialogManager.setNode(this.pcNode);
         });
@@ -100,27 +90,24 @@ export default class BedroomBase extends BaseScene {
         // Puerta de la habitacion
         let doorClosed = this.add.image(6, this.CANVAS_HEIGHT, 'bed_livingDoorClosed').setOrigin(0, 1).setScale(this.scale);
         let doorOpened = this.add.image(6, this.CANVAS_HEIGHT, 'bed_livingDoorOpened').setOrigin(0, 1).setScale(this.scale);
-        super.toggleDoor(doorClosed, doorOpened, false);
-
-        // Al hacer click sobre la puerta abierta, se 
-        // pasa al salon con la camara en la derecha
-        doorOpened.on('pointerdown', () => {
+        // Al hacer click sobre la puerta abierta, se pasa al salon con la camara en la derecha
+        super.toggleDoor(doorClosed, doorOpened, () => {
             let params = {
-                left: false
+                camPos: "right"
             };
             this.gameManager.changeScene(this.livingroom, params, true);
-        });
+        }, false);
 
-
+        
         // Cama
-        // Al igual que con el interior de los armarios, se recoloca su profundidad y al
-        // hacer click sobre ella, se cambia el nodo en el dialogManager
+        // Al igual que con el interior de los armarios, se recoloca su profundidad 
+        // y al hacer click sobre ella, se cambia el nodo en el dialogManager
         this.bed = this.add.image(bg.displayWidth, this.CANVAS_HEIGHT, 'bed').setOrigin(1, 1).setScale(this.scale);
-        this.bed.setInteractive({ useHandCursor: true  });
+        this.bed.setInteractive({ useHandCursor: true });
         this.bed.setDepth(10);
         this.bedNode = null;
         this.bed.on('pointerdown', () => {
-            this.dialogManager.setNode(this.bedNode)
+            this.dialogManager.setNode(this.bedNode);
         })
 
 

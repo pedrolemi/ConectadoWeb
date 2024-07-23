@@ -10,7 +10,7 @@ export default class LivingroomMorningDay1 extends LivingroomBase {
         super.create(params);
 
         this.bedroom = "BedroomMorningDay1";
-        this.playground = "Test";
+        this.playground = "PlaygroundMorningDay1";
 
         let tr = {
             x: 460,
@@ -26,11 +26,17 @@ export default class LivingroomMorningDay1 extends LivingroomBase {
 
         let nodes = this.cache.json.get('livingroomMorningDay1');
         let momNode = super.readNodes("root", nodes, "day1\\livingroomMorningDay1", "mom", true);
-
-
+        
+        if(!this.gameManager.getValue(this.gameManager.bagPicked)) {
+            this.doorNode = super.readNodes("root", nodes, "day1\\livingroomMorningDay1", "door", true);
+        }
+        
         this.dispatcher.addOnce("setTalked", this, (obj) => {
             console.log(obj);
             this.gameManager.setValue("talked", true, this.blackboard);
+        });
+        this.dispatcher.add("pickBag", this, (obj) => {
+            this.doorNode = null;
         });
     }
 }

@@ -7,6 +7,9 @@ import TextOnlyScene from './scenes/textOnlyScene.js';
 import AlarmScene from './scenes/gameLoop/alarmScene.js';
 import BedroomMorningDay1 from './scenes/gameLoop/day1/bedroomMorningDay1.js';
 import LivingroomMorningDay1 from './scenes/gameLoop/day1/livingroomMorningDay1.js';
+import PlaygroundMorningDay1 from './scenes/gameLoop/day1/playgroundMorningDay1.js';
+import StairsMorningDay1 from './scenes/gameLoop/day1/stairsMorningDay1.js';
+import CorridorMorningDay1 from './scenes/gameLoop/day1/corridorMorningDay1.js';
 
 import ComputerScene from './UI/computer/computerScene.js'
 
@@ -27,9 +30,10 @@ const config = {
     // Nota: el orden de las escenas es relevante. Las que se encuentran delante, se renderizan delante
     scene: [
         BootScene, LanguageMenu, TitleMenu, UserInfoMenu,
-        TextOnlyScene, AlarmScene, BedroomMorningDay1, LivingroomMorningDay1,
-        Test, TestMenu, ComputerScene,
-        UIManager,],
+        TextOnlyScene, AlarmScene, 
+        BedroomMorningDay1, LivingroomMorningDay1, PlaygroundMorningDay1, StairsMorningDay1, CorridorMorningDay1,
+        Test, TestMenu, 
+        ComputerScene, UIManager,],
     autoFocus: true,
     disableContextMenu: true,        // Desactivar que aparezca el menu de inspeccionar al hacer click derecho
     render: {

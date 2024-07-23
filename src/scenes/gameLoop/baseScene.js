@@ -96,11 +96,15 @@ export default class BaseScene extends Phaser.Scene {
         // console.log(params);
 
         this.dialogManager.changeScene(this);
+
+        // Por defecto se pone la camara en el centro y si hay parametros que indiquen
+        // donde colocar la camara, se coloca a la izquierda o a la derecha
+        this.cameras.main.scrollX = this.rightBound / 2 - this.CANVAS_WIDTH / 2;
         if (params) {
-            if (params.left === undefined || params.left === true) {
+            if (params.camPos === "left") {
                 this.cameras.main.scrollX = this.leftBound;
             }
-            else {
+            else if (params.camPos === "right") {
                 this.cameras.main.scrollX = this.rightBound - this.CANVAS_WIDTH;
             }
         }
@@ -492,11 +496,12 @@ export default class BaseScene extends Phaser.Scene {
      * al interactuar con ella (al hacer click o al pasar/sacar el raton por encima)
      * @param {Phaser.Image} closed - imagen de la puerta cerrada
      * @param {Phaser.Image} opened - imagen de la puerta abierta 
+     * @param {Function} onClick - funcion a la que se llamara al hacer click sobre la puerta abierta
      * @param {Boolean} click - true si la imagen se cambia al hacer click, false si lo hace al pasar/sacar el raton por encima
      */
-    toggleDoor(closed, opened, click = true) {
-        closed.setInteractive({ useHandCursor: true  });
-        opened.setInteractive({ useHandCursor: true  });
+    toggleDoor(closed, opened, onClick = { }, click = true) {
+        closed.setInteractive({ useHandCursor: true });
+        opened.setInteractive({ useHandCursor: true });
 
         opened.visible = false;
         let openEvt = 'pointerdown';
@@ -515,6 +520,12 @@ export default class BaseScene extends Phaser.Scene {
             opened.visible = false;
             closed.visible = true;
         });
+
+        opened.on('pointerdown', () => { 
+            if (onClick !== null && typeof onClick === 'function') {
+                onClick();
+            }
+        })
     }
     
 }

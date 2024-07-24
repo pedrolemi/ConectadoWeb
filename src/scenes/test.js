@@ -54,16 +54,14 @@ export default class Test extends BaseScene {
         let test1 = this.cache.json.get('momDialog');
         let test2 = this.cache.json.get('dadDialog');
         let test3 = this.cache.json.get('chat1');
-        let computerTest = this.cache.json.get('computer');
 
         let momNode = super.readNodes("root", test1, "momDialog", "", true);
         let dadNode = super.readNodes("root", test2, "dadDialog", "", true);
         let choices = super.readNodes("root", test3, "chat1", "", true);
-        let computerNode = super.readNodes("root1", computerTest, "computer", "", true);
 
         // Telefono
         let chatName = this.i18next.t("textMessages.chat1", { ns: "phoneInfo", returnObjects: true });
-        this.phoneManager.phone.addChat(chatName, "testIcon");
+        this.phoneManager.phone.addChat(chatName, "Alex");
         this.phoneManager.phone.setChatNode(chatName, choices);
 
         this.phoneManager.phone.addMessage(chatName, "aawequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbwequkbaa", "a", "aaaaaaaaaa");
@@ -71,7 +69,7 @@ export default class Test extends BaseScene {
         this.phoneManager.phone.addMessage(chatName, "wequkb", "a", "dddd");
 
         chatName = this.i18next.t("textMessages.chat2", { ns: "phoneInfo", returnObjects: true });
-        this.phoneManager.phone.addChat(chatName, "testIcon");
+        this.phoneManager.phone.addChat(chatName, "Alex");
 
         console.log(this.gameManager.blackboard)
 
@@ -86,15 +84,10 @@ export default class Test extends BaseScene {
         });
 
         // Ordenador
-        let computer = this.add.image(this.CANVAS_WIDTH / 2, this.CANVAS_HEIGHT / 2, 'computerImg');
+        let computer = this.add.image(this.CANVAS_WIDTH / 2, this.CANVAS_HEIGHT / 2, 'bedroom', 'computer');
         computer.setScale(0.5);
         computer.setInteractive();
         computer.on('pointerdown', () => {
-            //this.dialogManager.setNode(computerNode);
-            this.gameManager.switchToComputer();
-        });
-
-        this.dispatcher.add("switchToComputer", this, () => {
             this.gameManager.switchToComputer();
         });
     }

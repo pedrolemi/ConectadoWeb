@@ -18,7 +18,7 @@ export default class VerticalListView extends Phaser.GameObjects.Container {
      * @param {Boolean} autocull - hacer que un los elementos que se salgan de los borden se vuelvan invisibles.
      *                              No supone un cambio visual ni funcional, pero si mejora el rendimiento (opcional)
      */
-    constructor(scene, x, y, scale, padding, boundaries, background, autocull = true) {
+    constructor(scene, x, y, scale, padding, boundaries, background, autocull = true, endPadding = 0) {
         super(scene, x, y);
 
         this.scene.add.existing(this);
@@ -30,7 +30,13 @@ export default class VerticalListView extends Phaser.GameObjects.Container {
 
         // bg (es mera decoracion)
         if (background) {
-            let bg = this.scene.add.image(0, 0, background.sprite);
+            let bg = null;
+            if (background.hasOwnProperty('atlas')) {
+                bg = this.scene.add.image(0, 0, background.atlas, background.sprite);
+            }
+            else {
+                bg = this.scene.add.image(0, 0, background.sprite);
+            }
             bg.setOrigin(0.5, 0).setAlpha(background.alpha);
             bg.displayWidth = boundaries.width;
             bg.displayHeight = boundaries.height;
@@ -85,6 +91,8 @@ export default class VerticalListView extends Phaser.GameObjects.Container {
         // PARAMETROS
         // Distancia entre los diferentes items de la lista
         this.padding = padding
+        this.endPadding = endPadding;
+        // Distancia que se deja al final de la lista
         this.autocull = autocull;
 
         // Deslizar la lista
@@ -125,12 +133,12 @@ export default class VerticalListView extends Phaser.GameObjects.Container {
                     // MOVIMIENTO   
                     // se sale por ambos lados
                     if (this.itemsCont.y < this.boundedZone.y &&  // se sale por arriba
-                        listEnd > this.boundedZone.end) {         // se sale por abajo
+                        listEnd > this.boundedZone.end - this.endPadding) {         // se sale por abajo
                         this.itemsCont.y += this.dragDiff;
                         this.cropItems();
                     }
                     // Se sale solo por abajo (solo se puede mover hacia arriba)
-                    else if (listEnd > this.boundedZone.end) {
+                    else if (listEnd > this.boundedZone.end - this.endPadding) {
                         if (this.dragDiff < 0) {  // mov hacia arriba
                             this.itemsCont.y += this.dragDiff;
                             this.cropItems();
@@ -355,10 +363,11 @@ export default class VerticalListView extends Phaser.GameObjects.Container {
                         this.movingSpeed = 0;
                     }
                 }
+                // Se desliza hacia arriba
                 else if (this.dragDiff < 0) {
                     let listEnd = this.itemsCont.y + this.lastItem.y + this.lastItem.h;
                     // Se va a poder mover hasta que entre todo el panel
-                    if (listEnd > this.boundedZone.end) {
+                    if (listEnd > this.boundedZone.end - this.endPadding) {
                         this.itemsCont.y -= this.movingSpeed;
                         this.cropItems();
                     }

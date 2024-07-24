@@ -1,0 +1,111 @@
+{
+  "frames": {
+    "livingroomDoorClosed": {
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 520,
+        "h": 990
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 520,
+        "h": 990
+      },
+      "sourceSize": {
+        "w": 520,
+        "h": 990
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "livingroomDoorOpened": {
+      "frame": {
+        "x": 0,
+        "y": 990,
+        "w": 520,
+        "h": 990
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 520,
+        "h": 990
+      },
+      "sourceSize": {
+        "w": 520,
+        "h": 990
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "bedroomDoorClosed": {
+      "frame": {
+        "x": 520,
+        "y": 0,
+        "w": 390,
+        "h": 870
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 390,
+        "h": 870
+      },
+      "sourceSize": {
+        "w": 390,
+        "h": 870
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "bedroomDoorOpened": {
+      "frame": {
+        "x": 520,
+        "y": 870,
+        "w": 390,
+        "h": 870
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 390,
+        "h": 870
+      },
+      "sourceSize": {
+        "w": 390,
+        "h": 870
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    }
+  },
+  "meta": {
+    "app": "http://free-tex-packer.com",
+    "version": "0.6.7",
+    "image": "livingroom.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 910,
+      "h": 1980
+    },
+    "scale": 1
+  }
+}

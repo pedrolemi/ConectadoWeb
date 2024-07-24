@@ -13,7 +13,7 @@ export default class OptionBox extends DialogObject {
         super(scene);
 
         let padding = 10;
-        this.box = scene.add.image(this.scene.CANVAS_WIDTH / 2, 0, 'dialog', 'optionBg.png').setOrigin(0.5, 0);
+        this.box = scene.add.image(this.scene.CANVAS_WIDTH / 2, 0, 'dialogs', 'optionBg').setOrigin(0.5, 0);
         let scale = this.scene.CANVAS_WIDTH / (this.box.width + padding);
         this.box.setScale(scale);
 

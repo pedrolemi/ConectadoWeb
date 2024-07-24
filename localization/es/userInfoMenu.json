@@ -6,15 +6,15 @@
     "inscriptionText": "No introduzcas una contraseña que ya uses. Piensa en una buena. Solo será utilizada dentro del juego.",
     "nameInput": {
         "sideText": "Nombre",
-        "defaultText": "Tu nombre "
+        "defaultText": "Tu nombre"
     },
     "userInput": {
         "sideText": "Usuario",
-        "defaultText": "Tu usuario "
+        "defaultText": "Tu usuario"
     }, 
     "passwordInput": {
         "sideText": "Contraseña",
-        "defaultText": "Tu contraseña "
+        "defaultText": "Tu contraseña"
     },
     "errorTexts": {
         "invalidName": "Hace falta tu nombre",

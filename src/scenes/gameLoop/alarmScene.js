@@ -34,7 +34,7 @@ export default class AlarmScene extends BaseScene {
         this.phoneManager.phone.setDayInfo(hour, day);
 
         // Pone la imagen de fondo con las dimensiones del canvas
-        let bg = this.add.image(0, 0, 'bedroomCeiling').setOrigin(0.5, 0);
+        let bg = this.add.image(0, 0, this.atlasName, 'bedroomCeiling').setOrigin(0.5, 0);
         let scale = this.CANVAS_HEIGHT / bg.height;
         bg.setScale(scale);
 

@@ -18,17 +18,17 @@ export default class BedroomMorningDay1 extends BedroomBase {
 
         // Mochila
         let bagNode = super.readNodes("root", nodes, "day1\\bedroomMorningDay1", "bag", true);
-        let bag = this.add.image(170, this.CANVAS_HEIGHT - 170, 'bag').setOrigin(0, 0).setScale(this.scale);
+        let bag = this.add.image(170, this.CANVAS_HEIGHT - 170, this.atlasName, 'bag').setOrigin(0, 0).setScale(this.scale);
         bag.setInteractive({ useHandCursor: true });
         bag.on('pointerdown', () => {
             this.dialogManager.setNode(bagNode)
         });
 
         // Ropa
-        this.add.image(852 * this.scale + 1, 848 * this.scale - 1, 'bedroomJacket').setOrigin(0, 0).setScale(this.scale);
-        this.add.image(2899 * this.scale + 1, 1296 * this.scale - 1, 'clothes1').setOrigin(0, 0).setScale(this.scale).setDepth(this.bed + 1);
-        this.add.image(2704 * this.scale + 1, 963 * this.scale - 1, 'clothes2').setOrigin(0, 0).setScale(this.scale).setDepth(this.bed + 1);
-        this.add.image(2061 * this.scale + 1, 928 * this.scale - 1, 'clothes3').setOrigin(0, 0).setScale(this.scale);
+        this.add.image(852 * this.scale + 1, 848 * this.scale - 1, this.atlasName, 'bedroomJacket').setOrigin(0, 0).setScale(this.scale);
+        this.add.image(2899 * this.scale + 1, 1296 * this.scale - 1, this.atlasName, 'clothes1').setOrigin(0, 0).setScale(this.scale).setDepth(this.bed + 1);
+        this.add.image(2704 * this.scale + 1, 963 * this.scale - 1, this.atlasName, 'clothes2').setOrigin(0, 0).setScale(this.scale).setDepth(this.bed + 1);
+        this.add.image(2061 * this.scale + 1, 928 * this.scale - 1, this.atlasName, 'clothes3').setOrigin(0, 0).setScale(this.scale);
 
 
         this.dispatcher.add("turnPC", this, (obj) => {

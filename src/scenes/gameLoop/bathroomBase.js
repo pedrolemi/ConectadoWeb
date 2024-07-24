@@ -8,12 +8,12 @@ export default class BathroomBase extends BaseScene {
      * @param {String} name - id de la escena
      */
     constructor(name) {
-        super(name);
+        super(name, 'bathroom');
     }
-    
+
     create(params) {
         super.create(params);
-        
+
         this.corridor = "";
 
         // Pone la imagen de fondo con las dimensiones del canvas
@@ -29,8 +29,8 @@ export default class BathroomBase extends BaseScene {
             x: 1003 * this.scale,
             y: 168 * this.scale
         };
-        let doorClosed = this.add.image(doorPos.x, doorPos.y, 'bathroomDoorClosed').setOrigin(0, 0).setScale(this.scale);
-        let doorOpened = this.add.image(doorPos.x, doorPos.y, 'bathroomDoorOpened').setOrigin(0, 0).setScale(this.scale);
+        let doorClosed = this.add.image(doorPos.x, doorPos.y, this.atlasName, 'bathroomDoorClosed').setOrigin(0, 0).setScale(this.scale);
+        let doorOpened = this.add.image(doorPos.x, doorPos.y, this.atlasName, 'bathroomDoorOpened').setOrigin(0, 0).setScale(this.scale);
         // Al hacer click, si hay algun dialogo que mostrar (para indicar que no se puede entrar), se
         // mostrara. En caso contrario, se pasara a la escena del bano sin eliminar esta escena
         super.toggleDoor(doorClosed, doorOpened, () => {
@@ -42,18 +42,18 @@ export default class BathroomBase extends BaseScene {
 
 
         // Puerta del primer cubiculo
-        let stall1DoorClosed = this.add.image(1911 * this.scale, 296 * this.scale, 'bathroomStall1Closed').setOrigin(0, 0).setScale(this.scale);
-        let stall1DoorOpened = this.add.image(1742 * this.scale, 276 * this.scale, 'bathroomStall1Opened').setOrigin(0, 0).setScale(this.scale);
+        let stall1DoorClosed = this.add.image(1911 * this.scale, 296 * this.scale, this.atlasName, 'bathroomStall1Closed').setOrigin(0, 0).setScale(this.scale);
+        let stall1DoorOpened = this.add.image(1742 * this.scale, 276 * this.scale, this.atlasName, 'bathroomStall1Opened').setOrigin(0, 0).setScale(this.scale);
         super.toggleDoor(stall1DoorClosed, stall1DoorOpened);
 
         // Puerta del segundo cubiculo
-        this.stall2 = this.add.image(2155 * this.scale, -6 * this.scale, 'stall2').setOrigin(0, 0).setScale(this.scale);
-        let stall2DoorClosed = this.add.image(2197 * this.scale, 244 * this.scale, 'bathroomStall2Closed').setOrigin(0, 0).setScale(this.scale);
-        let stall2DoorOpened = this.add.image(1844 * this.scale, 240 * this.scale, 'bathroomStall2Opened').setOrigin(0, 0).setScale(this.scale);
+        this.stall2 = this.add.image(2155 * this.scale, -6 * this.scale, this.atlasName, 'stall2').setOrigin(0, 0).setScale(this.scale);
+        let stall2DoorClosed = this.add.image(2197 * this.scale, 244 * this.scale, this.atlasName, 'bathroomStall2Closed').setOrigin(0, 0).setScale(this.scale);
+        let stall2DoorOpened = this.add.image(1844 * this.scale, 240 * this.scale, this.atlasName, 'bathroomStall2Opened').setOrigin(0, 0).setScale(this.scale);
         super.toggleDoor(stall2DoorClosed, stall2DoorOpened);
-        
+
         // Tercer cubiculo (puerta cerrada siempre)
-        this.stall3 = this.add.image(2395 * this.scale, -6 * this.scale, 'stall3').setOrigin(0, 0).setScale(this.scale);
+        this.stall3 = this.add.image(2395 * this.scale, -6 * this.scale, this.atlasName, 'stall3').setOrigin(0, 0).setScale(this.scale);
 
         // Se ajustan las profundidades de los cubiculos para poder poner cosas dentro de ellos
         stall1DoorClosed.setDepth(1);
@@ -63,7 +63,7 @@ export default class BathroomBase extends BaseScene {
         stall2DoorOpened.setDepth(this.stall2.depth + 1);
         this.stall3.setDepth(stall2DoorOpened.depth + 1);
 
-        
+
         // El unico sitio al que se puede volver es la escena de la que se 
         // viene, por lo que si esta guardada en los parametros, se establece
         if (params) {

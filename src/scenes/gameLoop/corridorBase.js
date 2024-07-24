@@ -8,7 +8,7 @@ export default class CorridorBase extends BaseScene {
      * @param {String} name - id de la escena
      */
     constructor(name) {
-        super(name);
+        super(name, 'corridor');
     }
 
     create(params) {
@@ -54,8 +54,8 @@ export default class CorridorBase extends BaseScene {
             y: 596 * this.scale
         };
         this.boysBathroomNode = null;
-        let boysBathroomdoorClosed = this.add.image(doorPos.x, doorPos.y, 'boysDoorClosed').setOrigin(0, 0).setScale(this.scale);
-        let boysBathroomDoorOpened = this.add.image(doorPos.x, doorPos.y, 'boysDoorOpened').setOrigin(0, 0).setScale(this.scale);
+        let boysBathroomdoorClosed = this.add.image(doorPos.x, doorPos.y, this.atlasName, 'boysDoorClosed').setOrigin(0, 0).setScale(this.scale);
+        let boysBathroomDoorOpened = this.add.image(doorPos.x, doorPos.y, this.atlasName, 'boysDoorOpened').setOrigin(0, 0).setScale(this.scale);
         // Al hacer click, si hay algun dialogo que mostrar (para indicar que no se puede entrar), se
         // mostrara. En caso contrario, se pasara a la escena del bano sin eliminar esta escena
         super.toggleDoor(boysBathroomdoorClosed, boysBathroomDoorOpened, () => {
@@ -65,7 +65,7 @@ export default class CorridorBase extends BaseScene {
             else {
                 let params = {
                     camPos: "left",
-                    corridor: this 
+                    corridor: this
                 }
                 this.gameManager.changeScene(this.boysBathroom, params, true);
             }
@@ -77,8 +77,8 @@ export default class CorridorBase extends BaseScene {
             y: 636 * this.scale
         };
         this.girlsBathroomNode = null;
-        let girlsBathroomDoorClosed = this.add.image(doorPos.x, doorPos.y, 'girlsDoorClosed').setOrigin(0, 0).setScale(this.scale);
-        let girlsBathroomDoorOpened = this.add.image(doorPos.x, doorPos.y, 'girlsDoorOpened').setOrigin(0, 0).setScale(this.scale);
+        let girlsBathroomDoorClosed = this.add.image(doorPos.x, doorPos.y, this.atlasName, 'girlsDoorClosed').setOrigin(0, 0).setScale(this.scale);
+        let girlsBathroomDoorOpened = this.add.image(doorPos.x, doorPos.y, this.atlasName, 'girlsDoorOpened').setOrigin(0, 0).setScale(this.scale);
         // Al hacer click, si hay algun dialogo que mostrar (para indicar que no se puede entrar), se
         // mostrara. En caso contrario, se pasara a la escena del bano sin eliminar esta escena
         super.toggleDoor(girlsBathroomDoorClosed, girlsBathroomDoorOpened, () => {
@@ -88,7 +88,7 @@ export default class CorridorBase extends BaseScene {
             else {
                 let params = {
                     camPos: "left",
-                    corridor: this 
+                    corridor: this
                 }
                 this.gameManager.changeScene(this.girlsBathroom, params, true);
             }
@@ -101,8 +101,8 @@ export default class CorridorBase extends BaseScene {
             y: 341 * this.scale
         };
         this.classNode = null;
-        let classDoorClosed = this.add.image(doorPos.x, doorPos.y, 'classDoorClosed').setOrigin(0, 0).setScale(this.scale);
-        let classDoorOpened = this.add.image(doorPos.x, doorPos.y, 'classDoorOpened').setOrigin(0, 0).setScale(this.scale);
+        let classDoorClosed = this.add.image(doorPos.x, doorPos.y, this.atlasName, 'classDoorClosed').setOrigin(0, 0).setScale(this.scale);
+        let classDoorOpened = this.add.image(doorPos.x, doorPos.y, this.atlasName, 'classDoorOpened').setOrigin(0, 0).setScale(this.scale);
         // Al hacer click, si hay algun dialogo que mostrar, se mostrara. 
         // En caso contrario, se pasara a la escena de la clase y se borrara esta escena
         super.toggleDoor(classDoorClosed, classDoorOpened, () => {
@@ -117,7 +117,7 @@ export default class CorridorBase extends BaseScene {
             }
         }, false);
 
-        
+
         // Establece por defecto el nodo del bano contrario segun el genero del jugador
         let nodes = this.cache.json.get('everydayDialog');
         if (this.gameManager.getUserInfo().gender === "male") {
@@ -126,6 +126,6 @@ export default class CorridorBase extends BaseScene {
         else {
             this.boysBathroomNode = super.readNodes("root", nodes, "everydayDialog", "corridor.bathroom", true);
         }
-        
+
     }
 }

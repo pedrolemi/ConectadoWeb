@@ -160,6 +160,7 @@ export default class Phone extends Phaser.GameObjects.Container {
      * Muestra en la pantalla de mensajes el chat indicado
      * @param {String} name - nombre del contacto
      * @param {String} icon - id de la imagen con la foto de perfil del contacto
+     *                          Nota: la id del personaje corresponde con su icono
      */
     addChat(name, icon) {
         this.messagesScreen.addChat(name, icon);

@@ -1,0 +1,159 @@
+{
+  "frames": {
+    "classDoorClosed": {
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 230,
+        "h": 1010
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 230,
+        "h": 1010
+      },
+      "sourceSize": {
+        "w": 230,
+        "h": 1010
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "classDoorOpened": {
+      "frame": {
+        "x": 230,
+        "y": 0,
+        "w": 230,
+        "h": 1010
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 230,
+        "h": 1010
+      },
+      "sourceSize": {
+        "w": 230,
+        "h": 1010
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "boysDoorClosed": {
+      "frame": {
+        "x": 460,
+        "y": 0,
+        "w": 80,
+        "h": 490
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 80,
+        "h": 490
+      },
+      "sourceSize": {
+        "w": 80,
+        "h": 490
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "boysDoorOpened": {
+      "frame": {
+        "x": 460,
+        "y": 490,
+        "w": 80,
+        "h": 490
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 80,
+        "h": 490
+      },
+      "sourceSize": {
+        "w": 80,
+        "h": 490
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "girlsDoorClosed": {
+      "frame": {
+        "x": 540,
+        "y": 0,
+        "w": 70,
+        "h": 410
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 70,
+        "h": 410
+      },
+      "sourceSize": {
+        "w": 70,
+        "h": 410
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "girlsDoorOpened": {
+      "frame": {
+        "x": 540,
+        "y": 410,
+        "w": 70,
+        "h": 410
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 70,
+        "h": 410
+      },
+      "sourceSize": {
+        "w": 70,
+        "h": 410
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    }
+  },
+  "meta": {
+    "app": "http://free-tex-packer.com",
+    "version": "0.6.7",
+    "image": "texture.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 610,
+      "h": 1010
+    },
+    "scale": 1
+  }
+}

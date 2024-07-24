@@ -1,0 +1,111 @@
+{
+  "frames": {
+    "logo e-ucm": {
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 467,
+        "h": 177
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 467,
+        "h": 177
+      },
+      "sourceSize": {
+        "w": 467,
+        "h": 177
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "AF_TCT_Logo_ESP_CMYK_BN_POS": {
+      "frame": {
+        "x": 467,
+        "y": 0,
+        "w": 880,
+        "h": 319
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 880,
+        "h": 319
+      },
+      "sourceSize": {
+        "w": 880,
+        "h": 319
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Orientación-y-Educación-Madrid": {
+      "frame": {
+        "x": 1347,
+        "y": 0,
+        "w": 640,
+        "h": 635
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 640,
+        "h": 635
+      },
+      "sourceSize": {
+        "w": 640,
+        "h": 635
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "impress-logo": {
+      "frame": {
+        "x": 0,
+        "y": 319,
+        "w": 800,
+        "h": 350
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 800,
+        "h": 350
+      },
+      "sourceSize": {
+        "w": 800,
+        "h": 350
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    }
+  },
+  "meta": {
+    "app": "http://free-tex-packer.com",
+    "version": "0.6.7",
+    "image": "someBrands.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 1987,
+      "h": 669
+    },
+    "scale": 1
+  }
+}

@@ -32,7 +32,14 @@ export default class ListViewButton extends Phaser.GameObjects.Container {
 
         // Fondo
         // (importante que su origen sea 0.5, 0 para que el area de colision se ajuste correctamente)
-        let image = this.scene.add.image(0, 0, img);
+        // La imagen pertenece a un atlas
+        let image = null;
+        if (img.hasOwnProperty('atlas')) {
+            image = this.scene.add.image(0, 0, img.atlas, img.frame);
+        }
+        else {
+            image = this.scene.add.image(0, 0, img);
+        }
         image.setOrigin(0.5, 0).setScale(imgScaleVec.x, imgScaleVec.y);
         this.add(image);
 
@@ -125,8 +132,8 @@ export default class ListViewButton extends Phaser.GameObjects.Container {
 
     /**
      * Cambiar la visiblidad del objeto
-     * Nota: hay que sobrescribir el metodo para que al cambiar la visibilidad del objeto,
-     * tambien afecte al collider
+     * Nota: se sobrescribe el metodo para que tb cambie la visiblidad de las areas de colision,
+     * que pertenecen a la escena
      * @param {Boolean} visible - visible o invisible 
      */
     setVisible(visible) {
@@ -134,6 +141,11 @@ export default class ListViewButton extends Phaser.GameObjects.Container {
         this.hit.setVisible(visible);
     }
 
+    /**
+     * Destruir al objeto
+     * Nota: se sobrescribe el metodo para que tb se destruyan las areas de colision,
+     * que pertenecen a la escena
+     */
     destroy() {
         super.destroy();
         this.hit.destroy();

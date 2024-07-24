@@ -35,7 +35,7 @@ export default class AlarmScreen extends BaseScreen {
         this.dayText = this.scene.add.text(this.BG_X, this.BG_Y * 0.8, "", dayTextConfig).setOrigin(0.5, 0.5);
 
         // Se ponen la imagen del deslizable en la pantalla
-        let scrollable = scene.add.image(this.BG_X, this.BG_Y * 1.18, 'homeButton').setScale(this.ICON_SCALE);
+        let scrollable = scene.add.image(this.BG_X, this.BG_Y * 1.18, 'phoneElements', 'homeButton').setScale(this.ICON_SCALE);
         scrollable.setInteractive({ draggable: true });
 
         // Limites de hasta donde se puede deslizar el icono

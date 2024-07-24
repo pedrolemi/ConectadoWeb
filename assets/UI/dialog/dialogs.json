@@ -1,0 +1,111 @@
+{
+  "frames": {
+    "textbox": {
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 914,
+        "h": 218
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 3,
+        "y": 32,
+        "w": 914,
+        "h": 218
+      },
+      "sourceSize": {
+        "w": 920,
+        "h": 250
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "optionBg": {
+      "frame": {
+        "x": 0,
+        "y": 218,
+        "w": 1277,
+        "h": 60
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 4,
+        "w": 1277,
+        "h": 60
+      },
+      "sourceSize": {
+        "w": 1277,
+        "h": 68
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "textboxName": {
+      "frame": {
+        "x": 914,
+        "y": 0,
+        "w": 216,
+        "h": 60
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 127,
+        "y": 5,
+        "w": 216,
+        "h": 60
+      },
+      "sourceSize": {
+        "w": 920,
+        "h": 250
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "optionBgOpaque": {
+      "frame": {
+        "x": 0,
+        "y": 278,
+        "w": 1277,
+        "h": 60
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 4,
+        "w": 1277,
+        "h": 60
+      },
+      "sourceSize": {
+        "w": 1277,
+        "h": 68
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    }
+  },
+  "meta": {
+    "app": "http://free-tex-packer.com",
+    "version": "0.6.7",
+    "image": "dialogs.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 1277,
+      "h": 338
+    },
+    "scale": 1
+  }
+}

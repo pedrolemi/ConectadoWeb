@@ -266,7 +266,7 @@ export default class UserInfoMenu extends Phaser.Scene {
         text.setOrigin(1, 0.5);
         container.add(text);
 
-        let textInput = new TextInput(this, 0, 0, 1, defaultText, 23, { R: 200, G: 200, B: 200 },
+        let textInput = new TextInput(this, 0, 0, 1, defaultText + " ", 23, { R: 200, G: 200, B: 200 },
             this.gameManager.inputBox.fillName, this.gameManager.inputBox.edgeName, 'adventpro-regular',
             {
                 area: new Phaser.Geom.Rectangle(this.gameManager.inputBox.offset, this.gameManager.inputBox.offset, this.gameManager.inputBox.width, this.gameManager.inputBox.height),

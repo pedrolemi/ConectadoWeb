@@ -9,9 +9,9 @@ export default class MainScreen extends BaseScreen {
         this.ICON_Y = this.BG_Y * 1.1;
 
         // Se ponen las imagenes en la pantalla
-        let statusButton = scene.add.image(this.BG_X - this.BG_X / 6, this.ICON_Y, 'statusIcon').setScale(this.ICON_SCALE);
-        let chatButton = scene.add.image(this.BG_X, this.ICON_Y, 'chatIcon').setScale(this.ICON_SCALE);
-        let settingsButton = scene.add.image(this.BG_X - this.BG_X / 6, this.ICON_Y * 1.25, 'settingsIcon').setScale(this.ICON_SCALE);
+        let statusButton = scene.add.image(this.BG_X - this.BG_X / 6, this.ICON_Y, 'phoneElements', 'statusIcon').setScale(this.ICON_SCALE);
+        let chatButton = scene.add.image(this.BG_X, this.ICON_Y, 'phoneElements', 'chatIcon').setScale(this.ICON_SCALE);
+        let settingsButton = scene.add.image(this.BG_X - this.BG_X / 6, this.ICON_Y * 1.25, 'phoneElements', 'settingsIcon').setScale(this.ICON_SCALE);
 
         // Se anaden las imagenes a la escena
         this.add(statusButton);

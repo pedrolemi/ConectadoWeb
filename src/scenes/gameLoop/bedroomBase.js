@@ -8,9 +8,9 @@ export default class BedroomBase extends BaseScene {
      * @param {String} name - id de la escena
      */
     constructor(name) {
-        super(name);
+        super(name, 'bedroom');
     }
-    
+
     create(params) {
         super.create(params);
 
@@ -24,18 +24,18 @@ export default class BedroomBase extends BaseScene {
         this.rightBound = bg.displayWidth;
 
         // Puerta del armario individual
-        let door1Closed = this.add.image(2190 * this.scale, 330 * this.scale, 'wardrobeDoor1Closed').setOrigin(0, 0).setScale(this.scale);
-        let door1Opened = this.add.image(2110 * this.scale, 330 * this.scale, 'wardrobeDoor1Opened').setOrigin(0, 0).setScale(this.scale);
+        let door1Closed = this.add.image(2190 * this.scale, 330 * this.scale, this.atlasName, 'wardrobeDoor1Closed').setOrigin(0, 0).setScale(this.scale);
+        let door1Opened = this.add.image(2110 * this.scale, 330 * this.scale, this.atlasName, 'wardrobeDoor1Opened').setOrigin(0, 0).setScale(this.scale);
         super.toggleDoor(door1Closed, door1Opened);
 
         // Puerta izquierda del armario
-        let door2Closed = this.add.image(2500 * this.scale, 330 * this.scale, 'wardrobeDoor2Closed').setOrigin(0, 0).setScale(this.scale);
-        let door2Opened = this.add.image(2435 * this.scale, 307 * this.scale, 'wardrobeDoor2Opened').setOrigin(0, 0).setScale(this.scale);
+        let door2Closed = this.add.image(2500 * this.scale, 330 * this.scale, this.atlasName, 'wardrobeDoor2Closed').setOrigin(0, 0).setScale(this.scale);
+        let door2Opened = this.add.image(2435 * this.scale, 307 * this.scale, this.atlasName, 'wardrobeDoor2Opened').setOrigin(0, 0).setScale(this.scale);
         super.toggleDoor(door2Closed, door2Opened);
 
         // Puerta derecha del armario
-        let door3Closed = this.add.image(3155 * this.scale, 330 * this.scale, 'wardrobeDoor3Closed').setOrigin(1, 0).setScale(this.scale);
-        let door3Opened = this.add.image(3220 * this.scale, 330 * this.scale, 'wardrobeDoor3Opened').setOrigin(1, 0).setScale(this.scale);
+        let door3Closed = this.add.image(3155 * this.scale, 330 * this.scale, this.atlasName, 'wardrobeDoor3Closed').setOrigin(1, 0).setScale(this.scale);
+        let door3Opened = this.add.image(3220 * this.scale, 330 * this.scale, this.atlasName, 'wardrobeDoor3Opened').setOrigin(1, 0).setScale(this.scale);
         super.toggleDoor(door3Closed, door3Opened);
 
 
@@ -74,7 +74,7 @@ export default class BedroomBase extends BaseScene {
         // Ordenador
         let nodes = this.cache.json.get('everydayDialog');
         this.pcNode = super.readNodes("root", nodes, "everydayDialog", "bedroom.pc", true);
-        let pc = this.add.rectangle(276, 360, 150, 162, 0xfff, 0).setOrigin(0, 0);
+        let pc = this.add.zone(276, 360, 150, 162).setOrigin(0, 0);
         pc.setInteractive({ useHandCursor: true });
         // Al hacer click sobre el, se cambia el nodo en el dialogManager, y si
         // se lanza el evento turnPC, se cambia a la escena del ordenador
@@ -86,11 +86,11 @@ export default class BedroomBase extends BaseScene {
         });
 
         // Silla
-        this.chair = this.add.image(770 * this.scale, 859 * this.scale, 'bedroomChair').setOrigin(0, 0).setScale(this.scale);
+        this.chair = this.add.image(770 * this.scale, 859 * this.scale, this.atlasName, 'bedroomChair').setOrigin(0, 0).setScale(this.scale);
 
         // Puerta de la habitacion
-        let doorClosed = this.add.image(6, this.CANVAS_HEIGHT, 'bed_livingDoorClosed').setOrigin(0, 1).setScale(this.scale);
-        let doorOpened = this.add.image(6, this.CANVAS_HEIGHT, 'bed_livingDoorOpened').setOrigin(0, 1).setScale(this.scale);
+        let doorClosed = this.add.image(6, this.CANVAS_HEIGHT, this.atlasName, 'bedroomDoorClosed').setOrigin(0, 1).setScale(this.scale);
+        let doorOpened = this.add.image(6, this.CANVAS_HEIGHT, this.atlasName, 'bedroomDoorOpened').setOrigin(0, 1).setScale(this.scale);
         // Al hacer click sobre la puerta abierta, se pasa al salon con la camara en la derecha
         super.toggleDoor(doorClosed, doorOpened, () => {
             let params = {
@@ -99,11 +99,11 @@ export default class BedroomBase extends BaseScene {
             this.gameManager.changeScene(this.livingroom, params, true);
         }, false);
 
-        
+
         // Cama
         // Al igual que con el interior de los armarios, se recoloca su profundidad 
         // y al hacer click sobre ella, se cambia el nodo en el dialogManager
-        this.bed = this.add.image(bg.displayWidth, this.CANVAS_HEIGHT, 'bed').setOrigin(1, 1).setScale(this.scale);
+        this.bed = this.add.image(bg.displayWidth, this.CANVAS_HEIGHT, this.atlasName, 'bed').setOrigin(1, 1).setScale(this.scale);
         this.bed.setInteractive({ useHandCursor: true });
         this.bed.setDepth(10);
         this.bedNode = null;
@@ -111,8 +111,6 @@ export default class BedroomBase extends BaseScene {
             this.dialogManager.setNode(this.bedNode);
         })
 
-
         this.gameManager.setValue(this.gameManager.bagPicked, false);
-
     }
 }

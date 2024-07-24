@@ -1,0 +1,87 @@
+{
+  "frames": {
+    "first": {
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 87
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 87
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 87
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "second": {
+      "frame": {
+        "x": 0,
+        "y": 87,
+        "w": 64,
+        "h": 87
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 87
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 87
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "third": {
+      "frame": {
+        "x": 0,
+        "y": 174,
+        "w": 64,
+        "h": 87
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 87
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 87
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    }
+  },
+  "meta": {
+    "app": "http://free-tex-packer.com",
+    "version": "0.6.7",
+    "image": "medals.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 64,
+      "h": 261
+    },
+    "scale": 1
+  }
+}

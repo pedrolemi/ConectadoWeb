@@ -33,13 +33,13 @@ export default class MessagesScreen extends BaseScreen {
      */
     createChatButton(icon, name, textConfig, onClick) {
         // Anade la imagen del boton. Dependiendo del numero de chats que haya, se iran creando abajo
-        let button = this.scene.add.image(this.BG_X, this.BG_Y * 0.5, 'chatButton').setScale(0.6);
+        let button = this.scene.add.image(this.BG_X, this.BG_Y * 0.5, 'phoneElements', 'chatButton').setScale(0.6);
         button.y += (button.displayHeight + 7) * this.chatNum;
         button.setInteractive();
 
         // Anade el texto
         let nameText = this.scene.add.text(button.x - button.displayWidth / 3.5, button.y, name, textConfig).setOrigin(0, 0.5);
-        let iconImage = this.scene.add.image(button.x - button.displayWidth / 2, button.y, icon);
+        let iconImage = this.scene.add.image(button.x - button.displayWidth / 2, button.y, 'avatars', icon);
         iconImage.setScale(button.displayHeight / iconImage.displayHeight);
         iconImage.x += iconImage.displayWidth / 2;
 

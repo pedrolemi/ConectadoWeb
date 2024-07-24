@@ -14,7 +14,7 @@ export default class TextBox extends DialogObject {
         this.padding = 10;        // Espacio entre la caja y los bordes del canvas
 
         // Imagen de la caja
-        this.box = scene.add.image(this.scene.CANVAS_WIDTH / 2, this.scene.CANVAS_HEIGHT - this.padding, 'dialog', 'textbox.png').setOrigin(0.5, 1);
+        this.box = scene.add.image(this.scene.CANVAS_WIDTH / 2, this.scene.CANVAS_HEIGHT - this.padding, 'dialogs', 'textbox').setOrigin(0.5, 1);
         let horizontalScale = (this.scene.CANVAS_WIDTH - this.padding * 2) / this.box.width;
         this.box.setScale(horizontalScale, 1);
         this.box.visible = true;
@@ -25,7 +25,7 @@ export default class TextBox extends DialogObject {
         });
 
         // Imagen de la caja del nombre
-        this.nameBox = scene.add.image(this.scene.CANVAS_WIDTH / 2, this.scene.CANVAS_HEIGHT - this.padding, 'dialog', 'textboxName.png').setOrigin(0.5, 1);
+        this.nameBox = scene.add.image(this.scene.CANVAS_WIDTH / 2, this.scene.CANVAS_HEIGHT - this.padding, 'dialogs', 'textboxName').setOrigin(0.5, 1);
         this.nameBox.setScale(horizontalScale, 1);
         this.nameBox.visible = true;
 

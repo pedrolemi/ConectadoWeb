@@ -233,7 +233,8 @@ export default class DialogManager {
                 }, this.currNode.replyDelay);
             }
             else if (this.currNode.type === "socialNetMessage") {
-                // escribir en la red social
+                this.gameManager.computerScene.socialNetScreen.addCommentToPost(this.currNode.user, this.currNode.postName,
+                    this.currNode.character, this.currNode.name, this.currNode.text);
 
                 this.currNode = this.currNode.next[0];
                 this.processNode();

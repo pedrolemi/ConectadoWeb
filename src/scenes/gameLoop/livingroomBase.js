@@ -8,7 +8,7 @@ export default class LivingroomBase extends BaseScene {
      * @param {String} name - id de la escena
      */
     constructor(name) {
-        super(name);
+        super(name, 'livingroom');
     }
 
     create(params) {
@@ -16,7 +16,7 @@ export default class LivingroomBase extends BaseScene {
 
         this.bedroom = "";
         this.playground = "";
-        
+
         this.nextHour = "";
 
         // Pone la imagen de fondo con las dimensiones del canvas
@@ -29,8 +29,8 @@ export default class LivingroomBase extends BaseScene {
         // Puerta a la calle
         this.doorNode = null;
         this.canExit = false;
-        let playgroundDoorClosed = this.add.image(254 * this.scale - 1, 10 * this.scale - 1, 'living_playDoorClosed').setOrigin(0, 0).setScale(this.scale);
-        let playgroundDoorOpened = this.add.image(254 * this.scale - 1, 10 * this.scale - 1, 'living_playDoorOpened').setOrigin(0, 0).setScale(this.scale);
+        let playgroundDoorClosed = this.add.image(254 * this.scale - 1, 10 * this.scale - 1, this.atlasName, 'livingroomDoorClosed').setOrigin(0, 0).setScale(this.scale);
+        let playgroundDoorOpened = this.add.image(254 * this.scale - 1, 10 * this.scale - 1, this.atlasName, 'livingroomDoorOpened').setOrigin(0, 0).setScale(this.scale);
         // Al hacer click sobre la puerta abierta, si hay algun dialogo que mostrar (para indicar que no se puede salir), se 
         // mostrara. En caso contrario, se pasara a la escena del patio con la camara a la izquierda y se eliminara esta escena
         super.toggleDoor(playgroundDoorClosed, playgroundDoorOpened, () => {
@@ -47,10 +47,10 @@ export default class LivingroomBase extends BaseScene {
 
 
         // Puerta a la habitacion
-        let bedroomDoorClosed = this.add.image(3958 * this.scale - 5, 175 * this.scale - 2, 'living_bedDoorClosed').setOrigin(0, 0).setScale(this.scale);
-        let bedroomDoorOpened = this.add.image(3956 * this.scale - 4, 175 * this.scale - 2, 'living_bedDoorOpened').setOrigin(0, 0).setScale(this.scale);
+        let bedroomDoorClosed = this.add.image(3958 * this.scale - 5, 175 * this.scale - 2, this.atlasName, 'bedroomDoorClosed').setOrigin(0, 0).setScale(this.scale);
+        let bedroomDoorOpened = this.add.image(3956 * this.scale - 4, 175 * this.scale - 2, this.atlasName, 'bedroomDoorOpened').setOrigin(0, 0).setScale(this.scale);
         // Al hacer click sobre la puerta abierta, se pasa a la habitacion con la camara en la izquierda
-        super.toggleDoor(bedroomDoorClosed, bedroomDoorOpened, () => {  
+        super.toggleDoor(bedroomDoorClosed, bedroomDoorOpened, () => {
             let params = {
                 camPos: "left"
             };

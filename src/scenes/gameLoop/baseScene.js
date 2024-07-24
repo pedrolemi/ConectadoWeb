@@ -8,9 +8,12 @@ export default class BaseScene extends Phaser.Scene {
      * del canvas o los managers y posiciones de los retratos de los personajes 
      * @extends Phaser.Scene
      * @param {String} name - id de la escena
+     * @param {String} atlasName - nombre del atlas que se utiliza en esta escena
      */
-    constructor(name) {
+    constructor(name, atlasName) {
         super({ key: name });
+
+        this.atlasName = atlasName;
     }
 
     create(params) {
@@ -383,7 +386,7 @@ export default class BaseScene extends Phaser.Scene {
             node.text = text;
 
             node.character = fileObj[id].character;
-            // Obtiene el nombre del jugador del archivo de nombres localizados
+            // Obtiene el nombre del personaje del archivo de nombres localizados
             // En el caso de se trate del propio del jugador, obtiene el pronombre personal Tu
             // traducido en el idioma correspondiente
             node.name = this.i18next.t(fileObj[id].character, { ns: "names" });
@@ -392,7 +395,7 @@ export default class BaseScene extends Phaser.Scene {
             node.user = fileObj[id].user;
 
             // Guarda el numero del post del usuario
-            node.post = filed[id].post;
+            node.postName = filed[id].postName;
 
             // Si hay un nodo despues de este, se crea de manera recursiva
             if (fileObj[id].next) {

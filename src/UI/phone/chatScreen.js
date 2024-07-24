@@ -13,6 +13,7 @@ export default class ChatScreen extends BaseScreen {
      * @param {BaseScreen} prevScreen - pantalla anterior
      * @param {String} name - nombre del contacto
      * @param {String} icon - icono del contacto
+     *                          Nota: el id del personaje corresponde con su icono
      */
     constructor(scene, phone, prevScreen, name, icon) {
         super(scene, phone, 'chatBg', prevScreen);
@@ -40,7 +41,7 @@ export default class ChatScreen extends BaseScreen {
         this.nameText = this.scene.add.text(this.BG_X - this.bg.displayWidth * 0.15, this.BG_Y * 0.36, name, textConfig).setOrigin(0, 0.5);
 
         // Crea el icono
-        this.iconImage = this.scene.add.image(this.nameText.x, this.nameText.y, icon);
+        this.iconImage = this.scene.add.image(this.nameText.x, this.nameText.y, 'avatars', icon);
         this.iconImage.setScale((this.nameText.displayHeight / this.iconImage.displayHeight) * 1.5);
         this.iconImage.x -= this.iconImage.displayWidth;
 
@@ -52,13 +53,12 @@ export default class ChatScreen extends BaseScreen {
         this.currNode = null;
 
         // Partes de la pantalla que tapan el chat
-        this.topArea = scene.add.image(this.BG_X, this.BG_Y, 'chatBgTop');
+        this.topArea = scene.add.image(this.BG_X, this.BG_Y, 'phoneElements', 'chatBgTop');
 
 
         // Lista con los mensajes
         this.messagesListView = new VerticalListView(this.scene, this.BG_X, this.iconImage.displayHeight * 1.5 + (this.BG_Y - this.bg.displayHeight / 2),
-            1, 10, { width: this.bg.displayWidth, height: this.bg.displayHeight - this.iconImage.displayHeight * 3 }
-        );
+            1, 10, { width: this.bg.displayWidth, height: this.bg.displayHeight - this.iconImage.displayHeight * 3 }, null, true, 50);
 
         this.add(this.topArea);
         this.add(this.nameText);
@@ -79,7 +79,7 @@ export default class ChatScreen extends BaseScreen {
     // Crea la caja de respuesta y la guarda en la variable this.textBox
     createTextBox() {
         // Anade la imagen de la caja
-        this.textBox = this.scene.add.image(this.BG_X, this.BG_Y * 1.67, 'chatTextBox').setScale(0.6);
+        this.textBox = this.scene.add.image(this.BG_X, this.BG_Y * 1.67, 'phoneElements', 'chatTextBox').setScale(0.6);
         this.textBox.setInteractive();
 
         // Configuracion de las animaciones

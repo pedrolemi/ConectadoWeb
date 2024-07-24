@@ -32,13 +32,13 @@ export default class LanguageMenu extends Phaser.Scene {
         let tweenTime = 7;
         let increase = 1.3;
         this.createFlagButton(1.2 * CANVAS_WIDTH / 4, 1.1 * CANVAS_HEIGHT / 4,
-            height, 'frFlag', 'en', tweenTime, increase);
+            height, 'France', 'en', tweenTime, increase);
         this.createFlagButton(2.8 * CANVAS_WIDTH / 4, 1.1 * CANVAS_HEIGHT / 4,
-            height, 'ptFlag', 'en', tweenTime, increase);
+            height, 'Portugal', 'en', tweenTime, increase);
         this.createFlagButton(1.2 * CANVAS_WIDTH / 4, 2.4 * CANVAS_HEIGHT / 4,
-            height, 'spFlag', 'es', tweenTime, increase);
+            height, 'Spain', 'es', tweenTime, increase);
         this.createFlagButton(2.8 * CANVAS_WIDTH / 4, 2.4 * CANVAS_HEIGHT / 4,
-            height, 'ukFlag', 'en', tweenTime, increase);
+            height, 'UK', 'en', tweenTime, increase);
     }
 
     /**
@@ -51,7 +51,7 @@ export default class LanguageMenu extends Phaser.Scene {
      * @param {Number} scaleIncrease - cuanto se escala cuando se realiza el tween de escalado al colocar el cursor encima 
      */
     createFlagButton(x, y, height, sprite, language, tweenTime, scaleIncrease) {
-        let button = this.add.image(x, y, sprite);
+        let button = this.add.image(x, y, 'flags', sprite);
 
         let scale = height / button.height;
         button.setScale(scale);

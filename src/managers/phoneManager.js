@@ -83,7 +83,7 @@ export default class PhoneManager {
     // Crea el icono
     createIcon() {
         // Anade el icono del telefono
-        this.icon = this.scene.add.image(this.scene.CANVAS_WIDTH - this.OFFSET, this.scene.CANVAS_HEIGHT - this.OFFSET, 'phoneIcon').setScale(this.ICON_SCALE);
+        this.icon = this.scene.add.image(this.scene.CANVAS_WIDTH - this.OFFSET, this.scene.CANVAS_HEIGHT - this.OFFSET, 'phoneElements', 'phoneIcon').setScale(this.ICON_SCALE);
         this.icon.setInteractive();
 
         // Al pasar el raton por encima del icono, se hace mas grande,

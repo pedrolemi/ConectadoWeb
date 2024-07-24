@@ -1,16 +1,36 @@
 {
-    "root1": {
-        "text": "Do you want to turn the computer on?"
-    },
-    "decision": [
-        {
-            "text": "Yes"
+    "yourUserText": "Tu usuario",
+    "yourPasswordText": "Tu contraseña",
+    "loginScreen": {
+        "subtitleText": "¡CONECTA CON TUS AMIGOS!",
+        "userInput": {
+            "sideText": "Usuario"
         },
-        {
-            "text": "No"
-        }
-    ],
-    "root2": {
-        "text": "I don't have any new photo to upload"
+        "passwordInput": {
+            "sideText": "Contraseña"
+        },
+        "errorText": "El usuario/contraseña introducidos son incorrectos",
+        "enterButton": "Entrar"
+    },
+    "socialNetScreen": {
+        "tabTexts": {
+            "feed": "Tablón",
+            "friends": "Amigos",
+            "upload": "Postear"
+        },
+        "friendRequestNot": "¡Tienes nuevas peticiones de amistad!",
+        "blockNot": "¡NO ESTÁ PERMITIDO BLOQUEAR USUARIOS!",
+        "friendsNumberText": "Amigos",
+        "pendingRequestsText": "Peticiones pendientes",
+        "informationText": "Este es tu tablón, mira lo que tus amigos han compartido"
+    },
+    "bio": {
+        "Alison": "Hola holita",
+        "Guillermo": "holu"
+    },
+    "commentsNumberText": "comentarios",
+    "friendRequestButtons": {
+        "acceptText": "Aceptar solicitud",
+        "denyText": "Denegar solicitud"
     }
 }

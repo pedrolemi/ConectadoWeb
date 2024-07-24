@@ -23,7 +23,14 @@ export default class Button extends Phaser.GameObjects.Container {
 
         let gameManager = GameManager.getInstance();
 
-        this.fillImg = this.scene.add.image(0, 0, fill);
+        // La imagen pertenece a una atlas
+        if (fill.hasOwnProperty('atlas')) {
+            this.fillImg = this.scene.add.image(0, 0, fill.atlas, fill.frame);
+        }
+        // La imagen es independiente
+        else {
+            this.fillImg = this.scene.add.image(0, 0, fill);
+        }
 
         this.nCol = Phaser.Display.Color.GetColor(normalCol.R, normalCol.G, normalCol.B);
         this.nCol = Phaser.Display.Color.IntegerToRGB(this.nCol);

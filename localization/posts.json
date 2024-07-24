@@ -1,0 +1,35 @@
+{
+    "Alison": {
+        "post0": {
+            "photo": "photoMatch",
+            "friendShipRequired": true
+        }
+    },
+    "Maria": {
+        "post0": {
+            "photo": "photoMatch",
+            "friendShipRequired": true
+        }
+    },
+    "Alex": {
+        "post0": {
+            "photo": "photoMatch",
+            "friendShipRequired": true
+        }
+    },
+    "Guille": {
+        "post0": {
+            "photo": "photoMatch",
+            "friendShipRequired": false
+        }
+    },
+    "player": {
+        "photo": {
+            "male": "photoMatch",
+            "female": "photoMatch"
+        },
+        "post0": {
+            "friendShipRequired": false
+        }
+    }
+}

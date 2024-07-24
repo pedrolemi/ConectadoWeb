@@ -8,7 +8,7 @@ export default class ClassFrontBase extends BaseScene {
      * @param {String} name - id de la escena
      */
     constructor(name) {
-        super(name);
+        super(name, 'classFront');
     }
     
     create(params) {

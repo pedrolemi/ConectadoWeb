@@ -1,0 +1,231 @@
+{
+  "frames": {
+    "stall3": {
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 510,
+        "h": 1610
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 510,
+        "h": 1610
+      },
+      "sourceSize": {
+        "w": 510,
+        "h": 1610
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "stall2": {
+      "frame": {
+        "x": 0,
+        "y": 1610,
+        "w": 250,
+        "h": 1530
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 250,
+        "h": 1530
+      },
+      "sourceSize": {
+        "w": 250,
+        "h": 1530
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "bathroomStall1Opened": {
+      "frame": {
+        "x": 0,
+        "y": 3140,
+        "w": 320,
+        "h": 910
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 320,
+        "h": 910
+      },
+      "sourceSize": {
+        "w": 320,
+        "h": 910
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "bathroomDoorClosed": {
+      "frame": {
+        "x": 250,
+        "y": 1610,
+        "w": 550,
+        "h": 1190
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 550,
+        "h": 1190
+      },
+      "sourceSize": {
+        "w": 550,
+        "h": 1190
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "bathroomDoorOpened": {
+      "frame": {
+        "x": 320,
+        "y": 2800,
+        "w": 550,
+        "h": 1190
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 550,
+        "h": 1190
+      },
+      "sourceSize": {
+        "w": 550,
+        "h": 1190
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "stolenPhone": {
+      "frame": {
+        "x": 800,
+        "y": 3990,
+        "w": 120,
+        "h": 60
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 120,
+        "h": 60
+      },
+      "sourceSize": {
+        "w": 120,
+        "h": 60
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "bathroomStall2Closed": {
+      "frame": {
+        "x": 510,
+        "y": 0,
+        "w": 220,
+        "h": 1170
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 220,
+        "h": 1170
+      },
+      "sourceSize": {
+        "w": 220,
+        "h": 1170
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "bathroomStall2Opened": {
+      "frame": {
+        "x": 730,
+        "y": 0,
+        "w": 390,
+        "h": 1120
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 390,
+        "h": 1120
+      },
+      "sourceSize": {
+        "w": 390,
+        "h": 1120
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "bathroomStall1Closed": {
+      "frame": {
+        "x": 800,
+        "y": 1120,
+        "w": 260,
+        "h": 890
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 260,
+        "h": 890
+      },
+      "sourceSize": {
+        "w": 260,
+        "h": 890
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    }
+  },
+  "meta": {
+    "app": "http://free-tex-packer.com",
+    "version": "0.6.7",
+    "image": "bathroom.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 1120,
+      "h": 4050
+    },
+    "scale": 1
+  }
+}

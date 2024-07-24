@@ -387,9 +387,6 @@ export default class BootScene extends Phaser.Scene {
 
         this.load.setPath('assets');
 
-        // Test
-        this.load.image('bg', 'patio.png');
-
         this.loadPlugins();
     }
 
@@ -398,4 +395,5 @@ export default class BootScene extends Phaser.Scene {
 
         gameManager.startLangMenu();
     }
+    
 }

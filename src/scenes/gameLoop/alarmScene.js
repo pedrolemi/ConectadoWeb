@@ -60,7 +60,7 @@ export default class AlarmScene extends BaseScene {
     update(t, dt) {
         if (!this.phoneManager.toggling && this.phoneManager.phone.visible) {
             super.update(t, dt);
-            this.UIManager.cameras.main.scrollX = this.cameras.main.scrollX;
+            this.UIManager.cameras.main.scrollX = this.cameras.main.scrollX * dt;
         }
 
     }

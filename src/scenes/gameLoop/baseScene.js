@@ -49,7 +49,7 @@ export default class BaseScene extends Phaser.Scene {
         this.leftBound = 0;
         this.rightBound = this.CANVAS_WIDTH;
         this.START_SCROLLING = 30;
-        this.CAMERA_SPEED = 3;
+        this.CAMERA_SPEED = 0.7;
 
         // Se anaden funciones adicionales a las que se llamara al crear, despertar y destruir la escena
         this.events.on('create', () => {
@@ -124,11 +124,11 @@ export default class BaseScene extends Phaser.Scene {
         // Scroll de la camara. Si el raton esta a la izquierda y el scroll de la camara no es inferior al del
         // extremo izquierdo, la mueve hacia la izquierda y lo mismo para el extremo derecho del canvas
         if (this.game.input.mousePointer.x < this.START_SCROLLING && this.cameras.main.scrollX > this.leftBound + this.CAMERA_SPEED) {
-            this.cameras.main.scrollX -= this.CAMERA_SPEED;
+            this.cameras.main.scrollX -= this.CAMERA_SPEED * dt;;
         }
         else if (this.game.input.mousePointer.x > this.CANVAS_WIDTH - this.START_SCROLLING
             && this.cameras.main.scrollX < this.rightBound - this.CANVAS_WIDTH - this.CAMERA_SPEED) {
-            this.cameras.main.scrollX += this.CAMERA_SPEED;
+            this.cameras.main.scrollX += this.CAMERA_SPEED * dt;;
         }
     }
 

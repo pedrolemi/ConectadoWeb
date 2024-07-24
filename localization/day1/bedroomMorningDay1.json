@@ -8,7 +8,12 @@
         "pickBag": {
             "type": "event",
             "events": [
-                { "pickBag": { } }
+                { 
+                    "pickBag": { 
+                        "variable": "bagPicked", 
+                        "value": true
+                    }
+                }
             ]
         }
         

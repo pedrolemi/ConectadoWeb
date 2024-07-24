@@ -73,7 +73,7 @@ export default class BedroomBase extends BaseScene {
 
         // Ordenador
         let nodes = this.cache.json.get('everydayDialog');
-        this.pcNode = super.readNodes("root", nodes, "everydayDialog", "bedroom.pc", true);
+        this.pcNode = super.readNodes(nodes, "everydayDialog", "bedroom.pc", true);
         let pc = this.add.zone(276, 360, 150, 162).setOrigin(0, 0);
         pc.setInteractive({ useHandCursor: true });
         // Al hacer click sobre el, se cambia el nodo en el dialogManager, y si

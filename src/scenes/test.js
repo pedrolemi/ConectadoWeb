@@ -55,9 +55,9 @@ export default class Test extends BaseScene {
         let test2 = this.cache.json.get('dadDialog');
         let test3 = this.cache.json.get('chat1');
 
-        let momNode = super.readNodes("root", test1, "momDialog", "", true);
-        let dadNode = super.readNodes("root", test2, "dadDialog", "", true);
-        let choices = super.readNodes("root", test3, "chat1", "", true);
+        let momNode = super.readNodes(test1, "momDialog", "", true);
+        let dadNode = super.readNodes(test2, "dadDialog", "", true);
+        let choices = super.readNodes(test3, "chat1", "", true);
 
         // Telefono
         let chatName = this.i18next.t("textMessages.chat1", { ns: "phoneInfo", returnObjects: true });
@@ -71,17 +71,6 @@ export default class Test extends BaseScene {
         chatName = this.i18next.t("textMessages.chat2", { ns: "phoneInfo", returnObjects: true });
         this.phoneManager.phone.addChat(chatName, "Alex");
 
-        console.log(this.gameManager.blackboard)
-
-        this.dispatcher.add("talked", this, (obj) => {
-            console.log(obj);
-            this.gameManager.setValue("talked", true, this.blackboard);
-        });
-        this.dispatcher.addOnce("r", this, (obj) => {
-            console.log(obj);
-            this.gameManager.setValue("talked", false, this.blackboard);
-
-        });
 
         // Ordenador
         let computer = this.add.image(this.CANVAS_WIDTH / 2, this.CANVAS_HEIGHT / 2, 'bedroom', 'computer');

@@ -21,7 +21,12 @@
             "turnPC": {
                 "type": "event",
                 "events": [
-                    { "turnPC": { } }
+                    { 
+                        "turnPC": {
+                            "variable": "isLate",
+                            "value": true
+                        }
+                    }
                 ]
             },
             "leavePC": {

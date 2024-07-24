@@ -52,8 +52,11 @@ export default class Character {
         this.char.setPosition(x, y);
     }
 
-    setScale(scale) {
-        this.char.setScale(scale);
+    setScale(scaleX, scaleY) {
+        if (!scaleY) {
+            scaleY = scaleX;
+        }
+        this.char.setScale(scaleX, scaleY);
     }
 
     setActive(enable) {

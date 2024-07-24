@@ -121,10 +121,10 @@ export default class CorridorBase extends BaseScene {
         // Establece por defecto el nodo del bano contrario segun el genero del jugador
         let nodes = this.cache.json.get('everydayDialog');
         if (this.gameManager.getUserInfo().gender === "male") {
-            this.girlsBathroomNode = super.readNodes("root", nodes, "everydayDialog", "corridor.bathroom", true);
+            this.girlsBathroomNode = super.readNodes(nodes, "everydayDialog", "corridor.bathroom", true);
         }
         else {
-            this.boysBathroomNode = super.readNodes("root", nodes, "everydayDialog", "corridor.bathroom", true);
+            this.boysBathroomNode = super.readNodes(nodes, "everydayDialog", "corridor.bathroom", true);
         }
 
     }

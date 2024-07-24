@@ -29,7 +29,7 @@ export default class PlaygroundBase extends BaseScene {
 
         this.homeNode = null;
         let exit = this.add.rectangle(0, 913 * this.scale, 1140 * this.scale, 490 * this.scale, 0xfff, 0).setOrigin(0, 0);
-        exit.setInteractive();
+        exit.setInteractive({ useHandCursor: true });
         // Al hacer click sobre la zona de salida si hay algun dialogo que mostrar (para indicar que no se puede salir), se
         // mostrara. En caso contrario, se pasara a la escena del salon con la camara a la izquierda y se eliminara esta escena
         exit.on('pointerdown', () => {

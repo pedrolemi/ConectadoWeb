@@ -1,0 +1,152 @@
+{
+    "door": {
+        "root": {
+            "type": "text",
+            "character": "player"
+        }
+    },
+
+    "jose": {
+        "root": {
+            "type": "condition",
+            "conditions": [
+                {
+                    "next": "notTalked",
+                    "talkedJose": {
+                        "value": false,
+                        "operator": "equal",
+                        "global": false,
+                        "default": false
+                    }
+                },
+                {
+                    "next": "talked",
+                    "talkedJose": {
+                        "value": true,
+                        "operator": "equal",
+                        "global": false,
+                        "default": false
+                    }
+                }
+            ]
+        },
+        "notTalked": {
+            "type": "text",
+            "character": "Jose",
+            "next": "setTalked"
+        },
+        "setTalked": {
+            "type": "event",
+            "events": [
+                { 
+                    "setTalkedJose": { 
+                        "variable": "talkedJose", 
+                        "value": true, 
+                        "global": false
+                    }
+                }
+            ],
+            "next": "ask"
+        },
+        "ask": {
+            "type": "text",
+            "character": "Jose",
+            "next": "choices"
+        },
+
+        "talked": {
+            "type": "text",
+            "character": "Jose",
+            "next": "choices"
+        },
+
+        "choices": {
+            "type": "choice",
+            "choices":[
+                { "next": "introduce" },
+                { "next": "askClass" },
+                { "next": "goodbye" }
+            ]
+        },
+
+        "askClass": {
+            "type": "text",
+            "character": "Jose",
+            "next": "askMore"
+        },
+        "askMore": {
+            "type": "text",
+            "character": "Jose",
+            "next": "choices"
+        },
+
+        "goodbye": {
+            "type": "text",
+            "character": "Jose"
+        },
+
+
+        "introduce": {
+            "type": "condition",
+            "conditions": [
+                {
+                    "next": "notIntroduced",
+                    "introducedJose": {
+                        "value": false,
+                        "operator": "equal",
+                        "global": false,
+                        "default": false
+                    }
+                },
+                {
+                    "next": "alreadyIntroduced",
+                    "introducedJose": {
+                        "value": true,
+                        "operator": "equal",
+                        "global": false,
+                        "default": false
+                    }
+                }
+            ]
+        },
+
+        "notIntroduced": {
+            "type": "text",
+            "character": "Jose",
+            "next": "setIntroduced"
+        },
+        "setIntroduced": {
+            "type": "event",
+            "events": [
+                { 
+                    "setIntroducedJose": { 
+                        "variable": "introducedJose", 
+                        "value": true, 
+                        "global": false
+                    }
+                }
+            ],
+            "next": "ask"
+        },
+        
+
+        "alreadyIntroduced": {
+            "type": "text",
+            "character": "Jose",
+            "next": "choices"
+        }
+
+    },
+
+    "alison": {
+        "root": {
+
+        }
+    },
+
+    "guille": {
+        "root": {
+
+        }
+    }
+}

@@ -1,4 +1,4 @@
-import { TextNode, ChoiceNode, ConditionNode, EventNode, ChatNode, SocialNetNode } from '../../UI/dialog/dialogNode.js';
+import DialogNode, { TextNode, ChoiceNode, ConditionNode, EventNode, ChatNode, SocialNetNode } from '../../UI/dialog/dialogNode.js';
 import GameManager from '../../managers/gameManager.js';
 
 
@@ -59,7 +59,7 @@ export default class BaseScene extends Phaser.Scene {
             this.onWake(params);
         }, this);
         this.events.on('shutdown', this.shutdown, this);
-        
+
         // Blackboard de variables dela escena actual
         this.blackboard = new Map();
     }
@@ -72,7 +72,7 @@ export default class BaseScene extends Phaser.Scene {
     onCreate(params) {
         // console.log("onCreate");
         this.initialSetup(params);
-        
+
         // TEST
         this.phoneManager.topLid.visible = false;
         this.phoneManager.botLid.visible = false;
@@ -123,27 +123,45 @@ export default class BaseScene extends Phaser.Scene {
 
         // Scroll de la camara. Si el raton esta a la izquierda y el scroll de la camara no es inferior al del
         // extremo izquierdo, la mueve hacia la izquierda y lo mismo para el extremo derecho del canvas
-        if (this.game.input.mousePointer.x < this.START_SCROLLING && this.cameras.main.scrollX > this.leftBound + this.CAMERA_SPEED) {
+        if (this.game.input.mousePointer.x < this.START_SCROLLING && this.cameras.main.scrollX > this.leftBound + this.CAMERA_SPEED * dt) {
             this.cameras.main.scrollX -= this.CAMERA_SPEED * dt;;
         }
         else if (this.game.input.mousePointer.x > this.CANVAS_WIDTH - this.START_SCROLLING
-            && this.cameras.main.scrollX < this.rightBound - this.CANVAS_WIDTH - this.CAMERA_SPEED) {
+            && this.cameras.main.scrollX < this.rightBound - this.CANVAS_WIDTH - this.CAMERA_SPEED * dt) {
             this.cameras.main.scrollX += this.CAMERA_SPEED * dt;;
         }
     }
 
+    
+    // Llama al metodo para leer todos los nodos y luego se encarga de conectarlos
+    readNodes(file, namespace, objectName, getObjs) {
+        let nodesMap = new Map();
+        let root = this.readAllNodes("root", file, namespace, objectName, getObjs, nodesMap);
+
+        // Recorre todos los nodos guardados en el mapa
+        nodesMap.forEach((node) => {
+            // Recorre el array de nodos siguientes leyendo sus ids
+            for(let i = 0; i < node.next.length; i++) {
+                // Obtiene el nodo del mapa a partir de su id y la reemplaza en el array
+                let nextNode = nodesMap.get(node.next[i]);
+                node.next[i] = nextNode;
+            }
+        });
+
+        return root;
+    }
 
 
     /**
-    * Va leyendo el json (el archivo se lee una sola vez y se pasa el objeto obtenido como parametro)
-    * y creando el arbol de nodos de manera recursiva
+    * Va leyendo los nodos del json de manera recursiva (el archivo se lee una sola vez y se pasa el objeto obtenido como parametro)
     *
     * @param {String} id - id del nodo que se lee. El nodo inicial es root
     * @param {Object} file - objeto obtenido como resultado de leer el json
     * @param {String} namespace - nombre del archivo de localizacion del que se va a leer
     * @param {String} objectName - nombre del objeto en el que esta el dialogo, si es que el json contiene varios dialogos de distintos objetos
     * @param {Boolean} getObjs - si se quiere devolver el nodo leido como un objeto 
-    *
+    * @returns {DialogNode} - el nodo de dialogo que se ha procesado
+    * 
     * 
     * IMPORTANTE: Este metodo tiene que llamarse una vez se han creado los retratos de los personajes,
     * ya que al momento de separar los textos que sean demasiado largos, es necesario saber si el personaje
@@ -161,7 +179,7 @@ export default class BaseScene extends Phaser.Scene {
     * se cumplira si todos sus requisitos se cumplen (operador &&. De momento no hay soporte para el operador || ) 
     * 
     */
-    readNodes(id, file, namespace, objectName, getObjs) {
+    readAllNodes(id, file, namespace, objectName, getObjs, nodesMap) {
         let playerName = this.gameManager.getUserInfo().name;
         let context = this.gameManager.getUserInfo().gender;
         let fileObj = file;
@@ -180,11 +198,25 @@ export default class BaseScene extends Phaser.Scene {
         // console.log(fileObj);
         // console.log(this.i18next.t(translationId, { ns: namespace, name: playerName, context: context, returnObjects: getObjs }));
 
+        // Si el nodo ya se habia leido, lo devuelve
+        if (nodesMap.has(translationId)) {
+            return nodesMap.get(translationId);
+        }
+        // Si no, si la id del nodo no existe, devuelve null
+        else if (!fileObj[id]) {
+            return null;
+        };
 
         // Crea el nodo y guarda sus atributos (se estableceran en el nodo al final)
-        let node = null;
+        let node = new DialogNode();
         let nodeId = id;
         let type = fileObj[id].type;
+
+        // Guarda el nodo y sus atributos base en caso de que se intente acceder a el antes
+        // de que se termine de crear completamente (por si varios nodos llevan a el)
+        nodesMap.set(translationId, node);
+        node.id = nodeId;
+        node.fullId = translationId;
 
         // Si el nodo es de tipo condicion
         if (type === "condition") {
@@ -217,7 +249,7 @@ export default class BaseScene extends Phaser.Scene {
                     if (obj.default) {
                         defaultValue = obj.default;
                     }
-                    
+
                     // Si no se ha definido si la variable es global o si se ha definido que si lo es,
                     // la guarda en el gameManager con su valor por defecto (si no se ha guardado antes)
                     if (obj.global === undefined || obj.global === true) {
@@ -242,9 +274,11 @@ export default class BaseScene extends Phaser.Scene {
                 // Se guardan las condiciones 
                 node.conditions.push(nodeConditions);
 
-                // Si hay un nodo despues de este, se crea de manera recursiva el nodo siguiente que corresponde a cumplir dichas condiciones
+                // Si hay un nodo despues de este, se crea de manera y se
+                // guarda la id de dicho nodo en el array de nodos siguientes
                 if (fileObj[id].conditions[i].next) {
-                    node.next.push(this.readNodes(fileObj[id].conditions[i].next, file, namespace, objectName, getObjs));
+                    let nextNode = this.readAllNodes(fileObj[id].conditions[i].next, file, namespace, objectName, getObjs, nodesMap);
+                    node.next.push(nextNode.fullId);
                 }
             }
         }
@@ -256,7 +290,7 @@ export default class BaseScene extends Phaser.Scene {
             let character = fileObj[id].character;
             node.character = character;
             node.name = this.i18next.t(fileObj[id].character, { ns: "names", returnObjects: getObjs });
-            
+
             // Obtiene los fragmentos del dialogo
             let texts = [];
             let textTranslation = this.i18next.t(translationId, { ns: namespace, name: playerName, context: context, returnObjects: getObjs })
@@ -271,7 +305,7 @@ export default class BaseScene extends Phaser.Scene {
                     texts.push(textTranslation[i].text);
                 }
             }
-            
+
             // Se recorren todos los fragmentos de texto
             for (let i = 0; i < texts.length; i++) {
                 // Se crea un dialogo con todo el texto a mostrar
@@ -289,9 +323,11 @@ export default class BaseScene extends Phaser.Scene {
             }
             node.currDialog = 0;
 
-            // Si hay un nodo despues de este, se crea de manera recursiva
+            // Si hay un nodo despues de este, se crea de manera y se
+            // guarda la id de dicho nodo en el array de nodos siguientes
             if (fileObj[id].next) {
-                node.next.push(this.readNodes(fileObj[id].next, file, namespace, objectName, getObjs));
+                let nextNode = this.readAllNodes(fileObj[id].next, file, namespace, objectName, getObjs, nodesMap);
+                node.next.push(nextNode.fullId);
             }
         }
         // Si el nodo es de tipo opcion multiple
@@ -300,7 +336,7 @@ export default class BaseScene extends Phaser.Scene {
 
             // Se obtienen las opciones del archivo de textos traducidos
             let texts = this.i18next.t(translationId, { ns: namespace, name: playerName, context: context, returnObjects: getObjs })
-            
+
             for (let i = 0; i < fileObj[id].choices.length; i++) {
                 let repeat = false;
                 if (fileObj[id].choices[i].repeat === undefined || fileObj[id].choices[i].repeat) {
@@ -315,9 +351,11 @@ export default class BaseScene extends Phaser.Scene {
                 // el nodo siguiente que corresponde a elegir dicha opcion
                 node.choices.push(choice);
 
-                // Si hay un nodo despues de este, se crea de manera recursiva
+                // Si hay un nodo despues de este, se crea de manera y se
+                // guarda la id de dicho nodo en el array de nodos siguientes
                 if (fileObj[id].choices[i].next) {
-                    node.next.push(this.readNodes(fileObj[id].choices[i].next, file, namespace, objectName, getObjs));
+                    let nextNode = this.readAllNodes(fileObj[id].choices[i].next, file, namespace, objectName, getObjs, nodesMap);
+                    node.next.push(nextNode.fullId);
                 }
             }
         }
@@ -337,13 +375,21 @@ export default class BaseScene extends Phaser.Scene {
                 let evt = { ...obj };
                 evt.name = evtName[0];
 
+                // Si se ha definido si la variable es global y si se ha definido que no lo 
+                // es, se guarda en las propiedades del evento la blackboard de esta escena
+                if (obj.global !== undefined && obj.global === false) {
+                    evt.blackboard = this.blackboard;
+                }
+
                 // Lo mete en las variables del nodo
                 node.events.push(evt);
             }
 
-            // Si hay un nodo despues de este, se crea de manera recursiva
+            // Si hay un nodo despues de este, se crea de manera y se
+            // guarda la id de dicho nodo en el array de nodos siguientes
             if (fileObj[id].next) {
-                node.next.push(this.readNodes(fileObj[id].next, file, namespace, objectName, getObjs));
+                let nextNode = this.readAllNodes(fileObj[id].next, file, namespace, objectName, getObjs, nodesMap);
+                node.next.push(nextNode.fullId);
             }
         }
         // Si el nodo es de tipo mensaje de texto
@@ -372,9 +418,11 @@ export default class BaseScene extends Phaser.Scene {
                 node.replyDelay = fileObj[id].replyDelay;
             }
 
-            // Si hay un nodo despues de este, se crea de manera recursiva
+            // Si hay un nodo despues de este, se crea de manera y se
+            // guarda la id de dicho nodo en el array de nodos siguientes
             if (fileObj[id].next) {
-                node.next.push(this.readNodes(fileObj[id].next, file, namespace, objectName, getObjs));
+                let nextNode = this.readAllNodes(fileObj[id].next, file, namespace, objectName, getObjs, nodesMap);
+                node.next.push(nextNode.fullId);
             }
         }
         // Si el nodo es de tipo comentario de la red social
@@ -397,24 +445,35 @@ export default class BaseScene extends Phaser.Scene {
             // Guarda el numero del post del usuario
             node.postName = filed[id].postName;
 
-            // Si hay un nodo despues de este, se crea de manera recursiva
+            // Si hay un nodo despues de este, se crea de manera y se
+            // guarda la id de dicho nodo en el array de nodos siguientes
             if (fileObj[id].next) {
-                node.next.push(this.readNodes(fileObj[id].next, file, namespace, objectName, getObjs));
+                let nextNode = this.readAllNodes(fileObj[id].next, file, namespace, objectName, getObjs, nodesMap);
+                node.next.push(nextNode.fullId);
             }
         }
 
-        // Guarda los atributos basicos del nodo despues de haber decidido que tipo de nodo se va a crear
+
+        // Actualiza el nodo, ya que al momento de guardarse no estaba creado completamente
+        nodesMap.set(translationId, node);
         node.id = nodeId;
+        node.fullId = translationId;
 
         return node;
     }
 
 
+    /**
+     * Obtiene el objeto json a partir de su nombre
+     * @param {Object} obj - objeto json en el que se busca el objeto 
+     * @param {String} prop - nombre de la propiedad (o del objeto) que se busca 
+     * @return {Object} - objeto json con el nombre indicado
+     */
     getObjFromName(obj, prop) {
         let nestedProperties = prop.split('.');
         let currObj = obj;
 
-        for(let i = 0; i < nestedProperties.length; i++) {
+        for (let i = 0; i < nestedProperties.length; i++) {
             if (!currObj) {
                 return null;
             }
@@ -522,7 +581,7 @@ export default class BaseScene extends Phaser.Scene {
      * @param {Function} onClick - funcion a la que se llamara al hacer click sobre la puerta abierta
      * @param {Boolean} click - true si la imagen se cambia al hacer click, false si lo hace al pasar/sacar el raton por encima
      */
-    toggleDoor(closed, opened, onClick = { }, click = true) {
+    toggleDoor(closed, opened, onClick = {}, click = true) {
         closed.setInteractive({ useHandCursor: true });
         opened.setInteractive({ useHandCursor: true });
 
@@ -544,11 +603,11 @@ export default class BaseScene extends Phaser.Scene {
             closed.visible = true;
         });
 
-        opened.on('pointerdown', () => { 
+        opened.on('pointerdown', () => {
             if (onClick !== null && typeof onClick === 'function') {
                 onClick();
             }
         })
     }
-    
+
 }

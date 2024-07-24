@@ -217,6 +217,18 @@ export default class DialogManager {
                     }
                     setTimeout(() => {
                         this.dispatcher.dispatch(evt.name, evt);
+
+                        // Si el evento establece el valor de una variable, lo cambia en la 
+                        // blackboard correspondiente (la de la escena o la del gameManager)
+                        let blackboard = this.gameManager.blackboard;
+                        if (evt.global !== undefined && evt.global === false) {
+                            blackboard = evt.blackboard;
+                        }
+                        if (evt.variable && evt.value) {
+                            // console.log(this.gameManager.blackboard)
+                            // console.log(evt.variable)
+                            this.gameManager.setValue(evt.variable, evt.value, blackboard);
+                        }
                     }, delay);
                 }
 

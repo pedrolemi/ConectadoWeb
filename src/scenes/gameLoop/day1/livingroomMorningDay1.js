@@ -25,17 +25,14 @@ export default class LivingroomMorningDay1 extends LivingroomBase {
         this.portraits.set("mom", mom.getPortrait());
 
         let nodes = this.cache.json.get('livingroomMorningDay1');
-        let momNode = super.readNodes("root", nodes, "day1\\livingroomMorningDay1", "mom", true);
+        let momNode = super.readNodes(nodes, "day1\\livingroomMorningDay1", "mom", true);
         
         if(!this.gameManager.getValue(this.gameManager.bagPicked)) {
-            this.doorNode = super.readNodes("root", nodes, "day1\\livingroomMorningDay1", "door", true);
+            this.doorNode = super.readNodes(nodes, "day1\\livingroomMorningDay1", "door", true);
         }
         
-        this.dispatcher.addOnce("setTalked", this, (obj) => {
-            console.log(obj);
-            this.gameManager.setValue("talked", true, this.blackboard);
-        });
-        this.dispatcher.add("pickBag", this, (obj) => {
+        
+        this.dispatcher.addOnce("pickBag", this, (obj) => {
             this.doorNode = null;
         });
     }

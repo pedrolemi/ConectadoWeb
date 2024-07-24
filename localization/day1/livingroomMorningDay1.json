@@ -58,8 +58,12 @@
         "setTalked": {
             "type": "event",
             "events": [
-                {
-                    "setTalked": {}
+                { 
+                    "setTalked": { 
+                        "variable": "talked", 
+                        "value": true, 
+                        "global": false
+                    }
                 }
             ]
         },

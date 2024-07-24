@@ -5,8 +5,9 @@ export default class DialogNode {
     constructor() {
         this.type = null;               // dialog, choice, condition, event, chatMessage, socialNetMessage
 
-        this.id = null;                 // id de este nodo
+        this.id = null;                 // id de este nodo dentro del objeto en el que se encuentra
         this.next = [];                 // posibles nodos siguientes
+        this.fullId = null;             // id completa del nodo en el archivo en general
     }
 }
 
@@ -107,16 +108,14 @@ export class EventNode extends DialogNode {
         {
             "type": "event",
             "events": [
-                { "talked": { "delay": 20 } },
-                { "b": { "String": "ddsad" } },
-                { "c": { 
-                    "Vector2": {
-                        "x": "1",
-                        "y": "1"
-                        }
+                { 
+                    "talked": { 
+                        "variable": "talked", 
+                        "global": false,
+                        "value": true, 
+                        "delay": 20 
                     } 
-                },
-                { "d": { "Number": "1" }}
+                }
             ]
         }
     */

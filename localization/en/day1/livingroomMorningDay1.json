@@ -2,43 +2,41 @@
     "mom": {
         "notTalkedNormal": [
             {
-                "text": "",
-                "text_male": "Veo que ya estás listo para irte.",
-                "text_female": "Veo que ya estás lista para irte."
+                "text": "Looks like you're ready to go."
             },
             {
-                "text": "¿Llevas todo?, Acuérdate de coger la mochila."
+                "text": "Do you have everything? Remember to take the backpack."
             },
             {
-                "text": "Pórtate bien y haz muchos amigos."
+                "text": "Behave and make a lot of friends."
             }
         ],
         "notTalkedLate": [
             {
-                "text": "¿Has visto la hora que es?"
+                "text": "Have you seen what time is it?"
             },
             {
-                "text": "Tu primer día en el nuevo colegio y ya llegas tarde."
+                "text": "Your first day in the new school and you're already late."
             },
             {
-                "text": "Venga, coge todo lo que necesites y vete YA!"
+                "text": "C'mon, take everything you need and leave NOW!"
             }
         ],
         "hasBag": {
-            "text": "Veo que llevas todo."
+            "text": "Looks like you packed everything."
         },
         "hasBagNormal": {
-            "text": "Vete ya o acabarás llegando tarde."
+            "text": "Go now or you will be late."
         },
         "hasBagLate":  {
-            "text": "Vete ya, estás llegando tarde."
+            "text": "Go now, you are late."
         },
         "noBag": [
             {
-                "text": "Te dejas la mochila."
+                "text": "You forgot your backpack."
             },
             {
-                "text": "Está en tu cuarto, cogela y vete ya."
+                "text": "It's in your room, pick it up and leave now."
             }
         ]
     },

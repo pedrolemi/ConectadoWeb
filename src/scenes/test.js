@@ -24,7 +24,7 @@ export default class Test extends BaseScene {
         super.create(params);
 
         // Pone una imagen de fondo con las dimensiones del canvas
-        let bg = this.add.image(0, 0, 'bg').setOrigin(0, 0);
+        let bg = this.add.image(0, 0, 'playgroundClosed').setOrigin(0, 0);
         let scale = this.CANVAS_HEIGHT / bg.height;
         bg.setScale(scale);
         this.rightBound = bg.displayWidth;

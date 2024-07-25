@@ -238,16 +238,16 @@ export default class GameManager {
         this.computerScene = this.currentScene.scene.get(computerSceneName);
         this.computerScene.scene.sleep();
 
-        let sceneName = 'PlaygroundMorningDay1';
+        // let sceneName = 'ClassFrontMorningDay1';
 
         // Pasa a la escena inicial con los parametros text, onComplete y onCompleteDelay
-        // let sceneName = 'TextOnlyScene';
+        let sceneName = 'TextOnlyScene';
         let params = {
             // El texto de se coge del a archivo de traducciones
             text: this.i18next.t("day1.start", { ns: "transitionScenes", returnObjects: true }),
             onComplete: () => {
                 // Al llamar a onComplete, se cambiara a la escena de la alarma
-                this.changeScene('AlarmScene', null, true);
+                this.changeScene('AlarmScene', null);
             },
             onCompleteDelay: 500
         };

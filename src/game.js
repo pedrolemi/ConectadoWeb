@@ -1,10 +1,15 @@
 import BootScene from './scenes/bootScene.js';
+
+// Menus
 import LanguageMenu from './scenes/languageMenu.js';
 import TitleMenu from './scenes/titleMenu.js';
 import UserInfoMenu from './scenes/userInfoMenu.js';
 
+// Flujo de juego
 import TextOnlyScene from './scenes/textOnlyScene.js';
 import AlarmScene from './scenes/gameLoop/alarmScene.js';
+
+// Dia 1
 import BedroomMorningDay1 from './scenes/gameLoop/day1/bedroomMorningDay1.js';
 import LivingroomMorningDay1 from './scenes/gameLoop/day1/livingroomMorningDay1.js';
 import PlaygroundMorningDay1 from './scenes/gameLoop/day1/playgroundMorningDay1.js';
@@ -12,10 +17,10 @@ import StairsMorningDay1 from './scenes/gameLoop/day1/stairsMorningDay1.js';
 import CorridorMorningDay1 from './scenes/gameLoop/day1/corridorMorningDay1.js';
 import BathroomMorning from './scenes/gameLoop/bathroomMorning.js';
 import ClassFrontMorningDay1 from './scenes/gameLoop/day1/classFontMorningDay1.js';
-import ClassBackBreakDay1 from './scenes/gameLoop/day1/classBackBreakDay1.js';
+import ClassBackMorningDay1 from './scenes/gameLoop/day1/classBackMorningDay1.js';
 
+// UI
 import ComputerScene from './UI/computer/computerScene.js'
-
 import UIManager from './managers/UIManager.js';
 
 import Test from './scenes/test.js';
@@ -30,13 +35,13 @@ const config = {
     version: "1.0",
 
     type: Phaser.AUTO,
-    // Nota: el orden de las escenas es relevante. Las que se encuentran delante, se renderizan delante
+    // Nota: el orden de las escenas es relevante, y las que se encuentren antes en el array se renderizaran por debajo de las siguientes
     scene: [
         BootScene, LanguageMenu, TitleMenu, UserInfoMenu,
-        TextOnlyScene, AlarmScene, 
-        BedroomMorningDay1, LivingroomMorningDay1, PlaygroundMorningDay1, StairsMorningDay1, CorridorMorningDay1, BathroomMorning, ClassFrontMorningDay1, ClassBackBreakDay1,
-        Test, TestMenu, 
-        ComputerScene, UIManager,],
+        AlarmScene,
+        BedroomMorningDay1, LivingroomMorningDay1, PlaygroundMorningDay1, StairsMorningDay1, CorridorMorningDay1, BathroomMorning, ClassFrontMorningDay1, ClassBackMorningDay1,
+        Test, TestMenu,
+        ComputerScene, UIManager, TextOnlyScene ],
     autoFocus: true,
     disableContextMenu: true,        // Desactivar que aparezca el menu de inspeccionar al hacer click derecho
     render: {

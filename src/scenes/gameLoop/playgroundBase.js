@@ -49,14 +49,12 @@ export default class PlaygroundBase extends BaseScene {
         this.doorNode = super.readNodes(nodes, "everydayDialog", "playground.door", true);;
         let doors = this.add.rectangle(2640 * this.scale, 1060 * this.scale, 262, 186, 0xfff, 0).setOrigin(0, 0);
         doors.setInteractive({ useHandCursor: true });
-        // Al hacer click sobre la zona de la peurta, si las puertas estan abiertas, se pasara a la escena de las escaleras
-        // sin eliminar esta escena. En caso contrario, se mostrara un dialogo indicando que no se puede entrar
+        // Al hacer click sobre la zona de la puerta, si hay algun dialogo que mostrar, (para indicar que 
+        // no se puede entrar), se mostrara. En caso contrario, se pasara a la escena de las escaleras
         doors.on('pointerdown', () => {
-            // Si las puertas estan abiertas, pasa a la escena de las escaleras
-            if (this.bgImg === 'playgroundOpened') {
+            if (!this.doorNode) {
                 this.gameManager.changeScene(this.stairs, { } , true);
             }
-            // Si no, se muestra el dialogo correspondiente
             else {
                 this.dialogManager.setNode(this.doorNode);
             }

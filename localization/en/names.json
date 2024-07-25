@@ -1,10 +1,16 @@
 {
+    "player": "You",
+    
     "mom": "Mom",
     "dad": "Dad",
-    "player": "You",
-    "computer": "Computer",
+
     "Maria": "Mary",
     "Alex": "Alex",
     "Alison": "Alison",
-    "Guille": "William"
+    "Guille": "William",
+
+    "teacher": "Teacher",
+    "computer": "Computer",
+    "note": "Note"
+
 }

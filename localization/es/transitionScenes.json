@@ -1,6 +1,9 @@
 {
     "day1": {
-        "start": "La alarma de tu teléfono suena. Es hora de levantarse. Hoy empiezas en un nuevo colegio, es hora de conocer a tus compañeros."
+        "start": "La alarma de tu teléfono suena. Es hora de levantarse. Hoy empiezas en un nuevo colegio, es hora de conocer a tus compañeros.",
+        "startClass": "Os sentáis todos y empieza la clase.",
+        "startClassLate": "Te diriges entre todas las miradas a tu sitio y te sientas."
+
     },
     "day2": {
 

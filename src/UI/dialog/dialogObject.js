@@ -10,7 +10,7 @@ export default class DialogObject {
 
         // Configuracion de las animaciones
         this.animConfig = {
-            fadeTime: 100,
+            fadeTime: 150,
             fadeEase: 'linear'
         }
     }

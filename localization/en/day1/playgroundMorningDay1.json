@@ -1,0 +1,112 @@
+{
+    "jose": {
+        "notTalked": {
+            "text": "You are new, aren't you?"
+        },
+        "ask": {
+            "text": "Do you want anything?"
+        },
+
+        "talked": {
+            "text": "You're back, do you need anything else?"
+        },
+        "choices": [
+            {
+                "text": "Hello, I'm {{name}}..."
+            },
+            {
+                "text": "(Ask where the classroom is)."
+            },
+            {
+                "text": "I don't need anything, see you later."
+            }
+        ],
+        "askClass": {
+            "text": "That's my classroom too, it's in the second floor.Go upstairs on your right once you get inside the building. And in the first floor is the principal's office."
+        },
+        "askMore":  {
+            "text": "Do you need anything else?"
+        },
+        "goodbye": {
+            "text": "Bye."
+        },
+        "notIntroduced": {
+            "text": "I'm Jose."
+        },
+        "alreadyIntroduced": {
+            "text": "You've already told me your name."
+        }
+    },
+    
+    "alison": {
+        "root": {
+            "text": "Do I know you?"
+        },
+        "choices": [
+            {
+                "text": "I'm {{name}}, and you are...?"
+            },
+            {
+                "text": "No, I'm sorry, I'm in a hurry. Bye."
+            }
+            
+        ],
+        "introduce": [
+            {
+                "text": "Nice to meet ya, I'm Alison."
+            },
+            {
+                "text": "I hope you have a nice time here, people are really nice."
+            },
+            {
+                "text": "What grade are you in?"
+            }
+        ],
+        "playerAnswer": {
+            "text": "(You answer)"
+        },
+        "afterPlayerIntroduction": [
+            {
+                "text": "I'll see you in class then."
+            },
+            {
+                "text": "The boy with the yellow shirt next to the playground entrance is also in our class."
+            },
+            {
+                "text": "He's very nice, why don't you go and talk to him?"
+            }
+        ],
+        "goodbye": [
+            {
+                "text": "Don't be shy, I don't bite."
+            },
+            {
+                "text": "Well, see ya. Have a nice first day."
+            }
+        ]
+    },
+
+    "guille": {
+        "root": {
+            "text": "Are you new? I haven't seen you around here before."
+        },
+        "choices": [
+            {
+                "text": "Yeah, I'm {{name}}... who are you?"
+            },
+            {
+                "text": "Excuse me, I'm in a hurry. (You leave)."
+            }
+        ],
+        "introduce": {
+            "text": "Call me Guille."
+        },
+        "bellRinging": {
+            "text": "<<The bell is ringing>>"
+        },
+        "guilleGoodbye": {
+            "text": "We should get inside, see ya."
+        }
+    }
+    
+}

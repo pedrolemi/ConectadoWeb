@@ -24,8 +24,17 @@ export default class StairsBase extends BaseScene {
         this.bg.setScale(this.scale);
         this.rightBound = this.bg.displayWidth;
 
-        // Puerta del despacho
         let nodes = this.cache.json.get('everydayDialog');
+
+        let wallTagNode = super.readNodes(nodes, "everydayDialog", "stairs.tag", true);
+        let wallTag = this.add.rectangle(2321 * this.scale, 650 * this.scale, 130 * this.scale, 78 * this.scale, 0xfff, 0).setOrigin(0, 0);
+        wallTag.setInteractive({ useHandCursor: true });
+        wallTag.on('pointerdown', () => {
+            this.dialogManager.setNode(wallTagNode);
+
+        });
+
+        // Puerta del despacho
         this.doorNode = super.readNodes(nodes, "everydayDialog", "stairs.door", true);
         let doorPos = {
             x: 2490 * this.scale,

@@ -55,9 +55,9 @@ export default class Test extends BaseScene {
         let test2 = this.cache.json.get('dadDialog');
         let test3 = this.cache.json.get('chat1');
 
-        let momNode = super.readNodes(test1, "momDialog", "", true);
-        let dadNode = super.readNodes(test2, "dadDialog", "", true);
-        let choices = super.readNodes(test3, "chat1", "", true);
+        let momNode = super.readNodes(test1, "test\\momDialog", "", true);
+        let dadNode = super.readNodes(test2, "test\\dadDialog", "", true);
+        let choices = super.readNodes(test3, "test\\chat1", "", true);
 
         // Telefono
         let chatName = this.i18next.t("textMessages.chat1", { ns: "phoneInfo", returnObjects: true });

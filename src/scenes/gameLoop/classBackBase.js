@@ -32,11 +32,11 @@ export default class ClassBackBase extends BaseScene {
             y: 530 * this.scale
         };
         this.doorNode = null;
-        let doorClosed = this.add.image(doorPos.x, doorPos.y, this.atlasName, 'classDoorClosed').setOrigin(0, 0).setScale(this.scale);
+        this.doorClosed = this.add.image(doorPos.x, doorPos.y, this.atlasName, 'classDoorClosed').setOrigin(0, 0).setScale(this.scale);
         let doorOpened = this.add.image(doorPos.x, doorPos.y, this.atlasName, 'classDoorOpened').setOrigin(0, 0).setScale(this.scale);
         // Al hacer click, si hay algun dialogo que mostrar (para indicar que no se puede salir), se
         // mostrara. En caso contrario, se pasara a la escena del pasillo y se elimina esta escena
-        super.toggleDoor(doorClosed, doorOpened, () => {
+        super.toggleDoor(this.doorClosed, doorOpened, () => {
             if (this.doorNode) {
                 this.dialogManager.setNode(this.doorNode);
             }

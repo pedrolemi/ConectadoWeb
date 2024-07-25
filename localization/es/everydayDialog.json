@@ -45,6 +45,18 @@
             "root": {
                 "text": "Parece que no hay nadie dentro."
             }
+        },
+        "tag": {
+            "root": {
+                "text": "Despacho del Director."
+            }
+        },
+        "downstairs": {
+            "root": {
+                "text": "",
+                "text_male": "Debería ir directo a clase.",
+                "text_female": "Debería ir directa a clase."
+            }
         }
 
     },

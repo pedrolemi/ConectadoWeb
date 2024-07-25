@@ -62,14 +62,27 @@ export default class PlaygroundMorningDay1 extends PlaygroundBase {
             nodes = this.cache.json.get('everydayDialog');
             this.homeNode = super.readNodes(nodes, "everydayDialog", "playground.homeMorning", true);
 
+            
+            // Evento llamado cuando suena la campana
             this.dispatcher.addOnce("openDoors", this, (obj) => {
                 console.log(obj);
+
+                // Cambia la hora del movil
+                let hour = this.i18next.t("clock.classStart", { ns: "phoneInfo" });
+                this.phoneManager.phone.setDayInfo(hour, "");
+
+                // Se quita el dialogo que aparece al hacer click en las puertas
+                this.doorNode = null;
+
+                // Se hace fade out de todos los personajes de la escena
                 let anim = this.tweens.add({
                     targets: [jose.char, alison.char, guille.char],
                     alpha: { from: 1, to: 0 },
                     duration: 1000,
                     repeat: 0,
                 });
+
+                // Una vez termina la animacion, se abren las puertas
                 anim.on('complete', () => {
                     super.openDoors();
                 })

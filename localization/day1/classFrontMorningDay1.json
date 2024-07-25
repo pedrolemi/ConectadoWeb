@@ -1,0 +1,80 @@
+{
+    "ana": {
+        "root": {
+            "type": "text",
+            "character": "Ana",
+            "next": "choices"
+        },
+        "choices": {
+            "type": "choice",
+            "choices":[
+                { "next": "introduce" },
+                { "next": "insult" }
+            ]
+        },
+
+        "introduce": {
+            "type": "text",
+            "character": "Ana",
+            "next": "teacherArrive"
+        },
+        "insult": {
+            "type": "text",
+            "character": "Ana",
+            "next": "teacherArrive"
+        },
+
+        "teacherArrive": {
+            "type": "text",
+            "character": "",
+            "next": "teacher"
+        },
+        "teacher": {
+            "type": "text",
+            "character": "teacher",
+            "next": "chooseSit"
+        },
+        "chooseSit": {
+            "type": "choice",
+            "choices":[
+                { "next": "startClass" },
+                { "next": "ask" }
+            ]
+        },
+
+        "ask": {
+            "type": "text",
+            "character": "teacher",
+            "next": "startClass"
+        },
+
+        "startClass": {
+            "type": "event",
+            "events": [
+                { 
+                    "startClass": { }
+                }
+            ]
+        }
+    },
+
+    "teacher": {
+        "root": {
+            "type": "text",
+            "character": "teacher",
+            "next": "startClass"
+        },
+        
+        "startClass": {
+            "type": "event",
+            "events": [
+                { 
+                    "startClass": { }
+                }
+            ]
+        }
+    }
+
+
+    
+}

@@ -1,36 +1,41 @@
 {
     "yourUserText": "Tu usuario",
     "yourPasswordText": "Tu contraseña",
+
     "loginScreen": {
-        "subtitleText": "¡CONECTA CON TUS AMIGOS!",
+        "subtitleText": "CONNECT WITH YOUR FRIENDS!",
         "userInput": {
-            "sideText": "Usuario"
+            "sideText": "User"
         },
         "passwordInput": {
-            "sideText": "Contraseña"
+            "sideText": "Password"
         },
-        "errorText": "El usuario/contraseña introducidos son incorrectos",
-        "enterButton": "Entrar"
+        "errorText": "User/Password introduced are incorrect",
+        "enterButton": "Enter"
     },
+
     "socialNetScreen": {
         "tabTexts": {
-            "feed": "Tablón",
-            "friends": "Amigos",
-            "upload": "Postear"
+            "feed": "Dashboard",
+            "friends": "Friends",
+            "upload": "Publish"
         },
-        "friendRequestNot": "¡Tienes nuevas peticiones de amistad!",
+        "friendRequestNot": "You've got new friend petitions!",
         "blockNot": "¡NO ESTÁ PERMITIDO BLOQUEAR USUARIOS!",
-        "friendsNumberText": "Amigos",
-        "pendingRequestsText": "Peticiones pendientes",
-        "informationText": "Este es tu tablón, mira lo que tus amigos han compartido"
+        "friendsNumberText": "Friends",
+        "pendingRequestsText": "Pending petitions: ",
+        "informationText": "This is your dashboard, look what your friends have shared"
     },
+
+    "commentsNumberText": "Comments",
+
+    "friendRequestButtons": {
+        "acceptText": "Accept",
+        "denyText": "Deny"
+    },
+
     "bio": {
         "Alison": "Hola holita",
         "Guillermo": "holu"
-    },
-    "commentsNumberText": "comentarios",
-    "friendRequestButtons": {
-        "acceptText": "Aceptar solicitud",
-        "denyText": "Denegar solicitud"
     }
 }

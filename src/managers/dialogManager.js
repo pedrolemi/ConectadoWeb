@@ -201,9 +201,23 @@ export default class DialogManager {
                     this.processNode();
                 }
                 else {
-                    this.textbox.setPortrait(this.portraits.get(this.currNode.character));
-                    this.setText(this.currNode.dialogs[this.currNode.currDialog], true);
-                    this.textbox.activate(true);
+                    // Funcion a ejecutar para mostrar la caja. Actualiza el retrato y el texto y activa la caja
+                    let showBox = () => {
+                        this.textbox.setPortrait(this.portraits.get(this.currNode.character));
+                        this.setText(this.currNode.dialogs[this.currNode.currDialog], true);
+                        this.textbox.activate(true);
+                    }
+
+                    // Si el ultimo personaje que hablo es distinto del que habla ahora, se oculta la caja y luego se muestra
+                    if (this.currNode.character !== this.lastCharacter) {
+                        this.textbox.activate(false, () => {
+                            showBox();
+                        }, 0);
+                    }
+                    // Si no, se muestra directamente. Si la caja ya estaba activa, no vuelve a mostrarla
+                    else {
+                        showBox();
+                    }
                 }
             }
             else if (this.currNode.type === "event") {
@@ -277,6 +291,7 @@ export default class DialogManager {
                 }
                 // Si ya se han mostrado todos los dialogos
                 else {
+                    // Actualiza el ultimo personaje que ha balado
                     this.lastCharacter = this.currNode.character;
 
                     // Se reinicia el dialogo del nodo actual y actualiza el nodo al siguiente
@@ -284,18 +299,7 @@ export default class DialogManager {
                     // EL SIGUIENTE NODO SERA EL PRIMER NODO DEL ARRAY DE NODOS SIGUIENTES
                     this.currNode.currDialog = 0;
                     this.currNode = this.currNode.next[0];
-
-                    // Si el nodo es valido y el siguiente personaje que habla no es el mismo que el anterior
-                    // Se oculta la caja de texto y una vez terminada la animacion, procesa el siguiente nodo
-                    if (this.currNode && this.currNode.character !== this.lastCharacter && this.currNode.type !== "event") {
-                        this.textbox.activate(false, () => {
-                            this.processNode();
-                        }, 0);
-                    }
-                    // Si no, procesa el siguiente nodo directamente
-                    else {
-                        this.processNode();
-                    }
+                    this.processNode();
                 }
             }
 

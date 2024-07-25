@@ -34,7 +34,7 @@ export default class AlarmScene extends BaseScene {
         this.phoneManager.phone.setDayInfo(hour, day);
 
         // Pone la imagen de fondo con las dimensiones del canvas
-        let bg = this.add.image(0, 0, this.atlasName, 'bedroomCeiling').setOrigin(0.5, 0);
+        let bg = this.add.image(0, 0, 'bedroomCeiling').setOrigin(0.5, 0);
         let scale = this.CANVAS_HEIGHT / bg.height;
         bg.setScale(scale);
 
@@ -52,7 +52,10 @@ export default class AlarmScene extends BaseScene {
             this.UIManager.cameras.main.scrollX = 0;
         });
         this.dispatcher.add(this.phoneManager.wakeUpEvent, this, (obj) => {
-            this.gameManager.changeScene('BedroomMorningDay' + this.gameManager.day);
+            let params = {
+                camPos: "right"
+            }
+            this.gameManager.changeScene('BedroomMorningDay' + this.gameManager.day, params);
         });
 
     }
@@ -60,7 +63,7 @@ export default class AlarmScene extends BaseScene {
     update(t, dt) {
         if (!this.phoneManager.toggling && this.phoneManager.phone.visible) {
             super.update(t, dt);
-            this.UIManager.cameras.main.scrollX = this.cameras.main.scrollX * dt;
+            this.UIManager.cameras.main.scrollX = this.cameras.main.scrollX;
         }
 
     }

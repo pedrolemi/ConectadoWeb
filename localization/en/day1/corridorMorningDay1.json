@@ -1,0 +1,37 @@
+{
+    "maria": {
+        "root": {
+            "text": "..."
+        },
+        "leaveMaria": {
+            "text": "She seems uncomfortable, better leave her alone for now."
+        }
+    },
+    
+    "alison": {
+        "root": {
+            "text": "Sorry,  i'm in a hurry, i'll be late if i don't get in."
+        }
+    },
+
+    "guille": {
+        "notTalked": [
+            {
+                "text": "Hi, I was reading the bulletin board."
+            },
+            {
+                "text": "There're intresting stuff sometimes, and someone has been leaving messages, stickers and riddles lately."
+            },
+            {
+                "text": "Have a look at it at least once a day, get used to it."
+            },
+            {
+                "text": "Shall we get in?"
+            }
+        ],
+        "talked": {
+            "text": "Remember to look at the boards, sometimes you can find intresting things."
+        }
+    }
+    
+}

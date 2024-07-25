@@ -11,6 +11,7 @@ export default class StairsMorningDay1 extends StairsBase {
         this.playground = "PlaygroundMorningDay1";
         this.corridor = "CorridorMorningDay1";
 
-        
+        let nodes = this.cache.json.get('everydayDialog');
+        this.playgroundNode = super.readNodes(nodes, "everydayDialog", "stairs.downstairs", true);
     }
 }

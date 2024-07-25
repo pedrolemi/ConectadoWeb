@@ -146,9 +146,10 @@ export default class BootScene extends Phaser.Scene {
             // en cualquier idioma (aunque o existiese)
             supportedLngs: ['en', 'es'],
             // Namespaces que se cargan para cada uno de los idiomas
-            ns: ['titleMenu', 'userInfoMenu', 'names', 'phoneInfo', 'computer',
-                'transitionScenes', 'everydayDialog', 'day1\\bedroomMorningDay1', 'day1\\livingroomMorningDay1', 'day1\\playgroundMorningDay1',
-                'momDialog', 'dadDialog', 'chat1'],
+            ns: ['titleMenu', 'userInfoMenu', 'names', 'phoneInfo', 'computer', 'transitionScenes', 'everydayDialog',
+                'day1\\bedroomMorningDay1', 'day1\\livingroomMorningDay1', 'day1\\playgroundMorningDay1', 'day1\\corridorMorningDay1', 'day1\\classFrontMorningDay1',
+
+                'test\\momDialog', 'test\\dadDialog', 'test\\chat1'],
             preload: ['en', 'es'],
             // Mostrar informacion de ayuda por consola
             debug: false,
@@ -188,15 +189,18 @@ export default class BootScene extends Phaser.Scene {
         // Archivos de dialogos (estructura)
         this.load.setPath('localization');
 
-        this.load.json('momDialog', 'momDialog.json');
-        this.load.json('dadDialog', 'dadDialog.json');
-        this.load.json('chat1', 'chat1.json');
+        this.load.json('momDialog', 'test/momDialog.json');
+        this.load.json('dadDialog', 'test/dadDialog.json');
+        this.load.json('chat1', 'test/chat1.json');
         this.load.json('posts', 'posts.json');
 
         this.load.json('everydayDialog', 'everydayDialog.json');
         this.load.json('bedroomMorningDay1', 'day1/bedroomMorningDay1.json');
         this.load.json('livingroomMorningDay1', 'day1/livingroomMorningDay1.json');
         this.load.json('playgroundMorningDay1', 'day1/playgroundMorningDay1.json');
+        this.load.json('corridorMorningDay1', 'day1/corridorMorningDay1.json');
+        this.load.json('classFrontMorningDay1', 'day1/classFrontMorningDay1.json');
+
     }
 
     loadSpinalAnims() {
@@ -205,28 +209,28 @@ export default class BootScene extends Phaser.Scene {
         // Personajes y sus respectivas animaciones esqueletales de Spine
         // [Idle01, IdleBase, Walk]
         this.load.spine('mom', 'mom/Front.json', 'mom/Front.atlas');
-        
+
         // [Idle01, IdleBase]
         this.load.spine('dad', 'dad/Front 34.json', 'dad/Front 34.atlas');
 
         // [Idle01, IdleBase]
         this.load.spine('Alex_front', 'Alex/Front 34.json', 'Alex/Front 34.atlas');
-        
+
         // [IdleBase, Walk]
         this.load.spine('Alex_side', 'Alex/Side.json', 'Alex/Side.atlas');
-        
+
         // [Idle01, IdleBase]
         this.load.spine('Alison', 'Alison/Front 34.json', 'Alison/Front 34.atlas');
-        
+
         // [Idle01, IdleBase]
         this.load.spine('Ana', 'Ana/Front 34.json', 'Ana/Front 34.atlas');
-        
+
         // [Idle01, IdleBase]
         this.load.spine('Guille', 'Guille/Front 34.json', 'Guille/Front 34.atlas');
-        
+
         // [Idle01, IdleBase]
         this.load.spine('Jose', 'Jose/Front 34.json', 'Jose/Front 34.atlas');
-        
+
         // [Idle01, IdleBase, IdlePhone]
         this.load.spine('Maria', 'Maria/Front 34.json', 'Maria/Front 34.atlas')
     }
@@ -289,7 +293,7 @@ export default class BootScene extends Phaser.Scene {
         this.load.image('backRow5Chairs', 'classBack/desks/backRow5Chairs.png');
         this.load.image('backRow5Tables', 'classBack/desks/backRow5Tables.png');
         this.load.atlas('classBack', 'classBack/classBack.png', 'classBack/classBack.json');
-        
+
         // Pesadillas
         // this.load.image('nightmaresBg', 'nightmares/nightmaresBg.png');
         // this.load.image('gum', 'nightmares/gum.png');
@@ -326,5 +330,5 @@ export default class BootScene extends Phaser.Scene {
 
         gameManager.startLangMenu();
     }
-    
+
 }

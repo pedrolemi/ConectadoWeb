@@ -69,6 +69,10 @@ export default class Character {
         }
     }
 
+    setDepth(depth) {
+        this.char.setDepth(depth);
+    }
+
     changeDialog(dialog) {
         this.dialog = dialog;
     }

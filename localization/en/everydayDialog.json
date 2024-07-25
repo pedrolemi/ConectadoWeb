@@ -26,6 +26,37 @@
         }
     },
 
+    "playground": {
+        "homeMorning": {
+            "root": {
+                "text": "I've just arrived, I cannot leave yet."
+            }
+        },
+        "door": {
+            "root": {
+                "text": "Looks like I've arrived soon and entrance is not allowed. I'll hang around."
+            }
+        }
+    },
+
+    "stairs": {
+        "door": {
+            "root": {
+                "text": "Looks like nobody's in there."
+            }
+        },
+        "tag": {
+            "root": {
+                "text": "Principal's office."
+            }
+        },
+        "downstairs": {
+            "root": {
+                "text": "I should go straight to class."
+            }
+        }
+    },
+
     "corridor": {
         "bathroom": {
             "root": {

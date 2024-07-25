@@ -1,0 +1,69 @@
+{
+    "maria": {
+        "root": {
+            "type": "text",
+            "character": "Maria",
+            "next": "leaveMaria"
+        },
+        "leaveMaria": {
+            "type": "text",
+            "character": "player"
+        }
+    },
+
+    "alison": {
+        "root": {
+            "type": "text",
+            "character": "Alison"
+        }
+    },
+
+    "guille": {
+        "root": {
+            "type": "condition",
+            "conditions": [
+                {
+                    "next": "notTalked",
+                    "talked": {
+                        "value": false,
+                        "operator": "equal",
+                        "global": false,
+                        "default": false
+                    }
+                },
+                {
+                    "next": "talked",
+                    "talked": {
+                        "value": true,
+                        "operator": "equal",
+                        "global": false,
+                        "default": false
+                    }
+                }
+            ]
+        },
+
+        "notTalked": {
+            "type": "text",
+            "character": "Guille",
+            "next": "setTalked"
+        },
+        "setTalked": {
+            "type": "event",
+            "events": [
+                { 
+                    "setTalkedGuille": { 
+                        "variable": "talked", 
+                        "value": true, 
+                        "global": false
+                    }
+                }
+            ]
+        },
+
+        "talked": {
+            "type": "text",
+            "character": "Guille"
+        }
+    }
+}

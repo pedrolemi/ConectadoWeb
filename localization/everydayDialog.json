@@ -8,7 +8,7 @@
             },
             "pcQuestion": {
                 "type": "text",
-                "character": "PC",
+                "character": "computer",
                 "next": "pcChoice"
             },
             "pcChoice": {
@@ -36,6 +36,7 @@
         }
     },
 
+
     "playground": {
         "homeMorning": {
             "root": {
@@ -52,8 +53,21 @@
 
     },
 
+
     "stairs": {
         "door": {
+            "root": {
+                "type": "text",
+                "character": "player"
+            }
+        },
+        "tag": {
+            "root": {
+                "type": "text",
+                "character": "note"
+            }
+        },
+        "downstairs": {
             "root": {
                 "type": "text",
                 "character": "player"
@@ -62,6 +76,7 @@
 
     },
 
+    
     "corridor": {
         "bathroom": {
             "root": {

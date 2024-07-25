@@ -1,0 +1,81 @@
+{
+    "ana": {
+        "root": {
+            "text": "I think you got into the wrong classroom."
+        },
+        "choices": [
+            {
+                "text": "No, it's just my first day, i am {{name}}."
+            },
+            {
+                "text": "And who you are? The butch woman of the class?"
+            }
+        ],
+        
+        "introduce": [
+            {
+                "text": "Oh, so you are the newcomer."
+            },
+            {
+                "text": "I am Ana, i'm in this class too."
+            }
+        ],
+        "insult": {
+            "text": "You're a twat..."
+        },
+
+        "teacherArrive": {
+            "text": "(Knocks on the back, it seems like your new teacher has arrived)"
+        },
+        "teacher": {
+            "text": "C'mon everyone, class is about to start, come in and sit."
+        },
+
+        "chooseSit":[
+            {
+                "text": "(Sit in the last row)"
+            },
+            {
+                "text": "(Ask where you can sit)"
+            }
+        ],
+        "ask": [
+            {
+                "text": "Sit next to Alison.."
+            },
+            {
+                "text": "Alison, do me a favour and solve any doubts {{name}} might have about school."
+            }
+        ] 
+
+    },
+
+    "teacher": {
+        "root": [
+            {
+                "text": "{{name}} right?"
+            },
+            {
+                "text": "Getting late on your first day, not the best way to start."
+            },
+            {
+                "text": "",
+                "text_male": "Class, this is your new classmate, please, help him during the first days.",
+                "text_female": "Class, this is your new classmate, please, help her during the first days."
+            },
+            {
+                "text": "{{name}}, i am your tutor, anything you need just let me know."
+            },
+            {
+                "text": "Please, {{name}} sit next to Alison."
+            },
+            {
+                "text": "Alison, do me a favour and solve any doubts {{name}} might have about school."
+            },
+            {
+                "text": "Let's continue the class."
+            }
+        ]
+    }
+
+}

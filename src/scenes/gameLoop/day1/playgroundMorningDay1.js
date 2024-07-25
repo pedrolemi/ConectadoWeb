@@ -56,13 +56,23 @@ export default class PlaygroundMorningDay1 extends PlaygroundBase {
 
             let nodes = this.cache.json.get('playgroundMorningDay1');
             let joseNode = super.readNodes(nodes, "day1\\playgroundMorningDay1", "jose", true);
-            let alisonNode = null;
-            let guilleNode = null;
-
+            let alisonNode = super.readNodes(nodes, "day1\\playgroundMorningDay1", "alison", true);
+            let guilleNode = super.readNodes(nodes, "day1\\playgroundMorningDay1", "guille", true);;
+            
+            nodes = this.cache.json.get('everydayDialog');
+            this.homeNode = super.readNodes(nodes, "everydayDialog", "playground.homeMorning", true);
 
             this.dispatcher.addOnce("openDoors", this, (obj) => {
                 console.log(obj);
-                super.openDoors();
+                let anim = this.tweens.add({
+                    targets: [jose.char, alison.char, guille.char],
+                    alpha: { from: 1, to: 0 },
+                    duration: 1000,
+                    repeat: 0,
+                });
+                anim.on('complete', () => {
+                    super.openDoors();
+                })
             });
         }
 

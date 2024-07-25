@@ -1,11 +1,4 @@
 {
-    "door": {
-        "root": {
-            "type": "text",
-            "character": "player"
-        }
-    },
-
     "jose": {
         "root": {
             "type": "condition",
@@ -140,13 +133,116 @@
 
     "alison": {
         "root": {
+            "type": "text",
+            "character": "Alison",
+            "next": "choices"
+        },
 
+        "choices": {
+            "type": "choice",
+            "choices":[
+                { "next": "introduce" },
+                { "next": "goodbye" }
+            ]
+        },
+
+        "introduce": {
+            "type": "text",
+            "character": "Alison",
+            "next": "playerAnswer"
+        },
+        "playerAnswer": {
+            "type": "text",
+            "character": "player",
+            "next": "afterPlayerIntroduction"
+        },
+        "afterPlayerIntroduction": {
+            "type": "text",
+            "character": "Alison"
+        },
+
+        "goodbye": {
+            "type": "text",
+            "character": "Alison"
         }
     },
 
     "guille": {
         "root": {
+            "type": "text",
+            "character": "Guille",
+            "next": "choices"
+        },
 
+        "choices": {
+            "type": "choice",
+            "choices":[
+                { "next": "introduce" },
+                { "next": "bellRinging" }
+            ]
+        },
+        "introduce": {
+            "type": "text",
+            "character": "Guille",
+            "next": "setIntroduced"
+        },
+        "setIntroduced": {
+            "type": "event",
+            "events": [
+                { 
+                    "setIntroducedGuille": { 
+                        "variable": "introducedGuille", 
+                        "value": true, 
+                        "global": false
+                    }
+                }
+            ],
+            "next": "bellRinging"
+        },
+
+        "bellRinging": {
+            "type": "text",
+            "character": "",
+            "next": "checkIntroduced"
+        },
+
+        "checkIntroduced": {
+            "type": "condition",
+            "conditions": [
+                {
+                    "next": "openDoors",
+                    "introducedGuille": {
+                        "value": false,
+                        "operator": "equal",
+                        "global": false,
+                        "default": false
+                    }
+                },
+                {
+                    "next": "guilleGoodbye",
+                    "introducedGuille": {
+                        "value": true,
+                        "operator": "equal",
+                        "global": false,
+                        "default": false
+                    }
+                }
+            ]
+        },
+
+        "guilleGoodbye": {
+            "type": "text",
+            "character": "Guille",
+            "next": "openDoors"
+        },
+        "openDoors": {
+            "type": "event",
+            "events": [
+                {
+                    "openDoors": { }
+                }
+            ]
         }
+
     }
 }

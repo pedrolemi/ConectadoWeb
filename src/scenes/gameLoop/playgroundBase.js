@@ -45,7 +45,8 @@ export default class PlaygroundBase extends BaseScene {
         });
 
         // Puertas del edificio
-        this.doorNode = null;
+        let nodes = this.cache.json.get('everydayDialog');
+        this.doorNode = super.readNodes(nodes, "everydayDialog", "playground.door", true);;
         let doors = this.add.rectangle(2640 * this.scale, 1060 * this.scale, 262, 186, 0xfff, 0).setOrigin(0, 0);
         doors.setInteractive({ useHandCursor: true });
         // Al hacer click sobre la zona de la peurta, si las puertas estan abiertas, se pasara a la escena de las escaleras

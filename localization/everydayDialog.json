@@ -36,6 +36,32 @@
         }
     },
 
+    "playground": {
+        "homeMorning": {
+            "root": {
+                "type": "text",
+                "character": "player"
+            }
+        },
+        "door": {
+            "root": {
+                "type": "text",
+                "character": "player"
+            }
+        }
+
+    },
+
+    "stairs": {
+        "door": {
+            "root": {
+                "type": "text",
+                "character": "player"
+            }
+        }
+
+    },
+
     "corridor": {
         "bathroom": {
             "root": {

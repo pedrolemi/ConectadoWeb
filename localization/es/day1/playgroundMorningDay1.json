@@ -24,7 +24,7 @@
             }
         ],
         "askClass": {
-            "text": "Esa es también mi clase, está en la segunda planta, subiendo las escaleras de la derecha que encuentras nada más entrar al edificio. Y en la primera planta está el despacho del director"
+            "text": "Esa es también mi clase, está en la segunda planta, subiendo las escaleras de la derecha que encuentras nada más entrar al edificio. Y en la primera planta está el despacho del director."
         },
         "askMore":  {
             "text": "¿Necesitas algo más?"
@@ -38,7 +38,81 @@
         "alreadyIntroduced": {
             "text": "Ya me habías dicho tu nombre."
         }
-    }
+    },
     
+    "alison": {
+        "root": {
+            "text": "¿Te conozco?"
+        },
+        "choices": [
+            {
+                "text": "Soy {{name}}... ¿Y tú eres?"
+            },
+            {
+                "text": "No, lo siento, tengo prisa. Adiós."
+            }
+            
+        ],
+        "introduce": [
+            {
+                "text": "Encantada, yo soy Alison."
+            },
+            {
+                "text": "Espero que estés a gusto aquí, hay quente muy maja."
+            },
+            {
+                "text": "¿A qué curso vas?"
+            }
+        ],
+        "playerAnswer": {
+            "text": "(Contestas)"
+        },
+        "afterPlayerIntroduction": [
+            {
+                "text": "Entonces te veré en clase."
+            },
+            {
+                "text": "El chico de la camiseta amarilla que está cerca de la entrada al patio también va a nuestra clase."
+            },
+            {
+                "text": "Es muy majo, ¿por qué no hablas con él?"
+            }
+        ],
+        "goodbye": [
+            {
+                "text": "",
+                "text_male": "No seas tan tímido, no muerdo",
+                "text_female": "No seas tan tímida, no muerdo"
+            },
+            {
+                "text": "Bueno, nos vemos. Que sea un buen primer día."
+            }
+        ]
+    },
+
+    "guille": {
+        "root": {
+            "text": "",
+            "text_male": "¿Eres nuevo? No te había visto antes por aquí.",
+            "text_female": "¿Eres nueva? No te había visto antes por aquí."
+        },
+        "choices": [
+            {
+                "text": "Sí, soy {{name}}... ¿Y tú eres?"
+            },
+            {
+                "text": "Perdona, tengo prisa (Te vas)."
+            }
+        ],
+        "introduce": {
+            "text": "Llámame Guille."
+        },
+        "bellRinging": {
+            "text": "<<La campana está sonando>>"
+        },
+        "guilleGoodbye": {
+            "text": "Deberíamos entrar ya, nos vemos."
+        }
+    }
     
 }

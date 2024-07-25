@@ -25,7 +25,8 @@ export default class StairsBase extends BaseScene {
         this.rightBound = this.bg.displayWidth;
 
         // Puerta del despacho
-        this.doorNode = null;
+        let nodes = this.cache.json.get('everydayDialog');
+        this.doorNode = super.readNodes(nodes, "everydayDialog", "stairs.door", true);
         let doorPos = {
             x: 2490 * this.scale,
             y: 273 * this.scale

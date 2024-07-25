@@ -26,6 +26,29 @@
         }
     },
 
+    "playground": {
+        "homeMorning": {
+            "root": {
+                "text": "Acabo de llegar, no puedo irme aún."
+            }
+        },
+        "door": {
+            "root": {
+                "text": "Parece que he llegado pronto y aún no se puede pasar. Será mejor que haga algo de tiempo."
+            }
+        }
+
+    },
+
+    "stairs": {
+        "door": {
+            "root": {
+                "text": "Parece que no hay nadie dentro."
+            }
+        }
+
+    },
+
     "corridor": {
         "bathroom": {
             "root": {

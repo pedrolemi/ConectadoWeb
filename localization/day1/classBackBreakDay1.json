@@ -1,0 +1,214 @@
+{
+
+    "alex": {
+        "root": {
+            "type": "condition",
+            "conditions": [
+                {
+                    "next": "notTalked",
+                    "talkedAlex": {
+                        "value": false,
+                        "operator": "equal",
+                        "global": false,
+                        "default": false
+                    }
+                },
+                {
+                    "next": "talked",
+                    "talkedAlex": {
+                        "value": true,
+                        "operator": "equal",
+                        "global": false,
+                        "default": false
+                    }
+                }
+            ]
+        },
+        "notTalked": {
+            "type": "text",
+            "character": "Alex",
+            "next": "choices"
+        },
+        "talked": {
+            "type": "text",
+            "character": "Alex"
+        },
+
+        "choices": {
+            "type": "choice",
+            "choices":[
+                { "next": "submit" },
+                { "next": "downplay" },
+                { "next": "defy"}
+            ]
+        },
+
+        "submit": {
+            "type": "text",
+            "character": "Alex",
+            "next": "giveSandwich"
+        },
+        "giveSandwich": {
+            "type": "text",
+            "character": "player",
+            "next": "takeSandwich"
+        },
+        "takeSandwich": {
+            "type": "text",
+            "character": "Alex",
+            "next": "move"
+        },
+
+        "downplay": {
+            "type": "text",
+            "character": "Alex",
+            "next": "move"
+        },
+
+        "defy": {
+            "type": "text",
+            "character": "Alex",
+            "next": "push"
+        },
+        "push": {
+            "type": "text",
+            "character": "",
+            "next": "insult"
+        },
+        "insult": {
+            "type": "text",
+            "character": "Alex",
+            "next": "leave"
+        },
+        "leave": {
+            "type": "text",
+            "character": "",
+            "next": "leaveEvent"
+        },
+
+
+        "move": {
+            "type": "event",
+            "events": [
+                { 
+                    "moveAlex": { 
+                        "variable": "talkedAlex", 
+                        "value": true, 
+                        "global": false
+                    }
+                }
+            ]
+        },
+        "leaveEvent": {
+            "type": "event",
+            "events": [
+                { 
+                    "leaveAlex": { }
+                }
+            ]
+        }
+    },
+
+    "alison": {
+        "root": {
+            "type": "condition",
+            "conditions": [
+                {
+                    "next": "notTalked",
+                    "talkedAlison": {
+                        "value": false,
+                        "operator": "equal",
+                        "global": false,
+                        "default": false
+                    }
+                },
+                {
+                    "next": "talked",
+                    "talkedAlison": {
+                        "value": true,
+                        "operator": "equal",
+                        "global": false,
+                        "default": false
+                    }
+                }
+            ]
+        },
+        "notTalked": {
+            "type": "text",
+            "character": "Alison",
+            "next": "choices1"
+        },
+        "talked": {
+            "type": "text",
+            "character": "Alison"
+        },
+
+        "choices1": {
+            "type": "choice",
+            "choices":[
+                { "next": "didntCheck" },
+                { "next": "didntCheck" },
+                { "next": "cry"}
+            ]
+        },
+        "didntCheck": {
+            "type": "text",
+            "character": "Alison",
+            "next": "choices2"
+        },
+        "cry": {
+            "type": "text",
+            "character": "Alison",
+            "next": "playerThoughts"
+        },
+        "playerThoughts": {
+            "type": "text",
+            "character": "",
+            "next": "beg"
+        },
+        "beg": {
+            "type": "text",
+            "character": "Alison",
+            "next": "choices2"
+        },
+
+        "choices2": {
+            "type": "choice",
+            "choices":[
+                { "next": "illusionOfFreeChoice" },
+                { "next": "illusionOfFreeChoice" }
+            ]
+        },
+        "illusionOfFreeChoice": {
+            "type": "text",
+            "character": "Alison",
+            "next": "exchangePhoneNumber"
+        },
+        "exchangePhoneNumber": {
+            "type": "text",
+            "character": "Alison",
+            "next": "setTalked"
+        },
+
+        "setTalked": {
+            "type": "event",
+            "events": [
+                { 
+                    "setTalkedAlison": { 
+                        "variable": "talkedAlison", 
+                        "value": true, 
+                        "global": false
+                    }
+                }
+            ]
+        }
+    },
+
+
+    "door": {
+        "root": {
+            "type": "text",
+            "character": "player"
+        }
+    }
+}

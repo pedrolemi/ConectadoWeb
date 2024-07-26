@@ -8,6 +8,8 @@ import UserInfoMenu from './scenes/userInfoMenu.js';
 // Flujo de juego
 import TextOnlyScene from './scenes/textOnlyScene.js';
 import AlarmScene from './scenes/gameLoop/alarmScene.js';
+import BathroomMorning from './scenes/gameLoop/bathroomMorning.js';
+import OppositeBathroom from './scenes/gameLoop/oppositeBathroom.js';
 
 // Dia 1
 import BedroomMorningDay1 from './scenes/gameLoop/day1/bedroomMorningDay1.js';
@@ -15,9 +17,9 @@ import LivingroomMorningDay1 from './scenes/gameLoop/day1/livingroomMorningDay1.
 import PlaygroundMorningDay1 from './scenes/gameLoop/day1/playgroundMorningDay1.js';
 import StairsMorningDay1 from './scenes/gameLoop/day1/stairsMorningDay1.js';
 import CorridorMorningDay1 from './scenes/gameLoop/day1/corridorMorningDay1.js';
-import BathroomMorning from './scenes/gameLoop/bathroomMorning.js';
 import ClassFrontMorningDay1 from './scenes/gameLoop/day1/classFrontMorningDay1.js';
 import ClassBackMorningDay1 from './scenes/gameLoop/day1/classBackMorningDay1.js';
+import ClassBackBreakDay1 from './scenes/gameLoop/day1/classBackBreakDay1.js';
 
 // UI
 import ComputerScene from './UI/computer/computerScene.js'
@@ -37,10 +39,11 @@ const config = {
     // Nota: el orden de las escenas es relevante, y las que se encuentren antes en el array se renderizaran por debajo de las siguientes
     scene: [
         BootScene, LanguageMenu, TitleMenu, UserInfoMenu,
-        AlarmScene,
-        BedroomMorningDay1, LivingroomMorningDay1, PlaygroundMorningDay1, StairsMorningDay1, CorridorMorningDay1, BathroomMorning, ClassFrontMorningDay1, ClassBackMorningDay1,
-        Test,
-        ComputerScene, UIManager, TextOnlyScene],
+        AlarmScene, BathroomMorning, OppositeBathroom,
+        BedroomMorningDay1, LivingroomMorningDay1, PlaygroundMorningDay1, StairsMorningDay1, CorridorMorningDay1, ClassFrontMorningDay1, ClassBackMorningDay1, ClassBackBreakDay1,
+
+        Test, 
+        ComputerScene, UIManager, TextOnlyScene ],
     autoFocus: true,
     disableContextMenu: true,        // Desactivar que aparezca el menu de inspeccionar al hacer click derecho
     render: {

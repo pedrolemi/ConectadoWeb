@@ -71,24 +71,24 @@ export default class Test extends BaseScene {
         chatName = this.i18next.t("textMessages.chat2", { ns: "phoneInfo", returnObjects: true });
         this.phoneManager.phone.addChat(chatName, "Alex");
 
-        let computerTest = this.cache.json.get('computerTest');
-        let ownPostNode = super.readNodes(computerTest, "test\\computerTest", "", true);
-        let refuseNode = super.readNodes(computerTest, "test\\computerTest", "Alison.refuse", true);
-        let postNode = super.readNodes(computerTest, "test\\computerTest", "Alison.post", true);
-        let socialNetwork = this.gameManager.computerScene.socialNetScreen;
-        socialNetwork.setOwnPostNode(ownPostNode);
-        //socialNetwork.createPost('Alison', 'post0');
-        socialNetwork.addFriendRequest('Alison');
-        socialNetwork.createPost('Alison', 'post0');
-        socialNetwork.setRefuseNode('Alison', refuseNode);
-        socialNetwork.setPostNode('Alison', 'post0', postNode);
+        // let computerTest = this.cache.json.get('computerTest');
+        // let ownPostNode = super.readNodes(computerTest, "test\\computerTest", "", true);
+        // let refuseNode = super.readNodes(computerTest, "test\\computerTest", "Alison.refuse", true);
+        // let postNode = super.readNodes(computerTest, "test\\computerTest", "Alison.post", true);
+        // let socialNetwork = this.gameManager.computerScene.socialNetScreen;
+        // socialNetwork.setOwnPostNode(ownPostNode);
+        // //socialNetwork.createPost('Alison', 'post0');
+        // socialNetwork.addFriendRequest('Alison');
+        // socialNetwork.createPost('Alison', 'post0');
+        // socialNetwork.setRefuseNode('Alison', refuseNode);
+        // socialNetwork.setPostNode('Alison', 'post0', postNode);
 
-        // Ordenador
-        let computer = this.add.image(this.CANVAS_WIDTH / 2, this.CANVAS_HEIGHT / 2, 'bedroom', 'computer');
-        computer.setScale(0.5);
-        computer.setInteractive();
-        computer.on('pointerdown', () => {
-            this.gameManager.switchToComputer();
-        });
+        // // Ordenador
+        // let computer = this.add.image(this.CANVAS_WIDTH / 2, this.CANVAS_HEIGHT / 2, 'bedroom', 'computer');
+        // computer.setScale(0.5);
+        // computer.setInteractive();
+        // computer.on('pointerdown', () => {
+        //     this.gameManager.switchToComputer();
+        // });
     }
 }

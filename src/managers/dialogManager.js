@@ -37,7 +37,9 @@ export default class DialogManager {
         this.bgBlock = scene.add.rectangle(0, 0, this.scene.CANVAS_WIDTH, this.scene.CANVAS_HEIGHT, 0xfff, 0).setOrigin(0, 0);
         this.bgBlock.setDepth(this.textbox.box.depth - 1);
         this.bgBlock.on('pointerdown', () => {
-            this.nextDialog();
+            if (this.textbox.box.input.enabled) {
+                this.nextDialog();
+            }
         });
 
         this.textbox.activate(false);
@@ -63,7 +65,9 @@ export default class DialogManager {
     * @param {Phaser.Scene} scene - escena a la que se va a pasar
     */
     changeScene(scene) {
-        this.textbox.setPortrait(null);
+        // Desactiva la caja de texto y las opciones (por si acaso)
+        if (this.textbox) this.textbox.activate(false);
+        this.activateOptions(false);
         this.portraits.clear();
 
         // Coge todos los retratos de los personajes de la escena, 
@@ -78,10 +82,6 @@ export default class DialogManager {
             p.alpha = 0;
             p.setMask(this.portraitMask);
         });
-
-        // Desactiva la caja de texto y las opciones (por si acaso)
-        if (this.textbox) this.textbox.activate(false);
-        this.activateOptions(false);
     }
 
 

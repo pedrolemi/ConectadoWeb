@@ -46,6 +46,8 @@ export default class GameManager {
         this.UIManager = null;
         this.computerScene = null;
 
+        this.day = 0;       // Dia de la semana. Empieza en 0 porque al iniciarse la escena de la alarma, se va actualizando
+        
         this.generateTextures();
 
         // Configuracion de texto por defecto
@@ -236,7 +238,7 @@ export default class GameManager {
         this.computerScene = this.currentScene.scene.get(computerSceneName);
         this.computerScene.scene.sleep();
 
-        let sceneName = 'Test';
+        let sceneName = 'ClassBackBreakDay1';
         // let sceneName = 'BedroomMorningDay1';
 
         // Pasa a la escena inicial con los parametros text, onComplete y onCompleteDelay

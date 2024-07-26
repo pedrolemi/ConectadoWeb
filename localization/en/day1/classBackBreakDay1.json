@@ -1,0 +1,167 @@
+{
+    "alex": {
+        "notTalked": [
+            {
+                "text": "Hey, newcomer, let's talk for a sec!!"
+            },
+            {
+                "text": "Today you were sat in my spot, I don't want you to sit there again."
+            },
+            {
+                "text": "Starting tomorrow you will sit in the empty desk at the back."
+            }
+        ],
+        "talked": {
+            "text": "What at you looking at? go away, we've talked everything we needed."
+        },
+
+        "choices": [
+            {
+                "text": "Sure, sorry, it won't happen again."
+            },
+            {
+                "text": "It's just a spot."
+            },
+            {
+                "text": "And who are you to tell me where I can or cannot sit?"
+            }
+        ],
+
+        "submit": [
+            {
+                "text": "That's right, obedient."
+            },
+            {
+                "text": "And by the way, in compensation, gimme that sandwich, i'm hungry."
+            }
+        ],
+        "giveSandwich": {
+            "text": "(You give him your sandwich)"
+        },
+        "takeSandwich":  {
+            "text": "C'mon, get out of my sight."
+        },
+
+        "downplay": [
+            {
+                "text": "That's it, it's just a spot but it's my spot."
+            },
+            {
+                "text": "So go and find another one."
+            },
+            {
+                "text": "(In a threatening tone) Or i'll have to help you find one."
+            },
+            {
+                "text": "And the last one I helped find a spot...well, he also found a bruise in his face."
+            },
+            {
+                "text": "Now go away."
+            }
+        ],
+
+        "defy": {
+            "text": "You are a smartass, aren't you?"
+        },
+        "push": {
+            "text": "(You are pushed)"
+        },
+        "insult": {
+            "text": "So be it, prat."
+        },
+        "leave": {
+            "text": "(Alejandro leaves)"
+        }
+    },
+
+    "alison": {
+        "notTalked": [
+            {
+                "text": "Where did I lose it..."
+            },
+            {
+                "text": "Sorry {{name}}, I did not see you."
+            },
+            {
+                "text": "I'm looking for an earring, I don't know where I could have lose it."
+            }
+        ],
+        "talked": [
+            {
+                "text": "Haven't you found anything yet?"
+            },
+            {
+                "text": "Please, keep searching."
+            }
+        ],
+
+        "choices1": [
+            {
+                "text": "Have you looked in the hallway?"
+            },
+            {
+                "text": "¿Have you looked in the playground?"
+            },
+            {
+                "text": "Perhaps you left it at home..."
+            }
+        ],
+        "didntCheck": [
+            {
+                "text": "I haven't looked yet."
+            },
+            {
+                "text": "Can you go there? While I finish searching in the classroom..."
+            },
+            {
+                "text": "You would do me a big favour."
+            }
+        ],
+        "cry": [
+            {
+                "text": "It can´t be, I was wearing them this morning."
+            },
+            {
+                "text": "Th- th- they are new, a gi... gift."
+            }
+        ],
+        "playerThoughts": {
+            "text": "(You noticed she is very worried and about to start crying)"
+        },
+        "beg" :{
+            "text": "Please, *sniff* , *sniff* can you help me find them?"
+        },
+        "choices2": [
+            {
+                "text": "Alright, i'll take a look."
+            },
+            {
+                "text": "Yes (I will enjoy the recess and tell her I have not found anything)."
+            }
+        ],
+        "illusionOfFreeChoice": [
+            {
+                "text": "Thank you very much."
+            },
+            {
+                "text": "Also here is my phone number, so we can text each other."
+            }
+        ],
+        "exchangePhoneNumber": {
+            "text": "(You also give her your number)"
+        }
+        
+    },
+
+
+    "door": {
+        "root": [
+            {
+                "text": "Alison seems worried."
+            },
+            {
+                "text": "I should talk to her to see what happens."
+            }
+        ]
+    }
+}

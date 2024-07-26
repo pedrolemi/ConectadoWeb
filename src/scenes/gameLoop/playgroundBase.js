@@ -46,7 +46,7 @@ export default class PlaygroundBase extends BaseScene {
 
         // Puertas del edificio
         let nodes = this.cache.json.get('everydayDialog');
-        this.doorNode = super.readNodes(nodes, "everydayDialog", "playground.door", true);;
+        this.doorNode = super.readNodes(nodes, "everydayDialog", "playground.door", true);
         let doors = this.add.rectangle(2640 * this.scale, 1060 * this.scale, 262, 186, 0xfff, 0).setOrigin(0, 0);
         doors.setInteractive({ useHandCursor: true });
         // Al hacer click sobre la zona de la puerta, si hay algun dialogo que mostrar, (para indicar que 

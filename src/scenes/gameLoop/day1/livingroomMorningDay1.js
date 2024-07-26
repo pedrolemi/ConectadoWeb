@@ -1,5 +1,5 @@
 import LivingroomBase from "../livingroomBase.js";
-import Character from "../../../gameObjects/character.js"
+import Character from "../../../gameObjects/character.js";
 
 export default class LivingroomMorningDay1 extends LivingroomBase {
     constructor() {

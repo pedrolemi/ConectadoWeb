@@ -1,5 +1,5 @@
 import CorridorBase from "../corridorBase.js";
-import Character from "../../../gameObjects/character.js"
+import Character from "../../../gameObjects/character.js";
 
 export default class CorridorMorningDay1 extends CorridorBase {
     constructor() {

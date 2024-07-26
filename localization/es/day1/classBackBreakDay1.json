@@ -1,0 +1,175 @@
+{
+    "alex": {
+        "notTalked": [
+            {
+                "text": "",
+                "text_male":  "Eh, nuevo, hablemos un momento!!",
+                "text_female": "Eh, nueva, hablemos un momento!!"
+            },
+            {
+                "text": "",
+                "text_male": "Hoy estabas sentado en mi sitio, no quiero que te vuelvas a sentar ahí.",
+                "text_female": "Hoy estabas sentada en mi sitio, no quiero que te vuelvas a sentar ahí."
+            },
+            {
+                "text": "A partir de mañana siéntate en la otra mesa del final que está vacía."
+            }
+        ],
+        "talked": {
+            "text": "¿Qué miras? largo, ya hemos hablado todo lo que teniamos que hablar."
+        },
+
+        "choices": [
+            {
+                "text": "Vale, perdona, no volverá a pasar."
+            },
+            {
+                "text": "Es sólo un sitio."
+            },
+            {
+                "text": "¿Y quién se supone que eres para decirme dónde no puedo sentarme?"
+            }
+        ],
+
+        "submit": [
+            {
+                "text": "Así me gusta, obediente."
+            },
+            {
+                "text": "Y ya que estamos, para compensar, dame ese bocadillo que llevas, que tengo hambre."
+            }
+        ],
+        "giveSandwich": {
+            "text": "(Le das el bocadillo)"
+        },
+        "takeSandwich":  {
+            "text": "Venga, fuera de mi vista."
+        },
+
+        "downplay": [
+            {
+                "text": "Así es, es sólo un sitio, como todos los demás, pero es mi sitio."
+            },
+            {
+                "text": "Así que búscate otro."
+            },
+            {
+                "text": "(Con tono amenazador) Sino tendré que ayudarte yo a buscarlo."
+            },
+            {
+                "text": "Y el último al que le ayudé a elegir otro sitio lo que encontró fue un moratón en su cara."
+            },
+            {
+                "text": "Y ahora lárgate."
+            }
+        ],
+
+        "defy": {
+            "text": "",
+            "text_male": "¿Vas de listo?",
+            "text_female": "¿Vas de lista?"
+        },
+        "push": {
+            "text": "(Recibes un empujón)"
+        },
+        "insult": {
+            "text": "",
+            "text_male": "Que así sea, capullo",
+            "text_female":  "Que así sea, estúpida"
+        },
+        "leave": {
+            "text": "(Alejandro se va)"
+        }
+    },
+
+    "alison": {
+        "notTalked": [
+            {
+                "text": "Dónde lo habré perdido..."
+            },
+            {
+                "text": "Perdona {{name}}, no te había visto."
+            },
+            {
+                "text": "Estoy buscando un pendiente, no sé dónde lo he podido perder."
+            }
+        ],
+        "talked": [
+            {
+                "text": "¿Aún no has encontrado nada?"
+            },
+            {
+                "text": "Sigue buscando por favor."
+            }
+        ],
+
+        "choices1": [
+            {
+                "text": "¿Has mirado en el pasillo?"
+            },
+            {
+                "text": "¿Has buscado en el patio?"
+            },
+            {
+                "text": "Quizá lo hayas dejado en casa..."
+            }
+        ],
+        "didntCheck": [
+            {
+                "text": "No he mirado aún."
+            },
+            {
+                "text": "¿Puedes ir tú? Mientras termino de buscar en clase..."
+            },
+            {
+                "text": "Me harías un gran favor."
+            }
+        ],
+        "cry": [
+            {
+                "text": "No puede ser, esta mañana los llevaba."
+            },
+            {
+                "text": "So- so- son nuevos, un re... regalo."
+            }
+        ],
+        "playerThoughts": {
+            "text": "(Notas que está muy preocupada y a punto de llorar)"
+        },
+        "beg" :{
+            "text": "Por favor, *snif* , *snif* ¿puedes ayudarme a encontrarlos?"            
+        },
+        "choices2": [
+            {
+                "text": "De acuerdo, echaré un vistazo."
+            },
+            {
+                "text": "Si (Iré a disfrutar del recreo y luego le digo que no he encontrado nada)."
+            }
+        ],
+        "illusionOfFreeChoice": [
+            {
+                "text": "Muchas gracias."
+            },
+            {
+                "text": "Además toma mi número, así podemos escribirnos."
+            }
+        ],
+        "exchangePhoneNumber": {
+            "text": "(También le das tu número)"
+        }
+        
+    },
+
+
+    "door": {
+        "root": [
+            {
+                "text": "Alison parece preocupada."
+            },
+            {
+                "text": "Debería hablar con ella para ver que pasa."
+            }
+        ]
+    }
+}

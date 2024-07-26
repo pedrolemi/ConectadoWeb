@@ -32,8 +32,7 @@ export default class BedroomMorningDay1 extends BedroomBase {
 
 
         this.dispatcher.add("turnPC", this, (obj) => {
-            let hour = this.i18next.t("clock.pcLateHour", { ns: "phoneInfo", returnObjects: true });
-            this.phoneManager.phone.setDayInfo(hour, "");
+            this.phoneManager.setDayInfo("pcLateHour");
         });
 
         this.dispatcher.add("pickBag", this, (obj) => {

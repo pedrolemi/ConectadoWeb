@@ -1,5 +1,5 @@
 import ClassFrontBase from "../classFrontBase.js";
-import Character from "../../../gameObjects/character.js"
+import Character from "../../../gameObjects/character.js";
 
 export default class ClassFrontMorningDay1 extends ClassFrontBase {
     constructor() {

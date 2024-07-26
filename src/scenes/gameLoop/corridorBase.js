@@ -44,7 +44,7 @@ export default class CorridorBase extends BaseScene {
 
                 // Al ir a las escaleras, se cambiara la hora. Si la 
                 // siguiente hora es un string vacio, no tendra efecto
-                this.phoneManager.phone.setDayInfo(this.nextHour, "");
+                this.phoneManager.setDayInfo(this.nextHour);
             }
         });
 

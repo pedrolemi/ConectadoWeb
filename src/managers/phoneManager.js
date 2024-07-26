@@ -323,6 +323,21 @@ export default class PhoneManager {
         }
     }
 
+    /**
+     * Cambia la hora y el dia del telefono en base a la id de la hora
+     * @param {String} hourId - id de la hora en el archivo de traducciones 
+     */
+    setDayInfo(hourId) {
+        // Coge el texto de la hora y de los dias en el archivo de traducciones
+        let hour = this.i18next.t("clock." + hourId, { ns: "phoneInfo" });
+        let days = this.i18next.t("clock.days", { ns: "phoneInfo", returnObjects: true });
+
+        // Coge el dia del array en base al dia del gameManager
+        let day = days[this.gameManager.day - 1];
+
+        // Cambia la hora del telefono
+        this.phone.setDayInfo(hour, day);
+    }
 
     /**
      * Anade notificaciones a las que ya habia
@@ -556,8 +571,7 @@ export default class PhoneManager {
 
         // Cuando termina, cambia la hora del telefono y vuelve a reproducir la animacion de abrir los ojos
         anim.on('complete', () => {
-            let hour = this.i18next.t("clock.alarmLateHour", { ns: "phoneInfo" });
-            this.phone.setDayInfo(hour, "");
+            this.setDayInfo(clock.alarmLateHour);
 
             setTimeout(() => {
                 this.openEyesAnimation();

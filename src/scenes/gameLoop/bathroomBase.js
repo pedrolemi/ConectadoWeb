@@ -31,8 +31,7 @@ export default class BathroomBase extends BaseScene {
         };
         let doorClosed = this.add.image(doorPos.x, doorPos.y, this.atlasName, 'bathroomDoorClosed').setOrigin(0, 0).setScale(this.scale);
         let doorOpened = this.add.image(doorPos.x, doorPos.y, this.atlasName, 'bathroomDoorOpened').setOrigin(0, 0).setScale(this.scale);
-        // Al hacer click, si hay algun dialogo que mostrar (para indicar que no se puede entrar), se
-        // mostrara. En caso contrario, se pasara a la escena del bano sin eliminar esta escena
+        // Al hacer click, se pasara a la escena del pasillo sin eliminar esta escena
         super.toggleDoor(doorClosed, doorOpened, () => {
             let params = {
                 camPos: "left"

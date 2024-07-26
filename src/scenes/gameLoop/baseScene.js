@@ -44,6 +44,9 @@ export default class BaseScene extends Phaser.Scene {
             scale: this.portraitScale
         };
 
+        // Blackboard de variables dela escena actual
+        this.blackboard = new Map();
+
         // Parametros del fondo y la camara para el scroll
         this.scale = 1;
         this.leftBound = 0;
@@ -59,8 +62,9 @@ export default class BaseScene extends Phaser.Scene {
             this.onWake(params);
         }, this);
 
-        // Blackboard de variables dela escena actual
-        this.blackboard = new Map();
+
+        this.phoneManager.topLid.visible = false;
+        this.phoneManager.botLid.visible = false;
     }
 
 
@@ -71,10 +75,6 @@ export default class BaseScene extends Phaser.Scene {
     onCreate(params) {
         // console.log("onCreate");
         this.initialSetup(params);
-
-        // TEST
-        this.phoneManager.topLid.visible = false;
-        this.phoneManager.botLid.visible = false;
     }
 
     /**
@@ -126,11 +126,11 @@ export default class BaseScene extends Phaser.Scene {
         // Scroll de la camara. Si el raton esta a la izquierda y el scroll de la camara no es inferior al del
         // extremo izquierdo, la mueve hacia la izquierda y lo mismo para el extremo derecho del canvas
         if (this.game.input.mousePointer.x < this.START_SCROLLING && this.cameras.main.scrollX > this.leftBound + this.CAMERA_SPEED * dt) {
-            this.cameras.main.scrollX -= this.CAMERA_SPEED * dt;;
+            this.cameras.main.scrollX -= this.CAMERA_SPEED * dt;
         }
         else if (this.game.input.mousePointer.x > this.CANVAS_WIDTH - this.START_SCROLLING
             && this.cameras.main.scrollX < this.rightBound - this.CANVAS_WIDTH - this.CAMERA_SPEED * dt) {
-            this.cameras.main.scrollX += this.CAMERA_SPEED * dt;;
+            this.cameras.main.scrollX += this.CAMERA_SPEED * dt;
         }
     }
 

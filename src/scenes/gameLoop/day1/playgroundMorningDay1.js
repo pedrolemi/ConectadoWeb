@@ -1,5 +1,5 @@
 import PlaygroundBase from "../playgroundBase.js";
-import Character from "../../../gameObjects/character.js"
+import Character from "../../../gameObjects/character.js";
 
 export default class PlaygroundMorningDay1 extends PlaygroundBase {
     constructor() {
@@ -56,7 +56,7 @@ export default class PlaygroundMorningDay1 extends PlaygroundBase {
             let nodes = this.cache.json.get('playgroundMorningDay1');
             let joseNode = super.readNodes(nodes, "day1\\playgroundMorningDay1", "jose", true);
             let alisonNode = super.readNodes(nodes, "day1\\playgroundMorningDay1", "alison", true);
-            let guilleNode = super.readNodes(nodes, "day1\\playgroundMorningDay1", "guille", true);;
+            let guilleNode = super.readNodes(nodes, "day1\\playgroundMorningDay1", "guille", true);
             
             nodes = this.cache.json.get('everydayDialog');
             this.homeNode = super.readNodes(nodes, "everydayDialog", "playground.homeMorning", true);
@@ -66,8 +66,7 @@ export default class PlaygroundMorningDay1 extends PlaygroundBase {
                 console.log(obj);
 
                 // Cambia la hora del movil
-                let hour = this.i18next.t("clock.classStart", { ns: "phoneInfo" });
-                this.phoneManager.phone.setDayInfo(hour, "");
+                this.phoneManager.setDayInfo("classStart");
 
                 // Se quita el dialogo que aparece al hacer click en las puertas
                 this.doorNode = null;

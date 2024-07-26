@@ -19,6 +19,8 @@ export default class Character {
         this.char.setScale(trans.scale);
         this.char.setInteractive({ useHandCursor: true });
         this.anims.push(this.char);
+        this.charContainer = this.scene.add.spineContainer();
+        this.charContainer.add(this.char);
 
         this.dialog = dialog;
         this.char.on('pointerdown', () => {
@@ -35,6 +37,9 @@ export default class Character {
         this.portrait.setScale(portraitTrans.scale);
         this.portrait.add(this.imgPortrait);
         this.anims.push(this.imgPortrait);
+
+        this.DEFAULT_ANIM_SPEED = 0.6; 
+        this.setAnimSpeed(this.DEFAULT_ANIM_SPEED);
     }
 
     setAnimation(name, loop) {
@@ -70,10 +75,16 @@ export default class Character {
     }
 
     setDepth(depth) {
-        this.char.setDepth(depth);
+        this.charContainer.setDepth(depth);
     }
 
     changeDialog(dialog) {
         this.dialog = dialog;
     }
+
+    setAnimSpeed(speed) {
+        this.char.state.timeScale = speed;
+        this.imgPortrait.state.timeScale = speed;
+    }
+
 }

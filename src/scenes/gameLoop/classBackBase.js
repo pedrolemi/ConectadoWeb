@@ -32,11 +32,11 @@ export default class ClassBackBase extends BaseScene {
             y: 530 * this.scale
         };
         this.doorNode = null;
-        this.doorClosed = this.add.image(doorPos.x, doorPos.y, this.atlasName, 'classDoorClosed').setOrigin(0, 0).setScale(this.scale);
+        let doorClosed = this.add.image(doorPos.x, doorPos.y, this.atlasName, 'classDoorClosed').setOrigin(0, 0).setScale(this.scale);
         let doorOpened = this.add.image(doorPos.x, doorPos.y, this.atlasName, 'classDoorOpened').setOrigin(0, 0).setScale(this.scale);
         // Al hacer click, si hay algun dialogo que mostrar (para indicar que no se puede salir), se
         // mostrara. En caso contrario, se pasara a la escena del pasillo y se elimina esta escena
-        super.toggleDoor(this.doorClosed, doorOpened, () => {
+        super.toggleDoor(doorClosed, doorOpened, () => {
             if (this.doorNode) {
                 this.dialogManager.setNode(this.doorNode);
             }
@@ -86,5 +86,19 @@ export default class ClassBackBase extends BaseScene {
 
         this.row5Tables.setDepth(this.row4Chairs.depth + 1);
         this.row5Chairs.setDepth(this.row5Tables.depth + 1);
+
+        let picPos = {
+            x: 735,
+            y: 365,
+            scale: this.scale * 1.8
+        };
+        this.blackboardPics = [
+            this.add.image(picPos.x, picPos.y, this.atlasName, 'blackboardPic1').setOrigin(0.5, 0.5).setScale(picPos.scale),
+            this.add.image(picPos.x, picPos.y, this.atlasName, 'blackboardPic2').setOrigin(0.5, 0.5).setScale(picPos.scale),
+            this.add.image(picPos.x, picPos.y, this.atlasName, 'blackboardPic3').setOrigin(0.5, 0.5).setScale(picPos.scale)
+        ]
+        for (let i = 0; i < this.blackboardPics.length; i++) {
+            this.blackboardPics[i].visible = false;
+        }
     }
 }

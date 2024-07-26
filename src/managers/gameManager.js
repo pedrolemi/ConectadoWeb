@@ -1,4 +1,5 @@
 import EventDispatcher from "../eventDispatcher.js";
+import BaseScene from "../scenes/gameLoop/baseScene.js";
 
 // Variable de nivel de modulo
 // - Se puede acceder desde cualquier parte del modulo, pero no es visible
@@ -238,10 +239,11 @@ export default class GameManager {
         this.computerScene = this.currentScene.scene.get(computerSceneName);
         this.computerScene.scene.sleep();
 
-        // let sceneName = 'ClassFrontMorningDay1';
+        let sceneName = 'ClassBackMorningDay1';
+        // let sceneName = 'BedroomMorningDay1';
 
         // Pasa a la escena inicial con los parametros text, onComplete y onCompleteDelay
-        let sceneName = 'TextOnlyScene';
+        // let sceneName = 'TextOnlyScene';
         let params = {
             // El texto de se coge del a archivo de traducciones
             text: this.i18next.t("day1.start", { ns: "transitionScenes", returnObjects: true }),
@@ -257,7 +259,7 @@ export default class GameManager {
     }
 
     /**
-    * Metodo para cambiar de escena. Si no
+    * Metodo para cambiar de escena
     * @param {String} scene - key de la escena a la que se va a pasar
     * @param {Object} params - informacion que pasar a la escena (opcional)
     * @param {Boolean} cantReturn - true si se puede regresar a la escena anterior, false en caso contrario
@@ -266,11 +268,18 @@ export default class GameManager {
         // Si no se puede volver a la escena anterior, se detienen todas las
         // escenas que ya estaban creadas porque ya no van a hacer falta 
         if (!canReturn) {
-            this.runningScenes.forEach(sc => { 
-                this.currentScene.scene.stop(sc);
+            this.runningScenes.forEach(sc => {
+                // Si la escena es hija de BaseScene, se tiene que llamar a su shutdown 
+                // antes de detener la escena para evitar problemas al borrar los retratos
+                if (sc instanceof BaseScene) {
+                    if (typeof sc.shutdown === 'function') {
+                        sc.shutdown();
+                    }
+                }
+                sc.scene.stop(sc);
             });
             this.runningScenes.clear();
-            this.currentScene.scene.stop();
+
         }
         // Si no, se se duerme la escena actual en vez de destruirla ya que
         // habria que mantener su estado por si se quiere volver a ella
@@ -284,12 +293,8 @@ export default class GameManager {
         this.currentScene = this.currentScene.scene.get(scene);
 
         // Se anade la escena a las escenas que estan ejecutandose
-        this.runningScenes.add(this.currentScene.scene.get(scene));
+        this.runningScenes.add(this.currentScene);
 
-        // Si se han inicializado el UIManager y el dialogManager, se limpian los retratos
-        if (this.UIManager && this.UIManager.dialogManager) {
-            this.UIManager.dialogManager.clearPortraits(canReturn);
-        }
     }
 
     switchToComputer() {

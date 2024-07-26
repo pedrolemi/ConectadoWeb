@@ -1,6 +1,6 @@
 {
   "frames": {
-    "teacher.png": {
+    "teacher": {
       "frame": {
         "x": 0,
         "y": 0,
@@ -24,7 +24,7 @@
         "y": 0.5
       }
     },
-    "Alex.png": {
+    "Alex": {
       "frame": {
         "x": 1214,
         "y": 0,
@@ -48,7 +48,7 @@
         "y": 0.5
       }
     },
-    "Jose.png": {
+    "Jose": {
       "frame": {
         "x": 2135,
         "y": 0,
@@ -72,7 +72,7 @@
         "y": 0.5
       }
     },
-    "Ana.png": {
+    "Ana": {
       "frame": {
         "x": 3024,
         "y": 0,
@@ -96,7 +96,7 @@
         "y": 0.5
       }
     },
-    "Guille.png": {
+    "Guille": {
       "frame": {
         "x": 3024,
         "y": 2304,
@@ -120,7 +120,7 @@
         "y": 0.5
       }
     },
-    "Maria.png": {
+    "Maria": {
       "frame": {
         "x": 2135,
         "y": 2366,
@@ -144,7 +144,7 @@
         "y": 0.5
       }
     },
-    "Alison.png": {
+    "Alison": {
       "frame": {
         "x": 1214,
         "y": 2449,
@@ -172,7 +172,7 @@
   "meta": {
     "app": "http://free-tex-packer.com",
     "version": "0.6.7",
-    "image": "characters.png",
+    "image": "characters",
     "format": "RGBA8888",
     "size": {
       "w": 3807,

@@ -40,7 +40,6 @@ export default class PlaygroundMorningDay1 extends PlaygroundBase {
             });
             alison.setAnimation("IdleBase", true);
             this.portraits.set("Alison", alison.getPortrait());
-    
 
             tr = {
                 x: this.rightBound * 0.96,
@@ -62,7 +61,6 @@ export default class PlaygroundMorningDay1 extends PlaygroundBase {
             nodes = this.cache.json.get('everydayDialog');
             this.homeNode = super.readNodes(nodes, "everydayDialog", "playground.homeMorning", true);
 
-            
             // Evento llamado cuando suena la campana
             this.dispatcher.addOnce("openDoors", this, (obj) => {
                 console.log(obj);

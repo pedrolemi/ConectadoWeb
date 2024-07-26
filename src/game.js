@@ -16,7 +16,7 @@ import PlaygroundMorningDay1 from './scenes/gameLoop/day1/playgroundMorningDay1.
 import StairsMorningDay1 from './scenes/gameLoop/day1/stairsMorningDay1.js';
 import CorridorMorningDay1 from './scenes/gameLoop/day1/corridorMorningDay1.js';
 import BathroomMorning from './scenes/gameLoop/bathroomMorning.js';
-import ClassFrontMorningDay1 from './scenes/gameLoop/day1/classFontMorningDay1.js';
+import ClassFrontMorningDay1 from './scenes/gameLoop/day1/classFrontMorningDay1.js';
 import ClassBackMorningDay1 from './scenes/gameLoop/day1/classBackMorningDay1.js';
 
 // UI

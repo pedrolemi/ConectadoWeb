@@ -15,6 +15,7 @@ export default class DialogManager {
         this.options = [];                  // Cajas de opcion multiple
         this.currNode = null;               // Nodo actual
         this.portraits = new Map();         // Mapa para guardar los retratos en esta escena
+        this.allPortraits = new Set();         
 
         this.gameManager = GameManager.getInstance();
         this.dispatcher = this.gameManager.dispatcher;
@@ -44,21 +45,17 @@ export default class DialogManager {
         this.bgBlock.disableInteractive();
     }
 
+
     /**
-     * Cambia los retratos que que pueden aparecer en la escena actual. Si no
-     * se va a poder volver a la escena, se destruyen para que no de error
-     * 
-     * IMPORTANTE: SE TIENE QUE LLAMAR ANTES DE CAMBIAR LA ESCENA
-     * 
-     * @param {Boolean} dontDestroy - true si se puede volver a la escena, false en caso contrario 
+     * Metodo que elimina de esta escena todos los retratos guardados
+     * anteriormente para que no de error al destruir las escenas 
      */
-    clearPortraits(dontDestroy) {
-        if (!dontDestroy) {
-            this.portraits.forEach((value, key) => {
-                value.destroy();
-            });
-        }
+    clearScene() {
         this.portraits.clear();
+        this.allPortraits.forEach((portrait) => {
+            portrait.destroy();
+        });
+        this.allPortraits.clear();
     }
 
     /**
@@ -66,15 +63,22 @@ export default class DialogManager {
     * @param {Phaser.Scene} scene - escena a la que se va a pasar
     */
     changeScene(scene) {
+        this.textbox.setPortrait(null);
+        this.portraits.clear();
+
         // Coge todos los retratos de los personajes de la escena, 
         // los copia en esta escena, y les aplica la mascara
         scene.portraits.forEach((value, key) => {
+            // Guarda los retratos de todas las escenas que se ejecutan sin destuirse, ya que al
+            // cambiar de escena, se pierde la referncia a los retratos, pero siguen existiendo
+            this.allPortraits.add(value);
+
             let p = this.scene.add.existing(value);
             this.portraits.set(key, p);
-
-            value.alpha = 0;
-            value.setMask(this.portraitMask);
+            p.alpha = 0;
+            p.setMask(this.portraitMask);
         });
+
         // Desactiva la caja de texto y las opciones (por si acaso)
         if (this.textbox) this.textbox.activate(false);
         this.activateOptions(false);

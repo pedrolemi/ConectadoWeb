@@ -9,17 +9,12 @@ export default class ClassFrontMorningDay1 extends ClassFrontBase {
     create(params) {
         super.create(params);
 
-        let tr = {
-            x: this.CANVAS_WIDTH,
-            y: this.CANVAS_HEIGHT,
-            scale: 0
-        };
-        let teacher = new Character(this, "dad", tr, this.portraitTr, () => { });
-        this.portraits.set("teacher", teacher.getPortrait());
+        let teacher = this.add.image(this.portraitTr.x, this.portraitTr.y + 20, 'characters', 'teacher').setOrigin(0.5, 1).setScale(this.portraitTr.scale);
+        this.portraits.set("teacher", teacher);
 
         // Si no se ha llegado tarde, solo se coloca a Ana en clase
         if (!this.gameManager.getValue(this.gameManager.isLate)) {
-            tr = {
+            let tr = {
                 x: 650,
                 y: this.CANVAS_HEIGHT * 0.86,
                 scale: 0.1
@@ -36,7 +31,7 @@ export default class ClassFrontMorningDay1 extends ClassFrontBase {
         }
         // Si no, se colocan mas alumnos en la clase y se pone directamente el nodo del profesor
         else {
-            tr = {
+            let tr = {
                 x: 160,
                 y: this.CANVAS_HEIGHT * 0.51,
                 scale: this.scale * 1.4

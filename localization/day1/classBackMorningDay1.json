@@ -1,0 +1,54 @@
+{
+    "beforeEnter": {
+        "root": {
+            "type": "text",
+            "character": "teacher",
+            "next": "knock"
+        },
+        "knock": {
+            "type": "text",
+            "character": "",
+            "next": "allowEnter"
+        },
+        "allowEnter": {
+            "type": "text",
+            "character": "teacher",
+            "next": "enter"
+        },
+        "enter": {
+            "type": "event",
+            "events": [
+                { 
+                    "enterClass": { }
+                }
+            ]
+        }
+    },
+    "afterEnter": {
+        "root": {
+            "type": "text",
+            "character": "teacher",
+            "next": "alexAnswer"
+        },
+        "alexAnswer": {
+            "type": "text",
+            "character": "Alex",
+            "next": "teacherAnswer"
+        },
+        "teacherAnswer": {
+            "type": "text",
+            "character": "teacher",
+            "next": "startBreak"
+        },
+        "startBreak": {
+            "type": "event",
+            "events": [
+                { 
+                    "startBreak": { }
+                }
+            ]
+        }
+    }
+
+    
+}

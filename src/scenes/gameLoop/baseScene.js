@@ -51,14 +51,13 @@ export default class BaseScene extends Phaser.Scene {
         this.START_SCROLLING = 30;
         this.CAMERA_SPEED = 0.7;
 
-        // Se anaden funciones adicionales a las que se llamara al crear, despertar y destruir la escena
+        // Se anaden funciones adicionales a las que se llamara al crear y reactivar
         this.events.on('create', () => {
             this.onCreate(params);
         }, this);
         this.events.on('wake', (scene, params) => {
             this.onWake(params);
         }, this);
-        this.events.on('shutdown', this.shutdown, this);
 
         // Blackboard de variables dela escena actual
         this.blackboard = new Map();
@@ -87,8 +86,12 @@ export default class BaseScene extends Phaser.Scene {
         this.initialSetup(params);
     }
 
-    // Metodo que se llama al borrar la escena. Se encarga de limpiar los eventos del dispatcher
+    // Metodo que se encarga de limpiar los eventos del dispatcher y de eliminar los retratos del UIManager
+    // IMPORTANTE: Hay que llamar a este metodo antes de llamar al stop de la escena para evitar problemas al eliminar los retratos
     shutdown() {
+        // console.log("shutdown")
+        this.UIManager.dialogManager.clearScene();
+
         if (this.dispatcher) {
             this.dispatcher.removeAll();
         }
@@ -101,7 +104,6 @@ export default class BaseScene extends Phaser.Scene {
      */
     initialSetup(params) {
         // console.log(params);
-
         this.dialogManager.changeScene(this);
 
         // Por defecto se pone la camara en el centro y si hay parametros que indiquen

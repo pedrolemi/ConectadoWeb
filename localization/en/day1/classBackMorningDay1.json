@@ -1,0 +1,34 @@
+{
+    "beforeEnter": {
+        "root": [
+            {
+                "text": "Last week, if you recall, we were learning how to do a morphologic analysis of a sentence."
+            },
+            {
+                "text": "Now it's syntax analysis time."
+            }
+        ],
+        "knock": {
+            "text": "(Someone knocks at the door)"
+        },
+        "allowEnter": {
+            "text": "Come in."
+        }
+    },
+    "afterEnter": {
+        "root": {
+            "text": "Alejandro, you're late, please have a seat."
+        },
+        "alexAnswer": {
+            "text": "The newcomer is in my spot."
+        },
+        "teacherAnswer": {
+            "text": "",
+            "text_male": "The name is {{name}}. Sit in another desk for now, I've asked Alison to help him during the first days.",
+            "text_female": "The name is {{name}}. Sit in another desk for now, I've asked Alison to help her during the first days."
+
+        }
+    }
+
+    
+}

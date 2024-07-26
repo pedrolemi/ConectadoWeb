@@ -147,7 +147,7 @@ export default class BootScene extends Phaser.Scene {
             supportedLngs: ['en', 'es'],
             // Namespaces que se cargan para cada uno de los idiomas
             ns: ['titleMenu', 'userInfoMenu', 'names', 'phoneInfo', 'computer', 'transitionScenes', 'everydayDialog',
-                'day1\\bedroomMorningDay1', 'day1\\livingroomMorningDay1', 'day1\\playgroundMorningDay1', 'day1\\corridorMorningDay1', 'day1\\classFrontMorningDay1',
+                'day1\\bedroomMorningDay1', 'day1\\livingroomMorningDay1', 'day1\\playgroundMorningDay1', 'day1\\corridorMorningDay1', 'day1\\classFrontMorningDay1', 'day1\\ClassBackMorningDay1',
                 'test\\momDialog', 'test\\dadDialog', 'test\\chat1', 'posts'],
             preload: ['en', 'es'],
             // Mostrar informacion de ayuda por consola
@@ -201,6 +201,7 @@ export default class BootScene extends Phaser.Scene {
         this.load.json('playgroundMorningDay1', 'day1/playgroundMorningDay1.json');
         this.load.json('corridorMorningDay1', 'day1/corridorMorningDay1.json');
         this.load.json('classFrontMorningDay1', 'day1/classFrontMorningDay1.json');
+        this.load.json('ClassBackMorningDay1', 'day1/ClassBackMorningDay1.json');
 
     }
 
@@ -245,7 +246,6 @@ export default class BootScene extends Phaser.Scene {
         this.load.image('bedroomCeiling', 'bedroom/bedroomCeiling.png');
         this.load.image('bedroomBg', 'bedroom/bedroomBase.png');
         this.load.atlas('bedroom', 'bedroom/bedroom.png', 'bedroom/bedroom.json');
-
 
         // Salon
         this.load.image('livingroomBg', 'livingroom/livingroomBg.png');

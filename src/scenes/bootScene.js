@@ -148,8 +148,7 @@ export default class BootScene extends Phaser.Scene {
             // Namespaces que se cargan para cada uno de los idiomas
             ns: ['titleMenu', 'userInfoMenu', 'names', 'phoneInfo', 'computer', 'transitionScenes', 'everydayDialog',
                 'day1\\bedroomMorningDay1', 'day1\\livingroomMorningDay1', 'day1\\playgroundMorningDay1', 'day1\\corridorMorningDay1', 'day1\\classFrontMorningDay1',
-
-                'test\\momDialog', 'test\\dadDialog', 'test\\chat1'],
+                'test\\momDialog', 'test\\dadDialog', 'test\\chat1', 'posts'],
             preload: ['en', 'es'],
             // Mostrar informacion de ayuda por consola
             debug: false,
@@ -192,6 +191,8 @@ export default class BootScene extends Phaser.Scene {
         this.load.json('momDialog', 'test/momDialog.json');
         this.load.json('dadDialog', 'test/dadDialog.json');
         this.load.json('chat1', 'test/chat1.json');
+        this.load.json('computerTest', 'test/computerTest.json');
+
         this.load.json('posts', 'posts.json');
 
         this.load.json('everydayDialog', 'everydayDialog.json');
@@ -203,8 +204,10 @@ export default class BootScene extends Phaser.Scene {
 
     }
 
-    loadSpinalAnims() {
+    loadCharacters() {
         this.load.setPath('assets/characters');
+
+        this.load.atlas('characters', 'characters.png', 'characters.json');
 
         // Personajes y sus respectivas animaciones esqueletales de Spine
         // [Idle01, IdleBase, Walk]
@@ -316,7 +319,7 @@ export default class BootScene extends Phaser.Scene {
         this.loadFlags();
         this.loadAvatars();
         this.loadDialogs();
-        this.loadSpinalAnims();
+        this.loadCharacters();
         this.loadBackgrounds();
         this.loadCreditsSceneAssets();
 

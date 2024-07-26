@@ -1,0 +1,87 @@
+{
+  "frames": {
+    "nightmaresChair.png": {
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 182,
+        "h": 302
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 9,
+        "y": 9,
+        "w": 182,
+        "h": 302
+      },
+      "sourceSize": {
+        "w": 200,
+        "h": 320
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "gum.png": {
+      "frame": {
+        "x": 0,
+        "y": 302,
+        "w": 85,
+        "h": 85
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 3,
+        "y": 2,
+        "w": 85,
+        "h": 85
+      },
+      "sourceSize": {
+        "w": 90,
+        "h": 90
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "gumChair.png": {
+      "frame": {
+        "x": 0,
+        "y": 387,
+        "w": 165,
+        "h": 66
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 3,
+        "y": 7,
+        "w": 165,
+        "h": 66
+      },
+      "sourceSize": {
+        "w": 170,
+        "h": 80
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    }
+  },
+  "meta": {
+    "app": "http://free-tex-packer.com",
+    "version": "0.6.7",
+    "image": "nightmaresElements.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 182,
+      "h": 453
+    },
+    "scale": 1
+  }
+}

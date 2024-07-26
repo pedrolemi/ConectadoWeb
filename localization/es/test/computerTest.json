@@ -1,0 +1,36 @@
+{
+    "root": {
+        "text": "No tengo nada que publicar"
+    },
+    "Alison": {
+        "refuse": {
+            "root": {
+                "text": "¿Debería borrarla?"
+            },
+            "decision": [
+                {
+                    "text": "Sí"
+                },
+                {
+                    "text": "No"
+                }
+            ]
+        },
+        "post": {
+            "root": [
+                {
+                    "text": "Comentar"
+                },
+                {
+                    "text": "Nada"
+                },
+                {
+                    "text": "Borrar el post"
+                }
+            ],
+            "comment": {
+                "text": "Lindo día"
+            }
+        }
+    }
+}

@@ -1,0 +1,214 @@
+{
+    "shadow": {
+        "introduction": {
+            "root": {
+                "type": "text",
+                "character": "shadow",
+                "next": "continuation1"
+            },
+            "continuation1": {
+                "type": "text",
+                "character": "shadow",
+                "next": "continuation2"
+            },
+            "continuation2": {
+                "type": "text",
+                "character": "shadow",
+                "next": "end"
+            },
+            "end": {
+                "type": "event",
+                "events": [
+                    {
+                        "startNightmare3": {}
+                    }
+                ]
+            }
+        },
+        "outro": {
+            "root": {
+                "type": "text",
+                "character": "shadow",
+                "next": "continuation1"
+            },
+            "continuation1": {
+                "type": "text",
+                "character": "shadow",
+                "next": "continuation2"
+            },
+            "continuation2": {
+                "type": "text",
+                "character": "shadow",
+                "next": "continuation3"
+            },
+            "continuation3": {
+                "type": "text",
+                "character": "shadow",
+                "next": "end"
+            },
+            "end": {
+                "type": "event",
+                "events": [
+                    {
+                        "finishNightmare3": {}
+                    }
+                ]
+            }
+        }
+    },
+    "Maria": {
+        "root": {
+            "type": "text",
+            "character": "Maria",
+            "next": "playerWorry"
+        },
+        "playerWorry": {
+            "type": "choice",
+            "choices": [
+                {
+                    "next": "characterDisappears"
+                },
+                {
+                    "next": "characterDisappears"
+                },
+                {
+                    "next": "characterDisappears"
+                }
+            ]
+        },
+        "characterDisappears": {
+            "type": "event",
+            "events": [
+                {
+                    "fadeOut": {
+                        "character": "Maria"
+                    }
+                }
+            ]
+        }
+    },
+    "Guille": {
+        "root": {
+            "type": "text",
+            "character": "Guille",
+            "next": "playerWorry"
+        },
+        "playerWorry": {
+            "type": "choice",
+            "choices": [
+                {
+                    "next": "characterDisappears"
+                },
+                {
+                    "next": "characterDisappears"
+                },
+                {
+                    "next": "characterDisappears"
+                }
+            ]
+        },
+        "characterDisappears": {
+            "type": "event",
+            "events": [
+                {
+                    "fadeOut": {
+                        "character": "Guille"
+                    }
+                }
+            ]
+        }
+    },
+    "Jose": {
+        "root": {
+            "type": "text",
+            "character": "Jose",
+            "next": "playerWorry"
+        },
+        "playerWorry": {
+            "type": "choice",
+            "choices": [
+                {
+                    "next": "characterDisappears"
+                },
+                {
+                    "next": "characterDisappears"
+                },
+                {
+                    "next": "characterDisappears"
+                }
+            ]
+        },
+        "characterDisappears": {
+            "type": "event",
+            "events": [
+                {
+                    "fadeOut": {
+                        "character": "Jose"
+                    }
+                }
+            ]
+        }
+    },
+    "Alison": {
+        "root": {
+            "type": "text",
+            "character": "Alison",
+            "next": "playerWorry"
+        },
+        "playerWorry": {
+            "type": "choice",
+            "choices": [
+                {
+                    "next": "characterDisappears"
+                },
+                {
+                    "next": "characterDisappears"
+                },
+                {
+                    "next": "characterDisappears"
+                }
+            ]
+        },
+        "characterDisappears": {
+            "type": "event",
+            "events": [
+                {
+                    "fadeOut": {
+                        "character": "Alison"
+                    }
+                }
+            ]
+        }
+    },
+    "Ana": {
+        "root": {
+            "type": "text",
+            "character": "Ana",
+            "next": "playerWorry"
+        },
+        "playerWorry": {
+            "type": "choice",
+            "choices": [
+                {
+                    "next": "characterDisappears"
+                },
+                {
+                    "next": "characterDisappears"
+                },
+                {
+                    "next": "characterDisappears"
+                }
+            ]
+        },
+        "characterDisappears": {
+            "type": "event",
+            "events": [
+                {
+                    "fadeOut": {
+                        "character": "Ana"
+                    }
+                }
+            ]
+        }
+    }
+}

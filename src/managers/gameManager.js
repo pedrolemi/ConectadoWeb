@@ -33,9 +33,6 @@ export default class GameManager {
         this.i18next = this.currentScene.plugins.get('rextexttranslationplugin');
         this.dispatcher = EventDispatcher.getInstance();
 
-        // Indica el dia del juego
-        this.day = 1;
-
         // Blackboard de variables de todo el juego
         this.blackboard = new Map();
 
@@ -239,7 +236,7 @@ export default class GameManager {
         this.computerScene = this.currentScene.scene.get(computerSceneName);
         this.computerScene.scene.sleep();
 
-        let sceneName = 'ClassBackMorningDay1';
+        let sceneName = 'Test';
         // let sceneName = 'BedroomMorningDay1';
 
         // Pasa a la escena inicial con los parametros text, onComplete y onCompleteDelay

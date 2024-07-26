@@ -118,7 +118,7 @@ export default class FriendRequest extends Phaser.GameObjects.Container {
         // Boton para aceptar la peticion de amistad
         this.refuseButton = new ListViewButton(this.scene, this.acceptButton.x - this.acceptButton.w, this.acceptButton.y, size, () => {
             if (this.refuseNode !== null) {
-                gameManager.dialogManager.setNode(this.refuseNode);
+                gameManager.UIManager.dialogManager.setNode(this.refuseNode);
             }
             else {
                 defaultRefuseFn();
@@ -182,6 +182,7 @@ export default class FriendRequest extends Phaser.GameObjects.Container {
         this.hitButtons.forEach((button) => {
             hits.push(button.hit);
         });
+        return hits;
     }
 
     /**

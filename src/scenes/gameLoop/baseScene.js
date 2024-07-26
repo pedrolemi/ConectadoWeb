@@ -445,7 +445,7 @@ export default class BaseScene extends Phaser.Scene {
             node.user = fileObj[id].user;
 
             // Guarda el numero del post del usuario
-            node.postName = filed[id].postName;
+            node.postName = fileObj[id].postName;
 
             // Si hay un nodo despues de este, se crea de manera y se
             // guarda la id de dicho nodo en el array de nodos siguientes

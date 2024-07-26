@@ -1,0 +1,109 @@
+{
+    "shadow": {
+        "introduction": {
+            "root": {
+                "text": "I'm going to make sure nobody talks to you."
+            },
+            "continuation1": {
+                "text": "You can do whatever you want, but you won't get anything."
+            },
+            "continuation2": {
+                "text": "Go on, talk to people in class, let's see if you get them to talk to you."
+            }
+        },
+        "outro": {
+            "root": {
+                "text": "I think you have been left alone."
+            },
+            "continuation1": {
+                "text": "How does it feel to be ignored by everybody?"
+            },
+            "continuation2": {
+                "text": "Isn't it funny that none cares about you?"
+            },
+            "continuation3": {
+                "text": "Because I'm cracking up just looking at you."
+            }
+        }
+    },
+    "Maria": {
+        "root": {
+            "text": "..."
+        },
+        "playerWorry": [
+            {
+                "text": "Are you gonna ignore me too?"
+            },
+            {
+                "text": "Didn't they do the same to you? Don't ignore me, you know how it feels."
+            },
+            {
+                "text": "You get me, right?"
+            }
+        ]
+    },
+    "Guille": {
+        "root": {
+            "text": "..."
+        },
+        "playerWorry": [
+            {
+                "text": "You're my friend, right?"
+            },
+            {
+                "text": "William, you're not like the others."
+            },
+            {
+                "text": "Don't let them threaten you."
+            }
+        ]
+    },
+    "Jose": {
+        "root": {
+            "text": "..."
+        },
+        "playerWorry": [
+            {
+                "text": "Are you gonna ignore me without a reason? Just because someone has told you to do so?"
+            },
+            {
+                "text": "We can be friends."
+            },
+            {
+                "text": "How old are you? Three years? Talk to me"
+            }
+        ]
+    },
+    "Alison": {
+        "root": {
+            "text": "..."
+        },
+        "playerWorry": [
+            {
+                "text": "Are you my friend, right?"
+            },
+            {
+                "text": "You seem nicke, you aren't gonna stop talking to me, right?"
+            },
+            {
+                "text": "Please, talk to me."
+            }
+        ]
+    },
+    "Ana": {
+        "root": {
+            "text": "..."
+        },
+        "playerWorry": [
+            {
+                "text": "What have I done to you? Why do you come after me?"
+            },
+            {
+                "text": "If Alex jumps off a bridge, are you gonna jump off too?"
+            },
+            {
+                "text": "Can't we just get along?"
+            }
+        ]
+    }
+}

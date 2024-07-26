@@ -1,0 +1,111 @@
+{
+    "shadow": {
+        "introduction": {
+            "root": {
+                "text": "Voy a hacer que nadie te quiera hablar."
+            },
+            "continuation1": {
+                "text": "Puedes decir lo que quieras, pero no conseguirás nada."
+            },
+            "continuation2": {
+                "text": "Adelante, habla con la gente de clase, a ver si consigues que te hablen."
+            }
+        },
+        "outro": {
+            "root": {
+                "text": "",
+                "text_male": "Me parece que te has quedado solo.",
+                "text_female": "Me parece que te has quedado sola."
+            },
+            "continuation1": {
+                "text": "¿Qué tal sienta que todos te ignoren?"
+            },
+            "continuation2": {
+                "text": "¿No te parece divertido que nadie te haga caso?"
+            },
+            "continuation3": {
+                "text": "Porque yo me estoy partiendo de solo verte."
+            }
+        }
+    },
+    "Maria": {
+        "root": {
+            "text": "..."
+        },
+        "playerWorry": [
+            {
+                "text": "¿Tú también me vas a ignorar?"
+            },
+            {
+                "text": "¿No te habían hecho lo mismo? No me ignores, sabes lo que se siente."
+            },
+            {
+                "text": "Tú me entiendes, ¿verdad?"
+            }
+        ]
+    },
+    "Guille": {
+        "root": {
+            "text": "..."
+        },
+        "playerWorry": [
+            {
+                "text": "Tú eres mi amigo no, ¿no?"
+            },
+            {
+                "text": "Guille, tú no eres como los demás."
+            },
+            {
+                "text": "No dejes que te amenacen."
+            }
+        ]
+    },
+    "Jose": {
+        "root": {
+            "text": "..."
+        },
+        "playerWorry": [
+            {
+                "text": "¿Vas a ignorarme sin motivo? ¿Solo por qué te han dicho que lo hagas?"
+            },
+            {
+                "text": "Podemos ser amigos."
+            },
+            {
+                "text": "Tienes 3 años? Dime algo."
+            }
+        ]
+    },
+    "Alison": {
+        "root": {
+            "text": "..."
+        },
+        "playerWorry": [
+            {
+                "text": "Eres mi amiga, ¿no?"
+            },
+            {
+                "text": "Eres maja, no me vas a dejar de hablar, ¿verdad?"
+            },
+            {
+                "text": "Por favor, dime algo."
+            }
+        ]
+    },
+    "Ana": {
+        "root": {
+            "text": "..."
+        },
+        "playerWorry": [
+            {
+                "text": "¿Qué te he hecho? ¿Por qué vas a por mi también?"
+            },
+            {
+                "text": "Si Alex se tira de un puente, ¿también te tirás tú?"
+            },
+            {
+                "text": "¿No podemos llevarnos bien?"
+            }
+        ]
+    }
+}

@@ -1,15 +1,14 @@
 {
     "player": "Tú",
-
     "mom": "Mamá",
     "dad": "Papá",
-    
     "Maria": "María",
     "Alex": "Alex",
     "Alison": "Alison",
     "Guille": "Guille",
-    
     "teacher": "Profesor",
     "computer": "Ordenador",
-    "note": "Nota"
+    "note": "Nota",
+    "shadow": "Sombra",
+    "portalVoice": "Voz desde el portal"
 }

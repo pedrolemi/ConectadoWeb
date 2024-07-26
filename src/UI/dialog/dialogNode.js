@@ -168,7 +168,7 @@ export class SocialNetNode extends DialogNode {
 
         this.type = "socialNetMessage";
         this.text = null;               // texto del mensaje
-        this.character = null;          // id del personaje que publica escribe en la publicacion
+        this.character = null;          // id del personaje que escribe en la publicacion
         this.name = null;               // nombre del personaje que escribe en la publicacion (si se trata del jugador, es el pronombre personal Tu)
         this.user = null;               // usuario que ha hecho la publicacion (corresponde con los ids de los personajes)
         this.postName = null;           // nombre de la publicacion

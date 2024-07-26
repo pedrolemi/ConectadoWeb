@@ -1,0 +1,33 @@
+{
+    "shadow": {
+        "introduction": {
+            "root": {
+                "text": "Don't you like the new photos that we have published?"
+            },
+            "continuation1": {
+                "text": "You can try to delete them..."
+            },
+            "continuation2": {
+                "text": "You're gonna have to do mor than just deleting or reporting them."
+            },
+            "continuation3": {
+                "text": "Go on, try it...but we all already have a copy."
+            }
+        },
+        "outro": {
+            "root": {
+                "text": "You haven't got anything."
+            },
+            "continuation1": {
+                "text": "Hahahaha."
+            },
+            "continuation2": {
+                "text": "Photos are still there."
+            },
+            "continuation3": {
+                "text": "Once online, everyone can make a copy."
+            }
+        }
+    },
+    "imageText": "Report photo"
+}

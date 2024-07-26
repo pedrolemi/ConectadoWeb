@@ -24,7 +24,6 @@ import ComputerScene from './UI/computer/computerScene.js'
 import UIManager from './managers/UIManager.js';
 
 import Test from './scenes/test.js';
-import TestMenu from './scenes/testMenu.js'
 
 const max_w = 1129, max_h = 847, min_w = 320, min_h = 240;
 
@@ -40,8 +39,8 @@ const config = {
         BootScene, LanguageMenu, TitleMenu, UserInfoMenu,
         AlarmScene,
         BedroomMorningDay1, LivingroomMorningDay1, PlaygroundMorningDay1, StairsMorningDay1, CorridorMorningDay1, BathroomMorning, ClassFrontMorningDay1, ClassBackMorningDay1,
-        Test, TestMenu,
-        ComputerScene, UIManager, TextOnlyScene ],
+        Test,
+        ComputerScene, UIManager, TextOnlyScene],
     autoFocus: true,
     disableContextMenu: true,        // Desactivar que aparezca el menu de inspeccionar al hacer click derecho
     render: {

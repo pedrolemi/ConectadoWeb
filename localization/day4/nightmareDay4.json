@@ -1,0 +1,58 @@
+{
+    "shadow": {
+        "introduction": {
+            "root": {
+                "type": "text",
+                "character": "shadow",
+                "next": "continuation1"
+            },
+            "continuation1": {
+                "type": "text",
+                "character": "shadow",
+                "next": "continuation2"
+            },
+            "continuation2": {
+                "character": "shadow",
+                "next": "end"
+            },
+            "end": {
+                "type": "event",
+                "events": [
+                    {
+                        "startNightmare4": {}
+                    }
+                ]
+            }
+        },
+        "outro": {
+            "root": {
+                "type": "text",
+                "character": "shadow",
+                "next": "continuation1"
+            },
+            "continuation1": {
+                "type": "text",
+                "character": "shadow",
+                "next": "continuation2"
+            },
+            "continuation2": {
+                "type": "text",
+                "character": "shadow",
+                "next": "continuation3"
+            },
+            "continuation3": {
+                "type": "text",
+                "character": "shadow",
+                "next": "end"
+            },
+            "end": {
+                "type": "event",
+                "events": [
+                    {
+                        "finishNightmare4": {}
+                    }
+                ]
+            }
+        }
+    }
+}

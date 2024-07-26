@@ -178,6 +178,7 @@ export default class FriendsTab extends Phaser.GameObjects.Group {
 
         // Se agrega la peticion de amistad tanto a la listview como a la lista de peticiones
         this.listView.addLastItem(friendRequest, friendRequest.getHits());
+        this.existingRequests.add(friendRequest);
 
         // Aumenta el numero de peticiones
         this.increaseFriendRequests();

@@ -120,7 +120,7 @@
         "y": 0.5
       }
     },
-    "profilePhotoM": {
+    "profilePhotoF": {
       "frame": {
         "x": 600,
         "y": 500,
@@ -144,7 +144,7 @@
         "y": 0.5
       }
     },
-    "profilePhotoF": {
+    "profilePhotoM": {
       "frame": {
         "x": 800,
         "y": 500,

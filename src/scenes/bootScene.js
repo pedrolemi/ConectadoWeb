@@ -132,7 +132,21 @@ export default class BootScene extends Phaser.Scene {
         this.load.atlas('avatars', 'avatars.png', 'avatars.json');
     }
 
-    loadPlugins() {
+    loadPlugins(dialogsAndNamespaces, onlyNamespaces) {
+        let namespaces = [...onlyNamespaces];
+
+        dialogsAndNamespaces.forEach((dialog) => {
+            let dialogWithoutExtension = dialog.substr(0, dialog.lastIndexOf('.'));
+            let dialogAux = dialogWithoutExtension.replace('/', '\\');
+            namespaces.push(dialogAux);
+        });
+
+        /*
+        ['titleMenu', 'userInfoMenu', 'names', 'phoneInfo', 'computer', 'transitionScenes', 'everydayDialog',
+            'day1\\bedroomMorningDay1', 'day1\\livingroomMorningDay1', 'day1\\playgroundMorningDay1', 'day1\\corridorMorningDay1', 'day1\\classFrontMorningDay1', 'day1\\ClassBackMorningDay1',
+            'test\\momDialog', 'test\\dadDialog', 'test\\chat1', 'posts', 'test\\computerTest']
+        */
+
         // Se inicializa el plugin i18next
         // Inicialmente solo se carga el idioma inicial y los de respaldo
         // Luego, conforme se usan tambien se cargan el resto
@@ -146,9 +160,7 @@ export default class BootScene extends Phaser.Scene {
             // en cualquier idioma (aunque o existiese)
             supportedLngs: ['en', 'es'],
             // Namespaces que se cargan para cada uno de los idiomas
-            ns: ['titleMenu', 'userInfoMenu', 'names', 'phoneInfo', 'computer', 'transitionScenes', 'everydayDialog',
-                'day1\\bedroomMorningDay1', 'day1\\livingroomMorningDay1', 'day1\\playgroundMorningDay1', 'day1\\corridorMorningDay1', 'day1\\classFrontMorningDay1', 'day1\\ClassBackMorningDay1',
-                'test\\momDialog', 'test\\dadDialog', 'test\\chat1', 'posts'],
+            ns: namespaces,
             preload: ['en', 'es'],
             // Mostrar informacion de ayuda por consola
             debug: false,
@@ -162,7 +174,7 @@ export default class BootScene extends Phaser.Scene {
         })
     }
 
-    loadDialogs() {
+    loadDialogs(dialogsAndNamespaces) {
         this.load.setPath('assets/UI/dialog');
 
         // Assets de la caja de texto y de opcion multiple
@@ -188,6 +200,8 @@ export default class BootScene extends Phaser.Scene {
         // Archivos de dialogos (estructura)
         this.load.setPath('localization');
 
+
+        /*
         this.load.json('momDialog', 'test/momDialog.json');
         this.load.json('dadDialog', 'test/dadDialog.json');
         this.load.json('chat1', 'test/chat1.json');
@@ -202,6 +216,14 @@ export default class BootScene extends Phaser.Scene {
         this.load.json('corridorMorningDay1', 'day1/corridorMorningDay1.json');
         this.load.json('classFrontMorningDay1', 'day1/classFrontMorningDay1.json');
         this.load.json('ClassBackMorningDay1', 'day1/ClassBackMorningDay1.json');
+        */
+
+        dialogsAndNamespaces.forEach((dialog) => {
+            let dialogWithoutExtension = dialog.substr(0, dialog.lastIndexOf('.'));
+            let subPaths = dialogWithoutExtension.split('/');
+            let name = subPaths[subPaths.length - 1];
+            this.load.json(name, dialog);
+        });
 
     }
 
@@ -298,10 +320,7 @@ export default class BootScene extends Phaser.Scene {
         this.load.atlas('classBack', 'classBack/classBack.png', 'classBack/classBack.json');
 
         // Pesadillas
-        // this.load.image('nightmaresBg', 'nightmares/nightmaresBg.png');
-        // this.load.image('gum', 'nightmares/gum.png');
-        // this.load.image('gumChair', 'nightmares/gumChair.png');
-        // this.load.image('nightmaresChair', 'nightmares/nightmaresChair.png');
+        this.load.atlas('nightmares', 'nightmares/nightmaresElements.png', 'nightmares/nightmaresElements.json')
     }
 
     loadCreditsSceneAssets() {
@@ -314,18 +333,47 @@ export default class BootScene extends Phaser.Scene {
     }
 
     preload() {
+        // Son tanto archivos de dialogos como namespaces del plugin i18next
+        // Ruta archivo dialogo --> test/momDialog.json
+        // Nombre archivo dialogo --> momDialog.json
+        // Namespace --> test\\momDialog.json
+        let dialogsAndNamespaces = [
+            'test/momDialog.json',
+            'test/dadDialog.json',
+            'test/chat1.json',
+            'test/computerTest.json',
+            'posts.json',
+            'everydayDialog.json',
+            'day1/bedroomMorningDay1.json',
+            'day1/playgroundMorningDay1.json',
+            'day1/corridorMorningDay1.json',
+            'day1/classFrontMorningDay1.json',
+            'day1/ClassBackMorningDay1.json'
+        ]
+        // Solo son namespaces del plugin i18next
+        // El nombre corresponde tal cual con el namespace (incluye \\ si es necesario)
+        let onlyNamespaces = [
+            'titleMenu',
+            'userInfoMenu',
+            'names',
+            'phoneInfo',
+            'computer',
+            'transitionScenes',
+            'everydayDialog'
+        ]
+
         this.loadComputersAssets();
         this.loadPhoneAssets();
         this.loadFlags();
         this.loadAvatars();
-        this.loadDialogs();
+        this.loadDialogs(dialogsAndNamespaces);
         this.loadCharacters();
         this.loadBackgrounds();
         this.loadCreditsSceneAssets();
 
         this.load.setPath('assets');
 
-        this.loadPlugins();
+        this.loadPlugins(dialogsAndNamespaces, onlyNamespaces);
     }
 
     create() {

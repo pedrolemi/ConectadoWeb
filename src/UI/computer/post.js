@@ -80,7 +80,7 @@ export default class Post extends Phaser.GameObjects.Container {
         offset = 10;
         this.commentButton = new ListViewButton(this.scene, photoBg.x + photoBg.displayWidth / 2 - offset, photoBg.y + offset, 0.65, () => {
             if (this.commentNode !== null) {
-                gameManager.dialogManager.setNode(this.commentNode);
+                gameManager.UIManager.dialogManager.setNode(this.commentNode);
             }
         }, { atlas: 'computerElements', frame: 'addComment' }, { x: 1, y: 1 }, { R: 255, G: 255, B: 255 }, { R: 200, G: 200, B: 200 }, { R: 150, G: 150, B: 150 });
         this.commentButton.x -= this.commentButton.w / 2;

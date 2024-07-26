@@ -1,35 +1,35 @@
 {
-    "Alison": {
+    "player": {
         "post0": {
             "photo": "photoMatch",
-            "friendShipRequired": true
+            "friendshipRequired": true
         }
     },
     "Maria": {
         "post0": {
             "photo": "photoMatch",
-            "friendShipRequired": true
+            "friendshipRequired": true
         }
     },
     "Alex": {
         "post0": {
             "photo": "photoMatch",
-            "friendShipRequired": true
+            "friendshipRequired": true
         }
     },
     "Guille": {
         "post0": {
             "photo": "photoMatch",
-            "friendShipRequired": false
+            "friendshipRequired": false
         }
     },
-    "player": {
-        "photo": {
-            "male": "photoMatch",
-            "female": "photoMatch"
-        },
+    "Alison": {
         "post0": {
-            "friendShipRequired": false
+            "photo": {
+                "male": "photoForeheadBoy",
+                "female": "photoForeheadGirl"
+            },
+            "friendshipRequired": true
         }
     }
 }

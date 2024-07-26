@@ -1,0 +1,65 @@
+{
+    "root": {
+        "type": "text",
+        "character": "player"
+    },
+    "Alison": {
+        "refuse": {
+            "root": {
+                "type": "text",
+                "character": "player",
+                "next": "decision"
+            },
+            "decision": {
+                "type": "choice",
+                "choices": [
+                    {
+                        "next": "eraseFriendRequest"
+                    },
+                    {}
+                ]
+            },
+            "eraseFriendRequest": {
+                "type": "event",
+                "events": [
+                    {
+                        "eraseFriendRequest": {
+                            "character": "Alison"
+                        }
+                    }
+                ]
+            }
+        },
+        "post": {
+            "root": {
+                "type": "choice",
+                "choices": [
+                    {
+                        "next": "comment"
+                    },
+                    {},
+                    {
+                        "next": "erasePost"
+                    }
+                ]
+            },
+            "comment": {
+                "type": "socialNetMessage",
+                "character": "Maria",
+                "user": "Alison",
+                "postName": "post0"
+            },
+            "erasePost": {
+                "type": "event",
+                "events": [
+                    {
+                        "erasePost": {
+                            "character": "Alison",
+                            "postName": "post0"
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}

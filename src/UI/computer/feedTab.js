@@ -63,9 +63,12 @@ export default class FeedTab extends Phaser.GameObjects.Group {
      * @param {Post} post 
      */
     addPostToList(post) {
-        post.setVisible(true);
         // Los posts se van anadiendo al principio
         this.listView.addFirstItem(post, [post.commentButton.hit], [post.listView]);
+        // Se hace invisible porque cuando se acepta una solicitud de amistad se anaden todos los posts pendientes
+        // a la listview y esta al recolocarlos va a volver los colliders visibles. Sin embargo, aunque se sigue
+        // en la pestana de solicitudes de amistad y estos colliders deberian ser invisibles
+        post.setVisible(false);
     }
 
     /**

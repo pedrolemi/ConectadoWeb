@@ -1,0 +1,26 @@
+{
+    "shadow": {
+        "introduction": {
+            "root": {
+                "text": "Tu primer día de clase. ¿Por qué no te sientas?"
+            },
+            "continuation": {
+                "text": "Escoge el sitio que más te guste."
+            }
+        },
+        "outro": {
+            "root": {
+                "text": "Me parece que te has quedado sin sitio."
+            },
+            "continuation1": {
+                "text": "¿Ni siquiera sabes sentarte?"
+            },
+            "continuation2": {
+                "text": "¿Acaso no sirves para nada?"
+            },
+            "continuation3": {
+                "text": "¿Cómo esperas hacer así amigos?"
+            }
+        }
+    }
+}

@@ -1,0 +1,94 @@
+{
+    "badEnding": {
+        "text": "Al final todo ha acabado igual, no se puede decir que no lo haya intentado."
+    },
+    "badEndingPart2": {
+        "text": "Supongo que ya es tarde, has desaprovechado la oportunidad que te he dado."
+    },
+    "badEndingPart3": {
+        "text": "Álex y Ana seguirán haciendo la vida imposible a otros compañeros. Tú no has sido su primera víctima, ni la última."
+    },
+    "badEndingPart4": {
+        "text": "Tan difícil es pedir ayuda cuando uno la necesita. Olvidarse de nuestro ego. Uno no siempre tiene la culpa de lo que le pasa ni se lo merece."
+    },
+    "badEndingPart5": {
+        "text": "¿Por qué ese miedo a compartir lo que te sucede, lo que uno siente?"
+    },
+    "badEndingPart6": {
+        "text": "¿Por qué dejamos que las personas sufran? ¿Por qué pensamos que es mejor permanecer callado, que el tiempo todo lo cura?"
+    },
+    "badEndingPart7": {
+        "text": "Es fácil reírse de los demás, pero qué pasa cuando el afectado eres tú."
+    },
+    "badEndingPart8": {
+        "text": "¿Por qué es mejor sufrir o ver a los demás pasarlo mal que pedir ayuda? ¿Acaso pedir ayuda es chivarse? ¿Es chivarse evitar que alguien lo pase mal?"
+    },
+    "normalEnding": {
+        "text": "Parece que al final no he conseguido mi propósito, pero al menos han mejorado un poco las cosas."
+    },
+    "normalEnding2": {
+        "text": "Alex ahora estará vigilado y al menos os dejará a todos un poco más en paz."
+    },
+    "normalEnding3": {
+        "text": "Hay que pedir ayuda cuando uno la necesita. Olvidarse de nuestro ego. Uno no siempre tiene la culpa de lo que le pasa o se lo merece."
+    },
+    "normalEnding4": {
+        "text": "El tiempo no va a solucionar las cosas si sufres, no hay que dejarlo pasar."
+    },
+    "normalEnding5": {
+        "text": "Todos necesitamos ayuda alguna vez y espero que al menos ahora seas consciente de que al igual que hay personas que te ayudan, hay otras que necesitan que tú les ayudes."
+    },
+    "normalEnding6": {
+        "text": "¿Acaso es mejor sufrir o ver a los demás pasarlo mal que pedir ayuda? ¿Acaso pedir ayuda es chivarse? ¿Es chivarse evitar que alguien lo pase mal?"
+    },
+    "normalEnding7": {
+        "text": "Espero que con lo que has vivido pierdas ese miedo a contar las cosas malas que os pasan a ti y a tus compañeros."
+    },
+    "goodEnding": {
+        "text": "Bien, hemos conseguido cambiar las cosas."
+    },
+    "goodEnding2": {
+        "text": "Aún no lo sabes, pero hemos conseguido que Alex deje en paz a sus compañeros y a ti."
+    },
+    "goodEnding3": {
+        "text": "Si nadie le hubiera parado los pies tu no habrías sido la última persona en sufrir acoso."
+    },
+    "goodEnding4": {
+        "text": "Es bueno contar las cosas, pedir ayuda. Nadie se merece que lo marginen, humillen o se burlen de él, sea cual sea el motivo."
+    },
+    "goodEnding5": {
+        "text": "Habrá gente que diga que te chivaste al profesor, a los compañeros o a tus padres. Yo opino que has sido un héroe."
+    },
+    "goodEnding6": {
+        "text": "Espero que nunca más te quedes callado si alguien necesita ayuda o sufre. Que le des tu apoyo en vez de seguir al matón de turno."
+    },
+    "goodEnding7": {
+        "text": "Es fácil no hacer nada, pero has pensado que tu puedes ser su siguiente víctima como ha pasado ahora."
+    },
+    "playerQuestion": [
+        {
+            "text": "¿Quién eres?"
+        },
+        {
+            "text": "Deja de decir estupideces y desaparece."
+        }
+    ],
+    "curiousAnswer": {
+        "text": "Me temo que eso no puedo decírtelo."
+    },
+    "curiousAnswerPart2": {
+        "text": "Piensa en mí como alguien que está CONECTADO a ti por aquello que tenemos en común."
+    },
+    "curiousAnswerPart3": {
+        "text": "Quizá una voz de la conciencia..."
+    },
+    "curiousAnswerPart4": {
+        "text": "Pero poco importa quien yo sea. Lo importante es que lo que has vivido te ha hecho reflexionar y ser mejor persona."
+    },
+    "unpoliteAnswer": {
+        "text": "Siento que mi presencia no te resulte cómoda."
+    },
+    "unpoliteAnswerPart2": {
+        "text": "Y que quizá esto no haya servido para nada..."
+    }
+}

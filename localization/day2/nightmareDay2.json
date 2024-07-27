@@ -4,16 +4,6 @@
             "root": {
                 "type": "text",
                 "character": "shadow",
-                "next": "continuation1"
-            },
-            "continuation1": {
-                "type": "text",
-                "character": "shadow",
-                "next": "continuation2"
-            },
-            "continuation2": {
-                "type": "text",
-                "character": "shadow",
                 "next": "end"
             },
             "end": {
@@ -27,16 +17,6 @@
         },
         "outro": {
             "root": {
-                "type": "text",
-                "character": "shadow",
-                "next": "continuation1"
-            },
-            "continuation1": {
-                "type": "text",
-                "character": "shadow",
-                "next": "continuation2"
-            },
-            "continuation2": {
                 "type": "text",
                 "character": "shadow",
                 "next": "end"

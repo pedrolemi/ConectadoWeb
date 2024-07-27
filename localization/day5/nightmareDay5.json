@@ -4,7 +4,7 @@
         "conditions": [
             {
                 "next": "badEnding",
-                "ending1": {
+                "ending": {
                     "value": 1,
                     "operator": "equal",
                     "global": "true",
@@ -13,7 +13,7 @@
             },
             {
                 "next": "normalEnding",
-                "ending2": {
+                "ending": {
                     "value": 2,
                     "operator": "equal",
                     "global": "true",
@@ -22,7 +22,7 @@
             },
             {
                 "next": "goodEnding",
-                "ending3": {
+                "ending": {
                     "value": 3,
                     "operator": "equal",
                     "global": "true",
@@ -34,109 +34,14 @@
     "badEnding": {
         "type": "text",
         "character": "portalVoice",
-        "next": "badEndingPart2"
-    },
-    "badEndingPart2": {
-        "type": "text",
-        "character": "portalVoice",
-        "next": "badEndingPart3"
-    },
-    "badEndingPart3": {
-        "type": "text",
-        "character": "portalVoice",
-        "next": "badEndingPart4"
-    },
-    "badEndingPart4": {
-        "type": "text",
-        "character": "portalVoice",
-        "next": "badEndingPart5"
-    },
-    "badEndingPart5": {
-        "type": "text",
-        "character": "portalVoice",
-        "next": "badEndingPart6"
-    },
-    "badEndingPart6": {
-        "type": "text",
-        "character": "portalVoice",
-        "next": "badEndingPart7"
-    },
-    "badEndingPart7": {
-        "type": "text",
-        "character": "portalVoice",
-        "next": "badEndingPart8"
-    },
-    "badEndingPart8": {
-        "type": "text",
-        "character": "portalVoice",
         "next": "playerQuestion"
     },
     "normalEnding": {
         "type": "text",
         "character": "portalVoice",
-        "next": "normalEnding2"
-    },
-    "normalEnding2": {
-        "type": "text",
-        "character": "portalVoice",
-        "next": "normalEnding3"
-    },
-    "normalEnding3": {
-        "type": "text",
-        "character": "portalVoice",
-        "next": "normalEnding4"
-    },
-    "normalEnding4": {
-        "type": "text",
-        "character": "portalVoice",
-        "next": "normalEnding5"
-    },
-    "normalEnding5": {
-        "type": "text",
-        "character": "portalVoice",
-        "next": "normalEnding6"
-    },
-    "normalEnding6": {
-        "type": "text",
-        "character": "portalVoice",
-        "next": "normalEnding7"
-    },
-    "normalEnding7": {
-        "type": "text",
-        "character": "portalVoice",
         "next": "playerQuestion"
     },
     "goodEnding": {
-        "type": "text",
-        "character": "portalVoice",
-        "next": "goodEnding2"
-    },
-    "goodEnding2": {
-        "type": "text",
-        "character": "portalVoice",
-        "next": "goodEnding3"
-    },
-    "goodEnding3": {
-        "type": "text",
-        "character": "portalVoice",
-        "next": "goodEnding4"
-    },
-    "goodEnding4": {
-        "type": "text",
-        "character": "portalVoice",
-        "next": "goodEnding5"
-    },
-    "goodEnding5": {
-        "type": "text",
-        "character": "portalVoice",
-        "next": "goodEnding6"
-    },
-    "goodEnding6": {
-        "type": "text",
-        "character": "portalVoice",
-        "next": "goodEnding7"
-    },
-    "goodEnding7": {
         "type": "text",
         "character": "portalVoice",
         "next": "playerQuestion"
@@ -155,29 +60,9 @@
     "curiousAnswer": {
         "type": "text",
         "character": "portalVoice",
-        "next": "curiousAnswerPart2"
-    },
-    "curiousAnswerPart2": {
-        "type": "text",
-        "character": "portalVoice",
-        "next": "curiousAnswerPart3"
-    },
-    "curiousAnswerPart3": {
-        "type": "text",
-        "character": "portalVoice",
-        "next": "curiousAnswerPart4"
-    },
-    "curiousAnswerPart4": {
-        "type": "text",
-        "character": "portalVoice",
         "next": "end"
     },
     "unpoliteAnswer": {
-        "type": "text",
-        "character": "portalVoice",
-        "next": "unpoliteAnswerPart2"
-    },
-    "unpoliteAnswerPart2": {
         "type": "text",
         "character": "portalVoice",
         "next": "end"

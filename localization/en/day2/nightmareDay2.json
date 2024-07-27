@@ -1,26 +1,30 @@
 {
     "shadow": {
         "introduction": {
-            "root": {
-                "text": "So...have we already worked out this?"
-            },
-            "continuation1": {
-                "text": "Do you know where to sit down?"
-            },
-            "continuation2": {
-                "text": "Perhaps you should avoid those gums to fall on the chairs by hitting them or you'll have to sit down on one of them."
-            }
+            "root": [
+                {
+                    "text": "So...have we already worked out this?"
+                },
+                {
+                    "text": "Do you know where to sit down?"
+                },
+                {
+                    "text": "Perhaps you should avoid those gums to fall on the chairs by hitting them or you'll have to sit down on one of them."
+                }
+            ]
         },
         "outro": {
-            "root": {
-                "text": "You'll have to sit down on a gum."
-            },
-            "continuation1": {
-                "text": "Hahaha, go on, sit down."
-            },
-            "continuation3": {
-                "text": "Come on, what are you waiting for?"
-            }
+            "root": [
+                {
+                    "text": "You'll have to sit down on a gum."
+                },
+                {
+                    "text": "Hahaha, go on, sit down."
+                },
+                {
+                    "text": "Come on, what are you waiting for?"
+                }
+            ]
         }
     }
 }

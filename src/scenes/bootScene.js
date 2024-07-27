@@ -136,16 +136,14 @@ export default class BootScene extends Phaser.Scene {
         let namespaces = [...onlyNamespaces];
 
         dialogsAndNamespaces.forEach((dialog) => {
+            // Quitar extension
             let dialogWithoutExtension = dialog.substr(0, dialog.lastIndexOf('.'));
+            // Cambiar / por \\
             let dialogAux = dialogWithoutExtension.replace('/', '\\');
+            // Se juntan los archivos de dialogos, que tienen tanto archivos de estructura como namespaces,
+            // con los archivos que solo son namespaces
             namespaces.push(dialogAux);
         });
-
-        /*
-        ['titleMenu', 'userInfoMenu', 'names', 'phoneInfo', 'computer', 'transitionScenes', 'everydayDialog',
-            'day1\\bedroomMorningDay1', 'day1\\livingroomMorningDay1', 'day1\\playgroundMorningDay1', 'day1\\corridorMorningDay1', 'day1\\classFrontMorningDay1', 'day1\\ClassBackMorningDay1',
-            'test\\momDialog', 'test\\dadDialog', 'test\\chat1', 'posts', 'test\\computerTest']
-        */
 
         // Se inicializa el plugin i18next
         // Inicialmente solo se carga el idioma inicial y los de respaldo
@@ -200,26 +198,10 @@ export default class BootScene extends Phaser.Scene {
         // Archivos de dialogos (estructura)
         this.load.setPath('localization');
 
-
-        /*
-        this.load.json('momDialog', 'test/momDialog.json');
-        this.load.json('dadDialog', 'test/dadDialog.json');
-        this.load.json('chat1', 'test/chat1.json');
-        this.load.json('computerTest', 'test/computerTest.json');
-
-        this.load.json('posts', 'posts.json');
-
-        this.load.json('everydayDialog', 'everydayDialog.json');
-        this.load.json('bedroomMorningDay1', 'day1/bedroomMorningDay1.json');
-        this.load.json('livingroomMorningDay1', 'day1/livingroomMorningDay1.json');
-        this.load.json('playgroundMorningDay1', 'day1/playgroundMorningDay1.json');
-        this.load.json('corridorMorningDay1', 'day1/corridorMorningDay1.json');
-        this.load.json('classFrontMorningDay1', 'day1/classFrontMorningDay1.json');
-        this.load.json('ClassBackMorningDay1', 'day1/ClassBackMorningDay1.json');
-        */
-
         dialogsAndNamespaces.forEach((dialog) => {
+            // Quitar extension
             let dialogWithoutExtension = dialog.substr(0, dialog.lastIndexOf('.'));
+            // Quedarse con la ultima parte del paht, que corresponde con el id del archivo
             let subPaths = dialogWithoutExtension.split('/');
             let name = subPaths[subPaths.length - 1];
             this.load.json(name, dialog);
@@ -320,7 +302,8 @@ export default class BootScene extends Phaser.Scene {
         this.load.atlas('classBack', 'classBack/classBack.png', 'classBack/classBack.json');
 
         // Pesadillas
-        this.load.atlas('nightmares', 'nightmares/nightmaresElements.png', 'nightmares/nightmaresElements.json')
+        this.load.atlas('nightmaresElements', 'nightmares/nightmaresElements.png', 'nightmares/nightmaresElements.json');
+        this.load.image('nightmaresBg', 'nightmares/nightmareClass.png');
     }
 
     loadCreditsSceneAssets() {
@@ -335,7 +318,7 @@ export default class BootScene extends Phaser.Scene {
     preload() {
         // Son tanto archivos de dialogos como namespaces del plugin i18next
         // Ruta archivo dialogo --> test/momDialog.json
-        // Nombre archivo dialogo --> momDialog.json
+        // ID archivo dialogo --> momDialog
         // Namespace --> test\\momDialog.json
         let dialogsAndNamespaces = [
             'test/momDialog.json',
@@ -350,6 +333,11 @@ export default class BootScene extends Phaser.Scene {
             'day1/classFrontMorningDay1.json',
             'day1/classBackMorningDay1.json',
             'day1/classBackBreakDay1.json',
+            'day1/nightmareDay1.json',
+            'day2/nightmareDay2.json',
+            'day3/nightmareDay3.json',
+            'day4/nightmareDay4.json',
+            'day5/nightmareDay5.json'
         ]
         // Solo son namespaces del plugin i18next
         // El nombre corresponde tal cual con el namespace (incluye \\ si es necesario)

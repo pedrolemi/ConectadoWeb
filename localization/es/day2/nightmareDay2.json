@@ -1,26 +1,30 @@
 {
     "shadow": {
         "introduction": {
-            "root": {
-                "text": "Bueno...¿ya lo hemos solucionado no?"
-            },
-            "continuation1": {
-                "text": "¿Sabes dónde sentarte?"
-            },
-            "continuation2": {
-                "text": "Quizás deberías evitar que lo chicles caigan en la silla golpeándolos o tendrás que sentarte en uno."
-            }
+            "root": [
+                {
+                    "text": "Bueno...¿ya lo hemos solucionado no?"
+                },
+                {
+                    "text": "¿Sabes dónde sentarte?"
+                },
+                {
+                    "text": "Quizás deberías evitar que lo chicles caigan en la silla golpeándolos o tendrás que sentarte en uno."
+                }
+            ]
         },
         "outro": {
-            "root": {
-                "text": "Tendrás que sentarte en un chicle."
-            },
-            "continuation1": {
-                "text": "Jajaja, adelante, siéntate."
-            },
-            "continuation3": {
-                "text": "Venga, ¿a qué esperas?"
-            }
+            "root": [
+                {
+                    "text": "Tendrás que sentarte en un chicle."
+                },
+                {
+                    "text": "Jajaja, adelante, siéntate."
+                },
+                {
+                    "text": "Venga, ¿a qué esperas?"
+                }
+            ]
         }
     }
 }

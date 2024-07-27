@@ -1,31 +1,35 @@
 {
     "shadow": {
         "introduction": {
-            "root": {
-                "text": "Voy a hacer que nadie te quiera hablar."
-            },
-            "continuation1": {
-                "text": "Puedes decir lo que quieras, pero no conseguirás nada."
-            },
-            "continuation2": {
-                "text": "Adelante, habla con la gente de clase, a ver si consigues que te hablen."
-            }
+            "root": [
+                {
+                    "text": "Voy a hacer que nadie te quiera hablar."
+                },
+                {
+                    "text": "Puedes decir lo que quieras, pero no conseguirás nada."
+                },
+                {
+                    "text": "Adelante, habla con la gente de clase, a ver si consigues que te hablen."
+                }
+            ]
         },
         "outro": {
-            "root": {
-                "text": "",
-                "text_male": "Me parece que te has quedado solo.",
-                "text_female": "Me parece que te has quedado sola."
-            },
-            "continuation1": {
-                "text": "¿Qué tal sienta que todos te ignoren?"
-            },
-            "continuation2": {
-                "text": "¿No te parece divertido que nadie te haga caso?"
-            },
-            "continuation3": {
-                "text": "Porque yo me estoy partiendo de solo verte."
-            }
+            "root": [
+                {
+                    "text": "",
+                    "text_male": "Me parece que te has quedado solo.",
+                    "text_female": "Me parece que te has quedado sola."
+                },
+                {
+                    "text": "¿Qué tal sienta que todos te ignoren?"
+                },
+                {
+                    "text": "¿No te parece divertido que nadie te haga caso?"
+                },
+                {
+                    "text": "Porque yo me estoy partiendo de solo verte."
+                }
+            ]
         }
     },
     "Maria": {

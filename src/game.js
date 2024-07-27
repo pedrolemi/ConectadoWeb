@@ -20,6 +20,7 @@ import CorridorMorningDay1 from './scenes/gameLoop/day1/corridorMorningDay1.js';
 import ClassFrontMorningDay1 from './scenes/gameLoop/day1/classFrontMorningDay1.js';
 import ClassBackMorningDay1 from './scenes/gameLoop/day1/classBackMorningDay1.js';
 import ClassBackBreakDay1 from './scenes/gameLoop/day1/classBackBreakDay1.js';
+import NightmareDay1 from './scenes/gameLoop/day1/nightmareDay1.js'
 
 // UI
 import ComputerScene from './UI/computer/computerScene.js'
@@ -39,11 +40,12 @@ const config = {
     // Nota: el orden de las escenas es relevante, y las que se encuentren antes en el array se renderizaran por debajo de las siguientes
     scene: [
         BootScene, LanguageMenu, TitleMenu, UserInfoMenu,
-        AlarmScene, BathroomMorning, OppositeBathroom,
+        AlarmScene, BathroomMorning, OppositeBathroom, TextOnlyScene,
         BedroomMorningDay1, LivingroomMorningDay1, PlaygroundMorningDay1, StairsMorningDay1, CorridorMorningDay1, ClassFrontMorningDay1, ClassBackMorningDay1, ClassBackBreakDay1,
+        NightmareDay1,
 
-        Test, 
-        ComputerScene, UIManager, TextOnlyScene ],
+        Test,
+        ComputerScene, UIManager],
     autoFocus: true,
     disableContextMenu: true,        // Desactivar que aparezca el menu de inspeccionar al hacer click derecho
     render: {

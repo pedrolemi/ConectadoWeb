@@ -1,26 +1,30 @@
 {
     "shadow": {
         "introduction": {
-            "root": {
-                "text": "Your first day of school. Why don't you take a seat?"
-            },
-            "continuation": {
-                "text": "Pick the seat you like the most."
-            }
+            "root": [
+                {
+                    "text": "Your first day of school. Why don't you take a seat?"
+                },
+                {
+                    "text": "Pick the seat you like the most."
+                }
+            ]
         },
         "outro": {
-            "root": {
-                "text": "I think you missed your seat."
-            },
-            "continuation1": {
-                "text": "Don't you even know how to sit down?"
-            },
-            "continuation2": {
-                "text": "Do you even worth anything?"
-            },
-            "continuation3": {
-                "text": "How do you expect to make friends acting like this?"
-            }
+            "root": [
+                {
+                    "text": "I think you missed your seat."
+                },
+                {
+                    "text": "Don't you even know how to sit down?"
+                },
+                {
+                    "text": "Do you even worth anything?"
+                },
+                {
+                    "text": "How do you expect to make friends acting like this?"
+                }
+            ]
         }
     }
 }

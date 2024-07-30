@@ -24,7 +24,6 @@ export default class PlaygroundBreakDay1 extends PlaygroundBase {
         };
         let ana = new Character(this, "Ana", tr, this.portraitTr, () => {
             this.dialogManager.setNode(anaNode);
-            this.gameManager.setValue("metAna", true);
         });
         ana.setScale( -tr.scale, tr.scale);
         ana.setAnimation("IdleBase", true);
@@ -37,7 +36,6 @@ export default class PlaygroundBreakDay1 extends PlaygroundBase {
         };
         let guille = new Character(this, "Guille", tr, this.portraitTr, () => {
             this.dialogManager.setNode(guilleNode);
-            this.gameManager.setValue("metGuille", true);
         });
         guille.setScale( -tr.scale, tr.scale);
         guille.setAnimation("IdleBase", true);

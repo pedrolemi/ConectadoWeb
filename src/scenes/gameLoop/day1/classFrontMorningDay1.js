@@ -21,7 +21,6 @@ export default class ClassFrontMorningDay1 extends ClassFrontBase {
             };
             let ana = new Character(this, "Ana", tr, this.portraitTr, () => {
                 this.dialogManager.setNode(anaNode);
-                this.gameManager.setValue("metAna", true);
             });
             ana.setDepth(this.row4Tables.depth);
             ana.setAnimation("IdleBase", true);

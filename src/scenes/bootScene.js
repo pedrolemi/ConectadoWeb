@@ -337,6 +337,7 @@ export default class BootScene extends Phaser.Scene {
             'day1/corridorBreakDay1.json',
             'day1/playgroundBreakDay1.json',
             'day1/livingroomAfternoonDay1.json',
+            'day1/bedroomAfternoonDay1.json',
             'day1/nightmareDay1.json',
             'day2/nightmareDay2.json',
             'day3/nightmareDay3.json',

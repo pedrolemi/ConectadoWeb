@@ -29,6 +29,31 @@
             "leavePC":{
                 "text": "I'd better leave now."
             }
+        },
+        
+        "bagAfternoon": {
+            "root": [
+                {
+                    "text": "I've just come back."
+                },
+                {
+                    "text": "I do not need the backpack at all."
+                }
+            ]
+        },
+
+        "bedAfternoon": {
+            "root": {
+                "text": "Mmm, should I go to sleep now?"
+            },
+            "choices": [
+                {
+                    "text": "Yes"
+                },
+                {
+                    "text": "No"
+                }
+            ]
         }
     },
 

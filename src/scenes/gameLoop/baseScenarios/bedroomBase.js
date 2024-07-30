@@ -111,6 +111,26 @@ export default class BedroomBase extends BaseScene {
             this.dialogManager.setNode(this.bedNode);
         })
 
+        // Evento que se llama al elegir dormir. Hace la animacion de cerrar 
+        // los ojos y cuando acaba pasa a la pesadilla del dia correspondiente
+        this.dispatcher.addOnce("sleep", this, (obj) => {
+            this.phoneManager.topLid.visible = true;
+            this.phoneManager.botLid.visible = true;
+            this.phoneManager.topLid.y = -this.CANVAS_HEIGHT / 2;
+            this.phoneManager.botLid.y = this.CANVAS_HEIGHT;
+            let anim = this.phoneManager.closeEyesAnimation(false);
+
+            anim.on('complete', () => {
+                setTimeout(() => {
+                    let nightmareScene = "NightmareDay" + this.gameManager.day;
+                    this.gameManager.changeScene(nightmareScene);
+                }, 1000);
+            })
+        });
+
         this.gameManager.setValue(this.gameManager.bagPicked, false);
+
+
+        
     }
 }

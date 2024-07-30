@@ -82,7 +82,7 @@ export default class LivingroomAfternoonDay1 extends LivingroomBase {
         this.dispatcher.addOnce("prepareChoices3", this, (obj) => {
             // Si no se ha conocido a Maria, se quita la opcion para hablar de ella
             // No se comprueba si se ha hablado de Alex porque hay que hablar con el si o si
-            if (!this.gameManager.getValue("metMaria")) {
+            if (!this.gameManager.getValue("metJose")) {
                 this.hideOptions();
 
                 let node = this.dialogManager.currNode

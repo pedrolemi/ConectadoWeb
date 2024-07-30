@@ -87,6 +87,13 @@
                         "value": false, 
                         "global": true
                     }
+                },
+                { 
+                    "metMaria": { 
+                        "variable": "metMaria", 
+                        "value": true, 
+                        "global": true
+                    }
                 }
             ]
         },
@@ -103,6 +110,13 @@
                 {
                     "setNiceResponse": { 
                         "variable": "mariaNiceResponse", 
+                        "value": true, 
+                        "global": true
+                    }
+                },
+                { 
+                    "metMaria": { 
+                        "variable": "metMaria", 
                         "value": true, 
                         "global": true
                     }
@@ -223,6 +237,13 @@
             "events": [
                 { 
                     "alisonEnter": { }
+                },
+                {
+                    "returnEarring": { 
+                        "variable": "returnedEarring", 
+                        "value": true, 
+                        "global": true
+                    }
                 }
             ]
         }

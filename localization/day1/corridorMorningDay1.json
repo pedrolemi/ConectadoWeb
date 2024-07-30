@@ -59,6 +59,13 @@
                     }
                 },
                 { 
+                    "metGuille": { 
+                        "variable": "metGuille", 
+                        "value": true, 
+                        "global": true
+                    }
+                },
+                { 
                     "explainBulletinBoard": { 
                         "variable": "explainedBulletinBoard", 
                         "value": true, 

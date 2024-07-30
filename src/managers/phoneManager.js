@@ -551,7 +551,7 @@ export default class PhoneManager {
 
     // Animacion de cerrar los ojos. Cierra los parpados y 
     // vuelve a reproducir la animacion de abrir los ojos
-    closeEyesAnimation() {
+    closeEyesAnimation(openAgain = true) {
         let speed = 2000;
         let lastTopPos = this.topLid.y;
         let lastBotPos = this.botLid.y;
@@ -569,15 +569,18 @@ export default class PhoneManager {
             repeat: 0,
         });
 
-        // Cuando termina, cambia la hora del telefono y vuelve a reproducir la animacion de abrir los ojos
-        anim.on('complete', () => {
-            this.setDayInfo("alarmLateHour");
+        if (openAgain) {
+            // Cuando termina, cambia la hora del telefono y vuelve a reproducir la animacion de abrir los ojos
+            anim.on('complete', () => {
+                this.setDayInfo("alarmLateHour");
 
-            setTimeout(() => {
-                this.openEyesAnimation();
-            }, this.SLEEP_DELAY * 2);
+                setTimeout(() => {
+                    this.openEyesAnimation();
+                }, this.SLEEP_DELAY * 2);
 
-        });
+            });
+        }
+        else return anim;
     }
 
 

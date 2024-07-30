@@ -53,6 +53,13 @@
             "events": [
                 { 
                     "startClass": { }
+                },
+                { 
+                    "metAna": { 
+                        "variable": "metAna", 
+                        "value": true, 
+                        "global": true
+                    }
                 }
             ]
         }

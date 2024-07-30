@@ -46,18 +46,46 @@
 
         "earringNotFound": {
             "type": "text",
-            "character": "Ana"
+            "character": "Ana",
+            "next": "setMetAna"
         },
         "earringFound": {
             "type": "text",
-            "character": "Ana"
+            "character": "Ana",
+            "next": "setMetAna"
+        },
+
+        "setMetAna": {
+            "type": "event",
+            "events": [
+                { 
+                    "metAna": { 
+                        "variable": "metAna", 
+                        "value": true, 
+                        "global": true
+                    }
+                }
+            ]
         }
     },
 
     "guille": {
         "root": {
             "type": "text",
-            "character": "Guille"
+            "character": "Guille",
+            "next": "setMetGuille"
+        },
+        "setMetGuille": {
+            "type": "event",
+            "events": [
+                { 
+                    "metGuille": { 
+                        "variable": "metGuille", 
+                        "value": true, 
+                        "global": true
+                    }
+                }
+            ]
         }
 
     }

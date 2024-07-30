@@ -29,6 +29,31 @@
             "leavePC":{
                 "text": "Lo mejor será que me vaya."
             }
+        },
+
+        "bagAfternoon": {
+            "root": [
+                {
+                    "text": "Acabo de volver."
+                },
+                {
+                    "text": "No necesito la mochila para nada."
+                }
+            ]
+        },
+        
+        "bedAfternoon": {
+            "root": {
+                "text": "¿Mmm, debería irme ya a dormir?"
+            },
+            "choices": [
+                {
+                    "text": "Sí"
+                },
+                {
+                    "text": "No"
+                }
+            ]
         }
     },
 

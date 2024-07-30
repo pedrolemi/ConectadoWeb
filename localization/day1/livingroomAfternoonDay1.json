@@ -135,7 +135,7 @@
             "conditions": [
                 {
                     "next": "notFound",
-                    "foundEarring": {
+                    "returnedEarring": {
                         "value": false,
                         "operator": "equal",
                         "global": true,
@@ -144,7 +144,7 @@
                 },
                 {
                     "next": "found",
-                    "foundEarring": {
+                    "returnedEarring": {
                         "value": true,
                         "operator": "equal",
                         "global": true,

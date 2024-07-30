@@ -40,6 +40,36 @@
                 "type": "text",
                 "character": "player"
             }
+        },
+
+        "bagAfternoon": {
+            "root": {
+                "type": "text",
+                "character": "player"
+            } 
+        },
+        
+        "bedAfternoon": {
+            "root": {
+                "type": "text",
+                "character": "player",
+                "next": "choices"
+            },
+            "choices": {
+                "type": "choice",
+                "choices": [
+                    { "next": "sleep" },
+                    { "next": "" }
+                ]
+            },
+            "sleep": {
+                "type": "event",
+                    "events": [
+                        { 
+                            "sleep": { }
+                        }
+                    ]
+            }
         }
     },
 

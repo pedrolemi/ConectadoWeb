@@ -24,7 +24,6 @@ export default class CorridorBreakDay1 extends CorridorBase {
         };
         let maria = new Character(this, "Maria", tr, this.portraitTr, () => {
             this.dialogManager.setNode(mariaNode);
-            this.gameManager.setValue("metMaria", true);
         });
         maria.setAnimation("IdleBase", true);
         this.portraits.set("Maria", maria.getPortrait());

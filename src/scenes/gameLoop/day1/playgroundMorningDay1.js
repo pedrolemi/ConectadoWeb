@@ -21,7 +21,6 @@ export default class PlaygroundMorningDay1 extends PlaygroundBase {
             };
             let jose = new Character(this, "Jose", tr, this.portraitTr, () => {
                 this.dialogManager.setNode(joseNode);
-                this.gameManager.setValue("metJose", true);
             });
             jose.setScale( -tr.scale, tr.scale);
             jose.setAnimation("IdleBase", true);
@@ -45,7 +44,6 @@ export default class PlaygroundMorningDay1 extends PlaygroundBase {
             };
             let guille = new Character(this, "Guille", tr, this.portraitTr, () => {
                 this.dialogManager.setNode(guilleNode);
-                this.gameManager.setValue("metGuille", true);
             });
             guille.setAnimation("IdleBase", true);
             this.portraits.set("Guille", guille.getPortrait());

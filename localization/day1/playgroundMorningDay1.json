@@ -117,6 +117,13 @@
                         "value": true, 
                         "global": false
                     }
+                },
+                { 
+                    "metJose": { 
+                        "variable": "metJose", 
+                        "value": true, 
+                        "global": true
+                    }
                 }
             ],
             "next": "ask"
@@ -194,6 +201,13 @@
                         "variable": "introducedGuille", 
                         "value": true, 
                         "global": false
+                    }
+                },
+                { 
+                    "metGuille": { 
+                        "variable": "metGuille", 
+                        "value": true, 
+                        "global": true
                     }
                 }
             ],

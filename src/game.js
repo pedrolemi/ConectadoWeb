@@ -25,7 +25,7 @@ import StairsBreakDay1 from './scenes/gameLoop/day1/stairsBreakDay1.js';
 import PlaygroundBreakDay1 from './scenes/gameLoop/day1/playgroundBreakDay1.js';
 import PlaygroundAfternoonDay1 from './scenes/gameLoop/day1/playgroundAfternoonDay1.js';
 import LivingroomAfternoonDay1 from './scenes/gameLoop/day1/livingroomAfternoonDay1.js';
-
+import BedroomAfternoonDay1 from './scenes/gameLoop/day1/bedroomAfternoonDay1.js';
 import NightmareDay1 from './scenes/gameLoop/day1/nightmareDay1.js'
 
 // UI
@@ -47,9 +47,7 @@ const config = {
     scene: [
         BootScene, LanguageMenu, TitleMenu, UserInfoMenu,
         AlarmScene, BathroomBase, OppositeBathroom, TextOnlyScene,
-        BedroomMorningDay1, LivingroomMorningDay1, PlaygroundMorningDay1, StairsMorningDay1, CorridorMorningDay1, ClassFrontMorningDay1, ClassBackMorningDay1, ClassBackBreakDay1, CorridorBreakDay1, StairsBreakDay1, PlaygroundBreakDay1, PlaygroundAfternoonDay1, LivingroomAfternoonDay1,
-
-        NightmareDay1,
+        BedroomMorningDay1, LivingroomMorningDay1, PlaygroundMorningDay1, StairsMorningDay1, CorridorMorningDay1, ClassFrontMorningDay1, ClassBackMorningDay1, ClassBackBreakDay1, CorridorBreakDay1, StairsBreakDay1, PlaygroundBreakDay1, PlaygroundAfternoonDay1, LivingroomAfternoonDay1, BedroomAfternoonDay1, NightmareDay1,
 
         Test,
         ComputerScene, UIManager],

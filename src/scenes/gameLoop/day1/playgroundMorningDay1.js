@@ -1,4 +1,4 @@
-import PlaygroundBase from "../playgroundBase.js";
+import PlaygroundBase from "../baseScenarios/playgroundBase.js";
 import Character from "../../../gameObjects/character.js";
 
 export default class PlaygroundMorningDay1 extends PlaygroundBase {
@@ -9,15 +9,11 @@ export default class PlaygroundMorningDay1 extends PlaygroundBase {
     create(params) {
         super.create(params);
 
-        this.home = "LivingroomMorningDay1";
+        this.home = "";
         this.stairs = "StairsMorningDay1";
 
-        // Si se llega tarde, se abren las puertas y no se colocan personajes en el fondo
-        if (this.gameManager.getValue(this.gameManager.isLate)) {
-            super.openDoors();
-        }
-        else {
-
+        // Si no se llega tarde, se colocan personajes de fondo
+        if (!this.gameManager.getValue(this.gameManager.isLate)) {
             let tr = {
                 x: 280,
                 y: this.CANVAS_HEIGHT * 0.95,
@@ -25,6 +21,7 @@ export default class PlaygroundMorningDay1 extends PlaygroundBase {
             };
             let jose = new Character(this, "Jose", tr, this.portraitTr, () => {
                 this.dialogManager.setNode(joseNode);
+                this.gameManager.setValue("metJose", true);
             });
             jose.setScale( -tr.scale, tr.scale);
             jose.setAnimation("IdleBase", true);
@@ -48,6 +45,7 @@ export default class PlaygroundMorningDay1 extends PlaygroundBase {
             };
             let guille = new Character(this, "Guille", tr, this.portraitTr, () => {
                 this.dialogManager.setNode(guilleNode);
+                this.gameManager.setValue("metGuille", true);
             });
             guille.setAnimation("IdleBase", true);
             this.portraits.set("Guille", guille.getPortrait());
@@ -60,6 +58,7 @@ export default class PlaygroundMorningDay1 extends PlaygroundBase {
             
             nodes = this.cache.json.get('everydayDialog');
             this.homeNode = super.readNodes(nodes, "everydayDialog", "playground.homeMorning", true);
+
 
             // Evento llamado cuando suena la campana
             this.dispatcher.addOnce("openDoors", this, (obj) => {

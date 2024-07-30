@@ -1,5 +1,5 @@
 
-import BaseScene from './baseScene.js';
+import BaseScene from '../baseScene.js';
 
 export default class ClassFrontBase extends BaseScene {
     /**

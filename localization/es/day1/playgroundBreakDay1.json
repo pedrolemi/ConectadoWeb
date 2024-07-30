@@ -1,0 +1,37 @@
+{
+    "earring": {
+        "root": [
+            {
+                "text": "Parece que es el pendiente de Alison."
+            },
+            {
+                "text": "Será mejor que me lo lleve."
+            }
+        ]
+    },
+
+    "ana": {
+        "earringNotFound": [
+            {
+                "text": "Hay algo raro cerca de la canasta."
+            },
+            {
+                "text": "Veo algo brillar desde aquí."
+            }
+        ],
+        "earringFound": {
+            "text": "Parece que has encontrado el pendiente de Alison."
+        }
+    },
+
+    "guille": {
+        "root": [
+            {
+                "text": "Nuestro tutor es bastante majo."
+            },
+            {
+                "text": "Si tienes cualquier problema habla con él."
+            }
+        ]
+    }
+}

@@ -1,0 +1,205 @@
+{
+    "dad": {
+        "root": [
+            {
+                "text": "Talk to your mother."
+            },
+            {
+                "text": "She wants to know how was your day."
+            }
+        ]
+    },
+
+    "mom": {
+        "notTalked": [
+            {
+                "text": "You're back, {{name}}."
+            },
+            {
+                "text": "How was your day?"
+            }
+        ],
+        "talked": {
+            "text": "Do you want to chat a little?"
+        },
+
+        "choices1": [
+            {
+                "text": "Good, the usual, I'm going to my room."
+            },
+            {
+                "text": "I've met Guille..."
+            },
+            {
+                "text": "(Talk about other classmates)"
+            }
+        ],
+        "guille": [
+            {
+                "text": "Today I've met Guille, he was very nice with me."
+            },
+            {
+                "text": "I think we'll be good friends."
+            }
+        ],
+        "guilleExtra": [
+            {
+                "text": "He also advised me to look the bulletin boards."
+            },
+            {
+                "text": "Sometimes there is interesting stuff posted."
+            }
+        ],
+
+        "choices2": [
+            {
+                "text": "There's a girl called Alison..."
+            },
+            {
+                "text": "Jose..."
+            },
+            {
+                "text": "(Talk about other classmates)"
+            }
+        ],
+        "alison": [
+            {
+                "text": "There's a blonde girl called Alison."
+            },
+            {
+                "text": "She had lost one of her earrings."
+            }
+        ],
+        "notFound": {
+            "text": "I think she couldn't find it."
+        },
+        "found": {
+            "text": "I helped her looking for it, turns out it was in the playground."
+        },
+        "jose": [
+            {
+                "text": "Jose is another classmate, although he seems shyer."
+            },
+            {
+                "text": "But he seems nice too."
+            }
+        ],
+        
+        
+        "choices3": [
+            {
+                "text": "In class there's María..."
+            },
+            {
+                "text": "There's Alex..."
+            },
+            {
+                "text": "(Talk about other classmates)"
+            }
+        ],
+        "maria": {
+            "text": "Another girl in class is María."
+        },
+        "meanResponse": {
+            "text": "She spends all the breaks reading. The class says she's a freak, better to leave her alone."
+        },
+        "niceResponse": [
+            {
+                "text": "It seems that the rest of the class think she's a freak."
+            },
+            {
+                "text": "They cut her off."
+            },
+            {
+                "text": "I've been talking to her for a while and she didn't looked weird to me."
+            }
+        ],
+        "alex": [
+            {
+                "text": "There's also Álex."
+            },
+            {
+                "text": "He's arrived late."
+            },
+            {
+                "text": "He's kind of rude and a bit scary."
+            }
+        ],
+        "submit": [
+            {
+                "text": "Looks like I took his spot when I got in class."
+            },
+            {
+                "text": "But I apologized and it looks like he's no longer angry."
+            }
+        ],
+        "downplay": [
+            {
+                "text": "He's classic troublemaker."
+            },
+            {
+                "text": "I sat on his spot without knowing."
+            },
+            {
+                "text": "He has threatened me."
+            }
+        ],
+        "momDownplayReply": [
+            {
+                "text": "Did he threaten you?"
+            },
+            {
+                "text": "I'm sure you misunderstood."
+            },
+            {
+                "text": "Who else have you met today?"
+            }
+        ],
+        "defy": [
+            {
+                "text": "He is rude and a troublemaker."
+            },
+            {
+                "text": "All because I've sat in his spot."
+            },
+            {
+                "text": "He should look for another one."
+            }
+        ],
+        "momDefyReply": {
+            "text": "You should apologize and not look for troubles."
+        },
+
+        "choices4": [
+            {
+                "text": "Ana..."
+            },
+            {
+                "text": "(Talk about school)"
+            },
+            {
+                "text":  "I'm going to my room, we've talked enough."
+            }
+        ],
+        "ana": [
+            {
+                "text": "There's also Ana."
+            },
+            {
+                "text": "She's a bit scary."
+            }
+        ],
+        "school": {
+            "text": "And school, well..."
+        },
+        "schoolChoices": [
+            {
+                "text": "I like how the building and the playground are."
+            },
+            {
+                "text": "It's boring, there's nothing to do."
+            }
+        ]
+    }
+    
+}

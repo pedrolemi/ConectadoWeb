@@ -238,8 +238,7 @@ export default class GameManager {
         this.computerScene = this.currentScene.scene.get(computerSceneName);
         this.computerScene.scene.sleep();
 
-        let sceneName = 'Test';
-        // let sceneName = 'BedroomMorningDay1';
+        let sceneName = 'LivingroomAfternoonDay1';
 
         // Pasa a la escena inicial con los parametros text, onComplete y onCompleteDelay
         // let sceneName = 'TextOnlyScene';
@@ -320,8 +319,7 @@ export default class GameManager {
         let params = {
             camPos: "left"
         };
-        this.currentScene.scene.wake();
-        this.currentScene.params = params;
+        this.currentScene.scene.wake(this.currentScene.scene.key, params);
     }
 
 

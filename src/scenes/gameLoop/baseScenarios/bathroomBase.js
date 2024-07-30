@@ -1,5 +1,5 @@
 
-import BaseScene from './baseScene.js';
+import BaseScene from '../baseScene.js';
 
 export default class BathroomBase extends BaseScene {
     /**
@@ -8,6 +8,9 @@ export default class BathroomBase extends BaseScene {
      * @param {String} name - id de la escena
      */
     constructor(name) {
+        if (!name) {
+            name = "BathroomBase";
+        }
         super(name, 'bathroom');
     }
 

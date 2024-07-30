@@ -1,0 +1,39 @@
+{
+    "earring": {
+        "root": [
+            {
+                "text": "Looks like Alison's earring."
+            },
+            {
+                "text": "I'll better give it to her."
+            }
+        ]
+    },
+
+    "ana": {
+        "earringNotFound": [
+            {
+                "text": "There's something weird near the basket."
+            },
+            {
+                "text": "I see something shiny from here."
+            }
+        ],
+        "earringFound": {
+            "text": "Looks like you've found Alison's earing."
+        }
+    },
+
+
+
+    "guille": {
+        "root": [
+            {
+                "text": "Our tutor is pretty nice."
+            },
+            {
+                "text": "If you have any trouble just talk to him."
+            }
+        ]
+    }
+}

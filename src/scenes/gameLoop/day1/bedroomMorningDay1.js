@@ -1,4 +1,4 @@
-import BedroomBase from "../bedroomBase.js";
+import BedroomBase from "../baseScenarios/bedroomBase.js";
 
 export default class BedroomMorningDay1 extends BedroomBase {
     constructor() {
@@ -12,6 +12,7 @@ export default class BedroomMorningDay1 extends BedroomBase {
 
         let nodes = this.cache.json.get('bedroomMorningDay1');
 
+        // Dialogos del interior del armario y la cama
         this.wardrobe1Node = super.readNodes(nodes, "day1\\bedroomMorningDay1", "wardrobe1", true);
         this.wardrobe2Node = super.readNodes(nodes, "day1\\bedroomMorningDay1", "wardrobe2", true);
         this.bedNode = super.readNodes(nodes, "day1\\bedroomMorningDay1", "bed", true);
@@ -31,10 +32,14 @@ export default class BedroomMorningDay1 extends BedroomBase {
         this.add.image(2061 * this.scale + 1, 928 * this.scale - 1, this.atlasName, 'clothes3').setOrigin(0, 0).setScale(this.scale);
 
 
+        // Evento que se llama al encender el ordenaddor. Pone la hora a la de llegar tarde
+        // en el telefono (la variable de llegar tarde la cambia el propio evento)
         this.dispatcher.add("turnPC", this, (obj) => {
             this.phoneManager.setDayInfo("pcLateHour");
         });
 
+        // Evento que se llama al coger la mochila. Hace que la mochila desaparezca con 
+        // una animacion (la variable de coger la mochila la cambia el propio evento)
         this.dispatcher.add("pickBag", this, (obj) => {
             this.tweens.add({
                 targets: bag,

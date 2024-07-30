@@ -1,0 +1,121 @@
+{
+    "maria": {
+        "notTalked": {
+            "text": "Do you want anything?"
+        },
+        "choices1": [
+            {
+                "text": "Nothing, bye."
+            },
+            {
+                "text": "Why are you alone here instead of in the playground?"
+            }
+        ],
+        "ask": {
+            "text": "I'd rather stay here peacefully reading."
+        },
+        "choices2": [
+            {
+                "text": "Enjoy it, bye (What a freak)."
+            },
+            {
+                "text": "Don't you prefer being in the playground with your friends?"
+            }
+        ],
+        "keepAsking": [
+            {
+                "text": "You're a bit annoying with all those questions."
+            },
+            {
+                "text": "I don't have friends, they think I'm a freak."
+            },
+            {
+                "text": "You can leave now."
+            }
+        ],
+        "choices3": [
+            {
+                "text": "(Stay)"
+            },
+            {
+                "text": "(Leave)"
+            }
+        ],
+        "stay": [
+            {
+                "text": "You don't look like a freak to me."
+            },
+            {
+                "text": "I'm heading to the playground now, if you want to come I'll be downstairs."
+            }
+        ],
+        "stayAnswer": [
+            {
+                "text": "Thanks, you're very kind."
+            },
+            {
+                "text": "But today I´ll stay here, I'm about to finish my book."
+            },
+            {
+                "text": "Have fun down there, and avoid Alex, he's a jackass."
+            }
+        ],
+        
+        "talkedMean": {
+            "text": "..."
+        },
+        "talkedMeanThoughts": {
+            "text": "Looks like she's ignoring me."
+        },
+        "talkedNice": {
+            "text": "I'm finishing my book, let's talk another time."
+        }
+
+    },
+
+    "phone": {
+        "root": {
+            "text": "Thanks again for helping me"
+        },
+        "choices":[
+            {
+                "text": "It's nothing"
+            },
+            {
+                "text": "(Don't answer, I'll see what I respond later)"
+            }
+        ],
+        "reply": {
+            "text": "It's nothing"
+        }
+    },
+
+    "alison": {
+        "notFound": [
+            {
+                "text": "Haven't you found anything yet?"
+            },
+            {
+                "text": "Please, keep searching."
+            }
+        ],
+
+        "found": [
+            {
+                "text": "I see you found the earring."
+            },
+            {
+                "text": "Thank you very much."
+            },
+            {
+                "text": "You are great, I owe you one."
+            },
+            {
+                "text": "The recess is about to end, we should be walking to class."
+            },
+            {
+                "text": "See you inside."
+            }
+        ]
+    }
+}

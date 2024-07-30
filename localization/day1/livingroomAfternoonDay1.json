@@ -1,0 +1,325 @@
+{
+    "dad": {
+        "root": {
+            "type": "text",
+            "character": "dad"
+        }
+    },
+
+    "mom": {
+        "root": {
+            "type": "condition",
+            "conditions": [
+                {
+                    "next": "notTalked",
+                    "talked": {
+                        "value": false,
+                        "operator": "equal",
+                        "global": false,
+                        "default": false
+                    }
+                },
+                {
+                    "next": "talked",
+                    "talked": {
+                        "value": true,
+                        "operator": "equal",
+                        "global": false,
+                        "default": false
+                    }
+                }
+            ]
+        },
+
+        "notTalked": {
+            "type": "text",
+            "character": "mom",
+            "next": "setTalked"
+        },
+        "setTalked": {
+            "type": "event",
+            "events": [
+                { 
+                    "setTalked": { 
+                        "variable": "talked", 
+                        "value": true, 
+                        "global": false
+                    }
+                }
+            ],
+            "next": "prepareChoices1"
+        },
+        "talked": {
+            "type": "text",
+            "character": "mom",
+            "next": "prepareChoices1"
+        },
+
+
+        "prepareChoices1": {
+            "type": "event",
+            "events": [
+                { 
+                    "prepareChoices1": { }
+                }
+            ],
+            "next": "choices1"
+        },
+        "choices1": {
+            "type": "choice",
+            "choices": [
+                { "next": "" },
+                { "next": "guille", "repeat": false },
+                { "next": "prepareChoices2" }
+            ]
+        },
+        "guille": {
+            "type": "text",
+            "character": "player",
+            "next": "checkGuilleExtra"
+        },
+        "checkGuilleExtra": {
+            "type": "condition",
+            "conditions": [
+                {
+                    "next": "choices1",
+                    "explainedBulletinBoard": {
+                        "value": false,
+                        "operator": "equal",
+                        "global": true,
+                        "default": false
+                    }
+                },
+                {
+                    "next": "guilleExtra",
+                    "explainedBulletinBoard": {
+                        "value": true,
+                        "operator": "equal",
+                        "global": true,
+                        "default": false
+                    }
+                }
+            ]
+        },
+        "guilleExtra": {
+            "type": "text",
+            "character": "player",
+            "next": "choices1"
+        },
+
+        
+        "prepareChoices2": {
+            "type": "event",
+            "events": [
+                { 
+                    "prepareChoices2": { }
+                }
+            ],
+            "next": "choices2"
+        },
+        "choices2": {
+            "type": "choice",
+            "choices": [
+                { "next": "alison", "repeat": false },
+                { "next": "jose", "repeat": false },
+                { "next": "prepareChoices3" }
+            ]
+        },
+        "alison": {
+            "type": "text",
+            "character": "player",
+            "next": "checkEarring"
+        },
+        "checkEarring": {
+            "type": "condition",
+            "conditions": [
+                {
+                    "next": "notFound",
+                    "foundEarring": {
+                        "value": false,
+                        "operator": "equal",
+                        "global": true,
+                        "default": false
+                    }
+                },
+                {
+                    "next": "found",
+                    "foundEarring": {
+                        "value": true,
+                        "operator": "equal",
+                        "global": true,
+                        "default": false
+                    }
+                }
+            ]
+        },
+        "notFound": {
+            "type": "text",
+            "character": "player",
+            "next": "choices2"
+        },
+        "found": {
+            "type": "text",
+            "character": "player",
+            "next": "choices2"
+        },
+        "jose": {
+            "type": "text",
+            "character": "player",
+            "next": "choices2"
+        },
+
+        "prepareChoices3": {
+            "type": "event",
+            "events": [
+                { 
+                    "prepareChoices3": { }
+                }
+            ],
+            "next": "choices3"
+        },
+        "choices3": {
+            "type": "choice",
+            "choices": [
+                { "next": "maria", "repeat": false },
+                { "next": "alex", "repeat": false },
+                { "next": "prepareChoices4" }
+            ]
+        },
+        "maria": {
+            "type": "text",
+            "character": "player",
+            "next": "checkMariaResponse"
+        },
+        "checkMariaResponse": {
+            "type": "condition",
+            "conditions": [
+                {
+                    "next": "meanResponse",
+                    "mariaNiceResponse": {
+                        "value": false,
+                        "operator": "equal",
+                        "global": true,
+                        "default": false
+                    }
+                },
+                {
+                    "next": "niceResponse",
+                    "mariaNiceResponse": {
+                        "value": true,
+                        "operator": "equal",
+                        "global": true,
+                        "default": false
+                    }
+                }
+            ]
+        },
+        "meanResponse": {
+            "type": "text",
+            "character": "player",
+            "next": "choices3"
+        },
+        "niceResponse": {
+            "type": "text",
+            "character": "player",
+            "next": "choices3"
+        },
+        "alex": {
+            "type": "text",
+            "character": "player",
+            "next": "checkAlexResponse"
+        },
+        "checkAlexResponse": {
+            "type": "condition",
+            "conditions": [
+                {
+                    "next": "submit",
+                    "alexResponse": {
+                        "value": "submit",
+                        "operator": "equal",
+                        "global": true,
+                        "default": false
+                    }
+                },
+                {
+                    "next": "downplay",
+                    "alexResponse": {
+                        "value": "downplay",
+                        "operator": "equal",
+                        "global": true,
+                        "default": false
+                    }
+                },
+                {
+                    "next": "defy",
+                    "alexResponse": {
+                        "value": "defy",
+                        "operator": "equal",
+                        "global": true,
+                        "default": false
+                    }
+                }
+            ]
+        },
+        "submit": {
+            "type": "text",
+            "character": "player",
+            "next": "choices3"
+        },
+        "downplay": {
+            "type": "text",
+            "character": "player",
+            "next": "momDownplayReply"
+        },
+        "momDownplayReply": {
+            "type": "text",
+            "character": "mom",
+            "next": "choices3"
+        },
+        "defy": {
+            "type": "text",
+            "character": "player",
+            "next": "momDefyReply"
+        },
+        "momDefyReply": {
+            "type": "text",
+            "character": "mom",
+            "next": "choices3"
+        },
+
+        "prepareChoices4": {
+            "type": "event",
+            "events": [
+                { 
+                    "prepareChoices4": { }
+                }
+            ],
+            "next": "choices4"
+        },
+        "choices4": {
+            "type": "choice",
+            "choices": [
+                { "next": "ana", "repeat": false },
+                { "next": "school", "repeat": false },
+                { "next": "" }
+            ]
+        },
+        "ana": {
+            "type": "text",
+            "character": "player",
+            "next": "choices4"
+        },
+        "school": {
+            "type": "text",
+            "character": "player",
+            "next": "schoolChoices"
+        },
+        "schoolChoices": {
+            "type": "choice",
+            "choices": [
+                { "next": "choices4" },
+                { "next": "choices4" }
+            ]
+        }
+    }
+}

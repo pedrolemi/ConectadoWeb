@@ -3,7 +3,8 @@
         "start": "Your phone's alarm is ringing. It's time to wake up. Today you start in a new school, it is time to meet your new classmates.",
         "startClass": "Everyone sits down and the class starts.",
         "startClassLate": "You go and sit in your place while everyone is looking at you.",
-        "startBreak": "The bell rings, it is recess time. Your opportunity to make friends."
+        "startBreak": "The bell rings, it is recess time. Your opportunity to make friends.",
+        "endBreak": "As soon as you get in, the bell rings and the teacher appears. You did not notice but the morning is over, it's time to go home..."
     },
     "day2": {
 

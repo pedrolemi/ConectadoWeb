@@ -1,4 +1,11 @@
 {
+    "phone": {
+        "root": {
+            "type": "text",
+            "character": "player"
+        }
+    },
+    
     "bedroom": {
         "pc": {
             "root": {
@@ -36,6 +43,20 @@
         }
     },
 
+    "livingroom": {
+        "doorMorning": {
+            "root": {
+                "type": "text",
+                "character": "player"
+            }
+        },
+        "doorAfternoon": {
+            "root": {
+                "type": "text",
+                "character": "player"
+            }
+        }
+    },
 
     "playground": {
         "homeMorning": {
@@ -44,7 +65,19 @@
                 "character": "player"
             }
         },
-        "door": {
+        "homeBreak": {
+            "root": {
+                "type": "text",
+                "character": "player"
+            }
+        },
+        "doorMorning": {
+            "root": {
+                "type": "text",
+                "character": "player"
+            }
+        },
+        "doorAfternoon": {
             "root": {
                 "type": "text",
                 "character": "player"
@@ -82,6 +115,28 @@
             "root": {
                 "type": "text",
                 "character": "player"
+            }
+        },
+        "class": {
+            "root": {
+                "type": "text",
+                "character": "player",
+                "next": "choices"
+            },
+            "choices": {
+                "type": "choice",
+                "choices":[
+                    { "next": "endBreak" },
+                    { }
+                ]
+            },
+            "endBreak": {
+                "type": "event",
+                "events": [
+                    { 
+                        "endBreak": { }
+                    }
+                ]
             }
         }
 

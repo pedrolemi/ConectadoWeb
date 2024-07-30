@@ -1,4 +1,4 @@
-import ClassBackBase from "../classBackBase.js";
+import ClassBackBase from "../baseScenarios/classBackBase.js";
 import Character from "../../../gameObjects/character.js";
 
 export default class ClassBackBreakDay1 extends ClassBackBase {
@@ -8,6 +8,8 @@ export default class ClassBackBreakDay1 extends ClassBackBase {
 
     create(params) {
         super.create(params);
+
+        this.corridor = "CorridorBreakDay1";
 
         // Cambia la hora del movil
         this.phoneManager.setDayInfo("startBreak");
@@ -21,6 +23,8 @@ export default class ClassBackBreakDay1 extends ClassBackBase {
         let doorClosed = this.add.image(doorPos.x, doorPos.y, this.atlasName, 'classDoorClosed').setOrigin(0, 0).setScale(this.scale).setInteractive();
         doorClosed.setInteractive();
 
+
+        // Personajes
         let tr = {
             x: this.rightBound * 0.33,
             y: this.CANVAS_HEIGHT * 1.12,
@@ -54,10 +58,12 @@ export default class ClassBackBreakDay1 extends ClassBackBase {
         let alisonNode = super.readNodes(nodes, "day1\\classBackBreakDay1", "alison", true);
         this.doorNode = super.readNodes(nodes, "day1\\classBackBreakDay1", "door", true);
 
+
         // Eventos llamados cuando se termina de hablar con Alex
         this.dispatcher.addOnce("moveAlex", this, (obj) => {
             console.log(obj);
 
+            alex.char.disableInteractive();
             let anim = this.tweens.add({
                 targets: [alex.char],
                 alpha: { from: 1, to: 0 },
@@ -78,8 +84,9 @@ export default class ClassBackBreakDay1 extends ClassBackBase {
                     duration: 500,
                     repeat: 0,
                 });
-
+                alex.setScale(-0.08, 0.08)
                 anim.on('complete', () => {
+                    alex.char.setInteractive();
                     doorClosed.visible = false;
                     doorClosed.disableInteractive();
                 })
@@ -88,6 +95,7 @@ export default class ClassBackBreakDay1 extends ClassBackBase {
         this.dispatcher.addOnce("leaveAlex", this, (obj) => {
             console.log(obj);
 
+            alex.char.disableInteractive();
             let anim = this.tweens.add({
                 targets: [alex.char],
                 alpha: { from: 1, to: 0 },
@@ -100,11 +108,13 @@ export default class ClassBackBreakDay1 extends ClassBackBase {
             })
         });
 
-
+        // Evento llamado cuando se termina de hablar con Alison
         this.dispatcher.addOnce("setTalkedAlison", this, (obj) => {
             console.log(obj);
             this.doorNode = null;
         });
+
+
 
         // Personajes de fondo
         tr = {

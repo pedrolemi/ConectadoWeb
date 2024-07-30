@@ -44,6 +44,19 @@
         },
 
         "submit": {
+            "type": "event",
+            "events": [
+                { 
+                    "setSubmit": { 
+                        "variable": "alexResponse", 
+                        "value": "submit", 
+                        "global": true
+                    }
+                }
+            ],
+            "next": "submitReply"
+        },
+        "submitReply": {
             "type": "text",
             "character": "Alex",
             "next": "giveSandwich"
@@ -60,12 +73,38 @@
         },
 
         "downplay": {
+            "type": "event",
+            "events": [
+                { 
+                    "setSubmit": { 
+                        "variable": "alexResponse", 
+                        "value": "downplay", 
+                        "global": true
+                    }
+                }
+            ],
+            "next": "downplayReply"
+        },
+        "downplayReply": {
             "type": "text",
             "character": "Alex",
             "next": "move"
         },
 
         "defy": {
+            "type": "event",
+            "events": [
+                { 
+                    "setSubmit": { 
+                        "variable": "alexResponse", 
+                        "value": "defy", 
+                        "global": true
+                    }
+                }
+            ],
+            "next": "defyReply"
+        },
+        "defyReply": {
             "type": "text",
             "character": "Alex",
             "next": "push"

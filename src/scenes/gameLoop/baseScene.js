@@ -359,6 +359,9 @@ export default class BaseScene extends Phaser.Scene {
                     let nextNode = this.readAllNodes(fileObj[id].choices[i].next, file, namespace, objectName, getObjs, nodesMap);
                     node.next.push(nextNode.fullId);
                 }
+                else { 
+                    node.next.push({});
+                }
             }
         }
         // Si el nodo es de tipo evento

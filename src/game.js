@@ -8,7 +8,7 @@ import UserInfoMenu from './scenes/userInfoMenu.js';
 // Flujo de juego
 import TextOnlyScene from './scenes/textOnlyScene.js';
 import AlarmScene from './scenes/gameLoop/alarmScene.js';
-import BathroomMorning from './scenes/gameLoop/bathroomMorning.js';
+import BathroomBase from './scenes/gameLoop/baseScenarios/bathroomBase.js';
 import OppositeBathroom from './scenes/gameLoop/oppositeBathroom.js';
 
 // Dia 1
@@ -20,6 +20,12 @@ import CorridorMorningDay1 from './scenes/gameLoop/day1/corridorMorningDay1.js';
 import ClassFrontMorningDay1 from './scenes/gameLoop/day1/classFrontMorningDay1.js';
 import ClassBackMorningDay1 from './scenes/gameLoop/day1/classBackMorningDay1.js';
 import ClassBackBreakDay1 from './scenes/gameLoop/day1/classBackBreakDay1.js';
+import CorridorBreakDay1 from './scenes/gameLoop/day1/corridorBreakDay1.js'
+import StairsBreakDay1 from './scenes/gameLoop/day1/stairsBreakDay1.js';
+import PlaygroundBreakDay1 from './scenes/gameLoop/day1/playgroundBreakDay1.js';
+import PlaygroundAfternoonDay1 from './scenes/gameLoop/day1/playgroundAfternoonDay1.js';
+import LivingroomAfternoonDay1 from './scenes/gameLoop/day1/livingroomAfternoonDay1.js';
+
 import NightmareDay1 from './scenes/gameLoop/day1/nightmareDay1.js'
 
 // UI
@@ -40,8 +46,9 @@ const config = {
     // Nota: el orden de las escenas es relevante, y las que se encuentren antes en el array se renderizaran por debajo de las siguientes
     scene: [
         BootScene, LanguageMenu, TitleMenu, UserInfoMenu,
-        AlarmScene, BathroomMorning, OppositeBathroom, TextOnlyScene,
-        BedroomMorningDay1, LivingroomMorningDay1, PlaygroundMorningDay1, StairsMorningDay1, CorridorMorningDay1, ClassFrontMorningDay1, ClassBackMorningDay1, ClassBackBreakDay1,
+        AlarmScene, BathroomBase, OppositeBathroom, TextOnlyScene,
+        BedroomMorningDay1, LivingroomMorningDay1, PlaygroundMorningDay1, StairsMorningDay1, CorridorMorningDay1, ClassFrontMorningDay1, ClassBackMorningDay1, ClassBackBreakDay1, CorridorBreakDay1, StairsBreakDay1, PlaygroundBreakDay1, PlaygroundAfternoonDay1, LivingroomAfternoonDay1,
+
         NightmareDay1,
 
         Test,

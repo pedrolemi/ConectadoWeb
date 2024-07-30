@@ -144,9 +144,13 @@ export default class ChatScreen extends BaseScreen {
                 // Si se ha hecho la animacion, al terminar la animacion hace que
                 // el dialogManager cree las opciones para responder y las active
                 if (fadeColor) {
-                    let hasRun = false;
                     fadeColor.on('complete', () => {
-                        this.scene.dialogManager.setNode(this.currNode);
+                        if (this.currNode.type === "chatMessage") {
+                            this.processNode();
+                        }
+                        else {
+                            this.scene.dialogManager.setNode(this.currNode);
+                        }
                     });
 
                 }
@@ -244,7 +248,38 @@ export default class ChatScreen extends BaseScreen {
      * @param {DialogNode} node - nodo de dialogo que se va a reproducir
      */
     setNode(node) {
-        this.currNode = node;
+        // Si el nodo a poner es valido, cambia el nodo por el indicado
+        if (node) {
+            this.currNode = node;
+
+            if (this.currNode.type === "chatMessage") {
+                this.processNode();
+            }
+        }
+    }
+
+    // Procesa el nodo de dialogo
+    processNode() {
+        if (this.currNode) {
+            // Si el nodo es de tipo mensaje, con el retardo indicado, anade
+            //  el mensaje al chat, pasa al siguiente nodo, y lo procesa.
+            if (this.currNode.type === "chatMessage") {
+                setTimeout(() => {
+                    this.addMessage(this.currNode.text, this.currNode.character, this.currNode.name);
+                    this.currNode = this.currNode.next[0];
+                    this.processNode();
+                }, this.currNode.replyDelay);
+                
+            }
+            // Si el nodo es de cualquier otro tipo excepto de eleccion, lo procesa el dialogManager
+            else if (this.currNode.type !== "choice") {
+                this.scene.dialogManager.setNode(this.currNode);
+            }
+        }
+        // Si el nodo no es valido, tambien lo establece en el dialogManager
+        else {
+            this.scene.dialogManager.setNode(this.currNode);
+        }
     }
 
     /**

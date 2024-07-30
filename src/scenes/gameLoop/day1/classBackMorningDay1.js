@@ -1,4 +1,4 @@
-import ClassBackBase from "../classBackBase.js";
+import ClassBackBase from "../baseScenarios/classBackBase.js";
 import Character from "../../../gameObjects/character.js";
 
 export default class ClassBackMorningDay1 extends ClassBackBase {
@@ -32,6 +32,7 @@ export default class ClassBackMorningDay1 extends ClassBackBase {
         this.portraits.set("teacher", teacherPortrait);
 
 
+        // Personajes de fondo
         tr = {
             x: this.rightBound * 0.45,
             y: this.CANVAS_HEIGHT * 0.65,
@@ -107,6 +108,9 @@ export default class ClassBackMorningDay1 extends ClassBackBase {
 
 
 
+        // Se bloquea la interaccion con el icono del telefono para que no se pueda sacar durante esta escena
+        this.phoneManager.icon.disableInteractive();
+
         // Al iniciar la escena, se pone el dialogo directamente con un poco de retardo
         let nodes = this.cache.json.get('classBackMorningDay1');
         setTimeout(() => {
@@ -153,8 +157,7 @@ export default class ClassBackMorningDay1 extends ClassBackBase {
             // Cuando termina la animacion,
             walkingIn.on('complete', () => {
                 // Se oculta la espina de Alex de perfil
-                alex.charContainer.visible = false;
-                alex.portrait.visible = false;
+                alex.setActive(false);
 
                 // Alex de frente
                 tr = {
@@ -180,7 +183,7 @@ export default class ClassBackMorningDay1 extends ClassBackBase {
         });
 
 
-        // Evento llamado cuando el profesor termina su primer dialogo
+        // Evento llamado cuando el profesor termina su segundo dialogo
         this.dispatcher.addOnce("startBreak", this, (obj) => {
             let sceneName = 'TextOnlyScene';
 
@@ -197,6 +200,8 @@ export default class ClassBackMorningDay1 extends ClassBackBase {
             
             // Se cambia a la escena de transicion
             this.gameManager.changeScene(sceneName, params);
+
+            this.phoneManager.icon.setInteractive();
         });
     }
 }

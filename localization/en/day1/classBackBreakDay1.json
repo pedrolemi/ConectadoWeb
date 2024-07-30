@@ -27,7 +27,7 @@
             }
         ],
 
-        "submit": [
+        "submitReply": [
             {
                 "text": "That's right, obedient."
             },
@@ -42,7 +42,7 @@
             "text": "C'mon, get out of my sight."
         },
 
-        "downplay": [
+        "downplayReply": [
             {
                 "text": "That's it, it's just a spot but it's my spot."
             },
@@ -60,7 +60,7 @@
             }
         ],
 
-        "defy": {
+        "defyReply": {
             "text": "You are a smartass, aren't you?"
         },
         "push": {

@@ -1,5 +1,5 @@
 
-import BaseScene from './baseScene.js';
+import BaseScene from '../baseScene.js';
 
 export default class LivingroomBase extends BaseScene {
     /**
@@ -17,8 +17,7 @@ export default class LivingroomBase extends BaseScene {
         this.bedroom = "";
         this.playground = "";
 
-        this.nextHour = "";
-
+        
         // Pone la imagen de fondo con las dimensiones del canvas
         let bg = this.add.image(0, 0, 'livingroomBg').setOrigin(0, 0);
         this.scale = this.CANVAS_HEIGHT / bg.height;

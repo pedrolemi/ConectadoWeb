@@ -57,6 +57,13 @@
                         "value": true, 
                         "global": false
                     }
+                },
+                { 
+                    "explainBulletinBoard": { 
+                        "variable": "explainedBulletinBoard", 
+                        "value": true, 
+                        "global": true
+                    }
                 }
             ]
         },

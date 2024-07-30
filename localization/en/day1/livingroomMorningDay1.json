@@ -39,11 +39,6 @@
                 "text": "It's in your room, pick it up and leave now."
             }
         ]
-    },
+    }
     
-    "door": {
-            "noBag": {
-                "text": "I forgot the backpack. I better go to my room and take it before leaving."
-            }
-        }
 }

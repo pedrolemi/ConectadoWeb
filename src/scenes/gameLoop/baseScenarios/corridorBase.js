@@ -1,5 +1,5 @@
 
-import BaseScene from './baseScene.js';
+import BaseScene from '../baseScene.js';
 
 export default class CorridorBase extends BaseScene {
     /**
@@ -15,11 +15,22 @@ export default class CorridorBase extends BaseScene {
         super.create(params);
 
         this.stairs = "";
-        this.boysBathroom = "";
-        this.girlsBathroom = "";
         this.class = "";
 
-        this.nextHour = "";
+        // Establece la escena de bano y el nodo por defecto del bano opuesto segun el genero del jugador
+        let nodes = this.cache.json.get('everydayDialog');
+        if (this.gameManager.getUserInfo().gender === "male") {
+            this.boysBathroom = "BathroomBase";
+            this.girlsBathroom = "OppositeBathroom";
+            this.girlsBathroomNode = super.readNodes(nodes, "everydayDialog", "corridor.bathroom", true);
+        }
+        else {
+            this.girlsBathroom = "BathroomBase";
+            this.boysBathroom = "OppositeBathroom";
+            this.boysBathroomNode = super.readNodes(nodes, "everydayDialog", "corridor.bathroom", true);
+        }
+        
+
 
         // Pone la imagen de fondo con las dimensiones del canvas
         let bg = this.add.image(0, 0, 'corridorBg').setOrigin(0, 0);
@@ -31,20 +42,16 @@ export default class CorridorBase extends BaseScene {
 
         // Puerta a las escaleras
         this.stairsNode = null;
-        let stairsDoor = this.add.rectangle(844 * this.scale, 687 * this.scale, 286 * this.scale, 290 * this.scale, 0xfff, 0).setOrigin(0, 0);
-        stairsDoor.setInteractive({ useHandCursor: true });
+        this.stairsDoor = this.add.rectangle(844 * this.scale, 687 * this.scale, 286 * this.scale, 290 * this.scale, 0xfff, 0).setOrigin(0, 0);
+        this.stairsDoor.setInteractive({ useHandCursor: true });
         // Al hacer click, si hay algun dialogo que mostrar (para indicar que no se puede salir), se
         // mostrara. En caso contrario, se pasara a la escena de las escaleras sin eliminar esta escena
-        stairsDoor.on('pointerdown', () => {
+        this.stairsDoor.on('pointerdown', () => {
             if (this.stairsNode) {
                 this.dialogManager.setNode(this.stairsNode);
             }
             else {
                 this.gameManager.changeScene(this.stairs, {}, true);
-
-                // Al ir a las escaleras, se cambiara la hora. Si la 
-                // siguiente hora es un string vacio, no tendra efecto
-                this.phoneManager.setDayInfo(this.nextHour);
             }
         });
 
@@ -53,7 +60,6 @@ export default class CorridorBase extends BaseScene {
             x: 1485 * this.scale,
             y: 596 * this.scale
         };
-        this.boysBathroomNode = null;
         let boysBathroomdoorClosed = this.add.image(doorPos.x, doorPos.y, this.atlasName, 'boysDoorClosed').setOrigin(0, 0).setScale(this.scale);
         let boysBathroomDoorOpened = this.add.image(doorPos.x, doorPos.y, this.atlasName, 'boysDoorOpened').setOrigin(0, 0).setScale(this.scale);
         // Al hacer click, si hay algun dialogo que mostrar (para indicar que no se puede entrar), se
@@ -76,7 +82,6 @@ export default class CorridorBase extends BaseScene {
             x: 1361 * this.scale,
             y: 636 * this.scale
         };
-        this.girlsBathroomNode = null;
         let girlsBathroomDoorClosed = this.add.image(doorPos.x, doorPos.y, this.atlasName, 'girlsDoorClosed').setOrigin(0, 0).setScale(this.scale);
         let girlsBathroomDoorOpened = this.add.image(doorPos.x, doorPos.y, this.atlasName, 'girlsDoorOpened').setOrigin(0, 0).setScale(this.scale);
         // Al hacer click, si hay algun dialogo que mostrar (para indicar que no se puede entrar), se
@@ -118,14 +123,7 @@ export default class CorridorBase extends BaseScene {
         }, false);
 
 
-        // Establece por defecto el nodo del bano contrario segun el genero del jugador
-        let nodes = this.cache.json.get('everydayDialog');
-        if (this.gameManager.getUserInfo().gender === "male") {
-            this.girlsBathroomNode = super.readNodes(nodes, "everydayDialog", "corridor.bathroom", true);
-        }
-        else {
-            this.boysBathroomNode = super.readNodes(nodes, "everydayDialog", "corridor.bathroom", true);
-        }
+        
 
     }
 }

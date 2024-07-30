@@ -1,0 +1,64 @@
+{
+    "earring": {
+        "root": {
+            "type": "text",
+            "character": "player",
+            "next": "pickEarring"
+        },
+        "pickEarring": {
+            "type": "event",
+            "events": [
+                { 
+                    "pickEarring": { 
+                        "variable": "foundEarring", 
+                        "value": true, 
+                        "global": true
+                    }
+                }
+            ]
+        }
+    },
+
+    "ana": {
+        "root": {
+            "type": "condition",
+            "conditions": [
+                {
+                    "next": "earringNotFound",
+                    "foundEarring": {
+                        "value": false,
+                        "operator": "equal",
+                        "global": true,
+                        "default": false
+                    }
+                },
+                {
+                    "next": "earringFound",
+                    "foundEarring": {
+                        "value": true,
+                        "operator": "equal",
+                        "global": true,
+                        "default": false
+                    }
+                }
+            ]
+        },
+
+        "earringNotFound": {
+            "type": "text",
+            "character": "Ana"
+        },
+        "earringFound": {
+            "type": "text",
+            "character": "Ana"
+        }
+    },
+
+    "guille": {
+        "root": {
+            "type": "text",
+            "character": "Guille"
+        }
+
+    }
+}

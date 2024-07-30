@@ -41,12 +41,7 @@
                 "text": "Está en tu cuarto, cógela y vete ya."
             }
         ]
-    },
-    
-    "door": {
-        "noBag": {
-            "text": "Me dejo la mochila. Será mejor que pase por mi habitación a recogerla antes de irme."
-        }
     }
+    
 
 }

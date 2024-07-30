@@ -1,4 +1,10 @@
 {
+    "phone": {
+        "root": {
+            "text": "No tengo nada que contestar"
+        }
+    },
+
     "bedroom": {
         "pc": {
             "root": [
@@ -26,18 +32,45 @@
         }
     },
 
+    "livingroom": {
+        "doorMorning": {
+            "root": {
+                "text": "Me dejo la mochila. Será mejor que pase por mi habitación a recogerla antes de irme."
+            }
+        },
+        "doorAfternoon": {
+            "root": {
+                "text": "No tengo nada que hacer en la calle."
+            }
+        }
+    },
+
     "playground": {
         "homeMorning": {
             "root": {
                 "text": "Acabo de llegar, no puedo irme aún."
             }
         },
-        "door": {
+        "homeBreak": {
+            "root": {
+                "text": "Es la hora del recreo, aún me quedan clases antes de poder irme."
+            }
+        },
+        "doorMorning": {
             "root": {
                 "text": "Parece que he llegado pronto y aún no se puede pasar. Será mejor que haga algo de tiempo."
             }
+        },
+        "doorAfternoon": {
+            "root": [
+                {
+                    "text": "Ya no tengo más clases por hoy y no queda nadie."
+                },
+                {
+                    "text": "Será mejor que me vaya a casa."
+                }
+            ]
         }
-
     },
 
     "stairs": {
@@ -68,6 +101,19 @@
                 "text_male": "No puedo entrar ahí, es el baño de chicas.",
                 "text_female": "No puedo entrar ahí, es el baño de chicos."
             }
+        },
+        "class": {
+            "root": {
+                "text": "Si entro y aparece el profesor ya no podré salir."
+            },
+            "choices": [
+                {
+                    "text": "(Entrar de todas formas)."
+                },
+                {
+                    "text": "Mejor, voy a dar otra vuelta por el edificio."
+                }
+            ]
         }
 
     }

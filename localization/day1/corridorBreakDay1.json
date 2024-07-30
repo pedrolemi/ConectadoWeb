@@ -1,0 +1,231 @@
+{
+    "maria": {
+        "root": {
+            "type": "condition",
+            "conditions": [
+                {
+                    "next": "notTalked",
+                    "talked": {
+                        "value": false,
+                        "operator": "equal",
+                        "global": false,
+                        "default": false
+                    }
+                },
+                {
+                    "next": "talked",
+                    "talked": {
+                        "value": true,
+                        "operator": "equal",
+                        "global": false,
+                        "default": false
+                    }
+                }
+            ]
+        },
+
+        "notTalked": {
+            "type": "text",
+            "character": "Maria",
+            "next": "choices1"
+        },
+        "choices1": {
+            "type": "choice",
+            "choices":[
+                { "next": "setTalkedMean" },
+                { "next": "ask" }
+            ]
+        },
+        "ask": {
+            "type": "text",
+            "character": "Maria",
+            "next": "choices2"
+        },
+        "choices2": {
+            "type": "choice",
+            "choices":[
+                { "next": "setTalkedMean" },
+                { "next": "keepAsking" } 
+            ]
+        },
+        "keepAsking": {
+            "type": "text",
+            "character": "Maria",
+            "next": "choices3"
+        },
+        "choices3": {
+            "type": "choice",
+            "choices":[
+                { "next": "stay" },
+                { "next": "setTalkedMean" } 
+            ]
+        },
+        "stay": {
+            "type": "text",
+            "character": "player",
+            "next": "stayAnswer"
+        },
+        "stayAnswer": {
+            "type": "text",
+            "character": "Maria",
+            "next": "setTalkedNice"
+        },
+        
+        "setTalkedMean": {
+            "type": "event",
+            "events": [
+                { 
+                    "setTalked": { 
+                        "variable": "talked", 
+                        "value": true, 
+                        "global": false
+                    }
+                },
+                {
+                    "setNiceResponse": { 
+                        "variable": "mariaNiceResponse", 
+                        "value": false, 
+                        "global": true
+                    }
+                }
+            ]
+        },
+        "setTalkedNice": {
+            "type": "event",
+            "events": [
+                { 
+                    "setTalked": { 
+                        "variable": "talked", 
+                        "value": true, 
+                        "global": false
+                    }
+                },
+                {
+                    "setNiceResponse": { 
+                        "variable": "mariaNiceResponse", 
+                        "value": true, 
+                        "global": true
+                    }
+                }
+            ]
+        },
+
+
+        "talked": {
+            "type": "condition",
+            "conditions": [
+                {
+                    "next": "talkedMean",
+                    "mariaNiceResponse": {
+                        "value": false,
+                        "operator": "equal",
+                        "global": false,
+                        "default": false
+                    }
+                },
+                {
+                    "next": "talkedNice",
+                    "mariaNiceResponse": {
+                        "value": true,
+                        "operator": "equal",
+                        "global": false,
+                        "default": false
+                    }
+                }
+            ]
+        },
+        "talkedMean": {
+            "type": "text",
+            "character": "Maria",
+            "next": "talkedMeanThoughts"
+        },
+        "talkedMeanThoughts": {
+            "type": "text",
+            "character": "player"
+        },
+        "talkedNice": {
+            "type": "text",
+            "character": "Maria"
+        }
+
+    },
+
+    "phone": {
+        "root": {
+            "type": "chatMessage",
+            "character": "Alison",
+            "chat": "chat1",
+            "replyDelay": 2000,
+            "next": "choices"
+        },
+        "choices": {
+            "type": "choice",
+            "choices":[
+                { "next": "reply" },
+                { "next": "" }
+            ]
+        },
+        "reply": {
+            "type": "chatMessage",
+            "character": "player",
+            "chat": "chat1",
+            "replyDelay": 0,
+            "next": "endChat"
+        },
+        "endChat": {
+            "type": "event",
+            "events": [
+                { 
+                    "endChat": { }
+                }
+            ]
+        }
+    },
+
+
+    "alison": {
+        "root": {
+            "type": "condition",
+            "conditions": [
+                {
+                    "next": "notFound",
+                    "foundEarring": {
+                        "value": false,
+                        "operator": "equal",
+                        "global": true,
+                        "default": false
+                    }
+                },
+                {
+                    "next": "found",
+                    "foundEarring": {
+                        "value": true,
+                        "operator": "equal",
+                        "global": true,
+                        "default": false
+                    }
+                }
+            ]
+        },
+
+        "notFound": {
+            "type": "text",
+            "character": "Alison"
+        },
+
+        "found": {
+            "type": "text",
+            "character": "Alison",
+            "next": "alisonEnter"
+        },
+        "alisonEnter": {
+            "type": "event",
+            "events": [
+                { 
+                    "alisonEnter": { }
+                }
+            ]
+        }
+    }
+
+}

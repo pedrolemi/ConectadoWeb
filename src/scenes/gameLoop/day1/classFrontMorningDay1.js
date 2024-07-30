@@ -1,4 +1,4 @@
-import ClassFrontBase from "../classFrontBase.js";
+import ClassFrontBase from "../baseScenarios/classFrontBase.js";
 import Character from "../../../gameObjects/character.js";
 
 export default class ClassFrontMorningDay1 extends ClassFrontBase {
@@ -21,6 +21,7 @@ export default class ClassFrontMorningDay1 extends ClassFrontBase {
             };
             let ana = new Character(this, "Ana", tr, this.portraitTr, () => {
                 this.dialogManager.setNode(anaNode);
+                this.gameManager.setValue("metAna", true);
             });
             ana.setDepth(this.row4Tables.depth);
             ana.setAnimation("IdleBase", true);

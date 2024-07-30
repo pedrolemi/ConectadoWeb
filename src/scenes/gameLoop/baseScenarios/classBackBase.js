@@ -1,5 +1,5 @@
 
-import BaseScene from './baseScene.js';
+import BaseScene from '../baseScene.js';
 
 export default class ClassBackBase extends BaseScene {
     /**
@@ -15,8 +15,6 @@ export default class ClassBackBase extends BaseScene {
         super.create(params);
 
         this.corridor = "";
-        
-        this.nextHour = "";
 
         // Pone la imagen de fondo con las dimensiones del canvas
         let bg = this.add.image(0, 0, 'classBackBg').setOrigin(0, 0);

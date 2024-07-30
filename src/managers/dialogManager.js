@@ -15,7 +15,7 @@ export default class DialogManager {
         this.options = [];                  // Cajas de opcion multiple
         this.currNode = null;               // Nodo actual
         this.portraits = new Map();         // Mapa para guardar los retratos en esta escena
-        this.allPortraits = new Set();         
+        this.allPortraits = new Set();
 
         this.gameManager = GameManager.getInstance();
         this.dispatcher = this.gameManager.dispatcher;
@@ -256,11 +256,8 @@ export default class DialogManager {
                 this.processNode();
             }
             else if (this.currNode.type === "chatMessage") {
-                setTimeout(() => {
-                    this.scene.phoneManager.phone.addMessage(this.currNode.chat, this.currNode.text, this.currNode.character, this.currNode.name);
-                    this.currNode = this.currNode.next[0];
-                    this.processNode();
-                }, this.currNode.replyDelay);
+                this.talking = false;
+                this.scene.phoneManager.phone.setChatNode(this.currNode.chat, this.currNode);
             }
             else if (this.currNode.type === "socialNetMessage") {
                 this.gameManager.computerScene.socialNetScreen.addCommentToPost(this.currNode.user, this.currNode.postName,
@@ -318,23 +315,16 @@ export default class DialogManager {
     */
     createOptions(opts) {
         // Limpia las opciones que hubiera anteriormente
-        this.options.forEach((option) => { option.activate(false); });
+        for (let i = 0; i < this.options.length; i++) {
+            this.options[i].activate(false);
+        }
         this.options = [];
 
         // Crea las opciones y las guarda en el array
         for (let i = 0; i < opts.length; i++) {
-            let text = "";
-
-            // Si se ha pasado un arary de opciones (con otros parametros ademas de text)
-            if (opts[i].text) {
-                text = opts[i].text;
-            }
-            // Si se ha pasado un array de strings
-            else {
-                text = opts[i];
-            }
-            this.options.push(new OptionBox(this.scene, this, i, opts.length, text));
+            this.options.push(new OptionBox(this.scene, this, i, opts.length, opts[i].text));
         }
+
     }
 
     /**
@@ -347,7 +337,9 @@ export default class DialogManager {
         // Oculta primero la caja de texto por si acaso. Si ya
         // esta desactivada, las opciones apareceran directamente
         this.textbox.activate(false, () => {
-            this.options.forEach((option) => { option.activate(active, onComplete, delay); });
+            for (let i = 0; i < this.options.length; i++) {
+                this.options[i].activate(active, onComplete, delay);
+            }
         });
 
     }

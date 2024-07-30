@@ -3,7 +3,8 @@
         "start": "La alarma de tu teléfono suena. Es hora de levantarse. Hoy empiezas en un nuevo colegio, es hora de conocer a tus compañeros.",
         "startClass": "Os sentáis todos y empieza la clase.",
         "startClassLate": "Te diriges entre todas las miradas a tu sitio y te sientas.",
-        "startBreak": "Suena la campana, es la hora del recreo. Tu oportunidad para hacer amigos."
+        "startBreak": "Suena la campana, es la hora del recreo. Tu oportunidad para hacer amigos.",
+        "endBreak": "Al entrar suena la campana y aparece el profesor. La mañana termina sin darte cuenta, es hora de volver a casa..."
     },
     "day2": {
 

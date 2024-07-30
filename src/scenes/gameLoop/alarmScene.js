@@ -18,9 +18,7 @@ export default class AlarmScene extends BaseScene {
     // Metodo que se llama al terminar de crear la escena. 
     onCreate(params) {
         super.onCreate(params);
-        
-        this.phoneManager.topLid.visible = false;
-        this.phoneManager.botLid.visible = false;
+
         this.phoneManager.openEyesAnimation();
         this.phoneManager.phone.toAlarmScreen();
     }
@@ -28,12 +26,13 @@ export default class AlarmScene extends BaseScene {
     create(params) {
         super.create();
 
-        this.phoneManager.topLid.visible = false;
-        this.phoneManager.botLid.visible = false;
+        this.phoneManager.topLid.visible = true;
+        this.phoneManager.botLid.visible = true;
+        this.phoneManager.icon.visible = false;
         
         // Actualiza el dia en el gameManager y cambia el dia y la hora del telefono
         this.gameManager.day++;
-        this.phoneManager.setDayInfo(alarmHour);
+        this.phoneManager.setDayInfo("alarmHour");
 
         // Pone la imagen de fondo con las dimensiones del canvas
         let bg = this.add.image(0, 0, 'bedroomCeiling').setOrigin(0.5, 0);

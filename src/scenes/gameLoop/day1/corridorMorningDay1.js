@@ -1,4 +1,4 @@
-import CorridorBase from "../corridorBase.js";
+import CorridorBase from "../baseScenarios/corridorBase.js";
 import Character from "../../../gameObjects/character.js";
 
 export default class CorridorMorningDay1 extends CorridorBase {
@@ -15,10 +15,10 @@ export default class CorridorMorningDay1 extends CorridorBase {
         this.class = "ClassFrontMorningDay1";
 
         if (this.gameManager.getUserInfo().gender === "male") {
-            this.boysBathroom = "BathroomMorning";
+            this.boysBathroom = "BathroomBase";
         }
         else {
-            this.girlsBathroom = "BathroomMorning";
+            this.girlsBathroom = "BathroomBase";
         }
 
         // Si no se llega tarde, se colocan personajes en el fondo
@@ -53,6 +53,7 @@ export default class CorridorMorningDay1 extends CorridorBase {
             };
             let guille = new Character(this, "Guille", tr, this.portraitTr, () => {
                 this.dialogManager.setNode(guilleNode);
+                this.gameManager.setValue("metGuille", true);
             });
             guille.setScale(-tr.scale, tr.scale);
             guille.setAnimation("IdleBase", true);

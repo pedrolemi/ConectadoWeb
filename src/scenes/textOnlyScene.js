@@ -55,8 +55,8 @@ export default class TextOnlyScene extends BaseScene {
         // Una vez terminado el fade out, se vuelve a hacer visible el UIManager 
         // y se llama a la funcion que se haya pasado por los parametros
         this.cameras.main.once(Phaser.Cameras.Scene2D.Events.FADE_OUT_COMPLETE, (cam, effect) => {
-            this.scene.setVisible(true, this.UIManager);
             setTimeout(() => {
+                this.scene.setVisible(true, this.UIManager);
                 onComplete();
             }, onCompleteDelay);
         });

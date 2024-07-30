@@ -571,7 +571,7 @@ export default class PhoneManager {
 
         // Cuando termina, cambia la hora del telefono y vuelve a reproducir la animacion de abrir los ojos
         anim.on('complete', () => {
-            this.setDayInfo(clock.alarmLateHour);
+            this.setDayInfo("alarmLateHour");
 
             setTimeout(() => {
                 this.openEyesAnimation();

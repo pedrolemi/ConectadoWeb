@@ -1,4 +1,10 @@
 {
+    "phone": {
+        "root": {
+            "text": "I have nothing to answer"
+        }
+    },
+    
     "bedroom": {
         "pc": {
             "root": [
@@ -26,16 +32,44 @@
         }
     },
 
+    "livingroom": {    
+        "doorMorning": {
+            "root": {
+                "text": "I forgot the backpack. I better go to my room and take it before leaving."
+            }
+        },
+        "doorAfternoon": {
+            "root": {
+                "text": "I have nothing to do in the street."
+            }
+        }
+    },
+    
     "playground": {
         "homeMorning": {
             "root": {
                 "text": "I've just arrived, I cannot leave yet."
             }
         },
-        "door": {
+        "homeBreak": {
+            "root": {
+                "text": "It is break time, there are still some classes before I can go home."
+            }
+        },
+        "doorMorning": {
             "root": {
                 "text": "Looks like I've arrived soon and entrance is not allowed. I'll hang around."
             }
+        },
+        "doorAfternoon": {
+            "root": [
+                {
+                    "text": "There are no more classes today and there is nobody left."
+                },
+                {
+                    "text": "I'll better go home."
+                }
+            ]
         }
     },
 
@@ -64,6 +98,19 @@
                 "text_male": "I cannot go there, It's the girls' restroom.",
                 "text_female": "I cannot go there, It's the boys' restroom."
             }
+        },
+        "class": {
+            "root": {
+                "text": "If I get in and the teacher shows up, I won't be able to come out."
+            },
+            "choices": [
+                {
+                    "text": "(Get in anyway)."
+                },
+                {
+                    "text": "I'll go for another walk instead."
+                }
+            ]
         }
 
     }

@@ -201,15 +201,12 @@ export default class Phone extends Phaser.GameObjects.Container {
     }
 
     /**
-     * Anade el mensaje al chat indicado
+     * Procesa el nodo del chat indicado
      * @param {String} chat - id del chat en el que anadir el mensaje 
-     * @param {String} text - texto del mensaje
-     * @param {String} character - id del personaje que envia el mensaje
-     * @param {String} name - nombre del personaje que envia el mensaje
      */
-    addMessage(chat, text, character, name) {
+    processChatNode(chat) {
         if (this.chats.has(chat)) {
-            this.chats.get(chat).addMessage(text, character, name);
+            this.chats.get(chat).processNode();
         }
     }
 }

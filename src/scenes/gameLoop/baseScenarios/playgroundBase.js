@@ -1,5 +1,5 @@
 
-import BaseScene from './baseScene.js';
+import BaseScene from '../baseScene.js';
 
 export default class PlaygroundBase extends BaseScene {
     /**
@@ -17,7 +17,6 @@ export default class PlaygroundBase extends BaseScene {
         this.home = "";
         this.stairs = "";
 
-        this.nextHour = "";
         
         // Pone la imagen de fondo con las dimensiones del canvas
         this.bgImg = 'playgroundClosed'
@@ -46,7 +45,7 @@ export default class PlaygroundBase extends BaseScene {
 
         // Puertas del edificio
         let nodes = this.cache.json.get('everydayDialog');
-        this.doorNode = super.readNodes(nodes, "everydayDialog", "playground.door", true);
+        this.doorNode = null;
         let doors = this.add.rectangle(2640 * this.scale, 1060 * this.scale, 262, 186, 0xfff, 0).setOrigin(0, 0);
         doors.setInteractive({ useHandCursor: true });
         // Al hacer click sobre la zona de la puerta, si hay algun dialogo que mostrar, (para indicar que 
@@ -59,6 +58,21 @@ export default class PlaygroundBase extends BaseScene {
                 this.dialogManager.setNode(this.doorNode);
             }
         });
+
+
+        
+        // Cambia la hora del movil y se establece el dialogo de la puerta dependiendo de si se llega tarde o no 
+        if (!this.gameManager.getValue(this.gameManager.isLate)) {
+            this.phoneManager.setDayInfo("playgroundMorning");
+            this.doorNode = super.readNodes(nodes, "everydayDialog","playground.doorMorning", true);
+        }
+        else {
+            this.phoneManager.setDayInfo("playgroundMorningLate");
+
+            // Ademas, si se llega tarde, se dejan las puertas abiertas 
+            this.openDoors();
+            this.doorNode = null;
+        }
 
     }
 

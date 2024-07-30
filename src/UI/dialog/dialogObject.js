@@ -22,10 +22,9 @@ export default class DialogObject {
     * @param {Function} onComplete - funcion a la que llamar cuando acabe la animacion
     * @param {Number} delay - tiempo en ms que tarda en llamarse a onComplete
     */
-    activate(active, objects, onComplete, delay) {
+    activate(active, objects, onComplete = { }, delay = 0) {
         let fade;
-        if (!delay) delay = 0;
-
+        
         // Si se va a activar
         if (active) {
             // Fuerza las opacidades de todos los objetos a 0

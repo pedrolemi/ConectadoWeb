@@ -1,4 +1,4 @@
-import StairsBase from "../stairsBase.js";
+import StairsBase from "../baseScenarios/stairsBase.js";
 
 export default class StairsMorningDay1 extends StairsBase {
     constructor() {
@@ -13,5 +13,6 @@ export default class StairsMorningDay1 extends StairsBase {
 
         let nodes = this.cache.json.get('everydayDialog');
         this.playgroundNode = super.readNodes(nodes, "everydayDialog", "stairs.downstairs", true);
+
     }
 }

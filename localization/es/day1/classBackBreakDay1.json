@@ -31,7 +31,7 @@
             }
         ],
 
-        "submit": [
+        "submitReply": [
             {
                 "text": "Así me gusta, obediente."
             },
@@ -46,7 +46,7 @@
             "text": "Venga, fuera de mi vista."
         },
 
-        "downplay": [
+        "downplayReply": [
             {
                 "text": "Así es, es sólo un sitio, como todos los demás, pero es mi sitio."
             },
@@ -64,7 +64,7 @@
             }
         ],
 
-        "defy": {
+        "defyReply": {
             "text": "",
             "text_male": "¿Vas de listo?",
             "text_female": "¿Vas de lista?"

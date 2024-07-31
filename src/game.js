@@ -27,6 +27,8 @@ import PlaygroundAfternoonDay1 from './scenes/gameLoop/day1/playgroundAfternoonD
 import LivingroomAfternoonDay1 from './scenes/gameLoop/day1/livingroomAfternoonDay1.js';
 import BedroomAfternoonDay1 from './scenes/gameLoop/day1/bedroomAfternoonDay1.js';
 import NightmareDay1 from './scenes/gameLoop/day1/nightmareDay1.js'
+import NightmareDay3 from './scenes/gameLoop/day3/nightmareDay3.js';
+import NightmareDay4 from './scenes/gameLoop/day4/nightmareDay4.js';
 
 // UI
 import ComputerScene from './UI/computer/computerScene.js'
@@ -45,11 +47,23 @@ const config = {
     type: Phaser.AUTO,
     // Nota: el orden de las escenas es relevante, y las que se encuentren antes en el array se renderizaran por debajo de las siguientes
     scene: [
-        BootScene, LanguageMenu, TitleMenu, UserInfoMenu,
+        // Carga de assets
+        BootScene, 
+        // Menus
+        LanguageMenu, TitleMenu, UserInfoMenu,
+        // Escenas bases
         AlarmScene, BathroomBase, OppositeBathroom, TextOnlyScene,
+        // Escenas dia 1
         BedroomMorningDay1, LivingroomMorningDay1, PlaygroundMorningDay1, StairsMorningDay1, CorridorMorningDay1, ClassFrontMorningDay1, ClassBackMorningDay1, ClassBackBreakDay1, CorridorBreakDay1, StairsBreakDay1, PlaygroundBreakDay1, PlaygroundAfternoonDay1, LivingroomAfternoonDay1, BedroomAfternoonDay1, NightmareDay1,
+        // Escenas dia 2
 
+        // Escenas dia 3
+        NightmareDay3,
+        // Escenas dia 4
+        NightmareDay4,
+        // Pruebas
         Test,
+        // UI
         ComputerScene, UIManager],
     autoFocus: true,
     disableContextMenu: true,        // Desactivar que aparezca el menu de inspeccionar al hacer click derecho

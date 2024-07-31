@@ -2,12 +2,12 @@
 Fuentes que se usan en Phaser
 */
 @font-face {
-    font-family: "AUdimat-Regular";
+    font-family: "AUdimat-regular";
     src: url('assets/fonts/AUdimat-Regular.otf');
 }
 
 @font-face {
-    font-family: "Gidolinya-Regular";
+    font-family: "gidolinya-regular";
     src: url('assets/fonts/Gidolinya-Regular.otf');
 }
 

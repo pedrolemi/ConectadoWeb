@@ -82,7 +82,7 @@ export default class TitleMenu extends Phaser.Scene {
         // Se obtiene la version del juego (especificada en los parametros de configuracion de game)
         let gameVersion = this.sys.game.config.gameVersion;
         let gameVersionTextStyle = { ...gameManager.textConfig };
-        gameVersionTextStyle.fontFamily = 'AUdimat-Regular';
+        gameVersionTextStyle.fontFamily = 'AUdimat-regular';
         gameVersionTextStyle.fontSize = '22px';
         gameVersionTextStyle.color = '#323232';
         this.add.text(CANVAS_WIDTH - 55, 3 * CANVAS_HEIGHT / 4 + 40, "V " + gameVersion, gameVersionTextStyle).setOrigin(1, 0.5);
@@ -96,6 +96,6 @@ export default class TitleMenu extends Phaser.Scene {
         // (Crear el ultimo para que las particulas aparezcan por delante)
         new Counter(this, 2 * CANVAS_WIDTH / 3 + 20, CANVAS_HEIGHT / 4 + 30 + offset, 0.4,
             gameManager.roundedSquare.fillName, gameManager.roundedSquare.edgeName,
-            gameManager.circleParticle.name, 'Gidolinya-Regular', 100, 3000, 1.8, 0xFF0808);
+            gameManager.circleParticle.name, 'gidolinya-regular', 100, 3000, 1.8, 0xFF0808);
     }
 }

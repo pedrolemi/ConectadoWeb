@@ -41,17 +41,17 @@
             "type": "choice",
             "choices": [
                 {
-                    "next": "characterDisappears"
+                    "next": "characterFadesOut"
                 },
                 {
-                    "next": "characterDisappears"
+                    "next": "characterFadesOut"
                 },
                 {
-                    "next": "characterDisappears"
+                    "next": "characterFadesOut"
                 }
             ]
         },
-        "characterDisappears": {
+        "characterFadesOut": {
             "type": "event",
             "events": [
                 {
@@ -72,17 +72,17 @@
             "type": "choice",
             "choices": [
                 {
-                    "next": "characterDisappears"
+                    "next": "characterFadesOut"
                 },
                 {
-                    "next": "characterDisappears"
+                    "next": "characterFadesOut"
                 },
                 {
-                    "next": "characterDisappears"
+                    "next": "characterFadesOut"
                 }
             ]
         },
-        "characterDisappears": {
+        "characterFadesOut": {
             "type": "event",
             "events": [
                 {
@@ -103,17 +103,17 @@
             "type": "choice",
             "choices": [
                 {
-                    "next": "characterDisappears"
+                    "next": "characterFadesOut"
                 },
                 {
-                    "next": "characterDisappears"
+                    "next": "characterFadesOut"
                 },
                 {
-                    "next": "characterDisappears"
+                    "next": "characterFadesOut"
                 }
             ]
         },
-        "characterDisappears": {
+        "characterFadesOut": {
             "type": "event",
             "events": [
                 {
@@ -134,17 +134,17 @@
             "type": "choice",
             "choices": [
                 {
-                    "next": "characterDisappears"
+                    "next": "characterFadesOut"
                 },
                 {
-                    "next": "characterDisappears"
+                    "next": "characterFadesOut"
                 },
                 {
-                    "next": "characterDisappears"
+                    "next": "characterFadesOut"
                 }
             ]
         },
-        "characterDisappears": {
+        "characterFadesOut": {
             "type": "event",
             "events": [
                 {
@@ -165,17 +165,17 @@
             "type": "choice",
             "choices": [
                 {
-                    "next": "characterDisappears"
+                    "next": "characterFadesOut"
                 },
                 {
-                    "next": "characterDisappears"
+                    "next": "characterFadesOut"
                 },
                 {
-                    "next": "characterDisappears"
+                    "next": "characterFadesOut"
                 }
             ]
         },
-        "characterDisappears": {
+        "characterFadesOut": {
             "type": "event",
             "events": [
                 {

@@ -6,7 +6,7 @@ export default class NightmareDay1 extends NightmareMinigame {
      * El minijuego consiste en pasar el cursor por todas las sillas y hacer que desaparezcan
      */
     constructor() {
-        super(1, false);
+        super(1, true);
     }
 
     create(params) {
@@ -72,9 +72,10 @@ export default class NightmareDay1 extends NightmareMinigame {
         let fadeOutDuration = 100;
 
         this.chairs.forEach((chair) => {
-            chair.setInteractive();
+            chair.setInteractive({ useHandCursor: true });
             // Desaparece la silla
             chair.once('pointerover', () => {
+                chair.removeInteractive();
                 let fadeOut = this.tweens.add({
                     targets: chair,
                     alpha: 0,

@@ -18,30 +18,31 @@ export default class NightmareMinigame extends NightmareBase {
     create(params) {
         super.create(params);
 
-        // Se crea la sombra y su retrato
-        this.shadow = this.createShadow();
+        this.portraitOffset = {
+            x: 0,
+            y: 63,
+            scale: 1.6
+        }
 
         // Se obtiene el nombre de la escena a la que transicionar
         this.changeToScene = 'BedroomMorningDay' + this.day;
 
         // Archivo con la estructura del dialogo (a partir del dia)
-        let file = this.cache.json.get('nightmareDay' + this.day);
+        this.file = this.cache.json.get('nightmareDay' + this.day);
         // Namespace con los textos localizados (a partir del dia)
-        let ns = 'day' + this.day + '\\nightmareDay' + this.day;
+        this.ns = 'day' + this.day + '\\nightmareDay' + this.day;
 
-        // Texto introductoria de la sombra
-        let introNode = this.readNodes(file, ns, 'shadow.introduction', true);
-        // Texto final de la sombra
-        this.outroNode = this.readNodes(file, ns, 'shadow.outro', true);
+        // Se crea la sombra, su retrato y los nodos con sus dialogos
+        this.shadow = this.createShadow();
 
         // Se inicia el dialogo introductorio de la sombra
-        this.dialogManager.setNode(introNode);
+        this.dialogManager.setNode(this.shadow.intro);
 
         // Se produce este evento despues de la introduccion
         let introEvent = 'startNightmare' + this.day;
         this.dispatcher.add(introEvent, this, () => {
             // Desparece la sombra
-            this.shadow.setVisible(false);
+            this.shadow.char.setVisible(false);
             // Se inicia el minijuego
             this.onMinigameStarts();
         })
@@ -56,34 +57,81 @@ export default class NightmareMinigame extends NightmareBase {
         });
     }
 
+    /**
+     * Lee y conecta los nodos a partir del nombre dado usando el namespace y el archivo de la pesadilla correspondiente
+     */
+    readNodes(objectName) {
+        return super.readNodes(this.file, this.ns, objectName, true);
+    }
+
+    /**
+     * Se encarga de crear el personaje, el retrato y los dialogos de la sombra
+     * @returns {Object} - personaje, retrato y dialogos de la sombra
+     */
     createShadow() {
         let blackColor = '#000000';
-        let charScale = 0.48;
+        let charName = 'shadow';
 
         // Por defecto esta colocado en la izquierda mirando hacia la derecha
         // Sombra
         let offset = 40;
-        let char = this.add.image(offset, offset, 'characters', 'Alex');
-        char.setOrigin(0).setScale(charScale);
-        char.setTint(blackColor);
-        char.setDepth(1);
 
-        // Retrato de la sombra
-        let shadowPortrait = this.add.image(this.portraitTr.x, this.portraitTr.y + 63, 'characters', 'Alex');
-        shadowPortrait.setOrigin(0.5, 1).setScale(this.portraitTr.scale * 1.6);
-        shadowPortrait.setTint(blackColor);
-        this.portraits.set("shadow", shadowPortrait);
+        let tr = {
+            x: offset,
+            y: offset,
+            scale: 0.48
+        }
+        let shadow = this.createCharFromImage(tr, 'Alex', null, charName);
+
+        shadow.char.setOrigin(0).setDepth(1);
+        //shadow.char.setVisible(false);
+
+        shadow.char.setTint(blackColor);
+        shadow.portrait.setTint(blackColor);
 
         // Se va a colocar en la derecha mirando hacia la izquierda
         if (this.left !== undefined && this.left === false) {
-            char.x = this.CANVAS_WIDTH - offset;
-            char.y = offset;
+            shadow.char.x = this.CANVAS_WIDTH - offset;
             // Se rota la imagen (tb afecta a la pos del origen)
-            char.flipX = true;
-            shadowPortrait.flipX = true;
+            shadow.char.flipX = true;
+            shadow.portrait.flipX = true;
         }
 
-        return char;
+        shadow.intro = this.readNodes(charName + '.introduction');
+        shadow.outro = this.readNodes(charName + '.outro');
+
+        return shadow;
+    }
+
+    /**
+     * 
+     * @param {Object} tr - posicion y escala del personaje 
+     * @param {String} sprite - id del personaje
+     * @param {Object} portraitOffset - desplazamiento de la posicion y la escala respecto a la por defecto
+     *                                  (opcional, sino se usa la por defecto)
+     * @param {String} portraitName - nombre con el guardar el retrato del personaje (opcional, sino se usa el id del personaje) 
+     * @returns {Object} - personaje y retrato
+     */
+    createCharFromImage(tr, charId, portraitOffset, portraitName) {
+        let char = this.add.image(tr.x, tr.y, 'characters', charId);
+        char.setScale(tr.scale);
+
+        // Si no se ha indicado ningun offset, se usa el por defecto
+        if (!portraitOffset) {
+            portraitOffset = this.portraitOffset;
+        }
+        let portrait = this.add.image(this.portraitTr.x + portraitOffset.x, this.portraitTr.y + portraitOffset.y, 'characters', charId);
+        // Se situa en este origen porque es el unico que tienen las animaciones esqueletales
+        portrait.setOrigin(0.5, 1);
+        portrait.setScale(this.portraitTr.scale * portraitOffset.scale);
+        let name = charId;
+        // Si se indica un nombre para el retrato, se usa ese
+        if (portraitName) {
+            name = portraitName;
+        }
+        this.portraits.set(name, portrait);
+
+        return { char: char, portrait: portrait }
     }
 
     /**
@@ -99,6 +147,6 @@ export default class NightmareMinigame extends NightmareBase {
      */
     onMinigameFinishes() {
         // Se inicia el dialogo con el texto final de la sombra
-        this.dialogManager.setNode(this.outroNode);
+        this.dialogManager.setNode(this.shadow.outro);
     }
 }

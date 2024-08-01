@@ -47,7 +47,7 @@
             "type": "event",
             "events": [
                 { 
-                    "setSubmit": { 
+                    "setResponse": { 
                         "variable": "alexResponse", 
                         "value": "submit", 
                         "global": true
@@ -76,10 +76,16 @@
             "type": "event",
             "events": [
                 { 
-                    "setSubmit": { 
+                    "setResponse": { 
                         "variable": "alexResponse", 
                         "value": "downplay", 
                         "global": true
+                    }
+                },
+                { 
+                    "changeFriendship": { 
+                        "character": "Alex", 
+                        "value": -10
                     }
                 }
             ],
@@ -95,10 +101,16 @@
             "type": "event",
             "events": [
                 { 
-                    "setSubmit": { 
+                    "setResponse": { 
                         "variable": "alexResponse", 
                         "value": "defy", 
                         "global": true
+                    }
+                },
+                { 
+                    "changeFriendship": { 
+                        "character": "Alex", 
+                        "value": -20
                     }
                 }
             ],

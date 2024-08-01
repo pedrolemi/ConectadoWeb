@@ -243,7 +243,7 @@ export default class DialogManager {
                             blackboard = evt.blackboard;
                         }
                         if (evt.variable && evt.value) {
-                            // console.log(this.gameManager.blackboard)
+                            // console.log(blackboard)
                             // console.log(evt.variable)
                             this.gameManager.setValue(evt.variable, evt.value, blackboard);
                         }
@@ -333,15 +333,27 @@ export default class DialogManager {
     * @param {Function} onComplete - funcion a la que llamar cuando acabe la animacion
     * @param {Number} delay - tiempo en ms que tarda en llamarse a onComplete
     */
-    activateOptions(active, onComplete, delay) {
-        // Oculta primero la caja de texto por si acaso. Si ya
-        // esta desactivada, las opciones apareceran directamente
+    activateOptions(active, onComplete = { } , delay = 0, instant = false) {
+        // Dependiendo de si es instantaneo o no, se ocultan las opciones con animacion o sin ella. 
+        // Oculta primero la caja de texto por si acaso y luego muestra las opciones
         this.textbox.activate(false, () => {
             for (let i = 0; i < this.options.length; i++) {
-                this.options[i].activate(active, onComplete, delay);
+                if (instant) {
+                    this.options[i].box.visible = active;
+                    this.options[i].text.visible = active;
+                }
+                else {
+                    this.options[i].activate(active);
+                }
+            }
+
+            // Si la funcion es valida, se ejecuta con el retardo indicado
+            if (onComplete !== null && typeof onComplete === 'function') {
+                setTimeout(() => {
+                    onComplete();
+                }, delay);
             }
         });
-
     }
 
     /**

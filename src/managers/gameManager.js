@@ -63,6 +63,19 @@ export default class GameManager {
             wordWrap: null,
             padding: null               // Separacion con el fondo (en el caso de que haya fondo)
         }
+
+        this.dispatcher.add("changeFriendship", this, (obj) => {
+            console.log(obj);
+            let varName = obj.character + "FS";
+            if (!this.getValue(varName)) {
+                this.setValue(varName, 50);
+            }
+            let val = this.getValue(varName)
+            val += obj.value;
+            this.setValue(varName, val);
+
+            console.log(this.blackboard)
+        });
     }
 
     // metodo para generar y coger la instancia
@@ -238,7 +251,8 @@ export default class GameManager {
         this.computerScene = this.currentScene.scene.get(computerSceneName);
         this.computerScene.scene.sleep();
 
-        let sceneName = 'NightmareDay4';
+        this.day = 2;
+        let sceneName = 'PlaygroundMorningDay2';
 
         // Pasa a la escena inicial con los parametros text, onComplete y onCompleteDelay
         // let sceneName = 'TextOnlyScene';

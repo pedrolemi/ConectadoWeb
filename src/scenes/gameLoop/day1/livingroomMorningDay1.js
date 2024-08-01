@@ -26,19 +26,5 @@ export default class LivingroomMorningDay1 extends LivingroomBase {
 
         let nodes = this.cache.json.get('livingroomMorningDay1');
         let momNode = super.readNodes(nodes, "day1\\livingroomMorningDay1", "mom", true);
-        
-
-        // Se comprueba si no se ha cogido la mochila. Si no se ha cogido, se pone el dialogo en la puerta
-        if (!this.gameManager.getValue(this.gameManager.bagPicked)) {
-            nodes = this.cache.json.get('everydayDialog');
-            this.doorNode = super.readNodes(nodes, "everydayDialog", "livingroom.doorMorning", true);
-        }
-
-
-        // Suscripcion al evento de coger la mochila por si no se 
-        // coge antes de salir de la habitacion por primera vez
-        this.dispatcher.addOnce("pickBag", this, (obj) => {
-            this.doorNode = null;
-        });
     }
 }

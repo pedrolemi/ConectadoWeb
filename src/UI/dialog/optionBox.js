@@ -101,13 +101,10 @@ export default class OptionBox extends DialogObject {
     }
 
     /**
-    * Activa/desactiva la caja y ejecuta la funcion o lambda que se le
-    * pase como parametro una vez haya terminado la animacion y el retardo indicado
+    * Activa/desactiva la caja
     * @param {Boolean} active - si se va a activar
-    * @param {Function} onComplete - funcion a la que llamar cuando acabe la animacion
-    * @param {Number} delay - tiempo en ms que tarda en llamarse a onComplete
     */
-    activate(active, onComplete, delay) {
+    activate(active) {
         // Es visible si el alpha de la caja es 1
         let isVisible = this.box.alpha == 1;
 
@@ -121,16 +118,7 @@ export default class OptionBox extends DialogObject {
         // Si se va a desactivar y es visible, desaparece con animacion
         else if (!active && isVisible) {
             this.box.disableInteractive();
-            super.activate(false, [this.box, this.text], onComplete, delay);
-        }
-        // Si se va a desactivar y no era visible, se llama a la funcion que se ha pasado
-        else if (!active && !isVisible) {
-            if (onComplete !== null && typeof onComplete === 'function') {
-                setTimeout(() => {
-                    onComplete();
-                }, delay);
-
-            }
+            super.activate(false, [this.box, this.text]);
         }
     }
 

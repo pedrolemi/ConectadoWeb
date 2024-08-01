@@ -20,7 +20,7 @@ export default class PlaygroundBase extends BaseScene {
         
         // Pone la imagen de fondo con las dimensiones del canvas
         this.bgImg = 'playgroundClosed'
-        this.bg = this.add.image(0, 0, this.bgImg).setOrigin(0, 0);
+        this.bg = this.add.image(0, 0, this.bgImg).setOrigin(0, 0).setDepth(-1);
         this.scale = this.CANVAS_HEIGHT / this.bg.height;
         this.bg.setScale(this.scale);
         this.rightBound = this.bg.displayWidth;
@@ -77,9 +77,9 @@ export default class PlaygroundBase extends BaseScene {
     }
 
     openDoors() {
+        this.bg.destroy();
         let bgDepth = this.bg.depth;
         this.bgImg = 'playgroundOpened'
-        this.bg.destroy();
         this.bg = this.add.image(0, 0, this.bgImg).setOrigin(0, 0).setScale(this.scale).setDepth(bgDepth);
     }
 }

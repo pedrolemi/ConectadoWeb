@@ -56,6 +56,18 @@ export default class LivingroomBase extends BaseScene {
             this.gameManager.changeScene(this.bedroom, params, true);
         }, false);
 
+
+        // Se comprueba si no se ha cogido la mochila. Si no se ha cogido, se pone el dialogo en la puerta
+        if (!this.gameManager.getValue(this.gameManager.bagPicked)) {
+            let nodes = this.cache.json.get('everydayDialog');
+            this.doorNode = super.readNodes(nodes, "everydayDialog", "livingroom.doorMorning", true);
+        }
+
+        // Suscripcion al evento de coger la mochila por si no se 
+        // coge antes de salir de la habitacion por primera vez
+        this.dispatcher.addOnce("pickBag", this, (obj) => {
+            this.doorNode = null;
+        });
     }
 
 

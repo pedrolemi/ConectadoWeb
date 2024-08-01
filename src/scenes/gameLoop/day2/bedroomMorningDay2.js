@@ -1,25 +1,25 @@
 import BedroomBase from "../baseScenarios/bedroomBase.js";
 
-export default class BedroomMorningDay1 extends BedroomBase {
+export default class BedroomMorningDay2 extends BedroomBase {
     constructor() {
-        super('BedroomMorningDay1');
+        super('BedroomMorningDay2');
     }
 
     create(params) {
         super.create(params);
 
-        this.livingroom = "LivingroomMorningDay1";
+        this.livingroom = "LivingroomMorningDay2";
 
-        let nodes = this.cache.json.get('bedroomMorningDay1');
+        let nodes = this.cache.json.get('bedroomMorningDay2');
 
         // Dialogos del interior del armario y la cama
-        this.wardrobe1Node = super.readNodes(nodes, "day1\\bedroomMorningDay1", "wardrobe1", true);
-        this.wardrobe2Node = super.readNodes(nodes, "day1\\bedroomMorningDay1", "wardrobe2", true);
-        this.bedNode = super.readNodes(nodes, "day1\\bedroomMorningDay1", "bed", true);
+        this.wardrobe1Node = super.readNodes(nodes, "day2\\bedroomMorningDay2", "wardrobe1", true);
+        this.wardrobe2Node = super.readNodes(nodes, "day2\\bedroomMorningDay2", "wardrobe2", true);
+        this.bedNode = super.readNodes(nodes, "day2\\bedroomMorningDay2", "bed", true);
 
         // Mochila
-        let bagNode = super.readNodes(nodes, "day1\\bedroomMorningDay1", "bag", true);
-        let bag = this.add.image(170, this.CANVAS_HEIGHT - 170, this.atlasName, 'bag').setOrigin(0, 0).setScale(this.scale);
+        let bagNode = super.readNodes(nodes, "day2\\bedroomMorningDay2", "bag", true);
+        let bag = this.add.image(1900 * this.scale, 1035 * this.scale, this.atlasName, 'bag').setOrigin(0, 0).setScale(-this.scale * 0.9, this.scale * 0.9);
         bag.setInteractive({ useHandCursor: true });
         bag.on('pointerdown', () => {
             this.dialogManager.setNode(bagNode)

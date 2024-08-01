@@ -45,6 +45,12 @@
             "events": [
                 { 
                     "startBreak": { }
+                },
+                { 
+                    "changeFriendship": { 
+                        "character": "Alex", 
+                        "value": -10
+                    }
                 }
             ]
         }

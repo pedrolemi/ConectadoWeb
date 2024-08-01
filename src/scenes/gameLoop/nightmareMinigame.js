@@ -24,9 +24,6 @@ export default class NightmareMinigame extends NightmareBase {
             scale: 1.6
         }
 
-        // Se obtiene el nombre de la escena a la que transicionar
-        this.changeToScene = 'BedroomMorningDay' + this.day;
-
         // Archivo con la estructura del dialogo (a partir del dia)
         this.file = this.cache.json.get('nightmareDay' + this.day);
         // Namespace con los textos localizados (a partir del dia)
@@ -35,8 +32,16 @@ export default class NightmareMinigame extends NightmareBase {
         // Se crea la sombra, su retrato y los nodos con sus dialogos
         this.shadow = this.createShadow();
 
-        // Se inicia el dialogo introductorio de la sombra
-        this.dialogManager.setNode(this.shadow.intro);
+
+        // Se hace un fade in de la camara y cuando termina, se pone inicia el dialogo
+        this.cameras.main.fadeIn(500, 0, 0, 0);
+        this.cameras.main.once(Phaser.Cameras.Scene2D.Events.FADE_IN_COMPLETE, (cam, effect) => {
+            setTimeout(() => {
+                // Se inicia el dialogo introductorio de la sombra
+                this.dialogManager.setNode(this.shadow.intro);
+            }, 500);
+        });
+
 
         // Se produce este evento despues de la introduccion
         let introEvent = 'startNightmare' + this.day;
@@ -50,10 +55,17 @@ export default class NightmareMinigame extends NightmareBase {
         // Se produce este evento despues del monologo final
         let outroEvent = 'finishNightmare' + this.day;
         this.dispatcher.add(outroEvent, this, () => {
-            // Se puede volver a usar el telefono
-            this.phoneManager.activate(true);
             console.log("cambio de escena");
-            //this.gameManager.changeScene(this.changeToScene, params, false);
+
+            // Se hace un fade out de la camara y cuando termina, se cambia a la escena de la alarma
+            this.cameras.main.fadeOut(500, 0, 0, 0);
+            this.cameras.main.once(Phaser.Cameras.Scene2D.Events.FADE_OUT_COMPLETE, (cam, effect) => {
+                setTimeout(() => {
+                    // Se puede volver a usar el telefono
+                    this.phoneManager.activate(true);
+                    this.gameManager.changeScene("AlarmScene");
+                }, 500);
+            });
         });
     }
 

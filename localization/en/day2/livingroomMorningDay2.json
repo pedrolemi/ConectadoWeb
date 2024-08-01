@@ -1,0 +1,10 @@
+{
+    "door": {
+        "normal": {
+            "text": "Looks like mom and dad have left soon today."
+        },
+        "late": {
+            "text": "Looks like mom and dad have already gone to work."
+        }
+    }
+}

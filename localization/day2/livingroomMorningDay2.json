@@ -1,0 +1,44 @@
+{
+    "door": {
+        "root": {
+            "type": "condition",
+            "conditions": [
+                {
+                    "next": "normal",
+                    "isLate": {
+                        "value": false,
+                        "operator": "equal",
+                        "default": false
+                    }
+                },
+                {
+                    "next": "late",
+                    "isLate": {
+                        "value": true,
+                        "operator": "equal",
+                        "default": false
+                    }
+                }
+            ]
+        },
+        "normal": {
+            "type": "text",
+            "character": "player",
+            "next": "leaveHome"
+        },
+        "late": {
+            "type": "text",
+            "character": "player",
+            "next": "leaveHome"
+        },
+        "leaveHome": {
+            "type": "event",
+                "events": [
+                    { 
+                        "leaveHome": { }
+                    }
+                ]
+        }
+
+    }
+}

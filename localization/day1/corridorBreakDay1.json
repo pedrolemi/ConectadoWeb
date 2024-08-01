@@ -244,6 +244,12 @@
                         "value": true, 
                         "global": true
                     }
+                },
+                { 
+                    "changeFriendship": { 
+                        "character": "Alison", 
+                        "value": 20
+                    }
                 }
             ]
         }

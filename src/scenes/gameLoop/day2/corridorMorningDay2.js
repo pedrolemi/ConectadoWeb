@@ -1,31 +1,33 @@
 import CorridorBase from "../baseScenarios/corridorBase.js";
 import Character from "../../../gameObjects/character.js";
 
-export default class CorridorMorningDay1 extends CorridorBase {
+export default class CorridorMorningDay2 extends CorridorBase {
     constructor() {
-        super('CorridorMorningDay1');
+        super('CorridorMorningDay2');
     }
 
     create(params) {
         super.create(params);
 
-        this.stairs = "StairsMorningDay1";
-        this.class = "ClassFrontMorningDay1";
+        this.stairs = "StairsMorningDay2";
+        this.class = "ClassFrontMorningDay2";
 
-        
+        let tr = {
+            x: 250,
+            y: this.CANVAS_HEIGHT * 0.75,
+            scale: 0.087
+        };
+        let alex = new Character(this, "Alex_side", tr, this.portraitTr, () => {
+            this.dialogManager.setNode(alexNode);
+        });
+        alex.setAnimation("IdleBase", true);
+        this.portraits.set("Alex", alex.getPortrait());
+
+        let nodes = this.cache.json.get('corridorMorningDay2');
+        // let alexNode = super.readNodes(nodes, "day2\\corridorMorningDay2", "alex", true);
+
         // Si no se llega tarde, se colocan personajes en el fondo
         if (!this.gameManager.getValue(this.gameManager.isLate)) {
-            let tr = {
-                x: 250,
-                y: this.CANVAS_HEIGHT * 0.75,
-                scale: 0.087
-            };
-            let maria = new Character(this, "Maria", tr, this.portraitTr, () => {
-                this.dialogManager.setNode(mariaNode);
-            });
-            maria.setAnimation("IdleBase", true);
-            this.portraits.set("Maria", maria.getPortrait());
-    
             tr = {
                 x: this.rightBound * 0.60,
                 y: this.CANVAS_HEIGHT * 0.75,
@@ -51,10 +53,9 @@ export default class CorridorMorningDay1 extends CorridorBase {
             guille.setAnimation("IdleBase", true);
             this.portraits.set("Guille", guille.getPortrait());
     
-            let nodes = this.cache.json.get('corridorMorningDay1');
-            let mariaNode = super.readNodes(nodes, "day1\\corridorMorningDay1", "maria", true);
-            let alisonNode = super.readNodes(nodes, "day1\\corridorMorningDay1", "alison", true);
-            let guilleNode = super.readNodes(nodes, "day1\\corridorMorningDay1", "guille", true);
+            
+            let alisonNode = super.readNodes(nodes, "day2\\corridorMorningDay2", "alison", true);
+            let guilleNode = super.readNodes(nodes, "day2\\corridorMorningDay2", "guille", true);
         }
         
     }

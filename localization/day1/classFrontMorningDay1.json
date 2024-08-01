@@ -16,13 +16,61 @@
         "introduce": {
             "type": "text",
             "character": "Ana",
-            "next": "teacherArrive"
+            "next": "setTalkedNice"
         },
         "insult": {
             "type": "text",
             "character": "Ana",
+            "next": "setTalkedMean"
+        },
+
+        "setTalkedNice": {
+            "type": "event",
+            "events": [
+                {
+                    "setNiceResponse": { 
+                        "variable": "anaNiceResponse", 
+                        "value": true, 
+                        "global": true
+                    }
+                },
+                { 
+                    "changeFriendship": { 
+                        "character": "Ana", 
+                        "value": -20
+                    }
+                },
+                { 
+                    "metAna": { 
+                        "variable": "metAna", 
+                        "value": true, 
+                        "global": true
+                    }
+                }
+            ],
             "next": "teacherArrive"
         },
+        "setTalkedMean": {
+            "type": "event",
+            "events": [
+                {
+                    "setNiceResponse": { 
+                        "variable": "anaNiceResponse", 
+                        "value": false, 
+                        "global": true
+                    }
+                },
+                { 
+                    "metAna": { 
+                        "variable": "metAna", 
+                        "value": true, 
+                        "global": true
+                    }
+                }
+            ],
+            "next": "teacherArrive"
+        },
+        
 
         "teacherArrive": {
             "type": "text",
@@ -53,13 +101,6 @@
             "events": [
                 { 
                     "startClass": { }
-                },
-                { 
-                    "metAna": { 
-                        "variable": "metAna", 
-                        "value": true, 
-                        "global": true
-                    }
                 }
             ]
         }

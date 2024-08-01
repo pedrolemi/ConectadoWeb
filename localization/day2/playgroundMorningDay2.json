@@ -1,0 +1,323 @@
+{
+    "ana": {
+        "root": {
+            "type": "condition",
+            "conditions": [
+                {
+                    "next": "notTalked",
+                    "talkedAna": {
+                        "value": false,
+                        "operator": "equal",
+                        "global": false,
+                        "default": false
+                    }
+                },
+                {
+                    "next": "talked",
+                    "talkedAna": {
+                        "value": true,
+                        "operator": "equal",
+                        "global": false,
+                        "default": false
+                    }
+                }
+            ]
+        },
+        "talked": {
+            "type": "text",
+            "character": "Ana"
+        },
+        "notTalked": {
+            "type": "condition",
+            "conditions": [
+                {
+                    "next": "mean",
+                    "anaNiceResponse": {
+                        "value": false,
+                        "operator": "equal",
+                        "global": true,
+                        "default": true
+                    }
+                },
+                {
+                    "next": "normal",
+                    "anaNiceResponse": {
+                        "value": true,
+                        "operator": "equal",
+                        "global": true,
+                        "default": true
+                    }
+                }
+            ]
+        },
+
+        "mean": {
+            "type": "text",
+            "character": "Ana",
+            "next": "prepareChoices"
+        },
+        "normal": {
+            "type": "text",
+            "character": "Ana",
+            "next": "prepareChoices"
+        },
+        "prepareChoices": {
+            "type": "event",
+            "events": [
+                { 
+                    "prepareChoices": { }
+                }
+            ],
+            "next": "choices"
+        },
+        "choices": {
+            "type": "choice",
+            "choices": [
+                { "next": "setTalked"},
+                { "next": "warnResponse"}
+            ]
+        },
+        "warnResponse": {
+            "type": "condition",
+            "conditions": [
+                {
+                    "next": "warnMean",
+                    "anaNiceResponse": {
+                        "value": false,
+                        "operator": "equal",
+                        "global": true,
+                        "default": true
+                    }
+                },
+                {
+                    "next": "warnNormal",
+                    "anaNiceResponse": {
+                        "value": true,
+                        "operator": "equal",
+                        "global": true,
+                        "default": true
+                    }
+                }
+            ]
+        },
+        "warnMean": {
+            "type": "text",
+            "character": "Ana",
+            "next": "setTalked"
+        },
+        "warnNormal": {
+            "type": "text",
+            "character": "Ana",
+            "next": "setTalked"
+        },
+
+        "setTalked": {
+            "type": "event",
+            "events": [
+                { 
+                    "setTalkedAna": { 
+                        "variable": "talkedAna", 
+                        "value": true, 
+                        "global": false
+                    }
+                }
+            ]
+        }
+    },
+
+    "maria": {
+        "root": {
+            "type": "condition",
+            "conditions": [
+                {
+                    "next": "notTalked",
+                    "talkedMaria": {
+                        "value": false,
+                        "operator": "equal",
+                        "global": false,
+                        "default": false
+                    }
+                },
+                {
+                    "next": "talked",
+                    "talkedMaria": {
+                        "value": true,
+                        "operator": "equal",
+                        "global": false,
+                        "default": false
+                    }
+                }
+            ]
+        },
+        "talked": {
+            "type": "text",
+            "character": "player"
+        },
+        "notTalked": {
+            "type": "condition",
+            "conditions": [
+                {
+                    "next": "notMet",
+                    "metMaria": {
+                        "value": false,
+                        "operator": "equal",
+                        "global": true,
+                        "default": false
+                    }
+                },
+                {
+                    "next": "ignore",
+                    "metMaria": {
+                        "value": true,
+                        "operator": "equal",
+                        "global": true,
+                        "default": false
+                    },
+                    "mariaNiceResponse": {
+                        "value": false,
+                        "operator": "equal",
+                        "global": true,
+                        "default": false
+                    }
+                },
+                {
+                    "next": "warn",
+                    "metMaria": {
+                        "value": true,
+                        "operator": "equal",
+                        "global": true,
+                        "default": false
+                    },
+                    "mariaNiceResponse": {
+                        "value": true,
+                        "operator": "equal",
+                        "global": true,
+                        "default": false
+                    }
+                }
+            ]
+        },
+        "notMet": {
+            "type": "text",
+            "character": "Maria",
+            "next": "notMetChoices"
+        },
+        "notMetChoices": {
+            "type": "choice",
+            "choices":[
+                { "next": "bellRinging" },
+                { "next": "niceResponse" }
+            ]
+        },
+        "niceResponse": {
+            "type": "text",
+            "character": "Maria",
+            "next": "bellRinging"
+        },
+
+        "ignore": {
+            "type": "text",
+            "character": "Maria",
+            "next": "bellRinging"
+        },
+
+        "warn": {
+            "type": "text",
+            "character": "Maria",
+            "next": "warnChoices"
+        },
+        "warnChoices": {
+            "type": "choice",
+            "choices":[
+                { "next": "warnGoodbye" },
+                { "next": "warnGoodbye" }
+            ]
+        },
+        "warnGoodbye": {
+            "type": "text",
+            "character": "Maria",
+            "next": "setWarned"
+        },
+        "setWarned": {
+            "type": "event",
+            "events": [
+                { 
+                    "setWarned": { 
+                        "variable": "warned", 
+                        "value": true, 
+                        "global": true
+                    }
+                }
+            ],
+            "next": "bellRinging"
+        },
+
+        "bellRinging": {
+            "type": "text",
+            "character": "",
+            "next": "openDoors"
+        },
+        "openDoors": {
+            "type": "event",
+            "events": [
+                {
+                    "openDoors": { }
+                },
+                { 
+                    "setTalkedMaria": { 
+                        "variable": "talkedMaria", 
+                        "value": true, 
+                        "global": false
+                    }
+                }
+            ]
+        }
+    },
+
+    "jose": {
+        "root": {
+            "type": "condition",
+            "conditions": [
+                {
+                    "next": "notTalked",
+                    "talkedJose": {
+                        "value": false,
+                        "operator": "equal",
+                        "global": false,
+                        "default": false
+                    }
+                },
+                {
+                    "next": "talked",
+                    "talkedJose": {
+                        "value": true,
+                        "operator": "equal",
+                        "global": false,
+                        "default": false
+                    }
+                }
+            ]
+        },
+        "notTalked": {
+            "type": "text",
+            "character": "Jose",
+            "next": "setTalked"
+        },
+        "setTalked": {
+            "type": "event",
+            "events": [
+                { 
+                    "setTalkedJose": { 
+                        "variable": "talkedJose", 
+                        "value": true, 
+                        "global": false
+                    }
+                }
+            ]
+        },
+        "talked": {
+            "type": "text",
+            "character": "Jose"
+        }
+    }
+}

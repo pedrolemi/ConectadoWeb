@@ -1,0 +1,120 @@
+{
+    "ana": {
+        "talked": {
+            "text": "Get lost. I don't have anything to talk with you."
+        },
+        "mean": {
+            "text": "What are you looking at? Say something or leave"
+        },
+        "normal": [
+            {
+                "text": "Good morning {{name}}."
+            },
+            {
+                "text": "Do you want something?"
+            }
+        ],
+        "choices": [
+            {
+                "text": "Nothing (you leave)"
+            },
+            {
+                "text": "I've been told about you and Alex speaking of some prank."
+            }
+        ],
+        "warnMean": {
+            "text": "Yeah, so? C'mon, go away."
+        },
+        "warnNormal": [
+            {
+                "text": "Damn, you caught us, it was silly."
+            },
+            {
+                "text": "But it's not funny anymore, we won't do it."
+            }
+        ]
+    },
+
+    "maria": {
+        "talked": {
+            "text": "I've already talked to Maria. I should look for people in the playground waiting for the bell to ring."
+        },
+        "notMet": {
+            "text":  "Do you want anything?"
+        },
+        "notMetChoices": [
+            {
+                "text": "No, nothing, bye."
+            },
+            {
+                "text": "Say hello. I always see you alone and reading."
+            }
+        ],
+        "niceResponse": [
+            {
+                "text": "Very kind."
+            },
+            {
+                "text": "People don't use to talk to me."
+            },
+            {
+                "text": "Have a nice day."
+            }
+        ],
+
+        "ignore": [
+            {
+                "text": "I'm reading"
+            },
+            {
+                "text": "If you don't mind...(She ignores you and keeps reading)"
+            }
+        ],
+
+        "warn": [
+            {
+                "text": "Good morning, {{name}}."
+            },
+            {
+                "text": "I've heard Alex talking to Ana about playing you a joke."
+            },
+            {
+                "text": "I don't know what might be, but be careful, they aren't usually very funny."
+            }
+        ],
+        "warnChoices": [
+            {
+                "text": "Thanks for the warning"
+            },
+            {
+                "text": "I'm not afraid of him"
+            }
+        ],
+        "warnGoodbye": {
+            "text": "See you later, bye."
+        },
+        "bellRinging": {
+            "text": "<<The bell is ringing>>"
+        }
+    },
+
+    "jose": {
+        "notTalked": [
+            {
+                "text": "Have you seen that mobile app that checks your relationship with the people you talk more?"
+            },
+            {
+                "text": "It tells you who you get along with or not of all the people that downloaded it."
+            },
+            {
+                "text": "It's said it is really accurate, but how it works isn't clear."
+            },
+            {
+                "text": "I've seen you already have it."
+            }
+        ],
+        "talked": {
+            "text": "See ya"
+        }
+    }
+}

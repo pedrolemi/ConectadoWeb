@@ -51,15 +51,15 @@ export default class LivingroomAfternoonDay1 extends LivingroomBase {
         this.dispatcher.addOnce("prepareChoices1", this, (obj) => {
             // Si no se ha conocido a Guille, se quita la opcion para hablar de el
             if (!this.gameManager.getValue("metGuille")) {
-                this.hideOptions();
+                this.dialogManager.activateOptions(false, () => {
+                    let node = this.dialogManager.currNode
+                    console.log(node.choices)
+                    node.choices.splice(1, 1);
+                    node.next.splice(1, 1);
 
-                let node = this.dialogManager.currNode
-                
-                node.choices.splice(1, 1);
-                node.next.splice(1, 1);
-
-                this.dialogManager.talking = false;
-                this.dialogManager.setNode(node);
+                    this.dialogManager.talking = false;
+                    this.dialogManager.setNode(node);
+                }, 0, true);
             }
         });
         
@@ -67,15 +67,15 @@ export default class LivingroomAfternoonDay1 extends LivingroomBase {
             // Si no se ha conocido a Jose, se quita la opcion para hablar de el
             // No se comprueba si se ha hablado de Alison porque hay que hablar con ella si o si
             if (!this.gameManager.getValue("metMaria")) {
-                this.hideOptions();
-
-                let node = this.dialogManager.currNode
+                this.dialogManager.activateOptions(false, () => {
+                    let node = this.dialogManager.currNode
                 
-                node.choices.splice(1, 1);
-                node.next.splice(1, 1);
+                    node.choices.splice(1, 1);
+                    node.next.splice(1, 1);
 
-                this.dialogManager.talking = false;
-                this.dialogManager.setNode(node);
+                    this.dialogManager.talking = false;
+                    this.dialogManager.setNode(node);
+                }, 0, true);
             }
         });
         
@@ -83,39 +83,32 @@ export default class LivingroomAfternoonDay1 extends LivingroomBase {
             // Si no se ha conocido a Maria, se quita la opcion para hablar de ella
             // No se comprueba si se ha hablado de Alex porque hay que hablar con el si o si
             if (!this.gameManager.getValue("metJose")) {
-                this.hideOptions();
-
-                let node = this.dialogManager.currNode
+                this.dialogManager.activateOptions(false, () => {
+                    let node = this.dialogManager.currNode
                 
-                node.choices.splice(0, 1);
-                node.next.splice(0, 1);
+                    node.choices.splice(0, 1);
+                    node.next.splice(0, 1);
 
-                this.dialogManager.talking = false;
-                this.dialogManager.setNode(node);
+                    this.dialogManager.talking = false;
+                    this.dialogManager.setNode(node);
+                }, 0, true);
             }
         });
 
         this.dispatcher.addOnce("prepareChoices4", this, (obj) => {
             // Si no se ha conocido a Ana, se quita la opcion para hablar de ella
             if (!this.gameManager.getValue("metAna")) {
-                this.hideOptions();
-
-                let node = this.dialogManager.currNode
+                this.dialogManager.activateOptions(false, () => {
+                    let node = this.dialogManager.currNode
                 
-                node.choices.splice(0, 1);
-                node.next.splice(0, 1);
+                    node.choices.splice(0, 1);
+                    node.next.splice(0, 1);
 
-                this.dialogManager.talking = false;
-                this.dialogManager.setNode(node);
+                    this.dialogManager.talking = false;
+                    this.dialogManager.setNode(node);
+                }, 0, true);
             }
         });
     }
 
-    hideOptions() {
-        let optionBoxes = this.dialogManager.options;
-        for (let i = 0; i < optionBoxes.length; i++) {
-            optionBoxes[i].box.visible = false;
-            optionBoxes[i].text.visible = false;
-        }
-    }
 }

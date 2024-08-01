@@ -8,7 +8,7 @@ export default class BedroomAfternoonDay1 extends BedroomBase {
     create(params) {
         super.create(params);
 
-        this.livingroom = "LivingroomAfternoongDay1";
+        this.livingroom = "LivingroomAfternoonDay1";
 
         // Cambia la hora del movil
         this.phoneManager.setDayInfo("night");

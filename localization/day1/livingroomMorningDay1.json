@@ -125,26 +125,5 @@
             "type": "text",
             "character": "mom"
         }
-    },
-
-
-    "door": {
-        "root": {
-            "type": "condition",
-            "conditions": [
-                {
-                    "next": "noBag",
-                    "bagPicked": {
-                        "value": false,
-                        "operator": "equal",
-                        "default": false
-                    }
-                }
-            ]
-        },
-        "noBag": {
-            "type": "text",
-            "character": "player"
-        }
     }
 }

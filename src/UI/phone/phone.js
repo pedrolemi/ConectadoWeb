@@ -65,7 +65,7 @@ export default class Phone extends Phaser.GameObjects.Container {
         this.add(hand);
         this.sendToBack(hand);
         hand.setInteractive(polygon, Phaser.Geom.Polygon.Contains);
-        graphics.destroy();
+        // graphics.destroy();
 
 
         scene.add.existing(this);

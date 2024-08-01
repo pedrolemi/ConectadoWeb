@@ -166,7 +166,7 @@ export default class UserInfoMenu extends Phaser.Scene {
     createBackButton(x, y, tweenTime, scaleIncrease) {
         let button = this.add.image(x, y, 'backButton');
         let origScale = button.scale;
-        button.setInteractive();
+        button.setInteractive({ useHandCursor: true},);
 
         button.on('pointerover', () => {
             this.tweens.add({

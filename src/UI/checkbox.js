@@ -30,10 +30,10 @@ export default class CheckBox extends Phaser.GameObjects.Container {
         this.add(fillImg);
 
         if (hitArea) {
-            fillImg.setInteractive(hitArea.area, hitArea.callback);
+            fillImg.setInteractive({ useHandCursor: true}, hitArea.area, hitArea.callback);
         }
         else {
-            fillImg.setInteractive();
+            fillImg.setInteractive({ useHandCursor: true},);
         }
         //this.scene.input.enableDebug(fillImg, '0xffff00');
 

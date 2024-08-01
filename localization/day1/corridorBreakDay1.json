@@ -81,18 +81,17 @@
                         "global": false
                     }
                 },
-                {
-                    "setNiceResponse": { 
-                        "variable": "mariaNiceResponse", 
-                        "value": false, 
-                        "global": true
-                    }
-                },
                 { 
                     "metMaria": { 
                         "variable": "metMaria", 
                         "value": true, 
                         "global": true
+                    }
+                },
+                { 
+                    "changeFriendship": { 
+                        "character": "Maria", 
+                        "value": -10
                     }
                 }
             ]
@@ -107,18 +106,17 @@
                         "global": false
                     }
                 },
-                {
-                    "setNiceResponse": { 
-                        "variable": "mariaNiceResponse", 
-                        "value": true, 
-                        "global": true
-                    }
-                },
                 { 
                     "metMaria": { 
                         "variable": "metMaria", 
                         "value": true, 
                         "global": true
+                    }
+                },
+                { 
+                    "changeFriendship": { 
+                        "character": "Maria", 
+                        "value": 20
                     }
                 }
             ]
@@ -130,20 +128,20 @@
             "conditions": [
                 {
                     "next": "talkedMean",
-                    "mariaNiceResponse": {
-                        "value": false,
-                        "operator": "equal",
-                        "global": false,
-                        "default": false
+                    "MariaFS": {
+                        "value": 50,
+                        "operator": "lower",
+                        "global": true,
+                        "default": 50
                     }
                 },
                 {
                     "next": "talkedNice",
-                    "mariaNiceResponse": {
-                        "value": true,
-                        "operator": "equal",
-                        "global": false,
-                        "default": false
+                    "MariaFS": {
+                        "value": 50,
+                        "operator": "greater",
+                        "global": true,
+                        "default": 50
                     }
                 }
             ]
@@ -190,7 +188,7 @@
             "type": "event",
             "events": [
                 { 
-                    "endChat": { }
+                    "endChat": { "chat": "chat1" }
                 }
             ]
         }

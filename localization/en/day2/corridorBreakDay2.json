@@ -1,0 +1,20 @@
+{
+    "maria": {
+        "washed": [
+            {
+                "text": "What have you done? What a stain."
+            },
+            {
+                "text": "Oh mate, looks like you're wet, or even shat yourself."
+            }
+        ],
+        "notWashed": [
+            {
+                "text": "Probably you haven't noticed, but there's a gum stucked on your ass."
+            },
+            {
+                "text": "You can go to the toilet and see it in the mirror."
+            }
+        ] 
+    }
+}

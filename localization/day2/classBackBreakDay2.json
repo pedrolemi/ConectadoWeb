@@ -1,0 +1,26 @@
+{
+    "alex": {
+        "root": {
+            "type": "text",
+            "character": "Alex",
+            "next": "setTalked"
+        },
+        "setTalked": {
+            "type": "event",
+            "events": [
+                {
+                    "changeFriendship": {
+                        "character": "Jose",
+                        "value": -10
+                    }
+                },
+                { 
+                    "changeFriendship": { 
+                        "character": "Ana", 
+                        "value": -10
+                    }
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,440 @@
+{
+    "dad": {
+        "root": {
+            "type": "condition",
+            "conditions": [
+                {
+                    "next": "notTalked",
+                    "talked": {
+                        "value": false,
+                        "operator": "equal",
+                        "global": false,
+                        "default": false
+                    }
+                },
+                {
+                    "next": "talked",
+                    "talked": {
+                        "value": true,
+                        "operator": "equal",
+                        "global": false,
+                        "default": false
+                    }
+                }
+            ]
+        },
+        "notTalked": {
+            "type": "text",
+            "character": "dad",
+            "next": "checkWashed"
+        },
+        "checkWashed": {
+            "type": "condition",
+            "conditions": [
+                {
+                    "next": "washed",
+                    "gumWashed": {
+                        "value": true,
+                        "operator": "equal",
+                        "global": true,
+                        "default": false
+                    }
+                },
+                {
+                    "next": "notWashed",
+                    "gumWashed": {
+                        "value": false,
+                        "operator": "equal",
+                        "global": true,
+                        "default": false
+                    }
+                }
+            ]
+        },
+        "notWashed": {
+            "type": "text",
+            "character": "dad",
+            "next": "setTalked"
+        },
+        "washed": {
+            "type": "text",
+            "character": "dad",
+            "next": "setTalked"
+        },
+        "setTalked": {
+            "type": "event",
+            "events": [
+                { 
+                    "setTalked": { 
+                        "variable": "talked", 
+                        "value": true, 
+                        "global": false
+                    }
+                }
+            ],
+            "next": "prepareChoices1"
+        },
+        "talked": {
+            "type": "text",
+            "character": "dad",
+            "next": "prepareChoices1"
+        },
+
+
+        "prepareChoices1": {
+            "type": "event",
+            "events": [
+                { 
+                    "prepareChoices1": { }
+                }
+            ],
+            "next": "choices1"
+        },
+        "choices1": {
+            "type": "choice",
+            "choices": [
+                { "next": "checkIgnored" },
+                { "next": "guille", "repeat": false },
+                { "next": "choices2" }
+            ]
+        },
+        "checkIgnored": {
+            "type": "condition",
+            "conditions": [
+                {
+                    "next": "ignore",
+                    "ignored": {
+                        "value": false,
+                        "operator": "equal",
+                        "global": false,
+                        "default": false
+                    }
+                }
+            ]
+        },
+        "ignore": {
+            "type": "event",
+            "events": [
+                { 
+                    "changeFriendship": { 
+                        "character": "parents", 
+                        "value": -10
+                    }
+                },
+                { 
+                    "ignore": { 
+                        "variable": "ignored", 
+                        "value": true, 
+                        "global": false
+                    }
+                }
+            ]
+        },
+        "guille": {
+            "type": "condition",
+            "conditions": [
+                {
+                    "next": "goMatch",
+                    "guilleResponse": {
+                        "value": "yes",
+                        "operator": "equal",
+                        "global": true,
+                        "default": false
+                    }
+                },
+                {
+                    "next": "dontGoMatch",
+                    "guilleResponse": {
+                        "value": "no",
+                        "operator": "equal",
+                        "global": true,
+                        "default": false
+                    }
+                },
+                {
+                    "next": "askMatch",
+                    "guilleResponse": {
+                        "value": "ask",
+                        "operator": "equal",
+                        "global": true,
+                        "default": false
+                    }
+                }
+            ]
+        },
+        "goMatch": {
+            "type": "text",
+            "character": "player",
+            "next": "FSGuille"
+        },
+        "dontGoMatch": {
+            "type": "text",
+            "character": "player",
+            "next": "FSGuille"
+        },
+        "askMatch": {
+            "type": "text",
+            "character": "player",
+            "next": "askMatchReply"
+        },
+        "askMatchReply": {
+            "type": "text",
+            "character": "dad",
+            "next": "FSGuille"
+        },
+
+        "FSGuille": {
+            "type": "event",
+            "events": [
+                { 
+                    "changeFriendship": { 
+                        "character": "parents", 
+                        "value": 5
+                    }
+                }
+            ],
+            "next": "choices1"
+        },
+        
+        "choices2": {
+            "type": "choice",
+            "choices": [
+                { "next": "alison", "repeat": false },
+                { "next": "gum", "repeat": false },
+                { "next": "prepareChoices3" }
+            ]
+        },
+        "alison": {
+            "type": "condition",
+            "conditions": [
+                {
+                    "next": "alisonWarn",
+                    "warnedAlison": {
+                        "value": true,
+                        "operator": "equal",
+                        "global": true,
+                        "default": false
+                    }
+                },
+                {
+                    "next": "alisonNormal",
+                    "warnedAlison": {
+                        "value": false,
+                        "operator": "equal",
+                        "global": true,
+                        "default": false
+                    }
+                }
+            ]
+        },
+        "alisonWarn": {
+            "type": "text",
+            "character": "player",
+            "next": "FSAlison"
+        },
+        "alisonNormal": {
+            "type": "text",
+            "character": "player",
+            "next": "FSAlison"
+        },
+        "FSAlison": {
+            "type": "event",
+            "events": [
+                { 
+                    "changeFriendship": { 
+                        "character": "parents", 
+                        "value": 5
+                    }
+                }
+            ],
+            "next": "choices2"
+        },
+
+        "gum": {
+            "type": "condition",
+            "conditions": [
+                {
+                    "next": "aboutGumWashed",
+                    "gumWashed": {
+                        "value": true,
+                        "operator": "equal",
+                        "global": true,
+                        "default": false
+                    }
+                },
+                {
+                    "next": "aboutGumNotWashed",
+                    "gumWashed": {
+                        "value": false,
+                        "operator": "equal",
+                        "global": true,
+                        "default": false
+                    }
+                }
+            ]
+        },
+        "aboutGumWashed": {
+            "type": "text",
+            "character": "player",
+            "next": "FSGum"
+        },
+        "aboutGumNotWashed": {
+            "type": "text",
+            "character": "player",
+            "next": "dadGumNotWashed"
+        },
+        "dadGumNotWashed": {
+            "type": "text",
+            "character": "dad",
+            "next": "FSGum"
+        },
+        "FSGum": {
+            "type": "event",
+            "events": [
+                { 
+                    "changeFriendship": { 
+                        "character": "parents", 
+                        "value": 5
+                    }
+                }
+            ],
+            "next": "choices2"
+        },
+        
+        "prepareChoices3": {
+            "type": "event",
+            "events": [
+                { 
+                    "prepareChoices3": { }
+                }
+            ],
+            "next": "choices3"
+        },
+        "choices3": {
+            "type": "choice",
+            "choices": [
+                { "next": "maria", "repeat": false },
+                { "next": "alex", "repeat": false },
+                { "next": "choices4" }
+            ]
+        },
+        "maria": {
+            "type": "text",
+            "character": "player",
+            "next": "FSMaria"
+        },
+        "FSMaria": {
+            "type": "event",
+            "events": [
+                { 
+                    "changeFriendship": { 
+                        "character": "parents", 
+                        "value": 5
+                    }
+                }
+            ],
+            "next": "choices3"
+        },
+
+        "alex": {
+            "type": "text",
+            "character": "player",
+            "next": "checkAlexResponse"
+        },
+        "checkAlexResponse": {
+            "type": "condition",
+            "conditions": [
+                {
+                    "next": "prank",
+                    "alexMorningTalk": {
+                        "value": "prank",
+                        "operator": "equal",
+                        "global": true,
+                        "default": false
+                    }
+                },
+                {
+                    "next": "ask",
+                    "alexMorningTalk": {
+                        "value": "ask",
+                        "operator": "equal",
+                        "global": true,
+                        "default": false
+                    }
+                },
+                {
+                    "next": "distrust",
+                    "alexMorningTalk": {
+                        "value": "distrust",
+                        "operator": "equal",
+                        "global": true,
+                        "default": false
+                    }
+                },
+                {
+                    "next": "choices3",
+                    "alexMorningTalk": {
+                        "value": false,
+                        "operator": "equal",
+                        "global": true,
+                        "default": false
+                    }
+                }
+            ]
+        },
+        "prank": {
+            "type": "text",
+            "character": "player",
+            "next": "FSAlex"
+        },
+
+        "ask": {
+            "type": "text",
+            "character": "player",
+            "next": "askReply"
+        },
+        "askReply": {
+            "type": "text",
+            "character": "dad",
+            "next": "FSAlex"
+        },
+        
+        "distrust": {
+            "type": "text",
+            "character": "player",
+            "next": "distrustReply"
+        },
+        "distrustReply": {
+            "type": "text",
+            "character": "dad",
+            "next": "FSAlex"
+        },
+
+        "FSAlex": {
+            "type": "event",
+            "events": [
+                { 
+                    "changeFriendship": { 
+                        "character": "parents", 
+                        "value": 10
+                    }
+                }
+            ],
+            "next": "choices3"
+        },
+
+        "choices4": {
+            "type": "choice",
+            "choices": [
+                { "next": "school", "repeat": false },
+                { "next": "" }
+            ]
+        },
+
+        "school": {
+            "type": "text",
+            "character": "player",
+            "next": "choices4"
+        }
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "sink": {
+        "washed": [
+            {
+                "text": "I've already removed the gum, but the stain is worse."
+            },
+            {
+                "text": "They will laught at me even more."
+            }
+        ],
+        "notWashed": {
+            "text":  "Maybe water and soap are all I need."
+        },
+        "choices": [
+            {
+                "text": "(Try water and soap)"
+            },
+            {
+                "text": "(Leave as it is)"
+            }
+        ]
+    }
+}

@@ -19,7 +19,7 @@ export default class TextBox extends DialogObject {
         this.box.setScale(horizontalScale, 1);
         this.box.visible = true;
 
-        this.box.setInteractive();
+        this.box.setInteractive({ useHandCursor: true });
         this.box.on('pointerdown', () => {
             dialogManager.nextDialog();
         });
@@ -244,7 +244,7 @@ export default class TextBox extends DialogObject {
                 this.box.disableInteractive();
                 super.activate(true, [this.box, this.nameBox, this.currText, this.nameText], () => {
                     setTimeout(() => {
-                        this.box.setInteractive();
+                        this.box.setInteractive({ useHandCursor: true });
                         this.canWrite = true;
                     }, 200);
 
@@ -254,7 +254,7 @@ export default class TextBox extends DialogObject {
                 this.box.disableInteractive();
                 super.activate(true, [this.box, this.nameBox, this.currText, this.nameText, this.portrait], () => {
                     setTimeout(() => {
-                        this.box.setInteractive();
+                        this.box.setInteractive({ useHandCursor: true });
                         this.canWrite = true;
                     }, 200);
                 }, 0);

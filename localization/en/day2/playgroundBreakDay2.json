@@ -1,0 +1,74 @@
+{
+    "ana_jose": {
+        "washed": {
+            "text": "Hahaha, have you wet yourself?"
+        },
+        "washed2": [
+            {
+                "text": "",
+				"text_male": "Hahahaha, no, no, have a look, he shat himself.",
+				"text_female": "Hahahaha, no, no, have a look, she shat herself."
+			},
+			{
+				"text": "Ana, do you have your mobile? Take a picture!!"
+			}
+        ],
+        "washed3": {
+            "text": "Hahahaha"
+        },
+
+        "notWashed": [
+            {
+				"text": "You should wash your clothes, your pants are a real mess."
+			},
+			{
+				"text": "Don't you have a washing machine at home?"
+			}
+        ],
+        "notWashed2": [
+            {
+				"text": "Hahahaha, new trend! Chewing gums stucked on the pants."
+			},
+			{
+				"text": "That awful clothing does not worth washing."
+			},
+			{
+                "text": "",
+				"text_male": "He should throw it straight to the trash can.",
+                "text_female": "She should throw it straight to the trash can."
+
+			}
+        ],
+        "notWashed3": {
+            "text": "Hahahaha"
+        }
+    },
+
+    "guille_alison": {
+        "washed": {
+            "text": "What a stain."
+        },
+        "washed2": {
+            "text": "Well, it's okay, it'll be dry in a little while."
+        },
+
+        "notTalked": [
+            {
+				"text": "Where have you sat?"
+			},
+			{
+				"text": "You probably have sat on a chewing gum."
+			}
+        ],
+        "notTalked2": {
+            "text": "What a mess, go straight to the bathroom before class."
+        },
+        "notTalked3": {
+            "text": "Yeah, maybe you are able to remove it."
+        },
+
+        "talked": {
+            "text": "Try to take off that gum in the bathroom."
+        }
+    }
+}

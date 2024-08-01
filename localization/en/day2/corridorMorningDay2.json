@@ -1,0 +1,126 @@
+{
+    "alex": {
+        "choices": [
+            {
+                "text": "I've been told about some prank you want to play on me."
+            },
+            {
+                "text": "Can we just get along?"
+            },
+            {
+                "text": "I know the type of guy you are."
+            }
+        ],
+        "prank": [
+            {
+                "text": "I'm kind of a joker, but take it easy."
+            },
+            {
+                "text": "We will all laugh."
+            }
+        ],
+
+        "ask": {
+            "text": "Why don't we start all over again?"
+        },
+        "askReply": {
+            "text": "Alright, let's get inside."
+        },
+
+        "distrust": [
+            {
+				"text": "You are the type of guy that exploits everyone."
+			},
+			{
+				"text": "Looking for a fight no matter the reason."
+			}
+        ],
+        "distrustReply": {
+            "text": "If you are done pestering me, get away you tosser."
+        },
+
+        "normal": {
+            "text": "Are you still angry about the spot thing?"
+        },
+        "normalReply": {
+            "text": "We'll see. And you, Do you already know which is your desk?"
+        },
+        "talked": {
+            "text": "He's ignoring me."
+        }
+    },
+    
+    "alison": {
+        "notTalked": 
+        {
+            "text": "How do you do, {{name}}?"
+        },
+        "warn": [
+            {
+                "text": "By the way, Alex was talking before about playing you a mean joke."
+            },
+            {
+                "text": "He didn't use to be like that, I don't know what's going on with him."
+            },
+            {
+                "text": "Take care, ok?"
+            }
+        ],
+        "talked": {
+            "text": "Let's get in or we'll be late."
+        }
+    },
+
+    "guille": {
+        "match": [
+            {
+                "text": "We're meeting this saturday to watch a film at my place."
+            },
+            {
+                "text": "Do you want to come? Some classmates are coming."
+            },
+            {
+                "text": "And we'll watch it in the huge TV that my father's just bought for football matches."
+            }
+        ],
+        "choices": [
+            {
+                "text": "Yes"
+            },
+            {
+                "text": "No"
+            },
+            {
+                "text": "I have to ask first to my parents if I can."
+            }
+        ],
+        "yes": [
+            {
+                "text": "Great, another joins the team then."
+            },
+            {
+                "text": "I'll let you know the address and the rest of the details."
+            }
+        ],
+        "no": [
+            {
+                "text": "It's a pity."
+            },
+            {
+                "text": "Well, see ya."
+            }
+        ],
+        "ask": {
+            "text": "Well, let me know."
+        },
+        "reminder": {
+            "text": "Remember, Saturday afternoon at 6, my place."
+        },
+        "goToClass": {
+            "text": "Let's get in."
+        },
+        "distracted": {
+            "text": "Seems distracted."
+        }
+    }
+}

@@ -73,5 +73,54 @@ export default class BathroomBase extends BaseScene {
                 this.corridor = params.corridor;
             }
         }
+
+
+        this.sinkNode = null;
+        // Forma geometrica para poder interactuar con los lavabos
+        let graphics = this.add.graphics(0, 0);
+        let sinkPolygon = new Phaser.Geom.Polygon([
+            0, 80,
+            240, 140,
+            240, 430,
+            450, 430,
+            0, 830
+        ]);
+        // graphics.lineStyle(5, 0xFF00FF, 1.0).fillStyle(0xFFF, 1.0).fillPoints(sinkPolygon.points, true);
+        graphics.generateTexture('sink', this.rightBound, this.CANVAS_HEIGHT);
+        let sink = this.add.image(0, 0, 'sink').setOrigin(0, 0).setDepth(200);
+        graphics.destroy();
+
+        // Para las areas interactuables con forma de poligono, hay que hacerlas primero interactivas
+        // y luego cambiar el cursor manualmente, ya que si no, toda la textura se vuelve interactuable
+        sink.setInteractive(sinkPolygon, Phaser.Geom.Polygon.Contains);
+        sink.input.cursor = 'pointer';
+        
+        sink.on('pointerdown', () => {
+            this.dialogManager.setNode(this.sinkNode);
+        });
+
+
+        this.floorNode = null;
+        // Forma geometrica para poder interactuar con el suelo
+        graphics = this.add.graphics(0, 0);
+        let floorPolygon = new Phaser.Geom.Polygon([
+            820, 670,
+            870, 860,
+            1390, 860,
+            1180, 670
+        ]);
+        // graphics.lineStyle(5, 0xFF00FF, 1.0).fillStyle(0xFFF, 1.0).fillPoints(floorPolygon.points, true);
+        graphics.generateTexture('floor', this.rightBound, this.CANVAS_HEIGHT);
+        let floor = this.add.image(0, 0, 'floor').setOrigin(0, 0).setDepth(200);
+        graphics.destroy();
+
+        // Para las areas interactuables con forma de poligono, hay que hacerlas primero interactivas
+        // y luego cambiar el cursor manualmente, ya que si no, toda la textura se vuelve interactuable
+        floor.setInteractive(floorPolygon, Phaser.Geom.Polygon.Contains);
+        floor.input.cursor = 'pointer';
+        
+        floor.on('pointerdown', () => {
+            this.dialogManager.setNode(this.floorNode);
+        });
     }
 }

@@ -1,0 +1,189 @@
+{
+    "dad": {
+        "notTalked": {
+            "text": "You're already here, {{name}}."
+        },
+        "notWashed": [
+            {
+                "text": "Have you noticed the gum on your ass?"
+            },
+            {
+                "text": "You have to be more careful, really surprising you don't wash your clothes..."
+            },
+            {
+                "text": "Well, how was your day?"
+            }
+        ],
+        "washed": {
+            "text": "How was your day?"
+        },
+
+        "talked": {
+            "text": "Do you want to talk about anything else?"
+        },
+
+        "choices1": [
+            {
+                "text": "As usual"
+            },
+            {
+                "text": "Guille invited me to go to his place this Saturday."
+            },
+            {
+                "text": "(Talk about other classmates)"
+            }
+        ],
+        "goMatch": {
+            "text": "I've told him I'll go, so I wont't be home on Saturaday afternoon."
+        },
+        "dontGoMatch": {
+            "text": "I've told him no, too many people I don't trust."
+        },
+        "askMatch": [
+            {
+                "text": "I've told him I needed to ask you first."
+            },
+            {
+                "text": "Do you mind if go?"
+            }
+        ],
+        "askMatchReply": {
+            "text": "You are allowed to go, I'll ask your mother just in case."
+        },
+
+        "choices2": [
+            {
+                "text": "About Alison..."
+            },
+            {
+                "text": "(Tell him about the gum)"
+            },
+            {
+                "text": "(Talk about other classmates)"
+            }
+        ],
+        "alisonWarn": [
+            {
+                "text": "Alison is very nice."
+            },
+            {
+                "text": "She warned me about Alex playing me a joke."
+            },
+            {
+                "text":" Although it was useless."
+            }
+        ],
+        "alisonNormal": {
+            "text": "I've spoken with her today."
+        },
+
+        "aboutGumWashed": [
+            {
+                "text": "Today I've ended up with a gum stuck on my ass."
+            },
+            {
+                "text": "I've tried to remove it using water and soap, but it was even worse."
+            },
+            {
+                "text": "Most of the class was laughing at me."
+            }
+        ],
+        "aboutGumNotWashed": [
+            {
+				"text": "About the gum... I don't know how it happened."
+			},
+			{
+				"text": "Most of the class was laughing at me."
+			}
+        ],
+        "dadGumNotWashed": {
+            "text": "Oh honey, you need to look where you place your ass before sitting."
+        },
+        
+        "choices3": [
+            {
+                "text": "María..."
+            },
+            {
+                "text": "The stupid Alex..."
+            },
+            {
+                "text": "(Talk about school)"
+            }
+        ],
+        "maria": [
+            {
+                "text": "I get along with María."
+            },
+            {
+                "text": "Although it seems she doesn't speak to anyone else."
+            }
+        ],
+        
+        "alex": [
+            {
+                "text": "I would say he has a problem with me since the first day."
+            },
+            {
+                "text": "Although I don't know exactly why."
+            }
+        ],
+
+        "prank": {
+            "text": "And today he wanted to play me a pranck."
+        },
+
+        "ask": [
+            {
+                "text": "He was upset with me for seating on his chair."
+            },
+            {
+                "text": "I tried to make peace with him."
+            },
+            {
+                "text": "But as how he talked to me I think he's going to keep looking for trouble."
+            }
+        ],
+        "askReply": [
+            {
+				"text": "If you have any problem with him, don't doubt to tell me."
+			},
+			{
+				"text": "We'll talk to your teacher if it's needed."
+			}
+        ],
+        
+        "distrust": [
+            {
+                "text": "He's looking for a fight."
+            },
+            {
+                "text": "He makes me want to kick his bloody ass."
+            }
+        ],
+        "distrustReply": [
+            {
+                "text": "Do not look for fights."
+            },
+            {
+                "text": "If I need to go and talk to him let me know."
+            },
+            {
+                "text": "Or if you are in trouble, just talk to your teacher."
+            }
+        ],
+        
+        "choices4": [
+            {
+                "text": "High school..."
+            },
+            {
+                "text": "I'm going to my room, there're some stuff needed to be done."
+            }
+        ],
+
+        "school": {
+            "text": "I'm beginning to feel uncomfortable."
+        }
+    }
+}

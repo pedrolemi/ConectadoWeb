@@ -1,0 +1,147 @@
+{
+    "ana_jose": {
+        "root": {
+            "type": "condition",
+            "conditions": [
+                {
+                    "next": "washed",
+                    "gumWashed": {
+                        "value": true,
+                        "operator": "equal",
+                        "global": true,
+                        "default": false
+                    }
+                },
+                {
+                    "next": "notWashed",
+                    "gumWashed": {
+                        "value": false,
+                        "operator": "equal",
+                        "global": true,
+                        "default": false
+                    }
+                }
+            ]
+        },
+        "washed": {
+            "type": "text",
+            "character": "Ana",
+            "next": "washed2"
+        },
+        "washed2": {
+            "type": "text",
+            "character": "Jose",
+            "next": "washed3"
+        },
+        "washed3": {
+            "type": "text",
+            "character": "Jose"
+        },
+
+        "notWashed": {
+            "type": "text",
+            "character": "Ana",
+            "next": "notWashed2"
+        },
+        "notWashed2": {
+            "type": "text",
+            "character": "Jose",
+            "next": "notWashed3"
+        },
+        "notWashed3": {
+            "type": "text",
+            "character": "Jose"
+        }
+    },
+
+    "guille_alison": {
+        "root": {
+            "type": "condition",
+            "conditions": [
+                {
+                    "next": "washed",
+                    "gumWashed": {
+                        "value": true,
+                        "operator": "equal",
+                        "global": true,
+                        "default": false
+                    }
+                },
+                {
+                    "next": "notWashed",
+                    "gumWashed": {
+                        "value": false,
+                        "operator": "equal",
+                        "global": true,
+                        "default": false
+                    }
+                }
+            ]
+        },
+        "washed": {
+            "type": "text",
+            "character": "Alison",
+            "next": "washed2"
+        },
+        "washed2": {
+            "type": "text",
+            "character": "Guille"
+        },
+
+        "notWashed": {
+            "type": "condition",
+            "conditions": [
+                {
+                    "next": "notTalked",
+                    "talked": {
+                        "value": false,
+                        "operator": "equal",
+                        "global": false,
+                        "default": false
+                    }
+                },
+                {
+                    "next": "talked",
+                    "talked": {
+                        "value": true,
+                        "operator": "equal",
+                        "global": false,
+                        "default": false
+                    }
+                }
+            ]
+        },
+        "notTalked": {
+            "type": "text",
+            "character": "Guille",
+            "next": "notTalked2"
+        },
+        "notTalked2": {
+            "type": "text",
+            "character": "Alison",
+            "next": "notTalked3"
+        },
+        "notTalked3": {
+            "type": "text",
+            "character": "Guille",
+            "next": "setTalked"
+        },
+        "setTalked": {
+            "type": "event",
+            "events": [
+                { 
+                    "talked": { 
+                        "variable": "talked", 
+                        "value": true, 
+                        "global": false
+                    }
+                }
+            ]
+        },
+     
+        "talked": {
+            "type": "text",
+            "character": "Alison"
+        }
+    }
+}

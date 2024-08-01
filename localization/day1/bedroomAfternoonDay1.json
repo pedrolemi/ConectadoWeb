@@ -56,7 +56,7 @@
             "type": "event",
             "events": [
                 { 
-                    "endChat": { }
+                    "endChat": { "chat": "chat1" }
                 }
             ]
         }

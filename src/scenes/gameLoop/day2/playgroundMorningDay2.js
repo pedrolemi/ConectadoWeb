@@ -9,9 +9,6 @@ export default class PlaygroundMorningDay2 extends PlaygroundBase {
     create(params) {
         super.create(params);
 
-        // this.gameManager.setValue(this.gameManager.isLate, true)
-        super.create(params);
-
         this.home = "";
         this.stairs = "StairsMorningDay2";
 

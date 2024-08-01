@@ -1,0 +1,69 @@
+{
+    "ana_jose": {
+        "washed": {
+            "text": "Jajaja, ¿te has meado encima?"
+        },
+        "washed2": [
+            {
+				"text": "Jajajaja, no, no, mira bien, se ha cagado."
+			},
+			{
+				"text": "¿Llevas el móvil, Ana? Foto!!"
+			}
+        ],
+        "washed3": {
+            "text": "Jajajaja"
+        },
+
+        "notWashed": [
+            {
+				"text": "A ver si lavas la ropa, menudo desastre llevas en el pantalón"
+			},
+			{
+				"text": "¿No teneís lavadora en casa?"
+			}
+        ],
+        "notWashed2": [
+            {
+				"text": "Jajajaja, ¡nueva moda! chicles pegados al pantalón"
+			},
+			{
+				"text": "Con lo horrorosa que es su ropa, no merece la pena que la lave"
+			},
+			{
+				"text": "Debería tirarla a la basura directamente"
+			}
+        ],
+        "notWashed3": {
+            "text": "Jajajaja"
+        }
+    },
+
+    "guille_alison": {
+        "washed": {
+            "text": "Menuda mancha llevas."
+        },
+        "washed2": {
+            "text": "Bueno, no pasa nada, en un rato se secará."
+        },
+
+        "notTalked": [
+            {
+				"text": "¿Dónde te has apoyado?"
+			},
+			{
+				"text": "Te has debido sentar encima de un chicle."
+			}
+        ],
+        "notTalked2": {
+            "text": "Menudo desastre, pasa por el baño antes de ir a clase."
+        },
+        "notTalked3": {
+            "text": "Sí, igual consigues quitarlo."
+        },
+
+        "talked": {
+            "text": "Prueba a quitarte el chicle en el baño."
+        }
+    }
+}

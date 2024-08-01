@@ -1,0 +1,35 @@
+{
+    "maria": {
+        "root": {
+            "type": "condition",
+            "conditions": [
+                {
+                    "next": "washed",
+                    "gumWashed": {
+                        "value": true,
+                        "operator": "equal",
+                        "global": true,
+                        "default": false
+                    }
+                },
+                {
+                    "next": "notWashed",
+                    "gumWashed": {
+                        "value": false,
+                        "operator": "equal",
+                        "global": true,
+                        "default": false
+                    }
+                }
+            ]
+        },
+        "washed": {
+            "type": "text",
+            "character": "Maria"
+        },
+        "notWashed": {
+            "type": "text",
+            "character": "Maria"
+        }
+    }
+}

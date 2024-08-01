@@ -16,30 +16,17 @@
         "introduce": {
             "type": "text",
             "character": "Ana",
-            "next": "setTalkedNice"
+            "next": "setNiceResponse"
         },
         "insult": {
             "type": "text",
             "character": "Ana",
-            "next": "setTalkedMean"
+            "next": "setMeanResponse"
         },
 
-        "setTalkedNice": {
+        "setNiceResponse": {
             "type": "event",
             "events": [
-                {
-                    "setNiceResponse": { 
-                        "variable": "anaNiceResponse", 
-                        "value": true, 
-                        "global": true
-                    }
-                },
-                { 
-                    "changeFriendship": { 
-                        "character": "Ana", 
-                        "value": -20
-                    }
-                },
                 { 
                     "metAna": { 
                         "variable": "metAna", 
@@ -50,21 +37,20 @@
             ],
             "next": "teacherArrive"
         },
-        "setTalkedMean": {
+        "setMeanResponse": {
             "type": "event",
             "events": [
-                {
-                    "setNiceResponse": { 
-                        "variable": "anaNiceResponse", 
-                        "value": false, 
-                        "global": true
-                    }
-                },
                 { 
                     "metAna": { 
                         "variable": "metAna", 
                         "value": true, 
                         "global": true
+                    }
+                },
+                { 
+                    "changeFriendship": { 
+                        "character": "Ana", 
+                        "value": -20
                     }
                 }
             ],

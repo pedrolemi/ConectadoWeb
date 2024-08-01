@@ -201,7 +201,7 @@ export default class ClassBackMorningDay1 extends ClassBackBase {
             // Se cambia a la escena de transicion
             this.gameManager.changeScene(sceneName, params);
 
-            this.phoneManager.icon.setInteractive();
+            this.phoneManager.icon.setInteractive({ useHandCursor: true });
         });
     }
 }

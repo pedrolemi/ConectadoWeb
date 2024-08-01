@@ -32,20 +32,20 @@
             "conditions": [
                 {
                     "next": "mean",
-                    "anaNiceResponse": {
-                        "value": false,
-                        "operator": "equal",
+                    "AnaFS": {
+                        "value": 49,
+                        "operator": "lower",
                         "global": true,
-                        "default": true
+                        "default": 50
                     }
                 },
                 {
                     "next": "normal",
-                    "anaNiceResponse": {
-                        "value": true,
-                        "operator": "equal",
+                    "AnaFS": {
+                        "value": 50,
+                        "operator": "greater",
                         "global": true,
-                        "default": true
+                        "default": 50
                     }
                 }
             ]
@@ -82,20 +82,20 @@
             "conditions": [
                 {
                     "next": "warnMean",
-                    "anaNiceResponse": {
-                        "value": false,
-                        "operator": "equal",
+                    "AnaFS": {
+                        "value": 49,
+                        "operator": "lower",
                         "global": true,
-                        "default": true
+                        "default": 50
                     }
                 },
                 {
                     "next": "warnNormal",
-                    "anaNiceResponse": {
-                        "value": true,
-                        "operator": "equal",
+                    "AnaFS": {
+                        "value": 50,
+                        "operator": "greater",
                         "global": true,
-                        "default": true
+                        "default": 50
                     }
                 }
             ]
@@ -173,11 +173,11 @@
                         "global": true,
                         "default": false
                     },
-                    "mariaNiceResponse": {
-                        "value": false,
-                        "operator": "equal",
+                    "MariaFS": {
+                        "value": 50,
+                        "operator": "lower",
                         "global": true,
-                        "default": false
+                        "default": 50
                     }
                 },
                 {
@@ -188,11 +188,11 @@
                         "global": true,
                         "default": false
                     },
-                    "mariaNiceResponse": {
-                        "value": true,
-                        "operator": "equal",
+                    "MariaFS": {
+                        "value": 50,
+                        "operator": "greater",
                         "global": true,
-                        "default": false
+                        "default": 50
                     }
                 }
             ]

@@ -56,7 +56,7 @@ export default class BaseScreen extends Phaser.GameObjects.Container {
      */
     animateButton(button, onClick) {
         // Se hace interactivo
-        button.setInteractive();
+        button.setInteractive({ useHandCursor: true });
         let originalScale = button.scale
 
         // Al pasar el raton por encima, el icono se hace mas grande,

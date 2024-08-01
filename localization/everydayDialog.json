@@ -170,5 +170,14 @@
             }
         }
 
+    },
+
+    "class": {
+        "late": {
+            "root": {
+                "type": "text",
+                "character": "teacher"
+            }
+        }
     }
 }

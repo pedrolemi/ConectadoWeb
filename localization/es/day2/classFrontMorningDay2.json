@@ -1,0 +1,30 @@
+{
+    "table": {
+        "root": {
+            "text": "Este sitio está libre, ¿me siento aquí?"
+        },
+        "choices": [
+            {
+                "text": "Si"
+            },
+            {
+                "text": "No"
+            }
+        ],
+        "teacherArrive": {
+            "text": "(Ruidos de fondo, el profesor ha llegado)"
+        }
+    },
+
+    "teacher": {
+        "root": [
+            {
+                "text": "{{name}} llegas tarde."
+            },
+            {
+                "text": "Por favor, siéntate para que podamos continuar la clase."
+            }
+        ]
+    }
+
+}

@@ -7,7 +7,9 @@
         "endBreak": "As soon as you get in, the bell rings and the teacher appears. You did not notice but the morning is over, it's time to go home..."
     },
     "day2": {
-
+        "startClass": "You all sit down and when you realize it's already break time.",
+        "startClassLate": "You go and sit in the first empty desk you see, while everyone is looking at you.",
+        "endBreak": "As soon as you get in, the bell rings and the teacher appears. You did not notice but the morning is over, it's time to go home..."
     },
     "day3": {
 

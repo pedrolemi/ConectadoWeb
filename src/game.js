@@ -34,6 +34,15 @@ import LivingroomMorningDay2 from './scenes/gameLoop/day2/livingroomMorningDay2.
 import PlaygroundMorningDay2 from './scenes/gameLoop/day2/playgroundMorningDay2.js';
 import StairsMorningDay2 from './scenes/gameLoop/day2/stairsMorningDay2.js';
 import CorridorMorningDay2 from './scenes/gameLoop/day2/corridorMorningDay2.js';
+import ClassFrontMorningDay2 from './scenes/gameLoop/day2/classFrontMorningDay2.js';
+import ClassBackBreakDay2 from './scenes/gameLoop/day2/classBackBreakDay2.js';
+import CorridorBreakDay2 from './scenes/gameLoop/day2/corridorBreakDay2.js';
+import BathroomBreakDay2 from './scenes/gameLoop/day2/bathroomBreakDay2.js';
+import StairsBreakDay2 from './scenes/gameLoop/day2/stairsBreakDay2.js';
+import PlaygroundBreakDay2 from './scenes/gameLoop/day2/playgroundBreakDay2.js';
+import PlaygroundAfternoonDay2 from './scenes/gameLoop/day2/playgroundAfternoonDay2.js';
+import LivingroomAfternoonDay2 from './scenes/gameLoop/day2/livingroomAfternoonDay2.js';
+import BedroomAfternoonDay2 from './scenes/gameLoop/day2/bedroomAfternoonDay2.js';
 
 // Dia 3
 import NightmareDay3 from './scenes/gameLoop/day3/nightmareDay3.js';
@@ -67,7 +76,7 @@ const config = {
         // Escenas dia 1
         BedroomMorningDay1, LivingroomMorningDay1, PlaygroundMorningDay1, StairsMorningDay1, CorridorMorningDay1, ClassFrontMorningDay1, ClassBackMorningDay1, ClassBackBreakDay1, CorridorBreakDay1, StairsBreakDay1, PlaygroundBreakDay1, PlaygroundAfternoonDay1, LivingroomAfternoonDay1, BedroomAfternoonDay1, NightmareDay1,
         // Escenas dia 2
-        BedroomMorningDay2, LivingroomMorningDay2, PlaygroundMorningDay2, StairsMorningDay2, CorridorMorningDay2,
+        BedroomMorningDay2, LivingroomMorningDay2, PlaygroundMorningDay2, StairsMorningDay2, CorridorMorningDay2, ClassFrontMorningDay2, ClassBackBreakDay2, CorridorBreakDay2, BathroomBreakDay2, StairsBreakDay2, PlaygroundBreakDay2, PlaygroundAfternoonDay2, LivingroomAfternoonDay2, BedroomAfternoonDay2,
         // Escenas dia 3
         NightmareDay3,
         // Escenas dia 4

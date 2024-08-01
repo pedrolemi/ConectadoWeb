@@ -1,0 +1,23 @@
+{
+    "sink": {
+        "washed": [
+            {
+                "text": "Ya he quitado el chicle, pero ahora la mancha es peor."
+            },
+            {
+                "text": "Se van a reír aún más de mí."
+            }
+        ],
+        "notWashed": {
+            "text": "Igual con agua y jabón consigo quitarlo."
+        },
+        "choices": [
+            {
+                "text": "(Probar con agua y jabón)"
+            },
+            {
+                "text": "(Dejarlo como está)"
+            }
+        ]
+    }
+}

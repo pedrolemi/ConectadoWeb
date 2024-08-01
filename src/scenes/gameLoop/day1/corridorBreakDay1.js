@@ -10,8 +10,11 @@ export default class CorridorBreakDay1 extends CorridorBase {
         super.create(params);
 
         this.stairs = "StairsBreakDay1";
-        this.class = "";
-
+        this.class = "PlaygroundAfternoonDay1";
+        this.classChangeParams = {
+            camPos: "right"
+        };
+        
         // Cambia la hora del movil
         this.phoneManager.setDayInfo("midBreak");
         
@@ -79,24 +82,7 @@ export default class CorridorBreakDay1 extends CorridorBase {
             this.phoneManager.phone.setChatNode(chatName, phoneNode);
         });
 
-        // Evento llamado cuando se elige volver a entrar en clase
-        this.dispatcher.addOnce("endBreak", this, (obj) => {
-            let sceneName = 'TextOnlyScene';
-
-            // Se obtiene el texto de la escena de transicion del archivo de traducciones 
-            let text = this.i18next.t("day1.endBreak", { ns: "transitionScenes", returnObjects: true });
-
-            let params = {
-                text: text,
-                onComplete: () => {
-                    this.gameManager.changeScene('PlaygroundAfternoonDay1');
-                },
-                onCompleteDelay: 500
-            };
-            
-            // Se cambia a la escena de transicion
-            this.gameManager.changeScene(sceneName, params);
-        });
+        
     }
 
     

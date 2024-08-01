@@ -123,6 +123,24 @@ export default class CorridorBase extends BaseScene {
         }, false);
 
 
+        // Evento llamado cuando se elige volver a entrar en clase
+        this.dispatcher.addOnce("endBreak", this, (obj) => {
+            let sceneName = 'TextOnlyScene';
+            let textID = "day" + this.gameManager.day + ".endBreak";
+            // Se obtiene el texto de la escena de transicion del archivo de traducciones 
+            let text = this.i18next.t(textID, { ns: "transitionScenes", returnObjects: true });
+
+            let params = {
+                text: text,
+                onComplete: () => {
+                    this.gameManager.changeScene(this.class, this.classChangeParams);
+                },
+                onCompleteDelay: 500
+            };
+            
+            // Se cambia a la escena de transicion
+            this.gameManager.changeScene(sceneName, params);
+        });
         
 
     }

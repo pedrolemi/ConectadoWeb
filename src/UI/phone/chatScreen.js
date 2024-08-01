@@ -73,6 +73,8 @@ export default class ChatScreen extends BaseScreen {
         this.bringToTop(this.returnButton);
         this.bringToTop(this.nameText);
         this.bringToTop(this.iconImage);
+
+        this.canAnswer = false;
     }
 
 
@@ -80,7 +82,7 @@ export default class ChatScreen extends BaseScreen {
     createTextBox() {
         // Anade la imagen de la caja
         this.textBox = this.scene.add.image(this.BG_X, this.BG_Y * 1.67, 'phoneElements', 'chatTextBox').setScale(0.6);
-        this.textBox.setInteractive();
+        this.textBox.setInteractive({ useHandCursor: true });
 
         // Configuracion de las animaciones
         let tintFadeTime = 50;
@@ -126,7 +128,9 @@ export default class ChatScreen extends BaseScreen {
 
         // Al hacer click, vuelve a cambiar el color de la caja al original
         this.textBox.on('pointerdown', () => {
-            if (!this.scene.dialogManager.isTalking()) {
+                console.log(this.canAnswer)
+
+            if (!this.scene.dialogManager.isTalking() && this.canAnswer) {
                 let fadeColor = this.scene.tweens.addCounter({
                     targets: [this.textBox],
                     from: 0,
@@ -248,6 +252,8 @@ export default class ChatScreen extends BaseScreen {
      * @param {DialogNode} node - nodo de dialogo que se va a reproducir
      */
     setNode(node) {
+        this.canAnswer = true;
+
         // Si el nodo a poner es valido, cambia el nodo por el indicado
         if (node) {
             this.currNode = node;
@@ -260,16 +266,19 @@ export default class ChatScreen extends BaseScreen {
 
     // Procesa el nodo de dialogo
     processNode() {
+        this.canAnswer = true;
+
         if (this.currNode) {
             // Si el nodo es de tipo mensaje, con el retardo indicado, anade
             //  el mensaje al chat, pasa al siguiente nodo, y lo procesa.
             if (this.currNode.type === "chatMessage") {
+                this.canAnswer = false;
                 setTimeout(() => {
                     this.addMessage(this.currNode.text, this.currNode.character, this.currNode.name);
                     this.currNode = this.currNode.next[0];
                     this.processNode();
                 }, this.currNode.replyDelay);
-                
+
             }
             // Si el nodo es de cualquier otro tipo excepto de eleccion, lo procesa el dialogManager
             else if (this.currNode.type !== "choice") {

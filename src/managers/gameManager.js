@@ -235,6 +235,8 @@ export default class GameManager {
 
     startGame(userInfo) {
         this.setUserInfo(userInfo);
+        this.blackboard.clear();
+        this.day = 0;
 
         // IMPORTANTE: Hay que lanzar primero el UIManager para que se inicialice
         // el DialogManager y las escenas puedan crear los dialogos correctamente
@@ -242,6 +244,7 @@ export default class GameManager {
         this.currentScene.scene.launch(UIsceneName);
         this.UIManager = this.currentScene.scene.get(UIsceneName);
         let computerSceneName = 'ComputerScene';
+
         // run tiene 3 opciones:
         // - si esta pausada (no se actualiza), se reanuda
         // - si esta dormida (no se actualiza ni renderiza), se despierta
@@ -252,7 +255,7 @@ export default class GameManager {
         this.computerScene.scene.sleep();
 
         this.day = 2;
-        let sceneName = 'PlaygroundMorningDay2';
+        let sceneName = 'BedroomAfternoonDay2';
 
         // Pasa a la escena inicial con los parametros text, onComplete y onCompleteDelay
         // let sceneName = 'TextOnlyScene';
@@ -299,8 +302,7 @@ export default class GameManager {
             this.currentScene.scene.sleep();
         }
 
-        // Se inicia la escena actual. Con scene.run, si la escena no esta creada,
-        // se crea, pero si esta dormida o pausada, la despierta o la reanuda
+        // Se inicia y actualiza la escena actual
         this.currentScene.scene.run(scene, params);
         this.currentScene = this.currentScene.scene.get(scene);
 

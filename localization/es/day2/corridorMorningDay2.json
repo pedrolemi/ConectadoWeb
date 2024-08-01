@@ -1,20 +1,132 @@
 {
     "alex": {
+        "choices": [
+            {
+                "text": "Me han dicho que quieres gastarme una broma."
+            },
+            {
+                "text": "¿No podemos llevarnos bien?"
+            },
+            {
+                "text": "Conozco a los de tu tipo."
+            }
+        ],
+        "prank": [
+            {
+                "text": "",
+                "text_male": "Soy un poco bromista, pero tranquilo.",
+                "text_female": "Soy un poco bromista, pero tranquila."
+            },
+            {
+                "text": "Nos reiremos todos."
+            }
+        ],
 
+        "ask": {
+            "text": "¿Por qué no empezamos de cero?"
+        },
+        "askReply": {
+            "text": "De acuerdo, entremos en clase."
+        },
+
+        "distrust": [
+            {
+                "text": "Eres el típico que se aprovecha de todos."
+            },
+            {
+                "text": "Que busca pelea con cualquier excusa."
+            }
+        ],
+        "distrustReply": {
+            "text": "",
+            "text_male": "Si has terminado de darme la chapa, lárgate, capullo", 
+            "text_female": "Si has terminado de darme la chapa, lárgate, estúpida"
+            
+        },
+
+        "normal": {
+            "text": "¿Sigues enfadado por lo del sitio de ayer?"
+        },
+        "normalReply": {
+            "text": "Ya veremos, y tú, ¿Sabes ya cúal es tu sitio?"
+        },
+        "talked": {
+            "text": "Me está ignorando."
+        }
     },
     
     "alison": {
         "notTalked": {
-            
+            "text": "¿Qué tal? {{name}}"
         },
+        "warn": [
+            {
+                "text": "Por cierto, antes hablaba Álex de gastarte una broma."
+            },
+            {
+                "text": "No suele ser así, no sé qué le pasa."
+            },
+            {
+                "text": "Ten cuidado, ¿vale?"
+            }
+        ],
         "talked": {
-            "msn": "Entremos a clase o llegaremos tarde."
+            "text": "Entremos a clase o llegaremos tarde."
         }
     },
 
     "guille": {
-        "root": {
-            
+        "match": [
+            {
+                "text": "Vamos a quedar varios de clase el sábado en mi casa para ver una peli."
+            },
+            {
+                "text": "¿Quieres venir? viene gente de clase."
+            },
+            {
+                "text": "Y la veremos en una tele gigante que se ha comprado mi padre para ver el fútbol."
+            }
+        ],
+        "choices": [
+            {
+                "text": "Si"
+            },
+            {
+                "text": "No"
+            },
+            {
+                "text": "Tengo que preguntar antes a mis padres si puedo"
+            }
+        ],
+        "yes": [
+            {
+                "text": "Genial, ya somos uno más entonces."
+            },
+            {
+                "text": "Ya te diré la dirección y los detalles."
+            }
+        ],
+        "no": [
+            {
+                "text": "Es una pena."
+            },
+            {
+                "text": "Bueno, hasta luego."
+            }
+        ],
+        "ask": {
+            "text": "Bueno, ya me dirás."
+        },
+        
+        "reminder": {
+            "text": "Acuerdate, el sábado en mi casa, a las 6 de la tarde."
+        },
+        "goToClass": {
+            "text": "Entremos a clase."
+        },
+
+        "distracted": {
+            "text": "Parece distraído."
         }
     }
 }

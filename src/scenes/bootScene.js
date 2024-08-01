@@ -327,6 +327,7 @@ export default class BootScene extends Phaser.Scene {
             // 'test/computerTest.json',
             'posts.json',
             'everydayDialog.json',
+
             'day1/bedroomMorningDay1.json',
             'day1/livingroomMorningDay1.json',
             'day1/playgroundMorningDay1.json',
@@ -339,11 +340,21 @@ export default class BootScene extends Phaser.Scene {
             'day1/livingroomAfternoonDay1.json',
             'day1/bedroomAfternoonDay1.json',
             'day1/nightmareDay1.json',
+
             'day2/bedroomMorningDay2.json',
             'day2/livingroomMorningDay2.json',
             'day2/playgroundMorningDay2.json',
             'day2/corridorMorningDay2.json',
+            'day2/classFrontMorningDay2.json',
+            'day2/classBackBreakDay2.json',
+            'day2/corridorBreakDay2.json',
+            'day2/bathroomBreakDay2.json',
+            'day2/playgroundBreakDay2.json',
+            'day2/playgroundAfternoonDay2.json',
+            'day2/livingroomAfternoonDay2.json',
+            'day2/bedroomAfternoonDay2.json',
             'day2/nightmareDay2.json',
+            
             'day3/nightmareDay3.json',
             'day4/nightmareDay4.json',
             'day5/nightmareDay5.json'

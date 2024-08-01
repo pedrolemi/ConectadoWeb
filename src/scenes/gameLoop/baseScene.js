@@ -65,6 +65,15 @@ export default class BaseScene extends Phaser.Scene {
 
         this.phoneManager.topLid.visible = false;
         this.phoneManager.botLid.visible = false;
+
+        // Evento que se llama al contestar al mensaje para indicar que ya no hay nada mas que contestar
+        this.dispatcher.addOnce("endChat", this, (obj) => {
+            // console.log(obj);
+            let chatName = this.i18next.t("textMessages." + obj.chat, { ns: "phoneInfo", returnObjects: true });
+            let nodes = this.cache.json.get('everydayDialog');
+            let phoneNode = this.readNodes(nodes, "everydayDialog", "phone", true);
+            this.phoneManager.phone.setChatNode(chatName, phoneNode);
+        });
     }
 
 
@@ -386,8 +395,15 @@ export default class BaseScene extends Phaser.Scene {
                     evt.blackboard = this.blackboard;
                 }
 
-                // Lo mete en las variables del nodo
-                node.events.push(evt);
+                // Lo mete en las variables del nodo. Si es un evento de cambiar amistad, lo pone al principio de 
+                // los eventos (por si acaso se lanzan a la vez otros eventos que cambien la escena, ya que hacen 
+                // que los eventos de cambiar amistad no se lancen si van despues de un cambio de escena)
+                if (evt.name === "changeFriendship") {
+                    node.events.unshift(evt);
+                }
+                else {
+                    node.events.push(evt);
+                }
             }
 
             // Si hay un nodo despues de este, se crea de manera y se

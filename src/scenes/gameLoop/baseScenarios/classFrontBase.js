@@ -21,7 +21,6 @@ export default class ClassFrontBase extends BaseScene {
 
         this.rightBound = bg.displayWidth;
 
-        
         // Primera fila de sillas y mesas
         this.row1Chairs = this.add.image(0, 0, 'frontRow1Chairs').setOrigin(0, 0).setScale(this.scale);
         this.row1Tables = this.add.image(0, 0, 'frontRow1Tables').setOrigin(0, 0).setScale(this.scale);
@@ -59,5 +58,35 @@ export default class ClassFrontBase extends BaseScene {
 
         this.row1Chairs.setDepth(this.row2Tables.depth + 1);
         this.row1Tables.setDepth(this.row1Chairs.depth + 1);
+
+
+        this.tablesNode = null;
+        // Forma geometrica para poder interactuar con los sitios libres
+        let graphics = this.add.graphics(0, 0);
+        let polygon = new Phaser.Geom.Polygon([
+            1240, 525,
+            910, 525,
+            1095, 670,
+            1495, 670,
+            1550, 680,
+            1550, 600,
+            1365, 615,
+            1260, 580,
+            1465, 565,
+        ]);
+        // graphics.lineStyle(5, 0xFF00FF, 1.0).fillStyle(0xFFF, 1.0).fillPoints(polygon.points, true);
+        graphics.generateTexture('tables', this.rightBound, this.CANVAS_HEIGHT);
+        let tables = this.add.image(0, 0, 'tables').setOrigin(0, 0).setDepth(200);
+        graphics.destroy();
+
+        // Para las areas interactuables con forma de poligono, hay que hacerlas primero interactivas
+        // y luego cambiar el cursor manualmente, ya que si no, toda la textura se vuelve interactuable
+        tables.setInteractive(polygon, Phaser.Geom.Polygon.Contains);
+        tables.input.cursor = 'pointer';
+        
+        tables.on('pointerdown', () => {
+            this.dialogManager.setNode(this.tablesNode);
+        });
+
     }
 }

@@ -27,10 +27,10 @@ export default class TextInput extends Phaser.GameObjects.Container {
         this.fillImg = this.scene.add.image(0, 0, fill);
         this.fillImg.setOrigin(0, 0.5);
         if (hitArea) {
-            this.fillImg.setInteractive(hitArea.area, hitArea.callback);
+            this.fillImg.setInteractive({ useHandCursor: true}, hitArea.area, hitArea.callback);
         }
         else {
-            this.fillImg.setInteractive();
+            this.fillImg.setInteractive({ useHandCursor: true});
         }
         //this.scene.input.enableDebug(this.fillImg, '0xffff00');
         this.add(this.fillImg);
@@ -88,6 +88,38 @@ export default class TextInput extends Phaser.GameObjects.Container {
         let nCol = Phaser.Display.Color.HexStringToColor('#ffffff');
         let pCol = Phaser.Display.Color.GetColor(pressedColor.R, pressedColor.G, pressedColor.B);
         pCol = Phaser.Display.Color.IntegerToRGB(pCol);
+
+        // Se cambia el color de la caja al pasar y sacar el raton por encima
+        this.fillImg.on('pointerover', () => {
+            scene.tweens.addCounter({
+                targets: this.fillImg,
+                from: 0,
+                to: 100,
+                onUpdate: (tween) => {
+                    const value = tween.getValue();
+                    let col = Phaser.Display.Color.Interpolate.ColorWithColor(nCol, pCol, 100, value);
+                    let colInt = Phaser.Display.Color.GetColor(col.r, col.g, col.b);
+                    this.fillImg.setTint(colInt);
+                },
+                duration: 50,
+                repeat: 0,
+            });
+        });
+        this.fillImg.on('pointerout', () => {
+            scene.tweens.addCounter({
+                targets: this.fillImg,
+                from: 0,
+                to: 100,
+                onUpdate: (tween) => {
+                    const value = tween.getValue();
+                    let col = Phaser.Display.Color.Interpolate.ColorWithColor(pCol, nCol, 100, value);
+                    let colInt = Phaser.Display.Color.GetColor(col.r, col.g, col.b);
+                    this.fillImg.setTint(colInt);
+                },
+                duration: 50,
+                repeat: 0,
+            });
+        });
 
         this.fillImg.on('pointerup', () => {
             // Si se clica en la caja de texto, es que el usuario quiere escribir en la caja

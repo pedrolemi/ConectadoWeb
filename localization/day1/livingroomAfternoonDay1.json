@@ -68,9 +68,41 @@
         "choices1": {
             "type": "choice",
             "choices": [
-                { "next": "" },
+                { "next": "checkIgnored" },
                 { "next": "guille", "repeat": false },
                 { "next": "prepareChoices2" }
+            ]
+        },
+        "checkIgnored": {
+            "type": "condition",
+            "conditions": [
+                {
+                    "next": "ignore",
+                    "ignored": {
+                        "value": false,
+                        "operator": "equal",
+                        "global": false,
+                        "default": false
+                    }
+                }
+            ]
+        },
+        "ignore": {
+            "type": "event",
+            "events": [
+                { 
+                    "changeFriendship": { 
+                        "character": "parents", 
+                        "value": -10
+                    }
+                },
+                { 
+                    "ignore": { 
+                        "variable": "ignored", 
+                        "value": true, 
+                        "global": false
+                    }
+                }
             ]
         },
         "guille": {
@@ -104,9 +136,20 @@
         "guilleExtra": {
             "type": "text",
             "character": "player",
+            "next": "FSGuille"
+        },
+        "FSGuille": {
+            "type": "event",
+            "events": [
+                { 
+                    "changeFriendship": { 
+                        "character": "parents", 
+                        "value": 2
+                    }
+                }
+            ],
             "next": "choices1"
         },
-
         
         "prepareChoices2": {
             "type": "event",
@@ -156,16 +199,41 @@
         "notFound": {
             "type": "text",
             "character": "player",
-            "next": "choices2"
+            "next": "FSAlison"
         },
         "found": {
             "type": "text",
             "character": "player",
+            "next": "FSAlison"
+        },
+        "FSAlison": {
+            "type": "event",
+            "events": [
+                { 
+                    "changeFriendship": { 
+                        "character": "parents", 
+                        "value": 5
+                    }
+                }
+            ],
             "next": "choices2"
         },
+
         "jose": {
             "type": "text",
             "character": "player",
+            "next": "FSJose"
+        },
+        "FSJose": {
+            "type": "event",
+            "events": [
+                { 
+                    "changeFriendship": { 
+                        "character": "parents", 
+                        "value": 5
+                    }
+                }
+            ],
             "next": "choices2"
         },
 
@@ -196,20 +264,20 @@
             "conditions": [
                 {
                     "next": "meanResponse",
-                    "mariaNiceResponse": {
-                        "value": false,
-                        "operator": "equal",
+                    "MariaFS": {
+                        "value": 50,
+                        "operator": "lower",
                         "global": true,
-                        "default": false
+                        "default": 50
                     }
                 },
                 {
                     "next": "niceResponse",
-                    "mariaNiceResponse": {
-                        "value": true,
-                        "operator": "equal",
+                    "MariaFS": {
+                        "value": 50,
+                        "operator": "greater",
                         "global": true,
-                        "default": false
+                        "default": 50
                     }
                 }
             ]
@@ -217,13 +285,26 @@
         "meanResponse": {
             "type": "text",
             "character": "player",
-            "next": "choices3"
+            "next": "FSMaria"
         },
         "niceResponse": {
             "type": "text",
             "character": "player",
+            "next": "FSMaria"
+        },
+        "FSMaria": {
+            "type": "event",
+            "events": [
+                { 
+                    "changeFriendship": { 
+                        "character": "parents", 
+                        "value": 5
+                    }
+                }
+            ],
             "next": "choices3"
         },
+
         "alex": {
             "type": "text",
             "character": "player",
@@ -264,7 +345,7 @@
         "submit": {
             "type": "text",
             "character": "player",
-            "next": "choices3"
+            "next": "FSAlex"
         },
         "downplay": {
             "type": "text",
@@ -274,7 +355,7 @@
         "momDownplayReply": {
             "type": "text",
             "character": "mom",
-            "next": "choices3"
+            "next": "FSAlex"
         },
         "defy": {
             "type": "text",
@@ -284,6 +365,18 @@
         "momDefyReply": {
             "type": "text",
             "character": "mom",
+            "next": "FSAlex"
+        },
+        "FSAlex": {
+            "type": "event",
+            "events": [
+                { 
+                    "changeFriendship": { 
+                        "character": "parents", 
+                        "value": 10
+                    }
+                }
+            ],
             "next": "choices3"
         },
 
@@ -307,8 +400,21 @@
         "ana": {
             "type": "text",
             "character": "player",
+            "next": "FSAna"
+        },
+        "FSAna": {
+            "type": "event",
+            "events": [
+                { 
+                    "changeFriendship": { 
+                        "character": "parents", 
+                        "value": 3
+                    }
+                }
+            ],
             "next": "choices4"
         },
+
         "school": {
             "type": "text",
             "character": "player",

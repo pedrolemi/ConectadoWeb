@@ -124,6 +124,12 @@
                         "value": true, 
                         "global": true
                     }
+                },
+                { 
+                    "changeFriendship": { 
+                        "character": "Jose", 
+                        "value": 10
+                    }
                 }
             ],
             "next": "ask"
@@ -165,7 +171,40 @@
         },
         "afterPlayerIntroduction": {
             "type": "text",
-            "character": "Alison"
+            "character": "Alison",
+            "next": "checkIntroduced"
+        },
+        "checkIntroduced": {
+            "type": "condition",
+            "conditions": [
+                {
+                    "next": "setIntroduced",
+                    "introducedAlison": {
+                        "value": false,
+                        "operator": "equal",
+                        "global": false,
+                        "default": false
+                    }
+                }
+            ]
+        },
+        "setIntroduced": {
+            "type": "event",
+            "events": [
+                { 
+                    "changeFriendship": { 
+                        "character": "Alison", 
+                        "value": 10
+                    }
+                },
+                { 
+                    "setIntroduced": { 
+                        "variable": "introducedAlison", 
+                        "value": true, 
+                        "global": false
+                    }
+                }
+            ]
         },
 
         "goodbye": {
@@ -185,7 +224,7 @@
             "type": "choice",
             "choices":[
                 { "next": "introduce" },
-                { "next": "bellRinging" }
+                { "next": "dontIntroduce" }
             ]
         },
         "introduce": {
@@ -209,11 +248,28 @@
                         "value": true, 
                         "global": true
                     }
+                },
+                { 
+                    "changeFriendship": { 
+                        "character": "Guille", 
+                        "value": 10
+                    }
                 }
             ],
             "next": "bellRinging"
         },
-
+        "dontIntroduce": {
+            "type": "event",
+            "events": [
+                { 
+                    "changeFriendship": { 
+                        "character": "Guille", 
+                        "value": -10
+                    }
+                }
+            ],
+            "next": "bellRinging"
+        },
         "bellRinging": {
             "type": "text",
             "character": "",

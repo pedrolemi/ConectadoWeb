@@ -1,0 +1,15 @@
+{
+    "guille": {
+        "root": {
+            "type": "text",
+            "character": "Guille"
+        }
+    },
+
+    "voices": {
+        "root": {
+            "type": "text",
+            "character": "voices"
+        }
+    }
+}

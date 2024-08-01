@@ -32,7 +32,7 @@ export default class PhoneManager {
 
         // Anade un rectangulo para bloquear la interaccion con los elementos del fondo
         this.bgBlock = scene.add.rectangle(0, 0, this.scene.CANVAS_WIDTH, this.scene.CANVAS_HEIGHT, 0xfff, 0).setOrigin(0, 0);
-        this.bgBlock.setInteractive();
+        this.bgBlock.setInteractive({ useHandCursor: true });
         this.bgBlock.setDepth(this.icon.depth - 1);
 
 
@@ -84,7 +84,7 @@ export default class PhoneManager {
     createIcon() {
         // Anade el icono del telefono
         this.icon = this.scene.add.image(this.scene.CANVAS_WIDTH - this.OFFSET, this.scene.CANVAS_HEIGHT - this.OFFSET, 'phoneElements', 'phoneIcon').setScale(this.ICON_SCALE);
-        this.icon.setInteractive();
+        this.icon.setInteractive({ useHandCursor: true });
 
         // Al pasar el raton por encima del icono, se hace mas grande,
         // al quitar el raton de encima vuelve a su tamano original,
@@ -172,7 +172,7 @@ export default class PhoneManager {
             else {
                 // Se hace visible y se bloquea la interaccion con los elementos del fondo
                 this.phone.visible = true;
-                this.bgBlock.setInteractive();
+                this.bgBlock.setInteractive({ useHandCursor: true });
 
                 this.phone.setScale(this.PHONE_SCALE);
                 let x = { from: this.PHONE_HIDDEN.x, to: this.PHONE_VISIBLE.x };
@@ -379,7 +379,7 @@ export default class PhoneManager {
                 this.activeTween.on('complete', () => {
                     // Se vuelve a poner la alarma y el bloqueo del fondo
                     this.phone.toAlarmScreen();
-                    this.bgBlock.setInteractive();
+                    this.bgBlock.setInteractive({ useHandCursor: true });
 
                     // Vuelve a reproducir la animacion de cerrar los ojos  
                     setTimeout(() => {
@@ -436,7 +436,7 @@ export default class PhoneManager {
         // ir a la larma y activar el bloqueo del fondo)
         this.activeTween.on('complete', () => {
             this.phone.toAlarmScreen();
-            this.bgBlock.setInteractive();
+            this.bgBlock.setInteractive({ useHandCursor: true });
         });
 
 

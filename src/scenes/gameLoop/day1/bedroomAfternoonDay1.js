@@ -46,13 +46,5 @@ export default class BedroomAfternoonDay1 extends BedroomBase {
         // Mensajes del movil
         let chatName = this.i18next.t("textMessages.chat1", { ns: "phoneInfo", returnObjects: true });
         this.phoneManager.phone.setChatNode(chatName, phoneNode);
-
-        // Evento que se llama al contestar al mensaje para indicar que ya no hay nada mas que contestar
-        this.dispatcher.addOnce("endChat", this, (obj) => {
-            console.log(obj);
-            nodes = this.cache.json.get('everydayDialog');
-            phoneNode = super.readNodes(nodes, "everydayDialog", "phone", true);
-            this.phoneManager.phone.setChatNode(chatName, phoneNode);
-        });
     }
 }

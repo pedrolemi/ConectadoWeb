@@ -56,7 +56,7 @@ export default class LanguageMenu extends Phaser.Scene {
         let scale = height / button.height;
         button.setScale(scale);
 
-        button.setInteractive();
+        button.setInteractive({ useHandCursor: true});
         button.on('pointerover', () => {
             this.tweens.add({
                 targets: button,
@@ -78,7 +78,7 @@ export default class LanguageMenu extends Phaser.Scene {
         button.on('pointerdown', () => {
             // Se cambia el idioma y se pasa a la pantalla de titulo
             this.i18next.changeLanguage(language);
-            //this.gameManager.startTitleMenu();
+            this.gameManager.startTitleMenu();
 
             // TEST
             let userInfo = {

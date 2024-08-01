@@ -32,7 +32,7 @@ export default class OptionBox extends DialogObject {
         this.text = this.scene.add.text(x, y, text, this.textConfig);
         this.text.setOrigin(0, 0.5);
 
-        this.box.setInteractive();
+        this.box.setInteractive({ useHandCursor: true });
 
         // Configuracion de las animaciones
         let tintFadeTime = 50;
@@ -112,7 +112,7 @@ export default class OptionBox extends DialogObject {
         if (active && !isVisible) {
             this.box.disableInteractive();
             super.activate(true, [this.box, this.text], () => {
-                this.box.setInteractive();
+                this.box.setInteractive({ useHandCursor: true });
             }, 0);
         }
         // Si se va a desactivar y es visible, desaparece con animacion

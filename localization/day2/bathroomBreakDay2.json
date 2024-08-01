@@ -1,0 +1,55 @@
+{
+    "sink": {
+        "root": {
+            "type": "condition",
+            "conditions": [
+                {
+                    "next": "washed",
+                    "gumWashed": {
+                        "value": true,
+                        "operator": "equal",
+                        "global": true,
+                        "default": false
+                    }
+                },
+                {
+                    "next": "notWashed",
+                    "gumWashed": {
+                        "value": false,
+                        "operator": "equal",
+                        "global": true,
+                        "default": false
+                    }
+                }
+            ]
+        },
+        "washed": {
+            "type": "text",
+            "character": "player"
+        },
+        "notWashed": {
+            "type": "text",
+            "character": "player",
+            "next": "choices"
+        },
+        "choices": {
+            "type": "choice",
+            "choices": [
+                { "next": "wash" },
+                { "next": "" }
+            ]
+        },
+        "wash": {
+            "type": "event",
+            "events": [
+                { 
+                    "wash": { 
+                        "variable": "gumWashed", 
+                        "value": true, 
+                        "global": true
+                    }
+                }
+            ]
+        }
+    }
+}

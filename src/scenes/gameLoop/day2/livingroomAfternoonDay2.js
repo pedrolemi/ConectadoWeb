@@ -53,7 +53,7 @@ export default class LivingroomAfternoonDay2 extends LivingroomBase {
         
         this.dispatcher.addOnce("prepareChoices3", this, (obj) => {
             // Si no se ha conocido a Maria o no se tiene suficiente amistad con ella, se quita la opcion para hablar de ella
-            if (!this.gameManager.getValue("metMaria") && this.gameManager.getValue("MariaFS") > 50) {
+            if (!this.gameManager.getValue("metMaria") || this.gameManager.getValue("MariaFS") < 50) {
                 this.dialogManager.activateOptions(false, () => {
                     let node = this.dialogManager.currNode
                 

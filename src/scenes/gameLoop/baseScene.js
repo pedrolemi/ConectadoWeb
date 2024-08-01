@@ -66,6 +66,20 @@ export default class BaseScene extends Phaser.Scene {
         this.phoneManager.topLid.visible = false;
         this.phoneManager.botLid.visible = false;
 
+
+        this.dispatcher.add("changeFriendship", this, (obj) => {
+            console.log(obj);
+            let varName = obj.character + "FS";
+            if (!this.gameManager.getValue(varName)) {
+                this.gameManager.setValue(varName, 50);
+            }
+            let val = this.gameManager.getValue(varName)
+            val += obj.value;
+            this.gameManager.setValue(varName, val);
+
+            console.log(this.gameManager.blackboard)
+        });
+
         // Evento que se llama al contestar al mensaje para indicar que ya no hay nada mas que contestar
         this.dispatcher.addOnce("endChat", this, (obj) => {
             // console.log(obj);

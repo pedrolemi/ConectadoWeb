@@ -30,5 +30,20 @@
                 ]
             }
         }
+    },
+    "seat": {
+        "root": {
+            "type": "text",
+            "character": "shadow",
+            "next": "seatFadesOut"
+        },
+        "seatFadesOut": {
+            "type": "event",
+            "events": [
+                {
+                    "seatFadesOut": {}
+                }
+            ]
+        }
     }
 }

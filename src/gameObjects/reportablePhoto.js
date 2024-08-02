@@ -38,6 +38,7 @@ export default class ReportablePhoto extends Phaser.GameObjects.Container {
         this.movThreshold = 50;
         
         // Numero de toques necesarios para que se ejecute la funcion
+        // (minimo incluido, maximo incluido)
         this.nTouches = Phaser.Math.Between(minTouches, maxTouches);
         this.minTouches = minTouches;
         this.maxTouches = maxTouches;
@@ -191,7 +192,7 @@ export default class ReportablePhoto extends Phaser.GameObjects.Container {
             let attempts = 0;
             // Se comprueba si el punto aleatorio calcualdo es valido. Si no lo es, se sigue buscando otro
             while (direction.length() < this.randomPointThreshold && attempts < this.maxAttempts) {
-                // minimo incluido, maximo excluido
+                // (minimo incluido, maximo excluido)
                 let x = Phaser.Math.FloatBetween(this.boundaries.left, this.boundaries.right);
                 let y = Phaser.Math.FloatBetween(this.boundaries.top, this.boundaries.bottom);
                 point.set(x, y);

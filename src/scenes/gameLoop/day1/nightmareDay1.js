@@ -11,91 +11,128 @@ export default class NightmareDay1 extends NightmareMinigame {
 
     create(params) {
         super.create(params);
-
+        
         // Guardar las sillas
-        this.chairs = new Set();
+        this.chairs = [];
+        // Ultima silla tocada (para saber cual hay que hacer desaparecer)
+        // Nota: solo se usa cuando la silla emite un dialogo
+        this.lastTouchedChair = null;
+
+        // Dialogo que emiten alguna de las sillas
+        this.seatNode = this.readNodes('seat');
+        // Numero de sillas que emiten el dialogo
+        this.nChairsWithDialogues = 2;
 
         let upperRow = {
             y: 2.8 * this.CANVAS_HEIGHT / 4,
             nItems: 5,
             sideOffset: 120
         };
-        this.createCenteredChairs(upperRow.y, upperRow.nItems, upperRow.sideOffset);
+        let upperChairs = this.createCenteredChairs(upperRow.y, upperRow.nItems, upperRow.sideOffset);
 
         let lowerRow = {
             y: 3.3 * this.CANVAS_HEIGHT / 4,
             nItems: 5,
             sideOffset: 50
         }
-        this.createCenteredChairs(lowerRow.y, lowerRow.nItems, lowerRow.sideOffset);
+        let lowerChairs = this.createCenteredChairs(lowerRow.y, lowerRow.nItems, lowerRow.sideOffset);
+
+        this.chairs = upperChairs.concat(lowerChairs);
+
+        // Saber cuantas sillas restantes quedan por tocar
+        this.nChairs = this.chairs.length;
+
+        // Evento para hacer desaparecer una silla que ha emitido un dialogo
+        this.dispatcher.add('seatFadesOut', this, () => {
+            if (this.lastTouchedChair) {
+                this.chairFadesOut(this.lastTouchedChair)
+            }
+            this.lastTouchedChair = null;
+        });
     }
 
     /**
-     * Crea sillas centradas respecto a un offset a los lados
-     * @param {Number} y - posicion y donde se crean las sillas 
-     * @param {Number} nItems - numero de sillas que se crean
-     * @param {Number} sideOffset - distancia que se deja a cada lado respecto al ancho del canvas
+     * Crear un numero de sillas centradas
      */
     createCenteredChairs(y, nItems, sideOffset) {
-        if (nItems > 0) {
-            let scale = 0.55;
-            let frameName = 'chair';
+        // Objeto que sirve como modelo para el resto de objetos
+        let chairAux = this.createChair();
+        return this.createCenteredObjects(y, nItems, sideOffset, chairAux);
+    }
 
-            // Se crea una silla de prueba para poder obtener el ancho
-            let aux = this.add.image(0, 0, this.atlasName, frameName);
-            aux.setScale(scale);
-            // El area de trabajo es el ancho del canvas menos el offset a cada y la mitad de la silla a cada lado para que no se salgan de los bordes
-            let areaWidth = this.CANVAS_WIDTH - sideOffset * 2 - aux.displayWidth;
-            // Se calcula donde se va a colocar cada silla
-            let posX = areaWidth / (nItems - 1);
-            aux.destroy();
-
-            // Se colocan las sillas
-            for (let i = 0; i < nItems; ++i) {
-                let x = posX * i + sideOffset + aux.displayWidth / 2;
-                let chair = this.add.image(x, y, this.atlasName, frameName);
-                chair.setScale(scale);
-                this.chairs.add(chair);
-            }
+    /**
+     * Crear una silla
+     * Nota: propiedades w (ancho de la silla) y clone (clonar silla) para poder crear una hilera de sillas
+     */
+    createChair() {
+        let scale = 0.55;
+        let chair = this.add.image(0, 0, this.atlasName, 'chair');
+        chair.setScale(scale);
+        chair.w = chair.displayWidth;
+        chair.clone = () => {
+            return this.createChair();
         }
+        return chair;
     }
 
     onMinigameStarts() {
-        this.animateChairs();
+        // Se seleccionan dos silla aleatorias para que emitan dialogos
+        for (let i = 0; i < this.nChairsWithDialogues; ++i) {
+            let randIndex = Phaser.Math.Between(0, this.chairs.length - 1);
+            let chair = this.chairs[randIndex];
+            this.activateChairForMinigame(chair, this.seatNode);
+            this.chairs.splice(randIndex, 1);
+        }
+
+        // El resto de sillas directamente se desvacenen
+        this.chairs.forEach((chair) => {
+            this.activateChairForMinigame(chair);
+        });
+
+        this.chairs = [];
     }
 
     /**
      * Logica del minijuego
-     * Animar las sillas y hacer que cuando se palse el cursor sobre ellas desaparezcan
+     * Animar las sillas y hacer que al pasar el cursor por encima de ellas, desaparezcan.
+     * Ademas, algunas de las sillas antes de desaparecer emitiran un dialogo.
      */
-    animateChairs() {
-        let fadeOutDuration = 100;
+    activateChairForMinigame(chair, node) {
+        chair.setInteractive({ useHandCursor: true });
+        // Desaparece la silla
+        chair.once('pointerover', () => {
+            chair.removeInteractive();
 
-        this.chairs.forEach((chair) => {
-            chair.setInteractive({ useHandCursor: true });
-            // Desaparece la silla
-            chair.once('pointerover', () => {
-                chair.removeInteractive();
-                let fadeOut = this.tweens.add({
-                    targets: chair,
-                    alpha: 0,
-                    duration: fadeOutDuration,
-                    repeat: 0,
-                });
-
-                fadeOut.on('complete', () => {
-                    // Se elimina de la estructura de datos y se comprueba si ya no quedan mas sillas
-                    // En ese caso, el minijuego ha terminado
-                    if (this.chairs.has(chair)) {
-                        this.chairs.delete(chair);
-                        chair.destroy();
-
-                        if (this.chairs.size <= 0) {
-                            this.onMinigameFinishes();
-                        }
-                    }
-                })
-            });
+            if (node) {
+                this.lastTouchedChair = chair;
+                this.dialogManager.setNode(node);
+            }
+            else {
+                this.chairFadesOut(chair);
+            }
         });
+    }
+
+    /**
+     * Hacer desaparecer una silla
+     */
+    chairFadesOut(chair) {
+        let fadeOutDuration = 90;
+
+        let fadeOut = this.tweens.add({
+            targets: chair,
+            alpha: 0,
+            duration: fadeOutDuration,
+            repeat: 0,
+        });
+
+        fadeOut.on('complete', () => {
+            chair.destroy();
+
+            --this.nChairs;
+            if (this.nChairs <= 0) {
+                this.onMinigameFinishes();
+            }
+        })
     }
 }

@@ -70,7 +70,7 @@ export default class NightmareDay3 extends NightmareMinigame {
 
         // Cuando llega el evento, es que el dialogo del personaje ha terminado y tiene que desaparecer
         let fadeOutDuration = 1000;
-        this.dispatcher.add('fadeOut', this, (eventInfo) => {
+        this.dispatcher.add('characterFadesOut', this, (eventInfo) => {
             let charName = eventInfo.character;
             if (this.characters.has(charName)) {
                 let char = this.characters.get(charName);

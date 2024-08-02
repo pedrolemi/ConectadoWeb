@@ -47,7 +47,7 @@ export default class GameManager {
         this.computerScene = null;
 
         this.day = 0;       // Dia de la semana. Empieza en 0 porque al iniciarse la escena de la alarma, se va actualizando
-        
+
         this.generateTextures();
 
         // Configuracion de texto por defecto
@@ -187,7 +187,7 @@ export default class GameManager {
 
 
 
-    
+
     // Tiene los campos: name, username, password, gender
     setUserInfo(userInfo) {
         this.userInfo = userInfo;
@@ -200,7 +200,7 @@ export default class GameManager {
     ///////////////////////////////////////
     /// Metodos para cambiar de escena ///
     //////////////////////////////////////
-    
+
     startLangMenu() {
         let sceneName = 'LanguageMenu';
         this.changeScene(sceneName);
@@ -242,8 +242,7 @@ export default class GameManager {
         this.computerScene.scene.sleep();
 
         this.day = 2;
-        // let sceneName = 'BedroomAfternoonDay2';
-        let sceneName = 'CorridorMorningDay2';
+        let sceneName = 'BedroomAfternoonDay2';
 
         // Pasa a la escena inicial con los parametros text, onComplete y onCompleteDelay
         // let sceneName = 'TextOnlyScene';

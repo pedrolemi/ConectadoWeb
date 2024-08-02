@@ -32,7 +32,6 @@ export default class NightmareMinigame extends NightmareBase {
         // Se crea la sombra, su retrato y los nodos con sus dialogos
         this.shadow = this.createShadow();
 
-
         // Se hace un fade in de la camara y cuando termina, se pone inicia el dialogo
         this.cameras.main.fadeIn(500, 0, 0, 0);
         this.cameras.main.once(Phaser.Cameras.Scene2D.Events.FADE_IN_COMPLETE, (cam, effect) => {
@@ -77,6 +76,39 @@ export default class NightmareMinigame extends NightmareBase {
     }
 
     /**
+     * Crea objetos centradas respecto a un offset a los lados
+     * @param {Number} y - posicion y donde se crean los objetos 
+     * @param {Number} nItems - numero de objetos que se crean
+     * @param {Number} sideOffset - distancia que se deja a cada lado respecto al ancho del canvas
+     * @param {Object} object - objeto modelo 
+     *                              Importante: tiene que tener definida la propieda w (ancho del objeto) y la funcion clone (clonar el objeto)
+     */
+    createCenteredObjects(y, nItems, sideOffset, object) {
+        let objects = [];
+
+        if (nItems > 0) {
+            // El ancho donde colocar los objetos es el ancho del canvas menos el offset a cada lado y 
+            // la mitad del objeto a cada a cada lado para que no se salga de los bordes
+            let areaWidth = this.CANVAS_WIDTH - sideOffset * 2 - object.w;
+            let posX = areaWidth / (nItems - 1);
+
+            // Se crean y colocan cada uno de los objetos
+            for (let i = 0; i < nItems; ++i) {
+                let x = posX * i + sideOffset + object.w / 2;
+                let clonedObject = object.clone();
+                clonedObject.x = x;
+                clonedObject.y = y;
+                objects.push(clonedObject);
+            }
+        }
+        // Se destruye el objeto modelo
+        object.destroy();
+
+        // Se devuelven los objetos creados
+        return objects;
+    }
+
+    /**
      * Se encarga de crear el personaje, el retrato y los dialogos de la sombra
      * @returns {Object} - personaje, retrato y dialogos de la sombra
      */
@@ -95,7 +127,7 @@ export default class NightmareMinigame extends NightmareBase {
         }
         let shadow = this.createCharFromImage(tr, 'Alex', null, charName);
 
-        shadow.char.setOrigin(0).setDepth(1);
+        shadow.char.setOrigin(0).setDepth(2);
         //shadow.char.setVisible(false);
 
         shadow.char.setTint(blackColor);

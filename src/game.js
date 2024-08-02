@@ -43,6 +43,7 @@ import PlaygroundBreakDay2 from './scenes/gameLoop/day2/playgroundBreakDay2.js';
 import PlaygroundAfternoonDay2 from './scenes/gameLoop/day2/playgroundAfternoonDay2.js';
 import LivingroomAfternoonDay2 from './scenes/gameLoop/day2/livingroomAfternoonDay2.js';
 import BedroomAfternoonDay2 from './scenes/gameLoop/day2/bedroomAfternoonDay2.js';
+import NightmareDay2 from './scenes/gameLoop/day2/nightmareDay2.js';
 
 // Dia 3
 import NightmareDay3 from './scenes/gameLoop/day3/nightmareDay3.js';
@@ -68,7 +69,7 @@ const config = {
     // Nota: el orden de las escenas es relevante, y las que se encuentren antes en el array se renderizaran por debajo de las siguientes
     scene: [
         // Carga de assets
-        BootScene, 
+        BootScene,
         // Menus
         LanguageMenu, TitleMenu, UserInfoMenu,
         // Escenas bases
@@ -76,7 +77,7 @@ const config = {
         // Escenas dia 1
         BedroomMorningDay1, LivingroomMorningDay1, PlaygroundMorningDay1, StairsMorningDay1, CorridorMorningDay1, ClassFrontMorningDay1, ClassBackMorningDay1, ClassBackBreakDay1, CorridorBreakDay1, StairsBreakDay1, PlaygroundBreakDay1, PlaygroundAfternoonDay1, LivingroomAfternoonDay1, BedroomAfternoonDay1, NightmareDay1,
         // Escenas dia 2
-        BedroomMorningDay2, LivingroomMorningDay2, PlaygroundMorningDay2, StairsMorningDay2, CorridorMorningDay2, ClassFrontMorningDay2, ClassBackBreakDay2, CorridorBreakDay2, BathroomBreakDay2, StairsBreakDay2, PlaygroundBreakDay2, PlaygroundAfternoonDay2, LivingroomAfternoonDay2, BedroomAfternoonDay2,
+        BedroomMorningDay2, LivingroomMorningDay2, PlaygroundMorningDay2, StairsMorningDay2, CorridorMorningDay2, ClassFrontMorningDay2, ClassBackBreakDay2, CorridorBreakDay2, BathroomBreakDay2, StairsBreakDay2, PlaygroundBreakDay2, PlaygroundAfternoonDay2, LivingroomAfternoonDay2, BedroomAfternoonDay2, NightmareDay2,
         // Escenas dia 3
         NightmareDay3,
         // Escenas dia 4
@@ -91,8 +92,6 @@ const config = {
         antialias: true,
         //transparent: true,
     },
-    /*
-    COMENTAR: No creo que hagan falta fisicas
     physics: { 
         default: 'arcade', 
         arcade: { 
@@ -100,7 +99,6 @@ const config = {
            debug: true,   
         },
     },
-    */
     plugins: {
         // Plugin para utilizar animaciones esqueletales creadas con Spine
         scene: [

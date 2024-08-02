@@ -55,7 +55,7 @@
             "type": "event",
             "events": [
                 {
-                    "fadeOut": {
+                    "characterFadesOut": {
                         "character": "Maria"
                     }
                 }
@@ -86,7 +86,7 @@
             "type": "event",
             "events": [
                 {
-                    "fadeOut": {
+                    "characterFadesOut": {
                         "character": "Guille"
                     }
                 }
@@ -117,7 +117,7 @@
             "type": "event",
             "events": [
                 {
-                    "fadeOut": {
+                    "characterFadesOut": {
                         "character": "Jose"
                     }
                 }
@@ -148,7 +148,7 @@
             "type": "event",
             "events": [
                 {
-                    "fadeOut": {
+                    "characterFadesOut": {
                         "character": "Alison"
                     }
                 }
@@ -179,7 +179,7 @@
             "type": "event",
             "events": [
                 {
-                    "fadeOut": {
+                    "characterFadesOut": {
                         "character": "Ana"
                     }
                 }

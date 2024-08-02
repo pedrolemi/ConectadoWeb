@@ -74,6 +74,7 @@ export default class EventDispatcher {
     * @param {Fn} fn - funcion que se ejecuta cuando se produce el evento
     */
     addOnce(event, owner, fn) {
+        /*
         if (!this.eventsMap.has(event)) {
             this.eventsMap.set(event, new Set());
         }
@@ -86,6 +87,7 @@ export default class EventDispatcher {
             this.ownersMap.get(owner).set(event, new Set());
         }
         this.ownersMap.get(owner).get(event).add(fn);
+        */
 
         this.emitter.once(event, fn, owner);
     }

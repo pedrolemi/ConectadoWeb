@@ -4,20 +4,20 @@
       "frame": {
         "x": 0,
         "y": 0,
-        "w": 354,
-        "h": 354
+        "w": 100,
+        "h": 100
       },
       "rotated": false,
-      "trimmed": true,
+      "trimmed": false,
       "spriteSourceSize": {
-        "x": 24,
-        "y": 12,
-        "w": 354,
-        "h": 354
+        "x": 0,
+        "y": 0,
+        "w": 100,
+        "h": 100
       },
       "sourceSize": {
-        "w": 400,
-        "h": 400
+        "w": 100,
+        "h": 100
       },
       "pivot": {
         "x": 0.5,
@@ -26,22 +26,22 @@
     },
     "Alison": {
       "frame": {
-        "x": 354,
+        "x": 100,
         "y": 0,
-        "w": 354,
-        "h": 354
+        "w": 100,
+        "h": 100
       },
       "rotated": false,
-      "trimmed": true,
+      "trimmed": false,
       "spriteSourceSize": {
-        "x": 24,
-        "y": 12,
-        "w": 354,
-        "h": 354
+        "x": 0,
+        "y": 0,
+        "w": 100,
+        "h": 100
       },
       "sourceSize": {
-        "w": 400,
-        "h": 400
+        "w": 100,
+        "h": 100
       },
       "pivot": {
         "x": 0.5,
@@ -50,70 +50,22 @@
     },
     "Ana": {
       "frame": {
-        "x": 708,
+        "x": 200,
         "y": 0,
-        "w": 354,
-        "h": 354
+        "w": 100,
+        "h": 100
       },
       "rotated": false,
-      "trimmed": true,
+      "trimmed": false,
       "spriteSourceSize": {
-        "x": 24,
-        "y": 12,
-        "w": 354,
-        "h": 354
-      },
-      "sourceSize": {
-        "w": 400,
-        "h": 400
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "male": {
-      "frame": {
-        "x": 1062,
+        "x": 0,
         "y": 0,
-        "w": 354,
-        "h": 354
-      },
-      "rotated": false,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 24,
-        "y": 12,
-        "w": 354,
-        "h": 354
+        "w": 100,
+        "h": 100
       },
       "sourceSize": {
-        "w": 400,
-        "h": 400
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "female": {
-      "frame": {
-        "x": 1416,
-        "y": 0,
-        "w": 354,
-        "h": 354
-      },
-      "rotated": false,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 24,
-        "y": 12,
-        "w": 354,
-        "h": 354
-      },
-      "sourceSize": {
-        "w": 400,
-        "h": 400
+        "w": 100,
+        "h": 100
       },
       "pivot": {
         "x": 0.5,
@@ -122,22 +74,22 @@
     },
     "Guille": {
       "frame": {
-        "x": 0,
-        "y": 354,
-        "w": 354,
-        "h": 354
+        "x": 300,
+        "y": 0,
+        "w": 100,
+        "h": 100
       },
       "rotated": false,
-      "trimmed": true,
+      "trimmed": false,
       "spriteSourceSize": {
-        "x": 24,
-        "y": 12,
-        "w": 354,
-        "h": 354
+        "x": 0,
+        "y": 0,
+        "w": 100,
+        "h": 100
       },
       "sourceSize": {
-        "w": 400,
-        "h": 400
+        "w": 100,
+        "h": 100
       },
       "pivot": {
         "x": 0.5,
@@ -146,22 +98,22 @@
     },
     "Jose": {
       "frame": {
-        "x": 354,
-        "y": 354,
-        "w": 354,
-        "h": 354
+        "x": 400,
+        "y": 0,
+        "w": 100,
+        "h": 100
       },
       "rotated": false,
-      "trimmed": true,
+      "trimmed": false,
       "spriteSourceSize": {
-        "x": 24,
-        "y": 12,
-        "w": 354,
-        "h": 354
+        "x": 0,
+        "y": 0,
+        "w": 100,
+        "h": 100
       },
       "sourceSize": {
-        "w": 400,
-        "h": 400
+        "w": 100,
+        "h": 100
       },
       "pivot": {
         "x": 0.5,
@@ -170,70 +122,94 @@
     },
     "Maria": {
       "frame": {
-        "x": 708,
-        "y": 354,
-        "w": 354,
-        "h": 354
+        "x": 500,
+        "y": 0,
+        "w": 100,
+        "h": 100
       },
       "rotated": false,
-      "trimmed": true,
+      "trimmed": false,
       "spriteSourceSize": {
-        "x": 24,
-        "y": 12,
-        "w": 354,
-        "h": 354
+        "x": 0,
+        "y": 0,
+        "w": 100,
+        "h": 100
       },
       "sourceSize": {
-        "w": 400,
-        "h": 400
+        "w": 100,
+        "h": 100
       },
       "pivot": {
         "x": 0.5,
         "y": 0.5
       }
     },
-    "parents": {
+    "default": {
       "frame": {
-        "x": 1062,
-        "y": 354,
-        "w": 354,
-        "h": 354
+        "x": 600,
+        "y": 0,
+        "w": 100,
+        "h": 100
       },
       "rotated": false,
-      "trimmed": true,
+      "trimmed": false,
       "spriteSourceSize": {
-        "x": 24,
-        "y": 12,
-        "w": 354,
-        "h": 354
+        "x": 0,
+        "y": 0,
+        "w": 100,
+        "h": 100
       },
       "sourceSize": {
-        "w": 400,
-        "h": 400
+        "w": 100,
+        "h": 100
       },
       "pivot": {
         "x": 0.5,
         "y": 0.5
       }
     },
-    "teacher": {
+    "female": {
       "frame": {
-        "x": 1416,
-        "y": 354,
-        "w": 354,
-        "h": 354
+        "x": 700,
+        "y": 0,
+        "w": 100,
+        "h": 100
       },
       "rotated": false,
-      "trimmed": true,
+      "trimmed": false,
       "spriteSourceSize": {
-        "x": 24,
-        "y": 12,
-        "w": 354,
-        "h": 354
+        "x": 0,
+        "y": 0,
+        "w": 100,
+        "h": 100
       },
       "sourceSize": {
-        "w": 400,
-        "h": 400
+        "w": 100,
+        "h": 100
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "male": {
+      "frame": {
+        "x": 800,
+        "y": 0,
+        "w": 100,
+        "h": 100
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 100,
+        "h": 100
+      },
+      "sourceSize": {
+        "w": 100,
+        "h": 100
       },
       "pivot": {
         "x": 0.5,
@@ -247,8 +223,8 @@
     "image": "avatars.png",
     "format": "RGBA8888",
     "size": {
-      "w": 1770,
-      "h": 708
+      "w": 900,
+      "h": 100
     },
     "scale": 1
   }

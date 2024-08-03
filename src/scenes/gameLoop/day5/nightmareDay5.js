@@ -35,7 +35,7 @@ export default class NightmareDay5 extends NightmareBase {
         let portal = this.add.container(this.CANVAS_WIDTH / 2, this.CANVAS_HEIGHT / 2);
         portal.setScale(0.7);
 
-        this.bgEmitter = this.add.particles(0, 0, 'defaultParticleTexture', {
+        this.bgEmitter = this.add.particles(0, 0, 'defaultParticle', {
             alpha: { start: 1, end: 0 },
             angle: { min: 0, max: 360 },
             blendMode: Phaser.BlendModes.SCREEN,
@@ -49,7 +49,7 @@ export default class NightmareDay5 extends NightmareBase {
         this.bgEmitter.setParticleTint(this.selectedColors.first.color);
         portal.add(this.bgEmitter);
 
-        let centerEmitter = this.add.particles(0, 0, 'defaultParticleTexture', {
+        let centerEmitter = this.add.particles(0, 0, 'defaultParticle', {
             alpha: { start: 1, end: 0 },
             angle: { min: 0, max: 360 },
             blendMode: Phaser.BlendModes.NORMAL,

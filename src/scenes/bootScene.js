@@ -405,7 +405,7 @@ export default class BootScene extends Phaser.Scene {
         this.loadCreditsSceneAssets();
 
         this.load.setPath('assets');
-        this.load.image('defaultParticleTexture', 'defaultParticleTexture.png');
+        this.load.image('defaultParticle', 'defaultParticle.png');
 
         this.loadPlugins(dialogsAndNamespaces, onlyNamespaces);
     }

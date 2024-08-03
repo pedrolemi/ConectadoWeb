@@ -1,0 +1,109 @@
+{
+    "wardrobe1": {
+        "root": {
+            "text": "There's nothing useful."
+        }
+    },
+
+    "wardrobe2": {
+        "root": {
+            "text": "I don't have time to organize all this today."
+        }
+    },
+
+    "phone1": {
+        "root": {
+            "text": "{{name}} this is the chat we use all classm8s"
+        },
+        "message2": {
+            "text": "Welcome"
+        },
+        "message3": {
+            "text": ":)"
+        }
+    },
+    "phone2": {
+        "root": [
+            {
+                "text": "Thank you :)"
+            }
+        ],
+        "reply": {
+            "text": "Thank you :)"
+        }
+    },
+    "phone3": {
+        "root": {
+            "text": "Why da invit8on? didnt u speak with Alex tday?"
+        },
+        "message4": {
+            "text": "",
+            "text_male": "Hmm, hasn't earned 2be in this group. Someone kick him out NOW!",
+            "text_female": "Hmm, hasn't earned 2be in this group. Someone kick her out NOW!"
+        },
+        "message5": {
+            "text": "The only 1 left is that freak, María"
+        },
+        "message6": {
+            "text": "Jose is the admin, talk 2morrow with him, doesnt read this chat to often"
+        },
+        "reply2": [
+            {
+                "text": "You treat me awful. It makes me feel bad"
+            },
+            {
+                "text": "Grow up"
+            },
+            {
+                "text": "What have I done to you?"
+            }
+        ],
+        "sad": {
+            "text": "I just get to school and it really feels like awful that you guys treat me like shit."
+        },
+        "sad2": {
+            "text": "I'm not saying you all must like me, but all you could do is treat me with some respect."
+        },
+
+        "growUp": {
+            "text": "Grow up, how old are you?"
+        },
+        "ask": {
+            "text": "I don't understand, what have I done to you to insult, ignore and make jokes about of me?"
+        },
+        "message7": {
+            "text": "What's your problem with {{name}}?"
+        },
+        "message8": {
+            "text": "You're crossing the line"
+        },
+        "message9": {
+            "text": "This is not your bussiness. I can make Jose to kick you out too."
+        },
+        "reply3": [
+            {
+                "text": "Don't worry, I'm leaving"
+            },
+            {
+                "text": "I hope Jose is more intelligent."
+            },
+            {
+                "text": "Alex, stop"
+            }
+        ],
+        "leave": {
+            "text": "If me being in this group chat is a problem, I'm leaving"
+        },
+        "insult": {
+            "text": "I hope Jorge is not as stupid as you are when he reads the chat"
+        },
+        "stop": {
+            "text": "Stop, I haven't done anything to you that justifies the way you're treating me"
+        },
+        "goToSleep": {
+            "text": "I'm going to bed, see you tomorrow"
+        }
+    }
+    
+    
+}

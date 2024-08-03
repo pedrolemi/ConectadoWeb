@@ -31,6 +31,9 @@ export default class ClassBackBreakDay2 extends ClassBackBase {
         let nodes = this.cache.json.get('classBackBreakDay2');
         let alexNode = super.readNodes(nodes, "day2\\classBackBreakDay2", "alex", true);
 
+        this.gameManager.changeFriendship("Ana", -10);
+        this.gameManager.changeFriendship("Jose", -10);
+        
 
         // Personajes de fondo
         tr = {

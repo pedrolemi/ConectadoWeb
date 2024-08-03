@@ -11,32 +11,99 @@
         }
     },
 
-    "phone": {
+    "phone1": {
         "root": {
-            "text": "Te he mandado una petición de amistad"
+            "text": "{{name}} este es el chat k tenemos ls de clase"
         },
         "message2": {
-            "text": "Acéptamela desde tu ordenador :)"
+            "text": "",
+            "text_male": "Bienvenido",
+            "text_female": "Bienvenida"
         },
-        "choices": [
+        "message3": {
+            "text": ":)"
+        }
+    },
+    "phone2": {
+        "root": [
             {
-                "text": "Sí, ahora te acepto"
-            },
-            {
-                "text": "Cuando pueda lo miro"
-            },
-            {
-                "text": "(Es un poco pesada, paso de contestar nada)"
+                "text": "Gracias :)"
             }
         ],
-        "acceptNow": {
-            "text": "Sí, ahora te acepto la invitación :)"
+        "reply": {
+            "text": "Gracias :)"
+        }
+    },
+    "phone3": {
+        "root": {
+            "text": "xq le invitas al grupo? no hablaste cn alex esta mañana?"
         },
-        "acceptLater": {
-            "text": "",
-            "text_male": "Cuando pueda lo miro, ahora mismo estoy ocupado",
-            "text_female": "Cuando pueda lo miro, ahora mismo estoy ocupada"
+        "message4": {
+            "text": "Pff, no se ha ganado estar en el grupo. El k pueda k le eche YA!"
+        },
+        "message5": {
+            "text": "Ya sólo falta que inviteis a la friki de María"
+        },
+        "message6": {
+            "text": "Jose es el admin, habla con él mañana, q el chat no suele leerlo"
+        },
+        "reply2": [
+            {
+                "text": "Me sienta mal que me tratéis así"
+            },
+            {
+                "text": "Madurad"
+            },
+            {
+                "text": "¿Qué os he hecho?"
+            }
+        ],
+        "sad": {
+            "text": "Acabo de llegar al colegio, y de verdad me sienta fatal que la mitad de la clase me trateís como a una mierda"
+        },
+        "sad2": {
+            "text": "No digo que os caiga bien a todos, pero lo mínimo es tratarme con respeto"
+        },
+
+        "growUp": {
+            "text": "Madurad, teneís 2años o qué os pasa"
+        },
+        "ask": {
+            "text": "No lo entiendo, ¿Qué os he hecho para que me insulteís, gasteís bromas pesadas, me ignoreís y margineís?"
+        },
+        "message7": {
+            "text": "¿Qué problema teneís con {{name}}?"
+        },
+        "message8": {
+            "text": "Os estais pasando"
+        },
+        "message9": {
+            "text": "No os metaís donde no os llaman, también puedo hacer que Jose os eche a vosotros"
+        },
+        "reply3": [
+            {
+                "text": "Ya me salgo yo del grupo"
+            },
+            {
+                "text": "Espero que Jose tenga más cerebro"
+            },
+            {
+                "text": "Alex, para"
+            }
+        ],
+        "leave": {
+            "text": "Si que esté en el grupo va a ser un problema me voy yo"
+        },
+        "insult": {
+            "text": "Espero que Jorge no sea tan estúpido como tú cuando lea el chat"
+        },
+        "stop": {
+            "text": "Para, no te he hecho nada como para que te portes así conmigo"
+        },
+        "goToSleep": {
+            "text": "Me voy a dormir, os veo mañana"
         }
     }
+    
     
 }

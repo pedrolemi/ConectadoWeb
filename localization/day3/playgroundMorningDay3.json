@@ -1,0 +1,150 @@
+{
+    "group": {
+        "root": {
+            "type": "condition",
+            "conditions": [
+                {
+                    "next": "notTalked",
+                    "talked": {
+                        "value": false,
+                        "operator": "equal",
+                        "global": false,
+                        "default": false
+                    }
+                },
+                {
+                    "next": "talked",
+                    "talked": {
+                        "value": true,
+                        "operator": "equal",
+                        "global": false,
+                        "default": false
+                    }
+                }
+            ]
+        },
+        "notTalked": {
+            "type": "text",
+            "character": "player",
+            "next": "explain"
+        },
+        "explain": {
+            "type": "text",
+            "character": "Guille",
+            "next": "shutUp"
+        },
+        "shutUp": {
+            "type": "text",
+            "character": "Alex",
+            "next": "silence"
+        },
+        "silence": {
+            "type": "text",
+            "character": "Guille",
+            "next": "choices"
+        },
+        "choices": {
+            "type": "choice",
+            "choices": [
+                { "next": "worry" },
+                { "next": "threat" }
+            ]
+        },
+        "worry": {
+            "type": "text",
+            "character": "player",
+            "next": "silenceQuestion"
+        },
+        "threat": {
+            "type": "text",
+            "character": "player",
+            "next": "silenceQuestion"
+        },
+        
+        "silenceQuestion": {
+            "type": "text",
+            "character": "",
+            "next": "askSilence"
+        },
+        "askSilence": {
+            "type": "text",
+            "character": "player",
+            "next": "checkHour"
+        },
+
+        "checkHour": {
+            "type": "condition",
+            "conditions": [
+                {
+                    "next": "bellRinging",
+                    "isLate": {
+                        "value": false,
+                        "operator": "equal",
+                        "global": true,
+                        "default": false
+                    }
+                },
+                {
+                    "next": "late",
+                    "isLate": {
+                        "value": true,
+                        "operator": "equal",
+                        "global": true,
+                        "default": false
+                    }
+                }
+            ]
+        },
+        "bellRinging": {
+            "type": "text",
+            "character": "",
+            "next": "openDoors"
+        },
+        "openDoors": {
+            "type": "event",
+            "events": [
+                {
+                    "openDoors": { }
+                }
+            ],
+            "next": "setTalked"
+        },
+        "late": {
+            "type": "text",
+            "character": "player",
+            "next": "setTalked"
+        },
+        
+        "setTalked": {
+            "type": "event",
+            "events": [
+                { 
+                    "setTalked": { 
+                        "variable": "talked", 
+                        "value": true, 
+                        "global": false
+                    }
+                }
+            ]
+        },
+        
+
+        "talked": {
+            "type": "text",
+            "character": "player",
+            "next": "keepSilence"
+        },
+        "keepSilence": {
+            "type": "text",
+            "character": "",
+            "next": "talkedChoices"
+        },
+        "talkedChoices": {
+            "type": "choice",
+            "choices": [
+                { "next": "keepSilence" },
+                { "next": "" }
+            ]
+        }
+    }
+}

@@ -128,8 +128,6 @@ export default class ChatScreen extends BaseScreen {
 
         // Al hacer click, vuelve a cambiar el color de la caja al original
         this.textBox.on('pointerdown', () => {
-                console.log(this.canAnswer)
-
             if (!this.scene.dialogManager.isTalking() && this.canAnswer) {
                 let fadeColor = this.scene.tweens.addCounter({
                     targets: [this.textBox],
@@ -253,6 +251,8 @@ export default class ChatScreen extends BaseScreen {
      */
     setNode(node) {
         this.canAnswer = true;
+        this.scene.dialogManager.setTalking(false);
+        this.scene.dialogManager.bgBlock.disableInteractive();
 
         // Si el nodo a poner es valido, cambia el nodo por el indicado
         if (node) {
@@ -267,7 +267,9 @@ export default class ChatScreen extends BaseScreen {
     // Procesa el nodo de dialogo
     processNode() {
         this.canAnswer = true;
-
+        this.scene.dialogManager.setTalking(false);
+        this.scene.dialogManager.bgBlock.disableInteractive();
+        
         if (this.currNode) {
             // Si el nodo es de tipo mensaje, con el retardo indicado, anade
             //  el mensaje al chat, pasa al siguiente nodo, y lo procesa.
@@ -280,14 +282,29 @@ export default class ChatScreen extends BaseScreen {
                 }, this.currNode.replyDelay);
 
             }
-            // Si el nodo es de cualquier otro tipo excepto de eleccion, lo procesa el dialogManager
+            // Si el nodo es de tipo condicion, hace que el dialogManager lo procese y obtiene el siguiente nodo
+            else if (this.currNode.type === "condition") {
+                let i = this.scene.dialogManager.processCondition(this.currNode);
+
+                // El indice del siguiente nodo sera el primero que cumpla una de las condiciones
+                this.currNode = this.currNode.next[i];
+
+                // Pasa al siguiente nodo
+                this.processNode();
+            }
+            // Si el nodo es de tipo evento, hace que el dialogManager lo procese y pasa al siguiente nodo
+            else if (this.currNode.type === "event") {
+                this.scene.dialogManager.processEvent(this.currNode);
+
+                // IMPORTANTE: DESPUES DE UN NODO DE EVENTO SOLO HAY UN NODO, POR LO QUE 
+                // EL SIGUIENTE NODO SERA EL PRIMER NODO DEL ARRAY DE NODOS SIGUIENTES
+                this.currNode = this.currNode.next[0];
+                this.processNode();
+            }
+            // Si no, si es de cualquier otro tipo excepto de eleccion multiple, lo gestiona el dialogManager
             else if (this.currNode.type !== "choice") {
                 this.scene.dialogManager.setNode(this.currNode);
             }
-        }
-        // Si el nodo no es valido, tambien lo establece en el dialogManager
-        else {
-            this.scene.dialogManager.setNode(this.currNode);
         }
     }
 

@@ -1,0 +1,51 @@
+{
+    "alison": {
+        "ignore": {
+            "text": "..."
+        },
+        "ignoreThoughts": {
+            "text": "También me está ignorando... ¿Qué les he hecho?"
+        },
+
+        "notTalked": [
+            {
+                "text": "Estaba mirando el tablón."
+            },
+            {
+                "text": "Y... Será mejor que no lo mires, ignóralo hoy."
+            }
+        ],
+        "choices": [
+            {
+                "text": "Ya lo he visto"
+            },
+            {
+                "text": "¿Por qué? ¿Qué hay?"
+            }
+        ],
+        "seen": [
+            {
+                "text": "Lo siento, Álex está llegando demasiado lejos."
+            },
+            {
+                "text": "Igual deberias hablar con el profesor o a la directora."
+            }
+        ],
+        "ask": [
+            {
+                "text": "Alguien ha puesto una foto tuya en los tablones de todo el colegio."
+            },
+            {
+                "text": "En el patio también estaba."
+            },
+            {
+                "text": "Creo que deberías hablar con algún profesor."
+            }
+        ],
+        "talked": {
+            "text": "Ignora lo del tablón."
+        }
+    }
+}
+
+

@@ -14,49 +14,190 @@
     },
 
 
-    "phone": {
+    "phone1": {
         "root": {
             "type": "chatMessage",
             "character": "Alison",
-            "chat": "chat1",
-            "replyDelay": 2000,
+            "chat": "chat2",
+            "replyDelay": 500,
             "next": "message2"
         },
         "message2": {
             "type": "chatMessage",
-            "character": "Alison",
-            "chat": "chat1",
-            "replyDelay": 1000,
-            "next": "choices"
+            "character": "Guille",
+            "chat": "chat2",
+            "replyDelay": 500,
+            "next": "message3"
         },
-        "choices": {
+        "message3": {
+            "type": "chatMessage",
+            "character": "Alison",
+            "chat": "chat2",
+            "replyDelay": 500,
+            "next": "startTimer"
+        },
+        "startTimer": {
+            "type": "event",
+            "events": [
+                {
+                    "startTimer1": { "time": 5000 }
+                }
+            ]
+        }
+    },
+    
+    "phone2": {
+        "root": {
             "type": "choice",
             "choices":[
-                { "next": "acceptNow" },
-                { "next": "acceptLater" },
-                { "next": "" }
+                { "next": "reply" }
             ]
         },
-        "acceptNow": {
+        "reply": {
             "type": "chatMessage",
             "character": "player",
-            "chat": "chat1",
+            "chat": "chat2",
             "replyDelay": 0,
-            "next": "endChat"
+            "next": "reply1"
         },
-        "acceptLater": {
+        "reply1": {
+            "type": "event",
+            "events": [
+                {
+                    "reply1": { }
+                }
+            ]
+        }
+    },
+
+    "phone3": {
+        "root": {
+            "type": "chatMessage",
+            "character": "Ana",
+            "chat": "chat2",
+            "replyDelay": 1500,
+            "next": "message4"
+        },
+        "message4": {
+            "type": "chatMessage",
+            "character": "Alex",
+            "chat": "chat2",
+            "replyDelay": 1500,
+            "next": "message5"
+        },
+        "message5": {
+            "type": "chatMessage",
+            "character": "Alex",
+            "chat": "chat2",
+            "replyDelay": 1500,
+            "next": "message6"
+        },
+        "message6": {
+            "type": "chatMessage",
+            "character": "Ana",
+            "chat": "chat2",
+            "replyDelay": 1500,
+            "next": "reply2"
+        },
+        "reply2": {
+            "type": "choice",
+            "choices":[
+                { "next": "sad" },
+                { "next": "growUp" },
+                { "next": "ask" }
+            ]
+        },
+        "sad": {
             "type": "chatMessage",
             "character": "player",
-            "chat": "chat1",
+            "chat": "chat2",
             "replyDelay": 0,
-            "next": "endChat"
+            "next": "sad2"
+        },
+        "sad2": {
+            "type": "chatMessage",
+            "character": "player",
+            "chat": "chat2",
+            "replyDelay": 1500,
+            "next": "message7"
         },
 
+        "growUp": {
+            "type": "chatMessage",
+            "character": "player",
+            "chat": "chat2",
+            "replyDelay": 0,
+            "next": "message7"
+        },
+        "ask": {
+            "type": "chatMessage",
+            "character": "player",
+            "chat": "chat2",
+            "replyDelay": 0,
+            "next": "message7"
+        },
+        "message7": {
+            "type": "chatMessage",
+            "character": "Guille",
+            "chat": "chat2",
+            "replyDelay": 1500,
+            "next": "message8"
+        },
+        "message8": {
+            "type": "chatMessage",
+            "character": "Alison",
+            "chat": "chat2",
+            "replyDelay": 1500,
+            "next": "message9"
+        },
+        "message9": {
+            "type": "chatMessage",
+            "character": "Alex",
+            "chat": "chat2",
+            "replyDelay": 1500,
+            "next": "reply3"
+        },
+        "reply3": {
+            "type": "choice",
+            "choices":[
+                { "next": "leave" },
+                { "next": "insult" },
+                { "next": "stop" }
+            ]
+        },
+        "leave": {
+            "type": "chatMessage",
+            "character": "player",
+            "chat": "chat2",
+            "replyDelay": 0,
+            "next": "goToSleep"
+        },
+        "insult": {
+            "type": "chatMessage",
+            "character": "player",
+            "chat": "chat2",
+            "replyDelay": 0,
+            "next": "goToSleep"
+        },
+        "stop": {
+            "type": "chatMessage",
+            "character": "player",
+            "chat": "chat2",
+            "replyDelay": 0,
+            "next": "goToSleep"
+        },
+        "goToSleep": {
+            "type": "chatMessage",
+            "character": "player",
+            "chat": "chat2",
+            "replyDelay": 1500,
+            "next": "endChat"
+        },
         "endChat": {
             "type": "event",
             "events": [
                 { 
-                    "endChat": { }
+                    "endChat": { "chat": "chat2" }
                 }
             ]
         }

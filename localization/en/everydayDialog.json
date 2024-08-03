@@ -138,5 +138,54 @@
             ]
         }
 
+    },
+
+    "class": {
+        "table": {
+            "root": {
+                "text": "This place is available, may I sit here?"
+            },
+            "choices": [
+                {
+                    "text": "Yes"
+                },
+                {
+                    "text": "No"
+                }
+            ],
+            "teacherArrive": {
+                "text": "(Knocks in the back, the teacher is here)"
+            }
+        },
+        
+        "late": {
+            "root": [
+                {
+                    "text": "{{name}}, your're late."
+                },
+                {
+                    "text": "Please, have a seat and let's continue with the class."
+                }
+            ]
+        }
+    },
+
+    "board": {
+        "gumWashed": [
+            {
+                "text": "It's a picture of me from yesterday, right after I removed the gum."
+            },
+            {
+                "text": "With a very original sentence... \"A baby arrived to class\" "
+            }
+        ],
+        "gumNotWashed": [
+            {
+                "text": "It's a picture of me and it's been modified so it looks like I'm shitting chewing gums."
+            },
+            {
+                "text": "Who wants to mock me this way?"
+            }
+        ]
     }
 }

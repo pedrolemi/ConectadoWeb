@@ -18,7 +18,6 @@ export default class BedroomAfternoonDay1 extends BedroomBase {
         // Dialogos del interior del armario y la cama
         this.wardrobe1Node = super.readNodes(nodes, "day1\\bedroomAfternoonDay1", "wardrobe1", true);
         this.wardrobe2Node = super.readNodes(nodes, "day1\\bedroomAfternoonDay1", "wardrobe2", true);
-        let phoneNode = super.readNodes(nodes, "day1\\bedroomAfternoonDay1", "phone", true);
         nodes = this.cache.json.get('everydayDialog');
 
         // Mochila
@@ -44,6 +43,8 @@ export default class BedroomAfternoonDay1 extends BedroomBase {
         this.add.image(2061 * this.scale + 1, 928 * this.scale - 1, this.atlasName, 'clothes3').setOrigin(0, 0).setScale(this.scale);
 
         // Mensajes del movil
+        nodes = this.cache.json.get('bedroomAfternoonDay1');
+        let phoneNode = super.readNodes(nodes, "day1\\bedroomAfternoonDay1", "phone", true);
         let chatName = this.i18next.t("textMessages.chat1", { ns: "phoneInfo", returnObjects: true });
         this.phoneManager.phone.setChatNode(chatName, phoneNode);
     }

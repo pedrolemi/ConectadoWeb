@@ -1,0 +1,51 @@
+{
+    "alison": {
+        "ignore": {
+            "text": "..."
+        },
+        "ignoreThoughts": {
+            "text": "Again ignoring me... What did I do wrong?"
+        },
+
+        "notTalked": [
+            {
+                "text": "I was looking at the board."
+            },
+            {
+                "text": "And... it'll be better if you ignore it today."
+            }
+        ],
+        "choices": [
+            {
+                "text": "I've already seen it."
+            },
+            {
+                "text": "Why? What is it?"
+            }
+        ],
+        "seen": [
+            {
+                "text": "I'm sorry, Álex went too far with this."
+            },
+            {
+                "text": "Maybe you should talk with the teacher or the pricipal."
+            }
+        ],
+        "ask": [
+            {
+                "text": "Someone has posted a picture of you in every school board."
+            },
+            {
+                "text": "It was also in the playground."
+            },
+            {
+                "text": "I think you should go and talk to any teacher available."
+            }
+        ],
+        "talked": {
+            "text": "Ignore the board."
+        }
+    }
+}
+
+

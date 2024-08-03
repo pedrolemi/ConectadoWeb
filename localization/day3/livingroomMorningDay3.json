@@ -1,8 +1,8 @@
 {
-    "alex": {
+    "mom": {
         "root": {
             "type": "text",
-            "character": "Alex"
+            "character": "mom"
         }
     }
 }

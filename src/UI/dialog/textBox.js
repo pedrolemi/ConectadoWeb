@@ -170,7 +170,7 @@ export default class TextBox extends DialogObject {
 
     /**
     * Devuelve si el texto de la caja supera la altura maxima
-    * @return {boolean} - true si la caja supera la altura maxima, false en caso contrario
+    * @returns {boolean} - true si la caja supera la altura maxima, false en caso contrario
     */
     textTooBig() {
         return (this.currText.getBounds().height > this.height);

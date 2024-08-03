@@ -32,7 +32,7 @@ export default class BedroomMorningDay1 extends BedroomBase {
         this.add.image(2061 * this.scale + 1, 928 * this.scale - 1, this.atlasName, 'clothes3').setOrigin(0, 0).setScale(this.scale);
 
 
-        // Evento que se llama al encender el ordenaddor. Pone la hora a la de llegar tarde
+        // Evento que se llama al encender el ordenador. Pone la hora a la de llegar tarde
         // en el telefono (la variable de llegar tarde la cambia el propio evento)
         this.dispatcher.add("turnPC", this, (obj) => {
             this.phoneManager.setDayInfo("pcLateHour");

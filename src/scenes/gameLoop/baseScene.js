@@ -69,15 +69,7 @@ export default class BaseScene extends Phaser.Scene {
 
         this.dispatcher.add("changeFriendship", this, (obj) => {
             console.log(obj);
-            let varName = obj.character + "FS";
-            if (!this.gameManager.getValue(varName)) {
-                this.gameManager.setValue(varName, 50);
-            }
-            let val = this.gameManager.getValue(varName)
-            val += obj.value;
-            this.gameManager.setValue(varName, val);
-
-            console.log(this.gameManager.blackboard)
+            this.gameManager.changeFriendship(obj.character, obj.amount);
         });
 
         // Evento que se llama al contestar al mensaje para indicar que ya no hay nada mas que contestar
@@ -310,7 +302,6 @@ export default class BaseScene extends Phaser.Scene {
         // Si el nodo es de tipo texto
         else if (type === "text") {
             node = new TextNode();
-
             // Obtiene la id del personaje y coge su nombre del archivo de nombres localizados
             let character = fileObj[id].character;
             node.character = character;
@@ -502,7 +493,7 @@ export default class BaseScene extends Phaser.Scene {
      * Obtiene el objeto json a partir de su nombre
      * @param {Object} obj - objeto json en el que se busca el objeto 
      * @param {String} prop - nombre de la propiedad (o del objeto) que se busca 
-     * @return {Object} - objeto json con el nombre indicado
+     * @returns {Object} - objeto json con el nombre indicado
      */
     getObjFromName(obj, prop) {
         let nestedProperties = prop.split('.');
@@ -523,7 +514,7 @@ export default class BaseScene extends Phaser.Scene {
     /**
     * Prepara los dialogos por si alguno es demasiado largo y se sale de la caja de texto
     * @param {Array} dialogs - array de dialogos a preparar
-    * @return {Array} - array con los dialogos ajustados
+    * @returns {Array} - array con los dialogos ajustados
     */
     splitDialogs(dialogs, character) {
         let newDialogs = [];        // Nuevo array de dialogos tras dividir los dialogos demasiado largos

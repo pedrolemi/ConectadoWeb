@@ -173,11 +173,99 @@
     },
 
     "class": {
+        "table": {
+            "root": {
+                "type": "text",
+                "character": "player",
+                "next": "choices"
+            },
+            "choices": {
+                "type": "choice",
+                "choices": [
+                    {
+                        "next": "teacherArrive"
+                    },
+                    {
+                        "next": ""
+                    }
+                ]
+            },
+            "teacherArrive": {
+                "type": "text",
+                "character": "",
+                "next": "startClass"
+            },
+            "startClass": {
+                "type": "event",
+                "events": [
+                    {
+                        "startClass": {}
+                    }
+                ]
+            }
+        },
         "late": {
             "root": {
                 "type": "text",
-                "character": "teacher"
+                "character": "teacher",
+                "next": "startClass"
+            },
+            "startClass": {
+                "type": "event",
+                "events": [
+                    {
+                        "startClass": {}
+                    }
+                ]
             }
+        }
+    },
+    "board": {
+        "root": {
+            "type": "condition",
+            "conditions": [
+                {
+                    "next": "gumWashed",
+                    "gumWashed": {
+                        "value": true,
+                        "operator": "equal",
+                        "global": true,
+                        "default": false
+                    }
+                },
+                {
+                    "next": "gumNotWashed",
+                    "gumWashed": {
+                        "value": false,
+                        "operator": "equal",
+                        "global": true,
+                        "default": false
+                    }
+                }
+            ]
+        },
+
+        "gumWashed": {
+            "type": "text",
+            "character": "player",
+            "next": "closePhoto"
+        },
+        "gumNotWashed": {
+            "type": "text",
+            "character": "player",
+            "next": "closePhoto"
+        },
+        "closePhoto": {
+            "type": "event",
+            "events": [
+                {
+                    "closePhoto": {
+                        "variable": "seenPhoto",
+                        "value": true,
+                        "global": true
+                    }
+                }
+            ]
         }
     }
 }

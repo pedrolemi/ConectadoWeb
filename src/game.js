@@ -46,6 +46,15 @@ import BedroomAfternoonDay2 from './scenes/gameLoop/day2/bedroomAfternoonDay2.js
 import NightmareDay2 from './scenes/gameLoop/day2/nightmareDay2.js';
 
 // Dia 3
+import BedroomMorningDay3 from './scenes/gameLoop/day3/bedroomMorningDay3.js';
+import LivingroomMorningDay3 from './scenes/gameLoop/day3/livingroomMorningDay3.js';
+import PlaygroundMorningDay3 from './scenes/gameLoop/day3/playgroundMorningDay3.js';
+import StairsMorningDay3 from './scenes/gameLoop/day3/stairsMorningDay3.js';
+import CorridorMorningDay3 from './scenes/gameLoop/day3/corridorMorningDay3.js';
+import ClassFrontMorningDay3 from './scenes/gameLoop/day3/classFrontMorningDay3.js';
+import ClassBackAfternoonDay3 from './scenes/gameLoop/day3/classBackAfternoonDay3.js';
+import CorridorAfternoonDay3 from './scenes/gameLoop/day3/corridorAfternoonDay3.js';
+import BathroomAfternoonDay3 from './scenes/gameLoop/day3/bathroomAfternoonDay3.js';
 import NightmareDay3 from './scenes/gameLoop/day3/nightmareDay3.js';
 
 // Dia 4
@@ -79,6 +88,7 @@ const config = {
         // Escenas dia 2
         BedroomMorningDay2, LivingroomMorningDay2, PlaygroundMorningDay2, StairsMorningDay2, CorridorMorningDay2, ClassFrontMorningDay2, ClassBackBreakDay2, CorridorBreakDay2, BathroomBreakDay2, StairsBreakDay2, PlaygroundBreakDay2, PlaygroundAfternoonDay2, LivingroomAfternoonDay2, BedroomAfternoonDay2, NightmareDay2,
         // Escenas dia 3
+        BedroomMorningDay3, LivingroomMorningDay3, PlaygroundMorningDay3, StairsMorningDay3, CorridorMorningDay3, ClassFrontMorningDay3, ClassBackAfternoonDay3, CorridorAfternoonDay3, BathroomAfternoonDay3,
         NightmareDay3,
         // Escenas dia 4
         NightmareDay4,

@@ -141,5 +141,53 @@
             ]
         }
 
+    },
+
+    "class": {
+        "table": {
+            "root": {
+                "text": "Este sitio está libre, ¿me siento aquí?"
+            },
+            "choices": [
+                {
+                    "text": "Si"
+                },
+                {
+                    "text": "No"
+                }
+            ],
+            "teacherArrive": {
+                "text": "(Ruidos de fondo, el profesor ha llegado)"
+            }
+        },
+        "late": {
+            "root": [
+                {
+                    "text": "{{name}} llegas tarde."
+                },
+                {
+                    "text": "Por favor, siéntate para que podamos continuar la clase."
+                }
+            ]
+        }
+    },
+
+    "board": {
+        "gumWashed": [
+            {
+                "text": "Hay una foto mía de ayer después de haberme quitado el chicle"
+            },
+            {
+                "text": "Con una frase muy original... \"Un bebé ha llegado a clase\" "
+            }
+        ],
+        "gumNotWashed": [
+            {
+                "text": "Hay una foto de mí, y la han retocado para que parezca que cago chicles"
+            },
+            {
+                "text": "¿Quién quiere ridiculizarme de esta manera?"
+            }
+        ]
     }
 }

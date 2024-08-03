@@ -45,7 +45,7 @@ export default class LivingroomAfternoonDay2 extends LivingroomBase {
                     node.choices.splice(1, 1);
                     node.next.splice(1, 1);
 
-                    this.dialogManager.talking = false;
+                    this.dialogManager.setTalking(false);
                     this.dialogManager.setNode(node);
                 }, 0, true);
             }
@@ -60,7 +60,7 @@ export default class LivingroomAfternoonDay2 extends LivingroomBase {
                     node.choices.splice(0, 1);
                     node.next.splice(0, 1);
 
-                    this.dialogManager.talking = false;
+                    this.dialogManager.setTalking(false);
                     this.dialogManager.setNode(node);
                 }, 0, true);
             }

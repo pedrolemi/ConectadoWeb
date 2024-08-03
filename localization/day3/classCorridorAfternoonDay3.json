@@ -1,0 +1,14 @@
+{
+    "stairs": {
+        "root": {
+            "type": "text",
+            "character": "player"
+        }
+    },
+    "class": {
+        "root": {
+            "type": "text",
+            "character": "player"
+        }
+    }
+}

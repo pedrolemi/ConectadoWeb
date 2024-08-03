@@ -1,0 +1,17 @@
+{
+    "stairs": {
+        "root": [
+            {
+                "text": "I should go to the bathroom before I go home."
+            },
+            {
+                "text": "Maybe the note was important."
+            }
+        ]
+    },
+    "class": {
+        "root": {
+            "text": "I have nothing to do in class."
+        }
+    }
+}

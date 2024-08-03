@@ -98,14 +98,12 @@ export default class TextOnlyScene extends BaseScene {
 
         // En caso de que el texto sea demasiado largo y se salga de la 
         // pantalla, se va reduciendo el tamano de la fuente hasta que quepa
-
         // IMPORTANTE: SE REALIZA DE ESTA MANERA EN VEZ DE ESCALANDO EL
         // TEXTO PORQUE SI EL TEXTO ES DEMASIADO GRANDE, HABRA DEMASIADOS SALTOS
         // DE LINEA. SIN EMBARGO, ESTE PROCESO TOMARA MUCHO TIEMPO CUANTO MAS GRANDE
         // SEA EL TAMANO DE LA FUENTE, YA QUE VA REDUCIENDOLO POCO A POCO Y CREANDO
         // Y DESTRUYENDO EL TEXTO HASTA ENCONTRAR UN TAMANO CON EL QUE QUEPA.
-
-        if (screenText.displayHeight > this.CANVAS_HEIGHT) {
+        while (screenText.displayHeight > this.CANVAS_HEIGHT) {
             fontSize -= 5;
             textConfig.fontSize = fontSize + 'px';
             screenText.destroy();

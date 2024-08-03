@@ -1,0 +1,27 @@
+{
+    "bag": {
+        "root": {
+            "text": "I'll get everything and leave."
+        }
+    },
+
+    "wardrobe1": {
+        "root": {
+            "text": "I don't need anything from here right now."
+        }
+    },
+
+    "wardrobe2": {
+        "root": {
+            "text": "Now I'm not in the mood for organizing."
+        }
+    },
+
+    
+    "bed": {
+        "root": {
+            "text": "I have to go."
+        }
+    }
+    
+}

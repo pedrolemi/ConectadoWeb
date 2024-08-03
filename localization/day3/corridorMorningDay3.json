@@ -1,0 +1,101 @@
+{
+    "alison": {
+        "root": {
+            "type": "condition",
+            "conditions": [
+                {
+                    "next": "ignore",
+                    "AlisonFS": {
+                        "value": 59,
+                        "operator": "lower",
+                        "global": true,
+                        "default": false
+                    }
+                },
+                {
+                    "next": "checkTalked",
+                    "AlisonFS": {
+                        "value": 60,
+                        "operator": "greater",
+                        "global": true,
+                        "default": false
+                    }
+                }
+            ]
+        },
+        "ignore": {
+            "type": "text",
+            "character": "Alison",
+            "next": "ignoreThoughts"
+        },
+        "ignoreThoughts": {
+            "type": "text",
+            "character": "player"
+        },
+
+        "checkTalked": {
+            "type": "condition",
+            "conditions": [
+                {
+                    "next": "notTalked",
+                    "talked": {
+                        "value": false,
+                        "operator": "equal",
+                        "global": false,
+                        "default": false
+                    }
+                },
+                {
+                    "next": "talked",
+                    "talked": {
+                        "value": true,
+                        "operator": "equal",
+                        "global": false,
+                        "default": false
+                    }
+                }
+            ]
+        },
+        "notTalked": {
+            "type": "text",
+            "character": "Alison",
+            "next": "choices"
+        },
+        "choices": {
+            "type": "choice",
+            "choices": [
+                { "next": "seen" },
+                { "next": "ask" }
+            ]
+        },
+        "seen": {
+            "type": "text",
+            "character": "Alison",
+            "next": "setTalked"
+        },
+        "ask": {
+            "type": "text",
+            "character": "Alison",
+            "next": "setTalked"
+        },
+        "setTalked": {
+            "type": "event",
+            "events": [
+                { 
+                    "setTalked": { 
+                        "variable": "talked", 
+                        "value": true, 
+                        "global": false
+                    }
+                }
+            ]
+        },
+
+        "talked": {
+            "type": "text",
+            "character": "Alison"
+        }
+    }
+}
+
+

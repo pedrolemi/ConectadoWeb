@@ -241,8 +241,8 @@ export default class GameManager {
         this.computerScene = this.currentScene.scene.get(computerSceneName);
         this.computerScene.scene.sleep();
 
-        this.day = 2;
-        let sceneName = 'BedroomAfternoonDay2';
+        this.day = 3;
+        let sceneName = 'CorridorAfternoonDay3';
 
         // Pasa a la escena inicial con los parametros text, onComplete y onCompleteDelay
         // let sceneName = 'TextOnlyScene';
@@ -370,4 +370,24 @@ export default class GameManager {
         return blackboard.has(key);
     }
 
+    /**
+     * Modifica el valor de amistad del personaje indicado
+     * @param {String} character - personaje al que cambiar el valor de amistad
+     * @param {Number} amount - cantidad de amistad que sumarle
+     */
+    changeFriendship(character, amount) {
+        let varName = character + "FS";
+
+        // Si no se encuentra el personaje en la blackboard, se anade con 50 de amistad por defecto
+        if (!this.getValue(varName)) {
+            this.setValue(varName, 50);
+        }
+
+        // Obtiene la cantidad a establecer y la actualiza
+        let val = this.getValue(varName)
+        val += amount;
+        this.setValue(varName, val);
+
+        // console.log(this.blackboard)
+    }
 }

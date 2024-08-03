@@ -80,7 +80,7 @@ export default class PlaygroundMorningDay2 extends PlaygroundBase {
                         node.choices.splice(1, 1);
                         node.next.splice(1, 1);
     
-                        this.dialogManager.talking = false;
+                        this.dialogManager.setTalking(false);
                         this.dialogManager.setNode(node);
                     }, 0, true);
                 }

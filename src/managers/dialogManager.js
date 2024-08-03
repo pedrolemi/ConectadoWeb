@@ -31,7 +31,7 @@ export default class DialogManager {
         mask.visible = false;
         this.portraitMask = mask.createBitmapMask();
 
-        this.talking = false;
+        this.setTalking(false);
 
         // Anade un rectangulo para bloquear la interaccion con los elementos del fondo
         this.bgBlock = scene.add.rectangle(0, 0, this.scene.CANVAS_WIDTH, this.scene.CANVAS_HEIGHT, 0xfff, 0).setOrigin(0, 0);
@@ -88,7 +88,7 @@ export default class DialogManager {
     /**
     * Devuelve el retrato del personaje indicado
     * @param {String} character - id del personaje
-    * @return {Phaser.Image} - imagen con el retrato del personaje. 
+    * @returns {Phaser.Image} - imagen con el retrato del personaje. 
     *                          Devuelve null si la id no esta en el mapa de retratos 
     */
     getPortrait(character) {
@@ -106,7 +106,7 @@ export default class DialogManager {
 
     /**
     * Devuelve si el texto de la caja supera la altura maxima
-    * @return {boolean} - true si la caja supera la altura maxima, false en caso contrario
+    * @returns {boolean} - true si la caja supera la altura maxima, false en caso contrario
     */
     textTooBig() {
         return (this.textbox.textTooBig());
@@ -120,7 +120,7 @@ export default class DialogManager {
         // Si no hay ningun dialogo activo y el nodo a poner es valido
         if (!this.isTalking() && node) {
             // Indica que ha empezado un dialogo
-            this.talking = true;
+            this.setTalking(true);
 
             // Desactiva la caja de texto y las opciones (por si acaso)
             if (this.textbox) this.textbox.activate(false);
@@ -128,9 +128,98 @@ export default class DialogManager {
 
             // Cambia el nodo por el indicado
             this.currNode = node;
-            this.processNode();
+            this.processNode(node);
         }
+        else {
+            this.textbox.activate(false)
+            this.setTalking(false);
+            this.bgBlock.disableInteractive();
+        }
+    }
 
+    /**
+     * Procesa el nodo de condicion que se le pase como parametro
+     * @param {DialogNode} node - Nodo a procesar 
+     * @returns {Number} - indice del siguiente nodo
+     */
+    processCondition(node) {
+        let conditionMet = false;
+        let i = 0;
+
+        // Recorre todas las condiciones hasta que se haya cumplido la primera
+        while (i < node.conditions.length && !conditionMet) {
+            let allConditionsMet = true;
+            let j = 0;
+
+            // Se recorren todas las variables de la condicion mientras se cumplan todas
+            while (j < node.conditions[i].length && allConditionsMet) {
+                // Coge el nombre de la variable, el operador y el valor esperado 
+                let variable = node.conditions[i][j].key;
+                let operator = node.conditions[i][j].operator;
+                let expectedValue = node.conditions[i][j].value;
+
+                // Busca el valor de la variable en la blackboard indicada. 
+                // Si no es valida, buscara por defecto en el gameManager
+                let variableValue = this.gameManager.getValue(variable, node.conditions[i][j].blackboard);
+                // console.log(variable + " " + variableValue);
+
+                if (operator === "equal") {
+                    conditionMet = variableValue === expectedValue;
+                }
+                else if (operator === "greater") {
+                    conditionMet = variableValue >= expectedValue;
+
+                }
+                else if (operator === "lower") {
+                    conditionMet = variableValue <= expectedValue;
+
+                }
+                else if (operator === "different") {
+                    conditionMet = variableValue !== expectedValue;
+                }
+
+                // Se habran cumplido todas las condiciones si todas las condiciones
+                // se han cumplido anteriormente y esta tambien se ha cumplido
+                allConditionsMet &= conditionMet;
+
+                j++;
+            }
+
+            // Si no se ha cumplido ninguna condicion, pasa a la siguiente
+            if (!conditionMet) i++;
+        }
+        return i;
+    }
+    
+    /**
+     * Procesa el nodo de evento que se le pasa como parametro
+     * @param {DialogNode} node - nodo a procesar 
+     */
+    processEvent(node) {
+        // Recorre todos los eventos del nodo y les hace dispatch con el delay establecido (si tienen)
+        for (let i = 0; i < node.events.length; i++) {
+            let evt = node.events[i];
+
+            let delay = 0
+            if (evt.delay) {
+                delay = evt.delay;
+            }
+            setTimeout(() => {
+                this.dispatcher.dispatch(evt.name, evt);
+
+                // Si el evento establece el valor de una variable, lo cambia en la 
+                // blackboard correspondiente (la de la escena o la del gameManager)
+                let blackboard = this.gameManager.blackboard;
+                if (evt.global !== undefined && evt.global === false) {
+                    blackboard = evt.blackboard;
+                }
+                if (evt.variable && evt.value) {
+                    // console.log(blackboard)
+                    // console.log(evt.variable)
+                    this.gameManager.setValue(evt.variable, evt.value, blackboard);
+                }
+            }, delay);
+        }
     }
 
     // Procesa el nodo actual dependiendo de su tipo
@@ -140,51 +229,7 @@ export default class DialogManager {
             this.bgBlock.setInteractive();
             // Si el nodo es un nodo condicional
             if (this.currNode.type === "condition") {
-                let conditionMet = false;
-                let i = 0;
-
-                // Recorre todas las condiciones hasta que se haya cumplido la primera
-                while (i < this.currNode.conditions.length && !conditionMet) {
-                    let allConditionsMet = true;
-                    let j = 0;
-
-                    // Se recorren todas las variables de la condicion mientras se cumplan todas
-                    while (j < this.currNode.conditions[i].length && allConditionsMet) {
-                        // Coge el nombre de la variable, el operador y el valor esperado 
-                        let variable = this.currNode.conditions[i][j].key;
-                        let operator = this.currNode.conditions[i][j].operator;
-                        let expectedValue = this.currNode.conditions[i][j].value;
-
-                        // Busca el valor de la variable en la blackboard indicada. 
-                        // Si no es valida, buscara por defecto en el gameManager
-                        let variableValue = this.gameManager.getValue(variable, this.currNode.conditions[i][j].blackboard);
-                        // console.log(variable + " " + variableValue);
-
-                        if (operator === "equal") {
-                            conditionMet = variableValue === expectedValue;
-                        }
-                        else if (operator === "greater") {
-                            conditionMet = variableValue >= expectedValue;
-
-                        }
-                        else if (operator === "lower") {
-                            conditionMet = variableValue <= expectedValue;
-
-                        }
-                        else if (operator === "different") {
-                            conditionMet = variableValue !== expectedValue;
-                        }
-
-                        // Se habran cumplido todas las condiciones si todas las condiciones
-                        // se han cumplido anteriormente y esta tambien se ha cumplido
-                        allConditionsMet &= conditionMet;
-
-                        j++;
-                    }
-
-                    // Si no se ha cumplido ninguna condicion, pasa a la siguiente
-                    if (!conditionMet) i++;
-                }
+                let i = this.processCondition(this.currNode);
 
                 // El indice del siguiente nodo sera el primero que cumpla una de las condiciones
                 this.currNode = this.currNode.next[i];
@@ -225,30 +270,7 @@ export default class DialogManager {
                 }
             }
             else if (this.currNode.type === "event") {
-                // Recorre todos los eventos del nodo y les hace dispatch con el delay establecido (si tienen)
-                for (let i = 0; i < this.currNode.events.length; i++) {
-                    let evt = this.currNode.events[i];
-
-                    let delay = 0
-                    if (evt.delay) {
-                        delay = evt.delay;
-                    }
-                    setTimeout(() => {
-                        this.dispatcher.dispatch(evt.name, evt);
-
-                        // Si el evento establece el valor de una variable, lo cambia en la 
-                        // blackboard correspondiente (la de la escena o la del gameManager)
-                        let blackboard = this.gameManager.blackboard;
-                        if (evt.global !== undefined && evt.global === false) {
-                            blackboard = evt.blackboard;
-                        }
-                        if (evt.variable && evt.value) {
-                            // console.log(blackboard)
-                            // console.log(evt.variable)
-                            this.gameManager.setValue(evt.variable, evt.value, blackboard);
-                        }
-                    }, delay);
-                }
+                this.processEvent(this.currNode);
 
                 // IMPORTANTE: DESPUES DE UN NODO DE EVENTO SOLO HAY UN NODO, POR LO QUE 
                 // EL SIGUIENTE NODO SERA EL PRIMER NODO DEL ARRAY DE NODOS SIGUIENTES
@@ -256,7 +278,7 @@ export default class DialogManager {
                 this.processNode();
             }
             else if (this.currNode.type === "chatMessage") {
-                this.talking = false;
+                this.setTalking(false);
                 this.scene.phoneManager.phone.setChatNode(this.currNode.chat, this.currNode);
             }
             else if (this.currNode.type === "socialNetMessage") {
@@ -269,7 +291,7 @@ export default class DialogManager {
         }
         else {
             this.textbox.activate(false)
-            this.talking = false;
+            this.setTalking(false);
             this.bgBlock.disableInteractive();
         }
     }
@@ -389,7 +411,7 @@ export default class DialogManager {
 
     /**
     * Metodo para comprobar si un dialogo esta activo o no
-    * @return {boolean} - true si hay un dialogo activo, false en caso contrario
+    * @returns {boolean} - true si hay un dialogo activo, false en caso contrario
     */
     isTalking() {
         return this.talking;

@@ -1,9 +1,9 @@
 import ClassFrontBase from "../baseScenarios/classFrontBase.js";
 import Character from "../../../gameObjects/character.js";
 
-export default class ClassFrontMorningDay2 extends ClassFrontBase {
+export default class ClassFrontMorningDay3 extends ClassFrontBase {
     constructor() {
-        super('ClassFrontMorningDay2');
+        super('ClassFrontMorningDay3');
     }
 
     create(params) {
@@ -24,7 +24,7 @@ export default class ClassFrontMorningDay2 extends ClassFrontBase {
                 y: this.CANVAS_HEIGHT * 0.51,
                 scale: this.scale * 1.4
             };
-            this.add.image(tr.x, tr.y, this.atlasName, 'frontChar6').setOrigin(0, 0).setScale(tr.scale).setDepth(this.row1Chairs.depth);
+            this.add.image(tr.x, tr.y, this.atlasName, 'frontChar3').setOrigin(0, 0).setScale(tr.scale).setDepth(this.row1Chairs.depth);
 
             tr = {
                 x: 680,
@@ -53,7 +53,7 @@ export default class ClassFrontMorningDay2 extends ClassFrontBase {
                 y: this.CANVAS_HEIGHT * 0.54,
                 scale: this.scale * 1
             };
-            this.add.image(tr.x, tr.y, this.atlasName, 'frontChar15').setOrigin(0, 0).setScale(tr.scale).setDepth(this.row2Chairs.depth);
+            this.add.image(tr.x, tr.y, this.atlasName, 'frontChar10').setOrigin(0, 0).setScale(tr.scale).setDepth(this.row2Chairs.depth);
 
             tr = {
                 x: 1060,
@@ -99,15 +99,12 @@ export default class ClassFrontMorningDay2 extends ClassFrontBase {
             let sceneName = 'TextOnlyScene';
 
             // Se obtiene el texto de la escena de transicion del archivo de traducciones 
-            let text = this.i18next.t("day2.startClass", { ns: "transitionScenes", returnObjects: true });
-            if (this.gameManager.getValue(this.gameManager.isLate)) {
-                text = this.i18next.t("day2.startClassLate", { ns: "transitionScenes", returnObjects: true });
-            }
+            let text = this.i18next.t("day3.startClass", { ns: "transitionScenes", returnObjects: true });
 
             let params = {
                 text: text,
                 onComplete: () => {
-                    this.gameManager.changeScene('ClassBackBreakDay2');
+                    this.gameManager.changeScene('ClassBackAfternoonDay3');
                 },
                 onCompleteDelay: 500
             };

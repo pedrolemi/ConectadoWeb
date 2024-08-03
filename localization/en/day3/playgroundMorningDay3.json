@@ -1,0 +1,68 @@
+{
+    "group": {
+        "notTalked": {
+            "text": "Good morning, what are you doing here?"
+        },
+        "explain": {
+            "text": "We were just talking."
+        },
+        "shutUp": [
+            {
+                "text": "Shut up Guille, what was the deal?"
+            },
+            {
+                "text": "Or do you want your parents to know?"
+            }
+        ],
+        "silence": {
+            "text": "..."
+        },
+        "choices": [
+            {
+                "text": "What's going on, Guille?"
+            },
+            {
+                "text": "That sounded like a threat"
+            }
+        ],
+        "worry": {
+            "text": "Are you okay, Guille?"
+        },
+        "threat": {
+            "text": "Do you also have it in for Guille,...Alex?"
+        },
+        
+        "silenceQuestion": {
+            "text": "..."
+        },
+        "askSilence": {
+            "text": "Is anybody going to say something?"
+        },
+
+        "bellRinging": {
+            "text": "<<The bell is ringing>>"
+        },
+        "late": {
+            "text": "Alright, don't say anything. I'm going to class, it's already late enough."
+        },
+        "talked": [
+            {
+                "text": "It's a picture of a dog with my face on it and sticking out the tongue."
+            },
+            {
+                "text": "You too, Guille?"
+            }
+        ],
+        "keepSilence": {
+            "text": "..."
+        },
+        "talkedChoices": [
+            {
+                "text": "Wait to see if they speak."
+            },
+            {
+                "text": "Leave."
+            }
+        ]
+    }
+}

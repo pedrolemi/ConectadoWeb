@@ -3,12 +3,14 @@ import BaseScene from './baseScene.js';
 
 export default class NightmareBase extends BaseScene {
     /**
-     * Escena base para los banos. Coloca los elementos que se mantienen igual todos los dias
+     * Escena base para las pesadillas. Coloca los elementos que se mantienen igual todos los dias
      * @extends BaseScene
-     * @param {String} name - id de la escena
+     * @param {Number} day - numero de dia (a partir de el se configura el nombre de la escena y se obtienen los dialogos)
      */
-    constructor(name) {
-        super(name, 'nightmaresElements');
+    constructor(day) {
+        super('NightmareDay' + day, 'nightmaresElements');
+
+        this.day = day;
     }
 
     create(params) {
@@ -18,11 +20,16 @@ export default class NightmareBase extends BaseScene {
         this.phoneManager.activate(false);
 
         // Se coloca la imagen del fondo centrada con el tam del canvas
-        let bg = this.add.image(this.CANVAS_WIDTH / 2, this.CANVAS_HEIGHT / 2, 'nightmaresBg').setOrigin(0.5);
-        this.scale = this.CANVAS_HEIGHT / bg.height;
-        bg.setScale(this.scale);
+        this.bg = this.add.image(this.CANVAS_WIDTH / 2, this.CANVAS_HEIGHT / 2, 'nightmaresBg').setOrigin(0.5);
+        this.scale = this.CANVAS_HEIGHT / this.bg.height;
+        this.bg.setScale(this.scale);
 
         // No se puede hacer scroll
         this.rightBound = this.CANVAS_WIDTH;
+
+        // Archivo con la estructura del dialogo (a partir del dia)
+        this.file = this.cache.json.get('nightmareDay' + this.day);
+        // Namespace con los textos localizados (a partir del dia)
+        this.ns = 'day' + this.day + '\\nightmareDay' + this.day;
     }
 }

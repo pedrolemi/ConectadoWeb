@@ -27,12 +27,14 @@ export default class TextInput extends Phaser.GameObjects.Container {
         this.fillImg = this.scene.add.image(0, 0, fill);
         this.fillImg.setOrigin(0, 0.5);
         if (hitArea) {
-            this.fillImg.setInteractive({ useHandCursor: true}, hitArea.area, hitArea.callback);
+            this.fillImg.setInteractive({ useHandCursor: true }, hitArea.area, hitArea.callback);
         }
         else {
-            this.fillImg.setInteractive({ useHandCursor: true});
+            this.fillImg.setInteractive({ useHandCursor: true });
         }
-        //this.scene.input.enableDebug(this.fillImg, '0xffff00');
+        if (this.scene.sys.game.debug) {
+            this.scene.input.enableDebug(this.fillImg, '0xffff00');
+        }
         this.add(this.fillImg);
 
         if (edge) {

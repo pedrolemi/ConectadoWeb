@@ -5,13 +5,12 @@ export default class NightmareMinigame extends NightmareBase {
      * Clase base para todas las pesadillas que funcionan como minijuegos, es decir,
      * para las de los cuatro primeros dias
      * Se encarga de todo lo relativo a la sombra y tiene metodos para el flujo del minijuego
-     * @param {Number} day - numero de dia, a partir de el se configura el nombre de la escena y se obtienen todos los dialogos 
+     * @param {Number} day - numero de dia (a partir de el se configura el nombre de la escena y se obtienen todos los dialogos)
      * @param {Boolean} left - indica si la sombra debe colocarse en la izquierda (true) o en la derecha (false) 
      */
     constructor(day, left) {
-        super('NightmareDay' + day);
+        super(day);
 
-        this.day = day;
         this.left = left;
     }
 
@@ -23,11 +22,6 @@ export default class NightmareMinigame extends NightmareBase {
             y: 63,
             scale: 1.6
         }
-
-        // Archivo con la estructura del dialogo (a partir del dia)
-        this.file = this.cache.json.get('nightmareDay' + this.day);
-        // Namespace con los textos localizados (a partir del dia)
-        this.ns = 'day' + this.day + '\\nightmareDay' + this.day;
 
         // Se crea la sombra, su retrato y los nodos con sus dialogos
         this.shadow = this.createShadow();

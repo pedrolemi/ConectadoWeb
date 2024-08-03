@@ -60,6 +60,9 @@ import NightmareDay3 from './scenes/gameLoop/day3/nightmareDay3.js';
 // Dia 4
 import NightmareDay4 from './scenes/gameLoop/day4/nightmareDay4.js';
 
+// Dia 5
+import NightmareDay5 from './scenes/gameLoop/day5/nightmareDay5.js';
+
 // UI
 import ComputerScene from './UI/computer/computerScene.js'
 import UIManager from './managers/UIManager.js';
@@ -92,6 +95,8 @@ const config = {
         NightmareDay3,
         // Escenas dia 4
         NightmareDay4,
+        // Escenas dia 5
+        NightmareDay5,
         // Pruebas
         Test,
         // UI
@@ -128,7 +133,9 @@ const config = {
         },
         zoom: 1,
         parent: 'game',
-    }
+    },
 }
 
 const game = new Phaser.Game(config);
+// Propiedad debug para los colliders
+game.debug = false;

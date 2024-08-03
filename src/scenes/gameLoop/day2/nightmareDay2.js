@@ -3,7 +3,7 @@ import ChairWithGum from '../../../gameObjects/chairWithGum.js';
 
 export default class NightmareDay2 extends NightmareMinigame {
     /**
-     * Pesadillas que aparece en el dia 2
+     * Pesadilla que aparece el dia 2
      * El minijuego consiste en chicles que van cayendo desde el cielo cada vez mas deprisa y cada menos tiempo
      * Hay que evitar que choquen con las sillas clicandolos
      */

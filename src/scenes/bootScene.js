@@ -321,13 +321,19 @@ export default class BootScene extends Phaser.Scene {
         // ID archivo dialogo --> momDialog
         // Namespace --> test\\momDialog.json
         let dialogsAndNamespaces = [
+            // Tests
             'test/momDialog.json',
             'test/dadDialog.json',
             'test/chat1.json',
-            // 'test/computerTest.json',
+            'test/computerTest.json',
+
+            // Posts ordenador
             'posts.json',
+
+            // Dialogos de todos los dias
             'everydayDialog.json',
 
+            // Dia 1
             'day1/bedroomMorningDay1.json',
             'day1/livingroomMorningDay1.json',
             'day1/playgroundMorningDay1.json',
@@ -341,6 +347,7 @@ export default class BootScene extends Phaser.Scene {
             'day1/bedroomAfternoonDay1.json',
             'day1/nightmareDay1.json',
 
+            // Dia 2
             'day2/bedroomMorningDay2.json',
             'day2/livingroomMorningDay2.json',
             'day2/playgroundMorningDay2.json',
@@ -353,28 +360,39 @@ export default class BootScene extends Phaser.Scene {
             'day2/livingroomAfternoonDay2.json',
             'day2/bedroomAfternoonDay2.json',
             'day2/nightmareDay2.json',
-            
+
+            // Dia 3
             'day3/bedroomMorningDay3.json',
             'day3/livingroomMorningDay3.json',
             'day3/playgroundMorningDay3.json',
             'day3/corridorMorningDay3.json',
             'day3/classCorridorAfternoonDay3.json',
             'day3/nightmareDay3.json',
-            
+
+            // Dia 4
             'day4/nightmareDay4.json',
 
+            // Dia 5
             'day5/nightmareDay5.json'
         ]
         // Solo son namespaces del plugin i18next
         // El nombre corresponde tal cual con el namespace (incluye \\ si es necesario)
         let onlyNamespaces = [
+            // Menus
             'titleMenu',
             'userInfoMenu',
+
+            // Nombres
             'names',
+
+            // Movil
             'phoneInfo',
+
+            // Ordenador
             'computer',
+
+            // Escenas de transicion
             'transitionScenes',
-            'everydayDialog'
         ]
 
         this.loadComputersAssets();
@@ -387,6 +405,7 @@ export default class BootScene extends Phaser.Scene {
         this.loadCreditsSceneAssets();
 
         this.load.setPath('assets');
+        this.load.image('defaultParticleTexture', 'defaultParticleTexture.png');
 
         this.loadPlugins(dialogsAndNamespaces, onlyNamespaces);
     }

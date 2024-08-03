@@ -44,13 +44,15 @@ export default class Button extends Phaser.GameObjects.Container {
         this.hitArea = null;
         if (hitArea) {
             this.hitArea = hitArea;
-            this.fillImg.setInteractive({ useHandCursor: true}, hitArea.area, hitArea.callback);
+            this.fillImg.setInteractive({ useHandCursor: true }, hitArea.area, hitArea.callback);
         }
         else {
-            this.fillImg.setInteractive({ useHandCursor: true});
+            this.fillImg.setInteractive({ useHandCursor: true });
         }
         // dibujar el area de colision
-        //this.scene.input.enableDebug(this.fillImg, '0xffff00');
+        if (this.scene.sys.game.debug) {
+            this.scene.input.enableDebug(this.fillImg, '0xffff00');
+        }
 
         let tintFadeTime = 25;
 
@@ -103,7 +105,7 @@ export default class Button extends Phaser.GameObjects.Container {
                 yoyo: true,
             });
             down.on('complete', () => {
-                this.fillImg.setInteractive({ useHandCursor: true});
+                this.fillImg.setInteractive({ useHandCursor: true });
                 fn();
             });
         });
@@ -133,8 +135,10 @@ export default class Button extends Phaser.GameObjects.Container {
     setHitArea(hitArea) {
         this.fillImg.removeInteractive();
         this.hitArea = hitArea;
-        this.fillImg.setInteractive({ useHandCursor: true}, hitArea.area, hitArea.callback);
-        //this.scene.input.enableDebug(this.fillImg, '0xffff00');
+        this.fillImg.setInteractive({ useHandCursor: true }, hitArea.area, hitArea.callback);
+        if (this.scene.sys.game.debug) {
+            this.scene.input.enableDebug(this.fillImg, '0xffff00');
+        }
     }
 
     reset() {

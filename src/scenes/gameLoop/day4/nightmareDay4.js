@@ -37,13 +37,24 @@ export default class NightmareDay4 extends NightmareMinigame {
         }
 
         // Imagenes que pueden aparecer
-        this.sprites = ['photoDog', 'photoGum', 'photoGumWashed'];
+        this.sprites = ['photoDog'];
         let userInfo = this.gameManager.getUserInfo();
+        // Cambia en funcion del genero del personaje
         if (userInfo.gender == "male") {
             this.sprites.push('photoForeheadBoy', 'photoNumberBoy')
         }
         else if (userInfo.gender == "female") {
             this.sprites.push('photoForeheadGirl', 'photoNumberGirl')
+        }
+        // Cambia en funcion de si el personaje se el personaje se ha quitado el chicle del pantalon en el dia 2 o no
+        if (this.gameManager.hasValue("gumWashed")) {
+            let gumWashed = this.gameManager.getValue("gumWashed");
+            if (gumWashed) {
+                this.sprites.push('photoGumWashed');
+            }
+            else {
+                this.sprites.push('photoGum');
+            }
         }
 
         // Saber si hay un terremoto ya ejecutandose para que no se ejecuten varios a la vez

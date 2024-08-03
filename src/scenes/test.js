@@ -60,6 +60,7 @@ export default class Test extends BaseScene {
         let choices = super.readNodes(test3, "test\\chat1", "", true);
 
         // Telefono
+        /*
         let chatName = this.i18next.t("textMessages.chat1", { ns: "phoneInfo", returnObjects: true });
         this.phoneManager.phone.addChat(chatName, "Alex");
         this.phoneManager.phone.setChatNode(chatName, choices);
@@ -69,26 +70,37 @@ export default class Test extends BaseScene {
         this.phoneManager.phone.addMessage(chatName, "wequkb", "a", "dddd");
 
         chatName = this.i18next.t("textMessages.chat2", { ns: "phoneInfo", returnObjects: true });
-        this.phoneManager.phone.addChat(chatName, "Alex");
+        */
 
-        // let computerTest = this.cache.json.get('computerTest');
+        let debug = this.sys.game.debug;
+        this.dispatcher.removeAll();
+        //this.dispatcher.add('hola', this, this.fnTest);
+        //this.dispatcher.add('hola', this, this.fnTest, true);
+
+        let computerTest = this.cache.json.get('computerTest');
         // let ownPostNode = super.readNodes(computerTest, "test\\computerTest", "", true);
         // let refuseNode = super.readNodes(computerTest, "test\\computerTest", "Alison.refuse", true);
-        // let postNode = super.readNodes(computerTest, "test\\computerTest", "Alison.post", true);
+        let postNode = super.readNodes(computerTest, "test\\computerTest", "Alison.post", true);
         // let socialNetwork = this.gameManager.computerScene.socialNetScreen;
         // socialNetwork.setOwnPostNode(ownPostNode);
-        // //socialNetwork.createPost('Alison', 'post0');
+        // socialNetwork.createPost('Alison', 'post0');
         // socialNetwork.addFriendRequest('Alison');
         // socialNetwork.createPost('Alison', 'post0');
         // socialNetwork.setRefuseNode('Alison', refuseNode);
         // socialNetwork.setPostNode('Alison', 'post0', postNode);
 
-        // // Ordenador
-        // let computer = this.add.image(this.CANVAS_WIDTH / 2, this.CANVAS_HEIGHT / 2, 'bedroom', 'computer');
-        // computer.setScale(0.5);
-        // computer.setInteractive();
-        // computer.on('pointerdown', () => {
-        //     this.gameManager.switchToComputer();
-        // });
+        this.dialogManager.setNode(postNode);
+
+        // Ordenador
+        let computer = this.add.image(this.CANVAS_WIDTH / 2, this.CANVAS_HEIGHT / 2, 'bedroom', 'computer');
+        computer.setScale(0.5);
+        computer.setInteractive();
+        computer.on('pointerdown', () => {
+            this.gameManager.switchToComputer();
+        });
+    }
+
+    fnTest() {
+        console.log("juan");
     }
 }

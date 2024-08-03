@@ -81,7 +81,7 @@ export default class SocialNetworkScreen extends Phaser.GameObjects.Group {
                     this.eraseFriend(friendReqInfo.character);
                 }
             }
-        });
+        }, true);
 
         // Cuando se elimina un post por medio de un nodo
         this.scene.gameManager.dispatcher.add("erasePost", this, (postInfo) => {
@@ -95,7 +95,7 @@ export default class SocialNetworkScreen extends Phaser.GameObjects.Group {
                     this.erasePost(postInfo.character, postInfo.postName);
                 }
             }
-        });
+        }, true);
 
         //new Post(this.scene, this.scene.CANVAS_WIDTH / 2, this.scene.CANVAS_HEIGHT / 2 - 250, 1, "Alison", "Alison", "photoMatch", "hola jajaj");
     }

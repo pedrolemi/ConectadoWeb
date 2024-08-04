@@ -13,7 +13,7 @@ export default class ClassFrontMorningDay3 extends ClassFrontBase {
         this.portraits.set("teacher", teacher);
 
         // Si no se ha llegado tarde, pone el nodo de dialogo al interactuar con las mesas
-        if (!this.gameManager.getValue(this.gameManager.isLate)) {  
+        if (!this.gameManager.getValue("isLate")) {  
             let nodes = this.cache.json.get('everydayDialog');
             this.tablesNode = super.readNodes(nodes, "everydayDialog", "class.table", true);
         }

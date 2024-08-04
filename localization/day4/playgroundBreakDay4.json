@@ -1,0 +1,164 @@
+{
+    "alex_ana": {
+        "root": {
+            "type": "condition",
+            "conditions": [
+                {
+                    "next": "prepareChoices",
+                    "talked": {
+                        "value": false,
+                        "operator": "equal",
+                        "global": false,
+                        "default": false
+                    }
+                },
+                {
+                    "next": "talked",
+                    "talked": {
+                        "value": true,
+                        "operator": "equal",
+                        "global": false,
+                        "default": false
+                    }
+                }
+            ]
+        },
+
+        "prepareChoices": {
+            "type": "event",
+            "events": [
+                { 
+                    "prepareChoicesAlexAna": { }
+                }
+            ],
+            "next": "choices"
+        },
+        "choices": {
+            "type": "choice",
+            "choices": [
+                { "next": "askFound" },
+                { "next": "askNotFound" },
+                { "next": "setTalked" }
+            ]
+        },
+
+        "askFound": {
+            "type": "text",
+            "character": "Alex",
+            "next": "askFound2"
+        },
+        "askFound2": {
+            "type": "text",
+            "character": "Ana",
+            "next": "setTalked"
+        },
+
+        "askNotFound": {
+            "type": "text",
+            "character": "Ana",
+            "next": "setPrank"
+        },
+        "setPrank": {
+            "type": "event",
+            "events": [
+                { 
+                    "setPrank": { 
+                        "variable": "canPrank", 
+                        "value": true, 
+                        "global": true
+                    }
+                }
+            ],
+            "next": "setTalked"
+        },
+
+        "setTalked": {
+            "type": "event",
+            "events": [
+                { 
+                    "setTalked": { 
+                        "variable": "talked", 
+                        "value": true, 
+                        "global": false
+                    }
+                }
+            ]
+        },
+
+        "talked": {
+            "type": "condition",
+            "conditions": [
+                {
+                    "next": "laugh",
+                    "canPrank": {
+                        "value": false,
+                        "operator": "equal",
+                        "global": true,
+                        "default": false
+                    }
+                },
+                {
+                    "next": "askPrank",
+                    "canPrank": {
+                        "value": true,
+                        "operator": "equal",
+                        "global": true,
+                        "default": false
+                    }
+                }
+            ]
+        },
+
+        "askPrank": {
+            "type": "text",
+            "character": "Alex",
+            "next": "prankChoices"
+        },
+        "prankChoices": {
+            "type": "choice",
+            "choices": [
+                { "next": "reveal" },
+                { "next": "hurry" }
+            ]
+        },
+
+        "hurry": {
+            "type": "text",
+            "character": "Alex"
+        },
+        "reveal": {
+            "type": "text",
+            "character": "Alex",
+            "next": "reveal2"
+        },
+        "reveal2": {
+            "type": "text",
+            "character": "Ana",
+            "next": "setPrankAnswer"
+        },
+        "setPrankAnswer": {
+            "type": "event",
+            "events": [
+                { 
+                    "setTalked": { 
+                        "variable": "canPrank", 
+                        "value": false, 
+                        "global": true
+                    }
+                }
+            ],
+            "next": "setTalked"
+        },
+
+
+        "laugh": {
+            "type": "text",
+            "character": "Alex",
+            "next": "laugh2"
+        },
+        "laugh2": {
+            "type": "text",
+            "character": "Ana"
+        }
+    }
+}

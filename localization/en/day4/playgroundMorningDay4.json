@@ -1,0 +1,105 @@
+{
+    "alison": {
+        "root": [
+            {
+                "text": "{{name}}, I'd like to talk to you."
+            },
+            {
+                "text": "I don't know if you are aware, but Alex's told us all not to talk to you."
+            },
+            {
+                "text": "And he's threatening everyone who does not follow him."
+            },
+            {
+                "text": "Can I trust you? I don't want us to stop being friends."
+            }
+        ],
+        "choices": [
+            {
+                "text": "Thank you very much for being my friend."
+            },
+            {
+                "text": "No, and I have no interest in gaining your trust."
+            }
+        ],
+        "thanks": [
+            {
+                "text": "I'm glad to hear that."
+            },
+            {
+                "text": "Let's exchange our phones and social media passwords."
+            },
+            {
+                "text": "As a gesture of friendship and trust."
+            },
+            {
+                "text": "In the past, they shook hands with an open wound for sharing blood to each other."
+            },
+            {
+                "text": "But that's gross and unhealthy."
+            }
+        ],
+        "passChoices": [
+            {
+                "text": "(Accept the passwords exchange)"
+            },
+            {
+                "text": "(Reject the passwords exchange)"
+            }
+        ],
+        "exchange":  {
+            "text": "You write the passwords through the mobile."
+        },
+        "exchange2": {
+            "text": "Perfect. \"Best Friends\" (smiles ear to ear)"
+        },
+        "dont": [
+            {
+                "text": "If you don't trust me I can't trust you either."
+            },
+            {
+                "text": "I'm sorry, but I can't talk to you then."
+            },
+            {
+                "text": "I don't want Alex to have it in for me."
+            }
+        ],
+        "reject": [
+            {
+                "text": "I don't have a choice then so I'll stop talking to you."
+            },
+            {
+                "text": "I don't want to take any risks."
+            }
+        ],
+        "bellRinging": {
+            "text": "<<The bell is ringing>>"
+        },
+        "late": {
+            "text": "I'm going to class now, it's late already, we'll get scolded for sure"
+        }
+    },
+
+    "guille": {
+        "root": {
+            "text": "(His face gesture changes once he sees you. Turns his head and looks other way)"
+        }
+    },
+
+    "jose": {
+        "root": [
+            {
+                "text": "(With a smile on his face he looks at you and starts laughing)"
+            },
+            {
+                "text": "HAHAHA!!"
+            }
+        ]
+    },
+
+    "board": {
+        "root": {
+            "text": "Looks like someone has taken yesterday's picture."
+        }
+    }
+}

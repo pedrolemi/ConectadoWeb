@@ -62,6 +62,18 @@ import BedroomAfternoonDay3 from './scenes/gameLoop/day3/bedroomAfternoonDay3.js
 import NightmareDay3 from './scenes/gameLoop/day3/nightmareDay3.js';
 
 // Dia 4
+import BedroomMorningDay4 from './scenes/gameLoop/day4/bedroomMorningDay4.js';
+import LivingroomMorningDay4 from './scenes/gameLoop/day4/livingroomMorningDay4.js';
+import PlaygroundMorningDay4 from './scenes/gameLoop/day4/playgroundMorningDay4.js';
+import StairsMorningDay4 from './scenes/gameLoop/day4/stairsMorningDay4.js';
+import CorridorMorningDay4 from './scenes/gameLoop/day4/corridorMorningDay4.js';
+import ClassFrontMorningDay4 from './scenes/gameLoop/day4/classFrontMorningDay4.js';
+import ClassBackBreakDay4 from './scenes/gameLoop/day4/classBackBreakDay4.js';
+import CorridorBreakDay4 from './scenes/gameLoop/day4/corridorBreakDay4.js';
+import StairsBreakDay4 from './scenes/gameLoop/day4/stairsBreakDay4.js';
+import PlaygroundBreakDay4 from './scenes/gameLoop/day4/playgroundBreakDay4.js';
+import PlaygroundAfternoonDay4 from './scenes/gameLoop/day4/playgroundAfternoonDay4.js';
+import LivingroomAfternoonDay4 from './scenes/gameLoop/day4/livingroomAfternoonDay4.js';
 import NightmareDay4 from './scenes/gameLoop/day4/nightmareDay4.js';
 
 // Dia 5
@@ -95,9 +107,9 @@ const config = {
         // Escenas dia 2
         BedroomMorningDay2, LivingroomMorningDay2, PlaygroundMorningDay2, StairsMorningDay2, CorridorMorningDay2, ClassFrontMorningDay2, ClassBackBreakDay2, CorridorBreakDay2, BathroomBreakDay2, StairsBreakDay2, PlaygroundBreakDay2, PlaygroundAfternoonDay2, LivingroomAfternoonDay2, BedroomAfternoonDay2, NightmareDay2,
         // Escenas dia 3
-        BedroomMorningDay3, LivingroomMorningDay3, PlaygroundMorningDay3, StairsMorningDay3, CorridorMorningDay3, ClassFrontMorningDay3, ClassBackAfternoonDay3, CorridorAfternoonDay3, BathroomAfternoonDay3, StairsAfternoonDay3, PlaygroundAfternoonDay3, LivingroomAfternoonDay3, BedroomAfternoonDay3,
-        NightmareDay3,
+        BedroomMorningDay3, LivingroomMorningDay3, PlaygroundMorningDay3, StairsMorningDay3, CorridorMorningDay3, ClassFrontMorningDay3, ClassBackAfternoonDay3, CorridorAfternoonDay3, BathroomAfternoonDay3, StairsAfternoonDay3, PlaygroundAfternoonDay3, LivingroomAfternoonDay3, BedroomAfternoonDay3, NightmareDay3,
         // Escenas dia 4
+        BedroomMorningDay4, LivingroomMorningDay4, PlaygroundMorningDay4, StairsMorningDay4, CorridorMorningDay4, ClassFrontMorningDay4, ClassBackBreakDay4, CorridorBreakDay4, StairsBreakDay4, PlaygroundBreakDay4, PlaygroundAfternoonDay4, LivingroomAfternoonDay4, 
         NightmareDay4,
         // Escenas dia 5
         NightmareDay5,

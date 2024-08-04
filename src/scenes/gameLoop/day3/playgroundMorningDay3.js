@@ -14,7 +14,7 @@ export default class PlaygroundMorningDay3 extends PlaygroundBase {
 
         
         // Si no se llega tarde, y se establece el dialogo de la puerta para que no se pueda entrar hasta que se abran 
-        if (!this.gameManager.getValue(this.gameManager.isLate)) {
+        if (!this.gameManager.getValue("isLate")) {
             this.phoneManager.setDayInfo("playgroundMorning");
             let nodes = this.cache.json.get('everydayDialog');
             this.doorNode = super.readNodes(nodes, "everydayDialog","playground.doorMorning", true);

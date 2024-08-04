@@ -1,0 +1,92 @@
+{
+    "maria": {
+        "friend": {
+            "text": "Buenos días {{name}}"
+        },
+        "hello": {
+            "text": "Hola, María"
+        },
+        "friendChoices": [
+            {
+                "text": "Ayer no viniste a clase, ¿estás bien?"
+            },
+            {
+                "text": "¿Me hablas?"
+            },
+            {
+                "text": "Tengo prisa, ya ha sonado el timbre. Hablamos luego."
+            }
+        ],
+
+        "askMissing": [
+            {
+                "text": "Sí, estoy bien, gracias por preguntar."
+            },
+            {
+                "text": "Ayer me encontraba en casa con fiebre y me quedé descansado."
+            },
+            {
+                "text": "Hoy ya estoy como nueva."
+            }
+        ],
+
+        "askTalkFriends": [
+            {
+                "text": "Supongo que lo dices por Álex."
+            },
+            {
+                "text": "Ana hizo algo parecido el año pasado para putearme."
+            },
+            {
+                "text": "Deberías hablar con tus padres o nuestro tutor."
+            },
+            {
+                "text": "Yo no lo hice cuando tuve la oportunidad, mis padres se enteraron cuando me obligaron a ir a un psicólogo."
+            },
+            {
+                "text": "",
+                "text_male": "Si necesitas que te acompañe para hablar con el profe puedes decírmelo. Pero no te quedes callado",
+                "text_female": "Si necesitas que te acompañe para hablar con el profe puedes decírmelo. Pero no te quedes callada"
+            }
+        ],
+        "askTalkFriends2": {
+            "text": "Gracias, nos vemos luego."
+        },
+
+        "normal": {
+            "text": "Buenas, Maria"
+        },
+        "normal2": {
+            "text": "Hola, {{name}}, ¿Quieres algo?"
+        },
+        "normalChoices": [
+            {
+                "text": "Nada, hasta luego."
+            },
+            {
+                "text": "¿Me hablas?"
+            }
+        ],
+        "askTalkNormal": {
+            "text": "¿Por qué no lo iba a hacer?"
+        },
+        "askTalkNormal2": {
+            "text": "¿No has hablado con Álex?"
+        },
+        "askTalkNormal3": [
+            {
+                "text": "Sí, lo de que nadie te dirija la palabra..."
+            },
+            {
+                "text": "A mi ya me hicieron la vida imposible entre todos el año pasado, aprendí la lección."
+            },
+            {
+                "text": "Lo mejor será que hables con tus padres o con tu tutor y no hagas caso a Alex ni a ´ninguno de sus perritos falderos."
+            }
+        ],
+
+        "talked": {
+            "text": "Llegarás tarde a clase si no te vas ya."
+        }
+    }
+}

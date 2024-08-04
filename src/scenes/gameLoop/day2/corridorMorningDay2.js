@@ -29,7 +29,7 @@ export default class CorridorMorningDay2 extends CorridorBase {
 
         
         // Si no se llega tarde, se colocan personajes en el fondo
-        if (!this.gameManager.getValue(this.gameManager.isLate)) {
+        if (!this.gameManager.getValue("isLate")) {
             tr = {
                 x: 250,
                 y: this.CANVAS_HEIGHT * 0.77,

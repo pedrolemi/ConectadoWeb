@@ -12,7 +12,7 @@ export default class TextOnlyScene extends BaseScene {
      * la siguiente escena, pero no se hace directamente porque dependiendo de la escena a la que se quiera
      * cambiar, podria hacer falta pasarle unos parametros distintos 
      */
-    constructor(params) {
+    constructor() {
         super('TextOnlyScene');
     }
 

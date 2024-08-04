@@ -1,0 +1,34 @@
+{
+    "alexAna": {
+        "root": {
+            "type": "text",
+            "character": "",
+            "next": "suggestion"
+        },
+        "suggestion": {
+            "type": "text",
+            "character": "Ana",
+            "next": "opinion"
+        },
+        "opinion": {
+            "type": "text",
+            "character": "Alex",
+            "next": "jose"
+        },
+        "jose": {
+            "type": "text",
+            "character": "Ana",
+            "next": "goOn"
+        },
+        "goOn": {
+            "type": "text",
+            "character": "player"
+        }
+    },
+    "board": {
+        "root": {
+            "type": "text",
+            "character": "player"
+        }
+    }
+}

@@ -1,0 +1,105 @@
+{
+    "alison": {
+        "root": [
+            {
+                "text": "{{name}}, quiero hablar contigo."
+            },
+            {
+                "text": "No sé si lo sabes, pero Alex nos ha dicho a todos que no te hablemos."
+            },
+            {
+                "text": "Y a los que no queremos hacerle caso nos amenaza con algo."
+            },
+            {
+                "text": "¿Puedo confiar en tí? No quiero dejar de ser tu amiga."
+            }
+        ],
+        "choices": [
+            {
+                "text": "Muchas gracias por ser mi amiga."
+            },
+            {
+                "text": "No y no tengo interés en ganarme tu confianza."
+            }
+        ],
+        "thanks": [
+            {
+                "text": "Me alegra oír eso."
+            },
+            {
+                "text": "Intercambiemos contraseñas de redes sociales y del móvil."
+            },
+            {
+                "text": "Como muestra de amistad y confianza."
+            },
+            {
+                "text": "Antiguamente para gestos así se daban la mano con una herida abierta para intercambiar sangre."
+            },
+            {
+                "text": "Pero eso es asqueroso y puedes coger cualquier cosa."
+            }
+        ],
+        "passChoices": [
+            {
+                "text": "(Aceptar el intercambio de contraseñas)"
+            },
+            {
+                "text": "(Rechazar el intercambio de contraseñas)"
+            }
+        ],
+        "exchange":  {
+            "text": "Os escribís las contraseñas a través del móvil"
+        },
+        "exchange2": {
+            "text": "Perfecto. Best Friends (sonríe de oreja a oreja)"
+        },
+        "dont": [
+            {
+                "text": "Si no confias en mí yo támpoco puedo confiar en tí."
+            },
+            {
+                "text": "Lo siento, pero entonces no puedo hablarte más."
+            },
+            {
+                "text": "No quiero que Álex la tome conmigo."
+            }
+        ],
+        "reject": [
+            {
+                "text": "Entonces no me queda otra que hacer caso a Alex y dejarte de hablar."
+            },
+            {
+                "text": "No quiero correr ningún riesgo."
+            }
+        ],
+        "bellRinging": {
+            "text": "<<La campana está sonando>>"
+        },
+        "late": {
+            "text": "Me voy a clase ya, que es tarde, ya verás como nos cae bronca."
+        }
+    },
+
+    "guille": {
+        "root": {
+            "text": "(El gesto de su cara cambia al verte, gira la cabeza y mira a otro lado)"
+        }
+    },
+
+    "jose": {
+        "root": [
+            {
+                "text": "(Con una sonrisa en su cara te mira fijamente y empieza a reir)"
+            },
+            {
+                "text": "JAJAJA!!"
+            }
+        ]
+    },
+
+    "board": {
+        "root": {
+            "text": "Parece que alguien ha arrancado ya la foto de ayer."
+        }
+    }
+}

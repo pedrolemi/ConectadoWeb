@@ -1,0 +1,123 @@
+{
+    "maria": {
+        "root": {
+           "type": "condition",
+            "conditions": [
+                {
+                    "next": "prankChoices",
+                    "canPrank": {
+                        "value": true,
+                        "operator": "equal",
+                        "global": true,
+                        "default": false
+                    }
+                },
+                {
+                    "next": "notFound",
+                    "phoneFound": {
+                        "value": false,
+                        "operator": "equal",
+                        "global": true,
+                        "default": false
+                    }
+                },
+                {
+                    "next": "found",
+                    "phoneFound": {
+                        "value": true,
+                        "operator": "equal",
+                        "global": true,
+                        "default": false
+                    }
+                }
+            ]
+        },
+
+        "normal": {
+            "type": "text",
+            "character": "player"
+        },
+        
+        "notFound": {
+            "type": "text",
+            "character": "player",
+            "next": "notFound2"
+        },
+        "notFound2": {
+            "type": "text",
+            "character": "Maria"
+        },
+
+        "found": {
+            "type": "text",
+            "character": "player",
+            "next": "found2"
+        },
+        "found2": {
+            "type": "text",
+            "character": "Maria"
+        },
+
+        "prankChoices": {
+            "type": "choice",
+            "choices": [
+                { "next": "normal" },
+                { "next": "prank" }
+            ]
+        },
+        "prank": {
+            "type": "event",
+            "events": [
+                {
+                    "prankMaria": {
+                        "variable": "pranked", 
+                        "value": true,
+                        "global": true
+                    }
+                },
+                {
+                    "prankMaria": {
+                        "variable": "canPrank", 
+                        "value": false,
+                        "global": true
+                    }
+                },
+                {
+                    "changeFriendship": {
+                        "character": "Maria",
+                        "value": -40
+                    }
+                }
+            ],
+            "next": "pranked"
+        },
+        "pranked": {
+            "type": "text",
+            "character": "player"
+        }
+
+    },
+
+    "bathroom": {
+        "root": {
+            "type": "text",
+            "character": "player",
+            "next": "choices"
+        },
+        "choices": {
+            "type": "choice",
+            "choices": [
+                { "next": "enter" },
+                { "next": "" }
+            ]
+        },
+        "enter": {
+            "type": "event",
+            "events": [
+                {
+                    "enterBathroom": {}
+                }
+            ]
+        }
+    }
+}

@@ -16,7 +16,7 @@ export default class PlaygroundMorningDay2 extends PlaygroundBase {
         this.homeNode = super.readNodes(nodes, "everydayDialog", "playground.homeMorning", true);
 
         // Si no se llega tarde, se colocan personajes de fondo
-        if (!this.gameManager.getValue(this.gameManager.isLate)) {
+        if (!this.gameManager.getValue("isLate")) {
             // Se establece el dialogo de la puerta para que no se pueda entrar hasta que se abran 
             this.phoneManager.setDayInfo("playgroundMorning");
             this.doorNode = super.readNodes(nodes, "everydayDialog","playground.doorMorning", true);

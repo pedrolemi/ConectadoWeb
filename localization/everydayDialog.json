@@ -182,12 +182,8 @@
             "choices": {
                 "type": "choice",
                 "choices": [
-                    {
-                        "next": "teacherArrive"
-                    },
-                    {
-                        "next": ""
-                    }
+                    { "next": "teacherArrive" },
+                    { "next": "" }
                 ]
             },
             "teacherArrive": {

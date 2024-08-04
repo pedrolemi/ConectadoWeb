@@ -17,7 +17,7 @@ export default class LivingroomMorningDay2 extends LivingroomBase {
 
         // Se comprueba si se ha cogido la mochila. Si se ha cogido, se 
         // pone el dialogo de que los padres ya se han ido en la puerta
-        if (this.gameManager.getValue(this.gameManager.bagPicked)) {
+        if (this.gameManager.getValue("bagPicked")) {
             this.doorNode = otherDoorNode;
         }
 

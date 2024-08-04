@@ -1,0 +1,17 @@
+{
+    "phone": {
+        "root": [
+            {
+                "text": "It's my phone."
+            },
+            {
+                "text": "",
+                "text_male": "Who has taken it and left it in the girls' bathroom?",
+                "text_female": "Who has taken it and left it in the boys' bathroom?"
+            },
+            {
+                "text": "Shit, it's not turning on. I hope it's a battery thing. As soon as I get home I'll change it."
+            }
+        ]
+    }
+}

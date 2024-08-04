@@ -1,14 +1,13 @@
 import ClassFrontBase from "../baseScenarios/classFrontBase.js";
-import Character from "../../../gameObjects/character.js";
 
-export default class ClassFrontMorningDay2 extends ClassFrontBase {
+export default class ClassFrontMorningDay4 extends ClassFrontBase {
     constructor() {
-        super('ClassFrontMorningDay2');
+        super('ClassFrontMorningDay4');
     }
 
     create(params) {
         super.create(params);
-
+        
         let teacher = this.add.image(this.portraitTr.x, this.portraitTr.y + 20, 'characters', 'teacher').setOrigin(0.5, 1).setScale(this.portraitTr.scale);
         this.portraits.set("teacher", teacher);
 
@@ -24,7 +23,7 @@ export default class ClassFrontMorningDay2 extends ClassFrontBase {
                 y: this.CANVAS_HEIGHT * 0.51,
                 scale: this.scale * 1.4
             };
-            this.add.image(tr.x, tr.y, this.atlasName, 'frontChar6').setOrigin(0, 0).setScale(tr.scale).setDepth(this.row1Chairs.depth);
+            this.add.image(tr.x, tr.y, this.atlasName, 'frontChar3').setOrigin(0, 0).setScale(tr.scale).setDepth(this.row1Chairs.depth);
 
             tr = {
                 x: 680,
@@ -38,7 +37,7 @@ export default class ClassFrontMorningDay2 extends ClassFrontBase {
                 y: this.CANVAS_HEIGHT * 0.55,
                 scale: this.scale * 1.4
             };
-            this.add.image(tr.x, tr.y, this.atlasName, 'frontChar1').setOrigin(0, 0).setScale(tr.scale).setDepth(this.row1Chairs.depth);
+            this.add.image(tr.x, tr.y, this.atlasName, 'frontChar4').setOrigin(0, 0).setScale(tr.scale).setDepth(this.row1Chairs.depth);
 
 
             tr = {
@@ -53,7 +52,7 @@ export default class ClassFrontMorningDay2 extends ClassFrontBase {
                 y: this.CANVAS_HEIGHT * 0.54,
                 scale: this.scale * 1
             };
-            this.add.image(tr.x, tr.y, this.atlasName, 'frontChar15').setOrigin(0, 0).setScale(tr.scale).setDepth(this.row2Chairs.depth);
+            this.add.image(tr.x, tr.y, this.atlasName, 'frontChar10').setOrigin(0, 0).setScale(tr.scale).setDepth(this.row2Chairs.depth);
 
             tr = {
                 x: 1060,
@@ -71,11 +70,11 @@ export default class ClassFrontMorningDay2 extends ClassFrontBase {
             this.add.image(tr.x, tr.y, this.atlasName, 'frontChar7').setOrigin(0, 0).setScale(-tr.scale, tr.scale).setDepth(this.row3Chairs.depth);
 
             tr = {
-                x: 1030,
+                x: 1200,
                 y: this.CANVAS_HEIGHT * 0.52,
                 scale: this.scale * 0.8
             };
-            this.add.image(tr.x, tr.y, this.atlasName, 'frontChar5').setOrigin(0, 0).setScale(tr.scale).setDepth(this.row3Chairs.depth);
+            this.add.image(tr.x, tr.y, this.atlasName, 'frontChar12').setOrigin(0, 0).setScale(-tr.scale, tr.scale).setDepth(this.row3Chairs.depth);
 
 
             tr = {
@@ -91,23 +90,25 @@ export default class ClassFrontMorningDay2 extends ClassFrontBase {
             this.dialogManager.setNode(teacherNode);
         }
 
-
+        
         // Evento llamado cuando terminan los dialogos y empieza la clase
         this.dispatcher.addOnce("startClass", this, (obj) => {
             console.log(obj);
 
             let sceneName = 'TextOnlyScene';
+            let nextScene = 'ClassBackBreakDay4'
 
             // Se obtiene el texto de la escena de transicion del archivo de traducciones 
-            let text = this.i18next.t("day2.startClass", { ns: "transitionScenes", returnObjects: true });
-            if (this.gameManager.getValue("isLate")) {
-                text = this.i18next.t("day2.startClassLate", { ns: "transitionScenes", returnObjects: true });
+            let text = this.i18next.t("day4.startClass", { ns: "transitionScenes", returnObjects: true });
+            if (this.gameManager.getValue("passwordExchanged")) {
+                text = this.i18next.t("day4.endDay", { ns: "transitionScenes", returnObjects: true });
+                nextScene = 'PlaygroundAfternoonDay4'
             }
-
+            
             let params = {
                 text: text,
                 onComplete: () => {
-                    this.gameManager.changeScene('ClassBackBreakDay2');
+                    this.gameManager.changeScene(nextScene);
                 },
                 onCompleteDelay: 500
             };

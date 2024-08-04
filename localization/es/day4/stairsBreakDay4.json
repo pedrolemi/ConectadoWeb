@@ -1,0 +1,42 @@
+{
+    "guilleAlison": {
+        "choices": [
+            {
+                "text": "¿Sabéis quién me ha quitado el móvil y lo ha dejado en el baño?"
+            },
+            {
+                "text": "¿Alguno sabe dónde está mi móvil? Alguién me lo ha quitado"
+            },
+            {
+                "text": "Supongo que no me váis a hablar... paso de deciros nada."
+            }
+        ],
+        "askFound": {
+            "text": "..."
+        },
+        "askFound2": {
+            "text": "No vamos a chivarnos, pero supongo que ya te imaginas quién tiene la culpa."
+        },
+        "askFound3": {
+            "text": "*sshhhhhh*"
+        },
+
+        "askNotFound": {
+            "text": "..."
+        },
+        "askNotFound2": {
+            "text": "Lo siento, no tenemos ni idea."
+        },
+        "askNotFound3": {
+            "text": "Gracias Guille."
+        },
+        
+
+        "talked": {
+            "text": "..."
+        },
+        "talked2": {
+            "text": "..."
+        }
+    }
+}

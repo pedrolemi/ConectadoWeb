@@ -1,0 +1,15 @@
+{
+    "noPhone": {
+        "root": [
+            {
+                "text": "I can't find my mobile phone."
+            },
+            {
+                "text": "I left it on my table when the class started."
+            },
+            {
+                "text": "Did anybody take it? I'll beter ask around."
+            }
+        ]
+    }
+}

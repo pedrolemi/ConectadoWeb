@@ -1,0 +1,15 @@
+{
+    "noPhone": {
+        "root": [
+            {
+                "text": "No encuentro mi móvil."
+            },
+            {
+                "text": "Lo había dejado encima de la mesa al empezar la clase."
+            },
+            {
+                "text": "¿Alguien me lo ha quitado? Será mejor que pregunte."
+            }
+        ]
+    }
+}

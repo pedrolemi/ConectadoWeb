@@ -1,0 +1,42 @@
+{
+    "guilleAlison": {
+        "choices": [
+            {
+                "text": "Do you know who took my phone and left it in the toilet?"
+            },
+            {
+                "text": "Does anyone know where is my phone? Somebody has taken it."
+            },
+            {
+                "text": "I guess you're not talking to me... I pass."
+            }
+        ],
+        "askFound": {
+            "text": "..."
+        },
+        "askFound2": {
+            "text": "We are not going to tell on them, but I guess you already imagine who was it."
+        },
+        "askFound3": {
+            "text": "*sshhhhhh*"
+        },
+
+        "askNotFound": {
+            "text": "..."
+        },
+        "askNotFound2": {
+            "text": "I'm sorry, we have no idea."
+        },
+        "askNotFound3": {
+            "text": "Thanks Guille."
+        },
+        
+
+        "talked": {
+            "text": "..."
+        },
+        "talked2": {
+            "text": "..."
+        }
+    }
+}

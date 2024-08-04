@@ -1,0 +1,59 @@
+{
+    "maria": {
+        "normal": {
+            "text": "I'm glad you came today."
+        },
+        
+        "notFound": {
+            "text": "Have you seen my mobile phone?"
+        },
+        "notFound2": [
+            {
+                "text": "Nope, no idea, check again the rest of the class just in case."
+            },
+            {
+                "text": "If i see something I'll let you know."
+            }
+        ],
+
+        "found": {
+            "text": "Have you seen anybody entering the toilets recently?"
+        },
+        "found2": {
+            "text": "I haven't noticed, sorry."
+        },
+
+        "prankChoices": [
+            {
+                "text": "Hey, María."
+            },
+            {
+                "text": "(Stick the poster carefully and leave wordless)"
+            }
+        ],
+        "pranked": [
+            {
+                "text": "(Good, it seems she hasn't noticed)"
+            },
+            {
+                "text": "(I hope they tell me now where my phone is)"
+            }
+        ]
+    },
+
+    "bathroom": {
+        "root": {
+            "text": "",
+            "text_male": "I cannot go there, it's the girls' bathroom.",
+            "text_female": "I cannot go there, it's the boys' bathroom."
+        },
+        "choices": [
+            {
+                "text": "(Get in anyway)"
+            },
+            {
+                "text": "(Leave)"
+            }
+        ]
+    }
+}

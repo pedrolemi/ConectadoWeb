@@ -1,0 +1,90 @@
+{
+    "maria": {
+        "friend": {
+            "text": "Good morning {{name}}"
+        },
+        "hello": {
+            "text": "Hello, María"
+        },
+        "friendChoices": [
+            {
+                "text": "You didn't come yesterday. Are you alright?"
+            },
+            {
+                "text": "You speak to me?"
+            },
+            {
+                "text": "I'm in a hurry, the bell already rung. Talk to you later."
+            }
+        ],
+
+        "askMissing": [
+            {
+				"text": "Yeah, I'm fine. Thanks for asking."
+			},
+			{
+				"text": "Yesterday I had fever so I stayed home resting."
+			},
+			{
+				"text": "Today I'm good as new."
+			}
+        ],
+
+        "askTalkFriends": [
+            {
+                "text": "I guess you mean Alex."
+            },
+            {
+                "text": "Ana did something similar last year to screw me."
+            },
+            {
+                "text": "You should talk to your parents or our tutor."
+            },
+            {
+                "text": "I didn't do it when I got the chance. My parents forced me to go and see a psychologist when they found out."
+            },
+            {
+                "text": "If you need me to go with you to speak with the teacher just tell me. But don't keep shut."
+            }
+        ],
+        "askTalkFriends2": {
+            "text": "Cheers, see you later."
+        },
+
+        "normal": {
+            "text": "Hey, Maria"
+        },
+        "normal2": {
+            "text": "Hello, {{name}}. Do you want anything?"
+        },
+        "normalChoices": [
+            {
+                "text": "No, see you later."
+            },
+            {
+                "text": "Are you talking to me?"
+            }
+        ],
+        "askTalkNormal": {
+            "text": "Why wouldn't I?"
+        },
+        "askTalkNormal2": {
+            "text": "Haven't you spoken to Alex?"
+        },
+        "askTalkNormal3": [
+            {
+                "text": "Yeah, about the silent treatment thing..."
+            },
+            {
+                "text": "They made my life miserable last year. Lesson learnt."
+            },
+            {
+                "text": "It'll be for the best if you talk to your parents or your tutor and don't listen to Alex or any of his 'minions'"
+            }
+        ],
+
+        "talked": {
+            "text": "You'll be late if you don't go now."
+        }
+    }
+}

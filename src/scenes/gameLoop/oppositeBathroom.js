@@ -49,6 +49,27 @@ export default class OppositeBathroom extends BaseScene {
         stall2DoorOpened.flipX = true;
 
 
+        // Telefono del jugador
+        let phone = this.add.image(2100 * this.scale, 1280 * this.scale, this.atlasName, 'stolenPhone').setOrigin(0, 0).setScale(this.scale * 1.7);
+        phone.setInteractive({ useHandCursor: true });
+        phone.on('pointerdown', () => {
+            this.dialogManager.setNode(phoneNode);
+        })
+
+        let nodes = this.cache.json.get('bathroomBreakDay4');
+        let phoneNode = super.readNodes(nodes, "day4\\bathroomBreakDay4", "phone", true);
+        
+        this.dispatcher.addOnce("pickPhone", this, (obj) => {
+            phone.disableInteractive();
+            this.tweens.add({
+                targets: [phone],
+                alpha: { from: 1, to: 0 },
+                duration: 500,
+                repeat: 0,
+            });
+        })
+
+
         // El unico sitio al que se puede volver es la escena de la que se 
         // viene, por lo que si esta guardada en los parametros, se establece
         if (params) {

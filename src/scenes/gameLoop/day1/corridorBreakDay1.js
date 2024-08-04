@@ -73,15 +73,6 @@ export default class CorridorBreakDay1 extends CorridorBase {
                 repeat: 0,
             });
         });
-
-        // Evento que se llama al contestar al mensaje para indicar que ya no hay nada mas que contestar
-        this.dispatcher.addOnce("endChat", this, (obj) => {
-            console.log(obj);
-            nodes = this.cache.json.get('everydayDialog');
-            phoneNode = super.readNodes(nodes, "everydayDialog", "phone", true);
-            this.phoneManager.phone.setChatNode(chatName, phoneNode);
-        });
-
         
     }
 

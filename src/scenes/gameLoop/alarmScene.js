@@ -27,8 +27,8 @@ export default class AlarmScene extends BaseScene {
         super.create();
 
         // Reinicia la variable de llegar tarde y de haber cogido la mochila
-        this.gameManager.setValue(this.gameManager.isLate, false);
-        this.gameManager.setValue(this.gameManager.bagPicked, false);
+        this.gameManager.setValue("isLate", false);
+        this.gameManager.setValue("bagPicked", false);
 
         
         this.phoneManager.topLid.visible = true;

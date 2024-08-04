@@ -13,7 +13,7 @@ export default class ClassFrontMorningDay1 extends ClassFrontBase {
         this.portraits.set("teacher", teacher);
 
         // Si no se ha llegado tarde, solo se coloca a Ana en clase
-        if (!this.gameManager.getValue(this.gameManager.isLate)) {
+        if (!this.gameManager.getValue("isLate")) {
             let tr = {
                 x: 650,
                 y: this.CANVAS_HEIGHT * 0.86,
@@ -112,7 +112,7 @@ export default class ClassFrontMorningDay1 extends ClassFrontBase {
 
             // Se obtiene el texto de la escena de transicion del archivo de traducciones 
             let text = this.i18next.t("day1.startClass", { ns: "transitionScenes", returnObjects: true });
-            if (this.gameManager.getValue(this.gameManager.isLate)) {
+            if (this.gameManager.getValue("isLate")) {
                 text = this.i18next.t("day1.startClassLate", { ns: "transitionScenes", returnObjects: true });
             }
 

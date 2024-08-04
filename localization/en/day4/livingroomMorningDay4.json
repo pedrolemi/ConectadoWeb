@@ -1,0 +1,45 @@
+{
+    "mom_dad": {
+        "meeting": {
+            "text": "We've decided to go and talk to your tutor and see what's going on."
+        },
+        "meeting2": {
+            "text": "We're going to ask for a meeting for tomorrow."
+        },
+        "choices": [
+            {
+                "text": "Thanks."
+            },
+            {
+                "text": "It'll be worse..."
+            }
+        ],
+        "thanks": {
+            "text": "Not at all darling, we want you to be fine."
+        },
+        "thanks2": {
+            "text": "We'll try to have this meeting tomorrow at the latest."
+        },
+        "downplay": [
+            {
+                "text": "I don't want you to go. It'll be worse."
+            },
+            {
+                "text": "They'll think I'm a snitch and it wasn't such a big deal."
+            },
+            {
+                "text": "Let it be, time will fix it."
+            }
+        ],
+        "downplay2": {
+            "text": "Fine, but let us know if goes beyond."
+        },
+
+        "talked": {
+            "text":  "Take care and behave."
+        },
+        "talked2": {
+            "text": "And remember we are visiting grandma on Sunday."
+        }
+    }
+}

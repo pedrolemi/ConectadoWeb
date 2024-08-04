@@ -1,0 +1,138 @@
+{
+    "maria": {
+        "root": {
+            "type": "condition",
+            "conditions": [
+                {
+                    "next": "notTalked",
+                    "talked": {
+                        "value": false,
+                        "operator": "equal",
+                        "global": false,
+                        "default": false
+                    }
+                },
+                {
+                    "next": "talked",
+                    "talked": {
+                        "value": true,
+                        "operator": "equal",
+                        "global": false,
+                        "default": false
+                    }
+                }
+            ]
+        },
+
+        "notTalked": {
+            "type": "condition",
+            "conditions": [
+                {
+                    "next": "normal",
+                    "MariaFS": {
+                        "value": 59,
+                        "operator": "lower",
+                        "global": true,
+                        "default": false
+                    }
+                },
+                {
+                    "next": "friend",
+                    "MariaFS": {
+                        "value": 60,
+                        "operator": "greater",
+                        "global": true,
+                        "default": false
+                    }
+                }
+            ]
+        },
+        "friend": {
+            "type": "text",
+            "character": "Maria",
+            "next": "hello"
+        },
+        "hello": {
+            "type": "text",
+            "character": "player",
+            "next": "friendChoices"
+        },
+        "friendChoices": {
+            "type": "choice",
+            "choices": [
+                { "next": "askMissing" },
+                { "next": "askTalkFriends" },
+                { "next": "setTalked" }
+            ]
+        },
+
+        "askMissing": {
+            "type": "text",
+            "character": "Maria",
+            "next": "setTalked"
+        },
+
+        "askTalkFriends": {
+            "type": "text",
+            "character": "Maria",
+            "next": "askTalkFriends2"
+        },
+        "askTalkFriends2": {
+            "type": "text",
+            "character": "player",
+            "next": "setTalked"
+        },
+
+
+        "normal": {
+            "type": "text",
+            "character": "player",
+            "next": "normal2"
+        },
+        "normal2": {
+            "type": "text",
+            "character": "Maria",
+            "next": "normalChoices"
+        },
+        "normalChoices": {
+            "type": "choice",
+            "choices": [
+                { "next": "setTalked" },
+                { "next": "askTalkNormal" }
+            ]
+        },
+        "askTalkNormal": {
+            "type": "text",
+            "character": "Maria",
+            "next": "askTalkNormal2"
+        },
+        "askTalkNormal2": {
+            "type": "text",
+            "character": "player",
+            "next": "askTalkNormal3"
+        },
+        "askTalkNormal3": {
+            "type": "text",
+            "character": "Maria",
+            "next": "setTalked"
+        },
+
+        "setTalked": {
+            "type": "event",
+            "events": [
+                { 
+                    "setTalked": { 
+                        "variable": "talked", 
+                        "value": true, 
+                        "global": false
+                    }
+                }
+            ]
+        },
+
+        "talked": {
+            "type": "text",
+            "character": "Maria"
+        }
+    }
+}

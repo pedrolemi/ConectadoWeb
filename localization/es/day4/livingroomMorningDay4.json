@@ -1,0 +1,45 @@
+{
+    "mom_dad": {
+        "meeting": {
+            "text": "Hemos decidido ir a hablar con tu tutor para ver qué está pasando en el colegio."
+        },
+        "meeting2": {
+            "text": "Vamos a pedirle una cita para mañana."
+        },
+        "choices": [
+            {
+                "text": "Gracias."
+            },
+            {
+                "text": "Va a ser peor."
+            }
+        ],
+        "thanks": {
+            "text": "De nada cariño, queremos que estés bien."
+        },
+        "thanks2": {
+            "text": "Intentaremos tener la reunión mañana como muy tarde."
+        },
+        "downplay": [
+            {
+                "text": "No quiero que vayáis, será peor."
+            },
+            {
+                "text": "Creerán que soy un chivato y tampoco ha sido para tanto."
+            },
+            {
+                "text": "Dejadlo estar, el tiempo lo solucionará."
+            }
+        ],
+        "downplay2": {
+            "text": "Bien, pero si va a más dinoslo."
+        },
+
+        "talked": {
+            "text": "Ten cuidado y portate bien."
+        },
+        "talked2": {
+            "text": "Y acuérdate que el domingo vamos a visitar a la abuela."
+        }
+    }
+}

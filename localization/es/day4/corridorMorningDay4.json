@@ -1,0 +1,29 @@
+{
+    "alexAna": {
+        "root": {
+            "text": "(Te han visto, pero pasan de tí, Álex y ana siguen hablando entre ellos)"
+        },
+        "suggestion": {
+            "text": "Creo que cabezabuque y gremlin son los más originales"
+        },
+        "opinion": [
+            {
+				"text": "El de margi me parecía bien"
+			},
+			{
+				"text": "Aunque es verdad que {{name}} cabezabuque suena my bien jajaja "
+			}
+        ],
+        "jose": {
+            "text": "Jajaja a ver que opina Jose"
+        },
+        "goOn": {
+            "text": "No os cortéis, seguid ignorándome y pensando en el mote que me váis a poner"
+        }
+    },
+    "board": {
+        "root": {
+            "text": "Parece que alguien ha arrancado ya la foto de ayer"
+        }
+    }
+}

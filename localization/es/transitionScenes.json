@@ -15,7 +15,9 @@
         "startClass": "Ha sido un día aburrido, las clases han terminado y la mayoria lleva ignorandote todo el día. Una notita de papel en tu mesa dice que alguien te espera en los baños."
     },
     "day4": {
-
+        "startClass": "La campana que marca el recreo ha sonado...",
+        "endBreak": "Al entrar suena la campana y aparece el profesor. La mañana termina sin darte cuenta, es hora de volver a casa...",
+        "endDay": "Cada vez se te hacen más largas las horas de clase. Por suerte ya es hora de volver a casa."
     },
     "day5": {
 

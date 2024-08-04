@@ -367,9 +367,9 @@ export default class PhoneManager {
     // Funcion llamada al aplazar la alarma
     sleep() {
         // Si no se ha dormido antes
-        if (!this.gameManager.getValue(this.gameManager.isLateVar)) {
+        if (!this.gameManager.getValue("isLate")) {
             // Se actualiza la variable de haberse quedado dormido
-            this.gameManager.setValue(this.gameManager.isLateVar, true);
+            this.gameManager.setValue("isLate", true);
 
             // Guarda el telefono
             this.togglePhone(1500);
@@ -377,9 +377,8 @@ export default class PhoneManager {
             // Al terminar la animacion de guardar el telefono
             if (this.activeTween) {
                 this.activeTween.on('complete', () => {
-                    // Se vuelve a poner la alarma y el bloqueo del fondo
+                    // Se vuelve a poner la alarma
                     this.phone.toAlarmScreen();
-                    this.bgBlock.setInteractive({ useHandCursor: true });
 
                     // Vuelve a reproducir la animacion de cerrar los ojos  
                     setTimeout(() => {
@@ -436,7 +435,7 @@ export default class PhoneManager {
         // ir a la larma y activar el bloqueo del fondo)
         this.activeTween.on('complete', () => {
             this.phone.toAlarmScreen();
-            this.bgBlock.setInteractive({ useHandCursor: true });
+            this.bgBlock.disableInteractive();
         });
 
 
@@ -555,7 +554,8 @@ export default class PhoneManager {
         let speed = 2000;
         let lastTopPos = this.topLid.y;
         let lastBotPos = this.botLid.y;
-
+        this.bgBlock.setInteractive();
+        
         let anim = this.scene.tweens.add({
             targets: [this.topLid],
             y: { from: lastTopPos, to: 0 },
@@ -577,10 +577,16 @@ export default class PhoneManager {
                 setTimeout(() => {
                     this.openEyesAnimation();
                 }, this.SLEEP_DELAY * 2);
-
+                this.bgBlock.disableInteractive();
             });
         }
-        else return anim;
+        else {
+            // Cuando termina, cambia la hora del telefono y vuelve a reproducir la animacion de abrir los ojos
+            anim.on('complete', () => {
+                this.bgBlock.disableInteractive();
+            });
+            return anim;
+        }
     }
 
 

@@ -53,7 +53,7 @@ export default class CorridorMorningDay3 extends CorridorBase {
         bulletinBoard.setDepth(1);
 
         // Si no se llega tarde, se colocan personajes en el fondo
-        if (!this.gameManager.getValue(this.gameManager.isLate)) {
+        if (!this.gameManager.getValue("isLate")) {
             let tr = {
                 x: this.rightBound * 0.78,
                 y: this.CANVAS_HEIGHT * 0.93,

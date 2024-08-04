@@ -1,0 +1,21 @@
+{
+    "phone": {
+        "root": {
+            "type": "text",
+            "character": "player",
+            "next": "pickPhone"
+        },
+        "pickPhone": {
+            "type": "event",
+            "events": [
+                {
+                    "pickPhone": {
+                        "variable": "phoneFound",
+                        "value": true,
+                        "global": true
+                    }
+                }
+            ]
+        }
+    }
+}

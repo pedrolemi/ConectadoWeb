@@ -1,0 +1,8 @@
+{
+    "noPhone": {
+        "root": {
+            "type": "text",
+            "character": "player"
+        }
+    }
+}

@@ -1,0 +1,145 @@
+{
+    "alison": {
+        "root": {
+            "type": "text",
+            "character": "Alison",
+            "next": "choices"
+        },
+        "choices": {
+            "type": "choice",
+            "choices":[
+                { "next": "thanks" },
+                { "next": "reject" }
+            ]
+        },
+        "thanks": {
+            "type": "text",
+            "character": "Alison",
+            "next": "passChoices"
+        },
+        "passChoices": {
+            "type": "choice",
+            "choices":[
+                { "next": "exchange" },
+                { "next": "dont" }
+            ]
+        },
+        "exchange": {
+            "type": "text",
+            "character": "",
+            "next": "exchange2"
+        },
+        "exchange2": {
+            "type": "text",
+            "character": "Alison",
+            "next": "setExchange"
+        },
+        "setExchange": {
+            "type": "event",
+            "events": [
+                { 
+                    "setExchange": { 
+                        "variable": "passwordExchanged", 
+                        "value": true, 
+                        "global": true
+                    }
+                }
+            ],
+            "next": "checkHour"
+        },
+        "dont": {
+            "type": "text",
+            "character": "Alison",
+            "next": "FSAlison"
+        },
+
+        "reject": {
+            "type": "text",
+            "character": "Alison",
+            "next": "FSAlison"
+        },
+
+        "FSAlison": {
+            "type": "event",
+            "events": [
+                { 
+                    "changeFriendship": { 
+                        "character": "Alison", 
+                        "value": -50
+                    }
+                }
+            ],
+            "next": "checkHour"
+        },
+        "checkHour": {
+            "type": "condition",
+            "conditions": [
+                {
+                    "next": "bellRinging",
+                    "isLate": {
+                        "value": false,
+                        "operator": "equal",
+                        "global": true,
+                        "default": false
+                    }
+                },
+                {
+                    "next": "late",
+                    "isLate": {
+                        "value": true,
+                        "operator": "equal",
+                        "global": true,
+                        "default": false
+                    }
+                }
+            ]
+        },
+        "bellRinging": {
+            "type": "text",
+            "character": "",
+            "next": "openDoors"
+        },
+        "openDoors": {
+            "type": "event",
+            "events": [
+                {
+                    "openDoors": { }
+                }
+            ]
+        },
+        "late": {
+            "type": "text",
+            "character": "Alison",
+            "next": "alisonLeave"
+        },
+        "alisonLeave": {
+            "type": "event",
+            "events": [
+                {
+                    "alisonLeave": { }
+                }
+            ]
+        }
+    },
+
+    "guille": {
+        "root": {
+            "type": "text",
+            "character": "Guille"
+        }
+    },
+
+    "jose": {
+        "root": {
+            "type": "text",
+            "character": "Jose"
+        }
+    },
+
+    "board": {
+        "root": {
+            "type": "text",
+            "character": "player"
+        }
+    }
+}

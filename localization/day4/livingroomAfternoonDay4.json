@@ -1,0 +1,14 @@
+{
+    "dad": {
+        "root": {
+            "type": "text",
+            "character": "dad"
+        }
+    },
+
+    "mom": {
+        "root": {
+            
+        }
+    }
+}

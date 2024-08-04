@@ -36,12 +36,6 @@ export default class GameManager {
         // Blackboard de variables de todo el juego
         this.blackboard = new Map();
 
-        this.bagPicked = "bagPicked";
-        this.blackboard.set(this.bagPicked, false);
-
-        this.isLate = "isLate";
-        this.blackboard.set(this.isLate, false);
-
         this.userInfo = null;
         this.UIManager = null;
         this.computerScene = null;
@@ -260,8 +254,8 @@ export default class GameManager {
         this.computerScene = this.currentScene.scene.get(computerSceneName);
         this.computerScene.scene.sleep();
 
-        this.day = 3;
-        let sceneName = 'LivingroomAfternoonDay3';
+        this.day = 4;
+        let sceneName = 'PlaygroundAfternoonDay4';
 
         // Pasa a la escena inicial con los parametros text, onComplete y onCompleteDelay
         // let sceneName = 'TextOnlyScene';

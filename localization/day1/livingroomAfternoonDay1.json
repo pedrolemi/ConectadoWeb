@@ -78,11 +78,11 @@
             "conditions": [
                 {
                     "next": "ignore",
-                    "ignored": {
-                        "value": false,
+                    "canIgnore": {
+                        "value": true,
                         "operator": "equal",
                         "global": false,
-                        "default": false
+                        "default": true
                     }
                 }
             ]
@@ -98,8 +98,8 @@
                 },
                 { 
                     "ignore": { 
-                        "variable": "ignored", 
-                        "value": true, 
+                        "variable": "canIgnore", 
+                        "value": false, 
                         "global": false
                     }
                 }

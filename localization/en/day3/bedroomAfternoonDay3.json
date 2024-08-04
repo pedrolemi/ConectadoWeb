@@ -1,0 +1,13 @@
+{
+    "wardrobe1": {
+        "root": {
+            "text": "There is nothing useful."
+        }
+    },
+
+    "wardrobe2": {
+        "root": {
+            "text": "Actually, it's not that bad organized."
+        }
+    }
+}

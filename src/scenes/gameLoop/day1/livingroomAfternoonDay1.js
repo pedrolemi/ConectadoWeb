@@ -53,7 +53,6 @@ export default class LivingroomAfternoonDay1 extends LivingroomBase {
             if (!this.gameManager.getValue("metGuille")) {
                 this.dialogManager.activateOptions(false, () => {
                     let node = this.dialogManager.currNode
-                    console.log(node.choices)
                     node.choices.splice(1, 1);
                     node.next.splice(1, 1);
 

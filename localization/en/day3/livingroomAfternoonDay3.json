@@ -1,0 +1,98 @@
+{
+    "mom": {
+        "notTalked": [
+            {
+                "text":  "Good afternoon, darling."
+            },
+            {
+                "text": "What have you done today?"
+            }
+        ],
+        "talked": {
+            "text": "Do you want to talk about anything else?"
+        },
+        "choices1": [
+            {
+                "text": "Nothing to note really."
+            },
+            {
+                "text": "María didn't come."
+            },
+            {
+                "text": "(Talk about other topic.)"
+            }
+        ],
+        "maria": {
+            "text": "I haven't seen María today."
+        },
+        
+        "choices2": [
+            {
+				"text": "The class"
+			},
+			{
+				"text": "(Tell about the picture on the board.)"
+			},
+			{
+				"text": "(Talk about other classmates.)"
+			}
+        ],
+        "school": [
+            {
+                "text": "Almost everyone have ignored me, they barely talked to me."
+            },
+            {
+                "text": "It's like everyone was avoiding me or gaving me the silent treatment."
+            }
+        ],
+        "board": [
+            {
+                "text": "They decided to post pictures of me in every school board."
+            },
+            {
+                "text": "I don't know what I've done wrong to be treated like this."
+            }
+        ],
+        "momBoard": [
+            {
+				"text": "I'll speak with your father later about it."
+			},
+			{
+				"text": "Perhaps we should go and talk to your tutor and see what's going on."
+			}
+        ],
+
+        "choices3": [
+            {
+                "text": "I've spoken to Guille"
+            },
+            {
+                "text": "I'm going to my room, i have stuff to do."
+            }
+        ],
+        "guille": [
+            {
+                "text": "Guille told me that Alex hates me."
+            },
+            {
+                "text": "Álex is making my life miserable."
+            },
+            {
+                "text": "And he's threatening half of the class to ignore me."
+            }
+        ],
+        "aboutBoard": [
+            {
+                "text": "And he told me that Ana is the first one following his game."
+            },
+            {
+                "text": "She arrived the first this morning..."
+            },
+            {
+                "text": "And decided to post pictures of me all over the school boards."
+            }
+        ]
+
+        
+    }
+}

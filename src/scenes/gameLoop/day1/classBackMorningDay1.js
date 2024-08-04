@@ -108,8 +108,8 @@ export default class ClassBackMorningDay1 extends ClassBackBase {
 
 
 
-        // Se bloquea la interaccion con el icono del telefono para que no se pueda sacar durante esta escena
-        this.phoneManager.icon.disableInteractive();
+        // Se desactiva el icono del telefono para que no se pueda sacar durante esta escena
+        this.phoneManager.icon.visible = false;
 
         // Al iniciar la escena, se pone el dialogo directamente con un poco de retardo
         let nodes = this.cache.json.get('classBackMorningDay1');
@@ -201,7 +201,8 @@ export default class ClassBackMorningDay1 extends ClassBackBase {
             // Se cambia a la escena de transicion
             this.gameManager.changeScene(sceneName, params);
 
-            this.phoneManager.icon.setInteractive({ useHandCursor: true });
+            // Se reactiva el icono del telefono
+            this.phoneManager.icon.visible = true;
         });
     }
 }

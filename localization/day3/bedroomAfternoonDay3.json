@@ -1,0 +1,16 @@
+{
+    "wardrobe1": {
+        "root": {
+            "type": "text",
+            "character": "player"
+        }
+    },
+
+    "wardrobe2": {
+        "root": {
+            "type": "text",
+            "character": "player"
+        }
+    }
+    
+}

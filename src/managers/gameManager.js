@@ -63,6 +63,24 @@ export default class GameManager {
             wordWrap: null,
             padding: null               // Separacion con el fondo (en el caso de que haya fondo)
         }
+
+
+        // Se anade a los eventos permanentes el evento de cambiar la amistad
+        this.dispatcher.add("changeFriendship", this, (obj) => {
+            // console.log(obj);
+            this.changeFriendship(obj.character, obj.value);
+            console.log(this.blackboard)
+        }, true);
+
+        
+        // Se anade a los eventos permanentes el evento terminar un chat para indicar que ya no hay nada mas que contestar
+        this.dispatcher.add("endChat", this, (obj) => {
+            // console.log(obj);
+            let chatName = this.i18next.t("textMessages." + obj.chat, { ns: "phoneInfo", returnObjects: true });
+            let nodes = this.currentScene.cache.json.get('everydayDialog');
+            let phoneNode = this.currentScene.readNodes(nodes, "everydayDialog", "phone", true);
+            this.UIManager.phoneManager.phone.setChatNode(chatName, phoneNode);
+        }, true);
     }
 
     // metodo para generar y coger la instancia
@@ -191,6 +209,7 @@ export default class GameManager {
     // Tiene los campos: name, username, password, gender
     setUserInfo(userInfo) {
         this.userInfo = userInfo;
+        this.blackboard.set("gender", userInfo.gender);
     }
     getUserInfo() {
         return this.userInfo;
@@ -221,8 +240,8 @@ export default class GameManager {
     }
 
     startGame(userInfo) {
-        this.setUserInfo(userInfo);
         this.blackboard.clear();
+        this.setUserInfo(userInfo);
         this.day = 0;
 
         // IMPORTANTE: Hay que lanzar primero el UIManager para que se inicialice
@@ -242,7 +261,7 @@ export default class GameManager {
         this.computerScene.scene.sleep();
 
         this.day = 3;
-        let sceneName = 'CorridorAfternoonDay3';
+        let sceneName = 'LivingroomAfternoonDay3';
 
         // Pasa a la escena inicial con los parametros text, onComplete y onCompleteDelay
         // let sceneName = 'TextOnlyScene';
@@ -387,7 +406,5 @@ export default class GameManager {
         let val = this.getValue(varName)
         val += amount;
         this.setValue(varName, val);
-
-        // console.log(this.blackboard)
     }
 }

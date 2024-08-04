@@ -59,21 +59,6 @@ export default class PlaygroundBase extends BaseScene {
             }
         });
 
-
-        
-        // Cambia la hora del movil y se establece el dialogo de la puerta dependiendo de si se llega tarde o no 
-        if (!this.gameManager.getValue(this.gameManager.isLate)) {
-            this.phoneManager.setDayInfo("playgroundMorning");
-            this.doorNode = super.readNodes(nodes, "everydayDialog","playground.doorMorning", true);
-        }
-        else {
-            this.phoneManager.setDayInfo("playgroundMorningLate");
-
-            // Ademas, si se llega tarde, se dejan las puertas abiertas 
-            this.openDoors();
-            this.doorNode = null;
-        }
-
     }
 
     openDoors() {

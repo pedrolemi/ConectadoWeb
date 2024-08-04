@@ -37,12 +37,14 @@ export default class BedroomAfternoonDay2 extends BedroomBase {
         this.pcNode = node;
 
         this.add.image(852 * this.scale + 1, 848 * this.scale - 1, this.atlasName, 'bedroomJacket').setOrigin(0, 0).setScale(this.scale);
+
+        
         // Mensajes del movil
         nodes = this.cache.json.get('bedroomAfternoonDay2');
         let phoneNode = super.readNodes(nodes, "day2\\bedroomAfternoonDay2", "phone1", true);
 
         let chatName = this.i18next.t("textMessages.chat2", { ns: "phoneInfo", returnObjects: true });
-        this.phoneManager.phone.addChat(chatName, "");
+        this.phoneManager.phone.addChat(chatName, "default");
         this.phoneManager.phone.setChatNode(chatName, phoneNode);
 
         let sendingMessage = false;

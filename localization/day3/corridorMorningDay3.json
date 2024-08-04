@@ -87,6 +87,13 @@
                         "value": true, 
                         "global": false
                     }
+                },
+                {
+                    "knowPhoto": {
+                        "variable": "seenPhoto",
+                        "value": true,
+                        "global": true
+                    }
                 }
             ]
         },

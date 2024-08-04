@@ -12,8 +12,15 @@ export default class PlaygroundMorningDay1 extends PlaygroundBase {
         this.home = "";
         this.stairs = "StairsMorningDay1";
 
+        let nodes = this.cache.json.get('everydayDialog');
+        this.homeNode = super.readNodes(nodes, "everydayDialog", "playground.homeMorning", true);
+
         // Si no se llega tarde, se colocan personajes de fondo
         if (!this.gameManager.getValue(this.gameManager.isLate)) {
+            // Se establece el dialogo de la puerta para que no se pueda entrar hasta que se abran 
+            this.phoneManager.setDayInfo("playgroundMorning");
+            this.doorNode = super.readNodes(nodes, "everydayDialog","playground.doorMorning", true);
+
             let tr = {
                 x: 280,
                 y: this.CANVAS_HEIGHT * 0.95,
@@ -49,14 +56,11 @@ export default class PlaygroundMorningDay1 extends PlaygroundBase {
             this.portraits.set("Guille", guille.getPortrait());
 
 
-            let nodes = this.cache.json.get('playgroundMorningDay1');
+            nodes = this.cache.json.get('playgroundMorningDay1');
             let joseNode = super.readNodes(nodes, "day1\\playgroundMorningDay1", "jose", true);
             let alisonNode = super.readNodes(nodes, "day1\\playgroundMorningDay1", "alison", true);
             let guilleNode = super.readNodes(nodes, "day1\\playgroundMorningDay1", "guille", true);
             
-            nodes = this.cache.json.get('everydayDialog');
-            this.homeNode = super.readNodes(nodes, "everydayDialog", "playground.homeMorning", true);
-
 
             // Evento llamado cuando suena la campana
             this.dispatcher.addOnce("openDoors", this, (obj) => {
@@ -82,9 +86,11 @@ export default class PlaygroundMorningDay1 extends PlaygroundBase {
                 })
             });
         }
-
-
-        
-        
+        // Si no, se pone la hora de llegar tarde, se dejan las puertas abiertas, y se quita el dialogo de la puerta
+        else {
+            this.phoneManager.setDayInfo("playgroundMorningLate");
+            super.openDoors();
+            this.doorNode = null;
+        }
     }
 }

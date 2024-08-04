@@ -126,11 +126,6 @@ export default class BedroomBase extends BaseScene {
                     this.gameManager.changeScene(nightmareScene);
                 }, 1000);
             })
-        });
-
-        this.gameManager.setValue(this.gameManager.bagPicked, false);
-
-
-        
+        });        
     }
 }

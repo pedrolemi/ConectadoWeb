@@ -42,7 +42,7 @@ export default class ChatScreen extends BaseScreen {
 
         // Crea el icono
         this.iconImage = this.scene.add.image(this.nameText.x, this.nameText.y, 'avatars', icon);
-        this.iconImage.setScale((this.nameText.displayHeight / this.iconImage.displayHeight) * 1.5);
+        this.iconImage.setScale((this.nameText.displayHeight / this.iconImage.displayHeight) * 1.35);
         this.iconImage.x -= this.iconImage.displayWidth;
 
         // Icono de las notificaciones y cantidad de notificaciones

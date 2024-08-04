@@ -350,9 +350,9 @@ export default class PhoneManager {
 
     // Establece las notificaciones que hay
     setNotifications() {
-        // Si son mas de 0, activa las notificaciones y cambia el texto
+        // Si son mas de 0, activa las notificaciones si el icono esta activo y cambia el texto
         if (this.notificationAmount > 0) {
-            this.notifications.visible = true;
+            this.notifications.visible = this.icon.visible;
             this.notificationText.setText(this.notificationAmount);
         }
         // Si no, las desactiva

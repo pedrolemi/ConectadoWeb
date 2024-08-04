@@ -1,0 +1,103 @@
+{
+    "guille": {
+        "maleBathroom": {
+            "text": "Así que eras tú el de la nota, Guille"
+        },
+
+        "femaleBathroom": [
+            {
+                "text": "¿Qué haces en el baño de chicas, Guille?"
+            },
+            {
+                "text": "No puedes estar aquí, vete."
+            }
+        ],
+        "explainBathroom": {
+            "text": "Tenía que hablar contigo, yo te pasé la notita."
+        },
+
+        "ask": [
+            {
+                "text": "¿Ahora si me hablas?"
+            },
+            {
+                "text": "¿A qué viene esto de que más de media clase me ignore?"
+            }
+        ],
+        "explanation": [
+            {
+                "text": "De eso te quería hablar."
+            },
+            {
+                "text": "No puedo hablar contigo mientras Álex o alguno de sus amigos pueda verme."
+            },
+            {
+                "text": "Me ha amenazado con mandarle a mis padres una foto mía del año pasado en la que salgo con una cerveza y un cigarrillo."
+            },
+            {
+                "text": "Mis padres son muy estrictos y si la ven no se que puede pasar, igual me mandan a otro instituto."
+            }
+        ],
+        "explanationQuestion": {
+            "text": "¿Pero por qué Álex no quiere que nadie hable conmigo?."
+        },
+        "continueExplanation": [
+            {
+                "text": "No lo sabemos, la tiene tomada contigo desde el primer día."
+            },
+            {
+                "text": "Mucha gente le hace caso porque quiere, pero somos unos cuantos a los que nos ha amenazado."
+            },
+            {
+                "text": "A María le paso algo parecido a lo tuyo el año pasado, aunque fue cosa de Ana."
+            },
+            {
+                "text": "Desde entonces no tiene amigos y cuando alguno de nosotros intentamos hablar con ella... nos ignora."
+            },
+            {
+                "text": "No nos ha perdonado."
+            },
+            {
+                "text": "Bueno... sólo quería decirte que lo siento, pero hasta que a Álex se le pase el mosqueo no podré hablar contigo."
+            },
+            {
+                "text": "Lo siento mucho {{name}}."
+            }
+        ],
+
+        "choices": [
+            {
+                "text": "¿Y ya está? ¿Álex se sale con la suya?"
+            },
+            {
+                "text": "¿Y mi foto en el tablón? ¿Ha sido Álex?"
+            }
+        ],
+        "apology": [
+            {
+                "text": "De verdad que lo siento."
+            },
+            {
+                "text": "Pero no quiero que me haga también la vida imposible a mí."
+            }
+        ],
+        "aboutBoard": [
+            {
+                "text": "Eso fue cosa de Ana."
+            },
+            {
+                "text": "Está muy pillada por Álex y si él te putea, ella va a hacer lo mismo."
+            },
+            {
+                "text": "Y José es su perrito faldero, no sabe pensar por sí mismo."
+            },
+            {
+                "text": "Evita a los tres."
+            }
+        ],
+        "talked": {
+            "text": "Lo siento mucho, de verdad, pero mis padres no pueden enterarse."
+        }
+
+    }
+}

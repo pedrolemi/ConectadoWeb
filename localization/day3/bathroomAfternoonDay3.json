@@ -1,0 +1,145 @@
+{
+    "guille": {
+        "root": {
+            "type": "condition",
+            "conditions": [
+                {
+                    "next": "notTalked",
+                    "talked": {
+                        "value": false,
+                        "operator": "equal",
+                        "global": false,
+                        "default": false
+                    }
+                },
+                {
+                    "next": "talked",
+                    "talked": {
+                        "value": true,
+                        "operator": "equal",
+                        "global": false,
+                        "default": false
+                    }
+                }
+            ]
+        },
+        "notTalked": {
+            "type": "condition",
+            "conditions": [
+                {
+                    "next": "maleBathroom",
+                    "gender": {
+                        "value": "male",
+                        "operator": "equal",
+                        "global": true,
+                        "default": false
+                    }
+                },
+                {
+                    "next": "femaleBathroom",
+                    "gender": {
+                        "value": "female",
+                        "operator": "equal",
+                        "global": true,
+                        "default": false
+                    }
+                }
+            ]
+        },
+
+        "maleBathroom": {
+            "type": "text",
+            "character": "player",
+            "next": "ask"
+        },
+
+        "femaleBathroom": {
+            "type": "text",
+            "character": "player",
+            "next": "explainBathroom"
+        },
+        "explainBathroom": {
+            "type": "text",
+            "character": "Guille",
+            "next": "ask"
+        },
+
+        "ask": {
+            "type": "text",
+            "character": "player",
+            "next": "explanation"
+        },
+        "explanation": {
+            "type": "text",
+            "character": "Guille",
+            "next": "explanationQuestion"
+        },
+        "explanationQuestion": {
+            "type": "text",
+            "character": "player",
+            "next": "continueExplanation"
+        },
+        "continueExplanation": {
+            "type": "text",
+            "character": "Guille",
+            "next": "prepareChoices"
+        },
+        "prepareChoices": {
+            "type": "event",
+            "events": [
+                { 
+                    "prepareChoices": { }
+                }
+            ],
+            "next": "choices"
+        },
+        "choices": {
+            "type": "choice",
+            "choices": [
+                { "next": "apology" },
+                { "next": "aboutBoard" }
+            ]
+        },
+        "apology": {
+            "type": "text",
+            "character": "Guille",
+            "next": "setTalked"
+        },
+        "aboutBoard": {
+            "type": "text",
+            "character": "Guille",
+            "next": "anaBoard"
+        },
+        "anaBoard": {
+            "type": "event",
+            "events": [
+                { 
+                    "explain": { 
+                        "variable": "explainedPhotoBoard", 
+                        "value": true, 
+                        "global": true
+                    }
+                }
+            ],
+            "next": "setTalked"
+        },
+
+        "setTalked": {
+            "type": "event",
+            "events": [
+                { 
+                    "setTalked": { 
+                        "variable": "talked", 
+                        "value": true, 
+                        "global": false
+                    }
+                }
+            ]
+        },
+        "talked": {
+            "type": "text",
+            "character": "Guille"
+        }
+
+    }
+}

@@ -68,6 +68,13 @@ export default class LivingroomBase extends BaseScene {
         this.dispatcher.addOnce("pickBag", this, (obj) => {
             this.doorNode = null;
         });
+
+        // Suscripcion al evento de modificar la amistad. Se llama cuando se le cuenta a los padres 
+        // algo de la escuela, e impide que les baje la amistad si se elige la opcion de no contarles 
+        // nada en la primera tanda de opciones si se les habla de las cosas que han ocurrido
+        this.dispatcher.add("changeFriendship", this, (obj) => {
+            this.blackboard.set("canIgnore", false);
+        });
     }
 
 

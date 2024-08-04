@@ -213,9 +213,10 @@ export default class DialogManager {
                 if (evt.global !== undefined && evt.global === false) {
                     blackboard = evt.blackboard;
                 }
-                if (evt.variable && evt.value) {
-                    // console.log(blackboard)
+                if (evt.variable && evt.value !== undefined) {
                     // console.log(evt.variable)
+                    // console.log(evt.value);
+                    // console.log(blackboard)
                     this.gameManager.setValue(evt.variable, evt.value, blackboard);
                 }
             }, delay);

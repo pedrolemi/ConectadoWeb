@@ -12,6 +12,21 @@ export default class PlaygroundMorningDay3 extends PlaygroundBase {
         this.home = "";
         this.stairs = "StairsMorningDay3";
 
+        
+        // Si no se llega tarde, y se establece el dialogo de la puerta para que no se pueda entrar hasta que se abran 
+        if (!this.gameManager.getValue(this.gameManager.isLate)) {
+            this.phoneManager.setDayInfo("playgroundMorning");
+            let nodes = this.cache.json.get('everydayDialog');
+            this.doorNode = super.readNodes(nodes, "everydayDialog","playground.doorMorning", true);
+        }
+        // Si no, se pone la hora de llegar tarde, se dejan las puertas abiertas, y se quita el dialogo de la puerta
+        else {
+            this.phoneManager.setDayInfo("playgroundMorningLate");
+            super.openDoors();
+            this.doorNode = null;
+        }     
+
+
         // Personajes
         let tr = {
             x: this.rightBound * 0.5,

@@ -366,8 +366,8 @@ export default class PhoneManager {
 
     // Funcion llamada al aplazar la alarma
     sleep() {
-        // Si no se ha dormido antes
-        if (!this.gameManager.getValue("isLate")) {
+        // Si no se ha dormido antes o no es el ultimo dia
+        if (!this.gameManager.getValue("isLate") && this.gameManager.day !== 5) {
             // Se actualiza la variable de haberse quedado dormido
             this.gameManager.setValue("isLate", true);
 

@@ -158,8 +158,8 @@ export default class CreditsScene extends Phaser.Scene {
         this.createTextBelow(paddings.team, "Arte y animación", fontParams.team);
         this.createTextBelow(paddings.team, "Lola González Gutiérrez", fontParams.name);
         this.createTextBelow(paddings.name, "Ana Vallecillos Ruiz", fontParams.name);
-        // Aplicacion web
-        this.createTextBelow(paddings.team, "Aplicación web", fontParams.team);
+        // Versión web
+        this.createTextBelow(paddings.team, "Versión web", fontParams.team);
         this.createTextBelow(paddings.team, "Matt Castellanos Silva", fontParams.name);
         this.createTextBelow(paddings.name, "Pedro León Miranda", fontParams.name);
         // Idea original

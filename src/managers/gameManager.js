@@ -69,24 +69,7 @@ export default class GameManager {
             wordWrap: null,
             padding: null               // Separacion con el fondo (en el caso de que haya fondo)
         }
-
-
-        // Se anade a los eventos permanentes el evento de cambiar la amistad
-        this.dispatcher.add("changeFriendship", this, (obj) => {
-            // console.log(obj);
-            this.changeFriendship(obj.character, obj.value);
-            console.log(this.blackboard)
-        }, true);
-
-
-        // Se anade a los eventos permanentes el evento terminar un chat para indicar que ya no hay nada mas que contestar
-        this.dispatcher.add("endChat", this, (obj) => {
-            // console.log(obj);
-            let chatName = this.i18next.t("textMessages." + obj.chat, { ns: "phoneInfo", returnObjects: true });
-            let nodes = this.currentScene.cache.json.get('everydayDialog');
-            let phoneNode = this.currentScene.readNodes(nodes, "everydayDialog", "phone", true);
-            this.UIManager.phoneManager.phone.setChatNode(chatName, phoneNode);
-        }, true);
+        
     }
 
     // metodo para generar y coger la instancia
@@ -229,6 +212,24 @@ export default class GameManager {
         // Se limpia el emisor de eventos completamente (tanto eventos TEMPORALES como PERMANENTES)
         this.dispatcher.clear();
 
+        // Se anade a los eventos permanentes el evento de cambiar la amistad
+        this.dispatcher.add("changeFriendship", this, (obj) => {
+            // console.log(obj);
+            this.changeFriendship(obj.character, obj.value);
+            console.log(this.blackboard)
+        }, true);
+
+
+        // Se anade a los eventos permanentes el evento terminar un chat para indicar que ya no hay nada mas que contestar
+        this.dispatcher.add("endChat", this, (obj) => {
+            // console.log(obj);
+            let chatName = this.i18next.t("textMessages." + obj.chat, { ns: "phoneInfo", returnObjects: true });
+            let nodes = this.currentScene.cache.json.get('everydayDialog');
+            let phoneNode = this.currentScene.readNodes(nodes, "everydayDialog", "phone", true);
+            this.UIManager.phoneManager.phone.setChatNode(chatName, phoneNode);
+        }, true);
+
+
         // Se borran todas las escenas activas (por si acaso)
         this.clearRunningScenes();
 
@@ -311,8 +312,8 @@ export default class GameManager {
         this.computerScene = this.currentScene.scene.get(computerSceneName);
         this.computerScene.scene.sleep();
 
-        this.day = 4;
-        let sceneName = 'PlaygroundAfternoonDay4';
+        this.day = 5;
+        let sceneName = 'BedroomMorningDay5';
 
         // Pasa a la escena inicial con los parametros text, onComplete y onCompleteDelay
         // let sceneName = 'TextOnlyScene';

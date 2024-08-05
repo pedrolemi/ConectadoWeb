@@ -384,10 +384,12 @@ export default class BootScene extends Phaser.Scene {
             'day4/bathroomBreakDay4.json',
             'day4/stairsBreakDay4.json',
             'day4/playgroundBreakDay4.json',
-
+            'day4/livingroomAfternoonDay4.json',
+            'day4/bedroomAfternoonDay4.json',
             'day4/nightmareDay4.json',
 
             // Dia 5
+            'day5/bedroomMorningDay5.json',
             'day5/nightmareDay5.json'
         ]
         // Solo son namespaces del plugin i18next

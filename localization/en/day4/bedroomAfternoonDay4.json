@@ -1,0 +1,41 @@
+{
+    "wardrobe1": {
+        "root": {
+            "text": "There is nothing useful."
+        }
+    },
+
+    "wardrobe2": {
+        "root": {
+            "text": "I don't need anything from here."
+        }
+    },
+
+
+    "bed": {
+        "root": {
+                "text": "Mmm, should I go to sleep now?"
+            },
+            "choices": [
+                {
+                    "text": "Yes"
+                },
+                {
+                    "text": "No"
+                }
+            ],
+        "noPhone": [
+            {
+                "text": "But I can't use the mobile's alarm clock."
+            },
+            {
+                "text": "Mmmm, I'll use my old mobile, but it doesn't have a SIM card so it only works as an alarm clock."
+            },
+            {
+                "text": "Alright, alarm clock set... Time to sleep."
+            }
+        ]
+    }
+
+    
+}

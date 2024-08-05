@@ -72,8 +72,22 @@
         "thanks2": {
             "type": "text",
             "character": "dad",
+            "next": "setMeeting"
+        },
+        "setMeeting": {
+            "type": "event",
+            "events": [
+                { 
+                    "setMeeting": { 
+                        "variable": "meeting", 
+                        "value": true, 
+                        "global": true
+                    }
+                }
+            ],
             "next": "setTalked"
         },
+        
         "downplay": {
             "type": "text",
             "character": "player",
@@ -84,7 +98,7 @@
             "character": "dad",
             "next": "setTalked"
         },
-
+        
         "setTalked": {
             "type": "event",
             "events": [

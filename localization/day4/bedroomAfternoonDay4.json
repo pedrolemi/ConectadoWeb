@@ -1,0 +1,97 @@
+{
+    "wardrobe1": {
+        "root": {
+            "type": "text",
+            "character": "player"
+        }
+    },
+
+    "wardrobe2": {
+        "root": {
+            "type": "text",
+            "character": "player"
+        }
+    },
+
+    "bed": {
+        "root": {
+            "type": "text",
+            "character": "player",
+            "next": "choices"
+        },
+        "choices": {
+            "type": "choice",
+            "choices": [
+                {
+                    "next": "checkPhone"
+                },
+                {
+                    "next": ""
+                }
+            ]
+        },
+        "checkPhone": {
+            "type": "condition",
+            "conditions": [
+                {
+                    "next": "sleep",
+                    "passwordExchanged": {
+                        "value": true,
+                        "operator": "equal",
+                        "global": true,
+                        "default": false
+                    }
+                },
+                {
+                    "next": "sleep",
+                    "passwordExchanged": {
+                        "value": false,
+                        "operator": "equal",
+                        "global": true,
+                        "default": false
+                    },
+                    "phoneFound": {
+                        "value": true,
+                        "operator": "equal",
+                        "global": true,
+                        "default": false
+                    }
+                },
+                {
+                    "next": "noPhone",
+                    "passwordExchanged": {
+                        "value": false,
+                        "operator": "equal",
+                        "global": true,
+                        "default": false
+                    },
+                    "phoneFound": {
+                        "value": false,
+                        "operator": "equal",
+                        "global": true,
+                        "default": false
+                    }
+                }
+            ]
+        },
+        "noPhone": {
+            "type": "text",
+            "character": "player",
+            "next": "sleep"
+        },
+        "sleep": {
+            "type": "event",
+            "events": [
+                {
+                    "sleep": {}
+                }
+            ]
+        }
+    },
+    
+    "phone": {
+        "root": {
+            
+        }
+    }
+}

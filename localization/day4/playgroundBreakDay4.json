@@ -67,6 +67,13 @@
                         "value": true, 
                         "global": true
                     }
+                },
+                { 
+                    "setPrank": { 
+                        "variable": "askedPrank", 
+                        "value": true, 
+                        "global": true
+                    }
                 }
             ],
             "next": "setTalked"
@@ -89,7 +96,43 @@
             "type": "condition",
             "conditions": [
                 {
-                    "next": "laugh",
+                    "next": "reveal",
+                    "askedPrank": {
+                        "value": true,
+                        "operator": "equal",
+                        "global": true,
+                        "default": false
+                    },
+                    "pranked": {
+                        "value": true,
+                        "operator": "equal",
+                        "global": true,
+                        "default": false
+                    }
+                },
+                {
+                    "next": "askPrank",
+                    "askedPrank": {
+                        "value": true,
+                        "operator": "equal",
+                        "global": true,
+                        "default": false
+                    },
+                    "canPrank": {
+                        "value": true,
+                        "operator": "equal",
+                        "global": true,
+                        "default": false
+                    }
+                },
+                {
+                    "next": "reveal",
+                    "askedPrank": {
+                        "value": true,
+                        "operator": "equal",
+                        "global": true,
+                        "default": false
+                    },
                     "canPrank": {
                         "value": false,
                         "operator": "equal",
@@ -98,9 +141,9 @@
                     }
                 },
                 {
-                    "next": "askPrank",
+                    "next": "laugh",
                     "canPrank": {
-                        "value": true,
+                        "value": false,
                         "operator": "equal",
                         "global": true,
                         "default": false

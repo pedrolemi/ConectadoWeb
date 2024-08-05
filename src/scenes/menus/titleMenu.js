@@ -52,7 +52,7 @@ export default class TitleMenu extends Phaser.Scene {
         let creditsTranslation = i18next.t("creditsButton", { ns: namespace });
         new Button(this, CANVAS_WIDTH / 2, 2 * CANVAS_HEIGHT / 3 + offset, 0.9,
             () => {
-                console.log("creditosss");
+                gameManager.changeScene("CreditsScene");
             },
             gameManager.textBox.fillName, { R: 255, G: 255, B: 255 }, { R: 64, G: 142, B: 134 }, { R: 200, G: 200, B: 200 },
             creditsTranslation, { font: 'kimberley', size: 57, style: 'normal', color: '#004E46' }, gameManager.textBox.edgeName,

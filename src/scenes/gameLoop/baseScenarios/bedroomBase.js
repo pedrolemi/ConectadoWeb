@@ -59,11 +59,10 @@ export default class BedroomBase extends BaseScene {
 
         let wardrobe2 = this.add.rectangle(door2Closed.x, door2Closed.y, door2Closed.displayWidth + door3Closed.displayWidth - 15, door1Closed.displayHeight, 0xfff, 0).setOrigin(0, 0);
         door2Closed.setDepth(bg.depth + 4);
-        door2Opened.setDepth(door2Closed.depth - 1);
-        door3Closed.setDepth(bg.depth + 3);
-        door3Opened.setDepth(door2Closed.depth - 1);
-        wardrobe2.setDepth(door2Opened.depth - 1);
-        wardrobe2.setInteractive({ useHandCursor: true });
+        door2Opened.setDepth(door2Closed.depth);
+        door3Closed.setDepth(bg.depth + 4);
+        door3Opened.setDepth(door2Closed.depth);
+        wardrobe2.setInteractive();
         wardrobe2.on('pointerdown', () => {
             if (door2Opened.visible || door3Opened.visible) {
                 this.dialogManager.setNode(this.wardrobe2Node)

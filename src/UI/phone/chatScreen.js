@@ -315,8 +315,8 @@ export default class ChatScreen extends BaseScreen {
      * @param {String} name - nombre del personaje que envia el mensaje
      */
     addMessage(text, character, name) {
-        // Si la pantalla actual no es la del chat, se genera una notificacion
-        if (this.phone.currScreen !== this) {
+        // Si la pantalla actual no es la del chat y no es el jugador quien escribe, se genera una notificacion
+        if (this.phone.currScreen !== this && character !== "player") {
             this.generateNotifications(1);
         }
 

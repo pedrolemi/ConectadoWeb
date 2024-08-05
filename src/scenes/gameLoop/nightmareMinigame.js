@@ -48,8 +48,6 @@ export default class NightmareMinigame extends NightmareBase {
         // Se produce este evento despues del monologo final
         let outroEvent = 'finishNightmare' + this.day;
         this.dispatcher.add(outroEvent, this, () => {
-            console.log("cambio de escena");
-
             // Se hace un fade out de la camara y cuando termina, se cambia a la escena de la alarma
             this.cameras.main.fadeOut(500, 0, 0, 0);
             this.cameras.main.once(Phaser.Cameras.Scene2D.Events.FADE_OUT_COMPLETE, (cam, effect) => {

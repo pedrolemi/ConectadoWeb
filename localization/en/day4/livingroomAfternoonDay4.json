@@ -1,0 +1,272 @@
+{
+    "dad": {
+        "root": [
+            {
+                "text": "Talk to your mother."
+            },
+            {
+                "text": "She wants to know how your day was."
+            }
+        ]
+    },
+
+    "mom": {
+        "notTalked": [
+            {
+                "text": "You're back, {{name}}"
+            },
+            {
+                "text": "How was your day?"
+            }
+        ],
+        "talked": {
+            "text": "Do you want to talk for a while?"
+        },
+        "talked2": {
+            "text": "How was your day?"
+        },
+
+        "choices1": [
+            {
+                "text": "Good, the usual, I'm going to my room."
+            },
+            {
+                "text": "Today Alex and Ana tried to blackmail me."
+            },
+            {
+                "text": "Today Alex and Ana blackmailed me"
+            },
+            {
+                "text": "(Change the topic)"
+            }
+        ],
+
+        "mariaNotPranked": [
+            {
+                "text": "They've tried me to stick a poster of Maria."
+            },
+            {
+                "text": "Called themselves school kings or something."
+            }
+        ],
+        "mariaPranked": [
+            {
+                "text": "They've made me stick a poster of Maria..."
+            },
+            {
+                "text": "I had no other chance if I wanted my mobile back."
+            }
+        ],
+
+        "choices2": [
+            {
+                "text": "I've lost the mobile phone today."
+            },
+            {
+                "text": "Someone took my mobile phone."
+            },
+            {
+                "text": "Alison, I can trust her."
+            },
+            {
+                "text": "I'm going to my room, we've talked enough."
+            }
+        ],
+        "lostPhone": {
+            "text": "They took my phone away and I couldn't get it back."
+        },
+        "lostPhone2": {
+            "text": "Well you won't have a mobile phone then. You have to be more careful with your belongings."
+        },
+
+        "foundPhone": [
+            {
+                "text": "Today they've taken away my phone."
+            },
+            {
+                "text": "",
+                "text_male": "And someone left it on the girls' bathroom",
+                "text_female": "And someone left it on the boys' bathroom"
+            }
+        ],
+        "foundPhone2": {
+            "text": "You have to be more careful about your belongings. You can't leave them anywhere."
+        },
+
+        "exchangedPassword": [
+            {
+                "text": "Alison has surprised me. I can really trust her."
+            },
+            {
+                "text": "Today we've exchanged out passwords."
+            }
+        ],
+        "exchangedPassword2": [
+            {
+				"text": "How dare you!? What if she shares them or passes herself off as you."
+			},
+			{
+				"text": "Don't you think what you do?."
+			}
+        ],
+        "exchangedPassword3": [
+            {
+                "text": "But I have her passwords too. I trust her."
+            },
+            {
+                "text": "She's the only one who wants to be my friend."
+            }
+        ],
+
+        "commonPhone": {
+            "text": "It wasn't my fault."
+        },
+        "commonPhone2": {
+            "text": "That's no reason to leave your stuff unwatched. Anyway..."
+        },
+
+        "suggestMeeting": {
+            "text":  "I think we should speak with the school about what's happening."
+        },
+        "meetingChoices": [
+            {
+                "text": "Yes, please, I can't take it any longer."
+            },
+            {
+                "text": "No, it'll be even worse."
+            }
+        ],
+        "acceptMeeting": {
+            "text": "Don't worry honey, we will fix it all."
+        },
+
+        "rejectMeeting": {
+            "text": "Alright, we won't go for now."
+        },
+        "rejectMeeting2": {
+            "text": "But if anything serious happens...we won't get stopped."
+        },
+
+        "meetingSuccess": {
+            "text": "More reason to go tomorrow to the principal's office and fix all this."
+        }
+    },
+
+    "noPhone": {
+        "root": [
+            {
+                "text": "I'm changing the phone's battery."
+            },
+            {
+                "text": "I think I had one in the entrance's table...third drawer..."
+            },
+            {
+                "text": "Here it is...does it work?... Yeaaaah, goodness."
+            },
+            {
+                "text": "What's all these messages?"
+            }
+        ]
+    },
+
+    "classChat": {
+        "root": {
+            "text": "looks like u didnt kickme out, cheers. as a gift ill tell you I love sucking penises :)"
+        },
+        "message2": {
+            "text": "actually i'm into everything, if anyone wants lemme know"
+        },
+        "message3": {
+            "text": "thanks 4 confessing, but we already knew, it's written all over your face"
+        },
+        "message4": {
+            "text": "we got the perfect name, SUFACE, the face who sucks LOL"
+        },
+        "message5": {
+            "text": "whats this? why r u saying these things?"
+        },
+        "message6": {
+           "text": "the best day and i missed it...what did i loose?"
+        },
+        "message7": {
+            "text": "",
+            "text_male": "youre crossing a line already, who trolled him?",
+            "text_female": "youre crossing a line already, who trolled her?"
+        },
+        "message8": {
+            "text": "none, whats up guille? u got sucked & dont want it to be known? hahaha"
+        },
+        "choices": [
+            {
+                "text": "I didn't write anything"
+            },
+            {
+                "text": "Alex, Ana, fuck you"
+            },
+            {
+                "text": "As you heard, I love it"
+            }
+        ],
+
+        "notMe": {
+            "text": "someone's used my phone to write this"
+        },
+        "notMe2": {
+            "text": "We have photos of what u said, we're gonna share them with all the other classrooms, hahaha"
+        },
+        "notMe3": {
+            "text": "hahaha it's too late now to deny anything :P"
+        },
+
+        "fkU": {
+            "text": "Álex, Ana, fuck you both, I know it's your thing"
+        },
+        "fkU2": {
+            "text": "maybe it is, so? we already have photos of the conversation"
+        },
+        "fkU3": {
+            "text": "tomorrow everyone will know about your personal tastes hahaha"
+        },
+
+        "agree": {
+            "text": "Yes, I love it, problem? Como oís, me encanta, algún problema? YOU ARE JEALOUS!!"
+        }
+    },
+
+    "mariaChat": {
+        "root": {
+            "text": "",
+            "text_male": "youre hot, 2morrow in the toilet ya know ;)",
+            "text_female": "imma femme & i know u 2, 2morrow in the toilet ya know ;)"
+        },
+        "message2": {
+            "text": "this is so unlike you {{name}}, u got trolled right?"
+        },
+        "choices": [
+            {
+                "text": "I haven't written anything"
+            },
+            {
+                "text": "Yes, It was me"
+            },
+            {
+                "text": "(Don't answer)"
+            }
+        ],
+
+        "notMe": {
+            "text": "Sorry María, I didn't write it, they might write you when they stole my phone"
+        },
+        "notMe2": {
+            "text": "i'm so sorry, really"
+        },
+        "notMe3": {
+            "text": "i believe u, relax, get some rest"
+        },
+
+        "wasMe": {
+            "text": "Yes, I wrote it, see you tomorrow <3"
+        }
+    }
+
+}

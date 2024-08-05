@@ -8,7 +8,490 @@
 
     "mom": {
         "root": {
-            
+            "type": "condition",
+            "conditions": [
+                {
+                    "next": "notTalked",
+                    "talked": {
+                        "value": false,
+                        "operator": "equal",
+                        "global": false,
+                        "default": false
+                    }
+                },
+                {
+                    "next": "talked",
+                    "talked": {
+                        "value": true,
+                        "operator": "equal",
+                        "global": false,
+                        "default": false
+                    }
+                }
+            ]
+        },
+        "notTalked": {
+            "type": "text",
+            "character": "mom",
+            "next": "setTalked"
+        },
+        "setTalked": {
+            "type": "event",
+            "events": [
+                { 
+                    "setTalked": { 
+                        "variable": "talked", 
+                        "value": true, 
+                        "global": false
+                    }
+                }
+            ],
+            "next": "prepareChoices1"
+        },
+        "talked": {
+            "type": "text",
+            "character": "mom",
+            "next": "talked2"
+        },
+        "talked2": {
+            "type": "text",
+            "character": "dad",
+            "next": "prepareChoices1"
+        },
+
+        "prepareChoices1": {
+            "type": "event",
+            "events": [
+                { 
+                    "prepareChoices1": { }
+                }
+            ],
+            "next": "choices1"
+        },
+        "choices1": {
+            "type": "choice",
+            "choices": [
+                { "next": "checkIgnored" },
+                { "next": "mariaNotPranked", "repeat": false },
+                { "next": "mariaPranked", "repeat": false },
+                { "next": "prepareChoices2" }
+            ]
+        },
+        "checkIgnored": {
+            "type": "condition",
+            "conditions": [
+                {
+                    "next": "ignore",
+                    "canIgnore": {
+                        "value": true,
+                        "operator": "equal",
+                        "global": false,
+                        "default": true
+                    }
+                }
+            ]
+        },
+        "ignore": {
+            "type": "event",
+            "events": [
+                { 
+                    "changeFriendship": { 
+                        "character": "parents", 
+                        "value": -10
+                    }
+                },
+                { 
+                    "ignore": { 
+                        "variable": "canIgnore", 
+                        "value": false, 
+                        "global": false
+                    }
+                }
+            ]
+        },
+
+        "mariaNotPranked": {
+            "type": "text",
+            "character": "player",
+            "next": "checkMeeting"
+        },
+        "mariaPranked": {
+            "type": "text",
+            "character": "player",
+            "next": "checkMeeting"
+        },
+
+
+        "prepareChoices2": {
+            "type": "event",
+            "events": [
+                { 
+                    "prepareChoices2": { }
+                }
+            ],
+            "next": "choices2"
+        },
+        "choices2": {
+            "type": "choice",
+            "choices": [
+                { "next": "lostPhone", "repeat": false },
+                { "next": "foundPhone", "repeat": false },
+                { "next": "exchangedPassword", "repeat": false },
+                { "next": "" }
+            ]
+        },
+
+        "lostPhone": {
+            "type": "text",
+            "character": "player",
+            "next": "lostPhone2"
+        },
+        "lostPhone2": {
+            "type": "text",
+            "character": "mom",
+            "next": "commonPhone"
+        },
+
+        "foundPhone": {
+            "type": "text",
+            "character": "player",
+            "next": "foundPhone2"
+        },
+        "foundPhone2": {
+            "type": "text",
+            "character": "mom",
+            "next": "commonPhone"
+        },
+
+        "exchangedPassword": {
+            "type": "text",
+            "character": "player",
+            "next": "exchangedPassword2"
+        },
+        "exchangedPassword2": {
+            "type": "text",
+            "character": "mom",
+            "next": "exchangedPassword3"
+        },
+        "exchangedPassword3": {
+            "type": "text",
+            "character": "player",
+            "next": "choices2"
+        },
+
+        "commonPhone": {
+            "type": "text",
+            "character": "player",
+            "next": "commonPhone2"
+        },
+        "commonPhone2": {
+            "type": "text",
+            "character": "dad",
+            "next": "checkMeeting"
+        },
+
+        "checkMeeting": {
+            "type": "condition",
+            "conditions": [
+                {
+                    "next": "suggestMeeting",
+                    "meeting": {
+                        "value": false,
+                        "operator": "equal",
+                        "global": true,
+                        "default": false
+                    }
+                },
+                {
+                    "next": "meetingSuccess",
+                    "meeting": {
+                        "value": true,
+                        "operator": "equal",
+                        "global": true,
+                        "default": false
+                    }
+                }
+            ]
+        },
+
+        "suggestMeeting": {
+            "type": "text",
+            "character": "dad",
+            "next": "meetingChoices"
+        },
+        "meetingChoices": {
+            "type": "choice",
+            "choices": [
+                { "next": "acceptMeeting" },
+                { "next": "rejectMeeting" }
+            ]
+        },
+        "acceptMeeting": {
+            "type": "text",
+            "character": "dad",
+            "next": "setMeeting"
+        },
+        "setMeeting": {
+            "type": "event",
+            "events": [
+                { 
+                    "setMeeting": { 
+                        "variable": "meeting", 
+                        "value": true, 
+                        "global": true
+                    }
+                }
+            ],
+            "next": "FSParents"
+        },
+
+        "rejectMeeting": {
+            "type": "text",
+            "character": "dad",
+            "next": "rejectMeeting2"
+        },
+        "rejectMeeting2": {
+            "type": "text",
+            "character": "mom",
+            "next": "FSParents"
+        },
+
+        "meetingSuccess": {
+            "type": "text",
+            "character": "dad",
+            "next": "FSParents"
+        },
+
+        "FSParents": {
+            "type": "event",
+            "events": [
+                { 
+                    "changeFriendship": { 
+                        "character": "parents", 
+                        "value": 10
+                    }
+                }
+            ]
+        }
+    },
+
+    "noPhone": {
+        "root": {
+            "type": "text",
+            "character": "player",
+            "next": "turnPhone"
+        },
+        "turnPhone": {
+            "type": "event",
+            "events": [
+                { 
+                    "turnPhone": { }
+                }
+            ]
+        }
+    },
+    
+    "classChat": {
+        "root": {
+            "type": "chatMessage",
+            "character": "player",
+            "chat": "chat2",
+            "replyDelay": 0,
+            "next": "message2"
+        },
+        "message2": {
+            "type": "chatMessage",
+            "character": "player",
+            "chat": "chat2",
+            "replyDelay": 100,
+            "next": "message3"
+        },
+        "message3": {
+            "type": "chatMessage",
+            "character": "Alex",
+            "chat": "chat2",
+            "replyDelay": 100,
+            "next": "message4"
+        },
+        "message4": {
+            "type": "chatMessage",
+            "character": "Ana",
+            "chat": "chat2",
+            "replyDelay": 100,
+            "next": "message5"
+        },
+        "message5": {
+            "type": "chatMessage",
+            "character": "Alison",
+            "chat": "chat2",
+            "replyDelay": 100,
+            "next": "message6"
+        },
+        "message6": {
+            "type": "chatMessage",
+            "character": "Jose",
+            "chat": "chat2",
+            "replyDelay": 100,
+            "next": "message7"
+        },
+        "message7": {
+            "type": "chatMessage",
+            "character": "Guille",
+            "chat": "chat2",
+            "replyDelay": 100,
+            "next": "message8"
+        },
+        "message8": {
+            "type": "chatMessage",
+            "character": "Ana",
+            "chat": "chat2",
+            "replyDelay": 100,
+            "next": "choices"
+        },
+        "choices": {
+            "type": "choice",
+            "choices":[
+                { "next": "notMe" },
+                { "next": "fkU" },
+                { "next": "agree" }
+            ]
+        },
+
+        "notMe": {
+            "type": "chatMessage",
+            "character": "player",
+            "chat": "chat2",
+            "replyDelay": 0,
+            "next": "notMe2"
+        },
+        "notMe2": {
+            "type": "chatMessage",
+            "character": "Ana",
+            "chat": "chat2",
+            "replyDelay": 1500,
+            "next": "notMe3"
+        },
+        "notMe3": {
+            "type": "chatMessage",
+            "character": "Alex",
+            "chat": "chat2",
+            "replyDelay": 1500,
+            "next": "endChat"
+        },
+
+        "fkU": {
+            "type": "chatMessage",
+            "character": "player",
+            "chat": "chat2",
+            "replyDelay": 0,
+            "next": "fkU2"
+        },
+        "fkU2": {
+            "type": "chatMessage",
+            "character": "Ana",
+            "chat": "chat2",
+            "replyDelay": 1500,
+            "next": "fkU3"
+        },
+        "fkU3": {
+            "type": "chatMessage",
+            "character": "Alex",
+            "chat": "chat2",
+            "replyDelay": 1500,
+            "next": "endChat"
+        },
+
+        "agree": {
+            "type": "chatMessage",
+            "character": "player",
+            "chat": "chat2",
+            "replyDelay": 0,
+            "next": "fkU3"
+        },
+
+        "endChat": {
+            "type": "event",
+            "events": [
+                { 
+                    "endChat": { "chat": "chat2" }
+                }
+            ]
+        }
+    },
+
+    "mariaChat": {
+        "root": {
+            "type": "chatMessage",
+            "character": "player",
+            "chat": "chat3",
+            "replyDelay": 0,
+            "next": "message2"
+        },
+        "message2": {
+            "type": "chatMessage",
+            "character": "Maria",
+            "chat": "chat3",
+            "replyDelay": 100,
+            "next": "choices"
+        },
+        "choices": {
+            "type": "choice",
+            "choices":[
+                { "next": "notMe" },
+                { "next": "wasMe" },
+                { "next": "" }
+            ]
+        },
+
+        "notMe": {
+            "type": "chatMessage",
+            "character": "player",
+            "chat": "chat3",
+            "replyDelay": 0,
+            "next": "notMe2"
+        },
+        "notMe2": {
+            "type": "chatMessage",
+            "character": "player",
+            "chat": "chat3",
+            "replyDelay": 1500,
+            "next": "notMe3"
+        },
+        "notMe3": {
+            "type": "chatMessage",
+            "character": "Maria",
+            "chat": "chat3",
+            "replyDelay": 1500,
+            "next": "endChat"
+        },
+
+        "wasMe": {
+            "type": "chatMessage",
+            "character": "player",
+            "chat": "chat3",
+            "replyDelay": 0,
+            "next": "FSMaria"
+        },
+        "FSMaria": {
+            "type": "event",
+            "events": [
+                { 
+                    "changeFriendship": { 
+                        "character": "Maria", 
+                        "value": -80
+                    }
+                }
+            ],
+            "next": "endChat"
+        },
+
+        "endChat": {
+            "type": "event",
+            "events": [
+                { 
+                    "endChat": { "chat": "chat3" }
+                }
+            ]
         }
     }
 }

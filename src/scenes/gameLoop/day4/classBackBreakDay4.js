@@ -28,13 +28,13 @@ export default class ClassBackBreakDay4 extends ClassBackBase {
         };
         this.add.image(tr.x, tr.y, this.atlasName, 'backChar15').setOrigin(0, 0).setScale(tr.scale).setDepth(this.row1Chairs.depth - 1);
 
-        // Desaparece el icono del telefono
+        // Se desactiva el telefono y se muestra el dialogo de que ha desaparecido
+        this.phoneManager.activate(false);
         let nodes = this.cache.json.get('classBackBreakDay4');
         let node = super.readNodes(nodes, "day4\\classBackBreakDay4", "noPhone", true);
         setTimeout(() => {
             this.dialogManager.setNode(node);
         }, 100);
-        this.phoneManager.icon.visible = false;
 
     }
 }

@@ -1,6 +1,6 @@
 {
   "frames": {
-    "bed.png": {
+    "bed": {
       "frame": {
         "x": 0,
         "y": 0,
@@ -24,7 +24,7 @@
         "y": 0.5
       }
     },
-    "bedroomDoorOpened.png": {
+    "bedroomDoorOpened": {
       "frame": {
         "x": 0,
         "y": 647,
@@ -48,7 +48,7 @@
         "y": 0.5
       }
     },
-    "bedroomDoorClosed.png": {
+    "bedroomDoorClosed": {
       "frame": {
         "x": 1281,
         "y": 0,
@@ -72,7 +72,7 @@
         "y": 0.5
       }
     },
-    "wardrobeDoor2Closed.png": {
+    "wardrobeDoor2Closed": {
       "frame": {
         "x": 305,
         "y": 647,
@@ -96,7 +96,7 @@
         "y": 0.5
       }
     },
-    "wardrobeDoor3Closed.png": {
+    "wardrobeDoor3Closed": {
       "frame": {
         "x": 633,
         "y": 647,
@@ -120,7 +120,7 @@
         "y": 0.5
       }
     },
-    "wardrobeDoor1Closed.png": {
+    "wardrobeDoor1Closed": {
       "frame": {
         "x": 956,
         "y": 647,
@@ -144,7 +144,7 @@
         "y": 0.5
       }
     },
-    "bedroomChair.png": {
+    "bedroomChair": {
       "frame": {
         "x": 305,
         "y": 1508,
@@ -168,7 +168,7 @@
         "y": 0.5
       }
     },
-    "wardrobeDoor3Opened.png": {
+    "wardrobeDoor3Opened": {
       "frame": {
         "x": 1568,
         "y": 0,
@@ -192,7 +192,7 @@
         "y": 0.5
       }
     },
-    "wardrobeDoor1Opened.png": {
+    "wardrobeDoor1Opened": {
       "frame": {
         "x": 1568,
         "y": 921,
@@ -216,7 +216,7 @@
         "y": 0.5
       }
     },
-    "wardrobeDoor2Opened.png": {
+    "wardrobeDoor2Opened": {
       "frame": {
         "x": 1655,
         "y": 921,
@@ -240,7 +240,7 @@
         "y": 0.5
       }
     },
-    "bedroomJacket.png": {
+    "bedroomJacket": {
       "frame": {
         "x": 1266,
         "y": 1385,
@@ -264,7 +264,7 @@
         "y": 0.5
       }
     },
-    "clothes1.png": {
+    "clothes1": {
       "frame": {
         "x": 580,
         "y": 1842,
@@ -288,7 +288,7 @@
         "y": 0.5
       }
     },
-    "bag.png": {
+    "bag": {
       "frame": {
         "x": 956,
         "y": 1503,
@@ -312,7 +312,7 @@
         "y": 0.5
       }
     },
-    "clothes2.png": {
+    "clothes2": {
       "frame": {
         "x": 580,
         "y": 1718,
@@ -336,7 +336,7 @@
         "y": 0.5
       }
     },
-    "clothes3.png": {
+    "clothes3": {
       "frame": {
         "x": 1474,
         "y": 1385,

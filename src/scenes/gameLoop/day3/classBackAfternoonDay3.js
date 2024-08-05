@@ -14,7 +14,7 @@ export default class ClassBackAfternoonDay3 extends ClassBackBase {
         this.phoneManager.setDayInfo("day3.endClass");
 
         let nodes = this.cache.json.get('classCorridorAfternoonDay3');
-        let node = super.readNodes(nodes, "day3\\classCorridorAfternoonDay3", "stairs", true);
+        let node = super.readNodes(nodes, "day3\\classCorridorAfternoonDay3", "player_stairs", true);
         setTimeout( () => {
             this.dialogManager.setNode(node);
         }, 100);

@@ -1,0 +1,69 @@
+{
+    "alison": {
+        "passwordExchanged": [
+            {
+                "text": "Lo que ha pasado, pero te lo has ganado."
+            },
+            {
+                "text": "¿Cómo se te ocurre darme tu contraseña?"
+            }
+        ],
+        "phoneStolen": {
+            "text": "Si hubieras confiado en mí igual esto no habría pasado, es tu culpa."
+        },
+
+        "talked": {
+            "text": "Vete, no tenemos de que hablar."
+        }
+    },
+
+    "ana": {
+        "passwordExchanged": [
+            {
+                "text": "No me creo que le dieras tu contraseña a Alison."
+            },
+            {
+                "text": "¿De verdad te pensabas que iba a ser tu amiga? No me creo lo fácil que fué engañarte."
+            },
+            {
+                "text": "JAJAJAJA!!! en serio, me parto contigo."
+            }
+        ],
+        "phoneFound": [
+            {
+                "text": "JAJAJAJA!!! no me creo que no tuvieras patrón de desbloqueo en el móvil."
+            },
+            {
+                "text": "Pensaba que iba a ser más difícil..."
+            },
+            {
+                "text": "",
+                "text_male": "Que divertido va a ser el día, ahora la mayoria piensa que eres verdad un marica vicioso que le da a todo.",
+                "text_female": "Que divertido va a ser el día, ahora la mayoria piensa que eres verdad una puta viciosa."
+            }
+        ],
+        "phoneNotFound": [
+            {
+                "text": "Mira quién ha llegado, y yo que pensaba que hoy no vendrías."
+            },
+            {
+                "text": "¿Aún sigues sin móvil? jajaja, no era tan difícil encontrarlo si hubieras buscado bien."
+            },
+            {
+                "text": "",
+                "text_male": "Hay que ser estúpido.",
+                "text_female": "Hay que ser estúpida."
+            },
+            {
+                "text": "¿De dónde has salido? jajaja."
+            }
+        ],
+        "bellRinging": {
+            "text": "<<La campana está sonando>>"
+        },
+
+        "talked": {
+            "text": "Jajajaja, margi."
+        }
+    }
+}

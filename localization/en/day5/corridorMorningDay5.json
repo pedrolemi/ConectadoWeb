@@ -1,0 +1,63 @@
+{
+    "alex": {
+        "passwordExchanged": [
+            {
+                "text": "Look at your posts in \"Conectado\", right?."
+            },
+            {
+                "text": "I didn't expect that from you, it's like it wasn't you writing XD."
+            }
+        ],
+        "phoneFound": [
+            {
+                "text": "Look at your comments in the chat. Suface, you surprised us all."
+            },
+            {
+                "text": "I didn't expect that from you. It's like it wasn't you writing hahaha."
+            }
+        ],
+        "phoneNotFound": [
+            {
+                "text": "Looks like you going to need a new mobile phone, right?."
+            },
+            {
+                "text": "I hope you don't loose that too... or get taken from you."
+            }
+        ],
+
+        "enough": [
+            {
+                "text": "Well, I think it's enough."
+            },
+            {
+                "text": "Let's do something. When the classes are over, let's talk where none can hear us."
+            },
+            {
+                "text": "We talk about it, you apologize and we leave you in peace."
+            },
+            {
+                "text": "Ana and I will leave you alone and the rest can do what they want."
+            }
+        ],
+        
+        "talked": [
+            {
+                "text": "When the class is over, remember to come to the bathrooms."
+            },
+            {
+                "text": "",
+                "text_male": "I will be there",
+                "text_female" : "Ana will be waiting there"
+            }
+        ]
+    },
+
+    "guille": {
+        "notTalked": {
+            "text": "No tengo nada que hablar contigo."
+        },
+        "talked": {
+            "text": "I have nothing to talk to you."
+        }
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "player_stairs": {
+        "root": [
+            {
+                "text": "Ya se ha ido todo el mundo."
+            },
+            {
+                "text": "",
+                "text_male": "¿Debería fiarme de Alex e ir al baño para hablar con él?",
+                "text_female": "¿Debería fiarme de Alex e ir al baño para hablar con Ana?"
+            },
+            {
+                "text": "¿Si voy me dejarán en paz de una vez por todas?."
+            }
+        ]
+    },
+    
+    "class": {
+        "root": {
+            "text": "No tengo nada que hacer dentro de clase."
+        }
+    }
+}

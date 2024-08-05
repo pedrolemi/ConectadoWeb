@@ -1,13 +1,13 @@
 {
     "bag": {
         "root": {
-            "text": "I'll take everything and leave."
+            "text": "Cogeré todo para marcharme."
         }
     },
 
     "wardrobe1": {
         "root": {
-            "text": "I don't need anything from here right now."
+            "text": "Por ahora no necesito nada que pueda estar ahí dentro."
         }
     },
 
@@ -20,27 +20,27 @@
     
     "bed": {
         "root": {
-            "text": "Gotta go."
+            "text": "He de irme."
         }
     },
 
     "pc": {
         "root": {
-            "text": "Do you want to turn on the PC?"
+            "text": "¿Quieres encender el ordenador?"
         },
         "pcChoice": [
             {
-                "text": "Yes"
+                "text": "Sí"
             },
             {
                 "text": "No"
             }
         ],
         "turnPC": {
-            "text": "It's not working, is it broken?"
+            "text": "No enciende, ¿se habrá estropeado?"
         },
         "leavePC": {
-            "text": "Better not and go to class."
+            "text": "Mejor no, es hora de irse a clase."
         }
     }
 }

@@ -17,9 +17,10 @@
     "day4": {
         "startClass": "The bell is ringing, it's break time...",
         "endBreak": "As soon as you get in, the bell rings and the teacher appears. You did not notice but the morning is over, it's time to go home...",
-        "endDay": "It seems like classes are lasting longer and longer... Luckly it's time to go home."
+        "endDay": "It seems like classes are lasting longer and longer... Luckily it's time to go home."
     },
     "day5": {
-
+        "startClass": "Another day of whispers at your back. It's time to go home.",
+        "endDay": "You go back home and sleep earlier today. As usual, it's dream time..."
     }
 }

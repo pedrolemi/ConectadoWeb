@@ -35,7 +35,12 @@
                 "text": "Vale, despertador listo... Hora de dormir."
             }
         ]
-    }
+    },
 
+    "phone": {
+        "root": {
+            "text": "He visto que has borrado tu publicacion con tu nº de telefono, pero no pasa nada, tengo pantallazo y puevo resubirlo jajaja"
+        }
+    }
     
 }

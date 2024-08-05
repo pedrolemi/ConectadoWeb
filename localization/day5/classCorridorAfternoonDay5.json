@@ -5,7 +5,7 @@
             "character": "player"
         }
     },
-    
+
     "class": {
         "root": {
             "type": "text",

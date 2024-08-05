@@ -1,0 +1,159 @@
+{
+    "alex": {
+        "root": {
+            "type": "condition",
+            "conditions": [
+                {
+                    "next": "notTalked",
+                    "talkedAlex": {
+                        "value": false,
+                        "operator": "equal",
+                        "global": false,
+                        "default": false
+                    }
+                },
+                {
+                    "next": "talked",
+                    "talkedAlex": {
+                        "value": true,
+                        "operator": "equal",
+                        "global": false,
+                        "default": false
+                    }
+                }
+            ]
+        },
+        "notTalked": {
+            "type": "condition",
+            "conditions": [
+                {
+                    "next": "passwordExchanged",
+                    "passwordExchanged": {
+                        "value": true,
+                        "operator": "equal",
+                        "global": true,
+                        "default": false
+                    }
+                },
+                {
+                    "next": "phoneNotFound",
+                    "passwordExchanged": {
+                        "value": false,
+                        "operator": "equal",
+                        "global": true,
+                        "default": false
+                    },
+                    "phoneFound": {
+                        "value": false,
+                        "operator": "equal",
+                        "global": true,
+                        "default": false
+                    }
+                },
+                {
+                    "next": "phoneFound",
+                    "passwordExchanged": {
+                        "value": false,
+                        "operator": "equal",
+                        "global": true,
+                        "default": false
+                    },
+                    "phoneFound": {
+                        "value": true,
+                        "operator": "equal",
+                        "global": true,
+                        "default": false
+                    }
+                }
+            ]
+        },
+        "passwordExchanged": {
+            "type": "text",
+            "character": "Alex",
+            "next": "enough"
+        },
+        "phoneFound": {
+            "type": "text",
+            "character": "Alex",
+            "next": "enough"
+        },
+        "phoneNotFound": {
+            "type": "text",
+            "character": "Alex",
+            "next": "enough"
+        },
+        
+        "enough": {
+            "type": "text",
+            "character": "Alex",
+            "next": "setTalked"
+        },
+
+        "setTalked": {
+            "type": "event",
+            "events": [
+                { 
+                    "setTalked": { 
+                        "variable": "talkedAlex", 
+                        "value": true, 
+                        "global": false
+                    }
+                }
+            ]
+        },
+
+        "talked": {
+            "type": "text",
+            "character": "Alex"
+        }
+    },
+
+    "guille": {
+        "root": {
+            "type": "condition",
+            "conditions": [
+                {
+                    "next": "notTalked",
+                    "talkedGuille": {
+                        "value": false,
+                        "operator": "equal",
+                        "global": false,
+                        "default": false
+                    }
+                },
+                {
+                    "next": "talked",
+                    "talkedGuille": {
+                        "value": true,
+                        "operator": "equal",
+                        "global": false,
+                        "default": false
+                    }
+                }
+            ]
+        },
+
+        "notTalked": {
+            "type": "text",
+            "character": "Guille",
+            "next": "setTalked"
+        },
+        "setTalked": {
+            "type": "event",
+            "events": [
+                { 
+                    "setTalked": { 
+                        "variable": "talkedGuille", 
+                        "value": true, 
+                        "global": false
+                    }
+                }
+            ]
+        },
+
+        "talked": {
+            "type": "text",
+            "character": "Guille"
+        }
+    }
+}

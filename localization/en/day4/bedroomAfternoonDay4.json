@@ -35,7 +35,12 @@
                 "text": "Alright, alarm clock set... Time to sleep."
             }
         ]
-    }
+    },
 
+    "phone": {
+        "root": {
+            "text": "I've seen you have deleted your post with your phone numbre, but don't worry, I made and screenshot and I can upload it again hahaha"
+        }
+    }
     
 }

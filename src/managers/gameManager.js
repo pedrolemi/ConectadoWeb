@@ -313,7 +313,7 @@ export default class GameManager {
         this.computerScene.scene.sleep();
 
         this.day = 5;
-        let sceneName = 'BedroomMorningDay5';
+        let sceneName = 'ClassBackAfternoonDay5';
 
         // Pasa a la escena inicial con los parametros text, onComplete y onCompleteDelay
         // let sceneName = 'TextOnlyScene';

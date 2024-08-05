@@ -1,0 +1,67 @@
+{
+    "alison": {
+        "passwordExchanged": [
+            {
+                "text": "You deserve what have happened."
+            },
+            {
+                "text": "What were you thinking when you gave me your password?"
+            }
+        ],
+        "phoneStolen": {
+            "text": "Nothing of this would had happened if you would have trusted me. It's your fault."
+        },
+
+        "talked": {
+            "text": "Go away, we have nothing to talk."
+        }
+    },
+
+    "ana": {
+        "passwordExchanged": [
+            {
+                "text": "I can't believe you gave Alison your password."
+            },
+            {
+                "text": "Do you really thought she was going to be your friend? I can't believe it was that easy."
+            },
+            {
+                "text": "HAHAHAHA!!! Seriously, I'm cracking up at you."
+            }
+        ],
+        "phoneFound": [
+            {
+                "text": "HAHAHAHA!!! I can't believe you didn't have a locking pattern on your mobile."
+            },
+            {
+                "text":  "I thought it would be harder..."
+            },
+            {
+                "text": "",
+                "text_male": "It's going to be a funny day. Now everyone thinks you're actually a fucking poof who likes it all.",
+                "text_female": "It's going to be a funny day. Now everyone thinks you're actually a fucking vicious whore"
+            }
+        ],
+        "phoneNotFound": [
+            {
+                "text": "Look who's here, and I thought you wouldn't show today."
+            },
+            {
+                "text": "Still without phone? Hahaha, it wasn't that hard to find if you would have looked well."
+            },
+            {
+                "text": "What an asshole..."
+            },
+            {
+                "text": "Where did you come from? hahaha."
+            }
+        ],
+        "bellRinging": {
+            "text": "<<The bell is ringing>>"
+        },
+
+        "talked": {
+            "text": "Hahahaha, outkast."
+        }
+    }
+}

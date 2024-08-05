@@ -91,7 +91,19 @@
     
     "phone": {
         "root": {
-            
+            "type": "chatMessage",
+            "character": "Alex",
+            "chat": "chat4",
+            "replyDelay": 0,
+            "next": "endChat"
+        },
+        "endChat": {
+            "type": "event",
+            "events": [
+                { 
+                    "endChat": { "chat": "chat4" }
+                }
+            ]
         }
     }
 }

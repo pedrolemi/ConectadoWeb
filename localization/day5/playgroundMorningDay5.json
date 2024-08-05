@@ -1,0 +1,193 @@
+{
+    "alison": {
+        "root": {
+            "type": "condition",
+            "conditions": [
+                {
+                    "next": "notTalked",
+                    "talkedAlison": {
+                        "value": false,
+                        "operator": "equal",
+                        "global": false,
+                        "default": false
+                    }
+                },
+                {
+                    "next": "talked",
+                    "talkedAlison": {
+                        "value": true,
+                        "operator": "equal",
+                        "global": false,
+                        "default": false
+                    }
+                }
+            ]
+        },
+        "notTalked": {
+            "type": "condition",
+            "conditions": [
+                {
+                    "next": "passwordExchanged",
+                    "passwordExchanged": {
+                        "value": true,
+                        "operator": "equal",
+                        "global": true,
+                        "default": false
+                    }
+                },
+                {
+                    "next": "phoneStolen",
+                    "passwordExchanged": {
+                        "value": false,
+                        "operator": "equal",
+                        "global": true,
+                        "default": false
+                    }
+                }
+            ]
+        },
+        "passwordExchanged": {
+            "type": "text",
+            "character": "Alison",
+            "next": "setTalked"
+        },
+        "phoneStolen": {
+            "type": "text",
+            "character": "Alison",
+            "next": "setTalked"
+        },
+        "setTalked": {
+            "type": "event",
+            "events": [
+                { 
+                    "setTalked": { 
+                        "variable": "talkedAlison", 
+                        "value": true, 
+                        "global": false
+                    }
+                }
+            ]
+        },
+
+        "talked": {
+            "type": "text",
+            "character": "Alison"
+        }
+    },
+
+    "ana": {
+        "root": {
+            "type": "condition",
+            "conditions": [
+                {
+                    "next": "notTalked",
+                    "talkedAna": {
+                        "value": false,
+                        "operator": "equal",
+                        "global": false,
+                        "default": false
+                    }
+                },
+                {
+                    "next": "talked",
+                    "talkedAna": {
+                        "value": true,
+                        "operator": "equal",
+                        "global": false,
+                        "default": false
+                    }
+                }
+            ]
+        },
+        "notTalked": {
+            "type": "condition",
+            "conditions": [
+                {
+                    "next": "passwordExchanged",
+                    "passwordExchanged": {
+                        "value": true,
+                        "operator": "equal",
+                        "global": true,
+                        "default": false
+                    }
+                },
+                {
+                    "next": "phoneNotFound",
+                    "passwordExchanged": {
+                        "value": false,
+                        "operator": "equal",
+                        "global": true,
+                        "default": false
+                    },
+                    "phoneFound": {
+                        "value": false,
+                        "operator": "equal",
+                        "global": true,
+                        "default": false
+                    }
+                },
+                {
+                    "next": "phoneFound",
+                    "passwordExchanged": {
+                        "value": false,
+                        "operator": "equal",
+                        "global": true,
+                        "default": false
+                    },
+                    "phoneFound": {
+                        "value": true,
+                        "operator": "equal",
+                        "global": true,
+                        "default": false
+                    }
+                }
+            ]
+        },
+        "passwordExchanged": {
+            "type": "text",
+            "character": "Ana",
+            "next": "setTalked"
+        },
+        "phoneFound": {
+            "type": "text",
+            "character": "Ana",
+            "next": "setTalked"
+        },
+        "phoneNotFound": {
+            "type": "text",
+            "character": "Ana",
+            "next": "setTalked"
+        },
+        "setTalked": {
+            "type": "event",
+            "events": [
+                { 
+                    "setTalked": { 
+                        "variable": "talkedAna", 
+                        "value": true, 
+                        "global": false
+                    }
+                }
+            ],
+            "next": "bellRinging"
+        },
+        "bellRinging": {
+            "type": "text",
+            "character": "",
+            "next": "openDoors"
+        },
+        "openDoors": {
+            "type": "event",
+            "events": [
+                {
+                    "openDoors": { }
+                }
+            ]
+        },
+
+        "talked": {
+            "type": "text",
+            "character": "Ana"
+        }
+    }
+}

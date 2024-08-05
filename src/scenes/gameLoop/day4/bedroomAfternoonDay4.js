@@ -29,5 +29,15 @@ export default class BedroomAfternoonDay4 extends BedroomBase {
 
         // Ropa
         this.add.image(920 * this.scale, 1257 * this.scale + 5, this.atlasName, 'clothes3').setOrigin(0, 0).setScale(this.scale * 0.85).setDepth(this.chair.depth + 1);
+
+        
+        // Evento llamado cuando se elimina la publicacion con el numero de telefono. Anade el chat de Alex y envia un mensaje
+        this.dispatcher.addOnce("eventName", this, (obj) => {
+            nodes = this.cache.json.get('bedroomAfternoonDay4');
+            let chatName = this.i18next.t("textMessages.chat4", { ns: "phoneInfo", returnObjects: true });
+            this.phoneManager.phone.addChat(chatName, "Alex");
+            let phoneNode = super.readNodes(nodes, "day4\\bedroomAfternoonDay4", "phone", true);
+            this.phoneManager.phone.setChatNode(chatName, phoneNode);
+        });
     }
 }

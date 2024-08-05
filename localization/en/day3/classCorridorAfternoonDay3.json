@@ -1,5 +1,5 @@
 {
-    "stairs": {
+    "player_stairs": {
         "root": [
             {
                 "text": "I should go to the bathroom before I go home."
@@ -9,6 +9,7 @@
             }
         ]
     },
+    
     "class": {
         "root": {
             "text": "I have nothing to do in class."

@@ -24,7 +24,7 @@ export default class CorridorAfternoonDay3 extends CorridorBase {
         this.phoneManager.setDayInfo("day3.corridor");
         
         let nodes = this.cache.json.get('classCorridorAfternoonDay3');
-        this.stairsNode = super.readNodes(nodes, "day3\\classCorridorAfternoonDay3", "stairs", true);
+        this.stairsNode = super.readNodes(nodes, "day3\\classCorridorAfternoonDay3", "player_stairs", true);
         this.classNode = super.readNodes(nodes, "day3\\classCorridorAfternoonDay3", "class", true);
 
 

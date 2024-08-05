@@ -20,6 +20,8 @@
         "endDay": "Cada vez se te hacen más largas las horas de clase. Por suerte ya es hora de volver a casa."
     },
     "day5": {
+        "startClass": "Otro día más dónde todos cuchichean a tus espaldas, es hora de irse a casa.",
+        "endDay": "Vuelves a casa y hoy te duermes pronto. Como todos los días, es la hora de tu sueño..."
 
     }
 }

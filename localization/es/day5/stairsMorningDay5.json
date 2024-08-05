@@ -1,0 +1,17 @@
+{
+    "jose": {
+        "notTalked": [
+            {
+                "text": "Te tengo que dar las gracias, Álex se metía conmigo por mi peso..."
+            },
+            {
+                "text": "",
+                "text_male": "Hasta que tú llegaste, me alegro mucho de que estés aquí pequeño gremlin.",
+                "text_female": "Hasta que tú llegaste, me alegro mucho de que estés aquí pequeña gremlin."
+            }
+        ],
+        "talked": {
+            "text": "Jajaja..."
+        }
+    }
+}

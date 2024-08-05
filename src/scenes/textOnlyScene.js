@@ -4,7 +4,6 @@ export default class TextOnlyScene extends BaseScene {
     /**
      * Escena para las transiciones en las que solo hay texto,  
      * @extends Phaser.Scene
-     * @param {Object} params - parametros de la escena. Debe contener text, onComplete y onCompleteDelay.
      * 
      * IMPORTANTE: Esta escena es general para todas las transiciones, por lo que hay que especificar
      * en los parametros tanto el texto que debera aparecer en la escena, como que se debe ejecutar una
@@ -28,6 +27,10 @@ export default class TextOnlyScene extends BaseScene {
         }, DEFAULT_TIME);
     }
 
+    /**
+     * Crear los elementos de la escena
+     * @param {Object} params - parametros de la escena. Debe contener text, onComplete y onCompleteDelay.
+     */
     create(params) {
         super.create(params);
 

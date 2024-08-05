@@ -1,6 +1,6 @@
 {
   "frames": {
-    "logo e-ucm": {
+    "logo_e-ucm": {
       "frame": {
         "x": 0,
         "y": 0,
@@ -24,7 +24,7 @@
         "y": 0.5
       }
     },
-    "AF_TCT_Logo_ESP_CMYK_BN_POS": {
+    "logo_telefonica": {
       "frame": {
         "x": 467,
         "y": 0,
@@ -48,7 +48,7 @@
         "y": 0.5
       }
     },
-    "Orientación-y-Educación-Madrid": {
+    "orientacion_Madrid": {
       "frame": {
         "x": 1347,
         "y": 0,
@@ -72,7 +72,7 @@
         "y": 0.5
       }
     },
-    "impress-logo": {
+    "logo_impress": {
       "frame": {
         "x": 0,
         "y": 319,

@@ -99,7 +99,7 @@ export default class Post extends Phaser.GameObjects.Container {
         nMessagesTextStyle.fontFamily = 'AUdimat-regular';
         nMessagesTextStyle.fontSize = '23px';
         nMessagesTextStyle.color = '#323232';
-        this.nMessagesTranslation = gameManager.i18next.t("commentsNumberText", { ns: "computer" });
+        this.nMessagesTranslation = gameManager.i18next.t("commentsNumberText", { ns: "computerInfo" });
         this.nMessagesText = this.scene.add.text(this.listView.x, this.listView.y - 25, "", nMessagesTextStyle);
         this.nMessagesText.setOrigin(0.5);
         this.setMessagesNum();

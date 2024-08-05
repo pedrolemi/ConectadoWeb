@@ -22,7 +22,7 @@ export default class ComputerScene extends Phaser.Scene {
         this.i18next = this.gameManager.i18next;
         this.userInfo = this.gameManager.userInfo;
 
-        this.namespace = "computer";
+        this.namespace = "computerInfo";
 
         // Mesa
         let bg = this.add.image(this.CANVAS_WIDTH / 2, this.CANVAS_HEIGHT / 2, 'basePC');

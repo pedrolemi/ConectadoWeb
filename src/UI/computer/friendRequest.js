@@ -106,7 +106,7 @@ export default class FriendRequest extends Phaser.GameObjects.Container {
 
         let size = 1.2;
         let fontSize = 24;
-        let buttonsTranslations = gameManager.i18next.t('friendRequestButtons', { ns: 'computer', returnObjects: true });
+        let buttonsTranslations = gameManager.i18next.t('friendRequestButtons', { ns: "computerInfo", returnObjects: true });
         // Boton para aceptar la peticion de amistad
         this.acceptButton = new ListViewButton(this.scene, 208, 97, size, () => {
             this.setOldFriendRequest(true);

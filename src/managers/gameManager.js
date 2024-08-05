@@ -36,11 +36,23 @@ export default class GameManager {
         // Blackboard de variables de todo el juego
         this.blackboard = new Map();
 
-        this.userInfo = null;
+        // Escena de la UI
         this.UIManager = null;
+        // Escean del ordenador
         this.computerScene = null;
 
-        this.day = 0;       // Dia de la semana. Empieza en 0 porque al iniciarse la escena de la alarma, se va actualizando
+        // Se anaden los parametros iniciales a la blackboard
+        this.bagPicked = "bagPicked";
+        this.blackboard.set(this.bagPicked, false);
+
+        this.isLate = "isLate";
+        this.blackboard.set(this.isLate, false);
+
+        // Informacion del usuario
+        this.userInfo = null;
+
+        // Dia de la semana. Empieza en 0 porque al iniciarse la escena de la alarma, se va actualizando
+        this.day = 0;
 
         this.generateTextures();
 
@@ -66,7 +78,7 @@ export default class GameManager {
             console.log(this.blackboard)
         }, true);
 
-        
+
         // Se anade a los eventos permanentes el evento terminar un chat para indicar que ya no hay nada mas que contestar
         this.dispatcher.add("endChat", this, (obj) => {
             // console.log(obj);
@@ -197,9 +209,6 @@ export default class GameManager {
         this.graphics.clear();
     }
 
-
-
-
     // Tiene los campos: name, username, password, gender
     setUserInfo(userInfo) {
         this.userInfo = userInfo;
@@ -209,18 +218,58 @@ export default class GameManager {
         return this.userInfo;
     }
 
-
     ///////////////////////////////////////
     /// Metodos para cambiar de escena ///
     //////////////////////////////////////
 
+    /**
+     * Metodo para limpiar todo el estado del juego
+     */
+    resetGame() {
+        // Se limpia el emisor de eventos completamente (tanto eventos TEMPORALES como PERMANENTES)
+        this.dispatcher.clear();
+
+        // Se borran todas las escenas activas (por si acaso)
+        this.clearRunningScenes();
+
+        // Se borra la escena de la UI
+        if (this.UIManager) {
+            this.UIManager.scene.stop();
+            this.UIManager = null;
+        }
+
+        // Se borra la escena del ordenador
+        if (this.computerScene) {
+            this.computerScene.scene.stop();
+            this.computerScene = null;
+        }
+
+        // Se borra la blackboard
+        this.blackboard.clear();
+
+        // Se resetean los parametros iniciales a la blackboard
+        // Nota: aunque luego se setean en AlarmScene, se setean restauran aqui por si acaso
+        this.blackboard.set(this.bagPicked, false);
+
+        this.blackboard.set(this.isLate, false);
+
+        // Se borra la informacion del usuario
+        this.userInfo = null;
+
+        // Dia de la semana. Empieza en 0 porque al iniciarse la escena de la alarma, se va actualizando
+        this.day = 0;
+    }
+
+    /**
+     * El menu donde seleccionar el idioma se trata de la primera escena del juego
+     * Nota: los botones de SALIR siempre llevan a esta pantalla
+     */
     startLangMenu() {
+        // Se limpia el estado del juego por completo
+        this.resetGame();
+
         let sceneName = 'LanguageMenu';
         this.changeScene(sceneName);
-
-        sceneName = 'UIManager';
-        this.currentScene.scene.stop(sceneName);
-        this.blackboard.clear();
     }
 
     startTitleMenu() {
@@ -228,9 +277,17 @@ export default class GameManager {
         this.changeScene(sceneName);
     }
 
-    startUserInfoMenu() {
+    startLoginMenu() {
         let sceneName = 'UserInfoMenu';
         this.changeScene(sceneName);
+    }
+
+    startCreditsScene(endgame) {
+        let params = {
+            endgame: endgame
+        };
+        let sceneName = 'CreditsScene';
+        this.changeScene(sceneName, params);
     }
 
     startGame(userInfo) {
@@ -243,13 +300,13 @@ export default class GameManager {
         let UIsceneName = 'UIManager';
         this.currentScene.scene.launch(UIsceneName);
         this.UIManager = this.currentScene.scene.get(UIsceneName);
-        let computerSceneName = 'ComputerScene';
 
         // run tiene 3 opciones:
         // - si esta pausada (no se actualiza), se reanuda
         // - si esta dormida (no se actualiza ni renderiza), se despierta
         // - si no esta corriendo, se inicia
         // La primera vez sucede que se inicio y luego, se va a despertar
+        let computerSceneName = 'ComputerScene';
         this.currentScene.scene.run(computerSceneName);
         this.computerScene = this.currentScene.scene.get(computerSceneName);
         this.computerScene.scene.sleep();
@@ -274,6 +331,23 @@ export default class GameManager {
     }
 
     /**
+     * Metodo para borrar y cerrar todas las escenas activas
+     */
+    clearRunningScenes() {
+        this.runningScenes.forEach(sc => {
+            // Si la escena es hija de BaseScene, se tiene que llamar a su shutdown 
+            // antes de detener la escena para evitar problemas al borrar los retratos
+            if (sc instanceof BaseScene) {
+                if (typeof sc.shutdown === 'function') {
+                    sc.shutdown();
+                }
+            }
+            sc.scene.stop(sc);
+        });
+        this.runningScenes.clear();
+    }
+
+    /**
     * Metodo para cambiar de escena
     * @param {String} scene - key de la escena a la que se va a pasar
     * @param {Object} params - informacion que pasar a la escena (opcional)
@@ -283,18 +357,7 @@ export default class GameManager {
         // Si no se puede volver a la escena anterior, se detienen todas las
         // escenas que ya estaban creadas porque ya no van a hacer falta 
         if (!canReturn) {
-            this.runningScenes.forEach(sc => {
-                // Si la escena es hija de BaseScene, se tiene que llamar a su shutdown 
-                // antes de detener la escena para evitar problemas al borrar los retratos
-                if (sc instanceof BaseScene) {
-                    if (typeof sc.shutdown === 'function') {
-                        sc.shutdown();
-                    }
-                }
-                sc.scene.stop(sc);
-            });
-            this.runningScenes.clear();
-
+            this.clearRunningScenes();
         }
         // Si no, se se duerme la escena actual en vez de destruirla ya que
         // habria que mantener su estado por si se quiere volver a ella

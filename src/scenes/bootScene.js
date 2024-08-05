@@ -309,10 +309,11 @@ export default class BootScene extends Phaser.Scene {
     loadCreditsSceneAssets() {
         this.load.setPath('assets/UI/creditsScene');
         this.load.atlas('someBrands', 'brands/someBrands.png', 'brands/someBrands.json');
-        this.load.image('logo_e-ucm', 'brands/logo e-ucm.png');
-        this.load.image('logo_rage', 'brands/logo rage.png');
+        this.load.image('logo_rage', 'brands/logo_rage.png');
         this.load.image('logo_ucm', 'brands/logo_ucm.png');
-        this.load.atlas('ucm', 'medals.png', 'medals.json');
+        this.load.image('beaconing', 'brands/beaconing.png');
+        this.load.atlas('medals', 'medals.png', 'medals.json');
+        this.load.image('rewind', 'rewind.png');
     }
 
     preload() {
@@ -325,7 +326,7 @@ export default class BootScene extends Phaser.Scene {
             'test/momDialog.json',
             'test/dadDialog.json',
             'test/chat1.json',
-            'test/computerTest.json',
+            //'test/computerTest.json',
 
             // Posts ordenador
             'posts.json',
@@ -394,7 +395,8 @@ export default class BootScene extends Phaser.Scene {
         let onlyNamespaces = [
             // Menus
             'titleMenu',
-            'userInfoMenu',
+            'loginMenu',
+            //'creditsScene',
 
             // Nombres
             'names',
@@ -403,7 +405,7 @@ export default class BootScene extends Phaser.Scene {
             'phoneInfo',
 
             // Ordenador
-            'computer',
+            'computerInfo',
 
             // Escenas de transicion
             'transitionScenes',

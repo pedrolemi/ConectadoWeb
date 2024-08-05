@@ -1,4 +1,4 @@
-import GameManager from "../managers/gameManager.js"
+import GameManager from "../../managers/gameManager.js"
 
 export default class LanguageMenu extends Phaser.Scene {
     /**
@@ -56,7 +56,7 @@ export default class LanguageMenu extends Phaser.Scene {
         let scale = height / button.height;
         button.setScale(scale);
 
-        button.setInteractive({ useHandCursor: true});
+        button.setInteractive({ useHandCursor: true });
         button.on('pointerover', () => {
             this.tweens.add({
                 targets: button,

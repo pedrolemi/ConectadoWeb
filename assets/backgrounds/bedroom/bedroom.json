@@ -1,6 +1,6 @@
 {
   "frames": {
-    "bed": {
+    "bed.png": {
       "frame": {
         "x": 0,
         "y": 0,
@@ -24,20 +24,20 @@
         "y": 0.5
       }
     },
-    "bedroomDoorOpened": {
+    "bedroomDoorOpened.png": {
       "frame": {
         "x": 0,
         "y": 647,
-        "w": 320,
-        "h": 1391
+        "w": 305,
+        "h": 1383
       },
       "rotated": false,
-      "trimmed": false,
+      "trimmed": true,
       "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 320,
-        "h": 1391
+        "x": 8,
+        "y": 8,
+        "w": 305,
+        "h": 1383
       },
       "sourceSize": {
         "w": 320,
@@ -48,284 +48,260 @@
         "y": 0.5
       }
     },
-    "bedroomDoorClosed": {
-      "frame": {
-        "x": 320,
-        "y": 647,
-        "w": 320,
-        "h": 1390
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 320,
-        "h": 1390
-      },
-      "sourceSize": {
-        "w": 320,
-        "h": 1390
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "wardrobeDoor3Closed": {
-      "frame": {
-        "x": 640,
-        "y": 647,
-        "w": 340,
-        "h": 880
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 340,
-        "h": 880
-      },
-      "sourceSize": {
-        "w": 340,
-        "h": 880
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "wardrobeDoor2Closed": {
+    "bedroomDoorClosed.png": {
       "frame": {
         "x": 1281,
         "y": 0,
-        "w": 340,
-        "h": 880
+        "w": 287,
+        "h": 1385
       },
       "rotated": false,
-      "trimmed": false,
+      "trimmed": true,
       "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 340,
-        "h": 880
-      },
-      "sourceSize": {
-        "w": 340,
-        "h": 880
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "wardrobeDoor1Closed": {
-      "frame": {
-        "x": 980,
-        "y": 880,
-        "w": 320,
-        "h": 870
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 320,
-        "h": 870
+        "x": 10,
+        "y": 5,
+        "w": 287,
+        "h": 1385
       },
       "sourceSize": {
         "w": 320,
-        "h": 870
+        "h": 1390
       },
       "pivot": {
         "x": 0.5,
         "y": 0.5
       }
     },
-    "bedroomChair": {
+    "wardrobeDoor2Closed.png": {
       "frame": {
-        "x": 640,
-        "y": 1527,
-        "w": 290,
-        "h": 500
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 290,
-        "h": 500
-      },
-      "sourceSize": {
-        "w": 290,
-        "h": 500
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "computer": {
-      "frame": {
-        "x": 1300,
-        "y": 880,
-        "w": 300,
-        "h": 350
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 300,
-        "h": 350
-      },
-      "sourceSize": {
-        "w": 300,
-        "h": 350
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "wardrobeDoor2Opened": {
-      "frame": {
-        "x": 1600,
-        "y": 880,
-        "w": 100,
-        "h": 960
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 100,
-        "h": 960
-      },
-      "sourceSize": {
-        "w": 100,
-        "h": 960
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "wardrobeDoor1Opened": {
-      "frame": {
-        "x": 1700,
-        "y": 0,
-        "w": 100,
-        "h": 940
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 100,
-        "h": 940
-      },
-      "sourceSize": {
-        "w": 100,
-        "h": 940
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "wardrobeDoor3Opened": {
-      "frame": {
-        "x": 1700,
-        "y": 940,
-        "w": 100,
-        "h": 940
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 100,
-        "h": 940
-      },
-      "sourceSize": {
-        "w": 100,
-        "h": 940
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "bedroomJacket": {
-      "frame": {
-        "x": 1300,
-        "y": 1230,
-        "w": 220,
-        "h": 340
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 220,
-        "h": 340
-      },
-      "sourceSize": {
-        "w": 220,
-        "h": 340
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "clothes1": {
-      "frame": {
-        "x": 930,
-        "y": 1840,
-        "w": 360,
-        "h": 190
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 360,
-        "h": 190
-      },
-      "sourceSize": {
-        "w": 360,
-        "h": 190
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "bag": {
-      "frame": {
-        "x": 980,
+        "x": 305,
         "y": 647,
-        "w": 210,
-        "h": 230
+        "w": 328,
+        "h": 861
       },
       "rotated": false,
-      "trimmed": false,
+      "trimmed": true,
       "spriteSourceSize": {
-        "x": 0,
+        "x": 2,
+        "y": 9,
+        "w": 328,
+        "h": 861
+      },
+      "sourceSize": {
+        "w": 340,
+        "h": 880
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "wardrobeDoor3Closed.png": {
+      "frame": {
+        "x": 633,
+        "y": 647,
+        "w": 323,
+        "h": 869
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 16,
+        "y": 5,
+        "w": 323,
+        "h": 869
+      },
+      "sourceSize": {
+        "w": 340,
+        "h": 880
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "wardrobeDoor1Closed.png": {
+      "frame": {
+        "x": 956,
+        "y": 647,
+        "w": 310,
+        "h": 856
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 5,
+        "y": 7,
+        "w": 310,
+        "h": 856
+      },
+      "sourceSize": {
+        "w": 320,
+        "h": 870
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "bedroomChair.png": {
+      "frame": {
+        "x": 305,
+        "y": 1508,
+        "w": 275,
+        "h": 487
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8,
+        "y": 7,
+        "w": 275,
+        "h": 487
+      },
+      "sourceSize": {
+        "w": 290,
+        "h": 500
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "wardrobeDoor3Opened.png": {
+      "frame": {
+        "x": 1568,
         "y": 0,
-        "w": 210,
-        "h": 230
+        "w": 89,
+        "h": 921
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 5,
+        "y": 9,
+        "w": 89,
+        "h": 921
+      },
+      "sourceSize": {
+        "w": 100,
+        "h": 940
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "wardrobeDoor1Opened.png": {
+      "frame": {
+        "x": 1568,
+        "y": 921,
+        "w": 87,
+        "h": 921
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 6,
+        "y": 9,
+        "w": 87,
+        "h": 921
+      },
+      "sourceSize": {
+        "w": 100,
+        "h": 940
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "wardrobeDoor2Opened.png": {
+      "frame": {
+        "x": 1655,
+        "y": 921,
+        "w": 83,
+        "h": 944
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 9,
+        "y": 9,
+        "w": 83,
+        "h": 944
+      },
+      "sourceSize": {
+        "w": 100,
+        "h": 960
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "bedroomJacket.png": {
+      "frame": {
+        "x": 1266,
+        "y": 1385,
+        "w": 208,
+        "h": 321
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 6,
+        "y": 10,
+        "w": 208,
+        "h": 321
+      },
+      "sourceSize": {
+        "w": 220,
+        "h": 340
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "clothes1.png": {
+      "frame": {
+        "x": 580,
+        "y": 1842,
+        "w": 349,
+        "h": 173
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 6,
+        "y": 9,
+        "w": 349,
+        "h": 173
+      },
+      "sourceSize": {
+        "w": 360,
+        "h": 190
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "bag.png": {
+      "frame": {
+        "x": 956,
+        "y": 1503,
+        "w": 194,
+        "h": 215
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8,
+        "y": 8,
+        "w": 194,
+        "h": 215
       },
       "sourceSize": {
         "w": 210,
@@ -336,20 +312,20 @@
         "y": 0.5
       }
     },
-    "clothes2": {
+    "clothes2.png": {
       "frame": {
-        "x": 1290,
-        "y": 1880,
-        "w": 430,
-        "h": 100
+        "x": 580,
+        "y": 1718,
+        "w": 420,
+        "h": 86
       },
       "rotated": false,
-      "trimmed": false,
+      "trimmed": true,
       "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 430,
-        "h": 100
+        "x": 5,
+        "y": 7,
+        "w": 420,
+        "h": 86
       },
       "sourceSize": {
         "w": 430,
@@ -360,20 +336,20 @@
         "y": 0.5
       }
     },
-    "clothes3": {
+    "clothes3.png": {
       "frame": {
-        "x": 1720,
-        "y": 1880,
-        "w": 90,
-        "h": 90
+        "x": 1474,
+        "y": 1385,
+        "w": 72,
+        "h": 79
       },
       "rotated": false,
-      "trimmed": false,
+      "trimmed": true,
       "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 90,
-        "h": 90
+        "x": 9,
+        "y": 6,
+        "w": 72,
+        "h": 79
       },
       "sourceSize": {
         "w": 90,
@@ -391,8 +367,8 @@
     "image": "bedroom.png",
     "format": "RGBA8888",
     "size": {
-      "w": 1810,
-      "h": 2038
+      "w": 1738,
+      "h": 2030
     },
     "scale": 1
   }

@@ -1,16 +1,16 @@
-import Button from '../UI/button.js'
-import GameManager from '../managers/gameManager.js'
-import CheckBox from '../UI/checkbox.js'
-import RadioButtonGroup from '../UI/radioButtonGroup.js'
-import TextInput from '../UI/textInput.js'
+import Button from '../../UI/button.js'
+import GameManager from '../../managers/gameManager.js'
+import CheckBox from '../../UI/checkbox.js'
+import RadioButtonGroup from '../../UI/radioButtonGroup.js'
+import TextInput from '../../UI/textInput.js'
 
-export default class UserInfoMenu extends Phaser.Scene {
+export default class LoginMenu extends Phaser.Scene {
     /**
      * Menu donde el jugador introduce su informacion
      * @extends Phaser.Scene
      */
     constructor() {
-        super({ key: 'UserInfoMenu' });
+        super({ key: 'LoginMenu' });
     }
 
     create() {
@@ -19,7 +19,7 @@ export default class UserInfoMenu extends Phaser.Scene {
 
         this.gameManager = GameManager.getInstance();
         this.i18next = this.gameManager.i18next;
-        this.namespace = 'userInfoMenu';
+        this.namespace = 'loginMenu';
         this.maxNameCharacters = 10;
         this.maxUserCharacters = 16;
 

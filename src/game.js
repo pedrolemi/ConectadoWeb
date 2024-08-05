@@ -1,9 +1,10 @@
 import BootScene from './scenes/bootScene.js';
 
 // Menus
-import LanguageMenu from './scenes/languageMenu.js';
-import TitleMenu from './scenes/titleMenu.js';
-import UserInfoMenu from './scenes/userInfoMenu.js';
+import LanguageMenu from './scenes/menus/languageMenu.js';
+import TitleMenu from './scenes/menus/titleMenu.js';
+import LoginMenu from './scenes/menus/loginMenu.js';
+import CreditsScene from './scenes/menus/creditsScene.js';
 
 // Flujo de juego
 import TextOnlyScene from './scenes/textOnlyScene.js';
@@ -99,7 +100,7 @@ const config = {
         // Carga de assets
         BootScene,
         // Menus
-        LanguageMenu, TitleMenu, UserInfoMenu,
+        LanguageMenu, TitleMenu, LoginMenu, CreditsScene,
         // Escenas bases
         AlarmScene, BathroomBase, OppositeBathroom, TextOnlyScene,
         // Escenas dia 1
@@ -109,7 +110,7 @@ const config = {
         // Escenas dia 3
         BedroomMorningDay3, LivingroomMorningDay3, PlaygroundMorningDay3, StairsMorningDay3, CorridorMorningDay3, ClassFrontMorningDay3, ClassBackAfternoonDay3, CorridorAfternoonDay3, BathroomAfternoonDay3, StairsAfternoonDay3, PlaygroundAfternoonDay3, LivingroomAfternoonDay3, BedroomAfternoonDay3, NightmareDay3,
         // Escenas dia 4
-        BedroomMorningDay4, LivingroomMorningDay4, PlaygroundMorningDay4, StairsMorningDay4, CorridorMorningDay4, ClassFrontMorningDay4, ClassBackBreakDay4, CorridorBreakDay4, StairsBreakDay4, PlaygroundBreakDay4, PlaygroundAfternoonDay4, LivingroomAfternoonDay4, 
+        BedroomMorningDay4, LivingroomMorningDay4, PlaygroundMorningDay4, StairsMorningDay4, CorridorMorningDay4, ClassFrontMorningDay4, ClassBackBreakDay4, CorridorBreakDay4, StairsBreakDay4, PlaygroundBreakDay4, PlaygroundAfternoonDay4, LivingroomAfternoonDay4,
         NightmareDay4,
         // Escenas dia 5
         NightmareDay5,
@@ -123,11 +124,11 @@ const config = {
         antialias: true,
         //transparent: true,
     },
-    physics: { 
-        default: 'arcade', 
-        arcade: { 
-           // Visibilidad de las colisiones 
-           debug: true,   
+    physics: {
+        default: 'arcade',
+        arcade: {
+            // Visibilidad de las colisiones 
+            debug: true,
         },
     },
     plugins: {

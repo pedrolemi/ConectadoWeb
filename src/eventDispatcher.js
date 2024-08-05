@@ -316,4 +316,15 @@ export default class EventDispatcher {
             });
         });
     }
+
+    /**
+     * Metodo para limpiar por completo el emisor, por lo tanto,
+     * se eliminan tanto eventos TEMPORALES como PERMANENTES
+     */
+    clear() {
+        this.emitter.shutdown();
+        this.eventsMap.clear();
+        this.ownersMap.clear();
+        this.ownersPermanentMap.clear();
+    }
 }

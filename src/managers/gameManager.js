@@ -69,7 +69,7 @@ export default class GameManager {
             wordWrap: null,
             padding: null               // Separacion con el fondo (en el caso de que haya fondo)
         }
-        
+
     }
 
     // metodo para generar y coger la instancia
@@ -312,9 +312,11 @@ export default class GameManager {
         this.computerScene = this.currentScene.scene.get(computerSceneName);
         this.computerScene.scene.sleep();
 
+        this.day = 5;
+        let sceneName = 'NightmareDay5';
 
         // Pasa a la escena inicial con los parametros text, onComplete y onCompleteDelay
-        let sceneName = 'TextOnlyScene';
+        //let sceneName = 'TextOnlyScene';
         let params = {
             // El texto de se coge del a archivo de traducciones
             text: this.i18next.t("day1.start", { ns: "transitionScenes", returnObjects: true }),

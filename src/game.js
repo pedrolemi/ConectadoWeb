@@ -102,7 +102,7 @@ const max_w = 1129, max_h = 847, min_w = 320, min_h = 240;
 const config = {
     width: max_w,
     height: max_h,
-    backgroundColor: '#2b9e9e',
+    backgroundColor: '#000000',
     version: "1.0",
 
     type: Phaser.AUTO,

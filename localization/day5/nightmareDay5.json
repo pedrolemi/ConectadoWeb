@@ -8,7 +8,7 @@
                     "value": "bad",
                     "operator": "equal",
                     "global": true,
-                    "default": 0
+                    "default": "normal"
                 }
             },
             {
@@ -17,7 +17,7 @@
                     "value": "normal",
                     "operator": "equal",
                     "global": true,
-                    "default": 0
+                    "default": "normal"
                 }
             },
             {
@@ -26,7 +26,7 @@
                     "value": "good",
                     "operator": "equal",
                     "global": true,
-                    "default": 0
+                    "default": "normal"
                 }
             }
         ]
@@ -34,16 +34,19 @@
     "badEnding": {
         "type": "text",
         "character": "portalVoice",
+        "centered": "true",
         "next": "playerQuestion"
     },
     "normalEnding": {
         "type": "text",
         "character": "portalVoice",
+        "centered": "true",
         "next": "playerQuestion"
     },
     "goodEnding": {
         "type": "text",
         "character": "portalVoice",
+        "centered": "true",
         "next": "playerQuestion"
     },
     "playerQuestion": {
@@ -56,11 +59,13 @@
     "curiousAnswer": {
         "type": "text",
         "character": "portalVoice",
+        "centered": "true",
         "next": "end"
     },
     "unpoliteAnswer": {
         "type": "text",
         "character": "portalVoice",
+        "centered": "true",
         "next": "end"
     },
     "end": {

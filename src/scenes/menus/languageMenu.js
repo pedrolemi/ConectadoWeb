@@ -21,6 +21,7 @@ export default class LanguageMenu extends Phaser.Scene {
         let scale = CANVAS_WIDTH / bg.width;
         bg.setScale(scale);
 
+        // Fondo
         this.add.rectangle(CANVAS_WIDTH / 2, 0, CANVAS_WIDTH, CANVAS_HEIGHT / 1.2, 0x2B9E9E).setOrigin(0.5, 0);
 
         // Pantalla del ordenador con el tam del canvas
@@ -78,7 +79,16 @@ export default class LanguageMenu extends Phaser.Scene {
         button.on('pointerdown', () => {
             // Se cambia el idioma y se pasa a la pantalla de titulo
             this.i18next.changeLanguage(language);
-            this.gameManager.startTitleMenu();
+            //this.gameManager.startTitleMenu();
+
+            // TEST
+            let userInfo = {
+                name: "Laura",
+                username: "lauu",
+                password: "hola123",
+                gender: "female"
+            }
+            this.gameManager.startGame(userInfo);
         });
     }
 }

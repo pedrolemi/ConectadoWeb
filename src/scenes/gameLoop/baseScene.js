@@ -135,7 +135,7 @@ export default class BaseScene extends Phaser.Scene {
         }
     }
 
-    
+
     // Llama al metodo para leer todos los nodos y luego se encarga de conectarlos
     readNodes(file, namespace, objectName, getObjs) {
         let nodesMap = new Map();
@@ -144,7 +144,7 @@ export default class BaseScene extends Phaser.Scene {
         // Recorre todos los nodos guardados en el mapa
         nodesMap.forEach((node) => {
             // Recorre el array de nodos siguientes leyendo sus ids
-            for(let i = 0; i < node.next.length; i++) {
+            for (let i = 0; i < node.next.length; i++) {
                 // Obtiene el nodo del mapa a partir de su id y la reemplaza en el array
                 let nextNode = nodesMap.get(node.next[i]);
                 node.next[i] = nextNode;
@@ -293,6 +293,11 @@ export default class BaseScene extends Phaser.Scene {
             node.character = character;
             node.name = this.i18next.t(fileObj[id].character, { ns: "names", returnObjects: getObjs });
 
+            // Obtiene si el texto esta centrado o no
+            if (fileObj[id].centered) {
+                node.centered = fileObj[id].centered;
+            }
+
             // Obtiene los fragmentos del dialogo
             let texts = [];
             let textTranslation = this.i18next.t(translationId, { ns: namespace, name: playerName, context: context, returnObjects: getObjs })
@@ -313,10 +318,10 @@ export default class BaseScene extends Phaser.Scene {
                 // Se crea un dialogo con todo el texto a mostrar
                 let split = {
                     text: texts[i],
-                    name: node.name
+                    name: node.name,
                 }
                 // Se separa el fragmento en caso de que el texto sea demasiado largo
-                let dialogs = this.splitDialogs([split], character);
+                let dialogs = this.splitDialogs([split], character, node.centered);
 
                 // Se concatenan los fragmentos obtenidos con los que ya habia en el nodo
                 // (se tienen que concatenar, ya que splitDialogs devuelve un array, por
@@ -358,7 +363,7 @@ export default class BaseScene extends Phaser.Scene {
                     let nextNode = this.readAllNodes(fileObj[id].choices[i].next, file, namespace, objectName, getObjs, nodesMap);
                     node.next.push(nextNode.fullId);
                 }
-                else { 
+                else {
                     node.next.push({});
                 }
             }
@@ -501,7 +506,7 @@ export default class BaseScene extends Phaser.Scene {
     * @param {Array} dialogs - array de dialogos a preparar
     * @returns {Array} - array con los dialogos ajustados
     */
-    splitDialogs(dialogs, character) {
+    splitDialogs(dialogs, character, centered) {
         let newDialogs = [];        // Nuevo array de dialogos tras dividir los dialogos demasiado largos
         let i = 0;                  // Indice del dialogo en el array de dialogos
         let dialogCopy = "";        // Copia del dialogo con todos sus atributos
@@ -512,6 +517,10 @@ export default class BaseScene extends Phaser.Scene {
             // Se establece el retrato del personaje en la caja de texto para poder
             // hacer los saltos de linea con el ancho de linea correspondiente
             this.dialogManager.textbox.setPortrait(this.portraits.get(character));
+
+            // Se establece si el texto esta centrado en la caja de texto para poder
+            // hacer los saltos de liena con el ancho de linea correspondiente
+            this.dialogManager.textbox.centerText(centered);
 
             // Cambia el texto a mostrar por el dialogo completo para obtener sus dimensiones 
             // (se copia la informacion del dialogo actual, pero se cambia el texto a mostrar)

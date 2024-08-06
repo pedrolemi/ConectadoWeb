@@ -30,19 +30,29 @@ export default class TextBox extends DialogObject {
         this.nameBox.visible = true;
 
         this.height = 135;      // Alto que va a ocupar el texto
-        // this.graphics = scene.add.graphics();
-        // this.graphics.fillStyle('black', 1);
-        // this.graphics.fillRect(230 , this.scene.CANVAS_HEIGHT / 1.28, (this.scene.CANVAS_WIDTH - this.padding) / 1.53, this.height);
+        // Depurar el tamano real de la caja de texto
+        /*
+        this.graphics = scene.add.graphics();
+        this.graphics.fillStyle('black', 1);
+        this.graphics.fillRect(230, this.scene.CANVAS_HEIGHT / 1.28, (this.scene.CANVAS_WIDTH - this.padding) / 1.53, this.height);
+        */
 
-        // Configuracion del texto de la caja
-        this.normalTextConfig = { ...scene.gameManager.textConfig };
-        this.normalTextConfig.fontSize = 25 + 'px';
-        this.normalTextConfig.fontStyle = 'bold';
-        this.normalTextConfig.strokeThickness = 5;
+        // Indica si el texto de la caja esta centrado o no
+        this.centered = false;
 
-        this.nameTextConfig = { ...scene.gameManager.textConfig };
-        this.nameTextConfig.fontStyle = 'bold';
-        this.nameTextConfig.strokeThickness = 5;
+        // Configuracion por defecto del texto de la caja
+        this.defaultNormalTextConfig = { ...scene.gameManager.textConfig };
+        this.defaultNormalTextConfig.fontStyle = 'bold';
+        this.defaultNormalTextConfig.strokeThickness = 5;
+        // Inicialmente la configuracion del texto de la caja es la de por defecto
+        this.normalTextConfig = { ...this.defaultNormalTextConfig };
+
+        // Configuracion por defecto del texto del nombre
+        this.defaultNameTextConfig = { ...scene.gameManager.textConfig };
+        this.defaultNameTextConfig.fontStyle = 'bold';
+        this.defaultNameTextConfig.strokeThickness = 5;
+        // Inicialmente la configuracion del texto del nombre la por defecto
+        this.nameTextConfig = { ...this.defaultNameTextConfig };
 
         // Animacion del texto
         this.textDelay = 30;                                                        // Tiempo que tarda en aparecer cada letra en milisegundos
@@ -61,8 +71,7 @@ export default class TextBox extends DialogObject {
         this.nameText.alpha = 0;
 
         // Retrato del personaje que habla
-        //this.emptyPortrait = new Phaser.GameObjects.Container(scene, 0, 0);
-        this.portrait = null; //this.emptyPortrait;
+        this.portrait = null;
         this.nonPortraitChar = false;
     }
 
@@ -107,7 +116,6 @@ export default class TextBox extends DialogObject {
         this.changeName(dialogInfo.name);
 
         this.nonPortraitChar = false;
-        //if (dialogInfo.character === "player") {
         if (!this.portrait) {
             this.nonPortraitChar = true;
         }
@@ -128,17 +136,28 @@ export default class TextBox extends DialogObject {
     * @param {String} text - texto a escribir
     */
     changeText(text) {
+        // Nota: no hay soporte para texto centrado con retrato
+        
+        // Arriba a la izquierda y con retrato
         let x = 230;
         let y = 660;
         let width = (this.scene.CANVAS_WIDTH - this.padding) / 1.53;
 
-        // Si el personaje que habla es el jugador, modifica la posicion
-        // y los margenes del texto porque no hace falta mostrar su retrato
-        //if (character === "player") {
-        if (!this.portrait) {
-            x = 110;
-            width = (this.scene.CANVAS_WIDTH - this.padding) / 1.30;
+        // Centrado y sin retrato
+        if (this.centered) {
+            x = this.box.x;
+            y = this.box.y - this.box.displayHeight / 2.25;
+            width = (this.scene.CANVAS_WIDTH - this.padding * 2) / 1.30;
         }
+        else {
+            // Arriba a la izquierda y sin retrato
+            // Se modifica la posicion y los margenes del texto porque no hace falta mostrar su retrato
+            if (!this.portrait) {
+                x = 110;
+                width = (this.scene.CANVAS_WIDTH - this.padding) / 1.30;
+            }
+        }
+
         this.normalTextConfig.wordWrap = {
             width: width,
             useAdvancedWrap: true
@@ -166,6 +185,7 @@ export default class TextBox extends DialogObject {
 
         // Cambia el texto del objeto
         this.nameText.setText(name);
+        this.nameText.setStyle(this.nameTextConfig);
     }
 
     /**
@@ -180,7 +200,6 @@ export default class TextBox extends DialogObject {
     * Cambia el retrato del personaje hablando
     * IMPORTANTE: LLAMARLO ANTES QUE setText PARA QUE EL TEXTO SE COLOQUE CORRECTAMENTE EN FUNCION
     * DE SI HAY RETRATO O NO
-    * en funcion si hay retrato o no
     * @param {Phaser.Image} portrait - retrato personaje que habla
     */
     setPortrait(portrait) {
@@ -189,7 +208,6 @@ export default class TextBox extends DialogObject {
         if (portrait) {
             this.portrait = portrait;
         }
-        //if (!this.portrait) this.portrait = this.emptyPortrait;
     }
 
     // Anima el texto para que vaya apareciendo caracter a caracter
@@ -282,6 +300,33 @@ export default class TextBox extends DialogObject {
                 }, delay);
 
             }
+        }
+    }
+
+    /**
+     * Se resetea la configuracion del texto de la caja a la por defecto
+     */
+    resetTextConfig() {
+        this.normalTextConfig = { ...this.defaultNormalTextConfig };
+        // Por si acaso
+        if (this.centered) {
+            this.normalTextConfig.align = 'center';
+        }
+        this.nameTextConfig = { ...this.defaultNameTextConfig };
+    }
+
+    /**
+     * Alinear el texto de la caja al centro o arriba a la izquierda
+     * @param {Boolean} centered - true si el texto esta centrado, false si esta arriba a la izquierda
+     */
+    centerText(centered) {
+        this.centered = centered;
+
+        this.normalTextConfig.align = 'left';
+        this.currText.setOrigin(0);
+        if (this.centered) {
+            this.normalTextConfig.align = 'center';
+            this.currText.setOrigin(0.5);
         }
     }
 }

@@ -190,7 +190,7 @@ export default class DialogManager {
         }
         return i;
     }
-    
+
     /**
      * Procesa el nodo de evento que se le pasa como parametro
      * @param {DialogNode} node - nodo a procesar 
@@ -214,9 +214,6 @@ export default class DialogManager {
                     blackboard = evt.blackboard;
                 }
                 if (evt.variable && evt.value !== undefined) {
-                    // console.log(evt.variable)
-                    // console.log(evt.value);
-                    // console.log(blackboard)
                     this.gameManager.setValue(evt.variable, evt.value, blackboard);
                 }
             }, delay);
@@ -254,6 +251,7 @@ export default class DialogManager {
                     // Funcion a ejecutar para mostrar la caja. Actualiza el retrato y el texto y activa la caja
                     let showBox = () => {
                         this.textbox.setPortrait(this.portraits.get(this.currNode.character));
+                        this.textbox.centerText(this.currNode.centered);
                         this.setText(this.currNode.dialogs[this.currNode.currDialog], true);
                         this.textbox.activate(true);
                     }
@@ -291,6 +289,8 @@ export default class DialogManager {
             }
         }
         else {
+            // Se resetea la configuracion del texto de la caja por si se habia cambiado a la de por defecto
+            this.textbox.resetTextConfig();
             this.textbox.activate(false)
             this.setTalking(false);
             this.bgBlock.disableInteractive();
@@ -356,7 +356,7 @@ export default class DialogManager {
     * @param {Function} onComplete - funcion a la que llamar cuando acabe la animacion
     * @param {Number} delay - tiempo en ms que tarda en llamarse a onComplete
     */
-    activateOptions(active, onComplete = { } , delay = 0, instant = false) {
+    activateOptions(active, onComplete = {}, delay = 0, instant = false) {
         // Dependiendo de si es instantaneo o no, se ocultan las opciones con animacion o sin ella. 
         // Oculta primero la caja de texto por si acaso y luego muestra las opciones
         this.textbox.activate(false, () => {

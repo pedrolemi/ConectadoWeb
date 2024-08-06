@@ -61,13 +61,6 @@ export default class NightmareMinigame extends NightmareBase {
     }
 
     /**
-     * Lee y conecta los nodos a partir del nombre dado usando el namespace y el archivo de la pesadilla correspondiente
-     */
-    readNodes(objectName) {
-        return super.readNodes(this.file, this.ns, objectName, true);
-    }
-
-    /**
      * Crea objetos centradas respecto a un offset a los lados
      * @param {Number} y - posicion y donde se crean los objetos 
      * @param {Number} nItems - numero de objetos que se crean

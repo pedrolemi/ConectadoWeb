@@ -25,6 +25,18 @@ export default class BootScene extends Phaser.Scene {
         let width = this.cameras.main.width;
         let height = this.cameras.main.height;
 
+        // Fondo escalado en cuanto al canvas
+        let bg = this.add.image(width / 2, height / 2, 'basePC');
+        let scale = width / bg.width;
+        bg.setScale(scale);
+
+        // Fondo
+        //this.add.rectangle(width / 2, 0, width, height / 1.2, 0x2B9E9E).setOrigin(0.5, 0);
+
+        // Pantalla del ordenador con el tam del canvas
+        let screen = this.add.image(width / 2, height / 2, 'PCscreen');
+        screen.setDisplaySize(width, height);
+
         let progressBox = this.add.graphics();
         let progressBar = this.add.graphics();
 
@@ -36,7 +48,7 @@ export default class BootScene extends Phaser.Scene {
         let fillCol = 0xFF004E46;
         let borderCol = 0xFF004E46;
         let borderThickness = 2;
-        let radius =  Math.min(BAR_W, BAR_H) * 0.25;
+        let radius = Math.min(BAR_W, BAR_H) * 0.25;
 
         progressBox.fillStyle(bgCol, 1).fillRoundedRect(width / 2 - BAR_W / 2, height / 2 - BAR_H / 2, BAR_W, BAR_H, radius)
             .lineStyle(borderThickness, borderCol, 1).strokeRoundedRect(width / 2 - BAR_W / 2, height / 2 - BAR_H / 2, BAR_W, BAR_H, radius)
@@ -91,11 +103,12 @@ export default class BootScene extends Phaser.Scene {
         });
         // Cuando carga un archivo, muestra el nombre del archivo debajo de la barra
         this.load.on('fileprogress', function (file) {
+            console.log(file.key);
             assetText.setText('Loading asset: ' + file.key);
         });
 
         // Cuando se termina de cargar todo, se borran los elementos de la barra
-        this.load.on('complete', function () {
+        this.load.once('complete', function () {
             progressBar.destroy();
             progressBox.destroy();
             loadingText.destroy();
@@ -104,12 +117,17 @@ export default class BootScene extends Phaser.Scene {
         });
     }
 
+    loadLoadingBarAssets() {
+        this.load.setPath('assets/UI/computer');
+
+        this.load.image('basePC', 'backgrounds/basePCsq.png');
+        this.load.image('PCscreen', 'backgrounds/screenWithoutBlack.png');
+    }
+
     loadComputersAssets() {
         this.load.setPath('assets/UI/computer');
 
         // Fondos del ordenador
-        this.load.image('basePC', 'backgrounds/basePCsq.png');
-        this.load.image('PCscreen', 'backgrounds/screenWithoutBlack.png');
         this.load.image('loginBg', 'backgrounds/loginBackground.png');
         this.load.image('computerMainView', 'backgrounds/mainViewBackground.png');
 
@@ -123,24 +141,6 @@ export default class BootScene extends Phaser.Scene {
         this.load.image('girlIcon', 'loginMenu/chicaSelect.png');
 
         // Elementos del menu del ordenador
-        /*
-        this.load.image('buttonBg', 'ButtonBg.png');
-        this.load.image('buttonAcceptBg', 'buttonAcceptBg.png');
-        this.load.image('postit', 'postit.png')
-        this.load.image('closerBrowser', 'closerBrowser.png');
-        this.load.image('socialNetLogo', 'SocialNetLogo.png');
-        this.load.image('buttonBg', 'ButtonBg.png');
-        this.load.image('friendsIcon', 'Friends.png');
-        this.load.image('dialogBubbleIcon', 'Home.png');
-        this.load.image('photosIcon', 'Photos.png');
-        this.load.image('pfpM', 'profilePhotoH.png');
-        this.load.image('pfpF', 'profilePhotoM.png');
-        this.load.image('newFriendBg', 'NewFriendBG.png');
-        this.load.image('oldFriendBg', 'OldFriendBG.png');
-        this.load.image('block', 'Block.png');
-        this.load.image('photosBg', 'PhotosBg.png');
-        this.load.image('addComment', 'Add_Comment.png');
-        */
         this.load.image('commentBubble', '9sliceComments.png');
         this.load.atlas('computerElements', 'computerElements.png', 'computerElements.json');
 
@@ -153,30 +153,8 @@ export default class BootScene extends Phaser.Scene {
 
         // Telefono
         this.load.image('phone', 'phone.png');
-        /*
-        this.load.image('phoneIcon', 'phoneIcon.png');
-        this.load.image('alarmBg', 'alarmBg.png');
-        this.load.image('mainScreenBg', 'mainScreenBg.png');
-        this.load.image('statusBg', 'statusBg.png');
-        this.load.image('messagesBg', 'messagesBg.png');
-        this.load.image('chatBg', 'chatBg.png');
-        this.load.image('settingsBg', 'settingsBg.png');
-        this.load.image('chatBgTop', 'chatBgTop.png');
-        */
 
         // Botones del telefono
-        /*
-        this.load.image('returnButton', 'triangle.png');
-        this.load.image('homeButton', 'circle.png');
-        this.load.image('uselessButton', 'square.png');
-
-        this.load.image('statusIcon', 'statusIcon.png');
-        this.load.image('chatIcon', 'chatIcon.png');
-        this.load.image('settingsIcon', 'settingsIcon.png');
-        this.load.image('chatButton', 'chatButton.png');
-        this.load.image('chatTextBox', 'chatTextBox.png');
-        */
-
         this.load.atlas('phoneElements', 'phoneElements.png', 'phoneElements.json');
 
         this.load.image('myBubble', '9slicePlayer.png');
@@ -187,12 +165,6 @@ export default class BootScene extends Phaser.Scene {
         this.load.setPath('assets/UI/flags');
 
         // Banderas idiomas
-        /*
-        this.load.image('frFlag', 'frFlag.png');
-        this.load.image('spFlag', 'spFlag.png');
-        this.load.image('ukFlag', 'ukFlag.png');
-        this.load.image('ptFlag', 'ptFlag.png');
-        */
         this.load.atlas('flags', 'flags.png', 'flags.json');
     }
 
@@ -200,18 +172,6 @@ export default class BootScene extends Phaser.Scene {
         this.load.setPath('assets/UI/avatars');
 
         // Avatares de los personajes
-        /*
-        this.load.image('AlexAvatar', 'AlexAvatar.png');
-        this.load.image('AlisonAvatar', 'AlisonAvatar.png');
-        this.load.image('AnaAvatar', 'AnaAvatar.png');
-        this.load.image('boyAvatar', 'BoyAvatar.png');
-        this.load.image('girlAvatar', 'GirlAvatar.png');
-        this.load.image('GuilleAvatar', 'GuilleAvatar.png');
-        this.load.image('JoseAvatar', 'JoseAvatar.png');
-        this.load.image('MariaAvatar', 'MariaAvatar.png');
-        this.load.image('parentsAvatar', 'ParentsAvatar.png');
-        this.load.image('teacherAvatar', 'TeacherAvatar.png');
-        */
         this.load.atlas('avatars', 'avatars.png', 'avatars.json');
     }
 
@@ -399,7 +359,7 @@ export default class BootScene extends Phaser.Scene {
         this.load.image('rewind', 'rewind.png');
     }
 
-    preload() {
+    loadRestAssets() {
         this.createLoadingBar();
 
         // Son tanto archivos de dialogos como namespaces del plugin i18next
@@ -413,8 +373,8 @@ export default class BootScene extends Phaser.Scene {
             'test/chat1.json',
             //'test/computerTest.json',
 
-            // Posts ordenador
-            'posts.json',
+            // Ordenador
+            'computer/posts.json',
 
             // Dialogos de todos los dias
             'everydayDialog.json',
@@ -486,9 +446,9 @@ export default class BootScene extends Phaser.Scene {
         // El nombre corresponde tal cual con el namespace (incluye \\ si es necesario)
         let onlyNamespaces = [
             // Menus
-            'titleMenu',
-            'loginMenu',
-            //'creditsScene',
+            'menus\\titleMenu',
+            'menus\\loginMenu',
+            'menus\\creditsScene',
 
             // Nombres
             'names',
@@ -497,7 +457,7 @@ export default class BootScene extends Phaser.Scene {
             'phoneInfo',
 
             // Ordenador
-            'computerInfo',
+            'computer\\computerInfo',
 
             // Escenas de transicion
             'transitionScenes',
@@ -516,12 +476,29 @@ export default class BootScene extends Phaser.Scene {
         this.load.image('defaultParticle', 'defaultParticle.png');
 
         this.loadPlugins(dialogsAndNamespaces, onlyNamespaces);
+
+        // Indica al LoadPlugin que hay que cargar los assets que se encuentran en la cola
+        // Despues del preload este metodo se llama automaticamente, pero si se quieren cargar assets en otra parte hay que llamarlo manualmente
+        this.load.start();
+
+        this.load.once('complete', () => {
+            this.events.emit('start');
+        });
+    }
+
+    preload() {
+        this.loadLoadingBarAssets();
+
+        // Nota: aunque este metodo se encuentra en el preload, verdaderamente se ejecuta en la etapa de create
+        this.load.once('complete', () => {
+            this.loadRestAssets();
+        });
     }
 
     create() {
-        let gameManager = GameManager.create(this);
-
-        gameManager.startLangMenu();
+        this.events.once('start', () => {
+            let gameManager = GameManager.create(this);
+            gameManager.startLangMenu();
+        })
     }
-
 }

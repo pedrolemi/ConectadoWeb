@@ -1,0 +1,23 @@
+{
+    "titleText": "Credits",
+    "projectManagerText": "Project manager",
+    "design-devText": "Design and development",
+    "artManagerText": "Art manager",
+    "art-animationText": "Art and animation",
+    "webVersionText": "Web version",
+    "originalConceptText": "Original concept",
+    "acknowledgmentsText": "Acknowledgments",
+    "libraryText": "for his magnificient dialog library",
+    "hackatonText": "for that hackaton that started everything",
+    "betaTestersText": "Beta testers",
+    "localizationText": "Localization team",
+    "frenchText": "French texts",
+    "collaboratorsText": "Collaborators",
+    "schoolsText": "Educational institutions",
+    "schoolCollabText": "Have collaborated in game's validation:",
+    "specialThanksText": "Special thanks",
+    "sponsorsText": "Sponsors",
+    "endThanksText": "THANK YOU!",
+    "returnButton": "Return",
+    "exitButton": "Exit"
+}

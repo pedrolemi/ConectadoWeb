@@ -19,7 +19,7 @@ export default class LoginMenu extends Phaser.Scene {
 
         this.gameManager = GameManager.getInstance();
         this.i18next = this.gameManager.i18next;
-        this.namespace = 'loginMenu';
+        this.namespace = 'menus\\loginMenu';
         this.maxNameCharacters = 10;
         this.maxUserCharacters = 16;
 

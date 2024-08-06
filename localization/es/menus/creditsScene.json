@@ -1,0 +1,23 @@
+{
+    "titleText": "Créditos",
+    "projectManagerText": "Dirección de proyecto",
+    "design-devText": "Diseño y desarrollo",
+    "artManagerText": "Dirección de arte",
+    "art-animationText": "Arte y animación",
+    "webVersionText": "Versión web",
+    "originalConceptText": "Idea original",
+    "acknowledgmentsText": "Agradecimientos",
+    "libraryText": "por su magnífica librería de diálogos",
+    "hackatonText": "por aquel hackaton que empezó todo",
+    "betaTestersText": "Beta testers",
+    "localizationText": "Equipo de localización",
+    "frenchText": "Textos en francés",
+    "collaboratorsText": "Colaboradores",
+    "schoolsText": "Centros educativos",
+    "schoolCollabText": "Han colaborado en la validación del juego:",
+    "specialThanksText": "Gracias también a:",
+    "sponsorsText": "Patrocinadores",
+    "endThanksText": "¡GRACIAS!",
+    "returnButton": "Volver",
+    "exitButton": "Salir"
+}

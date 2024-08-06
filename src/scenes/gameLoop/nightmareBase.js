@@ -32,4 +32,11 @@ export default class NightmareBase extends BaseScene {
         // Namespace con los textos localizados (a partir del dia)
         this.ns = 'day' + this.day + '\\nightmareDay' + this.day;
     }
+
+    /**
+    * Lee y conecta los nodos a partir del nombre dado usando el namespace y el archivo de la pesadilla correspondiente
+    */
+    readNodes(objectName) {
+        return super.readNodes(this.file, this.ns, objectName, true);
+    }
 }

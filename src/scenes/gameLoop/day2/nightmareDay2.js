@@ -27,7 +27,7 @@ export default class NightmareDay2 extends NightmareMinigame {
         this.gumSpeed = {
             value: 100.0,       // valor que adquiere
             increase: 1.1,      // cuanto aumenta (aumenta cada vez que spawnea un chicle)
-            max: 410.0,         // maximo que puede aumentar
+            max: 500.0,         // maximo que puede aumentar
             // Actualizar valores rapidamente
             update: () => {
                 this.gumSpeed.value = this.gumSpeed.value * this.gumSpeed.increase;
@@ -40,8 +40,8 @@ export default class NightmareDay2 extends NightmareMinigame {
         this.elapsedTime = 0;
         this.gumSpawnTime = {
             value: 1500.0,      // cada cuanto spawnea
-            decrement: 0.9,     // cuanto decrementa este tiempo (decrementa cada vez que spawnea un chicle)
-            min: 450,           // minimo que puede disminuir
+            decrement: 0.87,     // cuanto decrementa este tiempo (decrementa cada vez que spawnea un chicle)
+            min: 200,           // minimo que puede disminuir
             // Actualizar valores rapidamente
             update: () => {
                 this.gumSpawnTime.value = this.gumSpawnTime.value * this.gumSpawnTime.decrement;
@@ -167,7 +167,7 @@ export default class NightmareDay2 extends NightmareMinigame {
         this.gums.add(gum);
 
         gum.setInteractive({ useHandCursor: true });
-        gum.on('pointerdown', () => {
+        gum.on('pointerup', () => {
             // Si se clica, se elmina del grupo y se destruye
             this.gums.remove(gum, true, true);
         })

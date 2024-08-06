@@ -17,7 +17,7 @@ export default class TitleMenu extends Phaser.Scene {
 
         let gameManager = GameManager.getInstance();
         let i18next = gameManager.i18next;
-        let namespace = 'titleMenu';
+        let namespace = 'menus\\titleMenu';
 
         // Fondo escalado en cuanto al canvas
         let bg = this.add.image(CANVAS_WIDTH / 2, CANVAS_HEIGHT / 2, 'basePC');

@@ -31,6 +31,7 @@ export class TextNode extends DialogNode {
         this.currDialog = null;         // indice del dialogo que se esta mostrando
         this.character = null;          // id del personaje que habla
         this.name = null;               // nombre del personaje que habla (si se trata del player, es el nombre elegido en la pantalla de login)
+        this.centered = false;          // indica si el texto esta centrado o no (en caso de que no se especifique aparece alineado arriba a la izquierda)
     }
 }
 

@@ -1,0 +1,315 @@
+{
+    "enter": {
+        "root": {
+            "type": "text",
+            "character": "player"
+        }
+    },
+
+    "door_enter": {
+        "root": {
+            "type": "text",
+            "character": "player",
+            "next": "lightsOff"
+        },
+        "lightsOff": {
+            "type": "event",
+            "events": [
+                { 
+                    "lightsOff": { }
+                }
+            ],
+            "next": "getOut"
+        },
+        "getOut": {
+            "type": "text",
+            "character": "player",
+            "next": "startTimer"
+        },
+        "startTimer": {
+            "type": "event",
+            "events": [
+                { 
+                    "startTimer": { }
+                }
+            ]
+        }
+    },
+
+    "door_locked": {
+        "root": {
+            "type": "text",
+            "character": "player"
+        }
+    },
+
+    "sink": {
+       "root": {
+            "type": "text",
+            "character": "player"
+        } 
+    },
+    
+    "floor": {
+        "root": {
+            "type": "text",
+            "character": "player"
+        }
+    },
+
+    "lightsOn": {
+        "root": {
+            "type": "text",
+            "character": "player",
+            "next": "enterTeacher"
+        },
+        "enterTeacher": {
+            "type": "event",
+            "events": [
+                { 
+                    "enterTeacher": { }
+                }
+            ],
+            "next": "teacher"
+        },
+        "teacher": {
+            "type": "text",
+            "character": "teacher",
+            "next": "checkEnding"
+        },
+        "checkEnding": {
+            "type": "condition",
+            "conditions": [
+                {
+                    "next": "meetingFS",
+                    "meeting": {
+                        "value": true,
+                        "operator": "equal",
+                        "global": true,
+                        "default": false
+                    },
+                    "parentsFS": {
+                        "value": 80,
+                        "operator": "greater",
+                        "global": true,
+                        "default": 50
+                    }
+                },
+                {
+                    "next": "noMeetingFS",
+                    "meeting": {
+                        "value": false,
+                        "operator": "equal",
+                        "global": true,
+                        "default": false
+                    },
+                    "parentsFS": {
+                        "value": 80,
+                        "operator": "greater",
+                        "global": true,
+                        "default": 50
+                    }
+                },
+                {
+                    "next": "meetingNoFS",
+                    "meeting": {
+                        "value": true,
+                        "operator": "equal",
+                        "global": true,
+                        "default": false
+                    },
+                    "parentsFS": {
+                        "value": 79,
+                        "operator": "lower",
+                        "global": true,
+                        "default": 50
+                    }
+                },
+                {
+                    "next": "noMeetingNoFS",
+                    "meeting": {
+                        "value": false,
+                        "operator": "equal",
+                        "global": true,
+                        "default": false
+                    },
+                    "parentsFS": {
+                        "value": 79,
+                        "operator": "lower",
+                        "global": true,
+                        "default": 50
+                    }
+                }
+            ]
+        },
+
+        "meetingFS": {
+            "type": "text",
+            "character": "teacher",
+            "next": "setGoodEnding"
+        },
+
+        "noMeetingFS": {
+            "type": "choice",
+            "choices":[
+                { "next": "snitchNoMeetingFS" },
+                { "next": "noSnitchNoMeetingFS" }
+            ]
+        },
+        "snitchNoMeetingFS": {
+            "type": "text",
+            "character": "teacher",
+            "next": "setGoodEnding"
+        },
+        "noSnitchNoMeetingFS": {
+            "type": "text",
+            "character": "teacher",
+            "next": "setBadEnding"
+        },
+        
+
+        "meetingNoFS": {
+            "type": "choice",
+            "choices":[
+                { "next": "snitchMeetingNoFS" },
+                { "next": "noSnitchMeetingNoFS" }
+            ]
+        },
+        "snitchMeetingNoFS": {
+            "type": "text",
+            "character": "teacher",
+            "next": "setGoodEnding"
+        },
+        "noSnitchMeetingNoFS": {
+            "type": "condition",
+            "conditions": [
+                {
+                    "next": "noSnitchMeetingNoFSMaria",
+                    "mariaFS": {
+                        "value": 60,
+                        "operator": "greater",
+                        "global": true,
+                        "default": 50
+                    }
+                },
+                {
+                    "next": "noSnitchMeetingNoFSNoMaria",
+                    "mariaFS": {
+                        "value": 59,
+                        "operator": "lower",
+                        "global": true,
+                        "default": 50
+                    }
+                }
+            ]
+        },
+        "noSnitchMeetingNoFSMaria": {
+            "type": "text",
+            "character": "teacher",
+            "next": "setGoodEnding"
+        },
+        "noSnitchMeetingNoFSNoMaria": {
+            "type": "text",
+            "character": "teacher",
+            "next": "setNormalEnding"
+        },
+
+        "noMeetingNoFS": {
+            "type": "choice",
+            "choices":[
+                { "next": "snitchNoMeetingNoFS" },
+                { "next": "noSnitchNoMeetingNoFS" }
+            ]
+        },
+
+        "snitchNoMeetingNoFS": {
+            "type": "condition",
+            "conditions": [
+                {
+                    "next": "snitchNoMeetingNoFSMaria",
+                    "mariaFS": {
+                        "value": 60,
+                        "operator": "greater",
+                        "global": true,
+                        "default": 50
+                    }
+                },
+                {
+                    "next": "snitchNoMeetingNoFSNoMaria",
+                    "mariaFS": {
+                        "value": 59,
+                        "operator": "lower",
+                        "global": true,
+                        "default": 50
+                    }
+                }
+            ]
+        },
+        "snitchNoMeetingNoFSMaria": {
+            "type": "text",
+            "character": "teacher",
+            "next": "setGoodEnding"
+        },
+        "snitchNoMeetingNoFSNoMaria": {
+            "type": "text",
+            "character": "teacher",
+            "next": "setNormalEnding"
+        },
+        "noSnitchNoMeetingNoFS": {
+            "type": "text",
+            "character": "teacher",
+            "next": "setBadEnding"
+        },
+
+
+        "setBadEnding": {
+            "type": "event",
+            "events": [
+                {
+                    "setEnding": { 
+                        "variable": "ending", 
+                        "value": "bad", 
+                        "global": true
+                    }
+                }
+            ],
+            "next": "goHome"
+        },
+        "setNormalEnding": {
+            "type": "event",
+            "events": [
+                {
+                    "setEnding": { 
+                        "variable": "ending", 
+                        "value": "normal", 
+                        "global": true
+                    }
+                }
+            ],
+            "next": "goHome"
+        },
+        "setGoodEnding": {
+            "type": "event",
+            "events": [
+                {
+                    "setEnding": { 
+                        "variable": "ending", 
+                        "value": "good", 
+                        "global": true
+                    }
+                }
+            ],
+            "next": "goHome"
+        },
+
+        "goHome": {
+            "type": "event",
+            "events": [
+                {
+                    "goHome": {  }
+                }
+            ]
+        }
+    }
+
+}

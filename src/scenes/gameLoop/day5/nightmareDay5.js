@@ -60,6 +60,25 @@ export default class NightmareDay5 extends NightmareBase {
             tint: 0x2B47FF
         });
         portal.add(centerEmitter);
+
+
+        // TODO
+        // Se hace un fade in de la camara y cuando termina, se pone inicia el dialogo
+        this.cameras.main.fadeIn(500, 0, 0, 0);
+        this.cameras.main.once(Phaser.Cameras.Scene2D.Events.FADE_IN_COMPLETE, (cam, effect) => {
+            setTimeout(() => {
+                // this.dialogManager.setNode(nodeName);
+            }, 500);
+        });
+        this.dispatcher.add("eventName", this, () => {
+            // Se hace un fade out de la camara y cuando termina, se cambia a la escena de fin
+            this.cameras.main.fadeOut(500, 0, 0, 0);
+            this.cameras.main.once(Phaser.Cameras.Scene2D.Events.FADE_OUT_COMPLETE, (cam, effect) => {
+                setTimeout(() => {
+                    // this.gameManager.changeScene("sceneName");
+                }, 500);
+            });
+        });
     }
 
     update(t, dt) {

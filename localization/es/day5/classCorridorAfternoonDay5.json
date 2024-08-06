@@ -15,9 +15,27 @@
         ]
     },
     
+    
     "class": {
         "root": {
             "text": "No tengo nada que hacer dentro de clase."
+        }
+    },
+
+    "alex_stairs": {
+        "root": [
+            {
+                "text": "¿De verdad? No me digas que te ibas a ir sin pasar por el baño."
+            },
+            {
+                "text": "Piensa que es para arreglar todo, vamos... voy contigo."
+            }
+        ]
+    },
+
+    "alex_corridor": {
+        "root": {
+            "text": "Venga, pasa al baño."
         }
     }
 }

@@ -109,7 +109,7 @@ export default class ClassBackMorningDay1 extends ClassBackBase {
 
 
         // Se desactiva el icono del telefono para que no se pueda sacar durante esta escena
-        this.phoneManager.icon.visible = false;
+        this.phoneManager.activate(false);
 
         // Al iniciar la escena, se pone el dialogo directamente con un poco de retardo
         let nodes = this.cache.json.get('classBackMorningDay1');
@@ -202,7 +202,7 @@ export default class ClassBackMorningDay1 extends ClassBackBase {
             this.gameManager.changeScene(sceneName, params);
 
             // Se reactiva el icono del telefono
-            this.phoneManager.icon.visible = true;
+            this.phoneManager.activate(true);
         });
     }
 }

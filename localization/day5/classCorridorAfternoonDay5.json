@@ -11,5 +11,28 @@
             "type": "text",
             "character": "player"
         }
+    },
+
+    "alex_stairs": {
+        "root": {
+            "type": "text",
+            "character": "Alex",
+            "next": "returnToCorridor"
+        },
+        "returnToCorridor": {
+            "type": "event",
+            "events": [
+                { 
+                    "returnToCorridor": { }
+                }
+            ]
+        }
+    },
+
+    "alex_corridor": {
+        "root": {
+            "type": "text",
+            "character": "Alex"
+        }
     }
 }

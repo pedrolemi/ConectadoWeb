@@ -5,27 +5,27 @@
             {
                 "next": "badEnding",
                 "ending": {
-                    "value": 1,
+                    "value": "bad",
                     "operator": "equal",
-                    "global": "true",
+                    "global": true,
                     "default": 0
                 }
             },
             {
                 "next": "normalEnding",
                 "ending": {
-                    "value": 2,
+                    "value": "normal",
                     "operator": "equal",
-                    "global": "true",
+                    "global": true,
                     "default": 0
                 }
             },
             {
                 "next": "goodEnding",
                 "ending": {
-                    "value": 3,
+                    "value": "good",
                     "operator": "equal",
-                    "global": "true",
+                    "global": true,
                     "default": 0
                 }
             }

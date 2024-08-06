@@ -21,14 +21,14 @@ export default class CorridorAfternoonDay3 extends CorridorBase {
         }
 
         // Cambia la hora del movil
-        this.phoneManager.setDayInfo("day3.corridor");
+        this.phoneManager.setDayInfo("afternoon.corridor");
         
         let nodes = this.cache.json.get('classCorridorAfternoonDay3');
         this.stairsNode = super.readNodes(nodes, "day3\\classCorridorAfternoonDay3", "player_stairs", true);
         this.classNode = super.readNodes(nodes, "day3\\classCorridorAfternoonDay3", "class", true);
 
 
-        this.dispatcher.add("setTalked", this, (obj) => {
+        this.dispatcher.addOnce("setTalked", this, (obj) => {
             // console.log(obj);
             this.stairsNode = null;
         });

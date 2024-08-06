@@ -1,0 +1,284 @@
+{
+    "enter": {
+        "root": {
+            "text": "",
+            "text_male": "mmm, ¿pasa algo Alex? ¿por qué no entras?",
+            "text_female": "¿Ana, estás aquí?"
+        }
+    },
+
+    "door_enter": {
+        "root": [
+            {
+                "text": "¿Qué está pasando? La puerta no se abre."
+            },
+            {
+                "text": "¿Me han encerrado en el baño? ANA!!! ALEX!! ALGUIEN!!"
+            },
+            {
+                "text": "¿Qué hago ahora? Tengo que conseguir salir de aquí"
+            }
+        ],
+        "getOut": [
+            {
+                "text": "La luz. ¿En serio?"
+            },
+            {
+                "text": "Tengo que salir de aquí"
+            }
+        ]
+    },
+
+    "door_locked": {
+        "root":  [
+            {
+                "text": "Este es el picaporte de la puerta, pero no se abre."
+            },
+            {
+                "text": "¿Me han encerrado en el baño? ANA!!! ALEX!! ALGUIEN!!"
+            }
+        ]
+    },
+
+    "sink": {
+       "root": {
+            "text": "Agh!! Me acabo de dar con los lavabos. MIERDAS!!"
+        } 
+    },
+    
+    "floor": {
+        "root": [
+            {
+                "text": "Está mojado... pero esto es el suelo"
+            },
+            {
+                "text": "PUAJ!! por favor, que no sea pis"
+            }
+        ]
+    },
+
+    "lightsOn": {
+        "root": {
+            "text": "La luz ha vuelto!! y se oye algo en el pasillo, debería poder salir ya."
+        },
+        "teacher": {
+            "text": "",
+            "text_male": "¿Qué hacías aquí encerrado?",
+            "text_female": "¿Qué hacías aquí encerrada?"
+        },
+
+        "meetingFS": [
+            {
+                "text": "Hoy he tenido reunión con tus padres y me han contado todo lo que les has contado a ellos."
+            },
+            {
+                "text": "Podrías habermelo dicho a mi directamente."
+            },
+            {
+                "text": "",
+                "text_male": "Supongo que el que estuvieras encerrado dentro del baño ha sido cosa de Álex.",
+                "text_female": "Supongo que el que estuvieras encerrada dentro del baño ha sido cosa de Álex."
+            },
+            {
+                "text": "Por ahora se va a expulsar a Álex 3 días, si sigue dándote problemas, cuándo vuelva, debes decirmelo."
+            },
+            {
+                "text": "Si sigue igual podríamos expulsarle del colegio e incluso llamar a la policía y tomar represalias legales."
+            },
+            {
+                "text": "Vete a casa y descansa."
+            }
+        ],
+
+        "noMeetingFS": [
+            {
+                "text": "(Chivarse de todo lo que te ha hecho Álex)"
+            },
+            {
+                "text": "No sé qué ha pasado."
+            }
+        ],
+        "snitchNoMeetingFS": [
+            {
+                "text": "¿Cómo no me has contado todo esto antes?."
+            },
+            {
+                "text": "Voy a llamar a tus padres para hablar con ellos."
+            },
+            {
+                "text": "Y veremos que podemos hacer con Álex."
+            },
+            {
+                "text": "Intentaré que le expulsen 3 días."
+            },
+            {
+                "text": "Y si pasa algo más no dudes en hablar conmigo o con la orientadora."
+            },
+            {
+                "text": "Vete a casa y descansa."
+            }
+        ],
+        "noSnitchNoMeetingFS": [
+            {
+                "text": "",
+                "text_male": "¿Estás seguro que no pasa nada?",
+                "text_female": "¿Estás segura que no pasa nada?"
+            },
+            {
+                "text": "Bueno, vete a casa. Pero recuerda una cosa..."
+            },
+            {
+                "text": "Si alguien se mete contigo habla conmigo o con la orientadora."
+            },
+            {
+                "text": "Busca ayuda, las cosas no van a mejorar por sí solas, sólo pueden ir a peor."
+            }
+        ],
+        
+
+        "meetingNoFS": [
+            {
+                "text": "(Chivarse de todo lo que te ha hecho Álex)"
+            },
+            {
+                "text": "No sé qué ha pasado."
+            }
+        ],
+        "snitchMeetingNoFS": [
+            {
+                "text": "¿Cómo no me lo contaste antes?."
+            },
+            {
+                "text": "Además hoy he tenido reunión con tus padres y también hemos hablado de esto."
+            },
+            {
+                "text": "Con todo lo que me has dicho... hablaré con la directora para expulsar a Alex 3 días."
+            },
+            {
+                "text": "Si a la vuelta sigue acosandote ya sea en persona o en las redes dimelo."
+            },
+            {
+                "text": "Si sigue igual podríamos expulsarle del colegio e incluso llamar a la policía y tomar represalias legales."
+            },
+            {
+                "text": "Vete a casa y descansa."
+            }
+        ],
+        "noSnitchMeetingNoFSMaria": [
+            {
+                "text": "",
+                "text_male": "¿Estás seguro?",
+                "text_female": "¿Estás segura?"
+            },
+            {
+                "text": "He tenido reunión con tus padres y estás teniendo problemas con Álex."
+            },
+            {
+                "text": "Además María vino a hablar conmigo y la orientadora, por lo que nos dijo, Álex se está metiendo contigo."
+            },
+            {
+                "text": "",
+                "text_male": "No tienes nada que encubrir y no eres un chivato por pedir ayuda. El comportamiento de Álex merece un castigo.",
+                "text_female": "No tienes nada que encubrir y no eres una chivata por pedir ayuda. El comportamiento de Álex merece un castigo."
+            },
+            {
+                "text": "Hemos decidido expulsar a Alex 3 días."
+            },
+            {
+                "text": "Si sigue igual podríamos expulsarle del colegio e incluso llamar a la policía y tomar represalias legales."
+            },
+            {
+                "text": "Vete a casa y descansa."
+            }
+        ],
+        "noSnitchMeetingNoFSNoMaria": [
+            {
+                "text": "Hoy he tenido reunión con tus padres, están preocupados."
+            },
+            {
+                "text": "Si estás teniendo problemas con alguno de tus compañeros deberías hablar conmigo o con la orientadora."
+            },
+            {
+                "text": "Si evitas que te ayudemos las cosas pueden ir a peor."
+            },
+            {
+                "text": "Y en cualquier caso no te mereces que se burlen de tí y ridiculicen."
+            },
+            {
+                "text": "Si es lo que está pasando pidenos ayuda o las cosas seguirán igual."
+            }
+        ],
+
+        "noMeetingNoFS": [
+            {
+                "text": "(Chivarse de todo lo que te ha hecho Álex)"
+            },
+            {
+                "text": "No sé qué ha pasado."
+            }
+        ],
+        "snitchNoMeetingNoFSMaria": [
+            {
+                "text": "¿Cómo no me has dicho nada antes?."
+            },
+            {
+                "text": "Además María vino a hablar conmigo y la orientadora, también nos ha comentado lo que tu ahora."
+            },
+            {
+                "text": "La chica se preocupa por tí, todos necesitamos amigos así."
+            },
+            {
+                "text": "El comportamiento de Álex merece un castigo y es importante que me hayas contado todo."
+            },
+            {
+                "text": "Todo esto no es culpa tuya ni te lo mereces."
+            },
+            {
+                "text": "Hemos decidido expulsar a Alex 3 días."
+            },
+            {
+                "text": "Si sigue igual podríamos expulsarle del colegio e incluso llamar a la policía y tomar represalias legales."
+            },
+            {
+                "text": "Vete a casa y descansa."
+            }
+        ],
+        "snitchNoMeetingNoFSNoMaria": [
+            {
+                "text": "Hablaré con tus padres del tema."
+            },
+            {
+                "text": "Si tienes más problemas con Álex ven a hablar conmigo, mañana le llamaré la atención."
+            },
+            {
+                "text": "Es importante que si tienes problemas los cuentes, el tiempo por sí solo no va a hacer que vaya a mejor."
+            },
+            {
+                "text": "Y en cualquier caso no te mereces que se burlen de tí y ridiculicen."
+            },
+            {
+                "text": "Si es lo que está pasando pide ayuda o las cosas seguirán igual, incluso pueden ir a peor."
+            }
+        ],
+        "noSnitchNoMeetingNoFS": [
+            {
+                "text": "",
+                "text_male": "¿Estás seguro de que no está pasando nada?",
+                "text_female": "¿Estás segura de que no está pasando nada?"
+            },
+            {
+                "text": "Pués venga, vete a casa."
+            },
+            {
+                "text": "Pero acuerdate de esto, si estás teniendo problemas con un compañero y no buscas ayuda lo más seguro es que todo empeore."
+            },
+            {
+                "text": "Y en cualquier caso no te mereces que se burlen de tí y ridiculicen."
+            },
+            {
+                "text": "Si es lo que está pasando pidenos ayuda o las cosas seguirán igual."
+            }
+        ]
+    }
+    
+}

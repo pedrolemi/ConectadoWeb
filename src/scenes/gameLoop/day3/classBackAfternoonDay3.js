@@ -11,7 +11,7 @@ export default class ClassBackAfternoonDay3 extends ClassBackBase {
         this.corridor = "CorridorAfternoonDay3";
 
         // Cambia la hora del movil
-        this.phoneManager.setDayInfo("day3.endClass");
+        this.phoneManager.setDayInfo("afternoon.endClass");
 
         let nodes = this.cache.json.get('classCorridorAfternoonDay3');
         let node = super.readNodes(nodes, "day3\\classCorridorAfternoonDay3", "player_stairs", true);

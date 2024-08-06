@@ -11,7 +11,7 @@ export default class PlaygroundAfternoonDay3 extends PlaygroundBase {
         this.home = "LivingroomAfternoonDay3";
 
         // Cambia la hora del movil
-        this.phoneManager.setDayInfo("day3.corridor");
+        this.phoneManager.setDayInfo("afternoon.corridor");
         
         let nodes = this.cache.json.get('everydayDialog');
         this.doorNode = super.readNodes(nodes, "everydayDialog","playground.doorAfternoon", true);

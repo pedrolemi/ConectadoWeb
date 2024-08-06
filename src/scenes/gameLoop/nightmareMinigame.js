@@ -26,7 +26,7 @@ export default class NightmareMinigame extends NightmareBase {
         // Se crea la sombra, su retrato y los nodos con sus dialogos
         this.shadow = this.createShadow();
 
-        // Se hace un fade in de la camara y cuando termina, se pone inicia el dialogo
+        // Se hace un fade in de la camara y cuando termina, se inicia el dialogo
         this.cameras.main.fadeIn(500, 0, 0, 0);
         this.cameras.main.once(Phaser.Cameras.Scene2D.Events.FADE_IN_COMPLETE, (cam, effect) => {
             setTimeout(() => {

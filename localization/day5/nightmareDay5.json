@@ -1,6 +1,6 @@
 {
     "root": {
-        "type": "choice",
+        "type": "condition",
         "conditions": [
             {
                 "next": "badEnding",
@@ -49,12 +49,8 @@
     "playerQuestion": {
         "type": "choice",
         "choices": [
-            {
-                "next": "curiousAnswer"
-            },
-            {
-                "next": "unpoliteAnswer"
-            }
+            { "next": "curiousAnswer" },
+            { "next": "unpoliteAnswer" }
         ]
     },
     "curiousAnswer": {

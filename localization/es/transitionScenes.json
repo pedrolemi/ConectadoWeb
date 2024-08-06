@@ -21,7 +21,7 @@
     },
     "day5": {
         "startClass": "Otro día más dónde todos cuchichean a tus espaldas, es hora de irse a casa.",
-        "endDay": "Vuelves a casa y hoy te duermes pronto. Como todos los días, es la hora de tu sueño..."
-
+        "endDay": "Vuelves a casa y hoy te duermes pronto. Como todos los días, es la hora de tu sueño...",
+        "end": "FIN"
     }
 }

@@ -67,15 +67,39 @@ export default class NightmareDay5 extends NightmareBase {
         this.cameras.main.fadeIn(500, 0, 0, 0);
         this.cameras.main.once(Phaser.Cameras.Scene2D.Events.FADE_IN_COMPLETE, (cam, effect) => {
             setTimeout(() => {
-                // this.dialogManager.setNode(nodeName);
+                let nodes = this.cache.json.get('nightmareDay5');
+                let node = super.readNodes(nodes, "day5\\nightmareDay5", "", true);
+                this.dialogManager.setNode(node);
             }, 500);
         });
-        this.dispatcher.add("eventName", this, () => {
+        this.dispatcher.add("endGame", this, () => {
             // Se hace un fade out de la camara y cuando termina, se cambia a la escena de fin
             this.cameras.main.fadeOut(500, 0, 0, 0);
             this.cameras.main.once(Phaser.Cameras.Scene2D.Events.FADE_OUT_COMPLETE, (cam, effect) => {
                 setTimeout(() => {
-                    // this.gameManager.changeScene("sceneName");
+                    let sceneName = 'TextOnlyScene';
+
+                    // Se obtiene el texto de la escena de transicion del archivo de traducciones 
+                    let text = this.i18next.t("day5.end", { ns: "transitionScenes", returnObjects: true });
+                    
+                    let textConfig = { ...this.gameManager.textConfig };
+                    textConfig.fontFamily = 'kimberley';
+                    textConfig.fontSize = '200px';
+                    textConfig.align = 'center';
+
+                    let params = {
+                        text: text,
+                        textConfig: textConfig,
+
+                        onComplete: () => {
+                            this.gameManager.changeScene("CreditsScene");
+                        },
+                        onCompleteDelay: 500
+                    };
+
+                    // Se cambia a la escena de transicion
+                    this.gameManager.changeScene(sceneName, params);
+
                 }, 500);
             });
         });

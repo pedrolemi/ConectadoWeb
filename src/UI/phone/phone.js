@@ -209,4 +209,13 @@ export default class Phone extends Phaser.GameObjects.Container {
             this.chats.get(chat).processNode();
         }
     }
+
+    /**
+     * Actualiza la barra de amistad del personaje indicado en la pantalla de relaciones
+     * @param {String} character - id del personaje cuya amistad modificar
+     * @param {Number} newValue - nuevo valor de la barra de amistad 
+     */
+    updateRelationShip(character, newValue) {
+        this.statusScreen.updateRelationShip(character, newValue);
+    }
 }

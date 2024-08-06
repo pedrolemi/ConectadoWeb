@@ -338,7 +338,6 @@ export default class BaseScene extends Phaser.Scene {
 
             // Se obtienen las opciones del archivo de textos traducidos
             let texts = this.i18next.t(translationId, { ns: namespace, name: playerName, context: context, returnObjects: getObjs })
-
             for (let i = 0; i < fileObj[id].choices.length; i++) {
                 let repeat = false;
                 if (fileObj[id].choices[i].repeat === undefined || fileObj[id].choices[i].repeat) {

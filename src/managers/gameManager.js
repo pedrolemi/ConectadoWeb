@@ -279,7 +279,7 @@ export default class GameManager {
     }
 
     startLoginMenu() {
-        let sceneName = 'UserInfoMenu';
+        let sceneName = 'LoginMenu';
         this.changeScene(sceneName);
     }
 
@@ -312,11 +312,9 @@ export default class GameManager {
         this.computerScene = this.currentScene.scene.get(computerSceneName);
         this.computerScene.scene.sleep();
 
-        this.day = 5;
-        let sceneName = 'CorridorAfternoonDay5';
 
         // Pasa a la escena inicial con los parametros text, onComplete y onCompleteDelay
-        // let sceneName = 'TextOnlyScene';
+        let sceneName = 'TextOnlyScene';
         let params = {
             // El texto de se coge del a archivo de traducciones
             text: this.i18next.t("day1.start", { ns: "transitionScenes", returnObjects: true }),
@@ -464,5 +462,8 @@ export default class GameManager {
         let val = this.getValue(varName)
         val += amount;
         this.setValue(varName, val);
+
+        // Actualiza el valor tambien en la pantalla de relaciones del movil
+        this.UIManager.phoneManager.phone.updateRelationShip(character, val);
     }
 }

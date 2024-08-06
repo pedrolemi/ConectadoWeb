@@ -36,13 +36,17 @@ export default class BathroomAfternoonDay5 extends BathroomBase {
         let doorNode = super.readNodes(nodes, "day5\\bathroomAfternoonDay5", "door_enter", true);
         let enterNode = super.readNodes(nodes, "day5\\bathroomAfternoonDay5", "enter", true);
 
+        let BLACKOUT_TIMER = 15 * 1000;
+
+        let black = this.add.rectangle(0, 0, this.CANVAS_WIDTH, this.CANVAS_HEIGHT, 0x000, 1).setOrigin(0, 0).setScrollFactor(0).setDepth(this.stall3.depth + 1);
+        black.visible = false;
+
+        
         // Se muestra el dialogo de nada mas entrar directamente
         setTimeout(() => {
             this.dialogManager.setNode(enterNode);
         }, 100);
 
-        let black = this.add.rectangle(0, 0, this.CANVAS_WIDTH, this.CANVAS_HEIGHT, 0x000, 1).setOrigin(0, 0).setScrollFactor(0).setDepth(this.stall3.depth + 1);
-        black.visible = false;
 
         this.dispatcher.addOnce("lightsOff", this, (obj) => {
             black.visible = true;
@@ -100,16 +104,12 @@ export default class BathroomAfternoonDay5 extends BathroomBase {
             let sinkNode = super.readNodes(nodes, "day5\\bathroomAfternoonDay5", "sink", true);
             let floorNode = super.readNodes(nodes, "day5\\bathroomAfternoonDay5", "floor", true);
 
-            let timer = 3 * 1000;
             // Anade un temporizador durante el que el jugador puede interactuar con los elementos del fondo.
             // Cuando acabe el temporizador, volveran las luces, aparecera el profesor y comenzara su dialogo 
             setTimeout(() => {
                 black.visible = false;
                 this.dialogManager.textbox.activate(false, () => {
                     this.dialogManager.setNode(null);
-                    
-                    
-
                     let lightOnNode = super.readNodes(nodes, "day5\\bathroomAfternoonDay5", "lightsOn", true);
                     this.dialogManager.setNode(lightOnNode);
                     
@@ -117,7 +117,7 @@ export default class BathroomAfternoonDay5 extends BathroomBase {
                     sink.disableInteractive();
                     floor.disableInteractive();
                 });
-            }, timer);
+            }, BLACKOUT_TIMER);
         });
 
         

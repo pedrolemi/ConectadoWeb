@@ -7,7 +7,7 @@ import LoginMenu from './scenes/menus/loginMenu.js';
 import CreditsScene from './scenes/menus/creditsScene.js';
 
 // Flujo de juego
-import TextOnlyScene from './scenes/textOnlyScene.js';
+import TextOnlyScene from './scenes/gameLoop/textOnlyScene.js';
 import AlarmScene from './scenes/gameLoop/alarmScene.js';
 import BathroomBase from './scenes/gameLoop/baseScenarios/bathroomBase.js';
 import OppositeBathroom from './scenes/gameLoop/oppositeBathroom.js';
@@ -102,7 +102,7 @@ const max_w = 1129, max_h = 847, min_w = 320, min_h = 240;
 const config = {
     width: max_w,
     height: max_h,
-    backgroundColor: '#3F3F3F',
+    backgroundColor: '#2b9e9e',
     version: "1.0",
 
     type: Phaser.AUTO,

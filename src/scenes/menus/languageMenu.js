@@ -79,15 +79,6 @@ export default class LanguageMenu extends Phaser.Scene {
             // Se cambia el idioma y se pasa a la pantalla de titulo
             this.i18next.changeLanguage(language);
             this.gameManager.startTitleMenu();
-
-            // TEST
-            let userInfo = {
-                name: "Laura",
-                username: "lauu",
-                password: "hola123",
-                gender: "female"
-            }
-            this.gameManager.startGame(userInfo);
         });
     }
 }

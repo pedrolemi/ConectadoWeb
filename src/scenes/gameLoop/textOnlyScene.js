@@ -1,15 +1,9 @@
-import BaseScene from './gameLoop/baseScene.js';
+import BaseScene from './baseScene.js';
 
 export default class TextOnlyScene extends BaseScene {
     /**
      * Escena para las transiciones en las que solo hay texto,  
      * @extends Phaser.Scene
-     * 
-     * IMPORTANTE: Esta escena es general para todas las transiciones, por lo que hay que especificar
-     * en los parametros tanto el texto que debera aparecer en la escena, como que se debe ejecutar una
-     * vez termine. Generalmente, en la funcion onComplete se llamaria al changeScene del gameManager con
-     * la siguiente escena, pero no se hace directamente porque dependiendo de la escena a la que se quiera
-     * cambiar, podria hacer falta pasarle unos parametros distintos 
      */
     constructor() {
         super('TextOnlyScene');
@@ -29,7 +23,15 @@ export default class TextOnlyScene extends BaseScene {
 
     /**
      * Crear los elementos de la escena
+     * 
      * @param {Object} params - parametros de la escena. Debe contener text, onComplete y onCompleteDelay.
+     * Como opcional, puede contener textConfig con la configuracion para el texto a mostrar
+     * 
+     * IMPORTANTE: Esta escena es general para todas las transiciones, por lo que hay que especificar
+     * en los parametros tanto el texto que debera aparecer en la escena, como la funcion que se debe 
+     * ejecutar una vez acabe la escena. Generalmente, en la funcion onComplete se llamaria al changeScene 
+     * del gameManager con la siguiente escena, pero no se hace directamente porque dependiendo de la 
+     * escena a la que se quiera cambiar, podria hacer falta pasarle unos parametros distintos   
      */
     create(params) {
         super.create(params);
@@ -39,6 +41,18 @@ export default class TextOnlyScene extends BaseScene {
         let text = "";
         let onComplete = () => { };
         let onCompleteDelay = 0;
+
+        // Configuracion de texto
+        let fontSize = 100;
+        let textConfig = { ...this.gameManager.textConfig };
+        // textConfig.fontFamily = 'gidole-regular';
+        textConfig.fontSize = fontSize + 'px';
+        textConfig.align = 'center';
+        textConfig.wordWrap = {
+            width: this.CANVAS_WIDTH - 100,
+            useAdvancedWrap: true
+        }
+
         if (params.text) {
             text = params.text
         }
@@ -47,6 +61,11 @@ export default class TextOnlyScene extends BaseScene {
         }
         if (params.onCompleteDelay) {
             onCompleteDelay = params.onCompleteDelay;
+        }
+        if (params.textConfig) {
+            // Parsea el string del tamano de fuente. El 10 indica que se parsea en base 10
+            fontSize = parseInt(params.fontSize, 10);
+            textConfig = params.textConfig;
         }
 
         // Hace invisible el UIManager entero
@@ -84,17 +103,6 @@ export default class TextOnlyScene extends BaseScene {
             }
         });
 
-
-        // Configuracion de texto
-        let fontSize = 100;
-        let textConfig = { ...this.gameManager.textConfig };
-        // textConfig.fontFamily = 'gidole-regular';
-        textConfig.fontSize = fontSize + 'px';
-        textConfig.align = 'center';
-        textConfig.wordWrap = {
-            width: this.CANVAS_WIDTH - 100,
-            useAdvancedWrap: true
-        }
 
         // Crea el texto
         let screenText = this.add.text(this.CANVAS_WIDTH / 2, this.CANVAS_HEIGHT / 2, text, textConfig).setOrigin(0.5, 0.5);

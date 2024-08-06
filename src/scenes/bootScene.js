@@ -21,6 +21,89 @@ export default class BootScene extends Phaser.Scene {
         });
     }
 
+    createLoadingBar() {
+        let width = this.cameras.main.width;
+        let height = this.cameras.main.height;
+
+        let progressBox = this.add.graphics();
+        let progressBar = this.add.graphics();
+
+        let BAR_W = width * 0.6;
+        let BAR_H = 70;
+        let FILL_OFFSET = 20;
+        let TEXT_OFFSET = 70;
+        let bgCol = 0xFF408E86;
+        let fillCol = 0xFF004E46;
+        let borderCol = 0xFF004E46;
+        let borderThickness = 2;
+        let radius =  Math.min(BAR_W, BAR_H) * 0.25;
+
+        progressBox.fillStyle(bgCol, 1).fillRoundedRect(width / 2 - BAR_W / 2, height / 2 - BAR_H / 2, BAR_W, BAR_H, radius)
+            .lineStyle(borderThickness, borderCol, 1).strokeRoundedRect(width / 2 - BAR_W / 2, height / 2 - BAR_H / 2, BAR_W, BAR_H, radius)
+
+
+        // Texto de la palabra cargando
+        let loadingText = this.make.text({
+            x: width / 2,
+            y: height / 2 - TEXT_OFFSET,
+            text: 'Loading...',
+            style: {
+                fontFamily: 'gidole-regular',
+                fontSize: '30px',
+                fill: '#ffffff'
+            }
+        });
+        loadingText.setOrigin(0.5, 0.5);
+
+        // Texto con el porcentaje de los assets cargados
+        let percentText = this.make.text({
+            x: width / 2,
+            y: height / 2,
+            text: '0%',
+            style: {
+                fontFamily: 'gidole-regular',
+                fontSize: '20px',
+                fill: '#ffffff'
+            }
+        });
+        percentText.setOrigin(0.5, 0.5);
+
+        // Texto para el nombre de los archivos
+        let assetText = this.make.text({
+            x: width / 2,
+            y: height / 2 + TEXT_OFFSET,
+            text: '',
+            style: {
+                fontFamily: 'gidole-regular',
+                fontSize: '20px',
+                fill: '#ffffff'
+            }
+        });
+        assetText.setOrigin(0.5, 0.5);
+
+        // Se va actualizando la barra de progreso y el texto con el porcentaje
+        this.load.on('progress', function (value) {
+            percentText.setText(parseInt(value * 100) + '%');
+
+            progressBar.clear();
+            progressBar.fillStyle(fillCol, 1);
+            progressBar.fillRoundedRect(width / 2 - (BAR_W - FILL_OFFSET) / 2, height / 2 - (BAR_H - FILL_OFFSET) / 2, (BAR_W - FILL_OFFSET) * value, BAR_H - FILL_OFFSET, radius);
+        });
+        // Cuando carga un archivo, muestra el nombre del archivo debajo de la barra
+        this.load.on('fileprogress', function (file) {
+            assetText.setText('Loading asset: ' + file.key);
+        });
+
+        // Cuando se termina de cargar todo, se borran los elementos de la barra
+        this.load.on('complete', function () {
+            progressBar.destroy();
+            progressBox.destroy();
+            loadingText.destroy();
+            percentText.destroy();
+            assetText.destroy();
+        });
+    }
+
     loadComputersAssets() {
         this.load.setPath('assets/UI/computer');
 
@@ -317,6 +400,8 @@ export default class BootScene extends Phaser.Scene {
     }
 
     preload() {
+        this.createLoadingBar();
+
         // Son tanto archivos de dialogos como namespaces del plugin i18next
         // Ruta archivo dialogo --> test/momDialog.json
         // ID archivo dialogo --> momDialog

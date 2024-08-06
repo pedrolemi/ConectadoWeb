@@ -35,7 +35,8 @@
         "night": "21:30"
     },
     "statusScreen": {
-
+        "title":"Social Risk",
+        "subtitle":"Friendships"
     },
     "textMessages": {
         "title": "CHATS",

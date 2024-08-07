@@ -281,6 +281,7 @@ export default class DialogManager {
                 this.scene.phoneManager.phone.setChatNode(this.currNode.chat, this.currNode);
             }
             else if (this.currNode.type === "socialNetMessage") {
+                // Funcion comun (se anade el comentario al post y se procesa el nodo)
                 let fnAux = () => {
                     this.gameManager.computerScene.socialNetScreen.addCommentToPost(this.currNode.owner, this.currNode.postName,
                         this.currNode.character, this.currNode.name, this.currNode.text);
@@ -288,10 +289,18 @@ export default class DialogManager {
                     this.currNode = this.currNode.next[0];
                     this.processNode();
                 }
+                // Si el retraso es 0...
                 if (this.currNode.replyDelay <= 0) {
+                    // Se procesa inmediatamente
+                    // Importante: se hace de esta manera porque aunque setTimeout permite un delay de 0 segundos,
+                    // el codigo no se procesa al instante.
+                    // Es muy importante que los mensaje con un delay de 0 segundos se procesen al instante porque al crear un post
+                    // se anade una lista larga de mensajes iniciales y si no se procesan en orden, this.currNode se vuelve loco
                     fnAux();
                 }
+                // Sino...
                 else {
+                    // Se usa un timeout
                     setTimeout(() => {
                         fnAux();
                     }, this.currNode.replyDelay);

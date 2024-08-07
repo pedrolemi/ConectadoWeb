@@ -2,23 +2,23 @@
     "alex": {
         "passwordExchanged": [
             {
-                "text": "Vaya cosas publicas en \"Conectado\" ¿no?."
+                "text": "Vaya cosas publicas en \"Conectado\", ¿no?"
             },
             {
-                "text": "No me esperaba esto de tí, es como si no lo hubieras posteado tú XD."
+                "text": "No me esperaba esto de ti. Es como si no lo hubieras publicado tú."
             }
         ],
         "phoneFound": [
             {
-                "text": "Vaya cosas dices por el chat ¿no?. Caratra, nos has sorprendido a todos."
+                "text": "Vaya cosas dices por el chat, ¿no? Caratra, nos has sorprendido a todos."
             },
             {
-                "text": "No me esperaba esto de tí, es como si no lo hubieras escrito tú jajaja."
+                "text": "No me esperaba esto de ti. Es como si no lo hubieras escrito tú. Jajaja."
             }
         ],
         "phoneNotFound": [
             {
-                "text": "Parece que te vas a tener que comprar un móvil nuevo, ¿no?."
+                "text": "Parece que te vas a tener que comprar un móvil nuevo, ¿no?"
             },
             {
                 "text": "Espero que ese no lo pierdas... o te lo quiten."
@@ -33,21 +33,21 @@
                 "text": "Hagamos una cosa. Hablemos donde nadie nos escuche, al terminar las clases."
             },
             {
-                "text": "Hablemoslo, te disculpas y entonces te dejamos en paz."
+                "text": "Hablemos, te disculpas, y entonces te dejamos en paz."
             },
             {
-                "text": "Ana y yo pasaremos de tí y los demás que hagan lo que quieran."
+                "text": "Ana y yo pasaremos de ti, y los demás que hagan lo que quieran."
             }
         ],
         
         "talked": [
             {
-                "text": "En los baños, al final de la clase, tú ven, acuerdate."
+                "text": "En los baños, al final de clases. Tú ven, acuérdate."
             },
             {
                 "text": "",
-                "text_male": "estaré allí",
-                "text_female" : "Ana te esperará allí"
+                "text_male": "Estaré allí.",
+                "text_female" : "Ana te esperará allí."
             }
         ]
     },

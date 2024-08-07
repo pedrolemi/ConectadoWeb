@@ -2,8 +2,8 @@
     "enter": {
         "root": {
             "text": "",
-            "text_male": "Mmm, what is going on Alex? Why are you still here?",
-            "text_female": "Anna, are you here?"
+            "text_male": "Hmm... What is going on Alex? Why are you still there?",
+            "text_female": "Anna? Are you here?"
         }
     },
 
@@ -13,7 +13,7 @@
                 "text": "What's going on? The door won't open."
             },
             {
-                "text": "Have they locked me in the toilet? ANA!!! ALEX!! ANYONE!!"
+                "text": "Have they locked me in the toilet? Anna!!! Alex!! Anyone!!"
             },
             {
                 "text": "What do I do now? I have to get out of here."
@@ -21,7 +21,7 @@
         ],
         "getOut": [
             {
-                "text": "The light. Seriously?"
+                "text": "The lights. Seriously?"
             },
             {
                 "text": "I have to get out of here."
@@ -32,24 +32,24 @@
     "door_locked": {
         "root":  [
             {
-                "text": "This is the latch, but it won't open."
+                "text": "This is the door handle, but it won't open."
             },
             {
-                "text": "Have they locked me in the toilet? ANA!!! ALEX!! ANYONE!!"
+                "text": "Anna!!! Alex!! Anyone!!"
             }
         ]
     },
 
     "sink": {
        "root": {
-            "text": "Agh!! I've just hit the sink. FUUUUCK!!"
+            "text": "Agh!! I've just hit the sink. Fuuuuck!!"
         } 
     },
     
     "floor": {
         "root": [
             {
-                "text": "It's wet... but this is the floor."
+                "text": "It's wet... But this is the floor."
             },
             {
                 "text": "Agh!! please don't be pee..."
@@ -59,10 +59,10 @@
 
     "lightsOn": {
         "root": {
-            "text": "Lights are back!! And I can hear something in the corridor. I should have been able to get out already."
+            "text": "The lights are back!! And I can hear something in the corridor. I should be able to get out now."
         },
         "teacher": {
-            "text": "What are you doing here locked?"
+            "text": "What are you doing locked here?"
         },
 
         "meetingFS": [
@@ -73,7 +73,7 @@
                 "text": "You could have told me directly."
             },
             {
-                "text": "I guess it was Alex who locked you in the toilet right?"
+                "text": "I guess it was Alex who locked you in the toilet, right?"
             },
             {
                 "text": "He's going to be expelled for 3 days. If he keeps troubling you when he's back, you must tell me."
@@ -88,7 +88,7 @@
 
         "noMeetingFS": [
             {
-                "text": "(Tell about everything Alex has done to you)"
+                "text": "(Tell everything Alex has done to you)"
             },
             {
                 "text": "I don't know what happened."
@@ -96,7 +96,7 @@
         ],
         "snitchNoMeetingFS": [
             {
-                "text": "Why didn't you tell me all this before?"
+                "text": "Why didn't you tell me all of this before?"
             },
             {
                 "text": "I'm going to call your parents to speak about it."
@@ -108,7 +108,7 @@
                 "text": "I'll try to get him expelled for 3 days."
             },
             {
-                "text": "And if anything happens don't hesitate to speak with me or the school counselor."
+                "text": "And if anything happens, don't hesitate to speak with me or the school counselor."
             },
             {
                 "text": "Go home and get some rest."
@@ -116,13 +116,13 @@
         ],
         "noSnitchNoMeetingFS": [
             {
-                "text": "Are you sure everything's fine?."
+                "text": "Are you sure everything's fine?"
             },
             {
                 "text": "Well, go home. But remember this..."
             },
             {
-                "text": "If some mocks you just let me or the school counselor know about it."
+                "text": "If some mocks you, just let me or the school counselor know about it."
             },
             {
                 "text": "Look for help, things are not going to change by themselves, just can get worse."
@@ -132,7 +132,7 @@
 
         "meetingNoFS": [
             {
-                "text": "(Tell about everything Alex has done to you)"
+                "text": "(Tell everything Alex has done to you)"
             },
             {
                 "text": "I don't know what happened."
@@ -146,7 +146,7 @@
                 "text": "Besides, today I had a meeting with your parents and we've talked about it."
             },
             {
-                "text": "With all you have told me... I'll talk to the principal to expell Alex for 3 days."
+                "text": "With all you have told me... I'll talk to the principal to expel Alex for 3 days."
             },
             {
                 "text": "If he keeps harassing you, both in person or social media, just let me know."
@@ -166,7 +166,7 @@
                 "text": "I had a meeting with your parents and it seems you had some trouble with Alex."
             },
             {
-                "text": "Also, Maria and the school counselor came to tell me Alex is picking on you."
+                "text": "Also, Maria came to tell me and the counselor that Alex has been picking on you."
             },
             {
                 "text": "You don't need to hide anything and you're not snitch when you ask for help. Alex behaviour suggests that a punishment is needed."
@@ -183,13 +183,13 @@
         ],
         "noSnitchMeetingNoFSNoMaria": [
             {
-                "text": "Today I had a meeting with your parents, They're worried."
+                "text": "Today I had a meeting with your parents. They're worried."
             },
             {
                 "text": "If you're having troubles with any of your classmates you should talk to me or the school counselor."
             },
             {
-                "text": "If you reject our help things might get worse."
+                "text": "If you reject our help, things might get worse."
             },
             {
                 "text": "In any case, you don't deserve to be mocked and ridiculed."
@@ -201,7 +201,7 @@
 
         "noMeetingNoFS": [
             {
-                "text": "(Tell about everything Alex has done to you)"
+                "text": "(Tell everything Alex has done to you)"
             },
             {
                 "text": "I don't know what happened."
@@ -212,16 +212,16 @@
                 "text": "Why didn't you tell me before?"
             },
             {
-                "text": "Also, Maria and the school counselor came to tell me what you've just said."
+                "text": "Also, Maria came to tell me and the school counselor what you've just said."
             },
             {
-                "text": "She cares about you, we all need friends like her."
+                "text": "She cares about you. We all need friends like her."
             },
             {
                 "text": "Alex behaviour deserves a punishment and it's important that you've told me everything."
             },
             {
-                "text": "This is not your fault, nor deserve it."
+                "text": "This is not your fault, and you don't deserve it."
             },
             {
                 "text": "We've decided to expel Alex for 3 days."
@@ -238,21 +238,21 @@
                 "text": "I'll talk with your parents about it."
             },
             {
-                "text": "If you still have troubles with Alex come and tell me, tomorrow I'll tell him off."
+                "text": "If you still have troubles with Alex come and tell me. Tomorrow I'll tell him off."
             },
             {
-                "text": "It's important you speak about it, time it's not going to change things for good by itself."
+                "text": "It's important that you speak about it. Time it's not going to change things for good by itself."
             },
             {
                 "text": "In any case, you don't deserve to be mocked and ridiculed."
             },
             {
-                "text": "Things won't change until you ask for help, or might even get worse."
+                "text": "Things won't change until you ask for help, and might even get worse."
             }
         ],
         "noSnitchNoMeetingNoFS": [
             {
-                "text": "Are you sure everything's fine?."
+                "text": "Are you sure everything's fine?"
             },
             {
                 "text": "Well then, go home."

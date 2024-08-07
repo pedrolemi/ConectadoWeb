@@ -2,14 +2,14 @@
     "alison": {
         "passwordExchanged": [
             {
-                "text": "Lo que ha pasado, pero te lo has ganado."
+                "text": "Te has ganado lo que ha pasado."
             },
             {
                 "text": "¿Cómo se te ocurre darme tu contraseña?"
             }
         ],
         "phoneStolen": {
-            "text": "Si hubieras confiado en mí igual esto no habría pasado, es tu culpa."
+            "text": "Si hubieras confiado en mí, igual esto no habría pasado. Es tu culpa."
         },
 
         "talked": {
@@ -26,28 +26,28 @@
                 "text": "¿De verdad te pensabas que iba a ser tu amiga? No me creo lo fácil que fué engañarte."
             },
             {
-                "text": "JAJAJAJA!!! en serio, me parto contigo."
+                "text": "¡¡¡Jajajaja!!! En serio, me parto contigo."
             }
         ],
         "phoneFound": [
             {
-                "text": "JAJAJAJA!!! no me creo que no tuvieras patrón de desbloqueo en el móvil."
+                "text": "¡¡¡Jajajaja!!! No me creo que no tuvieras patrón de desbloqueo en el móvil."
             },
             {
                 "text": "Pensaba que iba a ser más difícil..."
             },
             {
                 "text": "",
-                "text_male": "Que divertido va a ser el día, ahora la mayoria piensa que eres verdad un marica vicioso que le da a todo.",
-                "text_female": "Que divertido va a ser el día, ahora la mayoria piensa que eres verdad una puta viciosa."
+                "text_male": "Que divertido va a ser el día. Ahora la mayoría piensa que eres de verdad un marica vicioso que le da a todo.",
+                "text_female": "Que divertido va a ser el día, ahora la mayoría piensa que eres de verdad una puta viciosa."
             }
         ],
         "phoneNotFound": [
             {
-                "text": "Mira quién ha llegado, y yo que pensaba que hoy no vendrías."
+                "text": "Mira quién ha llegado. Y yo que pensaba que hoy no vendrías."
             },
             {
-                "text": "¿Aún sigues sin móvil? jajaja, no era tan difícil encontrarlo si hubieras buscado bien."
+                "text": "¿Aún sigues sin móvil? Jajaja. No era tan difícil encontrarlo si hubieras buscado bien."
             },
             {
                 "text": "",
@@ -55,7 +55,7 @@
                 "text_female": "Hay que ser estúpida."
             },
             {
-                "text": "¿De dónde has salido? jajaja."
+                "text": "¿De dónde has salido? Jajaja."
             }
         ],
         "bellRinging": {
@@ -63,7 +63,7 @@
         },
 
         "talked": {
-            "text": "Jajajaja, margi."
+            "text": "Jajajaja. Margi."
         }
     }
 }

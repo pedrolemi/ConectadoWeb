@@ -10,7 +10,7 @@
                 "text_female": "Should I trust Alex and go to the toilet to talk to Anna?"
             },
             {
-                "text": "If I go, Will it be over once for all?"
+                "text": "If I go, will it be over once for all?"
             }
         ]
     },
@@ -25,10 +25,10 @@
     "alex_stairs": {
         "root": [
             {
-                "text": "Really? You were leaving without stopping by the toilet."
+                "text": "Really? Don't tell me you were leaving without stopping by the toilet."
             },
             {
-                "text": "Think it as an opportunity to fix everything, c'mon... I'll walk with you."
+                "text": "Think about it as an opportunity to fix everything. C'mon... I'll walk you there."
             }
         ]
     },

@@ -2,8 +2,8 @@
     "enter": {
         "root": {
             "text": "",
-            "text_male": "mmm, ¿pasa algo Álex? ¿por qué no entras?",
-            "text_female": "¿Ana, estás aquí?"
+            "text_male": "Mmm... ¿Pasa algo, Álex? ¿Por qué no entras?",
+            "text_female": "¿Ana? ¿Estás aquí?"
         }
     },
 
@@ -13,10 +13,10 @@
                 "text": "¿Qué está pasando? La puerta no se abre."
             },
             {
-                "text": "¿Me han encerrado en el baño? ANA!!! ALEX!! ALGUIEN!!"
+                "text": "¿Me han encerrado en el baño? ¡¡¡Ana!!! ¡¡Alex!! ¡¡Alguien!!"
             },
             {
-                "text": "¿Qué hago ahora? Tengo que conseguir salir de aquí"
+                "text": "¿Qué hago ahora? Tengo que conseguir salir de aquí."
             }
         ],
         "getOut": [
@@ -24,7 +24,7 @@
                 "text": "La luz. ¿En serio?"
             },
             {
-                "text": "Tengo que salir de aquí"
+                "text": "Tengo que salir de aquí."
             }
         ]
     },
@@ -35,31 +35,31 @@
                 "text": "Este es el picaporte de la puerta, pero no se abre."
             },
             {
-                "text": "¿Me han encerrado en el baño? ANA!!! ALEX!! ALGUIEN!!"
+                "text": "¡¡¡Ana!!! ¡¡Alex!! ¡¡Alguien!!"
             }
         ]
     },
 
     "sink": {
        "root": {
-            "text": "Agh!! Me acabo de dar con los lavabos. MIERDAS!!"
+            "text": "¡¡Agh!! Me acabo de dar con los lavabos.¡¡Mierda!!"
         } 
     },
     
     "floor": {
         "root": [
             {
-                "text": "Está mojado... pero esto es el suelo"
+                "text": "Está mojado... Pero esto es el suelo"
             },
             {
-                "text": "PUAJ!! por favor, que no sea pis"
+                "text": "¡¡Puaj!! Por favor, que no sea pis."
             }
         ]
     },
 
     "lightsOn": {
         "root": {
-            "text": "La luz ha vuelto!! y se oye algo en el pasillo, debería poder salir ya."
+            "text": "¡¡La luz ha vuelto!! Y se oye algo en el pasillo. Debería poder salir ya."
         },
         "teacher": {
             "text": "",
@@ -72,7 +72,7 @@
                 "text": "Hoy he tenido reunión con tus padres y me han contado todo lo que les has contado a ellos."
             },
             {
-                "text": "Podrías habermelo dicho a mi directamente."
+                "text": "Podrías habérmelo dicho a mi directamente."
             },
             {
                 "text": "",
@@ -80,10 +80,10 @@
                 "text_female": "Supongo que el que estuvieras encerrada dentro del baño ha sido cosa de Álex."
             },
             {
-                "text": "Por ahora se va a expulsar a Álex 3 días, si sigue dándote problemas, cuándo vuelva, debes decirmelo."
+                "text": "Por ahora se va a expulsar a Álex 3 días. Si sigue dándote problemas cuando vuelva, debes decírmelo."
             },
             {
-                "text": "Si sigue igual podríamos expulsarle del colegio e incluso llamar a la policía y tomar represalias legales."
+                "text": "Si sigue igual, podríamos expulsarle del colegio e incluso llamar a la policía y tomar represalias legales."
             },
             {
                 "text": "Vete a casa y descansa."
@@ -100,7 +100,7 @@
         ],
         "snitchNoMeetingFS": [
             {
-                "text": "¿Cómo no me has contado todo esto antes?."
+                "text": "¿Cómo no me has contado todo esto antes?"
             },
             {
                 "text": "Voy a llamar a tus padres para hablar con ellos."
@@ -121,17 +121,17 @@
         "noSnitchNoMeetingFS": [
             {
                 "text": "",
-                "text_male": "¿Estás seguro que no pasa nada?",
-                "text_female": "¿Estás segura que no pasa nada?"
+                "text_male": "¿Estás seguro de que no pasa nada?",
+                "text_female": "¿Estás segura de que no pasa nada?"
             },
             {
                 "text": "Bueno, vete a casa. Pero recuerda una cosa..."
             },
             {
-                "text": "Si alguien se mete contigo habla conmigo o con la orientadora."
+                "text": "Si alguien se mete contigo, habla conmigo o con la orientadora."
             },
             {
-                "text": "Busca ayuda, las cosas no van a mejorar por sí solas, sólo pueden ir a peor."
+                "text": "Busca ayuda. Las cosas no van a mejorar por sí solas, sólo pueden ir a peor."
             }
         ],
         
@@ -146,16 +146,16 @@
         ],
         "snitchMeetingNoFS": [
             {
-                "text": "¿Cómo no me lo contaste antes?."
+                "text": "¿Cómo no me lo contaste antes?"
             },
             {
                 "text": "Además hoy he tenido reunión con tus padres y también hemos hablado de esto."
             },
             {
-                "text": "Con todo lo que me has dicho... hablaré con la directora para expulsar a Álex 3 días."
+                "text": "Con todo lo que me has dicho... Hablaré con la directora para expulsar a Álex 3 días."
             },
             {
-                "text": "Si a la vuelta sigue acosandote ya sea en persona o en las redes dimelo."
+                "text": "Si a la vuelta sigue acosándote ya sea en persona o en las redes dímelo."
             },
             {
                 "text": "Si sigue igual podríamos expulsarle del colegio e incluso llamar a la policía y tomar represalias legales."
@@ -174,7 +174,7 @@
                 "text": "He tenido reunión con tus padres y estás teniendo problemas con Álex."
             },
             {
-                "text": "Además María vino a hablar conmigo y la orientadora, por lo que nos dijo, Álex se está metiendo contigo."
+                "text": "Además, María vino a hablar conmigo y la orientadora. Por lo que nos dijo, Álex se está metiendo contigo."
             },
             {
                 "text": "",
@@ -193,19 +193,19 @@
         ],
         "noSnitchMeetingNoFSNoMaria": [
             {
-                "text": "Hoy he tenido reunión con tus padres, están preocupados."
+                "text": "Hoy he tenido reunión con tus padres. Están preocupados."
             },
             {
                 "text": "Si estás teniendo problemas con alguno de tus compañeros deberías hablar conmigo o con la orientadora."
             },
             {
-                "text": "Si evitas que te ayudemos las cosas pueden ir a peor."
+                "text": "Si evitas que te ayudemos, las cosas pueden ir a peor."
             },
             {
-                "text": "Y en cualquier caso no te mereces que se burlen de tí y ridiculicen."
+                "text": "Y en cualquier caso, no te mereces que se burlen de ti y ridiculicen."
             },
             {
-                "text": "Si es lo que está pasando pidenos ayuda o las cosas seguirán igual."
+                "text": "Si es lo que está pasando pídenos ayuda o las cosas seguirán igual."
             }
         ],
 
@@ -219,13 +219,13 @@
         ],
         "snitchNoMeetingNoFSMaria": [
             {
-                "text": "¿Cómo no me has dicho nada antes?."
+                "text": "¿Cómo no me has dicho nada antes?"
             },
             {
-                "text": "Además María vino a hablar conmigo y la orientadora, también nos ha comentado lo que tu ahora."
+                "text": "Además María vino a hablar conmigo y la orientadora. Nos ha contado lo mismo que tú ahora."
             },
             {
-                "text": "La chica se preocupa por tí, todos necesitamos amigos así."
+                "text": "La chica se preocupa por ti. Todos necesitamos amigos así."
             },
             {
                 "text": "El comportamiento de Álex merece un castigo y es importante que me hayas contado todo."
@@ -248,16 +248,16 @@
                 "text": "Hablaré con tus padres del tema."
             },
             {
-                "text": "Si tienes más problemas con Álex ven a hablar conmigo, mañana le llamaré la atención."
+                "text": "Si tienes más problemas con Álex ven a hablar conmigo. Mañana le llamaré la atención."
             },
             {
-                "text": "Es importante que si tienes problemas los cuentes, el tiempo por sí solo no va a hacer que vaya a mejor."
+                "text": "Es importante que si tienes problemas los cuentes. El tiempo por sí solo no va a hacer que vaya a mejor."
             },
             {
-                "text": "Y en cualquier caso no te mereces que se burlen de tí y ridiculicen."
+                "text": "Y en cualquier caso, no te mereces que se burlen de ti y ridiculicen."
             },
             {
-                "text": "Si es lo que está pasando pide ayuda o las cosas seguirán igual, incluso pueden ir a peor."
+                "text": "Si es lo que está pasando, pide ayuda o las cosas seguirán igual, incluso pueden ir a peor."
             }
         ],
         "noSnitchNoMeetingNoFS": [
@@ -267,16 +267,16 @@
                 "text_female": "¿Estás segura de que no está pasando nada?"
             },
             {
-                "text": "Pués venga, vete a casa."
+                "text": "Pues venga, vete a casa."
             },
             {
-                "text": "Pero acuerdate de esto, si estás teniendo problemas con un compañero y no buscas ayuda lo más seguro es que todo empeore."
+                "text": "Pero acuérdate de esto: si estás teniendo problemas con un compañero y no buscas ayuda, lo más seguro es que todo empeore."
             },
             {
-                "text": "Y en cualquier caso no te mereces que se burlen de tí y ridiculicen."
+                "text": "Y en cualquier caso, no te mereces que se burlen de ti y ridiculicen."
             },
             {
-                "text": "Si es lo que está pasando pidenos ayuda o las cosas seguirán igual."
+                "text": "Si es lo que está pasando, pídenos ayuda o las cosas seguirán igual."
             }
         ]
     }

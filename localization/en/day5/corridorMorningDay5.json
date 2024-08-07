@@ -2,10 +2,10 @@
     "alex": {
         "passwordExchanged": [
             {
-                "text": "Look at your posts in \"Conectado\", right?."
+                "text": "You posted some great things on \"Conectado\", didn't you?"
             },
             {
-                "text": "I didn't expect that from you, it's like it wasn't you writing XD."
+                "text": "I didn't expect that from you. It's like the one writing wasn't you."
             }
         ],
         "phoneFound": [
@@ -13,15 +13,15 @@
                 "text": "Look at your comments in the chat. Suface, you surprised us all."
             },
             {
-                "text": "I didn't expect that from you. It's like it wasn't you writing hahaha."
+                "text": "I didn't expect that from you. It's like the one writing wasn't you. Hahaha."
             }
         ],
         "phoneNotFound": [
             {
-                "text": "Looks like you going to need a new mobile phone, right?."
+                "text": "Looks like you're going to need a new mobile phone, right?"
             },
             {
-                "text": "I hope you don't loose that too... or get taken from you."
+                "text": "I hope you don't lose that one too... or get taken from you."
             }
         ],
 
@@ -30,24 +30,24 @@
                 "text": "Well, I think it's enough."
             },
             {
-                "text": "Let's do something. When the classes are over, let's talk where none can hear us."
+                "text": "Let's do something. When classes are over, let's talk where none can hear us."
             },
             {
                 "text": "We talk about it, you apologise and we leave you in peace."
             },
             {
-                "text": "Anna and I'll leave you alone and the rest can do what they want."
+                "text": "Anna and I will leave you alone, and the rest can do whatever they want."
             }
         ],
         
         "talked": [
             {
-                "text": "When the class is over, remember to come to the toilets."
+                "text": "When classes are over, remember to come to the toilets."
             },
             {
                 "text": "",
-                "text_male": "I'll be there",
-                "text_female" : "Anna will be waiting there"
+                "text_male": "I'll be there.",
+                "text_female" : "Anna will be waiting there."
             }
         ]
     },

@@ -11,7 +11,7 @@
                 "text": "Y a los que no queremos hacerle caso nos amenaza con algo."
             },
             {
-                "text": "¿Puedo confiar en tí? No quiero dejar de ser tu amiga."
+                "text": "¿Puedo confiar en ti? No quiero dejar de ser tu amiga."
             }
         ],
         "choices": [
@@ -55,7 +55,7 @@
         },
         "dont": [
             {
-                "text": "Si no confías en mí yo tampoco puedo confiar en tí."
+                "text": "Si no confías en mí yo tampoco puedo confiar en ti."
             },
             {
                 "text": "Lo siento, pero entonces no puedo hablarte más."
@@ -92,7 +92,7 @@
                 "text": "(Con una sonrisa en su cara te mira fijamente y empieza a reir)"
             },
             {
-                "text": "¡¡JAJAJA!!"
+                "text": "¡¡Jajaja!!"
             }
         ]
     },

@@ -4,22 +4,22 @@
             "text": "Al final todo ha acabado igual. No se puede decir que no lo haya intentado."
         },
         {
-            "text": "Supongo que ya es tarde, has desaprovechado la oportunidad que te he dado."
+            "text": "Supongo que ya es tarde. Has desaprovechado la oportunidad que te he dado."
         },
         {
             "text": "Álex y Ana seguirán haciendo la vida imposible a otros compañeros. Tú no has sido su primera víctima, ni la última."
         },
         {
-            "text": "Tan difícil es pedir ayuda cuando uno la necesita. Olvidarse de nuestro ego. Uno no siempre tiene la culpa de lo que le pasa ni se lo merece."
+            "text": "¿Tan difícil es pedir ayuda cuando uno la necesita? ¿Olvidarse de nuestro ego? Uno no siempre tiene la culpa de lo que le pasa, ni se lo merece."
         },
         {
             "text": "¿Por qué ese miedo a compartir lo que te sucede, lo que uno siente?"
         },
         {
-            "text": "¿Por qué dejamos que las personas sufran? ¿Por qué pensamos que es mejor permanecer callado, que el tiempo todo lo cura?"
+            "text": "¿Por qué dejamos que las personas sufran? ¿Por qué pensamos que es mejor permanecer callado? ¿Que el tiempo todo lo cura?"
         },
         {
-            "text": "Es fácil reírse de los demás, pero qué pasa cuando el afectado eres tú."
+            "text": "Es fácil reírse de los demás, ¿pero qué pasa cuando el afectado eres tú?"
         },
         {
             "text": "¿Por qué es mejor sufrir o ver a los demás pasarlo mal que pedir ayuda? ¿Acaso pedir ayuda es chivarse? ¿Es chivarse evitar que alguien lo pase mal?"
@@ -33,13 +33,13 @@
             "text": "Álex ahora estará vigilado y al menos os dejará a todos un poco más en paz."
         },
         {
-            "text": "Hay que pedir ayuda cuando uno la necesita. Olvidarse de nuestro ego. Uno no siempre tiene la culpa de lo que le pasa o se lo merece."
+            "text": "Hay que pedir ayuda cuando uno la necesita, olvidarse de nuestro ego. Uno no siempre tiene la culpa de lo que le pasa, ni se lo merece."
         },
         {
-            "text": "El tiempo no va a solucionar las cosas si sufres, no hay que dejarlo pasar."
+            "text": "El tiempo no va a solucionar las cosas si sufres. No hay que dejarlo pasar."
         },
         {
-            "text": "Todos necesitamos ayuda alguna vez y espero que al menos ahora seas consciente de que al igual que hay personas que te ayudan, hay otras que necesitan que tú les ayudes."
+            "text": "Todos necesitamos ayuda alguna vez, y espero que al menos ahora seas consciente de que, al igual que hay personas que te ayudan, hay otras que necesitan que tú les ayudes."
         },
         {
             "text": "¿Acaso es mejor sufrir o ver a los demás pasarlo mal que pedir ayuda? ¿Acaso pedir ayuda es chivarse? ¿Es chivarse evitar que alguien lo pase mal?"
@@ -53,22 +53,27 @@
             "text": "Bien, hemos conseguido cambiar las cosas."
         },
         {
-            "text": "Aún no lo sabes, pero hemos conseguido que Álex deje en paz a sus compañeros y a ti."
+            "text": "Aún no lo sabes, pero hemos conseguido que Álex os deje en paz a sus compañeros y a ti."
         },
         {
-            "text": "Si nadie le hubiera parado los pies tu no habrías sido la última persona en sufrir acoso."
+            "text": "Si nadie le hubiera parado los pies, tú no habrías sido la última persona en sufrir acoso."
         },
         {
             "text": "Es bueno contar las cosas, pedir ayuda. Nadie se merece que lo marginen, humillen o se burlen de él, sea cual sea el motivo."
         },
         {
-            "text": "Habrá gente que diga que te chivaste al profesor, a los compañeros o a tus padres. Yo opino que has sido un héroe."
+            "text": "",
+            "text_male": "Habrá gente que diga que te chivaste al profesor, a los compañeros o a tus padres. Yo opino que has sido un héroe.",
+            "text_female": "Habrá gente que diga que te chivaste al profesor, a los compañeros o a tus padres. Yo opino que has sido una heroína."
+
         },
         {
-            "text": "Espero que nunca más te quedes callado si alguien necesita ayuda o sufre. Que le des tu apoyo en vez de seguir al matón de turno."
+            "text": "",
+            "text_male": "Espero que nunca más te quedes callado si alguien necesita ayuda o sufre. Que le des tu apoyo en vez de seguir al matón de turno.",
+            "text_female": "Espero que nunca más te quedes callada si alguien necesita ayuda o sufre. Que le des tu apoyo en vez de seguir al matón de turno."
         },
         {
-            "text": "Es fácil no hacer nada, pero has pensado que tu puedes ser su siguiente víctima como ha pasado ahora..."
+            "text": "Es fácil no hacer nada, ¿pero has pensado que tu puedes ser su siguiente víctima como ha pasado ahora...?"
         }
     ],
     "playerQuestion": [

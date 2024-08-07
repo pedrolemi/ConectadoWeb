@@ -10,6 +10,17 @@ export default class BedroomAfternoonDay4 extends BedroomBase {
 
         this.livingroom = "LivingroomAfternoonDay4";
 
+        this.gameManager.setValue("passwordExchanged", true);
+
+
+        if (this.gameManager.hasValue("passwordExchanged")) {
+            let passwordExchanged = this.gameManager.getValue("passwordExchanged");
+            if (passwordExchanged) {
+                // Crear la informacion correspondiente en el ordenador
+                this.socialNetwork.createDailyPosts(4);
+            }
+        }
+
         let nodes = this.cache.json.get('bedroomAfternoonDay4');
 
         // Dialogos del interior del armario y la cama
@@ -20,7 +31,7 @@ export default class BedroomAfternoonDay4 extends BedroomBase {
         // Mochila
         nodes = this.cache.json.get('everydayDialog');
         let bagNode = super.readNodes(nodes, "everydayDialog", "bedroom.bagAfternoon", true);
-        let bag =  this.add.image(3050 * this.scale, 625 * this.scale, this.atlasName, 'bag').setOrigin(0.5, 0).setScale(this.scale * 0.8).setDepth(3);
+        let bag = this.add.image(3050 * this.scale, 625 * this.scale, this.atlasName, 'bag').setOrigin(0.5, 0).setScale(this.scale * 0.8).setDepth(3);
         bag.flipX = true;
         bag.setInteractive({ useHandCursor: true });
         bag.on('pointerdown', () => {
@@ -30,9 +41,9 @@ export default class BedroomAfternoonDay4 extends BedroomBase {
         // Ropa
         this.add.image(920 * this.scale, 1257 * this.scale + 5, this.atlasName, 'clothes3').setOrigin(0, 0).setScale(this.scale * 0.85).setDepth(this.chair.depth + 1);
 
-        
+
         // Evento llamado cuando se elimina la publicacion con el numero de telefono. Anade el chat de Alex y envia un mensaje
-        this.dispatcher.addOnce("eventName", this, (obj) => {
+        this.dispatcher.addOnce("addMessageToAlex", this, (obj) => {
             nodes = this.cache.json.get('bedroomAfternoonDay4');
             let chatName = this.i18next.t("textMessages.chat4", { ns: "phoneInfo", returnObjects: true });
             this.phoneManager.phone.addChat(chatName, "Alex");

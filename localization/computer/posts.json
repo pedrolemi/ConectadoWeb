@@ -1,35 +1,477 @@
 {
+    "day1": {
+        "Alison": [
+            "postEarring"
+        ],
+        "Guille": [
+            "postMatch"
+        ]
+    },
+    "day3": {
+        "Ana": [
+            "postTroll"
+        ]
+    },
+    "day4": {
+        "player": [
+            "postStolen"
+        ]
+    },
     "player": {
-        "post0": {
-            "photo": "photoMatch",
-            "friendshipRequired": true
-        }
-    },
-    "Maria": {
-        "post0": {
-            "photo": "photoMatch",
-            "friendshipRequired": true
-        }
-    },
-    "Alex": {
-        "post0": {
-            "photo": "photoMatch",
-            "friendshipRequired": true
-        }
-    },
-    "Guille": {
-        "post0": {
-            "photo": "photoMatch",
-            "friendshipRequired": false
+        "upload": {
+            "root": {
+                "type": "text",
+                "character": "player"
+            }
+        },
+        "postStolen": {
+            "photo": {
+                "male": "photoNumberBoy",
+                "female": "photoNumberGirl"
+            },
+            "friendshipRequired": false,
+            "comment": {
+                "root": {
+                    "type": "condition",
+                    "conditions": [
+                        {
+                            "next": "default",
+                            "commentedPostStolen": {
+                                "value": true,
+                                "operator": "equal",
+                                "global": false,
+                                "default": false
+                            }
+                        },
+                        {
+                            "next": "decision",
+                            "commentedPostStolen": {
+                                "value": false,
+                                "operator": "equal",
+                                "global": false,
+                                "default": false
+                            }
+                        }
+                    ]
+                },
+                "decision": {
+                    "type": "choice",
+                    "choices": [
+                        {
+                            "next": "sayErase"
+                        },
+                        {
+                            "next": "complain"
+                        },
+                        {
+                            "next": "setCommented"
+                        }
+                    ]
+                },
+                "sayErase": {
+                    "type": "text",
+                    "character": "player",
+                    "next": "erase"
+                },
+                "erase": {
+                    "type": "event",
+                    "events": [
+                        {
+                            "erasePost": {
+                                "character": "player",
+                                "postName": "postStolen"
+                            }
+                        },
+                        {
+                            "addMessageToAlex": {}
+                        }
+                    ]
+                },
+                "complain": {
+                    "type": "socialNetMessage",
+                    "owner": "player",
+                    "postName": "postStolen",
+                    "character": "player",
+                    "next": "setCommented"
+                },
+                "setCommented": {
+                    "type": "event",
+                    "events": [
+                        {
+                            "commentedPostStolen": {
+                                "variable": "commentedPostStolen",
+                                "value": true,
+                                "global": false
+                            }
+                        }
+                    ]
+                },
+                "default": {
+                    "type": "text",
+                    "character": "player"
+                }
+            },
+            "oldComments": {
+                "root": {
+                    "type": "socialNetMessage",
+                    "owner": "player",
+                    "postName": "postStolen",
+                    "character": "player",
+                    "next": "commentGender"
+                },
+                "commentGender": {
+                    "type": "condition",
+                    "conditions": [
+                        {
+                            "next": "secondCommentMale",
+                            "gender": {
+                                "value": "male",
+                                "operator": "equal",
+                                "global": true,
+                                "default": "male"
+                            }
+                        },
+                        {
+                            "next": "secondCommentFemale",
+                            "gender": {
+                                "value": "female",
+                                "operator": "equal",
+                                "global": true,
+                                "default": "male"
+                            }
+                        }
+                    ]
+                },
+                "secondCommentMale": {
+                    "type": "socialNetMessage",
+                    "owner": "player",
+                    "postName": "postStolen",
+                    "character": "Alex",
+                    "next": "thirdComment"
+                },
+                "secondCommentFemale": {
+                    "type": "socialNetMessage",
+                    "owner": "player",
+                    "postName": "postStolen",
+                    "character": "Ana",
+                    "next": "thirdComment"
+                },
+                "thirdComment": {
+                    "type": "socialNetMessage",
+                    "owner": "player",
+                    "postName": "postStolen",
+                    "character": "Jose",
+                    "next": "fourthComment"
+                },
+                "fourthComment": {
+                    "type": "socialNetMessage",
+                    "owner": "player",
+                    "postName": "postStolen",
+                    "character": "Ana",
+                    "next": "fifthComment"
+                },
+                "fifthComment": {
+                    "type": "socialNetMessage",
+                    "owner": "player",
+                    "postName": "postStolen",
+                    "character": "Alex"
+                }
+            }
         }
     },
     "Alison": {
-        "post0": {
+        "postEarring": {
+            "photo": "photoEarring",
+            "friendshipRequired": true,
+            "comment": {
+                "root": {
+                    "type": "condition",
+                    "conditions": [
+                        {
+                            "next": "alreadyReturned",
+                            "returnedEarring": {
+                                "value": true,
+                                "operator": "equal",
+                                "global": true,
+                                "default": false
+                            }
+                        },
+                        {
+                            "next": "default",
+                            "returnedEarring": {
+                                "value": false,
+                                "operator": "equal",
+                                "global": true,
+                                "default": false
+                            }
+                        }
+                    ]
+                },
+                "alreadyReturned": {
+                    "type": "condition",
+                    "conditions": [
+                        {
+                            "next": "default",
+                            "commentedPostEarring": {
+                                "value": true,
+                                "operator": "equal",
+                                "global": false,
+                                "default": false
+                            }
+                        },
+                        {
+                            "next": "thanks",
+                            "commentedPostEarring": {
+                                "value": false,
+                                "operator": "equal",
+                                "global": false,
+                                "default": false
+                            }
+                        }
+                    ]
+                },
+                "thanks": {
+                    "type": "socialNetMessage",
+                    "owner": "Alison",
+                    "postName": "postEarring",
+                    "character": "player",
+                    "next": "setCommented"
+                },
+                "setCommented": {
+                    "type": "event",
+                    "events": [
+                        {
+                            "commentPostEarring": {
+                                "variable": "commentedPostEarring",
+                                "value": true,
+                                "global": false
+                            }
+                        }
+                    ]
+                },
+                "default": {
+                    "type": "text",
+                    "character": "player"
+                }
+            },
+            "oldComments": {
+                "root": {
+                    "type": "socialNetMessage",
+                    "owner": "Alison",
+                    "postName": "postEarring",
+                    "character": "Alicia",
+                    "next": "secondComment"
+                },
+                "secondComment": {
+                    "type": "socialNetMessage",
+                    "owner": "Alison",
+                    "postName": "postEarring",
+                    "character": "Alison",
+                    "next": "thirdComment"
+                },
+                "thirdComment": {
+                    "type": "socialNetMessage",
+                    "owner": "Alison",
+                    "postName": "postEarring",
+                    "character": "Alicia",
+                    "next": "hasFoundEarring"
+                },
+                "hasFoundEarring": {
+                    "type": "condition",
+                    "conditions": [
+                        {
+                            "next": "foundEarringComment",
+                            "returnedEarring": {
+                                "value": true,
+                                "operator": "equal",
+                                "global": true,
+                                "default": false
+                            }
+                        },
+                        {
+                            "next": "notFoundEarringComment",
+                            "returnedEarring": {
+                                "value": "false",
+                                "operator": "equal",
+                                "global": true,
+                                "default": false
+                            }
+                        }
+                    ]
+                },
+                "foundEarringComment": {
+                    "type": "socialNetMessage",
+                    "owner": "Alison",
+                    "postName": "postEarring",
+                    "character": "Alison"
+                },
+                "notFoundEarringComment": {
+                    "type": "socialNetMessage",
+                    "owner": "Alison",
+                    "postName": "postEarring",
+                    "character": "Alison"
+                }
+            }
+        }
+    },
+    "Guille": {
+        "postMatch": {
+            "photo": "photoMatch",
+            "friendshipRequired": true,
+            "comment": {
+                "root": {
+                    "type": "text",
+                    "character": "player"
+                }
+            },
+            "oldComments": {
+                "root": {
+                    "type": "socialNetMessage",
+                    "owner": "Guille",
+                    "postName": "postMatch",
+                    "character": "Jesus",
+                    "next": "secondComment"
+                },
+                "secondComment": {
+                    "type": "socialNetMessage",
+                    "owner": "Guille",
+                    "postName": "postMatch",
+                    "character": "Miguel"
+                }
+            }
+        }
+    },
+    "Ana": {
+        "postTroll": {
             "photo": {
                 "male": "photoForeheadBoy",
                 "female": "photoForeheadGirl"
             },
-            "friendshipRequired": true
+            "friendshipRequired": false,
+            "comment": {
+                "root": {
+                    "type": "condition",
+                    "conditions": [
+                        {
+                            "next": "default",
+                            "commentedPostTroll": {
+                                "value": true,
+                                "operator": "equal",
+                                "global": false,
+                                "default": false
+                            }
+                        },
+                        {
+                            "next": "decision",
+                            "commentedPostTroll": {
+                                "value": false,
+                                "operator": "equal",
+                                "global": false,
+                                "default": false
+                            }
+                        }
+                    ]
+                },
+                "decision": {
+                    "type": "choice",
+                    "choices": [
+                        {
+                            "next": "report"
+                        },
+                        {
+                            "next": "insult"
+                        },
+                        {
+                            "next": "snitch"
+                        }
+                    ]
+                },
+                "report": {
+                    "type": "text",
+                    "character": "player"
+                },
+                "insult": {
+                    "type": "socialNetMessage",
+                    "owner": "Ana",
+                    "postName": "postTroll",
+                    "character": "player",
+                    "next": "insultReply"
+                },
+                "insultReply": {
+                    "type": "socialNetMessage",
+                    "owner": "Ana",
+                    "postName": "postTroll",
+                    "character": "Ana",
+                    "replyDelay": "1500",
+                    "next": "setCommented"
+                },
+                "snitch": {
+                    "type": "socialNetMessage",
+                    "owner": "Ana",
+                    "postName": "postTroll",
+                    "character": "player",
+                    "next": "setCommented"
+                },
+                "setCommented": {
+                    "type": "event",
+                    "events": [
+                        {
+                            "commentPostEarring": {
+                                "variable": "commentedPostTroll",
+                                "value": true,
+                                "global": false
+                            }
+                        }
+                    ]
+                },
+                "default": {
+                    "type": "text",
+                    "character": "player"
+                }
+            },
+            "oldComments": {
+                "root": {
+                    "type": "socialNetMessage",
+                    "owner": "Ana",
+                    "postName": "postTroll",
+                    "character": "Ana",
+                    "next": "secondComment"
+                },
+                "secondComment": {
+                    "type": "socialNetMessage",
+                    "owner": "Ana",
+                    "postName": "postTroll",
+                    "character": "Jose",
+                    "next": "thirdComment"
+                },
+                "thirdComment": {
+                    "type": "socialNetMessage",
+                    "owner": "Ana",
+                    "postName": "postTroll",
+                    "character": "Alex",
+                    "next": "fourthComment"
+                },
+                "fourthComment": {
+                    "type": "socialNetMessage",
+                    "owner": "Ana",
+                    "postName": "postTroll",
+                    "character": "Ana",
+                    "next": "fifthComment"
+                },
+                "fifthComment": {
+                    "type": "socialNetMessage",
+                    "owner": "Ana",
+                    "postName": "postTroll",
+                    "character": "Ester",
+                    "next": "sixthComment"
+                },
+                "sixthComment": {
+                    "type": "socialNetMessage",
+                    "owner": "Ana",
+                    "postName": "postTroll",
+                    "character": "Ana"
+                }
+            }
         }
     }
 }

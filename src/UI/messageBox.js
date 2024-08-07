@@ -78,8 +78,8 @@ export default class MessageBox extends Phaser.GameObjects.Container {
             0, 0, img, "", boxWidth, text.displayHeight + TEXT_PADDING * heightMultiplier, leftWidth, rightWidth, topHeight, bottomHeigth
         ).setOrigin(0.5, 0.5);
 
-        // Mueve la burbuja a la izquierda o a la derecha dependiendo de de quien es la burbuja de texto
-        if (character === "player" || !character) {
+        // Mueve la burbuja a la izquierda o a la derecha dependiendo de quien es la burbuja de texto
+        if (type === 0 && (character === "player" || !character)) {
             box.x = box.x + (maxWidth / 2) - (box.displayWidth / 2) - BOX_PADDING;
             text.x = box.x - box.displayWidth / 2 + TEXT_PADDING;
         }

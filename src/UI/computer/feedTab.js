@@ -27,8 +27,8 @@ export default class FeedTab extends Phaser.GameObjects.Group {
 
         // Se crea un post que se va a destruir de inmediato para poder calcular el ancho de la listview
         let aux = new Post(this.scene, 0, 0, 1);
-        this.listView = new VerticalListView(this.scene, 3 * this.scene.CANVAS_WIDTH / 5, 1.1 * this.scene.CANVAS_HEIGHT / 5, 1, 45,
-            { width: aux.w, height: 467 });
+        this.listView = new VerticalListView(this.scene, 3 * this.scene.CANVAS_WIDTH / 5, this.scene.CANVAS_HEIGHT / 5, 1, 45,
+            { width: aux.w, height: 482 }, null, true, 50);
         aux.destroy();
         this.add(this.listView);
     }
@@ -41,9 +41,10 @@ export default class FeedTab extends Phaser.GameObjects.Group {
      * @param {String} character - personaje 
      * @param {String} photo - texto que acompana a la foto
      * @param {String} description - descripcion del personaje
+     * @param {DialogNode} commentNode - nodo que se muestra cuando se clica en el icono de comentar
      * @returns {Post}
      */
-    createPost(character, photo, description) {
+    createPost(character, photo, description, commentNode) {
         // Obtener la info del personaje
         let avatar = character;
         if (character === "player") {
@@ -52,6 +53,8 @@ export default class FeedTab extends Phaser.GameObjects.Group {
         let name = this.scene.i18next.t(character, { ns: "names" });
 
         let post = new Post(this.scene, 0, 0, 1, avatar, name, photo, description);
+        post.setCommentNode(commentNode);
+
         post.setVisible(false);
         return post;
     }
@@ -66,9 +69,9 @@ export default class FeedTab extends Phaser.GameObjects.Group {
         // Los posts se van anadiendo al principio
         this.listView.addFirstItem(post, [post.commentButton.hit], [post.listView]);
         // Se hace invisible porque cuando se acepta una solicitud de amistad se anaden todos los posts pendientes
-        // a la listview y esta al recolocarlos va a volver los colliders visibles. Sin embargo, aunque se sigue
-        // en la pestana de solicitudes de amistad y estos colliders deberian ser invisibles
-        post.setVisible(false);
+        // a la listview y esta al recolocarlos va a volver los colliders visibles. Sin embargo, se sigue
+        // en la pestana de solicitudes de amistad y deberian ser invisibles
+        this.listView.setVisible(false);
     }
 
     /**

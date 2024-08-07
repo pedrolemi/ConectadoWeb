@@ -31,7 +31,7 @@ export default class BootScene extends Phaser.Scene {
         bg.setScale(scale);
 
         // Fondo
-        //this.add.rectangle(width / 2, 0, width, height / 1.2, 0x2B9E9E).setOrigin(0.5, 0);
+        this.add.rectangle(width / 2, 0, width, height / 1.2, 0x2B9E9E).setOrigin(0.5, 0);
 
         // Pantalla del ordenador con el tam del canvas
         let screen = this.add.image(width / 2, height / 2, 'PCscreen');
@@ -57,7 +57,7 @@ export default class BootScene extends Phaser.Scene {
 
         // Texto de la palabra cargando
         let loadingText = this.make.text({
-            x: width / 2 ,
+            x: width / 2,
             y: height / 2 - TEXT_OFFSET - BAR_OFFSET,
             text: 'Loading...',
             style: {
@@ -370,6 +370,7 @@ export default class BootScene extends Phaser.Scene {
         let dialogsAndNamespaces = [
             // Ordenador
             'computer/posts.json',
+            'computer/requests.json',
 
             // Dialogos de todos los dias
             'everydayDialog.json',

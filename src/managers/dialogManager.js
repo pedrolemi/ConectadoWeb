@@ -281,11 +281,21 @@ export default class DialogManager {
                 this.scene.phoneManager.phone.setChatNode(this.currNode.chat, this.currNode);
             }
             else if (this.currNode.type === "socialNetMessage") {
-                this.gameManager.computerScene.socialNetScreen.addCommentToPost(this.currNode.user, this.currNode.postName,
-                    this.currNode.character, this.currNode.name, this.currNode.text);
+                let fnAux = () => {
+                    this.gameManager.computerScene.socialNetScreen.addCommentToPost(this.currNode.owner, this.currNode.postName,
+                        this.currNode.character, this.currNode.name, this.currNode.text);
 
-                this.currNode = this.currNode.next[0];
-                this.processNode();
+                    this.currNode = this.currNode.next[0];
+                    this.processNode();
+                }
+                if (this.currNode.replyDelay <= 0) {
+                    fnAux();
+                }
+                else {
+                    setTimeout(() => {
+                        fnAux();
+                    }, this.currNode.replyDelay);
+                }
             }
         }
         else {

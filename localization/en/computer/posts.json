@@ -1,17 +1,158 @@
 {
+    "player": {
+        "upload": {
+            "root": {
+                "text": "I don't have any new photo to upload."
+            }
+        },
+        "postStolen": {
+            "description": "This is me, call me at 543-654-54-31",
+            "comment": {
+                "decision": [
+                    {
+                        "text": "(Delete post)"
+                    },
+                    {
+                        "text": "Alison, this is why you wanted to exchange passwords..."
+                    },
+                    {
+                        "text": "(Don't reply anything)"
+                    }
+                ],
+                "sayErase": {
+                    "text": "I'm gonna delete the post."
+                },
+                "complain": {
+                    "text": "Alison, this is why u wanted to exchange passwords... ur the worst"
+                },
+                "default": {
+                    "text": "I don't have anything to comment right now. I have better things to do."
+                }
+            },
+            "oldComments": {
+                "root": {
+                    "text": "Waiting for ur calls"
+                },
+                "secondCommentMale": {
+                    "text": "We can meet up whenever u want ;)"
+                },
+                "secondCommentFemale": {
+                    "text": "We can meet up whenever u want ;)"
+                },
+                "thirdComment": {
+                    "text": "Hahaha, look at dat ass, it's driving me crazy"
+                },
+                "fourthComment": {
+                    "text": "This goes straight to the class board hahaha"
+                },
+                "fifthComment": {
+                    "text": "But do u get paid?"
+                }
+            }
+        }
+    },
     "Alison": {
-        "post0": "Hi my name is Alison"
-    },
-    "Maria": {
-        "post0": "Hi my name is Alison"
-    },
-    "Alex": {
-        "post0": "Hi my name is Alison"
+        "postEarring": {
+            "description": "My new earrings, I <3 THEM :)",
+            "comment": {
+                "thanks": {
+                    "text": "You're welcome Alison"
+                },
+                "default": {
+                    "text": "I don't have anything to comment right now. I have better things to do."
+                }
+            },
+            "oldComments": {
+                "root": {
+                    "text": "I love them, where did u buy them?"
+                },
+                "secondComment": {
+                    "text": "Pfff gurl, I just lost one in class"
+                },
+                "thirdComment": {
+                    "text": "I hope you find it, look well where u've been :("
+                },
+                "foundEarringComment": {
+                    "text": "{{name}} found it and returned it to me. Thanks a lot :)"
+                },
+                "notFoundEarringComment": {
+                    "text": "It was impossible to find it. Someone might have steal it. Thank so much to all the people who've helped me to find it"
+                }
+            }
+        }
     },
     "Guille": {
-        "post0": "Hi my name is Alison"
+        "postMatch": {
+            "description": "Watching the game",
+            "comment": {
+                "root": {
+                    "text": "I don't have anything to comment right now. I have better things to do."
+                }
+            },
+            "oldComments": {
+                "root": {
+                    "text": "What a game dude!. We should hang out to watch the next one. Btw my dad's bought a huge tv"
+                },
+                "secondComment": {
+                    "text": "I'm in guys, hit me up whenever u want"
+                }
+            }
+        }
     },
-    "player": {
-        "post0": "Hi my name is Alison"
+    "Ana": {
+        "postTroll": {
+            "description": "Looking a nick 4 {{name}}...",
+            "comment": {
+                "decision": [
+                    {
+                        "text": "(Report post)"
+                    },
+                    {
+                        "text": "You're such an assholes."
+                    },
+                    {
+                        "text": "I'm gonna end up having a talk with our tutor."
+                    }
+                ],
+                "report": {
+                    "text": "I'm gonna report the post, hopefully they can delete it."
+                },
+                "insult": {
+                    "text": "Ur all assholes, fuck off. U act like ur 3"
+                },
+                "insultReply": {
+                    "text": "I'm sure ur the one who pissed himself at night hahaha"
+                },
+                "snitch": {
+                    "text": "Im sick of y'all. Tomorrow I'll talk to the tutor"
+                },
+                "default": {
+                    "text": "I don't have anything to comment right now. I have better things to do."
+                }
+            },
+            "oldComments": {
+                "root": {
+                    "text_male": "Look at that forehead. He's SHIPEAD",
+                    "text_female": "Look at that forehead. She's SHIPEAD"
+                },
+                "secondComment": {
+                    "text": "Looks like a big wall hahaha. Why not TRUMP?"
+                },
+                "thirdComment": {
+                    "text_male": "Air, that's what his ears make when they move hahaha",
+                    "text_female": "Air, that's what her ears make when they move hahaha"
+                },
+                "fourthComment": {
+                    "text": "Alex, WIND, not air hahaha"
+                },
+                "fifthComment": {
+                    "text_male": "Don't overthink, we can just call him outcast... well, nobody's gonna talk with him",
+                    "text_female": "Don't overthink, we can just call her outcast... well, nobody's gonna talk with her"
+                },
+                "sixthComment": {
+                    "text": "Outcast isn't very original... what'bout gremlin?"
+                }
+            }
+        }
     }
 }

@@ -2,8 +2,9 @@ import Button from '../button.js';
 import GameManager from '../../managers/gameManager.js';
 import LoginScreen from './loginScreen.js'
 import SocialNetworkScreen from './socialNetworkScreen.js'
+import BaseScene from '../../scenes/gameLoop/baseScene.js';
 
-export default class ComputerScene extends Phaser.Scene {
+export default class ComputerScene extends BaseScene {
     /**
      * Ordenador que se usa dentro del juego para consultar la red social
      * Nota: esta escena existe durante todo el juego, aunque se va durmiendo y despertando
@@ -11,18 +12,18 @@ export default class ComputerScene extends Phaser.Scene {
      * @extends Phaser.Scene
      */
     constructor() {
-        super({ key: 'ComputerScene' });
+        super('ComputerScene');
     }
 
     create() {
-        this.CANVAS_WIDTH = this.sys.game.canvas.width;
-        this.CANVAS_HEIGHT = this.sys.game.canvas.height;
+        super.create();
 
-        this.gameManager = GameManager.getInstance();
-        this.i18next = this.gameManager.i18next;
         this.userInfo = this.gameManager.userInfo;
 
-        this.namespace = "computerInfo";
+        this.namespace = "computer\\computerInfo";
+
+        // No se puede hacer scroll
+        this.rightBound = this.CANVAS_WIDTH;
 
         // Mesa
         let bg = this.add.image(this.CANVAS_WIDTH / 2, this.CANVAS_HEIGHT / 2, 'basePC');
@@ -125,8 +126,6 @@ export default class ComputerScene extends Phaser.Scene {
         // Se inicia la pantalla de login
         this.socialNetScreen.setVisible(false);
         this.loginScreen.start();
-        //this.loginScreen.setVisible(false);
-        //this.socialNetScreen.start();
     }
 
     /**

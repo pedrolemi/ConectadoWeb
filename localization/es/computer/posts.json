@@ -1,17 +1,157 @@
 {
+    "player": {
+        "upload": {
+            "root": {
+                "text": "No tengo ninguna nueva foto que subir."
+            }
+        },
+        "postStolen": {
+            "description_male": "Este soy yo, llamadme al 543-654-54-31",
+            "description_female": "Esta soy yo, llamadme al 543-654-54-31",
+            "comment": {
+                "decision": [
+                    {
+                        "text": "(Borrar publicación)"
+                    },
+                    {
+                        "text": "Alison, para esto querías intercambiar contraseñas..."
+                    },
+                    {
+                        "text": "(No decir nada)"
+                    }
+                ],
+                "sayErase": {
+                    "text": "Voy a borrar la publicación."
+                },
+                "complain": {
+                    "text": "Alison, para esto querías intercambiar contraseñas... eres de lo peor"
+                },
+                "default": {
+                    "text": "No tengo nada que comentar por ahora. Tengo mejores cosas que hacer."
+                }
+            },
+            "oldComments": {
+                "root": {
+                    "text": "Espero vuestras llamadas"
+                },
+                "secondCommentMale": {
+                    "text": "Cuando quieras quedamos ;)"
+                },
+                "secondCommentFemale": {
+                    "text": "Cuando quieras quedamos ;)"
+                },
+                "thirdComment": {
+                    "text": "Jajaja, mira que culo, q no pase hambre"
+                },
+                "fourthComment": {
+                    "text": "Esto va como foto al tablon q hay en clase jajaja"
+                },
+                "fifthComment": {
+                    "text": "Pero cobras?"
+                }
+            }
+        }
+    },
     "Alison": {
-        "post0": "Hola me llamo Alison"
-    },
-    "Maria": {
-        "post0": "Hola me llamo Alison"
-    },
-    "Alex": {
-        "post0": "Hola me llamo Alison"
+        "postEarring": {
+            "description": "Mis nuevos pendientes, I <3 THEM :)",
+            "comment": {
+                "thanks": {
+                    "text": "De nada Alison"
+                },
+                "default": {
+                    "text": "No tengo nada que comentar por ahora. Tengo mejores cosas que hacer."
+                }
+            },
+            "oldComments": {
+                "root": {
+                    "text": "Me encantan, donde te los compraste?"
+                },
+                "secondComment": {
+                    "text": "Pfff tia, acabo de perder uno en clase"
+                },
+                "thirdComment": {
+                    "text": "Ojala lo encuentres, busca bien x donde hayas estado :("
+                },
+                "foundEarringComment": {
+                    "text": "{{name}} los ha encontrado y me los ha devuelto. Muchisimas gracias :)"
+                },
+                "notFoundEarringComment": {
+                    "text": "Ha sido imposible encontrarlo. Alguien se lo habra quedado. Muchas gracias a los que me han ayudado a buscarlo"
+                }
+            }
+        }
     },
     "Guille": {
-        "post0": "Hola me llamo Alison"
+        "postMatch": {
+            "description": "Viendo el partido",
+            "comment": {
+                "root": {
+                    "text": "No tengo nada que comentar por ahora. Tengo mejores cosas que hacer."
+                }
+            },
+            "oldComments": {
+                "root": {
+                    "text": "Partidazo tio. A ver si quedamos para ver el siguiente, que mi padre se ha comprado una tele enorme"
+                },
+                "secondComment": {
+                    "text": "Avisadme que yo me apuntooo"
+                }
+            }
+        }
     },
-    "player": {
-        "post0": "Hola me llamo Alison"
+    "Ana": {
+        "postTroll": {
+            "description": "Buscando un mote para {{name}}...",
+            "comment": {
+                "decision": [
+                    {
+                        "text": "(Denunciar publicación)"
+                    },
+                    {
+                        "text": "Sois estúpidos."
+                    },
+                    {
+                        "text": "Voy a acabar hablando con nuestro tutor."
+                    }
+                ],
+                "report": {
+                    "text": "Voy a denunciar el mensaje, a ver si lo eliminan."
+                },
+                "insult": {
+                    "text": "Sois estúpidos, iros todos a tomar por culo. Pareceis ninños de 3 años"
+                },
+                "insultReply": {
+                    "text": "Seguro que quien se mea encima x las noches eres tu jajaja"
+                },
+                "snitch": {
+                    "text": "Estoy hasta las narices de todo. Mañana hablare con el tutor"
+                },
+                "default": {
+                    "text": "No tengo nada que comentar por ahora. Tengo mejores cosas que hacer."
+                }
+            },
+            "oldComments": {
+                "root": {
+                    "text_male": "Mirad la frente q tiene. Es un CABEZABUQUE",
+                    "text_female": "Mirad la frente q tiene. Es una CABEZABUQUE"
+                },
+                "secondComment": {
+                    "text": "Parece una pared de fronton jajaja. Pongamosle FRONTON"
+                },
+                "thirdComment": {
+                    "text": "Aire, q es lo que producen sus orejas en movimiento jajaja"
+                },
+                "fourthComment": {
+                    "text": "Álex, VIENTO, no aire jajaja"
+                },
+                "fifthComment": {
+                    "text": "No os compliqueis, podemos llamarle margi... total ninguno le vamos a hablar"
+                },
+                "sixthComment": {
+                    "text": "Margi es poco original... q tal gremlin?"
+                }
+            }
+        }
     }
 }

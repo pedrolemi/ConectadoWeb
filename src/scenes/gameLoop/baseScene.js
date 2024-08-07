@@ -27,6 +27,7 @@ export default class BaseScene extends Phaser.Scene {
         this.dialogManager = this.gameManager.UIManager.dialogManager;
         this.phoneManager = this.gameManager.UIManager.phoneManager;
         this.dispatcher = this.gameManager.dispatcher;
+        this.socialNetwork = this.gameManager.computerScene.socialNetScreen;
 
         // Obtiene el plugin de i18n del GameManager
         this.i18next = this.gameManager.i18next;
@@ -450,10 +451,14 @@ export default class BaseScene extends Phaser.Scene {
             node.name = this.i18next.t(fileObj[id].character, { ns: "names" });
 
             // Guarda el usuario que ha subido el post
-            node.user = fileObj[id].user;
+            node.owner = fileObj[id].owner;
 
             // Guarda el numero del post del usuario
             node.postName = fileObj[id].postName;
+
+            if (fileObj[id].replyDelay) {
+                node.replyDelay = fileObj[id].replyDelay;
+            }
 
             // Si hay un nodo despues de este, se crea de manera y se
             // guarda la id de dicho nodo en el array de nodos siguientes

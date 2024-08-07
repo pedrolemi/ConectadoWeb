@@ -18,7 +18,7 @@ export default class VerticalListView extends Phaser.GameObjects.Container {
      * @param {Boolean} autocull - hacer que un los elementos que se salgan de los borden se vuelvan invisibles.
      *                              No supone un cambio visual ni funcional, pero si mejora el rendimiento (opcional)
      */
-    constructor(scene, x, y, scale, padding, boundaries, background, autocull = true, endPadding = 0) {
+    constructor(scene, x, y, scale, padding, boundaries, background, autocull = true, endPadding = 0, focusLastItem = false) {
         super(scene, x, y);
 
         this.scene.add.existing(this);
@@ -96,6 +96,8 @@ export default class VerticalListView extends Phaser.GameObjects.Container {
         this.endPadding = endPadding;
         // Distancia que se deja al final de la lista
         this.autocull = autocull;
+        // Cuando se anade un item al final de la lista, enfocarlo
+        this.focusLastItem = focusLastItem;
 
         // Deslizar la lista
         this.h = boundaries.height * scale;
@@ -419,6 +421,13 @@ export default class VerticalListView extends Phaser.GameObjects.Container {
 
             this.items.push(item);
             this.lastItem = item;
+
+            // Colocar la listview para que enfoque al ultimo item
+            if (this.focusLastItem) {
+                this.itemsCont.y = this.boundedZone.end - this.endPadding - (this.lastItem.y + this.lastItem.h);
+                this.lastSavedPosition.x = this.itemsCont.x;
+                this.lastSavedPosition.y = this.itemsCont.y;
+            }
 
             this.addItemElems(item, hits, listviews);
         }

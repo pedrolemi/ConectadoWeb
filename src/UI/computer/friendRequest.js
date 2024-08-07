@@ -28,6 +28,8 @@ export default class FriendRequest extends Phaser.GameObjects.Container {
         this.refuseNode = null;
 
         let gameManager = GameManager.getInstance();
+        let i18next = gameManager.i18next;
+        let dialogManager = gameManager.UIManager.dialogManager;
 
         this.setScale(scale);
 
@@ -71,7 +73,7 @@ export default class FriendRequest extends Phaser.GameObjects.Container {
         let avatarTrans = {
             x: -257,
             y: 75,
-            scale: 0.265
+            scale: 0.9
         }
         let avatarIcon = this.scene.add.image(avatarTrans.x, avatarTrans.y, 'avatars', avatar);
         avatarIcon.setScale(avatarTrans.scale);
@@ -106,7 +108,7 @@ export default class FriendRequest extends Phaser.GameObjects.Container {
 
         let size = 1.2;
         let fontSize = 24;
-        let buttonsTranslations = gameManager.i18next.t('friendRequestButtons', { ns: "computerInfo", returnObjects: true });
+        let buttonsTranslations = i18next.t('friendRequestButtons', { ns: "computer\\computerInfo", returnObjects: true });
         // Boton para aceptar la peticion de amistad
         this.acceptButton = new ListViewButton(this.scene, 208, 97, size, () => {
             this.setOldFriendRequest(true);
@@ -118,7 +120,7 @@ export default class FriendRequest extends Phaser.GameObjects.Container {
         // Boton para aceptar la peticion de amistad
         this.refuseButton = new ListViewButton(this.scene, this.acceptButton.x - this.acceptButton.w, this.acceptButton.y, size, () => {
             if (this.refuseNode !== null) {
-                gameManager.UIManager.dialogManager.setNode(this.refuseNode);
+                dialogManager.setNode(this.refuseNode);
             }
             else {
                 defaultRefuseFn();

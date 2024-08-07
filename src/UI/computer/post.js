@@ -22,6 +22,8 @@ export default class Post extends Phaser.GameObjects.Container {
         this.scene.add.existing(this);
 
         let gameManager = GameManager.getInstance();
+        let i18next = gameManager.i18next;
+        this.dialogManager = gameManager.UIManager.dialogManager;
 
         this.setScale(scale);
 
@@ -37,7 +39,7 @@ export default class Post extends Phaser.GameObjects.Container {
         // Imagen con el avatar del personaje
         let avatarIcon = this.scene.add.image(-150, 0, 'avatars', avatar);
         elements.push(avatarIcon);
-        avatarIcon.setOrigin(0.5, 0).setScale(0.14);
+        avatarIcon.setOrigin(0.5, 0).setScale(0.5);
         this.add(avatarIcon);
 
         // Nombre del personaje
@@ -80,7 +82,7 @@ export default class Post extends Phaser.GameObjects.Container {
         offset = 10;
         this.commentButton = new ListViewButton(this.scene, photoBg.x + photoBg.displayWidth / 2 - offset, photoBg.y + offset, 0.65, () => {
             if (this.commentNode !== null) {
-                gameManager.UIManager.dialogManager.setNode(this.commentNode);
+                this.dialogManager.setNode(this.commentNode);
             }
         }, { atlas: 'computerElements', frame: 'addComment' }, { x: 1, y: 1 }, { R: 255, G: 255, B: 255 }, { R: 200, G: 200, B: 200 }, { R: 150, G: 150, B: 150 });
         this.commentButton.x -= this.commentButton.w / 2;
@@ -90,7 +92,7 @@ export default class Post extends Phaser.GameObjects.Container {
         // Listview con los comentarios, que aparece a la derecha de la foto
         this.chatWidth = 200;
         this.listView = new VerticalListView(this.scene, photoBg.x + photoBg.displayWidth / 2 + this.chatWidth / 2, photoBg.y, 1, 10,
-            { width: this.chatWidth, height: photoBg.displayHeight }, { atlas: 'computerElements', sprite: 'buttonBg', alpha: 0.5 });
+            { width: this.chatWidth, height: photoBg.displayHeight }, { atlas: 'computerElements', sprite: 'buttonBg', alpha: 0.5 }, true, 0, true);
         elements.push(this.listView);
         this.add(this.listView);
 
@@ -99,7 +101,7 @@ export default class Post extends Phaser.GameObjects.Container {
         nMessagesTextStyle.fontFamily = 'AUdimat-regular';
         nMessagesTextStyle.fontSize = '23px';
         nMessagesTextStyle.color = '#323232';
-        this.nMessagesTranslation = gameManager.i18next.t("commentsNumberText", { ns: "computerInfo" });
+        this.nMessagesTranslation = i18next.t("commentsNumberText", { ns: "computer\\computerInfo" });
         this.nMessagesText = this.scene.add.text(this.listView.x, this.listView.y - 25, "", nMessagesTextStyle);
         this.nMessagesText.setOrigin(0.5);
         this.setMessagesNum();
@@ -143,8 +145,19 @@ export default class Post extends Phaser.GameObjects.Container {
         this.listView.addLastItem(msg);
     }
 
+    /**
+     * Se estable el nodo que se muestra cuando se clica el icono de comentar
+     */
     setCommentNode(node) {
         this.commentNode = node;
+    }
+
+    /**
+     * Se establece el nodo con los comentarios que ya tenia la publicacion
+     * Como son comentarios que van a aparecer desde el principio, inmediatamente se llama al dialogManager
+     */
+    setOldCommentsNode(node) {
+        this.dialogManager.setNode(node);
     }
 
     increaseMessagesNum() {

@@ -11,7 +11,7 @@ export default class BedroomMorningDay1 extends BedroomBase {
         this.livingroom = "LivingroomMorningDay1";
 
         let nodes = this.cache.json.get('bedroomMorningDay1');
-
+        
         // Dialogos del interior del armario y la cama
         this.wardrobe1Node = super.readNodes(nodes, "day1\\bedroomMorningDay1", "wardrobe1", true);
         this.wardrobe2Node = super.readNodes(nodes, "day1\\bedroomMorningDay1", "wardrobe2", true);

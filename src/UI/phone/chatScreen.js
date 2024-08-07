@@ -58,7 +58,7 @@ export default class ChatScreen extends BaseScreen {
 
         // Lista con los mensajes
         this.messagesListView = new VerticalListView(this.scene, this.BG_X, this.iconImage.displayHeight * 1.5 + (this.BG_Y - this.bg.displayHeight / 2),
-            1, 10, { width: this.bg.displayWidth, height: this.bg.displayHeight - this.iconImage.displayHeight * 3 }, null, true, 50);
+            1, 10, { width: this.bg.displayWidth, height: this.bg.displayHeight - this.iconImage.displayHeight * 3 }, null, true, 50, true);
 
         this.add(this.topArea);
         this.add(this.nameText);

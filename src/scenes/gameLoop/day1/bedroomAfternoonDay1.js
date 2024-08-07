@@ -12,6 +12,10 @@ export default class BedroomAfternoonDay1 extends BedroomBase {
 
         // Cambia la hora del movil
         this.phoneManager.setDayInfo("night");
+        
+        // Crer la informacion correspondiente en el ordenador
+        this.socialNetwork.addDailyRequests(1);
+        this.socialNetwork.createDailyPosts(1);
 
         let nodes = this.cache.json.get('bedroomAfternoonDay1');
 
@@ -30,7 +34,7 @@ export default class BedroomAfternoonDay1 extends BedroomBase {
 
         // Cama
         this.bedNode = super.readNodes(nodes, "everydayDialog", "bedroom.bedAfternoon", true);
-        
+
         // Ordenador (el mismo nodo que el de por la manana, pero sin el dialogo del jugador)
         let node = super.readNodes(nodes, "everydayDialog", "bedroom.pc", true);
         node = node.next[0];

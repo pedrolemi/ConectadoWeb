@@ -13,6 +13,9 @@ export default class BedroomAfternoonDay3 extends BedroomBase {
         // Cambia la hora del movil
         this.phoneManager.setDayInfo("night");
 
+        // Crer la informacion correspondiente en el ordenador
+        this.socialNetwork.createDailyPosts(3);
+
         let nodes = this.cache.json.get('bedroomAfternoonDay3');
 
         // Dialogos del interior del armario y la cama
@@ -34,6 +37,6 @@ export default class BedroomAfternoonDay3 extends BedroomBase {
         this.pcNode = node;
 
         this.add.image(852 * this.scale + 1, 848 * this.scale - 1, this.atlasName, 'bedroomJacket').setOrigin(0, 0).setScale(this.scale).setDepth(this.chair.depth + 1);
-        
+
     }
 }

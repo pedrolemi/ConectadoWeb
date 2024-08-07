@@ -11,11 +11,12 @@ export default class SocialNetworkScreen extends Phaser.GameObjects.Group {
     constructor(computerScene) {
         super(computerScene);
 
-        // Nodo del dialog manager que se reproduce cuando se clica en el boton de subir una publicacion
-        this.ownPostNode = null;
-
         // Archivo json con los posts de cada persona
         this.posts = this.scene.cache.json.get('posts');
+        this.requests = this.scene.cache.json.get('requests');
+
+        // Nodo del dialog manager que se reproduce cuando se clica en el boton de subir una publicacion
+        this.ownPostNode = this.readPostsNodes('player.upload');
 
         // Administrar todo lo relacionado con los amigos
         // Solicitud de amistad, posts que van a aparecer si se acepta la solicitud...
@@ -71,7 +72,7 @@ export default class SocialNetworkScreen extends Phaser.GameObjects.Group {
         this.friendRequestNot.setVisible(false);
 
         // Cuando se elimina una solicitud de amistad por medio de un nodo
-        this.scene.gameManager.dispatcher.add("eraseFriendRequest", this, (friendReqInfo) => {
+        this.scene.dispatcher.add("eraseFriendRequest", this, (friendReqInfo) => {
             // Si existe el personaje
             if (this.friends.has(friendReqInfo.character)) {
                 let friendInfo = this.friends.get(friendReqInfo.character);
@@ -84,7 +85,7 @@ export default class SocialNetworkScreen extends Phaser.GameObjects.Group {
         }, true);
 
         // Cuando se elimina un post por medio de un nodo
-        this.scene.gameManager.dispatcher.add("erasePost", this, (postInfo) => {
+        this.scene.dispatcher.add("erasePost", this, (postInfo) => {
             // Si existe el personaje
             if (this.friends.has(postInfo.character)) {
                 let friendInfo = this.friends.get(postInfo.character);
@@ -96,8 +97,14 @@ export default class SocialNetworkScreen extends Phaser.GameObjects.Group {
                 }
             }
         }, true);
+    }
 
-        //new Post(this.scene, this.scene.CANVAS_WIDTH / 2, this.scene.CANVAS_HEIGHT / 2 - 250, 1, "Alison", "Alison", "photoMatch", "hola jajaj");
+    readPostsNodes(objectName) {
+        return this.scene.readNodes(this.posts, 'computer\\posts', objectName, true);
+    }
+
+    readRequestsNodes(objectName) {
+        return this.scene.readNodes(this.requests, 'computer\\requests', objectName, true);
     }
 
     ///////////////////////////////////////
@@ -308,17 +315,17 @@ export default class SocialNetworkScreen extends Phaser.GameObjects.Group {
         }
     }
 
-    /**
-     * PUBLICO
-     * Establecer el nodo del dialogmanaager que aparece cuando se quiere publicar algo
-     * @param {Node} node 
-     */
-    setOwnPostNode(node) {
-        this.ownPostNode = node;
-    }
-
     // SOLICITUDES DE AMISTAD //
-
+    /**
+     * Agregar las solicitudeds de amistad de un dia concreto especificadas en un .json
+     * @param {Number} day - dia 
+     */
+    addDailyRequests(day) {
+        let users = this.requests['day' + day];
+        users.forEach((user) => {
+            this.addFriendRequest(user);
+        });
+    }
 
     /**
      * PUBLICO
@@ -329,8 +336,16 @@ export default class SocialNetworkScreen extends Phaser.GameObjects.Group {
         // Se trata de crear su info
         this.tryToCreateFriendInfo(character);
 
+        // Nodo que se muestra al clicar en el boton para denegar la solicitud
+        let node = null;
+        if (this.requests[character]) {
+            if (this.requests[character]['deny']) {
+                node = this.readRequestsNodes(character + '.deny');
+            }
+        }
+
         // Se anade la solicitud
-        let friendRequest = this.friendsTab.addFriendRequest(character);
+        let friendRequest = this.friendsTab.addFriendRequest(character, node);
 
         let friendInfo = this.friends.get(character);
         friendInfo.request = friendRequest;
@@ -346,31 +361,28 @@ export default class SocialNetworkScreen extends Phaser.GameObjects.Group {
             let friendInfo = this.friends.get(character);
             // Se eliminan todos los posts que el usuario tenian subidos,
             // aunque no se habian mostrado porque el jugador no acepto la solicitud
-            friendInfo.posts.forEach((post, num) => {
+            friendInfo.posts.forEach((post, name) => {
                 post.destroy();
             })
             this.friends.delete(character);
         }
     }
 
+    // ANADIR/ELIMINAR PUBLICACION //
     /**
      * PUBLICO
-     * Establecer el nodo del dialogmanager que aparece cuando se se trata de rechazar una solicitud de amistad
-     * Nota: tiene que existir la peticion de amistad del personaje
-     * @param {Node} node
+     * Crear los posts de un dia concreto especficados en un .json
+     * @param {Number} day - dia 
      */
-    setRefuseNode(character, node) {
-        // Existe el personaje
-        if (this.friends.has(character)) {
-            let friendInfo = this.friends.get(character);
-            // Existe la peticion
-            if (friendInfo.request) {
-                friendInfo.request.setRefuseNode(node);
-            }
+    createDailyPosts(day) {
+        let usersPosts = this.posts['day' + day];
+        for (let user in usersPosts) {
+            let postNames = usersPosts[user];
+            postNames.forEach((postName) => {
+                this.createPost(user, postName);
+            });
         }
     }
-
-    // ANADIR/ELIMINAR PUBLICACION //
 
     /**
      * PUBLICO
@@ -387,21 +399,39 @@ export default class SocialNetworkScreen extends Phaser.GameObjects.Group {
         // Informacion del post
         let friendInfo = this.friends.get(character);
         if (!friendInfo.posts.has(postName)) {
-            let postInfo = this.posts[character][postName];
-            let photo = postInfo.photo;
-            // La foto que se sube varia en funcion del genero del jugador
-            let check = photo instanceof String;
-            if (!check) {
-                photo = postInfo.photo[this.scene.userInfo.gender];
+            // Acceder a la publicacion
+            let postInfo = {
+                object: this.posts[character][postName],
+                fullName: character + '.' + postName
             }
-            let friendshipRequired = postInfo.friendshipRequired;
-            let description = this.scene.i18next.t(character + "." + postName, { ns: "posts" });
+
+            let photo = postInfo.object.photo;
+            // La foto que se sube varia en funcion del genero del jugador
+            let check = typeof photo === 'string' || photo instanceof String;
+            if (!check) {
+                photo = postInfo.object.photo[this.scene.userInfo.gender];
+            }
+
+            // Si se requiere haber aceptado una soliticitud de amistad o no para que aparezca la publicacion
+            let friendshipRequired = postInfo.object.friendshipRequired;
+
+            // Descripcion que aparece junto a la foto
+            let userInfo = this.scene.userInfo;
+            let description = this.scene.i18next.t(postInfo.fullName + '.description', { ns: "computer\\posts", name: userInfo.name, context: userInfo.gender });
+
+            // Nodo que se muestra cuando se clica en el icono de comentar
+            let commentNode = this.readPostsNodes(postInfo.fullName + '.comment');
 
             // Se crea el post
-            let post = this.feedTab.createPost(character, photo, description);
+            let post = this.feedTab.createPost(character, photo, description, commentNode);
 
             // Se anade a la lista de posts del usuario
             friendInfo.posts.set(postName, post);
+
+            // Nodo con los comentarios que ya tiene la publicacion cuando aparece
+            let oldCommentsNode = this.readPostsNodes(postInfo.fullName + '.oldComments');
+            post.setOldCommentsNode(oldCommentsNode);
+
             // Se comprueba si el jugador ha aceptado la solicitud
             // y, entonces se puede anadir el post al tablon
             this.tryToAddPost(character, post, friendshipRequired);
@@ -454,7 +484,7 @@ export default class SocialNetworkScreen extends Phaser.GameObjects.Group {
     addPendingPosts(character) {
         let friendInfo = this.friends.get(character);
         // Los posts pendientes que no se han anadido son los que habia hasta el momento en el map
-        friendInfo.pendingPosts.forEach((post, num) => {
+        friendInfo.pendingPosts.forEach((post, name) => {
             this.feedTab.addPostToList(post);
         });
         friendInfo.pendingPosts = [];
@@ -495,24 +525,6 @@ export default class SocialNetworkScreen extends Phaser.GameObjects.Group {
             // Existe el post
             if (friendInfo.posts.has(postName)) {
                 friendInfo.posts.get(postName).addMessage(text, character, name);
-            }
-        }
-    }
-
-    /**
-     * PUBLICO
-     * Establecer un nodo del dialogmanager que aparece al clicar el boton de comentario de un post
-     * @param {String} character - personaje 
-     * @param {String} postName - post
-     * @param {Node} node - texto 
-     */
-    setPostNode(character, postName, node) {
-        // Existe el usuario
-        if (this.friends.has(character)) {
-            let friendInfo = this.friends.get(character);
-            // Existe el post
-            if (friendInfo.posts.has(postName)) {
-                friendInfo.posts.get(postName).setCommentNode(node);
             }
         }
     }

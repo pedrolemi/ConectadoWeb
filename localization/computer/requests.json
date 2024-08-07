@@ -1,0 +1,43 @@
+{
+    "day1": [
+        "Alison",
+        "Guille",
+        "Jose"
+    ],
+    "Alison": {
+        "deny": {
+            "root": {
+                "type": "text",
+                "character": "player"
+            }
+        }
+    },
+    "Guille": {
+        "deny": {
+            "root": {
+                "type": "text",
+                "character": "player",
+                "next": "decision"
+            },
+            "decision": {
+                "type": "choice",
+                "choices": [
+                    {
+                        "next": "refuse"
+                    },
+                    {}
+                ]
+            },
+            "refuse": {
+                "type": "event",
+                "events": [
+                    {
+                        "eraseFriendRequest": {
+                            "character": "Guille"
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}

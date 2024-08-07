@@ -135,13 +135,14 @@ export default class FriendsTab extends Phaser.GameObjects.Group {
     /**
      * Agregar una peticiones de amistad
      * @param {String} character - personaje 
+     * @param {DialogNode} node - node que se muestra cuando se clica en denegar la solicitud
      * @returns {FriendRequest}
      */
-    addFriendRequest(character) {
+    addFriendRequest(character, node) {
         // Obtener la info del personaje
         let avatar = character;
         let name = this.scene.i18next.t(character, { ns: "names" });
-        let bio = this.scene.i18next.t("bio." + character, { ns: this.scene.namespace });
+        let bio = this.scene.i18next.t(character + ".bio", { ns: "computer\\requests" });
 
         let friendRequest = new FriendRequest(this.scene, 0, 0, 1, avatar, name, bio,
             // Rechazar
@@ -175,6 +176,8 @@ export default class FriendsTab extends Phaser.GameObjects.Group {
                     });
                 }
             });
+
+        friendRequest.setRefuseNode(node);
 
         // Se agrega la peticion de amistad tanto a la listview como a la lista de peticiones
         this.listView.addLastItem(friendRequest, friendRequest.getHits());

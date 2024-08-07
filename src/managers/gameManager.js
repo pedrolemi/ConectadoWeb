@@ -217,7 +217,6 @@ export default class GameManager {
             this.changeFriendship(obj.character, obj.value);
         }, true);
 
-
         // Se anade a los eventos permanentes el evento terminar un chat para indicar que ya no hay nada mas que contestar
         this.dispatcher.add("endChat", this, (obj) => {
             let chatName = this.i18next.t("textMessages." + obj.chat, { ns: "phoneInfo", returnObjects: true });
@@ -395,8 +394,6 @@ export default class GameManager {
         };
         this.currentScene.scene.wake(this.currentScene.scene.key, params);
     }
-
-
 
 
     ///////////////////////////////////////

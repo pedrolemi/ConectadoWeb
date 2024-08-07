@@ -1,7 +1,6 @@
 {
     "yourUserText": "Tu usuario",
     "yourPasswordText": "Tu contraseña",
-
     "loginScreen": {
         "subtitleText": "¡CONECTA CON TUS AMIGOS!",
         "userInput": {
@@ -13,7 +12,6 @@
         "errorText": "El usuario/contraseña introducidos son incorrectos",
         "enterButton": "Entrar"
     },
-
     "socialNetScreen": {
         "tabTexts": {
             "feed": "Tablón",
@@ -26,16 +24,9 @@
         "pendingRequestsText": "Peticiones pendientes:",
         "informationText": "Este es tu tablón, mira lo que tus amigos han compartido"
     },
-
     "commentsNumberText": "Comentarios",
-    
     "friendRequestButtons": {
         "acceptText": "Aceptar solicitud",
         "denyText": "Denegar solicitud"
-    },
-    
-    "bio": {
-        "Alison": "Hola holita",
-        "Guillermo": "holu"
     }
 }

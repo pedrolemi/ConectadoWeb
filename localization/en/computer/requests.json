@@ -1,0 +1,29 @@
+{
+    "Alison": {
+        "bio": "There's alwasy a reason to keep going",
+        "deny": {
+            "root": {
+                "text": "I can't refuse the invitation. She's the first person who seems interested in being my friend."
+            }
+        }
+    },
+    "Guille": {
+        "bio": "If the plan doesn't work change the plan, but don't change the goal",
+        "deny": {
+            "root": {
+                "text": "I don't have a reason to refuse his invitation. Do I really wanna refuse it?"
+            },
+            "decision": [
+                {
+                    "text": "Yes, it's the best if I don't accept it."
+                },
+                {
+                    "text": "No, I better think about it."
+                }
+            ]
+        }
+    },
+    "Jose": {
+        "bio": ":) ... (:"
+    }
+}

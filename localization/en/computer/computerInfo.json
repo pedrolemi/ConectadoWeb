@@ -1,7 +1,6 @@
 {
     "yourUserText": "Tu usuario",
     "yourPasswordText": "Tu contraseña",
-
     "loginScreen": {
         "subtitleText": "CONNECT WITH YOUR FRIENDS!",
         "userInput": {
@@ -13,7 +12,6 @@
         "errorText": "User/Password introduced are incorrect",
         "enterButton": "Enter"
     },
-
     "socialNetScreen": {
         "tabTexts": {
             "feed": "Dashboard",
@@ -26,16 +24,9 @@
         "pendingRequestsText": "Pending petitions: ",
         "informationText": "This is your dashboard, look what your friends have shared"
     },
-
     "commentsNumberText": "Comments",
-
     "friendRequestButtons": {
         "acceptText": "Accept",
         "denyText": "Deny"
-    },
-
-    "bio": {
-        "Alison": "Hola holita",
-        "Guillermo": "holu"
     }
 }

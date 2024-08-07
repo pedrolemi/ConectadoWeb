@@ -1,7 +1,7 @@
 {
     "phone": {
         "root": {
-            "text": "I have nothing to answer"
+            "text": "I have nothing to answer."
         }
     },
     
@@ -9,7 +9,7 @@
         "pc": {
             "root": [
                 {
-                    "text": "If I turn it on now, I will be late for sure."
+                    "text": "If I turn it on now, I'll be late for sure."
                 },
                 {
                     "text": "Better to wait till afternoon."
@@ -20,10 +20,10 @@
             },
             "pcChoice": [
                 {
-                    "text": "Yes"
+                    "text": "Yes."
                 },
                 {
-                    "text": "No"
+                    "text": "No."
                 }
             ],
             "leavePC":{
@@ -37,7 +37,7 @@
                     "text": "I've just come back."
                 },
                 {
-                    "text": "I do not need the backpack at all."
+                    "text": "I don't need the backpack at all."
                 }
             ]
         },
@@ -48,10 +48,10 @@
             },
             "choices": [
                 {
-                    "text": "Yes"
+                    "text": "Yes."
                 },
                 {
-                    "text": "No"
+                    "text": "No."
                 }
             ]
         }
@@ -73,7 +73,7 @@
     "playground": {
         "homeMorning": {
             "root": {
-                "text": "I've just arrived, I cannot leave yet."
+                "text": "I've just arrived, I can't leave yet."
             }
         },
         "homeBreak": {
@@ -89,7 +89,7 @@
         "doorAfternoon": {
             "root": [
                 {
-                    "text": "There are no more classes today and there is nobody left."
+                    "text": "There are no more classes today and there's nobody left."
                 },
                 {
                     "text": "I'll better go home."
@@ -120,8 +120,8 @@
         "bathroom": {
             "root": {
                 "text": "",
-                "text_male": "I cannot go there, It's the girls' restroom.",
-                "text_female": "I cannot go there, It's the boys' restroom."
+                "text_male": "I can't go there, It's the girls' toilet.",
+                "text_female": "I can't go there, It's the boys' toilet."
             }
         },
         "class": {
@@ -130,7 +130,7 @@
             },
             "choices": [
                 {
-                    "text": "(Get in anyway)."
+                    "text": "(Get in anyway)"
                 },
                 {
                     "text": "I'll go for another walk instead."
@@ -143,14 +143,14 @@
     "class": {
         "table": {
             "root": {
-                "text": "This place is available, may I sit here?"
+                "text": "This place is available. May I sit here?"
             },
             "choices": [
                 {
-                    "text": "Yes"
+                    "text": "Yes."
                 },
                 {
-                    "text": "No"
+                    "text": "No."
                 }
             ],
             "teacherArrive": {
@@ -176,7 +176,7 @@
                 "text": "It's a picture of me from yesterday, right after I removed the gum."
             },
             {
-                "text": "With a very original sentence... \"A baby arrived to class\" "
+                "text": "With a very original sentence... \"A baby arrived to class\""
             }
         ],
         "gumNotWashed": [

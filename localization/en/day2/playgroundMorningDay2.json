@@ -1,14 +1,14 @@
 {
     "ana": {
         "talked": {
-            "text": "Get lost. I don't have anything to talk with you."
+            "text": "Get lost. I have nothing to talk with you."
         },
         "mean": {
-            "text": "What are you looking at? Say something or leave"
+            "text": "What are you looking at? Say something or leave."
         },
         "normal": [
             {
-                "text": "Good morning {{name}}."
+                "text": "Good morning, {{name}}."
             },
             {
                 "text": "Do you want something?"
@@ -16,10 +16,10 @@
         ],
         "choices": [
             {
-                "text": "Nothing (you leave)"
+                "text": "Nothing (you leave)."
             },
             {
-                "text": "I've been told about you and Alex speaking of some prank."
+                "text": "I've been told about you and Alex pulling a prank on me."
             }
         ],
         "warnMean": {
@@ -27,10 +27,10 @@
         },
         "warnNormal": [
             {
-                "text": "Damn, you caught us, it was silly."
+                "text": "Damn, you caught us. It was a silly thing."
             },
             {
-                "text": "But it's not funny anymore, we won't do it."
+                "text": "But it's not funny anymore. We won't do it."
             }
         ]
     },
@@ -44,10 +44,10 @@
         },
         "notMetChoices": [
             {
-                "text": "No, nothing, bye."
+                "text": "No, nothing. Bye."
             },
             {
-                "text": "Say hello. I always see you alone and reading."
+                "text": "To say hello. I always see you alone and reading."
             }
         ],
         "niceResponse": [
@@ -55,7 +55,7 @@
                 "text": "Very kind."
             },
             {
-                "text": "People don't use to talk to me."
+                "text": "People don't usually to talk to me."
             },
             {
                 "text": "Have a nice day."
@@ -64,10 +64,10 @@
 
         "ignore": [
             {
-                "text": "I'm reading"
+                "text": "I'm reading."
             },
             {
-                "text": "If you don't mind...(She ignores you and keeps reading)"
+                "text": "If you don't mind... (She ignores you and keeps reading)."
             }
         ],
 
@@ -76,10 +76,10 @@
                 "text": "Good morning, {{name}}."
             },
             {
-                "text": "I've heard Alex talking to Ana about playing you a joke."
+                "text": "I've heard Alex talking to Anna about pulling a prank on you."
             },
             {
-                "text": "I don't know what might be, but be careful, they aren't usually very funny."
+                "text": "I don't know what might be, but be careful. They aren't very funny to be precise."
             }
         ],
         "warnChoices": [
@@ -91,7 +91,7 @@
             }
         ],
         "warnGoodbye": {
-            "text": "See you later, bye."
+            "text": "See you later. Bye."
         },
         "bellRinging": {
             "text": "<<The bell is ringing>>"
@@ -101,20 +101,20 @@
     "jose": {
         "notTalked": [
             {
-                "text": "Have you seen that mobile app that checks your relationship with the people you talk more?"
+                "text": "Have you seen that app that checks your relationship with the people you talk to the most?"
             },
             {
-                "text": "It tells you who you get along with or not of all the people that downloaded it."
+                "text": "It tells you who you get along with or not among all the people that also downloaded it."
             },
             {
                 "text": "It's said it is really accurate, but how it works isn't clear."
             },
             {
-                "text": "I've seen you already have it."
+                "text": "I see you already have it."
             }
         ],
         "talked": {
-            "text": "See ya"
+            "text": "See ya."
         }
     }
 }

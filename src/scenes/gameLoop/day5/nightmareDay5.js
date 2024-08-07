@@ -78,9 +78,6 @@ export default class NightmareDay5 extends NightmareBase {
 
         let node = this.readNodes("");
 
-        // Test
-        this.gameManager.setValue("ending", "good");
-
         // Se hace un fade in de la camara y cuando termina, se inicia el dialogo
         this.cameras.main.fadeIn(500, 0, 0, 0);
         this.cameras.main.once(Phaser.Cameras.Scene2D.Events.FADE_IN_COMPLETE, (cam, effect) => {

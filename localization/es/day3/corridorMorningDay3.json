@@ -12,12 +12,12 @@
                 "text": "Estaba mirando el tablón."
             },
             {
-                "text": "Y... Será mejor que no lo mires, ignóralo hoy."
+                "text": "Y... será mejor que no lo mires. Ignóralo hoy."
             }
         ],
         "choices": [
             {
-                "text": "Ya lo he visto"
+                "text": "Ya lo he visto."
             },
             {
                 "text": "¿Por qué? ¿Qué hay?"
@@ -25,10 +25,10 @@
         ],
         "seen": [
             {
-                "text": "Lo siento, Álex está llegando demasiado lejos."
+                "text": "Lo siento. Álex está llegando demasiado lejos."
             },
             {
-                "text": "Igual deberias hablar con el profesor o a la directora."
+                "text": "Igual deberías hablar con el profesor o a la directora."
             }
         ],
         "ask": [

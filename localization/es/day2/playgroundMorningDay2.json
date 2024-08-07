@@ -1,14 +1,14 @@
 {
     "ana": {
         "talked": {
-            "text": "Piérdete, no tengo nada que hablar contigo."
+            "text": "Piérdete. No tengo nada que hablar contigo."
         },
         "mean": {
-            "text": "¿Qué estás mirando? ¿Di algo o vete?"
+            "text": "¿Qué estás mirando? Di algo o vete."
         },
         "normal": [
             {
-                "text": "Buenos días {{name}}."
+                "text": "Buenos días, {{name}}."
             },
             {
                 "text": "¿Querías algo?"
@@ -19,32 +19,32 @@
                 "text": "Nada (te vas)."
             },
             {
-                "text": "Me han dicho que has hablado con Álex de hacerme una broma."
+                "text": "Me han dicho que has hablado con Álex de gastarme una broma."
             }
         ],
         "warnMean": {
-            "text": "Sí, ¿Y?, venga, vete."
+            "text": "Sí, ¿y?. Venga, vete."
         },
         "warnNormal": [
             {
-                "text": "Vaya, nos has pillado, era una tonteria."
+                "text": "Vaya, nos has pillado. Era una tontería."
             },
             {
-                "text": "Pero ya no tiene gracia, no la haremos."
+                "text": "Pero ya no tiene gracia. No la haremos."
             }
         ]
     },
 
     "maria": {
         "talked": {
-            "text": "Ya he hablado con María, debería ver quién más hay por el patio esperando a que suene la campana."
+            "text": "Ya he hablado con María. Debería ver quién más hay por el patio esperando a que suene la campana."
         },
         "notMet": {
             "text":  "¿Querías algo?"
         },
         "notMetChoices": [
             {
-                "text": "No nada, adiós."
+                "text": "No, nada. Adiós."
             },
             {
                 "text": "Saludarte, siempre te veo sola y leyendo."
@@ -64,10 +64,10 @@
 
         "ignore": [
             {
-                "text": "Estoy leyendo"
+                "text": "Estoy leyendo."
             },
             {
-                "text": "Si no te importa... (Te ignora y sigue leyendo)"
+                "text": "Si no te importa... (Te ignora y sigue leyendo)."
             }
         ],
 
@@ -79,7 +79,7 @@
                 "text": "Antes he escuchado a Álex hablar con Ana sobre gastarte una broma."
             },
             {
-                "text": "No sé qué puede ser, pero ten cuidado, no suelen ser graciosas precisamente."
+                "text": "No sé qué puede ser, pero ten cuidado. No suelen ser graciosas precisamente."
             }
         ],
         "warnChoices": [
@@ -91,7 +91,7 @@
             }
         ],
         "warnGoodbye": {
-            "text": "Nos vemos después, hasta luego"
+            "text": "Nos vemos después. Hasta luego"
         },
         "bellRinging": {
             "text": "<<La campana está sonando>>"
@@ -101,7 +101,7 @@
     "jose": {
         "notTalked": [
             {
-                "text": "¿Has visto la aplicación de móvil que comprueba tu relación con la gente con la que más hablas?"
+                "text": "¿Has visto la aplicación que comprueba tu relación con la gente con la que más hablas?"
             },
             {
                 "text": "Te dice con quién te llevas mejor o peor de los que también tienen instalada la aplicación."
@@ -110,7 +110,7 @@
                 "text": "Dicen que es muy exacta, pero aún no se sabe como funciona."
             },
             {
-                "text": "Ya he visto que tú también la tienes."
+                "text": "Veo que ya la tienes."
             }
         ],
         "talked": {

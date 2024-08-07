@@ -5,26 +5,26 @@
                 "text": "I think I have everything ready..."
             },
             {
-                "text": "Aye, I have everything. Better take the backpack and leave now."
+                "text": "Aye, I have everything. I better take the backpack and leave now."
             }
         ]
     },
 
     "wardrobe1": {
         "root": {
-            "text": "There is nothing useful."
+            "text": "There's nothing useful."
         }
     },
 
     "wardrobe2": {
         "root": {
-            "text": "I have to clean all this up eventually, but now i have to go to school."
+            "text": "I'll have to clean all this up eventually, but I have to go to school now."
         }
     },
     
     "bed": {
         "root": {
-            "text": "Now that i am already up i should not lay down again."
+            "text": "Now that I'm already up I shouldn't lay down again."
         }
     }
 

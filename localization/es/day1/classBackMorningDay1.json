@@ -25,7 +25,9 @@
             "text_female": "La nueva está en mi sitio."
         },
         "teacherAnswer": {
-            "text": "Su nombre es {{name}}. Siéntate por ahora en otro lugar, he pedido a Alison que le ayude en sus primeros días."
+            "text": "",
+            "text_male": "Su nombre es {{name}}. Siéntate por ahora en otro lugar. Le he pedido a Alison que lo ayude en sus primeros días.",
+            "text_female": "Su nombre es {{name}}. Siéntate por ahora en otro lugar. Le he pedido a Alison que la ayude en sus primeros días."
         }
     }
 

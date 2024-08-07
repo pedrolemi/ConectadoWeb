@@ -9,10 +9,10 @@
         },
         "notFound2": [
             {
-                "text": "No, ni idea, revisa bien la clase por si acaso."
+                "text": "No, ni idea. Revisa bien la clase por si acaso."
             },
             {
-                "text": "Si veo algo te aviso."
+                "text": "Si veo algo, te aviso."
             }
         ],
 
@@ -33,7 +33,7 @@
         ],
         "pranked": [
             {
-                "text": "(Bien, parece que no se ha dado cuenta)"
+                "text": "(Bien. Parece que no se ha dado cuenta)"
             },
             {
                 "text": "(Espero que ahora me digan dónde está mi móvil)"
@@ -52,7 +52,7 @@
                 "text": "(Entrar de todas formas)"
             },
             {
-                "text": "Marcharse"
+                "text": "(Marcharse)"
             }
         ]
     }

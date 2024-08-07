@@ -3,13 +3,13 @@
         "introduction": {
             "root": [
                 {
-                    "text": "So...have we already worked out this?"
+                    "text": "So... have we already worked this out?"
                 },
                 {
                     "text": "Do you know where to sit down?"
                 },
                 {
-                    "text": "Perhaps you should avoid those gums to fall on the chairs by hitting them or you'll have to sit down on one of them."
+                    "text": "Perhaps you should avoid those gums to fall on the chairs by hitting them. Or else,d you'll have to sit down on one of them."
                 }
             ]
         },
@@ -19,7 +19,7 @@
                     "text": "You'll have to sit down on a gum."
                 },
                 {
-                    "text": "Hahaha, go on, sit down."
+                    "text": "Hahaha. Go on, sit down."
                 },
                 {
                     "text": "Come on, what are you waiting for?"

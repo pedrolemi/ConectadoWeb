@@ -48,7 +48,7 @@
                 "text": "No me pareces rara."
             },
             {
-                "text": "Voy a bajar al recreo, si quieres venir estaré abajo."
+                "text": "Voy a bajar al recreo. Si quieres venir, estaré abajo."
             }
         ],
         "stayAnswer": [
@@ -56,10 +56,10 @@
                 "text": "Gracias, eres muy amable."
             },
             {
-                "text": "Pero al menos hoy me quedaré aquí, me queda poco para terminar el libro."
+                "text": "Pero al menos hoy me quedaré aquí. Me queda poco para terminar el libro."
             },
             {
-                "text": "Pásalo muy bien en el recreo, y evita a Alex, es estúpido."
+                "text": "Pásalo muy bien en el recreo. Y evita a Álex, es estúpido."
             }
         ],
         
@@ -81,7 +81,7 @@
         },
         "choices":[
             {
-                "text": "No es nada"
+                "text": "No es nada."
             },
             {
                 "text": "(No contestar, ya la veré luego)"
@@ -98,7 +98,7 @@
                 "text": "¿Aún no has encontrado nada?"
             },
             {
-                "text": "Sigue buscando por favor."
+                "text": "Sigue buscando, por favor."
             }
         ],
 

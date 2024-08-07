@@ -13,7 +13,7 @@
     "mom": {
         "notTalked": [
             {
-                "text": "You're back, {{name}}"
+                "text": "You're back, {{name}}."
             },
             {
                 "text": "How was your day?"
@@ -28,13 +28,13 @@
 
         "choices1": [
             {
-                "text": "Good, the usual, I'm going to my room."
+                "text": "Good, the usual. I'm going to my room."
             },
             {
-                "text": "Today Alex and Ana tried to blackmail me."
+                "text": "Today Alex and Anna tried to blackmail me."
             },
             {
-                "text": "Today Alex and Ana blackmailed me"
+                "text": "Today Alex and Anna blackmailed me."
             },
             {
                 "text": "(Change the topic)"
@@ -43,24 +43,24 @@
 
         "mariaNotPranked": [
             {
-                "text": "They've tried me to stick a poster of Maria."
+                "text": "They've tried to make me stick a poster on Maria."
             },
             {
-                "text": "Called themselves school kings or something."
+                "text": "They think they're the kings of school or something."
             }
         ],
         "mariaPranked": [
             {
-                "text": "They've made me stick a poster of Maria..."
+                "text": "They've made me stick a poster on Maria..."
             },
             {
-                "text": "I had no other chance if I wanted my mobile back."
+                "text": "I had no other chance if I wanted my phone back."
             }
         ],
 
         "choices2": [
             {
-                "text": "I've lost the mobile phone today."
+                "text": "I've lost my mobile phone today."
             },
             {
                 "text": "Someone took my mobile phone."
@@ -69,24 +69,24 @@
                 "text": "Alison, I can trust her."
             },
             {
-                "text": "I'm going to my room, we've talked enough."
+                "text": "I'm going to my room. We've talked enough."
             }
         ],
         "lostPhone": {
-            "text": "They took my phone away and I couldn't get it back."
+            "text": "Someone took my phone away and I couldn't get it back."
         },
         "lostPhone2": {
-            "text": "Well you won't have a mobile phone then. You have to be more careful with your belongings."
+            "text": "Well, you won't have a mobile phone then. You have to be more careful with your belongings."
         },
 
         "foundPhone": [
             {
-                "text": "Today they've taken away my phone."
+                "text": "Today someone took my phone away."
             },
             {
                 "text": "",
-                "text_male": "And someone left it on the girls' bathroom",
-                "text_female": "And someone left it on the boys' bathroom"
+                "text_male": "And then left it on the girls' toilet.",
+                "text_female": "And then left it on the boys' toilet."
             }
         ],
         "foundPhone2": {
@@ -98,15 +98,15 @@
                 "text": "Alison has surprised me. I can really trust her."
             },
             {
-                "text": "Today we've exchanged out passwords."
+                "text": "Today we've exchanged our passwords."
             }
         ],
         "exchangedPassword2": [
             {
-				"text": "How dare you!? What if she shares them or passes herself off as you."
+				"text": "How could you do that!? What if she shares them or impersonates you?"
 			},
 			{
-				"text": "Don't you think what you do?."
+				"text": "Don't you think about what you do?."
 			}
         ],
         "exchangedPassword3": [
@@ -130,25 +130,25 @@
         },
         "meetingChoices": [
             {
-                "text": "Yes, please, I can't take it any longer."
+                "text": "Yes, please. I can't take it any longer."
             },
             {
-                "text": "No, it'll be even worse."
+                "text": "No. It'll be even worse."
             }
         ],
         "acceptMeeting": {
-            "text": "Don't worry honey, we will fix it all."
+            "text": "Don't worry honey. We will fix all of this."
         },
 
         "rejectMeeting": {
-            "text": "Alright, we won't go for now."
+            "text": "Alright. We won't go for now."
         },
         "rejectMeeting2": {
-            "text": "But if anything serious happens...we won't get stopped."
+            "text": "But if anything serious happens... we're not going to sit down and watch."
         },
 
         "meetingSuccess": {
-            "text": "More reason to go tomorrow to the principal's office and fix all this."
+            "text": "More reason to go tomorrow to the principal's office and fix all of this."
         }
     },
 
@@ -161,20 +161,20 @@
                 "text": "I think I had one in the entrance's table...third drawer..."
             },
             {
-                "text": "Here it is...does it work?... Yeaaaah, goodness."
+                "text": "Here it is... Does it work?... Yeaaaah. Thank goodness."
             },
             {
-                "text": "What's all these messages?"
+                "text": "What's with all these messages?"
             }
         ]
     },
 
     "classChat": {
         "root": {
-            "text": "looks like u didnt kickme out, cheers. as a gift ill tell you I love sucking penises :)"
+            "text": "looks like u didnt kick me out, cheers. as a gift ill tell you I love sucking penises :)"
         },
         "message2": {
-            "text": "actually i'm into everything, if anyone wants lemme know"
+            "text": "actually I'm into everything, if anyone wants lemme know"
         },
         "message3": {
             "text": "thanks 4 confessing, but we already knew, it's written all over your face"
@@ -186,7 +186,7 @@
             "text": "whats this? why r u saying these things?"
         },
         "message6": {
-           "text": "the best day and i missed it...what did i loose?"
+           "text": "the best day and I missed it...what did I loose?"
         },
         "message7": {
             "text": "",
@@ -201,7 +201,7 @@
                 "text": "I didn't write anything"
             },
             {
-                "text": "Alex, Ana, fuck you"
+                "text": "Alex, Anna, fuck you"
             },
             {
                 "text": "As you heard, I love it"
@@ -219,17 +219,17 @@
         },
 
         "fkU": {
-            "text": "Álex, Ana, fuck you both, I know it's your thing"
+            "text": "Alex, Anna, fuck you both, I know this was your thing"
         },
         "fkU2": {
-            "text": "maybe it is, so? we already have photos of the conversation"
+            "text": "maybe it was, so? we already have photos of the conversation"
         },
         "fkU3": {
             "text": "tomorrow everyone will know about your personal tastes hahaha"
         },
 
         "agree": {
-            "text": "Yes, I love it, problem? Como oís, me encanta, algún problema? YOU ARE JEALOUS!!"
+            "text": "Yes, I love it, problem? YOU ARE JEALOUS!!"
         }
     },
 
@@ -237,7 +237,7 @@
         "root": {
             "text": "",
             "text_male": "youre hot, 2morrow in the toilet ya know ;)",
-            "text_female": "imma femme & i know u 2, 2morrow in the toilet ya know ;)"
+            "text_female": "imma femme & I know u 2, 2morrow in the toilet ya know ;)"
         },
         "message2": {
             "text": "this is so unlike you {{name}}, u got trolled right?"
@@ -255,13 +255,13 @@
         ],
 
         "notMe": {
-            "text": "Sorry María, I didn't write it, they might write you when they stole my phone"
+            "text": "Sorry Maria, I didn't write it, they might write you when they stole my phone"
         },
         "notMe2": {
-            "text": "i'm so sorry, really"
+            "text": "I'm so sorry, really"
         },
         "notMe3": {
-            "text": "i believe u, relax, get some rest"
+            "text": "I believe u, relax, get some rest"
         },
 
         "wasMe": {

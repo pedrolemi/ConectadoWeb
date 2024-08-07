@@ -29,7 +29,6 @@ export default class CorridorAfternoonDay3 extends CorridorBase {
 
 
         this.dispatcher.addOnce("setTalked", this, (obj) => {
-            // console.log(obj);
             this.stairsNode = null;
         });
 

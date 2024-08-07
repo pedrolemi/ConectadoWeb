@@ -118,8 +118,6 @@ export default class PlaygroundMorningDay3 extends PlaygroundBase {
         
         // Evento llamado cuando suena la campana
         this.dispatcher.addOnce("openDoors", this, (obj) => {
-            console.log(obj);
-
             // Cambia la hora del movil
             this.phoneManager.setDayInfo("classStart");
 
@@ -130,8 +128,6 @@ export default class PlaygroundMorningDay3 extends PlaygroundBase {
         
         // Evento llamado cuando acaba el dialogo de ver la foto
         this.dispatcher.add("closePhoto", this, (obj) => {
-            console.log(obj);
-
             // Oculta la foto
             this.photo.visible = false;
         });

@@ -16,33 +16,33 @@
                 "text": "Nothing to note really."
             },
             {
-                "text": "María didn't come."
+                "text": "Maria didn't come."
             },
             {
-                "text": "(Talk about other topic.)"
+                "text": "(Talk about other topic)"
             }
         ],
         "maria": {
-            "text": "I haven't seen María today."
+            "text": "I haven't seen Maria today."
         },
         
         "choices2": [
             {
-				"text": "The class"
+				"text": "The class."
 			},
 			{
-				"text": "(Tell about the picture on the board.)"
+				"text": "(Tell about the picture on the board)"
 			},
 			{
-				"text": "(Talk about other classmates.)"
+				"text": "(Talk about other classmates)"
 			}
         ],
         "school": [
             {
-                "text": "Almost everyone have ignored me, they barely talked to me."
+                "text": "Almost everyone have ignored me. They barely talked to me."
             },
             {
-                "text": "It's like everyone was avoiding me or gaving me the silent treatment."
+                "text": "It's like everyone was avoiding me or giving me the silent treatment."
             }
         ],
         "board": [
@@ -64,10 +64,10 @@
 
         "choices3": [
             {
-                "text": "I've spoken to Guille"
+                "text": "I've spoken to Guille."
             },
             {
-                "text": "I'm going to my room, i have stuff to do."
+                "text": "I'm going to my room. I have stuff to do."
             }
         ],
         "guille": [
@@ -75,7 +75,7 @@
                 "text": "Guille told me that Alex hates me."
             },
             {
-                "text": "Álex is making my life miserable."
+                "text": "Alex is making my life miserable."
             },
             {
                 "text": "And he's threatening half of the class to ignore me."
@@ -83,7 +83,7 @@
         ],
         "aboutBoard": [
             {
-                "text": "And he told me that Ana is the first one following his game."
+                "text": "And he told me that Anna is the first one following his game."
             },
             {
                 "text": "She arrived the first this morning..."

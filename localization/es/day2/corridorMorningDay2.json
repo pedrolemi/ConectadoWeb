@@ -26,7 +26,7 @@
             "text": "¿Por qué no empezamos de cero?"
         },
         "askReply": {
-            "text": "De acuerdo, entremos en clase."
+            "text": "De acuerdo. Entremos en clase."
         },
 
         "distrust": [
@@ -39,8 +39,8 @@
         ],
         "distrustReply": {
             "text": "",
-            "text_male": "Si has terminado de darme la chapa, lárgate, capullo", 
-            "text_female": "Si has terminado de darme la chapa, lárgate, estúpida"
+            "text_male": "Si has terminado de darme la chapa, lárgate, capullo.", 
+            "text_female": "Si has terminado de darme la chapa, lárgate, estúpida."
             
         },
 
@@ -48,7 +48,7 @@
             "text": "¿Sigues enfadado por lo del sitio de ayer?"
         },
         "normalReply": {
-            "text": "Ya veremos, y tú, ¿Sabes ya cúal es tu sitio?"
+            "text": "Ya veremos. ¿Y tú? ¿Sabes ya cual es tu sitio?"
         },
         "talked": {
             "text": "Me está ignorando."
@@ -57,7 +57,7 @@
     
     "alison": {
         "notTalked": {
-            "text": "¿Qué tal? {{name}}"
+            "text": "¿Qué tal, {{name}}?"
         },
         "warn": [
             {
@@ -78,10 +78,10 @@
     "guille": {
         "match": [
             {
-                "text": "Vamos a quedar varios de clase el sábado en mi casa para ver una peli."
+                "text": "Vamos a quedar el sábado en mi casa para ver una peli."
             },
             {
-                "text": "¿Quieres venir? viene gente de clase."
+                "text": "¿Quieres venir? Viene gente de clase."
             },
             {
                 "text": "Y la veremos en una tele gigante que se ha comprado mi padre para ver el fútbol."
@@ -89,13 +89,13 @@
         ],
         "choices": [
             {
-                "text": "Si"
+                "text": "Sí."
             },
             {
-                "text": "No"
+                "text": "No."
             },
             {
-                "text": "Tengo que preguntar antes a mis padres si puedo"
+                "text": "Tengo que preguntar antes a mis padres si puedo."
             }
         ],
         "yes": [
@@ -119,7 +119,7 @@
         },
         
         "reminder": {
-            "text": "Acuerdate, el sábado en mi casa, a las 6 de la tarde."
+            "text": "Acuérdate, el sábado en mi casa a las 6 de la tarde."
         },
         "goToClass": {
             "text": "Entremos a clase."

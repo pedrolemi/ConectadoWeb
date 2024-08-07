@@ -30,10 +30,10 @@
         },
         "pcChoice": [
             {
-                "text": "Yes"
+                "text": "Yes."
             },
             {
-                "text": "No"
+                "text": "No."
             }
         ],
         "turnPC": {

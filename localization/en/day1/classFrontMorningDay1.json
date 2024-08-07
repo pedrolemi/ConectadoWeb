@@ -5,27 +5,27 @@
         },
         "choices": [
             {
-                "text": "No, it's just my first day, i am {{name}}."
+                "text": "No, it's just my first day. I'm {{name}}."
             },
             {
-                "text": "And who you are? The butch woman of the class?"
+                "text": "And who are you? The butch of the class?"
             }
         ],
         
         "introduce": [
             {
-                "text": "Oh, so you are the newcomer."
+                "text": "Oh, so you're the newcomer."
             },
             {
-                "text": "I am Ana, i'm in this class too."
+                "text": "I'm Anna. I'm in this class too."
             }
         ],
         "insult": {
-            "text": "You're a twat..."
+            "text": "Fucking idiot..."
         },
 
         "teacherArrive": {
-            "text": "(Knocks on the back, it seems like your new teacher has arrived)"
+            "text": "(Knocks on the back. It seems like your new teacher has arrived)"
         },
         "teacher": {
             "text": "C'mon everyone, class is about to start, come in and sit."
@@ -41,7 +41,7 @@
         ],
         "ask": [
             {
-                "text": "Sit next to Alison.."
+                "text": "Sit next to Alison."
             },
             {
                 "text": "Alison, do me a favour and solve any doubts {{name}} might have about school."
@@ -60,11 +60,11 @@
             },
             {
                 "text": "",
-                "text_male": "Class, this is your new classmate, please, help him during the first days.",
-                "text_female": "Class, this is your new classmate, please, help her during the first days."
+                "text_male": "Class, this is your new classmate, please, help him during his first days.",
+                "text_female": "Class, this is your new classmate, please, help her during her first days."
             },
             {
-                "text": "{{name}}, i am your tutor, anything you need just let me know."
+                "text": "{{name}}, I'm your tutor. Anything you need, just let me know."
             },
             {
                 "text": "Please, {{name}} sit next to Alison."

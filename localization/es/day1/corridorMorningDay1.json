@@ -4,13 +4,13 @@
             "text": "..."
         },
         "leaveMaria": {
-            "text": "Parece incómoda, mejor dejarla por ahora."
+            "text": "Parece incómoda. Mejor dejarla por ahora."
         }
     },
     
     "alison": {
         "root": {
-            "text": "Perdona, tengo prisa, si no entro ya a clase voy a llegar tarde." 
+            "text": "Perdona, tengo prisa. Si no entro ya a clase voy a llegar tarde." 
         }
     },
 
@@ -30,7 +30,7 @@
             }
         ],
         "talked": {
-            "text": "Acuérdate de mirar los corchos, a veces se encuentran cosas interesantes."
+            "text": "Acuérdate de mirar los corchos. A veces se encuentran cosas interesantes."
         }
     }
     

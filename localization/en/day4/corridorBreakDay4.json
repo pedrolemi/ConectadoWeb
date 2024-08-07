@@ -9,10 +9,10 @@
         },
         "notFound2": [
             {
-                "text": "Nope, no idea, check again the rest of the class just in case."
+                "text": "Nope, no idea. Check again the rest of the class just in case."
             },
             {
-                "text": "If i see something I'll let you know."
+                "text": "If I see something, I'll let you know."
             }
         ],
 
@@ -25,7 +25,7 @@
 
         "prankChoices": [
             {
-                "text": "Hey, María."
+                "text": "Hey, Maria."
             },
             {
                 "text": "(Stick the poster carefully and leave wordless)"
@@ -33,7 +33,7 @@
         ],
         "pranked": [
             {
-                "text": "(Good, it seems she hasn't noticed)"
+                "text": "(Good. It seems she hasn't noticed)"
             },
             {
                 "text": "(I hope they tell me now where my phone is)"
@@ -44,8 +44,8 @@
     "bathroom": {
         "root": {
             "text": "",
-            "text_male": "I cannot go there, it's the girls' bathroom.",
-            "text_female": "I cannot go there, it's the boys' bathroom."
+            "text_male": "I can't go there, it's the girls' toilet.",
+            "text_female": "I can't go there, it's the boys' toilet."
         },
         "choices": [
             {

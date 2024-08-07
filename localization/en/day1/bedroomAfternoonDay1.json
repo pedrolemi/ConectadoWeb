@@ -1,13 +1,13 @@
 {
     "wardrobe1": {
         "root": {
-            "text": "There is nothing useful inside."
+            "text": "There's nothing useful inside."
         }
     },
 
     "wardrobe2": {
         "root": {
-            "text": "I am not in the mood to clean this mess."
+            "text": "I'm not in the mood to clean this mess."
         }
     },
 
@@ -20,20 +20,20 @@
         },
         "choices": [
             {
-                "text": "Yes, I accept you now"
+                "text": "Sure, I'll accept you now"
             },
             {
                 "text": "I'll look into it when I can"
             },
             {
-                "text": "(She's very boring, I won't answer)"
+                "text": "(She's a bit annoying, I'll pass on answering)"
             }
         ],
         "acceptNow": {
-            "text": "Yes, I accept your invitation now :)"
+            "text": "Sure, I'll accept your request now :)"
         },
         "acceptLater": {
-            "text": "I'll look into it when I can. I'm busy right know"
+            "text": "I'll look at it when I can, I'm busy right know"
         }
     }
     

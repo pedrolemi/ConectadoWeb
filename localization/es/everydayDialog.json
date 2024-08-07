@@ -1,7 +1,7 @@
 {
     "phone": {
         "root": {
-            "text": "No tengo nada que contestar"
+            "text": "No tengo nada que contestar."
         }
     },
 
@@ -20,10 +20,10 @@
             },
             "pcChoice": [
                 {
-                    "text": "Sí"
+                    "text": "Sí."
                 },
                 {
-                    "text": "No"
+                    "text": "No."
                 }
             ],
             "leavePC":{
@@ -48,10 +48,10 @@
             },
             "choices": [
                 {
-                    "text": "Sí"
+                    "text": "Sí."
                 },
                 {
-                    "text": "No"
+                    "text": "No."
                 }
             ]
         }
@@ -129,14 +129,14 @@
         },
         "class": {
             "root": {
-                "text": "Si entro y aparece el profesor ya no podré salir."
+                "text": "Si entro y aparece el profesor, ya no podré salir."
             },
             "choices": [
                 {
-                    "text": "(Entrar de todas formas)."
+                    "text": "(Entrar de todas formas)"
                 },
                 {
-                    "text": "Mejor, voy a dar otra vuelta por el edificio."
+                    "text": "Mejor voy a dar otra vuelta por el edificio."
                 }
             ]
         }
@@ -146,14 +146,14 @@
     "class": {
         "table": {
             "root": {
-                "text": "Este sitio está libre, ¿me siento aquí?"
+                "text": "Este sitio está libre. ¿Me siento aquí?"
             },
             "choices": [
                 {
-                    "text": "Si"
+                    "text": "Sí."
                 },
                 {
-                    "text": "No"
+                    "text": "No."
                 }
             ],
             "teacherArrive": {
@@ -163,7 +163,7 @@
         "late": {
             "root": [
                 {
-                    "text": "{{name}} llegas tarde."
+                    "text": "{{name}}, llegas tarde."
                 },
                 {
                     "text": "Por favor, siéntate para que podamos continuar la clase."
@@ -175,15 +175,15 @@
     "board": {
         "gumWashed": [
             {
-                "text": "Hay una foto mía de ayer después de haberme quitado el chicle"
+                "text": "Hay una foto mía de ayer después de haberme quitado el chicle."
             },
             {
-                "text": "Con una frase muy original... \"Un bebé ha llegado a clase\" "
+                "text": "Con una frase muy original... \"Un bebé ha llegado a clase\""
             }
         ],
         "gumNotWashed": [
             {
-                "text": "Hay una foto de mí, y la han retocado para que parezca que cago chicles"
+                "text": "Hay una foto de mí, y la han retocado para que parezca que cago chicles."
             },
             {
                 "text": "¿Quién quiere ridiculizarme de esta manera?"

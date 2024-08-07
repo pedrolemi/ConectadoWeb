@@ -1,7 +1,7 @@
 {
     "guille": {
         "maleBathroom": {
-            "text": "Así que eras tú el de la nota, Guille"
+            "text": "Así que eras tú el de la nota, Guille."
         },
 
         "femaleBathroom": [
@@ -9,7 +9,7 @@
                 "text": "¿Qué haces en el baño de chicas, Guille?"
             },
             {
-                "text": "No puedes estar aquí, vete."
+                "text": "No puedes estar aquí. Vete."
             }
         ],
         "explainBathroom": {
@@ -35,15 +35,15 @@
                 "text": "Me ha amenazado con mandarle a mis padres una foto mía del año pasado en la que salgo con una cerveza y un cigarrillo."
             },
             {
-                "text": "Mis padres son muy estrictos y si la ven no se que puede pasar, igual me mandan a otro instituto."
+                "text": "Mis padres son muy estrictos, y si la ven, no se que podrá pasar. Igual me mandan a otro instituto."
             }
         ],
         "explanationQuestion": {
-            "text": "¿Pero por qué Álex no quiere que nadie hable conmigo?."
+            "text": "¿Pero por qué Álex no quiere que nadie hable conmigo?"
         },
         "continueExplanation": [
             {
-                "text": "No lo sabemos, la tiene tomada contigo desde el primer día."
+                "text": "No lo sabemos. La tiene tomada contigo desde el primer día."
             },
             {
                 "text": "Mucha gente le hace caso porque quiere, pero somos unos cuantos a los que nos ha amenazado."
@@ -52,16 +52,16 @@
                 "text": "A María le paso algo parecido a lo tuyo el año pasado, aunque fue cosa de Ana."
             },
             {
-                "text": "Desde entonces no tiene amigos y cuando alguno de nosotros intentamos hablar con ella... nos ignora."
+                "text": "Desde entonces no tiene amigos y cuando alguno de nosotros intenta hablar con ella ... nos ignora."
             },
             {
                 "text": "No nos ha perdonado."
             },
             {
-                "text": "Bueno... sólo quería decirte que lo siento, pero hasta que a Álex se le pase el mosqueo no podré hablar contigo."
+                "text": "Bueno... Sólo quería decirte que lo siento, pero hasta que a Álex se le pase el mosqueo no podré hablar contigo."
             },
             {
-                "text": "Lo siento mucho {{name}}."
+                "text": "Lo siento mucho, {{name}}."
             }
         ],
 
@@ -89,7 +89,7 @@
                 "text": "Está muy pillada por Álex y si él te putea, ella va a hacer lo mismo."
             },
             {
-                "text": "Y José es su perrito faldero, no sabe pensar por sí mismo."
+                "text": "Y José es su perrito faldero. No sabe pensar por sí mismo."
             },
             {
                 "text": "Evita a los tres."

@@ -8,7 +8,7 @@
                 "text": "Have you noticed the gum on your ass?"
             },
             {
-                "text": "You have to be more careful, really surprising you don't wash your clothes..."
+                "text": "You have to be more careful, since you don't do the washing..."
             },
             {
                 "text": "Well, how was your day?"
@@ -24,7 +24,7 @@
 
         "choices1": [
             {
-                "text": "As usual"
+                "text": "As usual."
             },
             {
                 "text": "Guille invited me to go to his place this Saturday."
@@ -34,7 +34,7 @@
             }
         ],
         "goMatch": {
-            "text": "I've told him I'll go, so I wont't be home on Saturaday afternoon."
+            "text": "I've told him I'll go, so I wont't be home this Saturday afternoon."
         },
         "dontGoMatch": {
             "text": "I've told him no, too many people I don't trust."
@@ -48,7 +48,7 @@
             }
         ],
         "askMatchReply": {
-            "text": "You are allowed to go, I'll ask your mother just in case."
+            "text": "You're allowed to go. I'll ask your mother just in case."
         },
 
         "choices2": [
@@ -67,25 +67,25 @@
                 "text": "Alison is very nice."
             },
             {
-                "text": "She warned me about Alex playing me a joke."
+                "text": "She warned me about Alex wanting to pull a prank on me."
             },
             {
-                "text":" Although it was useless."
+                "text":" Even though it was useless."
             }
         ],
         "alisonNormal": {
-            "text": "I've spoken with her today."
+            "text": "I've talked to her today."
         },
 
         "aboutGumWashed": [
             {
-                "text": "Today I've ended up with a gum stuck on my ass."
+                "text": "Today I've ended up with a gum stuck to my ass."
             },
             {
                 "text": "I've tried to remove it using water and soap, but it was even worse."
             },
             {
-                "text": "Most of the class was laughing at me."
+                "text": "Most of the class laughed at me."
             }
         ],
         "aboutGumNotWashed": [
@@ -93,7 +93,7 @@
 				"text": "About the gum... I don't know how it happened."
 			},
 			{
-				"text": "Most of the class was laughing at me."
+				"text": "Most of the class laughed at me."
 			}
         ],
         "dadGumNotWashed": {
@@ -102,7 +102,7 @@
         
         "choices3": [
             {
-                "text": "María..."
+                "text": "Maria..."
             },
             {
                 "text": "The stupid Alex..."
@@ -113,10 +113,10 @@
         ],
         "maria": [
             {
-                "text": "I get along with María."
+                "text": "I get along with Maria."
             },
             {
-                "text": "Although it seems she doesn't speak to anyone else."
+                "text": "But it seems she doesn't speak to anyone else."
             }
         ],
         
@@ -125,31 +125,31 @@
                 "text": "I would say he has a problem with me since the first day."
             },
             {
-                "text": "Although I don't know exactly why."
+                "text": "But I don't know exactly why."
             }
         ],
 
         "prank": {
-            "text": "And today he wanted to play me a pranck."
+            "text": "And today he wanted to pull a prank on me."
         },
 
         "ask": [
             {
-                "text": "He was upset with me for seating on his chair."
+                "text": "He was upset with me for sitting on his chair."
             },
             {
                 "text": "I tried to make peace with him."
             },
             {
-                "text": "But as how he talked to me I think he's going to keep looking for trouble."
+                "text": "But by the way he talked to me, I think he's going to keep looking for trouble."
             }
         ],
         "askReply": [
             {
-				"text": "If you have any problem with him, don't doubt to tell me."
+				"text": "If you have any problem with him, don't hesitate to tell me."
 			},
 			{
-				"text": "We'll talk to your teacher if it's needed."
+				"text": "We'll talk to your teacher if we need to."
 			}
         ],
         
@@ -163,13 +163,13 @@
         ],
         "distrustReply": [
             {
-                "text": "Do not look for fights."
+                "text": "Don't pick a fight."
             },
             {
-                "text": "If I need to go and talk to him let me know."
+                "text": "If I need to go and talk to him, let me know."
             },
             {
-                "text": "Or if you are in trouble, just talk to your teacher."
+                "text": "Or if you're in trouble, just talk to your teacher."
             }
         ],
         
@@ -178,12 +178,12 @@
                 "text": "High school..."
             },
             {
-                "text": "I'm going to my room, there're some stuff needed to be done."
+                "text": "I'm going to my room. There're some stuff I need to do."
             }
         ],
 
         "school": {
-            "text": "I'm beginning to feel uncomfortable."
+            "text": "I'm starting to feel uncomfortable."
         }
     }
 }

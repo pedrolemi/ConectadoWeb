@@ -16,7 +16,7 @@
         },
         "choices2": [
             {
-                "text": "Enjoy it, bye (What a freak)."
+                "text": "Enjoy. Bye (What a freak)."
             },
             {
                 "text": "Don't you prefer being in the playground with your friends?"
@@ -24,7 +24,7 @@
         ],
         "keepAsking": [
             {
-                "text": "You're a bit annoying with all those questions."
+                "text": "You're a bit annoying with all these questions."
             },
             {
                 "text": "I don't have friends, they think I'm a freak."
@@ -46,7 +46,7 @@
                 "text": "You don't look like a freak to me."
             },
             {
-                "text": "I'm heading to the playground now, if you want to come I'll be downstairs."
+                "text": "I'm heading to the playground now. If you want to come, I'll be downstairs."
             }
         ],
         "stayAnswer": [
@@ -54,10 +54,10 @@
                 "text": "Thanks, you're very kind."
             },
             {
-                "text": "But today I´ll stay here, I'm about to finish my book."
+                "text": "But today I'll stay here. I'm about to finish my book."
             },
             {
-                "text": "Have fun down there, and avoid Alex, he's a jackass."
+                "text": "Have fun down there. And avoid Alex, he's a jackass."
             }
         ],
         
@@ -79,7 +79,7 @@
         },
         "choices":[
             {
-                "text": "It's nothing"
+                "text": "It's nothing."
             },
             {
                 "text": "(Don't answer, I'll see what I respond later)"
@@ -108,10 +108,10 @@
                 "text": "Thank you very much."
             },
             {
-                "text": "You are great, I owe you one."
+                "text": "You're great, I owe you one."
             },
             {
-                "text": "The recess is about to end, we should be walking to class."
+                "text": "The recess is about to end, we should be heading to class."
             },
             {
                 "text": "See you inside."

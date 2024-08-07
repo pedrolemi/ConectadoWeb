@@ -36,13 +36,18 @@
     },
     "phone3": {
         "root": {
-            "text": "xq le invitas al grupo? no hablaste cn alex esta mañana?"
+            "text": "",
+            "text_male": "xq lo invitas al grupo? no hablaste cn alex esta mañana?",
+            "text_female": "xq la invitas al grupo? no hablaste cn alex esta mañana?"
+
         },
         "message4": {
-            "text": "Pff, no se ha ganado estar en el grupo. El k pueda k le eche YA!"
+            "text": "",
+            "text_male": "Pff, no se ha ganado estar en el grupo. El k pueda k lo eche YA!",
+            "text_female": "Pff, no se ha ganado estar en el grupo. El k pueda k la eche YA!"
         },
         "message5": {
-            "text": "Ya sólo falta que inviteis a la friki de María"
+            "text": "Ya sólo falta que invitéis a la friki de María"
         },
         "message6": {
             "text": "Jose es el admin, habla con él mañana, q el chat no suele leerlo"
@@ -59,26 +64,26 @@
             }
         ],
         "sad": {
-            "text": "Acabo de llegar al colegio, y de verdad me sienta fatal que la mitad de la clase me trateís como a una mierda"
+            "text": "Acabo de llegar al colegio, y de verdad me sienta fatal que la mitad de la clase me trate como la mierda"
         },
         "sad2": {
             "text": "No digo que os caiga bien a todos, pero lo mínimo es tratarme con respeto"
         },
 
         "growUp": {
-            "text": "Madurad, teneís 2años o qué os pasa"
+            "text": "Madurad, tenéis 2años o qué os pasa"
         },
         "ask": {
-            "text": "No lo entiendo, ¿Qué os he hecho para que me insulteís, gasteís bromas pesadas, me ignoreís y margineís?"
+            "text": "No lo entiendo, ¿Qué os he hecho para que me insultéis, gastéis bromas pesadas, me ignoréis y marginéis?"
         },
         "message7": {
-            "text": "¿Qué problema teneís con {{name}}?"
+            "text": "¿Qué problema tenéis con {{name}}?"
         },
         "message8": {
-            "text": "Os estais pasando"
+            "text": "Os estáis pasando"
         },
         "message9": {
-            "text": "No os metaís donde no os llaman, también puedo hacer que Jose os eche a vosotros"
+            "text": "No os metáis donde no os llaman, también puedo hacer que Jose os eche a vosotros"
         },
         "reply3": [
             {
@@ -88,7 +93,7 @@
                 "text": "Espero que Jose tenga más cerebro"
             },
             {
-                "text": "Alex, para"
+                "text": "Álex, para"
             }
         ],
         "leave": {

@@ -3,20 +3,20 @@
         "notTalked": [
             {
                 "text": "",
-                "text_male":  "Eh, nuevo, hablemos un momento!!",
-                "text_female": "Eh, nueva, hablemos un momento!!"
+                "text_male":  "¡¡Eh, nuevo, hablemos un momento!!",
+                "text_female": "¡¡Eh, nueva, hablemos un momento!!"
             },
             {
                 "text": "",
-                "text_male": "Hoy estabas sentado en mi sitio, no quiero que te vuelvas a sentar ahí.",
-                "text_female": "Hoy estabas sentada en mi sitio, no quiero que te vuelvas a sentar ahí."
+                "text_male": "Hoy estabas sentado en mi sitio. No quiero que te vuelvas a sentar ahí.",
+                "text_female": "Hoy estabas sentada en mi sitio. No quiero que te vuelvas a sentar ahí."
             },
             {
                 "text": "A partir de mañana siéntate en la otra mesa del final que está vacía."
             }
         ],
         "talked": {
-            "text": "¿Qué miras? largo, ya hemos hablado todo lo que teniamos que hablar."
+            "text": "¿Qué miras? Largo, ya hemos hablado todo lo que teníamos que hablar."
         },
 
         "choices": [
@@ -99,7 +99,7 @@
                 "text": "¿Aún no has encontrado nada?"
             },
             {
-                "text": "Sigue buscando por favor."
+                "text": "Sigue buscando, por favor."
             }
         ],
 
@@ -127,7 +127,7 @@
         ],
         "cry": [
             {
-                "text": "No puede ser, esta mañana los llevaba."
+                "text": "No puede ser, esta mañana lo llevaba."
             },
             {
                 "text": "So- so- son nuevos, un re... regalo."
@@ -137,14 +137,14 @@
             "text": "(Notas que está muy preocupada y a punto de llorar)"
         },
         "beg" :{
-            "text": "Por favor, *snif* , *snif* ¿puedes ayudarme a encontrarlos?"            
+            "text": "Por favor, *snif* , *snif*, ¿puedes ayudarme a encontrarlo?"            
         },
         "choices2": [
             {
                 "text": "De acuerdo, echaré un vistazo."
             },
             {
-                "text": "Si (Iré a disfrutar del recreo y luego le digo que no he encontrado nada)."
+                "text": "Si (Iré a disfrutar del recreo y luego le diré que no he encontrado nada)."
             }
         ],
         "illusionOfFreeChoice": [
@@ -152,7 +152,7 @@
                 "text": "Muchas gracias."
             },
             {
-                "text": "Además toma mi número, así podemos escribirnos."
+                "text": "Además, toma mi número. Así podemos escribirnos."
             }
         ],
         "exchangePhoneNumber": {

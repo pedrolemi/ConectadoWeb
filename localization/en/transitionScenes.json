@@ -1,23 +1,23 @@
 {
     "day1": {
-        "start": "Your phone's alarm is ringing. It's time to wake up. Today you start in a new school, it is time to meet your new classmates.",
+        "start": "Your phone's alarm is ringing. It's time to wake up. Today you start in a new school. It is time to meet your new classmates.",
         "startClass": "Everyone sits down and the class starts.",
         "startClassLate": "You go and sit in your place while everyone is looking at you.",
         "startBreak": "The bell rings, it is recess time. Your opportunity to make friends.",
-        "endBreak": "As soon as you get in, the bell rings and the teacher appears. You did not notice but the morning is over, it's time to go home..."
+        "endBreak": "As soon as you get in, the bell rings and the teacher appears. You did not notice but the morning is over. It's time to go home..."
     },
     "day2": {
-        "startClass": "You all sit down and when you realize it's already break time.",
+        "startClass": "You all sit down and when you realise it's already break time.",
         "startClassLate": "You go and sit in the first empty desk you see, while everyone is looking at you.",
-        "endBreak": "As soon as you get in, the bell rings and the teacher appears. You did not notice but the morning is over, it's time to go home..."
+        "endBreak": "As soon as you get in, the bell rings and the teacher appears. You did not notice but the morning is over. It's time to go home..."
     },
     "day3": {
-        "startClass": "It has been a boring day. Classes are over and most of the people have been ignoring me the whole day. There's a paper note on your desk telling you to go to the toilet, there's someone waiting there."
+        "startClass": "It has been a boring day. Classes are over and most of the people have been ignoring you the whole day. There's a paper note on your desk telling you to go to the toilet. There's someone waiting there."
     },
     "day4": {
-        "startClass": "The bell is ringing, it's break time...",
-        "endBreak": "As soon as you get in, the bell rings and the teacher appears. You did not notice but the morning is over, it's time to go home...",
-        "endDay": "It seems like classes are lasting longer and longer... Luckily it's time to go home."
+        "startClass": "The bell is ringing. It's break time...",
+        "endBreak": "As soon as you get in, the bell rings and the teacher appears. You did not notice but the morning is over. It's time to go home...",
+        "endDay": "It seems like classes are lasting longer and longer... Luckily, it's time to go home."
     },
     "day5": {
         "startClass": "Another day of whispers at your back. It's time to go home.",

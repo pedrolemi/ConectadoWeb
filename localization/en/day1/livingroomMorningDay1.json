@@ -16,10 +16,10 @@
                 "text": "Have you seen what time is it?"
             },
             {
-                "text": "Your first day in the new school and you're already late."
+                "text": "Your first day at the new school and you're already late."
             },
             {
-                "text": "C'mon, take everything you need and leave NOW!"
+                "text": "C'mon, take everything you need and leave now!"
             }
         ],
         "hasBag": {
@@ -29,14 +29,14 @@
             "text": "Go now or you will be late."
         },
         "hasBagLate":  {
-            "text": "Go now, you are late."
+            "text": "Go now, you're already late."
         },
         "noBag": [
             {
                 "text": "You forgot your backpack."
             },
             {
-                "text": "It's in your room, pick it up and leave now."
+                "text": "It's in your room. Pick it up and leave now."
             }
         ]
     }

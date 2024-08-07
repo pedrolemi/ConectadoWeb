@@ -2,7 +2,7 @@
     "dad": {
         "root": [
             {
-                "text": "Habla con tu madre"
+                "text": "Habla con tu madre."
             },
             {
                 "text": "Quiere saber qué tal te ha ido el día."
@@ -13,7 +13,7 @@
     "mom": {
         "notTalked": [
             {
-                "text": "Ya has vuelto, {{name}}"
+                "text": "Ya has vuelto, {{name}}."
             },
             {
                 "text": "¿Qué tal te ha ido el día?"
@@ -28,7 +28,7 @@
 
         "choices1": [
             {
-                "text": "Bien, normal, me voy a mi cuarto"
+                "text": "Bien, normal, me voy a mi cuarto."
             },
             {
                 "text": "Hoy Álex y Ana me han intentado chantajear."
@@ -69,14 +69,14 @@
                 "text": "Alison, puedo confiar en ella."
             },
             {
-                "text": "Me voy a la habitación, ya hemos hablado suficiente."
+                "text": "Me voy a la habitación. Ya hemos hablado suficiente."
             }
         ],
         "lostPhone": {
             "text": "Hoy me han quitado el móvil y no he podido recuperarlo."
         },
         "lostPhone2": {
-            "text": "Pués te has quedado sin móvil, tienes que tener más cuidado con las cosas."
+            "text": "Pues te has quedado sin móvil. Tienes que tener más cuidado con las cosas."
         },
 
         "foundPhone": [
@@ -103,7 +103,7 @@
         ],
         "exchangedPassword2": [
             {
-				"text": "¿¡Cómo se te ocurre!? Y si las comparte o se hace pasar por tí."
+				"text": "¿¡Cómo se te ocurre!? ¿Y si las comparte o se hace pasar por ti?"
 			},
 			{
 				"text": "¿Es que no piensas en lo que haces?."
@@ -111,10 +111,10 @@
         ],
         "exchangedPassword3": [
             {
-                "text": "Pero yo tengo sus contraseñas también, confio en ella."
+                "text": "Pero yo tengo sus contraseñas también. Confió en ella."
             },
             {
-                "text": "Es la única que quiere ser mi amiga"
+                "text": "Es la única que quiere ser mi amiga."
             }
         ],
 
@@ -130,18 +130,18 @@
         },
         "meetingChoices": [
             {
-                "text": "Si, por favor, no puedo más"
+                "text": "Si, por favor. No puedo más."
             },
             {
-                "text": "No, la tomarán aún más conmigo"
+                "text": "No. La tomarán aún más conmigo."
             }
         ],
         "acceptMeeting": {
-            "text": "No te preocupes cariño, vamos a solucionar todo."
+            "text": "No te preocupes cariño. Vamos a solucionar todo."
         },
 
         "rejectMeeting": {
-            "text": "De acuerdo, por ahora no iremos al colegio."
+            "text": "De acuerdo. Por ahora no iremos al colegio."
         },
         "rejectMeeting2": {
             "text": "Pero en cuanto pase algo más grave... no nos vamos a quedar sentados."
@@ -155,13 +155,13 @@
     "noPhone": {
         "root": [
             {
-                "text": "Voy a cambiarle la bateria al móvil..."
+                "text": "Voy a cambiarle la batería al móvil..."
             },
             {
                 "text": "Creo que tenia una en el mueble de la entrada... tercer cajón..."
             },
             {
-                "text": "Aquí está... ¿enciende?... sí, menos mal"
+                "text": "Aquí está... ¿Enciende?... Sí. Menos mal."
             },
             {
                 "text": "¿Y tanto mensaje?"
@@ -201,7 +201,7 @@
                 "text": "Yo no he escrito nada"
             },
             {
-                "text": "Alex, Ana, que os den"
+                "text": "Álex, Ana, que os den"
             },
             {
                 "text": "Como oís, me encanta"

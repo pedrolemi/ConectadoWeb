@@ -43,8 +43,6 @@ export default class CorridorMorningDay3 extends CorridorBase {
 
         // Evento llamado cuando acaba el dialogo de ver la foto
         this.dispatcher.add("closePhoto", this, (obj) => {
-            console.log(obj);
-
             // Oculta la foto
             this.photo.visible = false;
         });

@@ -3,7 +3,7 @@
         "root": {
             "text": "",
             "text_male": "Mmm, what is going on Alex? Why are you still here?",
-            "text_female": "Ana, are you here?"
+            "text_female": "Anna, are you here?"
         }
     },
 
@@ -13,7 +13,7 @@
                 "text": "What's going on? The door won't open."
             },
             {
-                "text": "Have they locked me in the bathroom? ANA!!! ALEX!! ANYONE!!"
+                "text": "Have they locked me in the toilet? ANA!!! ALEX!! ANYONE!!"
             },
             {
                 "text": "What do I do now? I have to get out of here."
@@ -166,7 +166,7 @@
                 "text": "I had a meeting with your parents and it seems you had some trouble with Alex."
             },
             {
-                "text": "Also, María and the school counselor came to tell me Alex is picking on you."
+                "text": "Also, Maria and the school counselor came to tell me Alex is picking on you."
             },
             {
                 "text": "You don't need to hide anything and you're not snitch when you ask for help. Alex behaviour suggests that a punishment is needed."
@@ -212,7 +212,7 @@
                 "text": "Why didn't you tell me before?"
             },
             {
-                "text": "Also, María and the school counselor came to tell me what you've just said."
+                "text": "Also, Maria and the school counselor came to tell me what you've just said."
             },
             {
                 "text": "She cares about you, we all need friends like her."

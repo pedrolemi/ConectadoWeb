@@ -2,7 +2,7 @@
     "dad": {
         "root": [
             {
-                "text": "Habla con tu madre"
+                "text": "Habla con tu madre."
             },
             {
                 "text": "Quiere saber qué tal te ha ido el día."
@@ -25,7 +25,7 @@
 
         "choices1": [
             {
-                "text": "Bien, normal, me voy a mi cuarto."
+                "text": "Bien, normal. Me voy a mi cuarto."
             },
             {
                 "text": "He conocido a Guille..."
@@ -74,7 +74,7 @@
             "text": "Creo que al final no lo ha podido encontrar."
         },
         "found": {
-            "text": "Le ayudé a buscarlo, resulta que estaba en el patio."
+            "text": "La ayudé a buscarlo. Resulta que estaba en el patio."
         },
         "jose": [
             {
@@ -91,7 +91,7 @@
                 "text": "A clase va María..."
             },
             {
-                "text": "Está Alex..."
+                "text": "Está Álex..."
             },
             {
                 "text": "(Hablar de otros compañeros)"
@@ -130,7 +130,7 @@
                 "text": "Parece que le quité el sitio al llegar a clase."
             },
             {
-                "text": "Pero le pedí perdon y parace que ya no está enfadado."
+                "text": "Pero le pedí perdón y parece que ya no está enfadado."
             }
         ],
         "downplay": [
@@ -179,7 +179,7 @@
                 "text": "El colegio..."
             },
             {
-                "text": "Me voy a la habitación, ya hemos hablado suficiente."
+                "text": "Me voy a la habitación. Ya hemos hablado suficiente."
             }
         ],
         "ana": [

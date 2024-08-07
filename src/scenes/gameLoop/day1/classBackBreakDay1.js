@@ -61,8 +61,6 @@ export default class ClassBackBreakDay1 extends ClassBackBase {
 
         // Eventos llamados cuando se termina de hablar con Alex
         this.dispatcher.addOnce("moveAlex", this, (obj) => {
-            console.log(obj);
-
             alex.char.disableInteractive();
             let anim = this.tweens.add({
                 targets: [alex.char],
@@ -93,8 +91,6 @@ export default class ClassBackBreakDay1 extends ClassBackBase {
             })
         });
         this.dispatcher.addOnce("leaveAlex", this, (obj) => {
-            console.log(obj);
-
             alex.char.disableInteractive();
             let anim = this.tweens.add({
                 targets: [alex.char],
@@ -110,7 +106,6 @@ export default class ClassBackBreakDay1 extends ClassBackBase {
 
         // Evento llamado cuando se termina de hablar con Alison
         this.dispatcher.addOnce("setTalkedAlison", this, (obj) => {
-            console.log(obj);
             this.doorNode = null;
         });
 

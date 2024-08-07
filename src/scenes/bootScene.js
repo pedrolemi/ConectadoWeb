@@ -42,6 +42,7 @@ export default class BootScene extends Phaser.Scene {
 
         let BAR_W = width * 0.6;
         let BAR_H = 70;
+        let BAR_OFFSET = 40;
         let FILL_OFFSET = 20;
         let TEXT_OFFSET = 70;
         let bgCol = 0xFF408E86;
@@ -50,14 +51,14 @@ export default class BootScene extends Phaser.Scene {
         let borderThickness = 2;
         let radius = Math.min(BAR_W, BAR_H) * 0.25;
 
-        progressBox.fillStyle(bgCol, 1).fillRoundedRect(width / 2 - BAR_W / 2, height / 2 - BAR_H / 2, BAR_W, BAR_H, radius)
-            .lineStyle(borderThickness, borderCol, 1).strokeRoundedRect(width / 2 - BAR_W / 2, height / 2 - BAR_H / 2, BAR_W, BAR_H, radius)
+        progressBox.fillStyle(bgCol, 1).fillRoundedRect(width / 2 - BAR_W / 2, height / 2 - BAR_H / 2 - BAR_OFFSET, BAR_W, BAR_H, radius)
+            .lineStyle(borderThickness, borderCol, 1).strokeRoundedRect(width / 2 - BAR_W / 2, height / 2 - BAR_H / 2 - BAR_OFFSET, BAR_W, BAR_H, radius)
 
 
         // Texto de la palabra cargando
         let loadingText = this.make.text({
-            x: width / 2,
-            y: height / 2 - TEXT_OFFSET,
+            x: width / 2 ,
+            y: height / 2 - TEXT_OFFSET - BAR_OFFSET,
             text: 'Loading...',
             style: {
                 fontFamily: 'gidole-regular',
@@ -70,7 +71,7 @@ export default class BootScene extends Phaser.Scene {
         // Texto con el porcentaje de los assets cargados
         let percentText = this.make.text({
             x: width / 2,
-            y: height / 2,
+            y: height / 2 - BAR_OFFSET,
             text: '0%',
             style: {
                 fontFamily: 'gidole-regular',
@@ -83,7 +84,7 @@ export default class BootScene extends Phaser.Scene {
         // Texto para el nombre de los archivos
         let assetText = this.make.text({
             x: width / 2,
-            y: height / 2 + TEXT_OFFSET,
+            y: height / 2 + TEXT_OFFSET - BAR_OFFSET,
             text: '',
             style: {
                 fontFamily: 'gidole-regular',
@@ -99,11 +100,11 @@ export default class BootScene extends Phaser.Scene {
 
             progressBar.clear();
             progressBar.fillStyle(fillCol, 1);
-            progressBar.fillRoundedRect(width / 2 - (BAR_W - FILL_OFFSET) / 2, height / 2 - (BAR_H - FILL_OFFSET) / 2, (BAR_W - FILL_OFFSET) * value, BAR_H - FILL_OFFSET, radius);
+            progressBar.fillRoundedRect(width / 2 - (BAR_W - FILL_OFFSET) / 2, height / 2 - (BAR_H - FILL_OFFSET) / 2 - BAR_OFFSET, (BAR_W - FILL_OFFSET) * value, BAR_H - FILL_OFFSET, radius);
         });
         // Cuando carga un archivo, muestra el nombre del archivo debajo de la barra
         this.load.on('fileprogress', function (file) {
-            console.log(file.key);
+            // console.log(file.key);
             assetText.setText('Loading asset: ' + file.key);
         });
 
@@ -363,16 +364,10 @@ export default class BootScene extends Phaser.Scene {
         this.createLoadingBar();
 
         // Son tanto archivos de dialogos como namespaces del plugin i18next
-        // Ruta archivo dialogo --> test/momDialog.json
-        // ID archivo dialogo --> momDialog
-        // Namespace --> test\\momDialog.json
+        // Ruta archivo dialogo --> test/dialog.json
+        // ID archivo dialogo --> dialog
+        // Namespace --> test\\dialog.json
         let dialogsAndNamespaces = [
-            // Tests
-            'test/momDialog.json',
-            'test/dadDialog.json',
-            'test/chat1.json',
-            //'test/computerTest.json',
-
             // Ordenador
             'computer/posts.json',
 

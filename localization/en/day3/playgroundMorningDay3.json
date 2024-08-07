@@ -1,17 +1,17 @@
 {
     "group": {
         "notTalked": {
-            "text": "Good morning, what are you doing here?"
+            "text": "Good morning. What are you all doing here?"
         },
         "explain": {
             "text": "We were just talking."
         },
         "shutUp": [
             {
-                "text": "Shut up Guille, what was the deal?"
+                "text": "Shut up Guille. What was the deal?"
             },
             {
-                "text": "Or do you want your parents to know?"
+                "text": "Do you want your parents to know?"
             }
         ],
         "silence": {
@@ -22,32 +22,32 @@
                 "text": "What's going on, Guille?"
             },
             {
-                "text": "That sounded like a threat"
+                "text": "That sounded like a threat."
             }
         ],
         "worry": {
             "text": "Are you okay, Guille?"
         },
         "threat": {
-            "text": "Do you also have it in for Guille,...Alex?"
+            "text": "Do you also have it in for Guille, Alex?"
         },
         
         "silenceQuestion": {
             "text": "..."
         },
         "askSilence": {
-            "text": "Is anybody going to say something?"
+            "text": "Is anybody going to say anything?"
         },
 
         "bellRinging": {
             "text": "<<The bell is ringing>>"
         },
         "late": {
-            "text": "Alright, don't say anything. I'm going to class, it's already late enough."
+            "text": "Alright. Don't say anything. I'm going to class. It's already late enough."
         },
         "talked": [
             {
-                "text": "It's a picture of a dog with my face on it and sticking out the tongue."
+                "text": "Are you sending me to Coventry? Seriously?"
             },
             {
                 "text": "You too, Guille?"

@@ -1,10 +1,10 @@
 {
     "maria": {
         "friend": {
-            "text": "Good morning {{name}}"
+            "text": "Good morning {{name}}."
         },
         "hello": {
-            "text": "Hello, María"
+            "text": "Hello, Maria."
         },
         "friendChoices": [
             {
@@ -35,13 +35,13 @@
                 "text": "I guess you mean Alex."
             },
             {
-                "text": "Ana did something similar last year to screw me."
+                "text": "Anna did something similar last year to screw me."
             },
             {
                 "text": "You should talk to your parents or our tutor."
             },
             {
-                "text": "I didn't do it when I got the chance. My parents forced me to go and see a psychologist when they found out."
+                "text": "I didn't do it when I got the chance. My parents forced me to go and see a therapist when they found out."
             },
             {
                 "text": "If you need me to go with you to speak with the teacher just tell me. But don't keep shut."
@@ -52,7 +52,7 @@
         },
 
         "normal": {
-            "text": "Hey, Maria"
+            "text": "Hey, Maria."
         },
         "normal2": {
             "text": "Hello, {{name}}. Do you want anything?"
@@ -79,7 +79,7 @@
                 "text": "They made my life miserable last year. Lesson learnt."
             },
             {
-                "text": "It'll be for the best if you talk to your parents or your tutor and don't listen to Alex or any of his 'minions'"
+                "text": "It'll be for the best if you talk to your parents or your tutor and don't listen to Alex or any of his minions"
             }
         ],
 

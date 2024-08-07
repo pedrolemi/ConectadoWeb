@@ -5,10 +5,10 @@
                 "text": "{{name}}, I'd like to talk to you."
             },
             {
-                "text": "I don't know if you are aware, but Alex's told us all not to talk to you."
+                "text": "I don't know if you're aware, but Alex has told us all not to talk to you."
             },
             {
-                "text": "And he's threatening everyone who does not follow him."
+                "text": "And he's threatening everyone who doesn't follow him."
             },
             {
                 "text": "Can I trust you? I don't want us to stop being friends."
@@ -19,7 +19,7 @@
                 "text": "Thank you very much for being my friend."
             },
             {
-                "text": "No, and I have no interest in gaining your trust."
+                "text": "No. And I have no interest in gaining your trust."
             }
         ],
         "thanks": [
@@ -48,10 +48,10 @@
             }
         ],
         "exchange":  {
-            "text": "You write the passwords through the mobile."
+            "text": "(You write the passwords through your phones)"
         },
         "exchange2": {
-            "text": "Perfect. \"Best Friends\" (smiles ear to ear)"
+            "text": "Perfect. Best Friends (smiles from ear to ear)."
         },
         "dont": [
             {
@@ -66,7 +66,7 @@
         ],
         "reject": [
             {
-                "text": "I don't have a choice then so I'll stop talking to you."
+                "text": "I don't have a choice then, so I'll stop talking to you."
             },
             {
                 "text": "I don't want to take any risks."
@@ -76,7 +76,7 @@
             "text": "<<The bell is ringing>>"
         },
         "late": {
-            "text": "I'm going to class now, it's late already, we'll get scolded for sure"
+            "text": "I'm going to class now, it's late already, we'll get scolded for sure."
         }
     },
 

@@ -95,8 +95,6 @@ import NightmareDay5 from './scenes/gameLoop/day5/nightmareDay5.js';
 import ComputerScene from './UI/computer/computerScene.js'
 import UIManager from './managers/UIManager.js';
 
-import Test from './scenes/test.js';
-
 const max_w = 1129, max_h = 847, min_w = 320, min_h = 240;
 
 const config = {
@@ -124,8 +122,6 @@ const config = {
         BedroomMorningDay4, LivingroomMorningDay4, PlaygroundMorningDay4, StairsMorningDay4, CorridorMorningDay4, ClassFrontMorningDay4, ClassBackBreakDay4, CorridorBreakDay4, StairsBreakDay4, PlaygroundBreakDay4, PlaygroundAfternoonDay4, LivingroomAfternoonDay4, BedroomAfternoonDay4, NightmareDay4,
         // Escenas dia 5
         BedroomMorningDay5, LivingroomMorningDay5, PlaygroundMorningDay5, StairsMorningDay5, CorridorMorningDay5, ClassFrontMorningDay5, ClassBackAfternoonDay5, CorridorAfternoonDay5, StairsAfternoonDay5, BathroomAfternoonDay5, NightmareDay5,
-        // Pruebas
-        Test,
         // UI
         ComputerScene, UIManager],
     autoFocus: true,

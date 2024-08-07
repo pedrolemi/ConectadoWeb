@@ -18,12 +18,12 @@
         "tabTexts": {
             "feed": "Tablón",
             "friends": "Amigos",
-            "upload": "Postear"
+            "upload": "Publicar"
         },
         "friendRequestNot": "¡Tienes nuevas peticiones de amistad!",
         "blockNot": "¡NO ESTÁ PERMITIDO BLOQUEAR USUARIOS!",
         "friendsNumberText": "Amigos",
-        "pendingRequestsText": "Peticiones pendientes",
+        "pendingRequestsText": "Peticiones pendientes:",
         "informationText": "Este es tu tablón, mira lo que tus amigos han compartido"
     },
 

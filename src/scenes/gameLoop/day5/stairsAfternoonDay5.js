@@ -34,7 +34,6 @@ export default class StairsAfternoonDay5 extends StairsBase {
 
         // Cuando termina el dialogo, se vuelve al pasillo
         this.dispatcher.addOnce("returnToCorridor", this, (obj) => {
-            // console.log(obj);
             let params = {
                 camPos: "left"
             };

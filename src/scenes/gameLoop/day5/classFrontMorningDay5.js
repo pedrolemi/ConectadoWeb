@@ -18,8 +18,6 @@ export default class ClassFrontMorningDay5 extends ClassFrontBase {
         
         // Evento llamado cuando terminan los dialogos y empieza la clase
         this.dispatcher.addOnce("startClass", this, (obj) => {
-            console.log(obj);
-
             let sceneName = 'TextOnlyScene';
 
             // Se obtiene el texto de la escena de transicion del archivo de traducciones 

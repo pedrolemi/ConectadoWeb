@@ -10,21 +10,21 @@
         },
 
         "talked": {
-            "text": "Has vuelto, ¿querías algo más?"
+            "text": "Has vuelto. ¿Quieres algo más?"
         },
         "choices": [
             {
                 "text": "Hola, soy {{name}}."
             },
             {
-                "text": "(Preguntar dónde está tu clase)."
+                "text": "(Preguntar dónde está tu clase)"
             },
             {
-                "text": "No necesito nada, hasta luego."
+                "text": "No necesito nada. Hasta luego."
             }
         ],
         "askClass": {
-            "text": "Esa es también mi clase, está en la segunda planta, subiendo las escaleras de la derecha que encuentras nada más entrar al edificio. Y en la primera planta está el despacho del director."
+            "text": "Esa es también mi clase. Está en la segunda planta, subiendo las escaleras de la derecha que encuentras nada más entrar al edificio. Y en la primera planta está el despacho del director."
         },
         "askMore":  {
             "text": "¿Necesitas algo más?"
@@ -36,7 +36,7 @@
             "text": "Yo soy Jose."
         },
         "alreadyIntroduced": {
-            "text": "Ya me habías dicho tu nombre."
+            "text": "Ya me has dicho tu nombre."
         }
     },
     
@@ -49,7 +49,7 @@
                 "text": "Soy {{name}}... ¿Y tú eres?"
             },
             {
-                "text": "No, lo siento, tengo prisa. Adiós."
+                "text": "No. Lo siento, tengo prisa. Adiós."
             }
             
         ],
@@ -58,7 +58,7 @@
                 "text": "Encantada, yo soy Alison."
             },
             {
-                "text": "Espero que estés a gusto aquí, hay gente muy maja."
+                "text": "Espero que estés a gusto aquí. Hay gente muy maja."
             },
             {
                 "text": "¿A qué curso vas?"
@@ -75,7 +75,7 @@
                 "text": "El chico de la camiseta amarilla que está cerca de la entrada al patio también va a nuestra clase."
             },
             {
-                "text": "Es muy majo, ¿por qué no hablas con él?"
+                "text": "Es muy majo. ¿Por qué no hablas con él?"
             }
         ],
         "goodbye": [
@@ -85,7 +85,7 @@
                 "text_female": "No seas tan tímida, no muerdo"
             },
             {
-                "text": "Bueno, nos vemos. Que sea un buen primer día."
+                "text": "Bueno, nos vemos. Ten un buen primer día."
             }
         ]
     },
@@ -111,7 +111,7 @@
             "text": "<<La campana está sonando>>"
         },
         "guilleGoodbye": {
-            "text": "Deberíamos entrar ya, nos vemos."
+            "text": "Deberíamos entrar ya. Nos vemos."
         }
     }
     

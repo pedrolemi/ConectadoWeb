@@ -1,7 +1,7 @@
 {
     "wardrobe1": {
         "root": {
-            "text": "There is nothing useful."
+            "text": "There's nothing useful."
         }
     },
 
@@ -18,18 +18,18 @@
             },
             "choices": [
                 {
-                    "text": "Yes"
+                    "text": "Yes."
                 },
                 {
-                    "text": "No"
+                    "text": "No."
                 }
             ],
         "noPhone": [
             {
-                "text": "But I can't use the mobile's alarm clock."
+                "text": "But I can't use the phone's alarm clock."
             },
             {
-                "text": "Mmmm, I'll use my old mobile, but it doesn't have a SIM card so it only works as an alarm clock."
+                "text": "Mmmm, I'll use my old phone, but it doesn't have a SIM card so it only works as an alarm clock."
             },
             {
                 "text": "Alright, alarm clock set... Time to sleep."
@@ -39,7 +39,7 @@
 
     "phone": {
         "root": {
-            "text": "I've seen you have deleted your post with your phone numbre, but don't worry, I made and screenshot and I can upload it again hahaha"
+            "text": "I've seen you have deleted your post with your phone number, but don't worry, I made and screenshot and I can upload it again hahaha"
         }
     }
     

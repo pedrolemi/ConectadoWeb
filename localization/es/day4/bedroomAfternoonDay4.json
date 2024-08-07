@@ -18,10 +18,10 @@
             },
             "choices": [
                 {
-                    "text": "Sí"
+                    "text": "Sí."
                 },
                 {
-                    "text": "No"
+                    "text": "No."
                 }
             ],
         "noPhone": [
@@ -39,7 +39,7 @@
 
     "phone": {
         "root": {
-            "text": "He visto que has borrado tu publicacion con tu nº de telefono, pero no pasa nada, tengo pantallazo y puevo resubirlo jajaja"
+            "text": "He visto que has borrado tu publicacion con tu nº de telefono, pero no pasa nada, tengo pantallazo y puedo resubirlo jajaja"
         }
     }
     

@@ -64,9 +64,7 @@ export default class PlaygroundMorningDay2 extends PlaygroundBase {
 
             // Evento llamado cuando suena la campana
             this.dispatcher.addOnce("openDoors", this, (obj) => {
-                console.log(obj);
-
-                // Cambia la hora del movil
+                    // Cambia la hora del movil
                 this.phoneManager.setDayInfo("classStart");
 
                 // Se quita el dialogo que aparece al hacer click en las puertas

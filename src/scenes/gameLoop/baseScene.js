@@ -74,7 +74,6 @@ export default class BaseScene extends Phaser.Scene {
      * @param {Object} params - objeto con los parametros que pasarle a initialSetup 
      */
     onCreate(params) {
-        // console.log("onCreate");
         this.initialSetup(params);
     }
 
@@ -83,14 +82,12 @@ export default class BaseScene extends Phaser.Scene {
      * @param {Object} params - objeto con los parametros que pasarle a initialSetup 
      */
     onWake(params) {
-        // console.log("onWake");
         this.initialSetup(params);
     }
 
     // Metodo que se encarga de limpiar los eventos del dispatcher y de eliminar los retratos del UIManager
     // IMPORTANTE: Hay que llamar a este metodo antes de llamar al stop de la escena para evitar problemas al eliminar los retratos
     shutdown() {
-        // console.log("shutdown")
         this.UIManager.dialogManager.clearScene();
 
         if (this.dispatcher) {
@@ -104,7 +101,6 @@ export default class BaseScene extends Phaser.Scene {
      * @param {Object} params - parametros que se le pasan a la configuracion inicial 
      */
     initialSetup(params) {
-        // console.log(params);
         this.dialogManager.changeScene(this);
 
         // Por defecto se pone la camara en el centro y si hay parametros que indiquen
@@ -198,8 +194,6 @@ export default class BaseScene extends Phaser.Scene {
             fileObj = this.getObjFromName(file, objectName);
             translationId = objectName + "." + id;
         }
-        // console.log(fileObj);
-        // console.log(this.i18next.t(translationId, { ns: namespace, name: playerName, context: context, returnObjects: getObjs }));
 
         // Si el nodo ya se habia leido, lo devuelve
         if (nodesMap.has(translationId)) {

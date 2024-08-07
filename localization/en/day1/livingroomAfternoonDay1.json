@@ -25,7 +25,7 @@
 
         "choices1": [
             {
-                "text": "Good, the usual, I'm going to my room."
+                "text": "Good, the usual. I'm going to my room."
             },
             {
                 "text": "I've met Guille..."
@@ -36,7 +36,7 @@
         ],
         "guille": [
             {
-                "text": "Today I've met Guille, he was very nice with me."
+                "text": "Today I've met Guille, he was very nice to me."
             },
             {
                 "text": "I think we'll be good friends."
@@ -47,7 +47,7 @@
                 "text": "He also advised me to look the bulletin boards."
             },
             {
-                "text": "Sometimes there is interesting stuff posted."
+                "text": "Sometimes there's interesting stuff posted."
             }
         ],
 
@@ -74,7 +74,7 @@
             "text": "I think she couldn't find it."
         },
         "found": {
-            "text": "I helped her looking for it, turns out it was in the playground."
+            "text": "I helped her looking for it. Turns out it was in the playground."
         },
         "jose": [
             {
@@ -88,7 +88,7 @@
         
         "choices3": [
             {
-                "text": "In class there's María..."
+                "text": "In class there's Maria..."
             },
             {
                 "text": "There's Alex..."
@@ -98,14 +98,14 @@
             }
         ],
         "maria": {
-            "text": "Another girl in class is María."
+            "text": "Another girl in class is Maria."
         },
         "meanResponse": {
             "text": "She spends all the breaks reading. The class says she's a freak, better to leave her alone."
         },
         "niceResponse": [
             {
-                "text": "It seems that the rest of the class think she's a freak."
+                "text": "It seems that the rest of the class thinks she's a freak."
             },
             {
                 "text": "They cut her off."
@@ -116,7 +116,7 @@
         ],
         "alex": [
             {
-                "text": "There's also Álex."
+                "text": "There's also Alex."
             },
             {
                 "text": "He's arrived late."
@@ -127,18 +127,18 @@
         ],
         "submit": [
             {
-                "text": "Looks like I took his spot when I got in class."
+                "text": "Looks like I took his seat when I got in class."
             },
             {
-                "text": "But I apologized and it looks like he's no longer angry."
+                "text": "But I apologised and it looks like he's no longer angry."
             }
         ],
         "downplay": [
             {
-                "text": "He's classic troublemaker."
+                "text": "He's the classic troublemaker."
             },
             {
-                "text": "I sat on his spot without knowing."
+                "text": "I sat on his seat without knowing."
             },
             {
                 "text": "He has threatened me."
@@ -146,7 +146,7 @@
         ],
         "momDownplayReply": [
             {
-                "text": "Did he threaten you?"
+                "text": "What do you mean he threatened you?"
             },
             {
                 "text": "I'm sure you misunderstood."
@@ -160,30 +160,30 @@
                 "text": "He is rude and a troublemaker."
             },
             {
-                "text": "All because I've sat in his spot."
+                "text": "All because I've sat in his seat."
             },
             {
                 "text": "He should look for another one."
             }
         ],
         "momDefyReply": {
-            "text": "You should apologize and not look for troubles."
+            "text": "You should apologise and not look for trouble."
         },
 
         "choices4": [
             {
-                "text": "Ana..."
+                "text": "Anna..."
             },
             {
                 "text": "(Talk about school)"
             },
             {
-                "text":  "I'm going to my room, we've talked enough."
+                "text":  "I'm going to my room. We've talked enough"
             }
         ],
         "ana": [
             {
-                "text": "There's also Ana."
+                "text": "There's also Anna."
             },
             {
                 "text": "She's a bit scary."

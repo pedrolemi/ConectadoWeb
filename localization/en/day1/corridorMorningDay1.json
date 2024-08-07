@@ -4,13 +4,13 @@
             "text": "..."
         },
         "leaveMaria": {
-            "text": "She seems uncomfortable, better leave her alone for now."
+            "text": "She seems uncomfortable. Better leave her alone for now."
         }
     },
     
     "alison": {
         "root": {
-            "text": "Sorry,  i'm in a hurry, i'll be late if i don't get in."
+            "text": "Sorry, I'm in a hurry. I'll be late if I don't get in."
         }
     },
 
@@ -20,7 +20,7 @@
                 "text": "Hi, I was reading the bulletin board."
             },
             {
-                "text": "There're intresting stuff sometimes, and someone has been leaving messages, stickers and riddles lately."
+                "text": "There's interesting stuff sometimes, and someone's been leaving messages, stickers and riddles lately."
             },
             {
                 "text": "Have a look at it at least once a day, get used to it."
@@ -30,7 +30,7 @@
             }
         ],
         "talked": {
-            "text": "Remember to look at the boards, sometimes you can find intresting things."
+            "text": "Remember to look at the boards. Sometimes you can find interesting things."
         }
     }
     

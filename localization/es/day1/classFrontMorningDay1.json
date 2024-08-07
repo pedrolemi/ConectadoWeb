@@ -5,7 +5,7 @@
         },
         "choices": [
             {
-                "text": "No, es que hoy es mi primer día, soy {{name}}"
+                "text": "No, es que hoy es mi primer día. Soy {{name}}."
             },
             {
                 "text": "¿Y tú quién eres? ¿La marimacho de clase?"
@@ -19,7 +19,7 @@
                 "text_female": "Oh, así que tú eres {{name}}, la nueva."
             },
             {
-                "text": "Yo soy Ana, también estoy en esta clase."
+                "text": "Yo soy Ana. También estoy en esta clase."
             }
         ],
         "insult": {
@@ -27,7 +27,7 @@
         },
 
         "teacherArrive": {
-            "text": "(Ruidos de fondo, parece que tu nuevo profesor ha llegado)"
+            "text": "(Ruidos de fondo. Parece que tu nuevo profesor ha llegado)"
         },
         "teacher": {
             "text": "Vamos a empezar la clase, venga, pasad todos y sentaos."
@@ -62,11 +62,11 @@
             },
             {
                 "text": "",
-                "text_male": "Clase, este es vuestro nuevo compañero, por favor, ayudadle en sus primeros días.",
+                "text_male": "Clase, este es vuestro nuevo compañero, por favor, ayudadlo en sus primeros días.",
                 "text_female": "Clase, esta es vuestra nueva compañera, por favor, ayudadla en sus primeros días."
             },
             {
-                "text": "{{name}}, yo soy vuestro tutor, cualquier cosa que necesites dímelo."
+                "text": "{{name}}, yo soy vuestro tutor. Cualquier cosa que necesites, dímelo."
             },
             {
                 "text": "Por favor, {{name}} siéntate al lado de Alison."

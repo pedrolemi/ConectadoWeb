@@ -29,8 +29,6 @@ export default class CorridorAfternoonDay5 extends CorridorBase {
 
         // Cuando se vuelve al pasillo, aparece Alex en la puerta
         this.dispatcher.addOnce("returnToCorridor", this, (obj) => {
-            // console.log(obj);
-
             let tr = {
                 x: this.rightBound * 0.3,
                 y: this.CANVAS_HEIGHT * 0.625,

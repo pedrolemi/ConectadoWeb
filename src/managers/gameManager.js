@@ -38,7 +38,7 @@ export default class GameManager {
 
         // Escena de la UI
         this.UIManager = null;
-        // Escean del ordenador
+        // Escena del ordenador
         this.computerScene = null;
 
         // Se anaden los parametros iniciales a la blackboard
@@ -214,15 +214,12 @@ export default class GameManager {
 
         // Se anade a los eventos permanentes el evento de cambiar la amistad
         this.dispatcher.add("changeFriendship", this, (obj) => {
-            // console.log(obj);
             this.changeFriendship(obj.character, obj.value);
-            console.log(this.blackboard)
         }, true);
 
 
         // Se anade a los eventos permanentes el evento terminar un chat para indicar que ya no hay nada mas que contestar
         this.dispatcher.add("endChat", this, (obj) => {
-            // console.log(obj);
             let chatName = this.i18next.t("textMessages." + obj.chat, { ns: "phoneInfo", returnObjects: true });
             let nodes = this.currentScene.cache.json.get('everydayDialog');
             let phoneNode = this.currentScene.readNodes(nodes, "everydayDialog", "phone", true);
@@ -312,11 +309,8 @@ export default class GameManager {
         this.computerScene = this.currentScene.scene.get(computerSceneName);
         this.computerScene.scene.sleep();
 
-        this.day = 5;
-        let sceneName = 'NightmareDay5';
-
         // Pasa a la escena inicial con los parametros text, onComplete y onCompleteDelay
-        //let sceneName = 'TextOnlyScene';
+        let sceneName = 'TextOnlyScene';
         let params = {
             // El texto de se coge del a archivo de traducciones
             text: this.i18next.t("day1.start", { ns: "transitionScenes", returnObjects: true }),

@@ -5,7 +5,7 @@
                 "text": "I've been told about some prank you want to play on me."
             },
             {
-                "text": "Can we just get along?"
+                "text": "Can't we just get along?"
             },
             {
                 "text": "I know the type of guy you are."
@@ -13,10 +13,10 @@
         ],
         "prank": [
             {
-                "text": "I'm kind of a joker, but take it easy."
+                "text": "I'm kind of a prankster, but take it easy."
             },
             {
-                "text": "We will all laugh."
+                "text": "We all will laugh."
             }
         ],
 
@@ -24,26 +24,26 @@
             "text": "Why don't we start all over again?"
         },
         "askReply": {
-            "text": "Alright, let's get inside."
+            "text": "Alright. Let's get inside."
         },
 
         "distrust": [
             {
-				"text": "You are the type of guy that exploits everyone."
+				"text": "You're the type of guy that takes advantage of everyone."
 			},
 			{
 				"text": "Looking for a fight no matter the reason."
 			}
         ],
         "distrustReply": {
-            "text": "If you are done pestering me, get away you tosser."
+            "text": "If you're done pestering me, get away you tosser."
         },
 
         "normal": {
-            "text": "Are you still angry about the spot thing?"
+            "text": "Are you still angry about the seat thing?"
         },
         "normalReply": {
-            "text": "We'll see. And you, Do you already know which is your desk?"
+            "text": "We'll see. What about you? Do you already know which is your desk?"
         },
         "talked": {
             "text": "He's ignoring me."
@@ -53,11 +53,11 @@
     "alison": {
         "notTalked": 
         {
-            "text": "How do you do, {{name}}?"
+            "text": "What's up, {{name}}?"
         },
         "warn": [
             {
-                "text": "By the way, Alex was talking before about playing you a mean joke."
+                "text": "By the way, Alex was talking before about pulling a prank on you."
             },
             {
                 "text": "He didn't use to be like that, I don't know what's going on with him."
@@ -74,24 +74,24 @@
     "guille": {
         "match": [
             {
-                "text": "We're meeting this saturday to watch a film at my place."
+                "text": "We're meeting this Saturday to watch a film at my place."
             },
             {
                 "text": "Do you want to come? Some classmates are coming."
             },
             {
-                "text": "And we'll watch it in the huge TV that my father's just bought for football matches."
+                "text": "And we'll watch it in the huge TV my dad's just bought to watch football."
             }
         ],
         "choices": [
             {
-                "text": "Yes"
+                "text": "Yes."
             },
             {
-                "text": "No"
+                "text": "No."
             },
             {
-                "text": "I have to ask first to my parents if I can."
+                "text": "I have to ask my parents first."
             }
         ],
         "yes": [
@@ -104,7 +104,7 @@
         ],
         "no": [
             {
-                "text": "It's a pity."
+                "text": "What a pity."
             },
             {
                 "text": "Well, see ya."
@@ -114,13 +114,13 @@
             "text": "Well, let me know."
         },
         "reminder": {
-            "text": "Remember, Saturday afternoon at 6, my place."
+            "text": "Remember, Saturday at my house at 6PM."
         },
         "goToClass": {
             "text": "Let's get in."
         },
         "distracted": {
-            "text": "Seems distracted."
+            "text": "He seems distracted."
         }
     }
 }

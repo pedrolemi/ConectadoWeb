@@ -24,7 +24,7 @@
 
         "choices1": [
             {
-                "text": "Como siempre"
+                "text": "Como siempre."
             },
             {
                 "text": "Guille me ha dicho de ir a su casa el sábado."
@@ -48,7 +48,7 @@
             }
         ],
         "askMatchReply": {
-            "text": "En principio puedes ir, se lo comentaré a tu madre por si acaso."
+            "text": "En principio puedes ir. Se lo comentaré a tu madre por si acaso."
         },
 
         "choices2": [
@@ -67,7 +67,7 @@
                 "text": "Alison es muy maja."
             },
             {
-                "text": "Me ha advertido de que Alex iba a gastarme una broma."
+                "text": "Me ha advertido de que Álex iba a gastarme una broma."
             },
             {
                 "text": "Aunque de poco ha servido."
@@ -85,7 +85,7 @@
                 "text": "He intentado quitarlo con agua y jabón, pero ha sido peor."
             },
             {
-                "text": "La mayoria de clase se ha reido de mí."
+                "text": "La mayoría de clase se ha reído de mí."
             }
         ],
         "aboutGumNotWashed": [
@@ -105,7 +105,7 @@
                 "text": "María..."
             },
             {
-                "text": "El estúpido de Alex..."
+                "text": "El estúpido de Álex..."
             },
             {
                 "text": "(Hablar del colegio)"
@@ -122,7 +122,7 @@
         
         "alex": [
             {
-                "text": "Diria que la tiene tomada conmigo desde el primer día."
+                "text": "Diría que la tiene tomada conmigo desde el primer día."
             },
             {
                 "text": "Aunque no se muy bien el porqué."
@@ -141,7 +141,7 @@
                 "text": "He intentado hacer las paces con él."
             },
             {
-                "text": "Pero por como me ha hablado creo que va a seguir buscando pelea."
+                "text": "Pero por como me ha hablado, creo que va a seguir buscando pelea."
             }
         ],
         "askReply": [
@@ -149,7 +149,7 @@
 				"text": "Si tienes algún problema con él, no dudes en decírmelo."
 			},
 			{
-				"text": "Si hace falta hablaremos con tu profesor"
+				"text": "Si hace falta hablaremos con tu profesor."
 			}
         ],
         
@@ -166,7 +166,7 @@
                 "text": "No busques pelea."
             },
             {
-                "text": "si hace falta que vaya a hablar con él dimelo."
+                "text": "Si hace falta que vaya a hablar con él, dímelo."
             },
             {
                 "text": "O si tienes cualquier problema, habla con tu profesor."
@@ -178,7 +178,7 @@
                 "text": "El instituto..."
             },
             {
-                "text": "Me voy a la habitación, tengo cosas que hacer."
+                "text": "Me voy a la habitación. Tengo cosas que hacer."
             }
         ],
 

@@ -15,7 +15,7 @@
             }
         ],
         "thanks": {
-            "text": "Not at all darling, we want you to be fine."
+            "text": "Not at all, darling. We want you to be fine."
         },
         "thanks2": {
             "text": "We'll try to have this meeting tomorrow at the latest."
@@ -25,14 +25,14 @@
                 "text": "I don't want you to go. It'll be worse."
             },
             {
-                "text": "They'll think I'm a snitch and it wasn't such a big deal."
+                "text": "They'll think I'm a snitch, and it wasn't such a big deal."
             },
             {
-                "text": "Let it be, time will fix it."
+                "text": "Let it be. Time will fix it."
             }
         ],
         "downplay2": {
-            "text": "Fine, but let us know if goes beyond."
+            "text": "Fine. But let us know if goes further."
         },
 
         "talked": {

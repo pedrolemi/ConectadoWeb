@@ -2,10 +2,10 @@
     "beforeEnter": {
         "root": [
             {
-                "text": "Last week, if you recall, we were learning how to do a morphologic analysis of a sentence."
+                "text": "Last week, if you recall, we learnt how to do the morphologic analysis of a sentence."
             },
             {
-                "text": "Now it's syntax analysis time."
+                "text": "Now it's time for syntax analysis."
             }
         ],
         "knock": {
@@ -20,12 +20,12 @@
             "text": "Alejandro, you're late, please have a seat."
         },
         "alexAnswer": {
-            "text": "The newcomer is in my spot."
+            "text": "The newcomer is in my seat."
         },
         "teacherAnswer": {
             "text": "",
-            "text_male": "The name is {{name}}. Sit in another desk for now, I've asked Alison to help him during the first days.",
-            "text_female": "The name is {{name}}. Sit in another desk for now, I've asked Alison to help her during the first days."
+            "text_male": "The name is {{name}}. Sit on another desk for now. I've asked Alison to help him during his first days.",
+            "text_female": "The name is {{name}}. Sit on another desk for now. I've asked Alison to help her during her first days."
 
         }
     }

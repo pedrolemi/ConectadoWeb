@@ -1,26 +1,26 @@
 {
     "day1": {
-        "start": "La alarma de tu teléfono suena. Es hora de levantarse. Hoy empiezas en un nuevo colegio, es hora de conocer a tus compañeros.",
+        "start": "La alarma de tu teléfono suena. Es hora de levantarse. Hoy empiezas en un nuevo colegio. Es hora de conocer a tus compañeros.",
         "startClass": "Os sentáis todos y empieza la clase.",
         "startClassLate": "Te diriges entre todas las miradas a tu sitio y te sientas.",
         "startBreak": "Suena la campana, es la hora del recreo. Tu oportunidad para hacer amigos.",
-        "endBreak": "Al entrar suena la campana y aparece el profesor. La mañana termina sin darte cuenta, es hora de volver a casa..."
+        "endBreak": "Al entrar, suena la campana y aparece el profesor. La mañana termina sin darte cuenta. Es hora de volver a casa..."
     },
     "day2": {
-        "startClass": "Os sentáis todos, para cuando te das cuenta es la hora del recreo.",
+        "startClass": "Os sentáis todos. Para cuando te das cuenta es la hora del recreo.",
         "startClassLate": "Te diriges entre todas las miradas y te sientas en el primer sitio que ves libre.",
-        "endBreak": "Al entrar suena la campana y aparece el profesor. La mañana termina sin darte cuenta, es hora de volver a casa..."
+        "endBreak": "Al entrar, suena la campana y aparece el profesor. La mañana termina sin darte cuenta. Es hora de volver a casa..."
     },
     "day3": {
-        "startClass": "Ha sido un día aburrido, las clases han terminado y la mayoria lleva ignorandote todo el día. Una notita de papel en tu mesa dice que alguien te espera en los baños."
+        "startClass": "Ha sido un día aburrido. Las clases han terminado y la mayoría lleva ignorándote todo el día. Una notita de papel en tu mesa dice que alguien te espera en los baños."
     },
     "day4": {
         "startClass": "La campana que marca el recreo ha sonado...",
-        "endBreak": "Al entrar suena la campana y aparece el profesor. La mañana termina sin darte cuenta, es hora de volver a casa...",
-        "endDay": "Cada vez se te hacen más largas las horas de clase. Por suerte ya es hora de volver a casa."
+        "endBreak": "Al entrar, suena la campana y aparece el profesor. La mañana termina sin darte cuenta. Es hora de volver a casa...",
+        "endDay": "Cada vez se te hacen más largas las horas de clase. Por suerte, ya es hora de volver a casa."
     },
     "day5": {
-        "startClass": "Otro día más dónde todos cuchichean a tus espaldas, es hora de irse a casa.",
+        "startClass": "Otro día más dónde todos cuchichean a tus espaldas. Es hora de irse a casa.",
         "endDay": "Vuelves a casa y hoy te duermes pronto. Como todos los días, es la hora de tu sueño...",
         "end": "FIN"
     }

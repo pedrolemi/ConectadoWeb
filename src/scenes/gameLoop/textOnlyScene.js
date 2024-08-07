@@ -36,8 +36,6 @@ export default class TextOnlyScene extends BaseScene {
     create(params) {
         super.create(params);
 
-        // console.log(params);
-
         let text = "";
         let onComplete = () => { };
         let onCompleteDelay = 0;

@@ -1,28 +1,28 @@
 {
     "jose": {
         "notTalked": {
-            "text": "You are new, aren't you?"
+            "text": "You're new, aren't you?"
         },
         "ask": {
             "text": "Do you want anything?"
         },
 
         "talked": {
-            "text": "You're back, do you need anything else?"
+            "text": "You're back. Do you need anything else?"
         },
         "choices": [
             {
                 "text": "Hello, I'm {{name}}..."
             },
             {
-                "text": "(Ask where the classroom is)."
+                "text": "(Ask where your classroom is)"
             },
             {
-                "text": "I don't need anything, see you later."
+                "text": "I don't need anything. See you later."
             }
         ],
         "askClass": {
-            "text": "That's my classroom too, it's in the second floor.Go upstairs on your right once you get inside the building. And in the first floor is the principal's office."
+            "text": "That's my classroom too. It's in the second floor. Go upstairs on your right once you get inside the building. And in the first floor is the principal's office."
         },
         "askMore":  {
             "text": "Do you need anything else?"
@@ -44,10 +44,10 @@
         },
         "choices": [
             {
-                "text": "I'm {{name}}, and you are...?"
+                "text": "I'm {{name}}. And you're...?"
             },
             {
-                "text": "No, I'm sorry, I'm in a hurry. Bye."
+                "text": "No. I'm sorry, I'm in a hurry. Bye."
             }
             
         ],
@@ -56,7 +56,7 @@
                 "text": "Nice to meet ya, I'm Alison."
             },
             {
-                "text": "I hope you have a nice time here, people are really nice."
+                "text": "I hope you have a nice time here. People are really nice."
             },
             {
                 "text": "What grade are you in?"
@@ -73,7 +73,7 @@
                 "text": "The boy with the yellow shirt next to the playground entrance is also in our class."
             },
             {
-                "text": "He's very nice, why don't you go and talk to him?"
+                "text": "He's very nice. Why don't you go and talk to him?"
             }
         ],
         "goodbye": [
@@ -92,10 +92,10 @@
         },
         "choices": [
             {
-                "text": "Yeah, I'm {{name}}... who are you?"
+                "text": "Yeah, I'm {{name}}... Who are you?"
             },
             {
-                "text": "Excuse me, I'm in a hurry. (You leave)."
+                "text": "Excuse me, I'm in a hurry (You leave)."
             }
         ],
         "introduce": {
@@ -105,7 +105,7 @@
             "text": "<<The bell is ringing>>"
         },
         "guilleGoodbye": {
-            "text": "We should get inside, see ya."
+            "text": "We should get inside. See ya."
         }
     }
     

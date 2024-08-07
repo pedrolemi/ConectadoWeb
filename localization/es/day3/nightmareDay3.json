@@ -9,7 +9,7 @@
                     "text": "Puedes decir lo que quieras, pero no conseguirás nada."
                 },
                 {
-                    "text": "Adelante, habla con la gente de clase, a ver si consigues que te hablen."
+                    "text": "Adelante. Habla con la gente de clase, a ver si consigues que te hablen."
                 }
             ]
         },
@@ -54,7 +54,7 @@
         },
         "playerWorry": [
             {
-                "text": "Tú eres mi amigo no, ¿no?"
+                "text": "Tú eres mi amigo, ¿no?"
             },
             {
                 "text": "Guille, tú no eres como los demás."
@@ -76,7 +76,7 @@
                 "text": "Podemos ser amigos."
             },
             {
-                "text": "Tienes 3 años? Dime algo."
+                "text": "¿Tienes 3 años? Dime algo."
             }
         ]
     },
@@ -89,7 +89,7 @@
                 "text": "Eres mi amiga, ¿no?"
             },
             {
-                "text": "Eres maja, no me vas a dejar de hablar, ¿verdad?"
+                "text": "Eres maja. No me vas a dejar de hablar, ¿verdad?"
             },
             {
                 "text": "Por favor, dime algo."
@@ -102,10 +102,10 @@
         },
         "playerWorry": [
             {
-                "text": "¿Qué te he hecho? ¿Por qué vas a por mi también?"
+                "text": "¿Qué te he hecho? ¿Por qué vas a por mí también?"
             },
             {
-                "text": "Si Alex se tira de un puente, ¿también te tirás tú?"
+                "text": "Si Álex se tira de un puente, ¿también te tiras tú?"
             },
             {
                 "text": "¿No podemos llevarnos bien?"

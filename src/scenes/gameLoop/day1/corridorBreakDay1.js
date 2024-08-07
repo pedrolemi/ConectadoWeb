@@ -64,8 +64,6 @@ export default class CorridorBreakDay1 extends CorridorBase {
         
         // Evento que se llama cuando se le devuelve el pendiente a Alison. La hace desaparecer con una animacion
         this.dispatcher.addOnce("alisonEnter", this, (obj) => {
-            console.log(obj);
-
             let anim = this.tweens.add({
                 targets: [alison.char],
                 alpha: { from: 1, to: 0 },

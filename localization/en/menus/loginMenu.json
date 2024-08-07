@@ -17,7 +17,7 @@
         "defaultText": "Your password"
     },
     "errorTexts": {
-        "invalidName": "Your name is required ",
+        "invalidName": "Your name is required",
         "invalidUser": "Your username is required",
         "invalidPassword": "A password is required",
         "shorterName": "Your name can't have more than {{number}} characters",

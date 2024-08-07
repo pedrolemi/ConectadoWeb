@@ -1,14 +1,14 @@
 {
     "group": {
         "notTalked": {
-            "text": "Buenos días, ¿Qué hacéis todo aquí?"
+            "text": "Buenos días. ¿Qué hacéis todo aquí?"
         },
         "explain": {
-            "text": "Sólo estabamos hablando."
+            "text": "Sólo estábamos hablando."
         },
         "shutUp": [
             {
-                "text": "Callate Guille, ¿En qué hemos quedado?"
+                "text": "Cállate Guille. ¿En qué hemos quedado?"
             },
             {
                 "text": "¿Acaso quieres que se enteren tus padres?"
@@ -22,14 +22,14 @@
                 "text": "¿Qué está pasando, Guille?"
             },
             {
-                "text": "Eso ha sonado a amenaza"
+                "text": "Eso ha sonado a amenaza."
             }
         ],
         "worry": {
             "text": "¿Estás bien, Guille?"
         },
         "threat": {
-            "text": "¿También la tienes tomada con Guille, Alex?"
+            "text": "¿También la tienes tomada con Guille, Álex?"
         },
         
         "silenceQuestion": {
@@ -43,7 +43,7 @@
             "text": "<<La campana está sonando>>"
         },
         "late": {
-            "text": "Vale, no digáis nada. Yo me voy a clase, que ya es suficientemente tarde"
+            "text": "Vale. No digáis nada. Yo me voy a clase, que ya es suficientemente tarde."
         },
         "talked": [
             {

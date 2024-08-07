@@ -93,8 +93,6 @@ export default class ClassFrontMorningDay4 extends ClassFrontBase {
         
         // Evento llamado cuando terminan los dialogos y empieza la clase
         this.dispatcher.addOnce("startClass", this, (obj) => {
-            console.log(obj);
-
             let sceneName = 'TextOnlyScene';
             let nextScene = 'ClassBackBreakDay4'
 

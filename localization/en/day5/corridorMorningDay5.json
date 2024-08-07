@@ -33,21 +33,21 @@
                 "text": "Let's do something. When the classes are over, let's talk where none can hear us."
             },
             {
-                "text": "We talk about it, you apologize and we leave you in peace."
+                "text": "We talk about it, you apologise and we leave you in peace."
             },
             {
-                "text": "Ana and I will leave you alone and the rest can do what they want."
+                "text": "Anna and I'll leave you alone and the rest can do what they want."
             }
         ],
         
         "talked": [
             {
-                "text": "When the class is over, remember to come to the bathrooms."
+                "text": "When the class is over, remember to come to the toilets."
             },
             {
                 "text": "",
-                "text_male": "I will be there",
-                "text_female" : "Ana will be waiting there"
+                "text_male": "I'll be there",
+                "text_female" : "Anna will be waiting there"
             }
         ]
     },

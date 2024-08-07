@@ -10,7 +10,7 @@
                 "text": "¿Alguno de vosotros sabe dónde está mi móvil? No tiene gracia."
             },
             {
-                "text": "Sé que habéis sido vosotros, no tiene gracia."
+                "text": "Sé que habéis sido vosotros. No tiene gracia."
             }
         ],
 
@@ -19,25 +19,25 @@
         },
         "askFound2": [
             {
-                "text": "Jajaja, seguro que sí."
+                "text": "Jajaja. Seguro que sí."
             },
             {
-                "text": "Venga, pierdete, vete a llorar a otro sitio."
+                "text": "Venga, piérdete. Vete a llorar a otro sitio."
             }
         ],
 
         "askNotFound": [
             {
-                "text": "Quizá"
+                "text": "Quizá."
             },
             {
                 "text": "Te diremos dónde está si vas con María y le pegas este cartel en la espalda."
             },
             {
-                "text": "(Te da un papel con celo donde se puede lee \"Soy masoca, si lees esto insúltame\")."
+                "text": "(Te da un papel con celo donde se puede lee \"Soy masoca, si lees esto insúltame\")"
             },
             {
-                "text": "Vuelve cuando lo hayas hecho, sino no te molestes en volver."
+                "text": "Vuelve cuando lo hayas hecho. Si no, ni te molestes en volver."
             }
         ],
 
@@ -46,10 +46,10 @@
         },
         "prankChoices": [
             {
-                "text": "Sí"
+                "text": "Sí."
             },
             {
-                "text": "No"
+                "text": "No."
             }
         ],
 
@@ -57,12 +57,12 @@
             "text": "¿A qué esperas? Venga, ve a pegar ese cartel a María."
         },
         "reveal": {
-            "text": "Jajajaja, muy bien hecho."
+            "text": "Jajajaja. Muy bien hecho."
         },
         "reveal2": {
             "text": "",
-            "text_male": "Jajaja, tu móvil está en el baño de chicas.",
-            "text_female": "Jajaja, tu móvil está en el baño de chicos."
+            "text_male": "Jajaja. Tu móvil está en el baño de chicas.",
+            "text_female": "Jajaja. Tu móvil está en el baño de chicos."
         },
 
         "laugh": {

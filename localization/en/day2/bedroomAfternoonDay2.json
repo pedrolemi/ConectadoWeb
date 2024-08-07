@@ -7,13 +7,13 @@
 
     "wardrobe2": {
         "root": {
-            "text": "I don't have time to organize all this today."
+            "text": "I don't have time to organise all this today."
         }
     },
 
     "phone1": {
         "root": {
-            "text": "{{name}} this is the chat we use all classm8s"
+            "text": "{{name}} this is the chat we all classm8s use"
         },
         "message2": {
             "text": "Welcome"
@@ -38,18 +38,18 @@
         },
         "message4": {
             "text": "",
-            "text_male": "Hmm, hasn't earned 2be in this group. Someone kick him out NOW!",
-            "text_female": "Hmm, hasn't earned 2be in this group. Someone kick her out NOW!"
+            "text_male": "Hmm, he hasn't earned 2be in this group. Someone kick him out NOW!",
+            "text_female": "Hmm, she hasn't earned 2be in this group. Someone kick her out NOW!"
         },
         "message5": {
-            "text": "The only 1 left is that freak, María"
+            "text": "The only 1 left is that freak, Maria"
         },
         "message6": {
-            "text": "Jose is the admin, talk 2morrow with him, doesnt read this chat to often"
+            "text": "Jose is the admin, talk 2morrow with him, he doesnt read this chat too often"
         },
         "reply2": [
             {
-                "text": "You treat me awful. It makes me feel bad"
+                "text": "I feel bad that you treat me like this"
             },
             {
                 "text": "Grow up"
@@ -59,7 +59,7 @@
             }
         ],
         "sad": {
-            "text": "I just get to school and it really feels like awful that you guys treat me like shit."
+            "text": "I just get to school and it really feels awful that you guys treat me like shit."
         },
         "sad2": {
             "text": "I'm not saying you all must like me, but all you could do is treat me with some respect."
@@ -78,7 +78,7 @@
             "text": "You're crossing the line"
         },
         "message9": {
-            "text": "This is not your bussiness. I can make Jose to kick you out too."
+            "text": "This is not your business. I can make Jose kick you out too."
         },
         "reply3": [
             {
@@ -95,7 +95,7 @@
             "text": "If me being in this group chat is a problem, I'm leaving"
         },
         "insult": {
-            "text": "I hope Jose is not as stupid as you are when he reads the chat"
+            "text": "I hope Jose is not as stupid as you're when he reads the chat"
         },
         "stop": {
             "text": "Stop, I haven't done anything to you that justifies the way you're treating me"

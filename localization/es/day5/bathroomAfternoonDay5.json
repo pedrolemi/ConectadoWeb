@@ -2,7 +2,7 @@
     "enter": {
         "root": {
             "text": "",
-            "text_male": "mmm, ¿pasa algo Alex? ¿por qué no entras?",
+            "text_male": "mmm, ¿pasa algo Álex? ¿por qué no entras?",
             "text_female": "¿Ana, estás aquí?"
         }
     },
@@ -152,7 +152,7 @@
                 "text": "Además hoy he tenido reunión con tus padres y también hemos hablado de esto."
             },
             {
-                "text": "Con todo lo que me has dicho... hablaré con la directora para expulsar a Alex 3 días."
+                "text": "Con todo lo que me has dicho... hablaré con la directora para expulsar a Álex 3 días."
             },
             {
                 "text": "Si a la vuelta sigue acosandote ya sea en persona o en las redes dimelo."
@@ -182,7 +182,7 @@
                 "text_female": "No tienes nada que encubrir y no eres una chivata por pedir ayuda. El comportamiento de Álex merece un castigo."
             },
             {
-                "text": "Hemos decidido expulsar a Alex 3 días."
+                "text": "Hemos decidido expulsar a Álex 3 días."
             },
             {
                 "text": "Si sigue igual podríamos expulsarle del colegio e incluso llamar a la policía y tomar represalias legales."
@@ -234,7 +234,7 @@
                 "text": "Todo esto no es culpa tuya ni te lo mereces."
             },
             {
-                "text": "Hemos decidido expulsar a Alex 3 días."
+                "text": "Hemos decidido expulsar a Álex 3 días."
             },
             {
                 "text": "Si sigue igual podríamos expulsarle del colegio e incluso llamar a la policía y tomar represalias legales."

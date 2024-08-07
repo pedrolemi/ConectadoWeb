@@ -121,8 +121,6 @@ export default class ClassBackMorningDay1 extends ClassBackBase {
 
         // Evento llamado cuando el profesor termina su primer dialogo
         this.dispatcher.addOnce("enterClass", this, (obj) => {
-            console.log(obj);
-
             // Se abre la puerta y se pone una mascara a la derecha tapando lo que hay detras ede la pared
             doorClosed.visible = false;
             doorOpened.visible = true;

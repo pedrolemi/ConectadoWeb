@@ -15,28 +15,28 @@
             }
         ],
         "thanks": {
-            "text": "De nada cariño, queremos que estés bien."
+            "text": "De nada, cariño. Queremos que estés bien."
         },
         "thanks2": {
             "text": "Intentaremos tener la reunión mañana como muy tarde."
         },
         "downplay": [
             {
-                "text": "No quiero que vayáis, será peor."
+                "text": "No quiero que vayáis. Será peor."
             },
             {
                 "text": "Creerán que soy un chivato y tampoco ha sido para tanto."
             },
             {
-                "text": "Dejadlo estar, el tiempo lo solucionará."
+                "text": "Dejadlo estar. El tiempo lo solucionará."
             }
         ],
         "downplay2": {
-            "text": "Bien, pero si va a más dinoslo."
+            "text": "Bien. Pero si va a más dínoslo."
         },
 
         "talked": {
-            "text": "Ten cuidado y portate bien."
+            "text": "Ten cuidado y pórtate bien."
         },
         "talked2": {
             "text": "Y acuérdate que el domingo vamos a visitar a la abuela."

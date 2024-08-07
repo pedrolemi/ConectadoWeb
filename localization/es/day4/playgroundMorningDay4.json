@@ -5,7 +5,7 @@
                 "text": "{{name}}, quiero hablar contigo."
             },
             {
-                "text": "No sé si lo sabes, pero Alex nos ha dicho a todos que no te hablemos."
+                "text": "No sé si lo sabes, pero Álex nos ha dicho a todos que no te hablemos."
             },
             {
                 "text": "Y a los que no queremos hacerle caso nos amenaza con algo."
@@ -19,7 +19,7 @@
                 "text": "Muchas gracias por ser mi amiga."
             },
             {
-                "text": "No y no tengo interés en ganarme tu confianza."
+                "text": "No. Y no tengo interés en ganarme tu confianza."
             }
         ],
         "thanks": [
@@ -48,14 +48,14 @@
             }
         ],
         "exchange":  {
-            "text": "Os escribís las contraseñas a través del móvil"
+            "text": "(Os escribís las contraseñas a través del móvil)"
         },
         "exchange2": {
-            "text": "Perfecto. Best Friends (sonríe de oreja a oreja)"
+            "text": "Perfecto. Best Friends (sonríe de oreja a oreja)."
         },
         "dont": [
             {
-                "text": "Si no confias en mí yo támpoco puedo confiar en tí."
+                "text": "Si no confías en mí yo tampoco puedo confiar en tí."
             },
             {
                 "text": "Lo siento, pero entonces no puedo hablarte más."
@@ -66,7 +66,7 @@
         ],
         "reject": [
             {
-                "text": "Entonces no me queda otra que hacer caso a Alex y dejarte de hablar."
+                "text": "Entonces no me queda otra que hacer caso a Álex y dejarte de hablar."
             },
             {
                 "text": "No quiero correr ningún riesgo."
@@ -92,7 +92,7 @@
                 "text": "(Con una sonrisa en su cara te mira fijamente y empieza a reir)"
             },
             {
-                "text": "JAJAJA!!"
+                "text": "¡¡JAJAJA!!"
             }
         ]
     },

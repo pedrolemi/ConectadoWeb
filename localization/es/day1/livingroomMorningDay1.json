@@ -7,7 +7,7 @@
                 "text_female": "Veo que ya estás lista para irte."
             },
             {
-                "text": "¿Llevas todo?, Acuérdate de coger la mochila."
+                "text": "¿Llevas todo? Acuérdate de coger la mochila."
             },
             {
                 "text": "Pórtate bien y haz muchos amigos."
@@ -21,7 +21,7 @@
                 "text": "Tu primer día en el nuevo colegio y ya llegas tarde."
             },
             {
-                "text": "Venga, coge todo lo que necesites y vete YA!"
+                "text": "¡Venga, coge todo lo que necesites y vete ya!"
             }
         ],
         "hasBag": {
@@ -31,14 +31,14 @@
             "text": "Vete ya o acabarás llegando tarde."
         },
         "hasBagLate":  {
-            "text": "Vete ya, estás llegando tarde."
+            "text": "Vete, que ya llegas tarde."
         },
         "noBag": [
             {
                 "text": "Te dejas la mochila."
             },
             {
-                "text": "Está en tu cuarto, cógela y vete ya."
+                "text": "Está en tu cuarto. Cógela y vete ya."
             }
         ]
     }

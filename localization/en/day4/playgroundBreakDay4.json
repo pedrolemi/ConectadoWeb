@@ -3,14 +3,14 @@
         "choices": [
             {
                 "text": "",
-                "text_male": "Was it you? Have you hidden my mobile phone in the girls' bathroom?",
-                "text_female":  "Was it you? Have you hidden my mobile phone in the boys' bathroom?"
+                "text_male": "Was it you? Have you hidden my mobile phone in the girls' toilet?",
+                "text_female":  "Was it you? Have you hidden my mobile phone in the boys' toilet?"
             },
             {
                 "text": "Does anyone know where my phone is? It's not funny."
             },
             {
-                "text": "I know it was you, it's not funny."
+                "text": "I know it was you. It's not funny."
             }
         ],
 
@@ -20,52 +20,52 @@
         "askFound2": [
             {
                 "text": "",
-                "text_male": "Hahaha, I'm sure he will.",
-                "text_female": "Hahaha, I'm sure she will."
+                "text_male": "Hahaha. I'm sure he will.",
+                "text_female": "Hahaha. I'm sure she will."
 
             },
             {
-                "text": "C'mon, get lost, go cry elsewhere."
+                "text": "C'mon, get lost. Go cry elsewhere."
             }
         ],
 
         "askNotFound": [
             {
-                "text": "Maybe"
+                "text": "Perhaps."
             },
             {
-                "text": "We'll let you know where it is if you go and stick this poster in María's back."
+                "text": "We'll let you know where it is if you go and stick this poster to Maria's back."
             },
             {
-                "text": "(She gives you a paper with tape on it and the sentence \"I'm a masochist, insult me if you read this\")."
+                "text": "(She gives you a paper with tape on it and the sentence \"I'm a masochist, insult me if you read this\")"
             },
             {
-                "text": "Come back when you've done it... otherwise, don't bother."
+                "text": "Come back when you've done it... Otherwise, don't even bother."
             }
         ],
 
         "askPrank": {
-            "text": "Have you stuck the poster in María's back without her noticing it?"
+            "text": "Have you stuck the poster to Maria's back without her noticing it?"
         },
         "prankChoices": [
             {
-                "text": "Yes"
+                "text": "Yes."
             },
             {
-                "text": "No"
+                "text": "No."
             }
         ],
 
         "hurry": {
-            "text": "What are you waiting for? C'mon, go stick that poster in María's back."
+            "text": "What are you waiting for? C'mon, go stick that poster in Maria's back."
         },
         "reveal": {
-            "text": "Hahahaha, well done."
+            "text": "Hahahaha. Well done."
         },
         "reveal2": {
             "text": "",
-            "text_male": "Hahaha, your mobile is in the girls' bathroom",
-            "text_female": "Hahaha, your mobile is in the boys' bathroom"
+            "text_male": "Hahaha. Your phone is in the girls' toilet",
+            "text_female": "Hahaha. Your phone is in the boys' toilet"
         },
 
         "laugh": {

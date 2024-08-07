@@ -1,24 +1,24 @@
 {
-    "alexAna": {
+    "alexAnna": {
         "root": {
-            "text": "(They've seen you but still ignore you. Alex and Ana are talking to each other)"
+            "text": "(They've seen you but still ignore you. Alex and Anna are talking to each other)"
         },
         "suggestion": {
             "text": "I think Shiphead and Gremlin are the most original ones."
         },
         "opinion": [
             {
-				"text": "I was all into Outkast,"
+				"text": "I was all into Outkast."
 			},
 			{
-				"text": "Although it's true {{name}} Shiphead sounds really good hahaha. "
+				"text": "Although it's true {{name}} Shiphead sounds really good. Hahaha."
 			}
         ],
         "jose": {
-            "text": "Hahaha let's see what's Jose's view."
+            "text": "Hahaha. Let's see what's Jose's view."
         },
         "goOn": {
-            "text": "Don't be shy, keep ignoring and thinking how to name me."
+            "text": "Don't be shy. Keep ignoring and thinking how to name me."
         }
     },
     "board": {

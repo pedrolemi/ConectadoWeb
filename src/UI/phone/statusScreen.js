@@ -55,7 +55,6 @@ export default class StatusScreen extends BaseScreen {
         if (pos === "mid") {
             barPos = MID_X;
         }
-        // console.log(barPos + " " + (BAR_Y + BAR_OFFSET * this.statusBars.size));
         let bar = new StatusBar(this.scene, this, barPos, BAR_Y + BAR_OFFSET * this.statusBars.size - BAR_ERROR * this.statusBars.size, BAR_W, BAR_H, character);
         this.statusBars.set(character, bar);
     }

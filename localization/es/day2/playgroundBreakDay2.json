@@ -1,41 +1,41 @@
 {
     "ana_jose": {
         "washed": {
-            "text": "Jajaja, ¿te has meado encima?"
+            "text": "Jajaja. ¿Te has meado encima?"
         },
         "washed2": [
             {
-				"text": "Jajajaja, no, no, mira bien, se ha cagado."
+				"text": "Jajajaja. No, no, mira bien, se ha cagado."
 			},
 			{
-				"text": "¿Llevas el móvil, Ana? Foto!!"
+				"text": "¿Llevas el móvil, Ana? ¡¡Foto!!"
 			}
         ],
         "washed3": {
-            "text": "Jajajaja"
+            "text": "Jajajaja."
         },
 
         "notWashed": [
             {
-				"text": "A ver si lavas la ropa, menudo desastre llevas en el pantalón"
+				"text": "A ver si lavas la ropa. Menudo desastre llevas en el pantalón."
 			},
 			{
-				"text": "¿No teneís lavadora en casa?"
+				"text": "¿No tenéis lavadora en casa?"
 			}
         ],
         "notWashed2": [
             {
-				"text": "Jajajaja, ¡nueva moda! chicles pegados al pantalón"
+				"text": "Jajajaja. ¡Nueva moda! Chicles pegados al pantalón."
 			},
 			{
-				"text": "Con lo horrorosa que es su ropa, no merece la pena que la lave"
+				"text": "Con lo horrorosa que es su ropa, no merece la pena que la lave."
 			},
 			{
-				"text": "Debería tirarla a la basura directamente"
+				"text": "Debería tirarla a la basura directamente."
 			}
         ],
         "notWashed3": {
-            "text": "Jajajaja"
+            "text": "Jajajaja."
         }
     },
 
@@ -44,7 +44,7 @@
             "text": "Menuda mancha llevas."
         },
         "washed2": {
-            "text": "Bueno, no pasa nada, en un rato se secará."
+            "text": "Bueno, no pasa nada. En un rato se secará."
         },
 
         "notTalked": [
@@ -56,7 +56,7 @@
 			}
         ],
         "notTalked2": {
-            "text": "Menudo desastre, pasa por el baño antes de ir a clase."
+            "text": "Menudo desastre. Pasa por el baño antes de ir a clase."
         },
         "notTalked3": {
             "text": "Sí, igual consigues quitarlo."

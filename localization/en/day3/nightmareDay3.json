@@ -9,14 +9,14 @@
                     "text": "You can do whatever you want, but you won't get anything."
                 },
                 {
-                    "text": "Go on, talk to people in class, let's see if you get them to talk to you."
+                    "text": "Go on. Talk to people in class, and see if you get them to talk to you."
                 }
             ]
         },
         "outro": {
             "root": [
                 {
-                    "text": "I think you have been left alone."
+                    "text": "I think you've been left alone."
                 },
                 {
                     "text": "How does it feel to be ignored by everybody?"
@@ -25,7 +25,7 @@
                     "text": "Isn't it funny that none cares about you?"
                 },
                 {
-                    "text": "Because I'm cracking up just looking at you."
+                    "text": "Because I'm cracking up just by looking at you."
                 }
             ]
         }
@@ -55,7 +55,7 @@
                 "text": "You're my friend, right?"
             },
             {
-                "text": "William, you're not like the others."
+                "text": "Guille, you're not like the others."
             },
             {
                 "text": "Don't let them threaten you."
@@ -74,7 +74,7 @@
                 "text": "We can be friends."
             },
             {
-                "text": "How old are you? Three years? Talk to me"
+                "text": "What are you? Three? Talk to me."
             }
         ]
     },
@@ -84,10 +84,10 @@
         },
         "playerWorry": [
             {
-                "text": "Are you my friend, right?"
+                "text": "You're my friend, right?"
             },
             {
-                "text": "You seem nicke, you aren't gonna stop talking to me, right?"
+                "text": "You're nice. You're not gonna stop talking to me, aren't you?"
             },
             {
                 "text": "Please, talk to me."

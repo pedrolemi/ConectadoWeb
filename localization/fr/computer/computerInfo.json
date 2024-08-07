@@ -1,0 +1,32 @@
+{
+    "yourUserText": "Ton nom d'utilisateur",
+    "yourPasswordText": "Ton mot de passe",
+    "loginScreen": {
+        "subtitleText": "CONNECTE-TOI AVEC TES AMIS!",
+        "userInput": {
+            "sideText": "Nom d'utilisateur"
+        },
+        "passwordInput": {
+            "sideText": "Mot de passe"
+        },
+        "errorText": "Le nom d'utilisateur/mot de passe introduit est incorrect",
+        "enterButton": "Se connecter"
+    },
+    "socialNetScreen": {
+        "tabTexts": {
+            "feed": "Mur",
+            "friends": "Amis",
+            "upload": "Publier"
+        },
+        "friendRequestNot": "Tu as eu une nouvelle demande d'ami!",
+        "blockNot": "LE BLOCAGE DES UTILISATEURS N'EST PAS AUTORISÉ!",
+        "friendsNumberText": "Amis",
+        "pendingRequestsText": "Demandes d'amis en attente:",
+        "informationText": "Ceci est ton mur, regarde ce que tes amis ont partagé"
+    },
+    "commentsNumberText": "Commentaires",
+    "friendRequestButtons": {
+        "acceptText": "Accepter la demande",
+        "denyText": "Refuser la demande"
+    }
+}

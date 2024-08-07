@@ -1,0 +1,37 @@
+{
+    "shadow": {
+        "introduction": {
+            "root": [
+                {
+                    "text": "¿No te gustan las nuevas fotos que hemos publicado?"
+                },
+                {
+                    "text": "Puedes intentar borrarlas..."
+                },
+                {
+                    "text": "Vas a tener que hacer algo más aparte de borrarlas o denunciarlas."
+                },
+                {
+                    "text": "Venga... prueba a ver, pero todos tenemos una copia ya."
+                }
+            ]
+        },
+        "outro": {
+            "root": [
+                {
+                    "text": "No has conseguido nada."
+                },
+                {
+                    "text": "Jajajaja."
+                },
+                {
+                    "text": "Las fotos siguen ahí."
+                },
+                {
+                    "text": "Una vez en internet, cualquiera puede hacer una copia."
+                }
+            ]
+        }
+    },
+    "imageText": "Denunciar foto"
+}

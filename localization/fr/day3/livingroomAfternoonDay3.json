@@ -1,0 +1,98 @@
+{
+    "mom": {
+        "notTalked": [
+            {
+                "text": "Buenas tardes, cariño"
+            },
+            {
+                "text": "¿Qué habéis hecho hoy?"
+            }
+        ],
+        "talked": {
+            "text": "¿Quieres hablar de algo más?"
+        },
+        "choices1": [
+            {
+                "text": "Nada a destacar."
+            },
+            {
+                "text": "María no ha venido."
+            },
+            {
+                "text": "(Hablar de otra cosa)"
+            }
+        ],
+        "maria": {
+            "text": "A María hoy no la he visto."
+        },
+        
+        "choices2": [
+            {
+				"text": "La clase."
+			},
+			{
+				"text": "(Contarle lo de la foto en los tablones)"
+			},
+			{
+				"text": "(Hablar de otros compañeros)"
+			}
+        ],
+        "school": [
+            {
+                "text": "Casi todos me han ignorado. Pocos hablaban conmigo."
+            },
+            {
+                "text": "Es como si todo el mundo me evitara o me hiciera el vacío."
+            }
+        ],
+        "board": [
+            {
+                "text": "Se han dedicado a poner fotos mías en todos los tablones."
+            },
+            {
+                "text": "No se qué he hecho mal para que se porten así conmigo."
+            }
+        ],
+        "momBoard": [
+            {
+				"text": "Luego hablaré con tu padre."
+			},
+			{
+				"text": "Igual deberíamos ir a hablar con tu tutor a ver qué está pasando."
+			}
+        ],
+
+        "choices3": [
+            {
+                "text": "He hablado con Guille."
+            },
+            {
+                "text": "Me voy a la habitación. Tengo cosas que hacer."
+            }
+        ],
+        "guille": [
+            {
+                "text": "Guille me ha contado que Álex me odia."
+            },
+            {
+                "text": "Álex me está haciendo la vida imposible."
+            },
+            {
+                "text": "Y tiene amenazada a media clase para que me ignoren."
+            }
+        ],
+        "aboutBoard": [
+            {
+                "text": "Y me ha contado que Ana es la primera en seguirle el juego a Álex."
+            },
+            {
+                "text": "Está mañana ha llegado la primera..."
+            },
+            {
+                "text": "Y se ha dedicado a poner fotos mías en todos los tablones."
+            }
+        ]
+
+        
+    }
+}

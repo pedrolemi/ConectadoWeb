@@ -1,0 +1,53 @@
+{
+    "alarm": {
+        "title": "Alarme",
+        "message": "Vous êtes incapable de dormir davantage. Vous devriez vous réveiller maintenant"
+    },
+    "clock": {
+        "days": [
+            "Lundi, Jour 1",
+            "Mardi, Jour 2",
+            "Mercredi, Jour 3",
+            "Jeudi, Jour 4",
+            "Vendredi, Jour 5"
+        ],
+
+        "alarmHour": "07:30",
+        "alarmLateHour": "08:05",
+        "pcLateHour": "08:10",
+        
+        "playgroundMorning": "08:20",
+        "classStart": "08:30",
+        "playgroundMorningLate": "08:40",
+        
+        "startBreak": "11:05",
+        "midBreak": "11:10",
+        "endBreak": "11:20",
+
+        "endClass": "14:02",
+        "returnHome": "15:00",
+
+        "afternoon": {
+            "endClass": "14:05",
+            "corridor": "14:08"
+        },
+
+        "night": "21:30"
+    },
+    "statusScreen": {
+        "title":"Risque social",
+        "subtitle":"Amitiés"
+    },
+    "textMessages": {
+        "title": "CONVERSATIONS",
+        "chat1": "Alison",
+        "chat2": "Classe",
+        "chat3": "Marie",
+        "chat4": "Alexandre"
+    },
+    "settings": {
+        "text": "Vous reviendrez à l'écran d'accueil. Êtes-vous sûr ?",
+        "yes": "Oui",
+        "no": "Non" 
+    }
+}

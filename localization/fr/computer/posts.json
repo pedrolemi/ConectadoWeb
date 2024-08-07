@@ -1,0 +1,160 @@
+{
+    "player": {
+        "upload": {
+            "root": {
+                "text": "Je n'ai pas de nouvelles photos à mettre en ligne."
+            }
+        },
+        "postStolen": {
+            "description": "C'est moi, appelle-moi au 06-54-65-54-31",
+            "comment": {
+                "decision": [
+                    {
+                        "text": "(Supprimer le post)"
+                    },
+                    {
+                        "text": "Alison... c'est pour ça que tu voulais qu'on échange nos mots de passe."
+                    },
+                    {
+                        "text": "(Garder le silence)"
+                    }
+                ],
+                "sayErase": {
+                    "text": "Je vais supprimer de suite ce post."
+                },
+                "complain": {
+                    "text": "Alison... c'est pour ça que tu voulais qu'on échange nos mots de passe, tu es la pire des filles que j'ai jamais connue."
+                },
+                "default": {
+                    "text": "Je n'ai rien à poster pour l'instant, j'ai mieux à faire."
+                }
+            },
+            "oldComments": {
+                "root": {
+                    "text": "En attendant vos appels"
+                },
+                "secondCommentMale": {
+                    "text": "nous pouvons nous rencontrer quand vous le souhaitez ;)"
+                },
+                "secondCommentFemale": {
+                    "text": "nous pouvons nous rencontrer quand vous le souhaitez ;)"
+                },
+                "thirdComment": {
+                    "text": "Hahaha, regardez ce cul, il n'a pas faim"
+                },
+                "fourthComment": {
+                    "text": "cela va directement sur le tableau de la classe hahaha"
+                },
+                "fifthComment": {
+                    "text": "",
+                    "text_male": "mais es-tu payé?",
+                    "text_female": "mais es-tu payée?"
+                }
+            }
+        }
+    },
+    "Alison": {
+        "postEarring": {
+            "description": "Mes nouvelles boucles d'oreilles, I <3 THEM :)",
+            "comment": {
+                "thanks": {
+                    "text": "De rien, Alison"
+                },
+                "default": {
+                    "text": "Je n'ai rien à poster pour l'instant, j'ai mieux à faire."
+                }
+            },
+            "oldComments": {
+                "root": {
+                    "text": "Je les aime beaucoup, est-ce que tu sais où ils te les ont achetées?"
+                },
+                "secondComment": {
+                    "text": "Pff, je viens d'en perdre une en classe, meuf."
+                },
+                "thirdComment": {
+                    "text": ":( J'espère que tu la retrouveras, cherche bien dans tous les endroits où tu es allée."
+                },
+                "foundEarringComment": {
+                    "text": "{{name}} l'a trouvée et me l'a rendue. Merci beaucoup. :)"
+                },
+                "notFoundEarringComment": {
+                    "text": "Elle était impossible à trouver, quelqu'un a pu la garder. Merci beaucoup à toutes les personnes qui m'ont aidées à la chercher"
+                }
+            }
+        }
+    },
+    "Guille": {
+        "postMatch": {
+            "description": "Regardant le match",
+            "comment": {
+                "root": {
+                    "text": "Je n'ai rien à poster pour l'instant, j'ai mieux à faire."
+                }
+            },
+            "oldComments": {
+                "root": {
+                    "text": "Super match, mec. On se retrouve pour le prochain. Mon père a acheté une nouvelle télé écran géant et elle est géniale."
+                },
+                "secondComment": {
+                    "text": "Dites-le moi pour que je me joigne à vous. :)"
+                }
+            }
+        }
+    },
+    "Ana": {
+        "postTroll": {
+            "description": "On cherche 1 surnom pr {{name}}",
+            "comment": {
+                "decision": [
+                    {
+                        "text": "(Signaler le poste)"
+                    },
+                    {
+                        "text": "Vous êtes des connards."
+                    },
+                    {
+                        "text": "Je vais finir par en parler avec notre professeur."
+                    }
+                ],
+                "report": {
+                    "text": "Je vais signaler le message, voir s'ils le suppriment à cause de son contenu."
+                },
+                "insult": {
+                    "text": "Vous êtes tous des connards, allez vous faire foutre. Vous vous comportez comme des gamins de trois ans."
+                },
+                "insultReply": {
+                    "text": "",
+                    "text_male": "Je suis sûre que tu es celui qui s'est pissé dessus la nuit, hahaha",
+                    "text_female": "Je suis sûre que tu es celle qui s'est pissée dessus la nuit, hahaha"
+                },
+                "snitch": {
+                    "text": "J'en ai marre d'eux. Demain, j'en parlerai au professeur."
+                },
+                "default": {
+                    "text": "Je n'ai rien à poster pour l'instant, j'ai mieux à faire."
+                }
+            },
+            "oldComments": {
+                "root": {
+                    "text_male": "Regardé la tête k'il a... \"Tête de lit\", qu'en dites-vous ?",
+                    "text_female": "Regardé la tête k'elle a... \"Tête de lit\", qu'en dites-vous ?"
+                },
+                "secondComment": {
+                    "text": "LOL, ressemble à 1 grand mur. Pourquoi pas TRUMP?"
+                },
+                "thirdComment": {
+                    "text": "R, c ce que font ses oreilles qd elles bougent LOL"
+                },
+                "fourthComment": {
+                    "text": "hahaha, Alex, c'est du VENT, pas de l'R"
+                },
+                "fifthComment": {
+                    "text": "ne vs compliquez pas la vie, nous pouvons l'appeler rejeté... de toute façon, personne ne va plus parler à celui qui est rejeté.."
+                },
+                "sixthComment": {
+                    "text": "rejeté n'est pas très original... Que diriez-vous de gremlin?"
+                }
+            }
+        }
+    }
+}

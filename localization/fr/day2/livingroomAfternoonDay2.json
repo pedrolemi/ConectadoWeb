@@ -1,0 +1,189 @@
+{
+    "dad": {
+        "notTalked": {
+            "text": "Veo que ya has llegado, {{name}}."
+        },
+        "notWashed": [
+            {
+                "text": "¿Te has fijado en el chicle que llevas en el culo?"
+            },
+            {
+                "text": "A ver si tienes más cuidado, como tú no lavas..."
+            },
+            {
+                "text": "Bueno, ¿qué tal el día?"
+            }
+        ],
+        "washed": {
+            "text": "¿Cómo te ha ido el día?"
+        },
+
+        "talked": {
+            "text": "¿Quieres hablar de algo más?"
+        },
+
+        "choices1": [
+            {
+                "text": "Como siempre."
+            },
+            {
+                "text": "Guille me ha dicho de ir a su casa el sábado."
+            },
+            {
+                "text": "(Hablar de otros compañeros)"
+            }
+        ],
+        "goMatch": {
+            "text": "Le he dicho que iré, así que el sábado por la tarde no estaré en casa."
+        },
+        "dontGoMatch": {
+            "text": "Le he dicho que no, demasiada gente con la que no tengo confianza."
+        },
+        "askMatch": [
+            {
+                "text": "Le he dicho que tenia que preguntar en casa."
+            },
+            {
+                "text": "¿Te importa que vaya?"
+            }
+        ],
+        "askMatchReply": {
+            "text": "En principio puedes ir. Se lo comentaré a tu madre por si acaso."
+        },
+
+        "choices2": [
+            {
+                "text": "Sobre Alison..."
+            },
+            {
+                "text": "(Contarle lo del chicle)"
+            },
+            {
+                "text": "(Hablar de otros compañeros)"
+            }
+        ],
+        "alisonWarn": [
+            {
+                "text": "Alison es muy maja."
+            },
+            {
+                "text": "Me ha advertido de que Álex iba a gastarme una broma."
+            },
+            {
+                "text": "Aunque de poco ha servido."
+            }
+        ],
+        "alisonNormal": {
+            "text": "Hoy he hablado poco con ella."
+        },
+
+        "aboutGumWashed": [
+            {
+                "text": "Hoy he acabado con un chicle en el culo."
+            },
+            {
+                "text": "He intentado quitarlo con agua y jabón, pero ha sido peor."
+            },
+            {
+                "text": "La mayoría de clase se ha reído de mí."
+            }
+        ],
+        "aboutGumNotWashed": [
+            {
+				"text": "Lo del chicle... no sé cómo ha sido."
+			},
+			{
+				"text": "La mayoría de clase se ha reído de mí."
+			}
+        ],
+        "dadGumNotWashed": {
+            "text": "Cariño, tienes que mirar donde apoyas el culo."
+        },
+        
+        "choices3": [
+            {
+                "text": "María..."
+            },
+            {
+                "text": "El estúpido de Álex..."
+            },
+            {
+                "text": "(Hablar del colegio)"
+            }
+        ],
+        "maria": [
+            {
+                "text": "Con María me llevo bien."
+            },
+            {
+                "text": "Aunque parece que no habla con nadie más de clase."
+            }
+        ],
+        
+        "alex": [
+            {
+                "text": "Diría que la tiene tomada conmigo desde el primer día."
+            },
+            {
+                "text": "Aunque no se muy bien el porqué."
+            }
+        ],
+
+        "prank": {
+            "text": "Y hoy me ha querido gastar una broma."
+        },
+
+        "ask": [
+            {
+                "text": "Estaba enfadado por haberme sentado en su sitio."
+            },
+            {
+                "text": "He intentado hacer las paces con él."
+            },
+            {
+                "text": "Pero por como me ha hablado, creo que va a seguir buscando pelea."
+            }
+        ],
+        "askReply": [
+            {
+				"text": "Si tienes algún problema con él, no dudes en decírmelo."
+			},
+			{
+				"text": "Si hace falta hablaremos con tu profesor."
+			}
+        ],
+        
+        "distrust": [
+            {
+                "text": "Va buscando pelea."
+            },
+            {
+                "text": "Me dan ganas de darle dos hostias."
+            }
+        ],
+        "distrustReply": [
+            {
+                "text": "No busques pelea."
+            },
+            {
+                "text": "Si hace falta que vaya a hablar con él, dímelo."
+            },
+            {
+                "text": "O si tienes cualquier problema, habla con tu profesor."
+            }
+        ],
+        
+        "choices4": [
+            {
+                "text": "El instituto..."
+            },
+            {
+                "text": "Me voy a la habitación. Tengo cosas que hacer."
+            }
+        ],
+
+        "school": {
+            "text": "Empiezo a no estar a gusto."
+        }
+    }
+}

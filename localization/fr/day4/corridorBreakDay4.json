@@ -1,0 +1,59 @@
+{
+    "maria": {
+        "normal": {
+            "text": "Me alegro de que hoy hayas venido."
+        },
+        
+        "notFound": {
+            "text": "¿Has visto mi móvil?"
+        },
+        "notFound2": [
+            {
+                "text": "No, ni idea. Revisa bien la clase por si acaso."
+            },
+            {
+                "text": "Si veo algo, te aviso."
+            }
+        ],
+
+        "found": {
+            "text": "¿Has visto si ha entrado alguien a los baños recientemente?"
+        },
+        "found2": {
+            "text": "No me he fijado, lo siento."
+        },
+
+        "prankChoices": [
+            {
+                "text": "Buenas, María."
+            },
+            {
+                "text": "(Pegar el cartel con cuidado e irte sin decir nada)"
+            }
+        ],
+        "pranked": [
+            {
+                "text": "(Bien. Parece que no se ha dado cuenta)"
+            },
+            {
+                "text": "(Espero que ahora me digan dónde está mi móvil)"
+            }
+        ]
+    },
+
+    "bathroom": {
+        "root": {
+            "text": "",
+            "text_male": "No puedo entrar ahí, es el baño de chicas.",
+            "text_female": "No puedo entrar ahí, es el baño de chicos."
+        },
+        "choices": [
+            {
+                "text": "(Entrar de todas formas)"
+            },
+            {
+                "text": "(Marcharse)"
+            }
+        ]
+    }
+}

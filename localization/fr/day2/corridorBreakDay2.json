@@ -1,0 +1,20 @@
+{
+    "maria": {
+        "washed": [
+            {
+                "text": "¿Qué has hecho? menuda mancha."
+            },
+            {
+                "text": "Madre mía, parece que te hayas meado encima, o incluso cagado."
+            }
+        ],
+        "notWashed": [
+            {
+                "text": "No sé si te has fijado, pero llevas un chicle pegado en el culo."
+            },
+            {
+                "text": "Puedes pasar por el baño a verlo en el espejo."
+            }
+        ]
+    }
+}

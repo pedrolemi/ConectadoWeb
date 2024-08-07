@@ -1,0 +1,123 @@
+{
+    "maria": {
+        "notTalked": {
+            "text": "¿Quieres algo?"
+        },
+        "choices1": [
+            {
+                "text": "Nada, adiós."
+            },
+            {
+                "text": "¿Por qué estás aquí sola en vez de en el patio?"
+            }
+        ],
+        "ask": {
+            "text": "Prefiero quedarme aquí tranquila leyendo."
+        },
+        "choices2": [
+            {
+                "text": "Disfruta, adiós (Que chica más rara)."
+            },
+            {
+                "text": "¿No prefieres estar en el recreo con tus amigos?"
+            }
+        ],
+        "keepAsking": [
+            {
+                "text": "",
+                "text_male": "Eres un poco pesado con las preguntas.",
+                "text_female": "Eres un poco pesada con las preguntas."
+            },
+            {
+                "text": "No tengo amigos, creen que soy rara."
+            },
+            {
+                "text": "Ya te puedes ir."
+            }
+        ],
+        "choices3": [
+            {
+                "text": "(Quedarte)"
+            },
+            {
+                "text": "(Irte)"
+            }
+        ],
+        "stay": [
+            {
+                "text": "No me pareces rara."
+            },
+            {
+                "text": "Voy a bajar al recreo. Si quieres venir, estaré abajo."
+            }
+        ],
+        "stayAnswer": [
+            {
+                "text": "Gracias, eres muy amable."
+            },
+            {
+                "text": "Pero al menos hoy me quedaré aquí. Me queda poco para terminar el libro."
+            },
+            {
+                "text": "Pásalo muy bien en el recreo. Y evita a Álex, es estúpido."
+            }
+        ],
+        
+        "talkedMean": {
+            "text": "..."
+        },
+        "talkedMeanThoughts": {
+            "text": "Parece que me está ignorando."
+        },
+        "talkedNice": {
+            "text": "Estoy terminando el libro, hablamos en otro momento."
+        }
+
+    },
+
+    "phone": {
+        "root": {
+            "text": "De nuevo muchas gracias por ayudarme"
+        },
+        "choices":[
+            {
+                "text": "No es nada."
+            },
+            {
+                "text": "(No contestar, ya la veré luego)"
+            }
+        ],
+        "reply": {
+            "text": "No es nada"
+        }
+    },
+
+    "alison": {
+        "notFound": [
+            {
+                "text": "¿Aún no has encontrado nada?"
+            },
+            {
+                "text": "Sigue buscando, por favor."
+            }
+        ],
+
+        "found": [
+            {
+                "text": "Veo que has encontrado el pendiente."
+            },
+            {
+                "text": "Muchas gracias."
+            },
+            {
+                "text": "Eres genial, te debo una."
+            },
+            {
+                "text": "El recreo se va a acabar ya, deberíamos ir entrando a clase."
+            },
+            {
+                "text": "Nos vemos dentro."
+            }
+        ]
+    }
+}

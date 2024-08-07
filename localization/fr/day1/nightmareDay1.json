@@ -1,0 +1,43 @@
+{
+    "shadow": {
+        "introduction": {
+            "root": [
+                {
+                    "text": "Tu primer día de clase. ¿Por qué no te sientas?"
+                },
+                {
+                    "text": "Escoge el sitio que más te guste."
+                }
+            ]
+        },
+        "outro": {
+            "root": [
+                {
+                    "text": "Me parece que te has quedado sin sitio."
+                },
+                {
+                    "text": "¿Ni siquiera sabes sentarte?"
+                },
+                {
+                    "text": "¿Acaso no sirves para nada?"
+                },
+                {
+                    "text": "¿Cómo esperas hacer así amigos?"
+                }
+            ]
+        }
+    },
+    "seat": {
+        "root": [
+            {
+                "text": "Veo que has encontrado un sitio, pero..."
+            },
+            {
+                "text": "Ese sitio es mío. Tendrás que escoger otro."
+            },
+            {
+                "text": "Puedes sentarte donde quieras menos ahí."
+            }
+        ]
+    }
+}

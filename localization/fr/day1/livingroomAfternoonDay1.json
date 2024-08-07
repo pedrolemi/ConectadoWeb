@@ -1,0 +1,206 @@
+{
+    "dad": {
+        "root": [
+            {
+                "text": "Habla con tu madre."
+            },
+            {
+                "text": "Quiere saber qué tal te ha ido el día."
+            }
+        ]
+    },
+
+    "mom": {
+        "notTalked": [
+            {
+                "text": "Ya has vuelto, {{name}}."
+            },
+            {
+                "text": "¿Qué tal te ha ido el día?"
+            }
+        ],
+        "talked": {
+            "text": "¿Quieres que hablemos un rato?"
+        },
+
+        "choices1": [
+            {
+                "text": "Bien, normal. Me voy a mi cuarto."
+            },
+            {
+                "text": "He conocido a Guille..."
+            },
+            {
+                "text": "(Hablar de otros compañeros)"
+            }
+        ],
+        "guille": [
+            {
+                "text": "Hoy he conocido a Guille, hay sido muy amable conmigo."
+            },
+            {
+                "text": "Creo que seremos buenos amigos."
+            }
+        ],
+        "guilleExtra": [
+            {
+                "text": "Además me ha aconsejado que mire los tablones de anuncios."
+            },
+            {
+                "text": "Porque a veces dejan cosas interesantes."
+            }
+        ],
+
+        "choices2": [
+            {
+                "text": "Hay una chica llamada Alison..."
+            },
+            {
+                "text": "Jose..."
+            },
+            {
+                "text": "(Hablar de otros compañeros)"
+            }
+        ],
+        "alison": [
+            {
+                "text": "En clase hay una chica rubia llamada Alison."
+            },
+            {
+                "text": "Hoy había perdido uno de sus pendientes."
+            }
+        ],
+        "notFound": {
+            "text": "Creo que al final no lo ha podido encontrar."
+        },
+        "found": {
+            "text": "La ayudé a buscarlo. Resulta que estaba en el patio."
+        },
+        "jose": [
+            {
+                "text": "Jose es otro compañero de clase, aunque parece más tímido."
+            },
+            {
+                "text": "Pero también parece majo."
+            }
+        ],
+
+
+        "choices3": [
+            {
+                "text": "A clase va María..."
+            },
+            {
+                "text": "Está Álex..."
+            },
+            {
+                "text": "(Hablar de otros compañeros)"
+            }
+        ],
+        "maria": {
+            "text": "Otra chica de clase es María."
+        },
+        "meanResponse": {
+            "text": "Es una chica que se pasa los recreos leyendo. La clase dice que es rara, que mejor pase de ella."
+        },
+        "niceResponse": [
+            {
+                "text": "Al parecer los demás de clase piensan que es rara."
+            },
+            {
+                "text": "La dejan de lado."
+            },
+            {
+                "text": "He estado hablando con ella un rato y a mi no me lo ha parecido."
+            }
+        ],
+        "alex": [
+            {
+                "text": "En clase también está Álex."
+            },
+            {
+                "text": "Ha llegado tarde a clase."
+            },
+            {
+                "text": "Es un poco borde y da algo de miedo."
+            }
+        ],
+        "submit": [
+            {
+                "text": "Parece que le quité el sitio al llegar a clase."
+            },
+            {
+                "text": "Pero le pedí perdón y parece que ya no está enfadado."
+            }
+        ],
+        "downplay": [
+            {
+                "text": "Es un chaval que busca pelea por nada."
+            },
+            {
+                "text": "Le quité su sitio sin querer."
+            },
+            {
+                "text": "Me ha amenazado."
+            }
+        ],
+        "momDownplayReply": [
+            {
+                "text": "¿Cómo que te ha amenazado?"
+            },
+            {
+                "text": "Seguro que lo has malinterpretado."
+            },
+            {
+                "text": "¿A quién más has conocido hoy?"
+            }
+        ],
+        "defy": [
+            {
+                "text": "Es borde, y busca pelea."
+            },
+            {
+                "text": "Y todo porque me he sentado en su sitio."
+            },
+            {
+                "text": "Que se busque otro."
+            }
+        ],
+        "momDefyReply": {
+            "text": "Deberías disculparte y no buscar problemas."
+        },
+
+
+        "choices4": [
+            {
+                "text": "Ana..."
+            },
+            {
+                "text": "El colegio..."
+            },
+            {
+                "text": "Me voy a la habitación. Ya hemos hablado suficiente."
+            }
+        ],
+        "ana": [
+            {
+                "text": "En clase también está Ana."
+            },
+            {
+                "text": "Da un poco de miedo."
+            }
+        ],
+        "school": {
+            "text": "Y el colegio, bueno..."
+        },
+        "schoolChoices": [
+            {
+                "text": "Me gusta como es el edificio y el patio."
+            },
+            {
+                "text": "Es aburrido, le faltan cosas."
+            }
+        ]
+    }
+    
+}

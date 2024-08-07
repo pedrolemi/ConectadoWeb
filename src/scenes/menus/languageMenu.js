@@ -33,9 +33,9 @@ export default class LanguageMenu extends Phaser.Scene {
         let tweenTime = 7;
         let increase = 1.3;
         this.createFlagButton(1.2 * CANVAS_WIDTH / 4, 1.1 * CANVAS_HEIGHT / 4,
-            height, 'France', 'en', tweenTime, increase);
+            height, 'France', 'fr', tweenTime, increase);
         this.createFlagButton(2.8 * CANVAS_WIDTH / 4, 1.1 * CANVAS_HEIGHT / 4,
-            height, 'Portugal', 'en', tweenTime, increase);
+            height, 'Portugal', 'pt', tweenTime, increase);
         this.createFlagButton(1.2 * CANVAS_WIDTH / 4, 2.4 * CANVAS_HEIGHT / 4,
             height, 'Spain', 'es', tweenTime, increase);
         this.createFlagButton(2.8 * CANVAS_WIDTH / 4, 2.4 * CANVAS_HEIGHT / 4,

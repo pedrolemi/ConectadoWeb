@@ -1,0 +1,114 @@
+{
+    "wardrobe1": {
+        "root": {
+            "text": "No hay nada útil dentro."
+        }
+    },
+
+    "wardrobe2": {
+        "root": {
+            "text": "Hoy tampoco me da tiempo a ordenar el armario."
+        }
+    },
+
+    "phone1": {
+        "root": {
+            "text": "{{name}} este es el chat k tenemos ls de clase"
+        },
+        "message2": {
+            "text": "",
+            "text_male": "Bienvenido",
+            "text_female": "Bienvenida"
+        },
+        "message3": {
+            "text": ":)"
+        }
+    },
+    "phone2": {
+        "root": [
+            {
+                "text": "Gracias :)"
+            }
+        ],
+        "reply": {
+            "text": "Gracias :)"
+        }
+    },
+    "phone3": {
+        "root": {
+            "text": "",
+            "text_male": "xq lo invitas al grupo? no hablaste cn alex esta mañana?",
+            "text_female": "xq la invitas al grupo? no hablaste cn alex esta mañana?"
+
+        },
+        "message4": {
+            "text": "",
+            "text_male": "Pff, no se ha ganado estar en el grupo. El k pueda k lo eche YA!",
+            "text_female": "Pff, no se ha ganado estar en el grupo. El k pueda k la eche YA!"
+        },
+        "message5": {
+            "text": "Ya sólo falta que invitéis a la friki de María"
+        },
+        "message6": {
+            "text": "Jose es el admin, habla con él mañana, q el chat no suele leerlo"
+        },
+        "reply2": [
+            {
+                "text": "Me sienta mal que me tratéis así"
+            },
+            {
+                "text": "Madurad"
+            },
+            {
+                "text": "¿Qué os he hecho?"
+            }
+        ],
+        "sad": {
+            "text": "Acabo de llegar al colegio, y de verdad me sienta fatal que la mitad de la clase me trate como la mierda"
+        },
+        "sad2": {
+            "text": "No digo que os caiga bien a todos, pero lo mínimo es tratarme con respeto"
+        },
+
+        "growUp": {
+            "text": "Madurad, tenéis 2años o qué os pasa"
+        },
+        "ask": {
+            "text": "No lo entiendo, ¿Qué os he hecho para que me insultéis, gastéis bromas pesadas, me ignoréis y marginéis?"
+        },
+        "message7": {
+            "text": "¿Qué problema tenéis con {{name}}?"
+        },
+        "message8": {
+            "text": "Os estáis pasando"
+        },
+        "message9": {
+            "text": "No os metáis donde no os llaman, también puedo hacer que Jose os eche a vosotros"
+        },
+        "reply3": [
+            {
+                "text": "Ya me salgo yo del grupo"
+            },
+            {
+                "text": "Espero que Jose tenga más cerebro"
+            },
+            {
+                "text": "Álex, para"
+            }
+        ],
+        "leave": {
+            "text": "Si que esté en el grupo va a ser un problema me voy yo"
+        },
+        "insult": {
+            "text": "Espero que Jose no sea tan estúpido como tú cuando lea el chat"
+        },
+        "stop": {
+            "text": "Para, no te he hecho nada como para que te portes así conmigo"
+        },
+        "goToSleep": {
+            "text": "Me voy a dormir, os veo mañana"
+        }
+    }
+    
+    
+}

@@ -1,0 +1,83 @@
+{
+    "ana": {
+        "root": {
+            "text": "Me parece que te has equivocado de clase."
+        },
+        "choices": [
+            {
+                "text": "No, es que hoy es mi primer día. Soy {{name}}."
+            },
+            {
+                "text": "¿Y tú quién eres? ¿La marimacho de clase?"
+            }
+        ],
+        
+        "introduce": [
+            {
+                "text": "",
+                "text_male": "Oh, así que tú eres {{name}}, el nuevo.",
+                "text_female": "Oh, así que tú eres {{name}}, la nueva."
+            },
+            {
+                "text": "Yo soy Ana. También estoy en esta clase."
+            }
+        ],
+        "insult": {
+            "text": "Imbécil de mierda..."
+        },
+
+        "teacherArrive": {
+            "text": "(Ruidos de fondo. Parece que tu nuevo profesor ha llegado)"
+        },
+        "teacher": {
+            "text": "Vamos a empezar la clase, venga, pasad todos y sentaos."
+        },
+
+        "chooseSit":[
+            {
+                "text": "(Sentarse en última fila)"
+            },
+            {
+                "text": "(Preguntar dónde puedes sentarte)"
+            }
+        ],
+        "ask": [
+            {
+                "text": "Siéntate al lado de Alison."
+            },
+            {
+                "text": "Alison, haz el favor de resolver todas las dudas que tenga {{name}} sobre el colegio."
+            }
+        ] 
+
+    },
+
+    "teacher": {
+        "root": [
+            {
+                "text": "{{name}} ¿verdad?"
+            },
+            {
+                "text": "Llegar tarde tu primer día, no es una buena manera de empezar."
+            },
+            {
+                "text": "",
+                "text_male": "Clase, este es vuestro nuevo compañero, por favor, ayudadlo en sus primeros días.",
+                "text_female": "Clase, esta es vuestra nueva compañera, por favor, ayudadla en sus primeros días."
+            },
+            {
+                "text": "{{name}}, yo soy vuestro tutor. Cualquier cosa que necesites, dímelo."
+            },
+            {
+                "text": "Por favor, {{name}} siéntate al lado de Alison."
+            },
+            {
+                "text": "Alison, haz el favor de resolver todas las dudas que tenga {{name}} sobre el colegio."
+            },
+            {
+                "text": "Continuemos con la clase."
+            }
+        ]
+    }
+
+}

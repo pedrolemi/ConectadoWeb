@@ -101,7 +101,7 @@
     },
     "Ana": {
         "postTroll": {
-            "description": "Looking 4 nick 4 {{name}}...",
+            "description": "Looking 4 a nick 4 {{name}}...",
             "comment": {
                 "decision": [
                     {

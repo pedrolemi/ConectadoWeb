@@ -1,0 +1,37 @@
+{
+    "maria": {
+        "root": {
+            "text": "..."
+        },
+        "leaveMaria": {
+            "text": "Parece incómoda. Mejor dejarla por ahora."
+        }
+    },
+    
+    "alison": {
+        "root": {
+            "text": "Perdona, tengo prisa. Si no entro ya a clase voy a llegar tarde." 
+        }
+    },
+
+    "guille": {
+        "notTalked": [
+            {
+                "text": "Buenas, estaba leyendo los anuncios del corcho."
+            },
+            {
+                "text": "A veces hay cosas interesantes, y últimamente alguien va dejando cromos, mensajes y adivinanzas."
+            },
+            {
+                "text": "Acostúmbrate a mirarlo una vez al día."
+            },
+            {
+                "text": "¿Entramos a clase?"
+            }
+        ],
+        "talked": {
+            "text": "Acuérdate de mirar los corchos. A veces se encuentran cosas interesantes."
+        }
+    }
+    
+}

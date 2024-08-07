@@ -146,7 +146,9 @@
                     "text": "Álex, VIENTO, no aire jajaja"
                 },
                 "fifthComment": {
-                    "text": "No os compliqueis, podemos llamarle margi... total ninguno le vamos a hablar"
+                    "text": "",
+                    "text_male": "No os compliqueis, podemos llamarlo margi... total ninguno le vamos a hablar",
+                    "text": "No os compliqueis, podemos llamarla margi... total ninguno le vamos a hablar"
                 },
                 "sixthComment": {
                     "text": "Margi es poco original... q tal gremlin?"

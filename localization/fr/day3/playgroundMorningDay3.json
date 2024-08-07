@@ -1,0 +1,68 @@
+{
+    "group": {
+        "notTalked": {
+            "text": "Buenos días. ¿Qué hacéis todo aquí?"
+        },
+        "explain": {
+            "text": "Sólo estábamos hablando."
+        },
+        "shutUp": [
+            {
+                "text": "Cállate Guille. ¿En qué hemos quedado?"
+            },
+            {
+                "text": "¿Acaso quieres que se enteren tus padres?"
+            }
+        ],
+        "silence": {
+            "text": "..."
+        },
+        "choices": [
+            {
+                "text": "¿Qué está pasando, Guille?"
+            },
+            {
+                "text": "Eso ha sonado a amenaza."
+            }
+        ],
+        "worry": {
+            "text": "¿Estás bien, Guille?"
+        },
+        "threat": {
+            "text": "¿También la tienes tomada con Guille, Álex?"
+        },
+        
+        "silenceQuestion": {
+            "text": "..."
+        },
+        "askSilence": {
+            "text": "¿Nadie va a decir nada?"
+        },
+
+        "bellRinging": {
+            "text": "<<La campana está sonando>>"
+        },
+        "late": {
+            "text": "Vale. No digáis nada. Yo me voy a clase, que ya es suficientemente tarde."
+        },
+        "talked": [
+            {
+                "text": "En serio, ¿Me estáis haciendo el vacío?"
+            },
+            {
+                "text": "¿Tú también, Guille?"
+            }
+        ],
+        "keepSilence": {
+            "text": "..."
+        },
+        "talkedChoices": [
+            {
+                "text": "Esperar a ver si te hablan."
+            },
+            {
+                "text": "Marcharte."
+            }
+        ]
+    }
+}

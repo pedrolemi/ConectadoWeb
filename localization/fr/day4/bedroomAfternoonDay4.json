@@ -1,0 +1,46 @@
+{
+    "wardrobe1": {
+        "root": {
+            "text": "No hay nada útil dentro."
+        }
+    },
+
+    "wardrobe2": {
+        "root": {
+            "text": "No necesito buscar nada de aquí dentro."
+        }
+    },
+
+
+    "bed": {
+        "root": {
+                "text": "¿Mmm, debería irme ya a dormir?"
+            },
+            "choices": [
+                {
+                    "text": "Oui."
+                },
+                {
+                    "text": "Non."
+                }
+            ],
+        "noPhone": [
+            {
+                "text": "Pero no tengo móvil para ponerme el despertador."
+            },
+            {
+                "text": "Mmmm, usaré mi móvil viejo, pero al estar sin SIM y no tener nada sólo me servirá como despertador."
+            },
+            {
+                "text": "Vale, despertador listo... Hora de dormir."
+            }
+        ]
+    },
+
+    "phone": {
+        "root": {
+            "text": "He visto que has borrado tu publicacion con tu nº de telefono, pero no pasa nada, tengo pantallazo y puedo resubirlo jajaja"
+        }
+    }
+    
+}

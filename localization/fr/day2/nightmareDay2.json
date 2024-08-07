@@ -1,0 +1,30 @@
+{
+    "shadow": {
+        "introduction": {
+            "root": [
+                {
+                    "text": "Bueno...¿ya lo hemos solucionado no?"
+                },
+                {
+                    "text": "¿Sabes dónde sentarte?"
+                },
+                {
+                    "text": "Quizás deberías evitar que los chicles caigan en la silla golpeándolos. O si no, tendrás que sentarte en uno."
+                }
+            ]
+        },
+        "outro": {
+            "root": [
+                {
+                    "text": "Tendrás que sentarte en un chicle."
+                },
+                {
+                    "text": "Jajaja. Adelante, siéntate."
+                },
+                {
+                    "text": "Venga, ¿a qué esperas?"
+                }
+            ]
+        }
+    }
+}

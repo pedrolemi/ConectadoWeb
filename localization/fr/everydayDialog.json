@@ -1,0 +1,194 @@
+{
+    "phone": {
+        "root": {
+            "text": "Je n'ai rien à répondre."
+        }
+    },
+
+    "bedroom": {
+        "pc": {
+            "root": [
+                {
+                    "text": "Si je l'allume maintenant, je vais être en retard, c'est sûr."
+                },
+                {
+                    "text": "Mieux vaut attendre l'après-midi."
+                }
+            ],
+            "pcQuestion": {
+                "text": "Veux-tu allumer ton ordinateur?"
+            },
+            "pcChoice": [
+                {
+                    "text": "Oui."
+                },
+                {
+                    "text": "Non."
+                }
+            ],
+            "leavePC":{
+                "text": "Je ferais mieux de partir maintenant."
+            }
+        },
+
+        "bagAfternoon": {
+            "root": [
+                {
+                    "text": "Je viens juste de rentrer du lycée."
+                },
+                {
+                    "text": "Je n'ai pas du tout besoin du sac à dos."
+                }
+            ]
+        },
+        
+        "bedAfternoon": {
+            "root": {
+                "text": "Mmm, dois-je aller dormir maintenant?"
+            },
+            "choices": [
+                {
+                    "text": "Oui."
+                },
+                {
+                    "text": "Non."
+                }
+            ]
+        }
+    },
+
+    "livingroom": {
+        "doorMorning": {
+            "root": {
+                "text": "J'ai oublié mon sac à dos. Je ferais mieux d'aller le prendre dans ma chambre avant de partir."
+            }
+        },
+        "doorAfternoon": {
+            "root": {
+                "text": "Je n'ai rien à faire dans la rue."
+            }
+        }
+    },
+
+    "playground": {
+        "homeMorning": {
+            "root": {
+                "text": "Je viens d'arriver au lycée, je ne peux pas déjà rentrer chez moi..."
+            }
+        },
+        "homeBreak": {
+            "root": {
+                "text": "C'est la pause, il y a encore quelques cours avant que je puisse rentrer chez moi."
+            }
+        },
+        "doorMorning": {
+            "root": {
+                "text": "",
+                "text_male": "On dirait que je suis arrivé plus tôt et que l'entrée n'est pas autorisée. Je ferais mieux de trouver quelque chose à faire en attendant pour tuer un peu le temps.",
+                "text_female": "On dirait que je suis arrivée plus tôt et que l'entrée n'est pas autorisée. Je ferais mieux de trouver quelque chose à faire en attendant pour tuer un peu le temps."
+
+            }
+        },
+        "doorAfternoon": {
+            "root": [
+                {
+                    "text": "Il n'y a plus de cours aujourd'hui et il n'y a plus personne."
+                },
+                {
+                    "text": "Je ferais mieux de rentrer chez moi."
+                }
+            ]
+        }
+    },
+
+    "stairs": {
+        "door": {
+            "root": {
+                "text": "On dirait qu'il n'y a personne..."
+            }
+        },
+        "tag": {
+            "root": {
+                "text": "Bureau du directeur."
+            }
+        },
+        "downstairs": {
+            "root": {
+                "text": "Je devrais aller directement en classe."
+            }
+        }
+
+    },
+
+    "corridor": {
+        "bathroom": {
+            "root": {
+                "text": "",
+                "text_male": "Je ne peux pas y aller, ce sont les toilettes des filles.",
+                "text_female": "Je ne peux pas y aller, ce sont les toilettes des garçons."
+            }
+        },
+        "class": {
+            "root": {
+                "text": "Si j'entre et que le professeur se présente, je ne pourrai pas sortir."
+            },
+            "choices": [
+                {
+                    "text": "(Entrez quand même)."
+                },
+                {
+                    "text": "Je vais plutôt faire un autre tour dans le lycée à la place."
+                }
+            ]
+        }
+
+    },
+
+    "class": {
+        "table": {
+            "root": {
+                "text": "Cette place est libre, est-ce que je m'assois ici?"
+            },
+            "choices": [
+                {
+                    "text": "Oui."
+                },
+                {
+                    "text": "Non."
+                }
+            ],
+            "teacherArrive": {
+                "text": "(Bruits de fond, le professeur est là)"
+            }
+        },
+        "late": {
+            "root": [
+                {
+                    "text": "{{name}}, vous êtes en retard."
+                },
+                {
+                    "text": "S'il vous plaît, asseyez-vous et continuons le cours."
+                }
+            ]
+        }
+    },
+
+    "board": {
+        "gumWashed": [
+            {
+                "text": "C'est une photo de moi hier, juste après avoir enlevé le chewing-gum que j'avais sur mon pantalon..."
+            },
+            {
+                "text": "Avec une phrase très originale... \"Un bébé est arrivé en classe \""
+            }
+        ],
+        "gumNotWashed": [
+            {
+                "text": "C'est une photo de moi hier et elle a été modifiée pour qu'on ait l'impression que je chie des chewing-gums."
+            },
+            {
+                "text": "Qui veut se moquer de moi de cette façon ?"
+            }
+        ]
+    }
+}

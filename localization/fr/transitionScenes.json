@@ -1,0 +1,27 @@
+{
+    "day1": {
+        "start": "L'alarme de ton téléphone sonne. C'est l'heure de se réveiller.\n Aujourd'hui, tu commences dans un nouveau lycée, il est temps de rencontrer tes nouveaux camarades de classe.",
+        "startClass": "Tout le monde s'assoit et la classe commence.",
+        "startClassLate":"Tu vas t'asseoir à ta place pendant que tout le monde te regarde.",
+        "startBreak": "La cloche sonne, c'est la pause. C'est l'occasion de se faire des amis.",
+        "endBreak": "Dès que tu entres, la cloche sonne et le professeur apparaît. Le cours se déroule. Une heure plus tard, il est temps de rentrer chez toi..."
+    },
+    "day2": {
+        "startClass": "Vous vous asseyez tous. Après le cours, vous réalisez que c'est déjà la pause.",
+        "startClassLate": "Tu vas t'asseoir à ta place pendant que tout le monde te regarde.",
+        "endBreak": "Dès que tu entres, la cloche sonne et le professeur apparaît. Le cours se déroule. Une heure plus tard, il est temps de rentrer chez toi..."
+    },
+    "day3": {
+        "startClass": "La journée a été ennuyeuse, les cours sont terminés et la plupart des gens t'ont ignoré toute la journée. Un message sur ton table te dit d'aller aux toilettes, quelqu'un t'attend là-bas..."
+    },
+    "day4": {
+        "startClass": "La cloche indique que c'est l'heure de la pause...",
+        "endBreak": "Dès que tu entres, la cloche sonne et le professeur apparaît. Le cours se déroule. Une heure plus tard, il est temps de rentrer chez toi...",
+        "endDay": "Il semble que les cours durent de plus en plus longtemps... Heureusement, il est temps de rentrer à la maison."
+    },
+    "day5": {
+        "startClass": "Encore un jour de murmures dans ton dos, il est temps de rentrer à la maison.",
+        "endDay": "Tu rentres chez toi et tu vas te coucher plus tôt ce soir. Comme d'habitude, c'est le temps des rêves...",
+        "end": "FIN"
+    }
+}

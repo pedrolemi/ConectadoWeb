@@ -200,10 +200,10 @@ export default class BootScene extends Phaser.Scene {
             // Idiomas permitidos
             // Sin esta propiedad a la hora de buscar las traducciones se podria buscar
             // en cualquier idioma (aunque o existiese)
-            supportedLngs: ['en', 'es'],
+            supportedLngs: ['en', 'es', 'fr'],
             // Namespaces que se cargan para cada uno de los idiomas
             ns: namespaces,
-            preload: ['en', 'es'],
+            preload: ['en', 'es', 'fr'],
             // Mostrar informacion de ayuda por consola
             debug: false,
             // Cargar las traducciones de un servidor especificado en vez de ponerlas directamente

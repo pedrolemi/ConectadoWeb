@@ -581,10 +581,6 @@ export default class PhoneManager {
             });
         }
         else {
-            // Cuando termina, cambia la hora del telefono y vuelve a reproducir la animacion de abrir los ojos
-            anim.on('complete', () => {
-                this.bgBlock.disableInteractive();
-            });
             return anim;
         }
     }

@@ -39,6 +39,7 @@ export default class BedroomMorningDay3 extends BedroomBase {
         // Evento que se llama al coger la mochila. Hace que la mochila desaparezca con 
         // una animacion (la variable de coger la mochila la cambia el propio evento)
         this.dispatcher.addOnce("pickBag", this, (obj) => {
+            bag.disableInteractive();
             this.tweens.add({
                 targets: bag,
                 alpha: { from: 1, to: 0 },

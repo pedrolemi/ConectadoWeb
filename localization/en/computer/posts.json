@@ -76,7 +76,7 @@
                     "text": "{{name}} found it and returned it to me. Thanks a lot :)"
                 },
                 "notFoundEarringComment": {
-                    "text": "It was impossible to find it. Someone might have steal it. Thank so much to all the people who've helped me to find it"
+                    "text": "It was impossible to find it. Someone might have stolen it. Thank so much to all the people who've helped me to find it"
                 }
             }
         }
@@ -91,7 +91,7 @@
             },
             "oldComments": {
                 "root": {
-                    "text": "What a game dude!. We should hang out to watch the next one. Btw my dad's bought a huge tv"
+                    "text": "What a game dude! We should hang out to watch the next one. Btw my dad's bought a huge tv"
                 },
                 "secondComment": {
                     "text": "I'm in guys, hit me up whenever u want"
@@ -101,7 +101,7 @@
     },
     "Ana": {
         "postTroll": {
-            "description": "Looking a nick 4 {{name}}...",
+            "description": "Looking 4 nick 4 {{name}}...",
             "comment": {
                 "decision": [
                     {

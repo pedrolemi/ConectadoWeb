@@ -68,12 +68,15 @@ export default class PlaygroundMorningDay4 extends PlaygroundBase {
 
             // Evento llamado cuando suena la campana
             this.dispatcher.addOnce("openDoors", this, (obj) => {
-                    // Cambia la hora del movil
+                // Cambia la hora del movil
                 this.phoneManager.setDayInfo("classStart");
 
                 // Se quita el dialogo que aparece al hacer click en las puertas
                 this.doorNode = null;
 
+                jose.char.disableInteractive();
+                alison.char.disableInteractive();
+                guille.char.disableInteractive();
                 // Se hace fade out de todos los personajes de la escena
                 let anim = this.tweens.add({
                     targets: [jose.char, alison.char, guille.char],
@@ -106,6 +109,7 @@ export default class PlaygroundMorningDay4 extends PlaygroundBase {
         // Evento llamado cuando se termina de hablar con Alison y se llega tarde
         this.dispatcher.addOnce("alisonLeave", this, (obj) => {
             // Se hace fade out de Alison
+            alison.char.disableInteractive();
             this.tweens.add({
                 targets: [alison.char],
                 alpha: { from: 1, to: 0 },

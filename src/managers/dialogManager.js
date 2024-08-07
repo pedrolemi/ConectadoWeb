@@ -37,7 +37,7 @@ export default class DialogManager {
         this.bgBlock = scene.add.rectangle(0, 0, this.scene.CANVAS_WIDTH, this.scene.CANVAS_HEIGHT, 0xfff, 0).setOrigin(0, 0);
         this.bgBlock.setDepth(this.textbox.box.depth - 1);
         this.bgBlock.on('pointerdown', () => {
-            if (this.textbox.box.input.enabled) {
+            if (this.textbox.box.input.enabled && this.textbox.box.alpha > 0) {
                 this.nextDialog();
             }
         });

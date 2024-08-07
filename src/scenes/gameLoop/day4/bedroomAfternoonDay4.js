@@ -10,8 +10,6 @@ export default class BedroomAfternoonDay4 extends BedroomBase {
 
         this.livingroom = "LivingroomAfternoonDay4";
 
-        this.gameManager.setValue("passwordExchanged", true);
-
 
         if (this.gameManager.hasValue("passwordExchanged")) {
             let passwordExchanged = this.gameManager.getValue("passwordExchanged");
@@ -37,6 +35,12 @@ export default class BedroomAfternoonDay4 extends BedroomBase {
         bag.on('pointerdown', () => {
             this.dialogManager.setNode(bagNode)
         });
+
+
+        // Ordenador (el mismo nodo que el de por la manana, pero sin el dialogo del jugador)
+        let node = super.readNodes(nodes, "everydayDialog", "bedroom.pc", true);
+        node = node.next[0];
+        this.pcNode = node;
 
         // Ropa
         this.add.image(920 * this.scale, 1257 * this.scale + 5, this.atlasName, 'clothes3').setOrigin(0, 0).setScale(this.scale * 0.85).setDepth(this.chair.depth + 1);

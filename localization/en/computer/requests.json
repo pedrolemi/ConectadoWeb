@@ -1,9 +1,9 @@
 {
     "Alison": {
-        "bio": "There's alwasy a reason to keep going",
+        "bio": "There's always a reason to keep going",
         "deny": {
             "root": {
-                "text": "I can't refuse the invitation. She's the first person who seems interested in being my friend."
+                "text": "I can't reject the request. She's the first person who seems interested in being my friend."
             }
         }
     },
@@ -11,7 +11,7 @@
         "bio": "If the plan doesn't work change the plan, but don't change the goal",
         "deny": {
             "root": {
-                "text": "I don't have a reason to refuse his invitation. Do I really wanna refuse it?"
+                "text": "I don't have a reason to reject his request. Do I really wanna reject it?"
             },
             "decision": [
                 {

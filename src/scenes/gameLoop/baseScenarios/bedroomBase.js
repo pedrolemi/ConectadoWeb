@@ -121,6 +121,7 @@ export default class BedroomBase extends BaseScene {
 
             anim.on('complete', () => {
                 setTimeout(() => {
+                    this.phoneManager.bgBlock.disableInteractive();
                     let nightmareScene = "NightmareDay" + this.gameManager.day;
                     this.gameManager.changeScene(nightmareScene);
                 }, 1000);

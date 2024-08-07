@@ -41,13 +41,6 @@ export default class GameManager {
         // Escena del ordenador
         this.computerScene = null;
 
-        // Se anaden los parametros iniciales a la blackboard
-        this.bagPicked = "bagPicked";
-        this.blackboard.set(this.bagPicked, false);
-
-        this.isLate = "isLate";
-        this.blackboard.set(this.isLate, false);
-
         // Informacion del usuario
         this.userInfo = null;
 
@@ -246,10 +239,9 @@ export default class GameManager {
 
         // Se resetean los parametros iniciales a la blackboard
         // Nota: aunque luego se setean en AlarmScene, se setean restauran aqui por si acaso
-        this.blackboard.set(this.bagPicked, false);
-
-        this.blackboard.set(this.isLate, false);
-
+        this.setValue("isLate", false);
+        this.setValue("bagPicked", false);
+        
         // Se borra la informacion del usuario
         this.userInfo = null;
 

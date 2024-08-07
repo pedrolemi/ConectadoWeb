@@ -3,7 +3,7 @@
         "bio": "Siempre hay un motivo para seguir adelante",
         "deny": {
             "root": {
-                "text": "No puedo rechazar la invitación. Es la primera que parece estar interesada en ser mi amiga."
+                "text": "No puedo rechazar la petición. Es la primera que parece estar interesada en ser mi amiga."
             }
         }
     },
@@ -11,7 +11,7 @@
         "bio": "Si el plan no funciona cambia el plan, pero no cambies la meta",
         "deny": {
             "root": {
-                "text": "No tengo motivo para rechazar su invitación. ¿Seguro que quiero rechazarla?"
+                "text": "No tengo motivo para rechazar su petición. ¿Seguro que quiero rechazarla?"
             },
             "decision": [
                 {

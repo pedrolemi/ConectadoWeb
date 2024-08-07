@@ -54,10 +54,10 @@
 
     "guille": {
         "notTalked": {
-            "text": "No tengo nada que hablar contigo."
+            "text": "I have nothing to talk to you."
         },
         "talked": {
-            "text": "I have nothing to talk to you."
+            "text": "..."
         }
     }
 }

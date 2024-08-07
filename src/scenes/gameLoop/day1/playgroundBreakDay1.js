@@ -83,6 +83,7 @@ export default class PlaygroundBreakDay1 extends PlaygroundBase {
         // Evento que se llama al recoger el pendiente. Lo hace desaparecer con una
         // animacion (la variable de coger el pendiente la cambia el propio evento)
         this.dispatcher.addOnce("pickEarring", this, (obj) => {
+            earring.disableInteractive();
             let anim = this.tweens.add({
                 targets: [earring],
                 alpha: { from: 1, to: 0 },

@@ -7,18 +7,18 @@
 
 *Read README in other language: [Español](README.md).*
 
-## Equipo
+## Team
 The original concept and the videogame have been carried out by the [eUCM](http://www.e-ucm.es/es/) group. Both the executable and a teacher's guide can be found on [e-ucm.es](https://www.e-ucm.es/es/portfolio-item/conectado/). 
 
 This repository consists of a **web version** developed by [Matt Castellanos](https://github.com/MattCastUCM) y [Pedro León](https://github.com/P4179) under the eye of eUCM group.
 
-## Idiomas disponibles:
+## Available languages:
 - Spanish 🇪🇸 (original version) 
 - English 🇬🇧
 - French 🇫🇷
 - Portuguese 🇵🇹 (in progress)
 
-## Recursos
+## Resources
 All graphic resources of the project have a CC BY-NC-SA (Creative Commons Attribution Non-Commercial Share Alike) license.
 The graphic resources have been designed by [Ana Vallecillos Ruiz](https://nashek.artstation.com/) and [Lola González Gutiérrez](https://www.redbubble.com/es/people/lolagonzalez?asc=u).
 

@@ -161,5 +161,5 @@ const config = {
 }
 
 const game = new Phaser.Game(config);
-// Propiedad debug para los colliders
+// Propiedad debug
 game.debug = false;

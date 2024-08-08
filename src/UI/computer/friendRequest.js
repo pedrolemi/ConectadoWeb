@@ -85,14 +85,22 @@ export default class FriendRequest extends Phaser.GameObjects.Container {
         bioTextStyle.fontSize = '23px';
         bioTextStyle.color = '#323232';
         bioTextStyle.align = 'justify';
+        let wrapWidth = this.newFriendBg.displayWidth - avatarIcon.displayWidth * 2;
         bioTextStyle.wordWrap = {
-            width: this.newFriendBg.displayWidth - avatarIcon.displayWidth / 2,
+            width: this.newFriendBg.displayWidth - avatarIcon.displayWidth * 2,
             useAdvancedWrap: true
         }
         this.bioText = this.scene.add.text(nameText.x, nameText.y + 23, bio, bioTextStyle);
         this.bioText.setVisible(false);
         this.bioText.setOrigin(0);
         this.add(this.bioText);
+
+        if (this.scene.sys.game.debug) {
+            let wrapWidthArea = this.scene.add.rectangle(this.bioText.x, this.bioText.y, wrapWidth, this.bioText.displayHeight, '#000000');
+            wrapWidthArea.setOrigin(0);
+            wrapWidthArea.setAlpha(0.5);
+            this.add(wrapWidthArea);
+        }
 
         // Boton para bloquear al usuario
         let blockButtonTrans = {
@@ -107,7 +115,7 @@ export default class FriendRequest extends Phaser.GameObjects.Container {
         this.addListViewButton(this.blockButton);
 
         let size = 1.2;
-        let fontSize = 24;
+        let fontSize = 22;
         let buttonsTranslations = i18next.t('friendRequestButtons', { ns: "computer\\computerInfo", returnObjects: true });
         // Boton para aceptar la peticion de amistad
         this.acceptButton = new ListViewButton(this.scene, 208, 97, size, () => {

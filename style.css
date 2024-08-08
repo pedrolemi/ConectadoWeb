@@ -31,25 +31,7 @@ Fuentes que se usan en Phaser
     src: url('assets/fonts/dadha___.ttf');
 }
 
-/*
-Tests
-*/
-@font-face {
-    font-family: "avara";
-    src: url('assets/fonts/avara.ttf');
-}
-
 @font-face {
     font-family: "caladea-regular";
     src: url('assets/fonts/caladea-regular.ttf');
-}
-
-@font-face {
-    font-family: "cooperHewitt-medium";
-    src: url('assets/fonts/cooperHewitt-medium.otf');
-}
-
-@font-face {
-    font-family: "saniTrixieSans";
-    src: url('assets/fonts/saniTrixieSans.ttf');
 }

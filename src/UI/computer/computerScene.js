@@ -19,11 +19,18 @@ export default class ComputerScene extends BaseScene {
         super.create();
 
         this.userInfo = this.gameManager.userInfo;
-
         this.namespace = "computer\\computerInfo";
 
         // No se puede hacer scroll
         this.rightBound = this.CANVAS_WIDTH;
+
+        // Opcione por defecto que se usan para ajustar el tam de la fuente a un ancho determinado
+        this.defaultSizeConfig = {
+            increament: 1.1,        // cuanto se va incrementando cada vez
+            decreasement: 0.9,      // cuanto se va reduciendo cada vez
+            max: 60.0,
+            min: 15.0               // minimo de tam de fuente permitido
+        }
 
         // Mesa
         let bg = this.add.image(this.CANVAS_WIDTH / 2, this.CANVAS_HEIGHT / 2, 'basePC');
@@ -76,7 +83,7 @@ export default class ComputerScene extends BaseScene {
         postitTextInfoStyle.fontSize = '60px';
         postitTextInfoStyle.color = '#323232';
 
-        let postitTextStyle = postitTextInfoStyle;
+        let postitTextStyle = { ...postitTextInfoStyle };
         postitTextStyle.fontSize = '52px';
 
         // Informacion del personaje en el postit
@@ -111,6 +118,12 @@ export default class ComputerScene extends BaseScene {
         postitCont.add(passwordText);
 
         postitCont.setScale(0.37);
+
+        // Nota: llamarlo despues de que el texto y el fondo se hayan metido en todos los contenedores oportunos y hayan
+        // sufrido todas las transformaciones para que se puedan calcular correctamente los tamanos
+        let proportion = 0.8;
+        this.adjustFontSizeToObjectWidth(yourUserText, postitBg, proportion);
+        this.adjustFontSizeToObjectWidth(yourPasswordText, postitBg, proportion);
     }
 
     /**
@@ -135,5 +148,95 @@ export default class ComputerScene extends BaseScene {
     logIntoSocialNet() {
         this.loginScreen.setVisible(false);
         this.socialNetScreen.start();
+    }
+
+    /**
+     * Ajustar el texto al ancho de un objeto teniendo tambien en cuenta unos tamanos de fuentes limites
+     * Para ello se modifica el tam de la fuente del texto
+     * Nota: se calcula todo en posiciones globales por si el texto y el objeto pertenecen a sistemas de coordenadas
+     * Por lo tanto, es importante que este metodo se llame cuando texto y objeto han sufrido todas las transformaciones
+     * oportunas para que se hagan los calculos correctamente
+     * @param {Text} text - texto que se ajusta
+     * @param {Object} object - objecto (ancho)
+     * @param {Number} proportion - parte del ancho que se tiene en cuenta (opcional)
+     * @param {Object} sizeLimits - tamanos de fuentes limites (opcional, sino se cogen los por defecto)
+     */
+    adjustFontSizeToObjectWidth(text, object, proportion = 1, sizeLimits) {
+        // Se comprueba si se han proporcionado tams de fuentes limites
+        let min = this.defaultSizeConfig.min;
+        let max = this.defaultSizeConfig.max;
+        if (sizeLimits) {
+            if (sizeLimits.min) {
+                min = sizeLimits.min;
+            }
+            if (sizeLimits.max) {
+                max = sizeLimits.max;
+            }
+        }
+
+        // Matriz del texto
+        let textMatrix = text.getWorldTransformMatrix();
+
+        // Matriz del objeto
+        let objectMatrix = object.getWorldTransformMatrix();
+        // Ancho que debe ocupar el objeto
+        let limitWidth = object.width * proportion * objectMatrix.scaleX;
+
+        // Si esta el debug activado, se muestra el area que debe ocupar el texto
+        if (this.sys.game.debug) {
+            // Posicion del texto, pero tams del objeto
+            let limitWidthArea = this.add.rectangle(textMatrix.tx, textMatrix.ty, limitWidth, text.height * textMatrix.scaleY, '#000000');
+            limitWidthArea.setOrigin(text.originX, text.originY);
+            limitWidthArea.setAlpha(0.25);
+        }
+
+        // Se obtiene el tam del texto actual
+        let fontSize = text.style.fontSize;
+        fontSize = fontSize.slice(0, fontSize.length - 2);
+        fontSize = Number(fontSize);
+
+        let endSize = fontSize;
+
+        // Ancho actual del texto
+        let textWidth = text.width * textMatrix.scaleX;
+
+        // Si el tam del texto es mayor que el ancho permitido...
+        if (textWidth > limitWidth) {
+            // Se va reduciendo el tam
+            while (text.width * textMatrix.scaleX > limitWidth && fontSize > min) {
+                fontSize = Math.floor(fontSize * this.defaultSizeConfig.decreasement);
+                text.setFontSize(fontSize);
+            }
+            endSize = fontSize;
+        }
+        // Si el tam del texto es menor que el ancho permitido...
+        else {
+            // Se va aumentando el tam
+
+            // Nota: hay que guardar el previo que es el que aun no se ha salido del ancho del objeto
+            let previousFontSize = fontSize;
+            while (text.width * textMatrix.scaleX < limitWidth && previousFontSize < max) {
+                previousFontSize = fontSize;
+                fontSize = Math.ceil(fontSize * this.defaultSizeConfig.increament);
+                text.setFontSize(fontSize);
+            }
+            endSize = previousFontSize;
+        }
+
+        // Se comprueba si el tam encontrado esta dentro del permitido...
+        // Es menor que el permitido
+        if (endSize < min) {
+            text.setFontSize(min);
+        }
+        else {
+            // Es mayor que el permitido
+            if (endSize > max) {
+                text.setFontSize(max);
+            }
+            // Es correcto
+            else {
+                text.setFontSize(endSize);
+            }
+        }
     }
 }

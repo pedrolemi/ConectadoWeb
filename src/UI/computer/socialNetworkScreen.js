@@ -289,6 +289,8 @@ export default class SocialNetworkScreen extends Phaser.GameObjects.Group {
         container.setScale(scale);
         this.add(container);
 
+        this.scene.adjustFontSizeToObjectWidth(sideText, buttonBg, 0.45, { max: 40 });
+
         // Se establece una propiedad que corresponde con la altura del contenedor para que los tres iconos
         // de las pestanas se puedan colocar correctamente
         container.h = buttonBg.displayHeight * scale;

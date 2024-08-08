@@ -2,89 +2,85 @@
     "alex": {
         "choices": [
             {
-                "text": "Me han dicho que quieres gastarme una broma."
+                "text": "On m'a parlé d'une farce que tu veux me jouer."
             },
             {
-                "text": "¿No podemos llevarnos bien?"
+                "text": "Pourrions-nous simplement nous entendre?"
             },
             {
-                "text": "Conozco a los de tu tipo."
+                "text": "Je connais ton genre."
             }
         ],
         "prank": [
             {
-                "text": "",
-                "text_male": "Soy un poco bromista, pero tranquilo.",
-                "text_female": "Soy un poco bromista, pero tranquila."
+                "text": "Je suis un peu blagueur, mais tranquille."
             },
             {
-                "text": "Nos reiremos todos."
+                "text": "Nous allons tous rire."
             }
         ],
 
         "ask": {
-            "text": "¿Por qué no empezamos de cero?"
+            "text": "Pourquoi ne pas tout recommencer?"
         },
         "askReply": {
-            "text": "De acuerdo. Entremos en clase."
+            "text": "Très bien, entrons à l'intérieur."
         },
 
         "distrust": [
             {
-                "text": "Eres el típico que se aprovecha de todos."
+                "text": "Tu es le genre de personne qui fait chier tout le monde autour de toi."
             },
             {
-                "text": "Que busca pelea con cualquier excusa."
+                "text": "Qui cherche des problèmes, même là où il n'y en a pas."
             }
         ],
         "distrustReply": {
-            "text": "",
-            "text_male": "Si has terminado de darme la chapa, lárgate, capullo.", 
-            "text_female": "Si has terminado de darme la chapa, lárgate, estúpida."
+            "text": "Si tu as fini de me harceler, va-t'en, espèce de branleur."
             
         },
 
         "normal": {
-            "text": "¿Sigues enfadado por lo del sitio de ayer?"
+            "text":  "Es-tu toujours en colère à propos de la place d'hier?"
         },
         "normalReply": {
-            "text": "Ya veremos. ¿Y tú? ¿Sabes ya cual es tu sitio?"
+            "text": "Nous allons voir, et toi, sais-tu déjà quel est ton table?"
         },
         "talked": {
-            "text": "Me está ignorando."
+            "text": "Il m'ignore."
         }
     },
     
     "alison": {
         "notTalked": {
-            "text": "¿Qué tal, {{name}}?"
+            "text": "Comment vas-tu, {{name}}?"
         },
         "warn": [
             {
-                "text": "Por cierto, antes hablaba Álex de gastarte una broma."
+                "text": "Au fait, Alex parlait tout à l'heure de te faire une méchante blague."
             },
             {
-                "text": "No suele ser así, no sé qué le pasa."
+                "text": "Il n'était pas comme ça avant, je ne sais pas ce qui lui arrive."
             },
             {
-                "text": "Ten cuidado, ¿vale?"
+                "text": "Fais attention, ok?"
             }
         ],
         "talked": {
-            "text": "Entremos a clase o llegaremos tarde."
+            "text": "Entrons ou nous serons en retard."
         }
     },
 
     "guille": {
         "match": [
             {
-                "text": "Vamos a quedar el sábado en mi casa para ver una peli."
+                "text": "On va regarder un film chez moi ce samedi."
             },
             {
-                "text": "¿Quieres venir? Viene gente de clase."
+                "text": "Tu veux venir ? J'ai aussi invité aussi des potes de la classe."
             },
             {
-                "text": "Y la veremos en una tele gigante que se ha comprado mi padre para ver el fútbol."
+                "text": "Et on le verra sur la télé écran géant que mon père vient d'acheter pour les matchs de foot."
             }
         ],
         "choices": [
@@ -95,34 +91,35 @@
                 "text": "Non."
             },
             {
-                "text": "Tengo que preguntar antes a mis padres si puedo."
+                "text": "Je dois d'abord demander à mes parents si je peux."
             }
         ],
         "yes": [
             {
-                "text": "Genial, ya somos uno más entonces."
+                "text": "Super, un autre rejoint l'équipe alors.",
+                "text_female": "Super, une autre rejoint l'équipe alors."
             },
             {
-                "text": "Ya te diré la dirección y los detalles."
+                "text": "Je te donnerai mon adresse et je te dirai comment ça va se passer."
             }
         ],
         "no": [
             {
-                "text": "Es una pena."
+                "text": "C'est dommage.."
             },
             {
-                "text": "Bueno, hasta luego."
+                "text": "Eh bien, à plus tard."
             }
         ],
         "ask": {
-            "text": "Bueno, ya me dirás."
+            "text": "Eh bien, tu me donneras la réponse plus tard."
         },
         
         "reminder": {
-            "text": "Acuérdate, el sábado en mi casa a las 6 de la tarde."
+            "text": "Souviens-toi, samedi après-midi à 18 heures, chez moi."
         },
         "goToClass": {
-            "text": "Entremos a clase."
+            "text": "Entrons."
         },
 
         "distracted": {

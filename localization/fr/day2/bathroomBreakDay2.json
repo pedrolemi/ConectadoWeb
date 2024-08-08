@@ -2,21 +2,21 @@
     "sink": {
         "washed": [
             {
-                "text": "Ya me he quitado el chicle, pero ahora la mancha es peor."
+                "text": "J'ai déjà enlevé le chewing-gum, mais la tache est pire."
             },
             {
-                "text": "Se van a reír aún más de mí."
+                "text": "Ils se moqueront encore plus de moi."
             }
         ],
         "notWashed": {
-            "text": "Igual con agua y jabón consigo quitarlo."
+            "text": "Peut-être que de l'eau et du savon sont tout ce dont j'ai besoin."
         },
         "choices": [
             {
-                "text": "(Probar con agua y jabón)"
+                "text": "(Essayer l'eau et le savon)"
             },
             {
-                "text": "(Dejarlo como está)"
+                "text": "(Laisser les choses telles qu'elles sont)"
             }
         ]
     }

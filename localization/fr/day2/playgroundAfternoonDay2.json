@@ -1,13 +1,13 @@
 {
     "guille": {
         "root": {
-            "text": "No les hagas caso y vete a casa. Mañana será otro día."
+            "text": "Ne les écoute pas et rentre chez toi, demain sera un autre jour."
         }
     },
 
     "voices": {
         "root": {
-            "text": "Jajajajaja."
+            "text": "Hahahahaha"
         }
     }
 }

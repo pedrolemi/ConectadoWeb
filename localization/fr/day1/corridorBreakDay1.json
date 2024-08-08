@@ -1,65 +1,65 @@
 {
     "maria": {
         "notTalked": {
-            "text": "¿Quieres algo?"
+            "text": "Veux-tu quelque chose?"
         },
         "choices1": [
             {
-                "text": "Nada, adiós."
+                "text": "Rien, salut."
             },
             {
-                "text": "¿Por qué estás aquí sola en vez de en el patio?"
+                "text": "Pourquoi es-tu seule ici plutôt que dans la cour de récré?"
             }
         ],
         "ask": {
-            "text": "Prefiero quedarme aquí tranquila leyendo."
+            "text": "Je préfère rester ici à lire tranquillement."
         },
         "choices2": [
             {
-                "text": "Disfruta, adiós (Que chica más rara)."
+                "text": "Profite-en, salut (Quelle fille bizarre)."
             },
             {
-                "text": "¿No prefieres estar en el recreo con tus amigos?"
+                "text": "Ne préféres-tu pas être dans la cour de récré avec tes amis?"
             }
         ],
         "keepAsking": [
             {
                 "text": "",
-                "text_male": "Eres un poco pesado con las preguntas.",
-                "text_female": "Eres un poco pesada con las preguntas."
+                "text_male": "Tu es un peu agaçant avec toutes ces questions.",
+                "text_female": "Tu es un peu agaçante avec toutes ces questions."
             },
             {
-                "text": "No tengo amigos, creen que soy rara."
+                "text": "Je n'ai pas d'amis, ils pensent que je suis bizarre."
             },
             {
-                "text": "Ya te puedes ir."
+                "text": "Tu peux partir maintenant."
             }
         ],
         "choices3": [
             {
-                "text": "(Quedarte)"
+                "text": "(Rester)"
             },
             {
-                "text": "(Irte)"
+                "text": "(Partir)"
             }
         ],
         "stay": [
             {
-                "text": "No me pareces rara."
+                "text": "Tu ne me sembles pas être bizarre pourtant."
             },
             {
-                "text": "Voy a bajar al recreo. Si quieres venir, estaré abajo."
+                "text": "Je descends dans la cour, veux-tu venir avec moi?"
             }
         ],
         "stayAnswer": [
             {
-                "text": "Gracias, eres muy amable."
+                "text": "Merci, tu es très sympa."
             },
             {
-                "text": "Pero al menos hoy me quedaré aquí. Me queda poco para terminar el libro."
+                "text": "Mais aujourd'hui, je reste, je suis sur le point de finir le livre."
             },
             {
-                "text": "Pásalo muy bien en el recreo. Y evita a Álex, es estúpido."
+                "text": "Amuse-toi bien en bas, et évite Alex, il est stupide."
             }
         ],
         
@@ -67,56 +67,56 @@
             "text": "..."
         },
         "talkedMeanThoughts": {
-            "text": "Parece que me está ignorando."
+            "text": "On dirait qu'elle m'ignore."
         },
         "talkedNice": {
-            "text": "Estoy terminando el libro, hablamos en otro momento."
+            "text": "Je suis en train de terminer mon livre, on discutera plus tard."
         }
 
     },
 
     "phone": {
         "root": {
-            "text": "De nuevo muchas gracias por ayudarme"
+            "text": "Merci encore pour ton aide!"
         },
         "choices":[
             {
-                "text": "No es nada."
+                "text": "Ce n'est rien!"
             },
             {
-                "text": "(No contestar, ya la veré luego)"
+                "text": "(Ne pas répondre, je la verrai après)"
             }
         ],
         "reply": {
-            "text": "No es nada"
+            "text": "Ce n'est rien"
         }
     },
 
     "alison": {
         "notFound": [
             {
-                "text": "¿Aún no has encontrado nada?"
+                "text": "Tu n'as toujours rien trouvé?"
             },
             {
-                "text": "Sigue buscando, por favor."
+                "text": "S'il te plaît, continue à chercher."
             }
         ],
 
         "found": [
             {
-                "text": "Veo que has encontrado el pendiente."
+                "text": "Je vois que tu as trouvé ma boucle d'oreille."
             },
             {
-                "text": "Muchas gracias."
+                "text": "Merci beaucoup."
             },
             {
-                "text": "Eres genial, te debo una."
+                "text": "Tu es formidable, je t'en dois une."
             },
             {
-                "text": "El recreo se va a acabar ya, deberíamos ir entrando a clase."
+                "text": "C'est la fin de la récré, on doit aller en cours."
             },
             {
-                "text": "Nos vemos dentro."
+                "text": "Allez, on rentre?"
             }
         ]
     }

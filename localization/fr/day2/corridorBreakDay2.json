@@ -2,18 +2,20 @@
     "maria": {
         "washed": [
             {
-                "text": "¿Qué has hecho? menuda mancha."
+                "text": "Qu'as-tu fait ? Quelle tache."
             },
             {
-                "text": "Madre mía, parece que te hayas meado encima, o incluso cagado."
+                "text": "",
+                "text_male": "Oh mec, on dirait que tu t'es pissé dessus ou même chié dessus.",
+                "text_female": "Oh meuf, on dirait que t'es pissée dessus ou même chiée dessus."
             }
         ],
         "notWashed": [
             {
-                "text": "No sé si te has fijado, pero llevas un chicle pegado en el culo."
+                "text": "Tu n'as sans doute pas remarqué, mais tu as un chewing-gum collé sur les fesses."
             },
             {
-                "text": "Puedes pasar por el baño a verlo en el espejo."
+                "text": "Va aux toilettes. Regarde dans le miroir et tu le verras."
             }
         ]
     }

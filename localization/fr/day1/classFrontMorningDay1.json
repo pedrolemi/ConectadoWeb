@@ -1,52 +1,53 @@
 {
     "ana": {
         "root": {
-            "text": "Me parece que te has equivocado de clase."
+            "text": "Qu'est-ce que tu fous là, pauv' naze! Tu t'es planté!",
+            "text_female": "Qu'est-ce que tu fous là, pauv' naze! Tu t'es plantée!"
         },
         "choices": [
             {
-                "text": "No, es que hoy es mi primer día. Soy {{name}}."
+                "text": "Non, c'est juste mon premier jour, je m'appelle {{name}}."
             },
             {
-                "text": "¿Y tú quién eres? ¿La marimacho de clase?"
+                "text": "Et toi, qui es-tu ? Le garçon manqué de la classe?"
             }
         ],
         
         "introduce": [
             {
                 "text": "",
-                "text_male": "Oh, así que tú eres {{name}}, el nuevo.",
-                "text_female": "Oh, así que tú eres {{name}}, la nueva."
+                "text_male": "Oh, tu es donc {{name}}, le nouveau.",
+                "text_female": "Oh, tu es donc {{name}}, la nouvelle."
             },
             {
-                "text": "Yo soy Ana. También estoy en esta clase."
+                "text": "Je m'appelle Anna, je suis aussi dans cette classe."
             }
         ],
         "insult": {
-            "text": "Imbécil de mierda..."
+            "text": "Sale cretin..."
         },
 
         "teacherArrive": {
-            "text": "(Ruidos de fondo. Parece que tu nuevo profesor ha llegado)"
+            "text": "(Bruits de fond, on dirait que ton nouveau professeur est arrivé)"
         },
         "teacher": {
-            "text": "Vamos a empezar la clase, venga, pasad todos y sentaos."
+            "text": "Commençons la classe, allez, tout le monde entre et s'assoit."
         },
 
         "chooseSit":[
             {
-                "text": "(Sentarse en última fila)"
+                "text": "(S'asseoir au dernier rang)"
             },
             {
-                "text": "(Preguntar dónde puedes sentarte)"
+                "text": "(Demander où tu peux t'asseoir)"
             }
         ],
         "ask": [
             {
-                "text": "Siéntate al lado de Alison."
+                "text": "Asseyez-vous à côté d'Alison..."
             },
             {
-                "text": "Alison, haz el favor de resolver todas las dudas que tenga {{name}} sobre el colegio."
+                "text": "Alison, rendez-moi service en répondant à toutes les questions que peut se poser {{name}} sur le lycée."
             }
         ] 
 
@@ -55,27 +56,27 @@
     "teacher": {
         "root": [
             {
-                "text": "{{name}} ¿verdad?"
+                "text": "{{name}} c'est exact?"
             },
             {
-                "text": "Llegar tarde tu primer día, no es una buena manera de empezar."
+                "text": "Arriver en retard le premier jour, ce n'est pas la meilleure façon de commencer."
             },
             {
                 "text": "",
-                "text_male": "Clase, este es vuestro nuevo compañero, por favor, ayudadlo en sus primeros días.",
-                "text_female": "Clase, esta es vuestra nueva compañera, por favor, ayudadla en sus primeros días."
+                "text_male": "Chers élèves, c'est votre nouveau camarade de classe, s'il vous plaît, aidez-le pendant les premiers jours.",
+                "text_female": "Chers élèves, c'est votre nouveau camarade de classe, s'il vous plaît, aidez-la pendant les premiers jours."
             },
             {
-                "text": "{{name}}, yo soy vuestro tutor. Cualquier cosa que necesites, dímelo."
+                "text": "{{name}}, je suis votre professeur, si vous avez besoin de quoi que ce soit, faites-le moi savoir."
             },
             {
-                "text": "Por favor, {{name}} siéntate al lado de Alison."
+                "text": "S'il vous plait, {{name}} asseyez-vous à côté d'Alison."
             },
             {
-                "text": "Alison, haz el favor de resolver todas las dudas que tenga {{name}} sobre el colegio."
+                "text": "Alison, rendez-moi service en répondant à toutes les questions que peut se poser {{name}} sur le lycée."
             },
             {
-                "text": "Continuemos con la clase."
+                "text": "Continuons le cours."
             }
         ]
     }

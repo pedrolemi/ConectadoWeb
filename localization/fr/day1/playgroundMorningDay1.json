@@ -2,90 +2,90 @@
     "jose": {
         "notTalked": {
             "text": "",
-            "text_male": "Eres nuevo, ¿no?",
-            "text_female": "Eres nueva, ¿no?"
+            "text_male": "Tu es nouveau, n'est-ce pas ?",
+            "text_female": "Tu es nouvelle, n'est-ce pas ?"
         },
         "ask": {
-            "text": "¿Quieres algo?"
+            "text": "Est-ce que tu veux quelque chose?"
         },
 
         "talked": {
-            "text": "Has vuelto. ¿Quieres algo más?"
+            "text": "Tu es de retour, as-tu besoin d'autre chose?"
         },
         "choices": [
             {
-                "text": "Hola, soy {{name}}."
+                "text": "Bonjour, je m'appelle {{name}}."
             },
             {
-                "text": "(Preguntar dónde está tu clase)"
+                "text": "(Demander où se trouve la salle de classe)."
             },
             {
-                "text": "No necesito nada. Hasta luego."
+                "text": "Je n'ai besoin de rien, à plus tard."
             }
         ],
         "askClass": {
-            "text": "Esa es también mi clase. Está en la segunda planta, subiendo las escaleras de la derecha que encuentras nada más entrar al edificio. Y en la primera planta está el despacho del director."
+            "text": "C'est ma salle de classe aussi. Quand tu entreras dans le bâtiment, prends l'escalier de droite et monte au deuxième étage. Notre salle de classe est la première sur ta gauche. Et au premier étage se trouve le bureau du directeur."
         },
         "askMore":  {
-            "text": "¿Necesitas algo más?"
+            "text": "Est-ce que tu veux quelque chose?"
         },
         "goodbye": {
-            "text": "Adiós."
+            "text": "Au revoir."
         },
         "notIntroduced": {
-            "text": "Yo soy Jose."
+            "text": "Je m'appelle Joseph."
         },
         "alreadyIntroduced": {
-            "text": "Ya me has dicho tu nombre."
+            "text": "Tu m'a déjà dit ton nom."
         }
     },
     
     "alison": {
         "root": {
-            "text": "¿Te conozco?"
+            "text": "Est-ce que je te connais?"
         },
         "choices": [
             {
-                "text": "Soy {{name}}... ¿Y tú eres?"
+                "text": "Je m'appelle {{name}}, et tu t'appelles...?"
             },
             {
-                "text": "Non. Lo siento, tengo prisa. Adiós."
+                "text": "",
+                "text_male": "Non, je suis désolé, je suis pressé. Au revoir.",
+                "text_female": "Non, je suis désolée, je suis pressée. Au revoir."
             }
             
         ],
         "introduce": [
             {
-                "text": "Encantada, yo soy Alison."
+                "text": "Ravie de te rencontrer, je m'appelle Alison."
             },
             {
-                "text": "Espero que estés a gusto aquí. Hay gente muy maja."
+                "text": "J'espère que tu seras à l'aise ici, les gens sont vraiment sympas."
             },
             {
-                "text": "¿A qué curso vas?"
+                "text": "En quelle classe es-tu?"
             }
         ],
         "playerAnswer": {
-            "text": "(Contestas)"
+            "text": "(Tu réponds)"
         },
         "afterPlayerIntroduction": [
             {
-                "text": "Entonces te veré en clase."
+                "text": "Je te verrai en classe alors."
             },
             {
-                "text": "El chico de la camiseta amarilla que está cerca de la entrada al patio también va a nuestra clase."
+                "text": "Le garçon avec le tee shirt jaune à côté du panier de basket est également dans notre classe."
             },
             {
-                "text": "Es muy majo. ¿Por qué no hablas con él?"
+                "text": "Il est si gentil, pourquoi ne lui parles-tu pas ?"
             }
         ],
         "goodbye": [
             {
-                "text": "",
-                "text_male": "No seas tan tímido, no muerdo",
-                "text_female": "No seas tan tímida, no muerdo"
+                "text": "Ne sois pas timide, je ne mords pas."
             },
             {
-                "text": "Bueno, nos vemos. Ten un buen primer día."
+                "text": "Eh bien, à plus tard. Passe une bonne première journée."
             }
         ]
     },
@@ -93,25 +93,27 @@
     "guille": {
         "root": {
             "text": "",
-            "text_male": "¿Eres nuevo? No te había visto antes por aquí.",
-            "text_female": "¿Eres nueva? No te había visto antes por aquí."
+            "text_male": "Es-tu nouveau? Je ne t'avais jamais vu par ici auparavant.",
+            "text_female": "Es-tu nouvelle? Je ne t'avais jamais vu par ici auparavant."
         },
         "choices": [
             {
-                "text": "Oui, soy {{name}}... ¿Y tú eres?"
+                "text": "Oui, je m'appelle {{name}}... et toi?"
             },
             {
-                "text": "Perdona, tengo prisa (Te vas)."
+                "text": "",
+                "text_male": "Excuse-moi, je suis pressé. (Tu pars).",
+                "text_female": "Excuse-moi, je suis pressée. (Tu pars)."
             }
         ],
         "introduce": {
-            "text": "Llámame Guille."
+            "text": "Appelle-moi Guillaume."
         },
         "bellRinging": {
-            "text": "<<La campana está sonando>>"
+            "text": "<<La cloche sonne>>"
         },
         "guilleGoodbye": {
-            "text": "Deberíamos entrar ya. Nos vemos."
+            "text": "On devrait aller à l'intérieur, à plus tard."
         }
     }
     

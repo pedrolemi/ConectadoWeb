@@ -2,10 +2,10 @@
     "earring": {
         "root": [
             {
-                "text": "Parece que es el pendiente de Alison."
+                "text": "On dirait la boucle d'oreilles d'Alison."
             },
             {
-                "text": "Será mejor que me lo lleve."
+                "text": "Je ferais mieux de la lui apporter."
             }
         ]
     },
@@ -13,24 +13,24 @@
     "ana": {
         "earringNotFound": [
             {
-                "text": "Hay algo raro cerca de la canasta."
+                "text": "Il y a quelque chose d'étrange près du panier."
             },
             {
-                "text": "Veo algo brillar desde aquí."
+                "text": "Je vois quelque chose de brillant d'ici."
             }
         ],
         "earringFound": {
-            "text": "Parece que has encontrado el pendiente de Alison."
+            "text": "On dirait que tu as trouvé la boucle d'oreille d'Alison."
         }
     },
 
     "guille": {
         "root": [
             {
-                "text": "Nuestro tutor es bastante majo."
+                "text": "Notre professeur est plutôt sympa."
             },
             {
-                "text": "Si tienes cualquier problema, habla con él."
+                "text": "Si tu as des problèmes, n'hésite pas à lui en parler."
             }
         ]
     }

@@ -2,10 +2,10 @@
     "dad": {
         "root": [
             {
-                "text": "Habla con tu madre."
+                "text": "Parle avec ta mère."
             },
             {
-                "text": "Quiere saber qué tal te ha ido el día."
+                "text": "Elle veut savoir comment s'est passée ta journée."
             }
         ]
     },
@@ -13,192 +13,201 @@
     "mom": {
         "notTalked": [
             {
-                "text": "Ya has vuelto, {{name}}."
+                "text_male": "Tu es rentré {{name}}!",
+                "text_female": "Tu es rentrée {{name}}!"
             },
             {
-                "text": "¿Qué tal te ha ido el día?"
+                "text": "Comment s'est passée ta journée?"
             }
         ],
         "talked": {
-            "text": "¿Quieres que hablemos un rato?"
+            "text": "Est-ce que tu veux qu'on parle un peu?"
         },
 
         "choices1": [
             {
-                "text": "Bien, normal. Me voy a mi cuarto."
+                "text":"Bien, comme d'habitude, je vais dans ma chambre."
             },
             {
-                "text": "He conocido a Guille..."
+                "text": "J'ai rencontré Guillaume..."
             },
             {
-                "text": "(Hablar de otros compañeros)"
+                "text": "(Parler des autres camarades de classe)"
             }
         ],
         "guille": [
             {
-                "text": "Hoy he conocido a Guille, hay sido muy amable conmigo."
+                "text": "Aujourd'hui, j'ai rencontré Guillaume, il a été très gentil avec moi."
             },
             {
-                "text": "Creo que seremos buenos amigos."
+                "text": "Je pense que nous serons de bons amis."
             }
         ],
         "guilleExtra": [
             {
-                "text": "Además me ha aconsejado que mire los tablones de anuncios."
+                "text": "Il m'a également conseillé de regarder les tableaux d'affichage."
             },
             {
-                "text": "Porque a veces dejan cosas interesantes."
+                "text": "Il y a parfois des choses intéressantes affichées."
             }
         ],
 
         "choices2": [
             {
-                "text": "Hay una chica llamada Alison..."
+                "text": "Il y a une fille qui s'appelle Alison..."
             },
             {
-                "text": "Jose..."
+                "text": "Joseph..."
             },
             {
-                "text": "(Hablar de otros compañeros)"
+                "text": "(Parler des autres camarades de classe)"
             }
         ],
         "alison": [
             {
-                "text": "En clase hay una chica rubia llamada Alison."
+                "text": "Il y a une fille blonde qui s'appelle Alison."
             },
             {
-                "text": "Hoy había perdido uno de sus pendientes."
+                "text": "Elle cherchait la boucle d'oreille qu'elle avait perdue."
             }
         ],
         "notFound": {
-            "text": "Creo que al final no lo ha podido encontrar."
+            "text": "Je pense qu'elle n'a finalement pas pu trouver la boucle d'oreille qu'elle avait perdu."
         },
         "found": {
-            "text": "La ayudé a buscarlo. Resulta que estaba en el patio."
+            "text": "Je l'ai aidé à la chercher et finalement c'est moi qui l'ai retrouvée dans la cour de récré."
         },
         "jose": [
             {
-                "text": "Jose es otro compañero de clase, aunque parece más tímido."
+                "text": "Joseph est un autre camarade de classe, bien qu'il semble plus timide."
             },
             {
-                "text": "Pero también parece majo."
+                "text": "Mais il a aussi l'air gentil."
             }
         ],
 
 
         "choices3": [
             {
-                "text": "A clase va María..."
+                "text": "En classe, il y a Marie..."
             },
             {
-                "text": "Está Álex..."
+                "text": "Il y a Alex..."
             },
             {
-                "text": "(Hablar de otros compañeros)"
+                "text": "(Parler du lycée)"
             }
         ],
         "maria": {
-            "text": "Otra chica de clase es María."
+            "text": "Une autre fille de la classe s'appelle Marie."
         },
         "meanResponse": {
-            "text": "Es una chica que se pasa los recreos leyendo. La clase dice que es rara, que mejor pase de ella."
+            "text": "Elle passe toutes les pauses à lire. La classe dit qu'elle est bizarre, mieux vaut la laisser tranquille."
         },
         "niceResponse": [
             {
-                "text": "Al parecer los demás de clase piensan que es rara."
+                "text": "Il semble que le reste de la classe pense qu'elle est bizarre."
             },
             {
-                "text": "La dejan de lado."
+                "text": "Ils lui ont coupé les vivres."
             },
             {
-                "text": "He estado hablando con ella un rato y a mi no me lo ha parecido."
+                "text": "Je lui ai parlé pendant un certain temps et elle ne m'a pas paru bizarre."
             }
         ],
         "alex": [
             {
-                "text": "En clase también está Álex."
+                "text": "Il y a aussi Alex."
             },
             {
-                "text": "Ha llegado tarde a clase."
+                "text": "Il est arrivé en retard."
             },
             {
-                "text": "Es un poco borde y da algo de miedo."
+                "text": "Alex est grossier. Il est la terreur du lycée."
             }
         ],
         "submit": [
             {
-                "text": "Parece que le quité el sitio al llegar a clase."
+                "text": "",
+                "text_male": "Apparemment j'ai pris sa place quand je suis arrivé en classe.",
+                "text_female": "Apparemment j'ai pris sa place quand je suis arrivée en classe."
             },
             {
-                "text": "Pero le pedí perdón y parece que ya no está enfadado."
+                "text": "",
+                "text_male": "Mais je me suis excusé et il semble qu'il ne soit plus en colère.",
+                "text_female": "Mais je me suis excusée et il semble qu'il ne soit plus en colère."
             }
         ],
         "downplay": [
             {
-                "text": "Es un chaval que busca pelea por nada."
+                "text": "C'est un enfant qui cherche à se battre pour rien."
             },
             {
-                "text": "Le quité su sitio sin querer."
+                "text": "",
+                "text_male": "Je me suis assis à sa place sans le savoir.",
+                "text_female": "Je me suis assise à sa place sans le savoir."
             },
             {
-                "text": "Me ha amenazado."
+                "text": "Il m'a menacé."
             }
         ],
         "momDownplayReply": [
             {
-                "text": "¿Cómo que te ha amenazado?"
+                "text": "Comment t'a-t-il menacé?"
             },
             {
-                "text": "Seguro que lo has malinterpretado."
+                "text": "Je suis sûr que tu as mal compris."
             },
             {
-                "text": "¿A quién más has conocido hoy?"
+                "text": "Qui d'autre as-tu rencontré aujourd'hui?"
             }
         ],
         "defy": [
             {
-                "text": "Es borde, y busca pelea."
+                "text": "On dirait qu'il cherche constamment la bagarre!"
             },
             {
-                "text": "Y todo porque me he sentado en su sitio."
+                "text": "",
+                "text_male": "Tout cela parce que je me suis assis  à sa place.",
+                "text_female": "Tout cela parce que je me suis assise à sa place."
             },
             {
-                "text": "Que se busque otro."
+                "text": "Il devrait en chercher une autre."
             }
         ],
         "momDefyReply": {
-            "text": "Deberías disculparte y no buscar problemas."
+            "text": "Tu devrais t'excuser et ne pas chercher les ennuis."
         },
 
 
         "choices4": [
             {
-                "text": "Ana..."
+                "text": "Anna..."
             },
             {
-                "text": "El colegio..."
+                "text": "Le lycée..."
             },
             {
-                "text": "Me voy a la habitación. Ya hemos hablado suficiente."
+                "text": "Je vais dans ma chambre, nous avons assez parlé."
             }
         ],
         "ana": [
             {
-                "text": "En clase también está Ana."
+                "text": "Il y a aussi Anna."
             },
             {
-                "text": "Da un poco de miedo."
+                "text": "Elle essaye de nous faire peur."
             }
         ],
         "school": {
-            "text": "Y el colegio, bueno..."
+            "text": "A propos du lycée, et bien..."
         },
         "schoolChoices": [
             {
-                "text": "Me gusta como es el edificio y el patio."
+                "text": "Le cadre est sympa... les bâtiments sont neufs et les salles de classe sont bien équipées (ordis, vidéoprojecteurs, ...). On a un terrain de foot, un terrain de basket, des tables de ping-pong... c'est super!"
             },
             {
-                "text": "Es aburrido, le faltan cosas."
+                "text": "Ouais, il est beaucoup moins bien équipé que mon ancien lycée!...même pas de salle pour étudier, ni de salle pour se retrouver entre nous, ni de MDL (Maison Des Lycéens)."
             }
         ]
     }

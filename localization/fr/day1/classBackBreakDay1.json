@@ -3,160 +3,164 @@
         "notTalked": [
             {
                 "text": "",
-                "text_male":  "¡¡Eh, nuevo, hablemos un momento!!",
-                "text_female": "¡¡Eh, nueva, hablemos un momento!!"
+                "text_male":  "Hé, le nouveau, on peut se parler!!",
+                "text_female": "Hé, la nouvelle, on peut se parler!!"
             },
             {
                 "text": "",
-                "text_male": "Hoy estabas sentado en mi sitio. No quiero que te vuelvas a sentar ahí.",
-                "text_female": "Hoy estabas sentada en mi sitio. No quiero que te vuelvas a sentar ahí."
+                "text_male": "Aujourd'hui, tu t'es assis à ma place, je ne veux plus que tu t'assoies là.",
+                "text_female": "Aujourd'hui, tu t'es assise à ma place, je ne veux plus que tu t'assoies là."
             },
             {
-                "text": "A partir de mañana siéntate en la otra mesa del final que está vacía."
+                "text": "Dès demain, t'as intérêt à t'assoir à l'autre table vide là-bas au fond."
             }
         ],
         "talked": {
-            "text": "¿Qué miras? Largo, ya hemos hablado todo lo que teníamos que hablar."
+            "text": "Qu'est-ce que tu regardes? Pars, nous avons parlé de tout ce dont nous avions besoin de parler."
         },
 
         "choices": [
             {
-                "text": "Vale, perdona, no volverá a pasar."
+                "text": "",
+                "text_male": "Bien sûr, désolé, cela ne se reproduira plus.",
+                "text_female": "Bien sûr, désolée, cela ne se reproduira plus."
             },
             {
-                "text": "Es sólo un sitio."
+                "text": "Ce n'est qu'une place."
             },
             {
-                "text": "¿Y quién se supone que eres para decirme dónde no puedo sentarme?"
+                "text": "Et qui est censé me dire où je peux m'asseoir?"
             }
         ],
 
         "submitReply": [
             {
-                "text": "Así me gusta, obediente."
+                "text": "C'est cela, l'obéissance."
             },
             {
-                "text": "Y ya que estamos, para compensar, dame ese bocadillo que llevas, que tengo hambre."
+                "text": "Et au fait, pour te faire pardonner, donne-moi ton sandwich, j'ai faim."
             }
         ],
         "giveSandwich": {
-            "text": "(Le das el bocadillo)"
+            "text": "(Tu lui donnes ton sandwich)"
         },
         "takeSandwich":  {
-            "text": "Venga, fuera de mi vista."
+            "text": "C'est bon, j'ai plus rien à te dire, tu peux y aller."
         },
 
         "downplayReply": [
             {
-                "text": "Así es, es sólo un sitio, como todos los demás, pero es mi sitio."
+                "text": "C'est ça, c'est juste une place, comme toutes les autres, mais c'est ma place."
             },
             {
-                "text": "Así que búscate otro."
+                "text": "Alors cherche-en une autre."
             },
             {
-                "text": "(Con tono amenazador) Sino tendré que ayudarte yo a buscarlo."
+                "text": "(Sur un ton menaçant) Sinon je devrais t'aider à la trouver."
             },
             {
-                "text": "Y el último al que le ayudé a elegir otro sitio lo que encontró fue un moratón en su cara."
+                "text": "Fais attention à toi, la dernière personne que j'ai aidé à trouver une place... eh bien, elle s'est retrouvée avec un bleu sur son visage."
             },
             {
-                "text": "Y ahora lárgate."
+                "text": "Allez maintenant, dégage!"
             }
         ],
 
         "defyReply": {
             "text": "",
-            "text_male": "¿Vas de listo?",
-            "text_female": "¿Vas de lista?"
+            "text_male": "Tu es un petit malin, n'est-ce pas?",
+            "text_female": "Tu es une petite maligne, n'est-ce pas?"
         },
         "push": {
-            "text": "(Recibes un empujón)"
+            "text": "",
+            "text_male": "(Vous vous sentez poussé)",
+            "text_female": "(Vous vous sentez poussée)"
         },
         "insult": {
             "text": "",
-            "text_male": "Que así sea, capullo",
-            "text_female":  "Que así sea, estúpida"
+            "text_male": "Bien fait pour toi, imbécile!",
+            "text_female":  "Bien fait pour toi, idiote!"
         },
         "leave": {
-            "text": "(Alejandro se va)"
+            "text": "(Alexandre part)"
         }
     },
 
     "alison": {
         "notTalked": [
             {
-                "text": "Dónde lo habré perdido..."
+                "text": "Où l'ai-je perdue..."
             },
             {
-                "text": "Perdona {{name}}, no te había visto."
+                "text": "Désolé {{name}}, je ne t'avais pas vu."
             },
             {
-                "text": "Estoy buscando un pendiente, no sé dónde lo he podido perder."
+                "text": "Je cherche une boucle d'oreille, je ne sais pas où j'aurais pu la perdre."
             }
         ],
         "talked": [
             {
-                "text": "¿Aún no has encontrado nada?"
+                "text": "Tu n'as toujours rien trouvé?"
             },
             {
-                "text": "Sigue buscando, por favor."
+                "text": "S'il te plaît, continue à chercher."
             }
         ],
 
         "choices1": [
             {
-                "text": "¿Has mirado en el pasillo?"
+                "text": "As-tu regardé dans le couloir?"
             },
             {
-                "text": "¿Has buscado en el patio?"
+                "text": "As-tu regardé dans la cour?"
             },
             {
-                "text": "Quizá lo hayas dejado en casa..."
+                "text": "Tu l'as peut-être laissée à la maison..."
             }
         ],
         "didntCheck": [
             {
-                "text": "No he mirado aún."
+                "text": "Je n'ai pas encore regardé."
             },
             {
-                "text": "¿Puedes ir tú? Mientras termino de buscar en clase..."
+                "text": "Peux-tu m'aider à les retrouver ? Pendant que je finis de chercher dans la classe..."
             },
             {
-                "text": "Me harías un gran favor."
+                "text": "Tu me rendrais un grand service."
             }
         ],
         "cry": [
             {
-                "text": "No puede ser, esta mañana lo llevaba."
+                "text": "Ce n'est pas possible, je les portais ce matin."
             },
             {
-                "text": "So- so- son nuevos, un re... regalo."
+                "text": "El- El- Elles sont neuves, un ca... un ca... un cadeau."
             }
         ],
         "playerThoughts": {
-            "text": "(Notas que está muy preocupada y a punto de llorar)"
+            "text": "(Tu as remarqué qu'elle est très inquiète et sur le point de se mettre à pleurer)"
         },
         "beg" :{
-            "text": "Por favor, *snif* , *snif*, ¿puedes ayudarme a encontrarlo?"            
+            "text": "S'il te plait, *sniff* , *sniff* peux-tu m'aider à les retrouver?"
         },
         "choices2": [
             {
-                "text": "De acuerdo, echaré un vistazo."
+                "text": "D'acc, je vais profiter de la pause pour les chercher avec toi."
             },
             {
-                "text": "Si (Iré a disfrutar del recreo y luego le diré que no he encontrado nada)."
+                "text": "Oui (je vais profiter de la pause et lui dire que je n'ai rien trouvé)."
             }
         ],
         "illusionOfFreeChoice": [
             {
-                "text": "Muchas gracias."
+                "text": "Merci beaucoup."
             },
             {
-                "text": "Además, toma mi número. Así podemos escribirnos."
+                "text": "Tiens, je te passe aussi mon numéro de téléphone pour que nous puissions nous envoyer des SMS."
             }
         ],
         "exchangePhoneNumber": {
-            "text": "(También le das tu número)"
+            "text": "(Tu lui donnes également ton numéro)"
         }
         
     },
@@ -165,10 +169,10 @@
     "door": {
         "root": [
             {
-                "text": "Alison parece preocupada."
+                "text": "Alison semble inquiète."
             },
             {
-                "text": "Debería hablar con ella para ver que pasa."
+                "text": "Je devrais lui parler pour voir ce qui se passe."
             }
         ]
     }

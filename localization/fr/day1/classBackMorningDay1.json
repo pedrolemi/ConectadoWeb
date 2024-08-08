@@ -2,32 +2,32 @@
     "beforeEnter": {
         "root": [
             {
-                "text": "La semana pasada, si recordáis, terminamos de ver como hacer el análisis morfológico de una frase."
+                "text": "La semaine dernière, si vous vous souvenez bien, nous apprenions à faire une analyse morphologique d'une phrase."
             },
             {
-                "text": "Ahora toca ver como hacer el análisis sintáctico."
+                "text": "C'est maintenant l'heure de l'analyse syntaxique."
             }
         ],
         "knock": {
-            "text": "(Alguien está llamando a la puerta)"
+            "text": "(Quelqu'un frappe à la porte)"
         },
         "allowEnter": {
-            "text": "Pasa."
+            "text": "Entrez."
         }
     },
     "afterEnter": {
         "root": {
-            "text": "Alejandro, llegas tarde, por favor siéntate."
+            "text": "Alexandre, vous êtes en retard, veuillez vous asseoir."
         },
         "alexAnswer": {
             "text": "",
-            "text_male": "El nuevo está en mi sitio.",
-            "text_female": "La nueva está en mi sitio."
+                "text_male":  "Le nouveau est à ma place.",
+                "text_female": "La nouvelle est à ma place."
         },
         "teacherAnswer": {
             "text": "",
-            "text_male": "Su nombre es {{name}}. Siéntate por ahora en otro lugar. Le he pedido a Alison que lo ayude en sus primeros días.",
-            "text_female": "Su nombre es {{name}}. Siéntate por ahora en otro lugar. Le he pedido a Alison que la ayude en sus primeros días."
+            "text_male": "Il s'appelle {{name}}. Asseyez-vous à un autre table pour l'instant. J'ai demandé à Alison de l'aider pendant les premiers jours.",
+            "text_female": "Elle s'appelle {{name}}. Asseyez-vous à un autre table pour l'instant. J'ai demandé à Alison de l'aider pendant les premiers jours."
         }
     }
 

@@ -1,41 +1,39 @@
 {
     "wardrobe1": {
         "root": {
-            "text": "No hay nada útil dentro."
+            "text": "Il n'y a rien d'utile ici."
         }
     },
 
     "wardrobe2": {
         "root": {
-            "text": "Ahora no me apetece ordenar todo esto."
+            "text": "Je ne suis pas d'humeur à organiser tout cela."
         }
     },
 
     "phone": {
         "root": {
-            "text": "Te he mandado una petición de amistad"
+            "text": "Je t'ai envoyé une demande d'amie."
         },
         "message2": {
-            "text": "Acéptamela desde tu ordenador :)"
+            "text": "N'hésite pas à l'accepter sur ton ordinateur :)"
         },
         "choices": [
             {
-                "text": "Oui, ahora te acepto"
+                "text": "Ok, je t'accepte maintenant"
             },
             {
-                "text": "Cuando pueda lo miro"
+                "text": "Je le ferai dès que je le pourrais"
             },
             {
-                "text": "(Es un poco pesada, paso de contestar nada)"
+                "text": "(Elle est agaçante, Qu'est-ce qu'elle veux celle là ? Je ne répondrai rien)"
             }
         ],
         "acceptNow": {
-            "text": "Oui, ahora te acepto la petición :)"
+            "text": "Oui, j'accepte ton invitation maintenant :)"
         },
         "acceptLater": {
-            "text": "",
-            "text_male": "Cuando pueda lo miro, ahora mismo estoy ocupado",
-            "text_female": "Cuando pueda lo miro, ahora mismo estoy ocupada"
+            "text": "Je m'en occuperai quand je pourrai, je suis très occupé."
         }
     }
     

@@ -1,69 +1,77 @@
 {
     "ana_jose": {
         "washed": {
-            "text": "Jajaja. ¿Te has meado encima?"
+            "text": "",
+            "text_male": "Hahaha, t'es-tu mouillé?",
+            "text_female": "Hahaha, t'es-tu mouillée?"
         },
         "washed2": [
             {
-				"text": "Jajajaja. No, no, mira bien, se ha cagado."
-			},
-			{
-				"text": "¿Llevas el móvil, Ana? ¡¡Foto!!"
-			}
+                "text": "",
+                "text_male": "Hahahaha, non, non, regarde, il s'est chié dessus.",
+                "text_female": "Hahahaha, non, non, regarde, elle s'est chiée dessus."
+            },
+            {
+                "text": "Anna, as-tu ton téléphone portable ? Prends une photo !!"
+            }
         ],
         "washed3": {
-            "text": "Jajajaja."
+            "text": "Hahahaha"
         },
 
         "notWashed": [
             {
-				"text": "A ver si lavas la ropa. Menudo desastre llevas en el pantalón."
+				"text": "Tu devrais laver tes vêtements. Ton pantalon est dans un tel désastre."
 			},
 			{
-				"text": "¿No tenéis lavadora en casa?"
+				"text": "N'as-tu pas de machine à laver à la maison?"
 			}
         ],
         "notWashed2": [
             {
-				"text": "Jajajaja. ¡Nueva moda! Chicles pegados al pantalón."
+				"text": "Hahahaha, nouvelle tendance ! Des chewing-gums collés sur le pantalon."
 			},
 			{
-				"text": "Con lo horrorosa que es su ropa, no merece la pena que la lave."
+				"text": "Ces horribles vêtements ne valent pas la peine d'être lavés."
 			},
 			{
-				"text": "Debería tirarla a la basura directamente."
+				"text": "Tu devrais le jeter directement à la poubelle."
 			}
         ],
         "notWashed3": {
-            "text": "Jajajaja."
+            "text": "Hahahaha"
         }
     },
 
     "guille_alison": {
         "washed": {
-            "text": "Menuda mancha llevas."
+            "text": "Quelle tache."
         },
         "washed2": {
-            "text": "Bueno, no pasa nada. En un rato se secará."
+            "text": "C'est bon, ce sera sec dans un petit moment."
         },
 
         "notTalked": [
             {
-				"text": "¿Dónde te has apoyado?"
+				"text": "",
+                "text_male": "Où t'es-tu assis?",
+                "text_female": "Où t'es-tu assise?"
 			},
 			{
-				"text": "Te has debido sentar encima de un chicle."
+				"text": "",
+                "text_male": "Tu t'es probablement assis sur un chewing-gum.",
+                "text_female": "Tu t'es probablement assise sur un chewing-gum."
 			}
         ],
         "notTalked2": {
-            "text": "Menudo desastre. Pasa por el baño antes de ir a clase."
+            "text": "Quel désastre, va directement aux toilettes avant les cours."
         },
         "notTalked3": {
-            "text": "Oui, igual consigues quitarlo."
+            "text": "Oui, tu pourras peut-être l'enlever."
         },
 
         "talked": {
-            "text": "Prueba a quitarte el chicle en el baño."
+            "text": "Essaye d'enlever ce chewing-gum dans les toilettes."
         }
     }
 }

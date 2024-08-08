@@ -1,24 +1,22 @@
 {
     "wardrobe1": {
         "root": {
-            "text": "No hay nada útil dentro."
+            "text": "Il n'y a rien d'utile ici."
         }
     },
 
     "wardrobe2": {
         "root": {
-            "text": "Hoy tampoco me da tiempo a ordenar el armario."
+            "text": "Aujourd'hui, je n'ai pas le temps d'organiser tout cela."
         }
     },
 
     "phone1": {
         "root": {
-            "text": "{{name}} este es el chat k tenemos ls de clase"
+            "text": "{{name}} c'est le chat que nous utilisons avec tous nos camarades de classe"
         },
         "message2": {
-            "text": "",
-            "text_male": "Bienvenido",
-            "text_female": "Bienvenida"
+            "text": "Bienvenue"
         },
         "message3": {
             "text": ":)"
@@ -27,86 +25,83 @@
     "phone2": {
         "root": [
             {
-                "text": "Gracias :)"
+                "text": "Merci :)"
             }
         ],
         "reply": {
-            "text": "Gracias :)"
+            "text": "Merci :)"
         }
     },
     "phone3": {
         "root": {
-            "text": "",
-            "text_male": "xq lo invitas al grupo? no hablaste cn alex esta mañana?",
-            "text_female": "xq la invitas al grupo? no hablaste cn alex esta mañana?"
-
+            "text": "Pk 7 invitation? Déjà parlé avec Alex ajd?"
         },
         "message4": {
             "text": "",
-            "text_male": "Pff, no se ha ganado estar en el grupo. El k pueda k lo eche YA!",
-            "text_female": "Pff, no se ha ganado estar en el grupo. El k pueda k la eche YA!"
+            "text_male": "Hmm, il n'a pas merité d'être ds ce groupe. Que quelqu'un l'expulse MAINTENANT!",
+            "text_female": "Hmm, elle n'a pas merité d'être ds ce groupe. Que quelqu'un l'expulse MAINTENANT!"
         },
         "message5": {
-            "text": "Ya sólo falta que invitéis a la friki de María"
+            "text": "Il ne vous reste plus k inviter cette Marie bizarre ! "
         },
         "message6": {
-            "text": "Jose es el admin, habla con él mañana, q el chat no suele leerlo"
+            "text": "Joseph est l'admin, discutez avec lui 2main, il ne lit pas souvent ce chat"
         },
         "reply2": [
             {
-                "text": "Me sienta mal que me tratéis así"
+                "text":"Tu me traites mal, ça me fait sentir mal"
             },
             {
-                "text": "Madurad"
+                "text": "Mûris!!!"
             },
             {
-                "text": "¿Qué os he hecho?"
+                "text": "Qu'est-ce que je vous ai fait?"
             }
         ],
         "sad": {
-            "text": "Acabo de llegar al colegio, y de verdad me sienta fatal que la mitad de la clase me trate como la mierda"
+            "text": "Je viens d'arriver au lycée et c'est vraiment horrible que la moitié de la classe me traite comme de la merde."
         },
         "sad2": {
-            "text": "No digo que os caiga bien a todos, pero lo mínimo es tratarme con respeto"
+            "text": "Je ne vous dis pas que vous devez tous m'aimer, mais le moins que vous puissiez faire est me traiter avec respect."
         },
 
         "growUp": {
-            "text": "Madurad, tenéis 2años o qué os pasa"
+            "text": "Grandissez, vous avez 2 ans ou quoi ?"
         },
         "ask": {
-            "text": "No lo entiendo, ¿Qué os he hecho para que me insultéis, gastéis bromas pesadas, me ignoréis y marginéis?"
+            "text": "Je ne comprends pas, qu'est-ce que je vous ai fait pour que vous m'insultiez, vous m'ignoriez et vous moquiez de moi ?"
         },
         "message7": {
-            "text": "¿Qué problema tenéis con {{name}}?"
+            "text": "Quel est votre problème avec {{name}}?"
         },
         "message8": {
-            "text": "Os estáis pasando"
+            "text": "Vous dépassez les limites."
         },
         "message9": {
-            "text": "No os metáis donde no os llaman, también puedo hacer que Jose os eche a vosotros"
+            "text": "Ce n'est pas votre affaire, je peux obliger Joseph à vous mettre dehors aussi."
         },
         "reply3": [
             {
-                "text": "Ya me salgo yo del grupo"
+                "text": "Ne vous inquiétez pas, je m'en vais."
             },
             {
-                "text": "Espero que Jose tenga más cerebro"
+                "text": "J'espère que Joseph est plus intelligent."
             },
             {
-                "text": "Álex, para"
+                "text": "Alex, arrête."
             }
         ],
         "leave": {
-            "text": "Si que esté en el grupo va a ser un problema me voy yo"
+            "text": "Si ma présence dans ce groupe de discussion est un problème, je m'en vais."
         },
         "insult": {
-            "text": "Espero que Jose no sea tan estúpido como tú cuando lea el chat"
+            "text": "J'espère que Joseph ne sera pas aussi stupide que toi quand il lira le chat."
         },
         "stop": {
-            "text": "Para, no te he hecho nada como para que te portes así conmigo"
+            "text": "Arrêtez, je ne vous ai rien fait qui justifie la façon dont vous me traitez"
         },
         "goToSleep": {
-            "text": "Me voy a dormir, os veo mañana"
+            "text": "Je vais dormir, à demain"
         }
     }
     

@@ -3,42 +3,43 @@
         "notTalkedNormal": [
             {
                 "text": "",
-                "text_male": "Veo que ya estás listo para irte.",
-                "text_female": "Veo que ya estás lista para irte."
+                "text_male": "On dirait que tu es prêt à partir.",
+                "text_female": "On dirait que tu es prête à partir."
             },
             {
-                "text": "¿Llevas todo? Acuérdate de coger la mochila."
+                "text": "Tu as tout ? N'oublie pas de prendre ton sac à dos."
             },
             {
-                "text": "Pórtate bien y haz muchos amigos."
+                "text": "Comporte-toi bien et fais-toi beaucoup d'amis."
             }
         ],
         "notTalkedLate": [
             {
-                "text": "¿Has visto la hora que es?"
+                "text": "As-tu vu l'heure qu'il est ?"
             },
             {
-                "text": "Tu primer día en el nuevo colegio y ya llegas tarde."
+                "text": "Ton premier jour dans ton nouveau lycée et tu es déjà en retard."
             },
             {
-                "text": "¡Venga, coge todo lo que necesites y vete ya!"
+                "text": "Vas-y, prends tout ce dont tu as besoin et pars maintenant!"
             }
         ],
         "hasBag": {
-            "text": "Veo que llevas todo."
+            "text":  "On dirait que tu as tout."
         },
         "hasBagNormal": {
-            "text": "Vete ya o acabarás llegando tarde."
+            "text": "Pars maintenant ou tu seras en retard."
         },
         "hasBagLate":  {
-            "text": "Vete, que ya llegas tarde."
+            "text": "Pars maintenant, tu es déjà en retard."
         },
         "noBag": [
             {
-                "text": "Te dejas la mochila."
+                "text_male": "Es-tu sûr de ne rien avoir oublié dans ton sac à dos?",
+                "text_female": "Es-tu sûre de ne rien avoir oublié dans ton sac à dos?"
             },
             {
-                "text": "Está en tu cuarto. Cógela y vete ya."
+                "text": "Ton sac à dos est dans ta chambre, prends-le et pars maintenant."
             }
         ]
     }

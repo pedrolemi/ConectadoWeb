@@ -2,29 +2,29 @@
     "bag": {
         "root": [
             {
-                "text": "Creo que tengo todo preparado..."
+                "text": "Je crois que j'ai tout préparé..."
             },
             {
-                "text": "Oui, lo llevo todo. Será mejor que coja la mochila y me marche ya."
+                "text": "Oui, j'ai tout, je ferais mieux de prendre le sac à dos et de partir maintenant."
             }
         ]
     },
 
     "wardrobe1": {
         "root": {
-            "text": "No hay nada útil dentro."
+            "text": "Il n'y a rien d'utile ici."
         }
     },
 
     "wardrobe2": {
         "root": {
-            "text": "En algún momento tendré que ordenar todo esto, pero ahora tengo que irme a clase."
+            "text": "Je dois organiser tout cela à terme, mais plus tard."
         }
     },
     
     "bed": {
         "root": {
-            "text": "Ahora que me he conseguido levantar no debería volver a acostarme."
+            "text": "Maintenant que je suis déjà debout, je ne devrais pas retourner dormir."
         }
     }
 

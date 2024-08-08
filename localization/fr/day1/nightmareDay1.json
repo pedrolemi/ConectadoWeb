@@ -3,26 +3,30 @@
         "introduction": {
             "root": [
                 {
-                    "text": "Tu primer día de clase. ¿Por qué no te sientas?"
+                    "text": "Ton premier jour au lycée. Pourquoi ne pas t'asseoir ?"
                 },
                 {
-                    "text": "Escoge el sitio que más te guste."
+                    "text": "Choisis la place qui te plaît le plus."
                 }
             ]
         },
         "outro": {
             "root": [
                 {
-                    "text": "Me parece que te has quedado sin sitio."
+                    "text": "",
+                    "text_male": "Je crois que tu es resté sans place.",
+                    "text_female": "Je crois que tu es restée sans place."
                 },
                 {
-                    "text": "¿Ni siquiera sabes sentarte?"
+                    "text": "Ne saurais-tu même pas t'asseoir?"
                 },
                 {
-                    "text": "¿Acaso no sirves para nada?"
+                    "text": "",
+                    "text_male": "Ne serais-tu pas un bon à rien?",
+                    "text_female": "Ne serais-tu pas une bonne à rien?"
                 },
                 {
-                    "text": "¿Cómo esperas hacer así amigos?"
+                    "text": "Comment espères-tu te faire des amis en étant comme ça?"
                 }
             ]
         }
@@ -30,13 +34,13 @@
     "seat": {
         "root": [
             {
-                "text": "Veo que has encontrado un sitio, pero..."
+                "text": "Je vois que tu as trouvé une place, mais... "
             },
             {
-                "text": "Ese sitio es mío. Tendrás que escoger otro."
+                "text": "Cette place est à moi, tu devras en prendre une autre."
             },
             {
-                "text": "Puedes sentarte donde quieras menos ahí."
+                "text": "Tu peux t'asseoir où tu veux, mais pas ici."
             }
         ]
     }

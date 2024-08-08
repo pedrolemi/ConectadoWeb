@@ -3,26 +3,26 @@
         "introduction": {
             "root": [
                 {
-                    "text": "Bueno...¿ya lo hemos solucionado no?"
+                    "text": "Alors... Avons-nous résolu ce problème?"
                 },
                 {
-                    "text": "¿Sabes dónde sentarte?"
+                    "text": "Est-ce que tu sais où t'asseoir?"
                 },
                 {
-                    "text": "Quizás deberías evitar que los chicles caigan en la silla golpeándolos. O si no, tendrás que sentarte en uno."
+                    "text": "Peut-être devrais-tu empêcher le chewing-gum de tomber sur la chaise ou tu devras t'asseoir sur un chewing-gum."
                 }
             ]
         },
         "outro": {
             "root": [
                 {
-                    "text": "Tendrás que sentarte en un chicle."
+                    "text": "Tu devras t'asseoir sur un chewing-gum."
                 },
                 {
-                    "text": "Jajaja. Adelante, siéntate."
+                    "text": "Hahahaha, vas-y, assieds-toi"
                 },
                 {
-                    "text": "Venga, ¿a qué esperas?"
+                    "text": "Vas-y, qu'attends-tu?"
                 }
             ]
         }

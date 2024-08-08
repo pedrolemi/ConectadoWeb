@@ -4,33 +4,33 @@
             "text": "..."
         },
         "leaveMaria": {
-            "text": "Parece incómoda. Mejor dejarla por ahora."
+            "text": "Elle ne se sent pas très à l'aise... il vaut mieux la laisser tranquille pour l'instant."
         }
     },
     
     "alison": {
         "root": {
-            "text": "Perdona, tengo prisa. Si no entro ya a clase voy a llegar tarde." 
+            "text_male": "Désolée, je suis pressée, je vais être en retard si je n'arrive pas à entrer."
         }
     },
 
     "guille": {
         "notTalked": [
             {
-                "text": "Buenas, estaba leyendo los anuncios del corcho."
+                "text": "Tiens regarde, je lisais le tableau d'affichage."
             },
             {
-                "text": "A veces hay cosas interesantes, y últimamente alguien va dejando cromos, mensajes y adivinanzas."
+                "text": "Il y a des choses intéressantes parfois, on peut y laisser des messages, des autocollants et même des énigmes."
             },
             {
-                "text": "Acostúmbrate a mirarlo una vez al día."
+                "text": "Regarde le au moins une fois par jour, habitue-toi."
             },
             {
-                "text": "¿Entramos a clase?"
+                "text": "Allons-nous entrer?"
             }
         ],
         "talked": {
-            "text": "Acuérdate de mirar los corchos. A veces se encuentran cosas interesantes."
+            "text": "N'oublie pas de regarder les tableaux, on y trouve parfois des choses intéressantes."
         }
     }
     

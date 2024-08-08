@@ -1,27 +1,27 @@
 {
-    "mainText": "¡Conecta con tus amigos!",   
-    "startButton": "Empezar",
-    "backButton": "Atrás",
-    "warningText": "¡IMPORTANTE!",
-    "inscriptionText": "No introduzcas una contraseña que ya uses. Piensa en una buena. Solo será utilizada dentro del juego.",
+    "mainText": "Connecte-toi avec tes amis!",   
+    "startButton": "Démarrer",
+    "backButton": "Retour",
+    "warningText": "IMPORTANT!",
+    "inscriptionText": "Ne mets pas un mot de passe que tu utilises déjà. Invente un bon mot de passe. Il ne sera utilisé qu'à l'intérieur du jeu.",
     "nameInput": {
-        "sideText": "Nombre",
-        "defaultText": "Tu nombre "
+        "sideText": "Prénom",
+        "defaultText": "Ton prénom "
     },
     "userInput": {
-        "sideText": "Usuario",
-        "defaultText": "Tu usuario "
+        "sideText": "Nom d'utilisateur",
+        "defaultText": "Ton nom d'utilisateur "
     }, 
     "passwordInput": {
-        "sideText": "Contraseña",
-        "defaultText": "Tu contraseña "
+        "sideText": "Mot de passe",
+        "defaultText": "Ton mot de passe "
     },
     "errorTexts": {
-        "invalidName": "Hace falta tu nombre",
-        "invalidUser": "Hace falta un nombre de usuario",
-        "invalidPassword": "Hace falta una contraseña",
-        "shorterName": "Tu nombre no puede tener más de {{number}} caracteres",
-        "shorterUserOrPassword": "Usuario y contraseña no pueden tener más de {{number}} caracteres",
-        "invalidGender": "Hace falta que selecciones tu género"
+        "invalidName": "Ton prénom est requis",
+        "invalidUser": "Ton prénom nom d'utilisateur est requis",
+        "invalidPassword": "Un mot de passe est requis",
+        "shorterName": "Ton prénom ne doit pas comporter plus de {{number}} caractères",
+        "shorterUserOrPassword": "Ton nom d'utilisateur et mon de passe ne doivent pas comporter plus de {{number}} caractères",
+        "invalidGender": "Tu dois sélectionner ton genre"
     }
 }

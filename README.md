@@ -5,7 +5,7 @@
 # ConectadoWeb
 **Conectado** es un videojuego que ha sido diseñado y desarrollado con el objetivo de **concienciar contra el acoso escolar** (bullying y ciberbullying) mediante las emociones. Está enfocado a ser una herramienta de ayuda para que los profesionales de la educación puedan educar sobre este tema de un modo más interactivo y con una mayor implicación emocional de los jóvenes de 12 a 17 años de edad.
 
-*Leer el README en otro idoma: [Español](README.md), [English](README.en.md).*
+*Leer el README en otro idioma: [English](README.en.md).*
 
 ## Equipo
 La idea y el videojuego originales han sido llevados a cabo por el grupo [eUCM](http://www.e-ucm.es/es/). Tanto el ejecutable como una guía para el docente se encuentran en [e-ucm.es](https://www.e-ucm.es/es/portfolio-item/conectado/). 

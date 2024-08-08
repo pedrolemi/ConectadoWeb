@@ -8,7 +8,7 @@
         }
     },
     "Guille": {
-        "bio": "Si le plan ne fonctionne pas, changez le plan, mais ne change pas l'objectif.",
+        "bio": "Si le plan ne fonctionne pas, changez le plan, mais ne change pas l'objectif",
         "deny": {
             "root": {
                 "text": "Je n'ai aucune raison de refuser son invitation, est-ce que je veux vraiment la refuser?"

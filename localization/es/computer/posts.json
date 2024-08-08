@@ -133,6 +133,7 @@
             },
             "oldComments": {
                 "root": {
+                    "text": "",
                     "text_male": "Mirad la frente q tiene. Es un CABEZABUQUE",
                     "text_female": "Mirad la frente q tiene. Es una CABEZABUQUE"
                 },
@@ -148,7 +149,7 @@
                 "fifthComment": {
                     "text": "",
                     "text_male": "No os compliqueis, podemos llamarlo margi... total ninguno le vamos a hablar",
-                    "text": "No os compliqueis, podemos llamarla margi... total ninguno le vamos a hablar"
+                    "text_female": "No os compliqueis, podemos llamarla margi... total ninguno le vamos a hablar"
                 },
                 "sixthComment": {
                     "text": "Margi es poco original... q tal gremlin?"

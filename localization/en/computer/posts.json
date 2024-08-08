@@ -132,6 +132,7 @@
             },
             "oldComments": {
                 "root": {
+                    "text": "",
                     "text_male": "Look at that forehead. He's SHIPEAD",
                     "text_female": "Look at that forehead. She's SHIPEAD"
                 },
@@ -139,6 +140,7 @@
                     "text": "Looks like a big wall hahaha. Why not TRUMP?"
                 },
                 "thirdComment": {
+                    "text": "",
                     "text_male": "Air, that's what his ears make when they move hahaha",
                     "text_female": "Air, that's what her ears make when they move hahaha"
                 },
@@ -146,6 +148,7 @@
                     "text": "Alex, WIND, not air hahaha"
                 },
                 "fifthComment": {
+                    "text": "",
                     "text_male": "Don't overthink, we can just call him outcast... well, nobody's gonna talk with him",
                     "text_female": "Don't overthink, we can just call her outcast... well, nobody's gonna talk with her"
                 },

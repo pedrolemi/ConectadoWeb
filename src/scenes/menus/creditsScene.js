@@ -104,14 +104,15 @@ export default class CreditsScene extends Phaser.Scene {
     createCreditsContainer() {
         // Diferentes tamanos de los textos
         let sizes = {
-            title: 95,          // titulos
-            subtitle: 59,       // subtitulos
-            name: 47,           // nombres personas
-            team: 45,           // departamentos
-            key: 31,            // leyendas
-            schoolKey: 28,      // texto introductorio de los colegios
-            school: 34,         // colegios
-            schoolPlace: 28     // lugares de los colegios
+            title: 95,              // titulos
+            subtitle: 59,           // subtitulos
+            smallerSubtitle: 52,    // subtitulos de tam mas pequeno
+            name: 47,               // nombres personas
+            team: 45,               // departamentos
+            key: 31,                // leyendas
+            schoolKey: 28,          // texto introductorio de los colegios
+            school: 34,             // colegios
+            schoolPlace: 28         // lugares de los colegios
         }
 
         // Posibles fuentes
@@ -137,6 +138,10 @@ export default class CreditsScene extends Phaser.Scene {
             },
             subtitle: {
                 size: sizes.subtitle,
+                font: fonts.kimberley
+            },
+            smallerSubtitle: {
+                size: sizes.smallerSubtitle,
                 font: fonts.kimberley
             },
             name: {
@@ -230,7 +235,7 @@ export default class CreditsScene extends Phaser.Scene {
         this.createTranslatedTextBelow(paddings.team, "collaboratorsText", fontParams.subtitle);
         this.createImgBelow(paddings.team, 0.45, 'orientacion_Madrid', 'someBrands');
         // Centros educativos
-        this.createTranslatedTextBelow(paddings.team, "schoolsText", fontParams.subtitle);
+        this.createTranslatedTextBelow(paddings.team, "schoolsText", fontParams.smallerSubtitle);
         this.createTranslatedTextBelow(paddings.team, "schoolCollabText", fontParams.schoolKey);
         let schoolsInfo = [
             { school: "Centro La Inmaculada", place: "Madrid, Escolapias Puerta de Hierro" },

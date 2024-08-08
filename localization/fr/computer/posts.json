@@ -23,7 +23,7 @@
                     "text": "Je vais supprimer de suite ce post."
                 },
                 "complain": {
-                    "text": "Alison... c'est pour ça que tu voulais qu'on échange nos mots de passe, tu es la pire des filles que j'ai jamais connue."
+                    "text": "Alison... c'est pour ça que tu voulais qu'on échange nos mots de passe, tu es la pire des filles que j'ai jamais connue"
                 },
                 "default": {
                     "text": "Je n'ai rien à poster pour l'instant, j'ai mieux à faire."
@@ -34,16 +34,16 @@
                     "text": "En attendant vos appels"
                 },
                 "secondCommentMale": {
-                    "text": "nous pouvons nous rencontrer quand vous le souhaitez ;)"
+                    "text": "Nous pouvons nous rencontrer quand vous le souhaitez ;)"
                 },
                 "secondCommentFemale": {
-                    "text": "nous pouvons nous rencontrer quand vous le souhaitez ;)"
+                    "text": "Nous pouvons nous rencontrer quand vous le souhaitez ;)"
                 },
                 "thirdComment": {
                     "text": "Hahaha, regardez ce cul, il n'a pas faim"
                 },
                 "fourthComment": {
-                    "text": "cela va directement sur le tableau de la classe hahaha"
+                    "text": "Cela va directement sur le tableau de la classe hahaha"
                 },
                 "fifthComment": {
                     "text": "",
@@ -66,16 +66,16 @@
             },
             "oldComments": {
                 "root": {
-                    "text": "Je les aime beaucoup, est-ce que tu sais où ils te les ont achetées?"
+                    "text": "Je les aime beaucoup, où les as-tu achetés?"
                 },
                 "secondComment": {
-                    "text": "Pff, je viens d'en perdre une en classe, meuf."
+                    "text": "Pff, je viens d'en perdre une en classe, meuf"
                 },
                 "thirdComment": {
-                    "text": ":( J'espère que tu la retrouveras, cherche bien dans tous les endroits où tu es allée."
+                    "text": "J'espère que tu la retrouveras, cherche bien dans tous les endroits où tu es allée :("
                 },
                 "foundEarringComment": {
-                    "text": "{{name}} l'a trouvée et me l'a rendue. Merci beaucoup. :)"
+                    "text": "{{name}} l'a trouvée et me l'a rendue. Merci beaucoup :)"
                 },
                 "notFoundEarringComment": {
                     "text": "Elle était impossible à trouver, quelqu'un a pu la garder. Merci beaucoup à toutes les personnes qui m'ont aidées à la chercher"
@@ -93,10 +93,10 @@
             },
             "oldComments": {
                 "root": {
-                    "text": "Super match, mec. On se retrouve pour le prochain. Mon père a acheté une nouvelle télé écran géant et elle est géniale."
+                    "text": "Super match, mec. On se retrouve pour le prochain. Mon père a acheté une nouvelle télé écran géant et elle est géniale"
                 },
                 "secondComment": {
-                    "text": "Dites-le moi pour que je me joigne à vous. :)"
+                    "text": "Dites-le moi pour que je me joigne à vous :)"
                 }
             }
         }
@@ -120,7 +120,7 @@
                     "text": "Je vais signaler le message, voir s'ils le suppriment à cause de son contenu."
                 },
                 "insult": {
-                    "text": "Vous êtes tous des connards, allez vous faire foutre. Vous vous comportez comme des gamins de trois ans."
+                    "text": "Vous êtes tous des connards, allez vous faire foutre. Vous vous comportez comme des gamins de trois ans"
                 },
                 "insultReply": {
                     "text": "",
@@ -128,7 +128,7 @@
                     "text_female": "Je suis sûre que tu es celle qui s'est pissée dessus la nuit, hahaha"
                 },
                 "snitch": {
-                    "text": "J'en ai marre d'eux. Demain, j'en parlerai au professeur."
+                    "text": "J'en ai marre d'eux. Demain, j'en parlerai au professeur"
                 },
                 "default": {
                     "text": "Je n'ai rien à poster pour l'instant, j'ai mieux à faire."
@@ -147,13 +147,13 @@
                     "text": "R, c ce que font ses oreilles qd elles bougent LOL"
                 },
                 "fourthComment": {
-                    "text": "hahaha, Alex, c'est du VENT, pas de l'R"
+                    "text": "Alex, c'est du VENT, pas de l'R, hahaha"
                 },
                 "fifthComment": {
-                    "text": "ne vs compliquez pas la vie, nous pouvons l'appeler rejeté... de toute façon, personne ne va plus parler à celui qui est rejeté.."
+                    "text": "Ne vs compliquez pas la vie, nous pouvons l'appeler rejeté... de toute façon, personne ne va plus parler à celui qui est rejeté..."
                 },
                 "sixthComment": {
-                    "text": "rejeté n'est pas très original... Que diriez-vous de gremlin?"
+                    "text": "Rejeté n'est pas très original... Que diriez-vous de gremlin?"
                 }
             }
         }

@@ -40,14 +40,14 @@ export default class LoginMenu extends Phaser.Scene {
         let screen = this.add.image(CANVAS_WIDTH / 2, CANVAS_HEIGHT / 2, 'PCscreen');
         screen.setDisplaySize(CANVAS_WIDTH, CANVAS_HEIGHT);
 
-        // Botone atras
+        // Boton atras
         let backButton = this.createBackButton(102, 3 * CANVAS_HEIGHT / 4 + 15, 4, 1.18);
         let backTranslation = this.i18next.t("backButton", { ns: this.namespace });
         let backTextStyle = { ...this.gameManager.textConfig };
         backTextStyle.fontFamily = 'AUdimat-regular';
         backTextStyle.fontSize = '35px';
-        let backText = this.add.text(backButton.x + 80, backButton.y, backTranslation, backTextStyle);
-        backText.setOrigin(0.5, 0);
+        let backText = this.add.text(backButton.x + 45, backButton.y + 20, backTranslation, backTextStyle);
+        backText.setOrigin(0, 0.5);
 
         // Titulo princiapl
         let mainTranslation = this.i18next.t("mainText", { ns: this.namespace });

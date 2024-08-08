@@ -3,46 +3,46 @@
         "choices": [
             {
                 "text": "",
-                "text_male": "¿Habéis sido vosotros? ¿Habéis escondido mi móvil en el baño de chicas?",
-                "text_female": "¿Habéis sido vosotros? ¿Habéis escondido mi móvil en el baño de chicos?"
+                "text_male": "Etait-ce toi qui as caché mon portable dans les toilettes des filles?",
+                "text_female": "Etait-ce toi qui as caché mon portable dans les toilettes des garçons?"
             },
             {
-                "text": "¿Alguno de vosotros sabe dónde está mi móvil? No tiene gracia."
+                "text": "Est-ce que quelqu'un sait où est mon portable ? Ce n'est pas drôle."
             },
             {
-                "text": "Sé que habéis sido vosotros. No tiene gracia."
+                "text": "Je sais que c'était toi, ce n'est pas drôle."
             }
         ],
 
         "askFound": {
-            "text": "¿Y qué si hemos sido nosotros? ¿Vas a ir llorando a hablar con nuestro tutor, con tus padres...?"
+            "text": "Et si c'était nous, que vas-tu faire ? Vas-tu pleurer et le dire à notre professeur, à tes parents...?"
         },
         "askFound2": [
             {
-                "text": "Jajaja. Seguro que sí."
+                "text": "Hahaha, je suis sûre que oui."
             },
             {
-                "text": "Venga, piérdete. Vete a llorar a otro sitio."
+                "text": "Allez, pars et va pleurer ailleurs."
             }
         ],
 
         "askNotFound": [
             {
-                "text": "Quizá."
+                "text": "Peut-être"
             },
             {
-                "text": "Te diremos dónde está si vas con María y le pegas este cartel en la espalda."
+                "text": "Nous te le ferons savoir si tu vas coller cette affiche dans le dos de Marie."
             },
             {
-                "text": "(Te da un papel con celo donde se puede lee \"Soy masoca, si lees esto insúltame\")"
+                "text": "(Elle te donne un papier avec du ruban adhésif et la phrase : \"Je suis masochiste, insultez-moi si vous lisez ceci\".)."
             },
             {
-                "text": "Vuelve cuando lo hayas hecho. Si no, ni te molestes en volver."
+                "text": "Reviens quand tu l'auras fait... sinon, ne te donne pas la peine de revenir nous voir."
             }
         ],
 
         "askPrank": {
-            "text": "¿Ya has pegado el cartel a María sin que se dé cuenta?"
+            "text": "As-tu collé l'affiche dans le dos de Marie sans qu'elle ne s'en aperçoive encore ?"
         },
         "prankChoices": [
             {
@@ -54,22 +54,22 @@
         ],
 
         "hurry": {
-            "text": "¿A qué esperas? Venga, ve a pegar ese cartel a María."
+            "text": "Qu'attends-tu ? Vas-y, va coller cette affiche dans le dos de Marie."
         },
         "reveal": {
-            "text": "Jajajaja. Muy bien hecho."
+            "text": "Hahahaha, bien joué."
         },
         "reveal2": {
             "text": "",
-            "text_male": "Jajaja. Tu móvil está en el baño de chicas.",
-            "text_female": "Jajaja. Tu móvil está en el baño de chicos."
+            "text_male": "Hahaha, ton portable est dans les toilettes des filles.",
+            "text_female": "Hahaha, ton portable est dans les toilettes des garçons."
         },
 
         "laugh": {
-            "text": "Jajajaja."
+            "text": "Hahahaha."
         },
         "laugh2": {
-            "text": "Jajajaja."
+            "text": "Hahahaha."
         }
     }
 }

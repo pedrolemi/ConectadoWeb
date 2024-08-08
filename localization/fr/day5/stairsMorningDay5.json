@@ -2,16 +2,14 @@
     "jose": {
         "notTalked": [
             {
-                "text": "Te tengo que dar las gracias. Álex se metía conmigo por mi peso..."
+                "text": "Je voulais te remercier, Alex s'en prenait à moi à cause de mon poids..."
             },
             {
-                "text": "",
-                "text_male": "Hasta que tú llegaste. Me alegro mucho de que estés aquí, pequeño gremlin.",
-                "text_female": "Hasta que tú llegaste. Me alegro mucho de que estés aquí, pequeña gremlin."
+                "text": "Avant que tu arrives. Je suis vraiment content que tu sois là, petit gremlin."
             }
         ],
         "talked": {
-            "text": "Jajaja..."
+            "text": "Hahaha..."
         }
     }
 }

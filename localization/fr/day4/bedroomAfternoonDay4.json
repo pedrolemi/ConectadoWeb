@@ -1,20 +1,20 @@
 {
     "wardrobe1": {
         "root": {
-            "text": "No hay nada útil dentro."
+            "text": "Il n'y a rien d'utile ici."
         }
     },
 
     "wardrobe2": {
         "root": {
-            "text": "No necesito buscar nada de aquí dentro."
+            "text": "Je n'ai besoin de rien d'ici."
         }
     },
 
 
     "bed": {
         "root": {
-                "text": "¿Mmm, debería irme ya a dormir?"
+                "text": "Mmm, dois-je aller dormir maintenant ?"
             },
             "choices": [
                 {
@@ -26,20 +26,20 @@
             ],
         "noPhone": [
             {
-                "text": "Pero no tengo móvil para ponerme el despertador."
+                "text": "Mais je ne peux pas utiliser le portable pour mettre une alarme."
             },
             {
-                "text": "Mmmm, usaré mi móvil viejo, pero al estar sin SIM y no tener nada sólo me servirá como despertador."
+                "text": "Mmmm, je vais utiliser mon vieux portable. Bon, il n'a pas de carte SIM... mais il fonctionnera bien comme un réveil!"
             },
             {
-                "text": "Vale, despertador listo... Hora de dormir."
+                "text": "Très bien, réveil réglé... L'heure de dormir."
             }
         ]
     },
 
     "phone": {
         "root": {
-            "text": "He visto que has borrado tu publicacion con tu nº de telefono, pero no pasa nada, tengo pantallazo y puedo resubirlo jajaja"
+            "text": "J'ai vu que tu as supprimé ton post avec ton numéro de téléphone, mais ne t'inquiéte pas, j'ai fait une capture d'écran et je peux la remettre en ligne hahaha"
         }
     }
     

@@ -2,15 +2,15 @@
     "player_stairs": {
         "root": [
             {
-                "text": "Ya se ha ido todo el mundo."
+                "text": "Tout le monde est parti."
             },
             {
                 "text": "",
-                "text_male": "¿Debería fiarme de Álex e ir al baño para hablar con él?",
-                "text_female": "¿Debería fiarme de Álex e ir al baño para hablar con Ana?"
+                "text_male": "Dois-je faire confiance à Alex et aller aux toilettes pour lui parler?",
+                "text_female": "Dois-je faire confiance à Alex et aller aux toilettes pour parler à Anna?"
             },
             {
-                "text": "Si voy, ¿me dejarán en paz de una vez por todas?"
+                "text": "Si j'y vais, est-ce que ce sera terminé une bonne fois pour toutes?"
             }
         ]
     },
@@ -18,24 +18,24 @@
     
     "class": {
         "root": {
-            "text": "No tengo nada que hacer dentro de clase."
+            "text": "Je n'ai rien à faire en classe."
         }
     },
 
     "alex_stairs": {
         "root": [
             {
-                "text": "¿De verdad? No me digas que te ibas a ir sin pasar por el baño."
+                "text": "Vraiment ? Tu partais sans t'arrêter aux toilettes."
             },
             {
-                "text": "Piensa que es para arreglar todo. Vamos... voy contigo."
+                "text": "Penses-y comme étant une opportunité de tout arranger, allons-y... je viens avec toi."
             }
         ]
     },
 
     "alex_corridor": {
         "root": {
-            "text": "Venga, pasa al baño."
+            "text": "Rendez-vous dans les toilettes."
         }
     }
 }

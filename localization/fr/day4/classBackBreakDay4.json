@@ -2,13 +2,13 @@
     "noPhone": {
         "root": [
             {
-                "text": "No encuentro mi móvil."
+                "text": "Je ne trouve pas mon téléphone portable."
             },
             {
-                "text": "Lo había dejado encima de la mesa al empezar la clase."
+                "text": "Je l'avais laissé sur ma table quand le cours a commencé."
             },
             {
-                "text": "¿Alguien me lo ha quitado? Será mejor que pregunte."
+                "text": "Est-ce que quelqu'un l'a pris ? Je ferais mieux de demander autour de moi."
             }
         ]
     }

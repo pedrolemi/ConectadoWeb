@@ -1,92 +1,93 @@
 {
     "maria": {
         "friend": {
-            "text": "Buenos días {{name}}."
+            "text": "Bonjour {{name}}."
         },
         "hello": {
-            "text": "Hola, María."
+            "text": "Salut, Marie"
         },
         "friendChoices": [
             {
-                "text": "Ayer no viniste a clase. ¿Estás bien?"
+                "text": "Tu n'es pas venue hier, tu vas bien ?"
             },
             {
-                "text": "¿Me hablas?"
+                "text": "Tu me parles?"
             },
             {
-                "text": "Tengo prisa, ya ha sonado la campana. Hablamos luego."
+                "text": "",
+                "text_male": "Je suis pressé, la cloche a déjà sonné. On se parle plus tard.",
+                "text_female": "Je suis pressée, la cloche a déjà sonné. On se parle plus tard."
+
             }
         ],
 
         "askMissing": [
             {
-                "text": "Oui, estoy bien. Gracias por preguntar."
+                "text": "Oui, je vais bien, merci de demander."
             },
             {
-                "text": "Ayer me encontraba en casa con fiebre y me quedé descansado."
+                "text": "Hier, j'avais de la fièvre, alors je suis restée à la maison pour me reposer."
             },
             {
-                "text": "Hoy ya estoy como nueva."
+                "text": "Aujourd'hui, je suis comme neuve."
             }
         ],
 
         "askTalkFriends": [
             {
-                "text": "Supongo que lo dices por Álex."
+                "text":"Je suppose que tu parles d'Alex."
             },
             {
-                "text": "Ana hizo algo parecido el año pasado para putearme."
+                "text": "Anna a fait quelque chose de similaire l'année dernière pour m'embéter."
             },
             {
-                "text": "Deberías hablar con tus padres o nuestro tutor."
+                "text": "Tu devrais en parler à tes parents ou à un de nos professeurs."
             },
             {
-                "text": "Yo no lo hice cuando tuve la oportunidad, mis padres se enteraron cuando me obligaron a ir a un psicólogo."
+                "text": "Je ne l'ai pas fait quand j'en ai eu l'occasion, mes parents m'ont obligée à aller voir un psychologue quand ils l'ont découvert."
             },
             {
-                "text": "",
-                "text_male": "Si necesitas que te acompañe para hablar con el profe puedes decírmelo. Pero no te quedes callado",
-                "text_female": "Si necesitas que te acompañe para hablar con el profe puedes decírmelo. Pero no te quedes callada"
+                "text": "Si tu as besoin que je t'accompagne pour parler avec le professeur, dis-le moi. Mais ne te tais pas."
             }
         ],
         "askTalkFriends2": {
-            "text": "Gracias, nos vemos luego."
+            "text": "Merci, à plus tard."
         },
 
         "normal": {
-            "text": "Buenas, María."
+            "text": "Salut Marie"
         },
         "normal2": {
-            "text": "Hola, {{name}}. ¿Quieres algo?"
+            "text": "Salut {{name}}, est-ce que tu veux quelque chose?"
         },
         "normalChoices": [
             {
-                "text": "Nada, hasta luego."
+                "text": "Non, on ne voit plus tard."
             },
             {
-                "text": "¿Me hablas?"
+                "text": "C'est à moi que tu parles?"
             }
         ],
         "askTalkNormal": {
-            "text": "¿Por qué no lo iba a hacer?"
+            "text": "Pourquoi ne le ferais-je pas ?"
         },
         "askTalkNormal2": {
-            "text": "¿No has hablado con Álex?"
+            "text": "N'as-tu pas parlé à Alex?"
         },
         "askTalkNormal3": [
             {
-                "text": "Oui, lo de que nadie te dirija la palabra..."
+                "text": "Oui, à propos du traitement du silence..."
             },
             {
-                "text": "A mi ya me hicieron la vida imposible entre todos el año pasado. Aprendí la lección."
+                "text": "Ils m'ont rendu la vie impossible au cours de la dernière année, j'ai appris la leçon."
             },
             {
-                "text": "Lo mejor será que hables con tus padres o con tu tutor y no hagas caso a Álex ni a ninguno de sus perritos falderos."
+                "text": "Il vaut mieux que tu parles à tes parents ou à notre professeur et que tu n'écoutes pas Alex ou l'un de ses \"serviteurs\"."
             }
         ],
 
         "talked": {
-            "text": "Llegarás tarde a clase si no te vas ya."
+            "text": "Tu seras en retard si tu n'y vas pas maintenant."
         }
     }
 }

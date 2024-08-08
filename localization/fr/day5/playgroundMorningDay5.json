@@ -2,60 +2,58 @@
     "alison": {
         "passwordExchanged": [
             {
-                "text": "Te has ganado lo que ha pasado."
+                "text": "Tu mérites ce qui s'est passé."
             },
             {
-                "text": "¿Cómo se te ocurre darme tu contraseña?"
+                "text": "À quoi pensais-tu lorsque tu m'as donné ton mot de passe?"
             }
         ],
         "phoneStolen": {
-            "text": "Si hubieras confiado en mí, igual esto no habría pasado. Es tu culpa."
+            "text": "Tout cela ne serait pas arrivé si tu m'avais fait confiance, c'est ta faute."
         },
 
         "talked": {
-            "text": "Vete, no tenemos de que hablar."
+            "text": "Pars, nous n'avons rien à dire."
         }
     },
 
     "ana": {
         "passwordExchanged": [
             {
-                "text": "No me creo que le dieras tu contraseña a Alison."
+                "text": "Je n'arrive pas à croire que tu aies donné ton mot de passe à Alison."
             },
             {
-                "text": "¿De verdad te pensabas que iba a ser tu amiga? No me creo lo fácil que fué engañarte."
+                "text": "Tu pensais vraiment qu'elle allait devenir ton amie ? Je n'arrive pas à croire que ça ait été si facile."
             },
             {
-                "text": "¡¡¡Jajajaja!!! En serio, me parto contigo."
+                "text": "HAHAHAHA!!! Sérieusement, je craque pour toi."
             }
         ],
         "phoneFound": [
             {
-                "text": "¡¡¡Jajajaja!!! No me creo que no tuvieras patrón de desbloqueo en el móvil."
+                "text": "HAHAHAHA!!! Je n'arrive pas à croire que tu n'avais pas de modèle de verrouillage sur ton portable."
             },
             {
-                "text": "Pensaba que iba a ser más difícil..."
+                "text": "Je pensais que ce serait plus difficile..."
             },
             {
                 "text": "",
-                "text_male": "Que divertido va a ser el día. Ahora la mayoría piensa que eres de verdad un marica vicioso que le da a todo.",
-                "text_female": "Que divertido va a ser el día, ahora la mayoría piensa que eres de verdad una puta viciosa."
+                "text_male": "Ça va être une drôle de journée, maintenant tout le monde pense que tu es en fait un pédé vicieux qui aime sucer des bites.",
+                "text_female": "Ça va être une drôle de journée, maintenant tout le monde pense que tu es en fait une pute vicieuse."
             }
         ],
         "phoneNotFound": [
             {
-                "text": "Mira quién ha llegado. Y yo que pensaba que hoy no vendrías."
+                "text": "Regardez qui est là, moi qui pensais que tu ne viendrais pas aujourd'hui."
             },
             {
-                "text": "¿Aún sigues sin móvil? Jajaja. No era tan difícil encontrarlo si hubieras buscado bien."
+                "text": "Toujours sans téléphone ? Hahaha, ce n'était pas si difficile à trouver si tu l'avais bien cherché."
             },
             {
-                "text": "",
-                "text_male": "Hay que ser estúpido.",
-                "text_female": "Hay que ser estúpida."
+                "text": "Quel connard..."
             },
             {
-                "text": "¿De dónde has salido? Jajaja."
+                "text": "D'où viens-tu ? hahaha."
             }
         ],
         "bellRinging": {
@@ -63,7 +61,7 @@
         },
 
         "talked": {
-            "text": "Jajajaja. Margi."
+            "text": "Hahahaha, Rejeté."
         }
     }
 }

@@ -2,36 +2,39 @@
     "mom": {
         "notTalked": [
             {
-                "text": "Buenas tardes, cariño"
+                "text": "",
+                "text_male": "Bonjour, mon chéri.",
+                "text_female": "Bonjour, ma chérie."
+
             },
             {
-                "text": "¿Qué habéis hecho hoy?"
+                "text": "Qu'as-tu fait aujourd'hui ?"
             }
         ],
         "talked": {
-            "text": "¿Quieres hablar de algo más?"
+            "text": "Veux-tu parler d'autre chose ?"
         },
         "choices1": [
             {
-                "text": "Nada a destacar."
+                "text": "Rien à signaler."
             },
             {
-                "text": "María no ha venido."
+                "text": "Marie n'est pas venue."
             },
             {
-                "text": "(Hablar de otra cosa)"
+                "text": "(Parler d'autre chose.)"
             }
         ],
         "maria": {
-            "text": "A María hoy no la he visto."
+            "text": "Je n'ai pas vu Marie aujourd'hui."
         },
         
         "choices2": [
             {
-				"text": "La clase."
+				"text": "La classe"
 			},
 			{
-				"text": "(Contarle lo de la foto en los tablones)"
+				"text": "(Raconter l'histoire de la photo au tableau.)"
 			},
 			{
 				"text": "(Parler des autres camarades de classe)"
@@ -39,57 +42,59 @@
         ],
         "school": [
             {
-                "text": "Casi todos me han ignorado. Pocos hablaban conmigo."
+                "text": "Presque tout le monde m'a ignoré, ils m'ont à peine parlé."
             },
             {
-                "text": "Es como si todo el mundo me evitara o me hiciera el vacío."
+                "text": "C'est comme si tout le monde m'évitait ou faisait comme si je n'existais pas."
             }
         ],
         "board": [
             {
-                "text": "Se han dedicado a poner fotos mías en todos los tablones."
+                "text": "Ils ont décidé d'afficher des photos de moi sur chaque tableau du lycée."
             },
             {
-                "text": "No se qué he hecho mal para que se porten así conmigo."
+                "text": "",
+                "text_male": "Je ne sais pas ce que j'ai fait de mal pour être traité comme ça.",
+                "text_female": "Je ne sais pas ce que j'ai fait de mal pour être traitée comme ça."
             }
         ],
         "momBoard": [
             {
-				"text": "Luego hablaré con tu padre."
+				"text": "J'en parlerai à ton père plus tard."
 			},
 			{
-				"text": "Igual deberíamos ir a hablar con tu tutor a ver qué está pasando."
+				"text": "On devrait peut-être aller parler à ton professeur et voir ce qui se passe."
 			}
         ],
 
         "choices3": [
             {
-                "text": "He hablado con Guille."
+                "text": "J'ai parlé à Guillaume"
             },
             {
-                "text": "Me voy a la habitación. Tengo cosas que hacer."
+                "text": "Je vais dans ma chambre, j'ai des choses à faire."
             }
         ],
         "guille": [
             {
-                "text": "Guille me ha contado que Álex me odia."
+                "text": "Guillaume m'a dit qu'Alex me détestait."
             },
             {
-                "text": "Álex me está haciendo la vida imposible."
+                "text": "Alex me rend la vie impossible."
             },
             {
-                "text": "Y tiene amenazada a media clase para que me ignoren."
+                "text": "Et il menace la moitié de la classe pour qu'ils m'ignorent."
             }
         ],
         "aboutBoard": [
             {
-                "text": "Y me ha contado que Ana es la primera en seguirle el juego a Álex."
+                "text": "Et il m'a dit qu'Anna est la première à suivre son jeu."
             },
             {
-                "text": "Está mañana ha llegado la primera..."
+                "text": "Ce matin elle est arrivée la première..."
             },
             {
-                "text": "Y se ha dedicado a poner fotos mías en todos los tablones."
+                "text": "Et elle a décidé de coller des photos de moi sur tous les tableaux du lycée."
             }
         ]
 

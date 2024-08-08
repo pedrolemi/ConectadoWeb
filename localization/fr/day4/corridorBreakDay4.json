@@ -1,42 +1,44 @@
 {
     "maria": {
         "normal": {
-            "text": "Me alegro de que hoy hayas venido."
+            "text": "",
+            "text_male": "Je suis content que tu sois venue aujourd'hui.",
+            "text_female": "Je suis contente que tu sois venue aujourd'hui."
         },
         
         "notFound": {
-            "text": "¿Has visto mi móvil?"
+            "text": "As-tu vu mon téléphone portable ?"
         },
         "notFound2": [
             {
-                "text": "No, ni idea. Revisa bien la clase por si acaso."
+                "text": "Non, aucune idée, vérifie à nouveau dans la salle de classe au cas où."
             },
             {
-                "text": "Si veo algo, te aviso."
+                "text": "Si je vois quelque chose, je te le ferai savoir."
             }
         ],
 
         "found": {
-            "text": "¿Has visto si ha entrado alguien a los baños recientemente?"
+            "text": "As-tu vu quelqu'un entrer dans les toilettes récemment ?"
         },
         "found2": {
-            "text": "No me he fijado, lo siento."
+            "text": "Je n'avais pas remarqué, désolée."
         },
 
         "prankChoices": [
             {
-                "text": "Buenas, María."
+                "text": "Salut Marie."
             },
             {
-                "text": "(Pegar el cartel con cuidado e irte sin decir nada)"
+                "text": "(Coller l'affiche avec soin et partir sans rien dire)"
             }
         ],
         "pranked": [
             {
-                "text": "(Bien. Parece que no se ha dado cuenta)"
+                "text":  "(Bien, il semble qu'elle n'ait rien remarqué)"
             },
             {
-                "text": "(Espero que ahora me digan dónde está mi móvil)"
+                "text": "(j'espère qu'ils me diront maintenant où se trouve mon téléphone)"
             }
         ]
     },
@@ -44,15 +46,15 @@
     "bathroom": {
         "root": {
             "text": "",
-            "text_male": "No puedo entrar ahí, es el baño de chicas.",
-            "text_female": "No puedo entrar ahí, es el baño de chicos."
+            "text_male": "Je ne peux pas y aller, ce sont les toilettes des filles.",
+            "text_female": "Je ne peux pas y aller, ce sont les toilettes des garçons."
         },
         "choices": [
             {
-                "text": "(Entrar de todas formas)"
+                "text": "(Rentrer quand même)"
             },
             {
-                "text": "(Marcharse)"
+                "text": "(Partir)"
             }
         ]
     }

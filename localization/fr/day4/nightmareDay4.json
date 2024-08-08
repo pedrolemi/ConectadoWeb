@@ -3,35 +3,38 @@
         "introduction": {
             "root": [
                 {
-                    "text": "¿No te gustan las nuevas fotos que hemos publicado?"
+                    "text": "N'aimes-tu pas les nouvelles photos que nous venons de publier?"
                 },
                 {
-                    "text": "Puedes intentar borrarlas..."
+                    "text": "Tu peux essayer de les supprimer..."
                 },
                 {
-                    "text": "Vas a tener que hacer algo más aparte de borrarlas o denunciarlas."
+                    "text": "Tu vas devoir faire plus que simplement les supprimer ou les signaler."
                 },
                 {
-                    "text": "Venga... prueba a ver, pero todos tenemos una copia ya."
+                    "text": "Vas-y, essaye... nous en avons tous déjà une copie."
                 }
             ]
         },
         "outro": {
             "root": [
                 {
-                    "text": "No has conseguido nada."
+                    "text": "",
+                    "text_male": "Tu n'es arrivé à rien.",
+                    "text_female": "Tu n'es arrivée à rien."
+
                 },
                 {
-                    "text": "Jajajaja."
+                    "text": "Hahaha"
                 },
                 {
-                    "text": "Las fotos siguen ahí."
+                    "text": "Les photos sont toujours là."
                 },
                 {
-                    "text": "Una vez en internet, cualquiera puede hacer una copia."
+                    "text": "Une fois en ligne, n'importe qui peut en faire une copie."
                 }
             ]
         }
     },
-    "imageText": "Denunciar foto"
+    "imageText": "Signaler photo"
 }

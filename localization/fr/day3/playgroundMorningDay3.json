@@ -1,17 +1,17 @@
 {
     "group": {
         "notTalked": {
-            "text": "Buenos días. ¿Qué hacéis todo aquí?"
+            "text": "Bonjour, que fais-tu ici?"
         },
         "explain": {
-            "text": "Sólo estábamos hablando."
+            "text": "On est juste en train de parler."
         },
         "shutUp": [
             {
-                "text": "Cállate Guille. ¿En qué hemos quedado?"
+                "text": "Tais-toi Guillaume, c'était quoi le marché?"
             },
             {
-                "text": "¿Acaso quieres que se enteren tus padres?"
+                "text": "Ou est-ce que tu veux que tes parents le sachent?"
             }
         ],
         "silence": {
@@ -19,38 +19,38 @@
         },
         "choices": [
             {
-                "text": "¿Qué está pasando, Guille?"
+                "text": "Que se passe-t-il, Guillaume ?"
             },
             {
-                "text": "Eso ha sonado a amenaza."
+                "text": "Cela ressemblait à une menace."
             }
         ],
         "worry": {
-            "text": "¿Estás bien, Guille?"
+            "text": "Est-ce que ça va, Guillaume ?"
         },
         "threat": {
-            "text": "¿También la tienes tomada con Guille, Álex?"
+            "text": "Tu en veux aussi à Guillaume, Alex ?"
         },
         
         "silenceQuestion": {
             "text": "..."
         },
         "askSilence": {
-            "text": "¿Nadie va a decir nada?"
+            "text": "Est-ce que quelqu'un va dire quelque chose ?"
         },
 
         "bellRinging": {
             "text": "<<La cloche sonne>>"
         },
         "late": {
-            "text": "Vale. No digáis nada. Yo me voy a clase, que ya es suficientemente tarde."
+            "text": "D'accord, ne dites rien. Je vais en classe, il est déjà assez tard."
         },
         "talked": [
             {
-                "text": "En serio, ¿Me estáis haciendo el vacío?"
+                "text": "Tu m'ignores, sérieusement?"
             },
             {
-                "text": "¿Tú también, Guille?"
+                "text": "Toi aussi, Guillaume?"
             }
         ],
         "keepSilence": {
@@ -58,10 +58,10 @@
         },
         "talkedChoices": [
             {
-                "text": "Esperar a ver si te hablan."
+                "text": "Attendre de voir s'ils parlent."
             },
             {
-                "text": "Marcharte."
+                "text": "Partir."
             }
         ]
     }

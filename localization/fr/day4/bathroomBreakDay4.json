@@ -2,15 +2,15 @@
     "phone": {
         "root": [
             {
-                "text": "Es mi móvil."
+                "text": "C'est mon téléphone."
             },
             {
                 "text": "",
-                "text_male": "¿Quién me lo ha quitado y lo ha dejado en el baño de chicas?",
-                "text_female": "¿Quién me lo ha quitado y lo ha dejado en el baño de chicos?"
+                "text_male": "Qui l'a pris et l'a laissé dans les toilettes des filles?",
+                "text_female": "Qui l'a pris et l'a laissé dans les toilettes des garçons?"
             },
             {
-                "text": "Mierda, encima no enciende. Espero que sea cosa de la batería. En cuanto llegue a casa se la cambio."
+                "text": "Merde, il ne s'allume pas, j'espère que c'est un problème de batterie. Dès que je rentre à la maison, je la change."
             }
         ]
     }

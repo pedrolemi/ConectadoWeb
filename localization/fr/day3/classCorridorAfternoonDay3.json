@@ -2,17 +2,17 @@
     "player_stairs": {
         "root": [
             {
-                "text": "Antes de irme a casa debería pasar por el baño."
+                "text": "Je devrais aller aux toilettes avant de rentrer chez moi."
             },
             {
-                "text": "Igual la nota era importante."
+                "text": "Peut-être que le message était importante."
             }
         ]
     },
 
     "class": {
         "root": {
-            "text": "No tengo nada que hacer dentro de clase."
+            "text": "Je n'ai rien à faire en classe."
         }
     }
 }

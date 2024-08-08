@@ -1,26 +1,26 @@
 {
     "bag": {
         "root": {
-            "text": "Habrá que irse... "
+            "text": "Je dois y aller... "
         }
     },
 
     "wardrobe1": {
         "root": {
-            "text": "No hay nada útil dentro."
+            "text": "Il n'y a rien d'utile."
         }
     },
 
     "wardrobe2": {
         "root": {
-            "text": "Igual puedo ordenar ahora en vez de ir a clase... Mamá se enfadaría."
+            "text": "Peut-être que je pourrais organiser ça maintenant au lieu d'aller au lycée... Mais maman se mettrait en colère."
         }
     },
 
     
     "bed": {
         "root": {
-            "text": "Otro día más, tengo que irme, espero que se pase rápido."
+            "text": "Une nouvelle journée, je dois y aller, j'espère que ça finira vite."
         }
     }
     

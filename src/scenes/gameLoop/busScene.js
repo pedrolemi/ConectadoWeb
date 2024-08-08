@@ -35,6 +35,8 @@ export default class BusScene extends BaseScene {
         
         // Inicia un temporizador y cuando acabe, pasara a la proxima escena
         setTimeout(() => {
+            this.phoneManager.activate(true);
+
             // La proxima escena sera el salon o el patio, y ambas escenas comienzan 
             // desde la izquierda tanto al llegar a casa como al llegar al colegio
             let nextParams = {

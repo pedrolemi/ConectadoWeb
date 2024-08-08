@@ -1,109 +1,110 @@
 {
     "badEnding": [
         {
-            "text": "Al final todo ha acabado igual. No se puede decir que no lo haya intentado."
+            "text": "Au final, tout s'est terminé de la même façon, je ne peux même pas dire que tu aies essayé quoi que ce soit."
         },
         {
-            "text": "Supongo que ya es tarde. Has desaprovechado la oportunidad que te he dado."
+            "text": "Je suppose que c'est trop tard maintenant, tu as gâché l'occasion que je t'ai donnée."
         },
         {
-            "text": "Álex y Ana seguirán haciendo la vida imposible a otros compañeros. Tú no has sido su primera víctima, ni la última."
+            "text": "Alex et Anna continueront à rendre la vie impossible aux autres camarades de classe. Tu n'as pas été leur première victime, et tu ne seras pas la dernière."
         },
         {
-            "text": "¿Tan difícil es pedir ayuda cuando uno la necesita? ¿Olvidarse de nuestro ego? Uno no siempre tiene la culpa de lo que le pasa, ni se lo merece."
+            "text": "Est-il si difficile de demander de l'aide quand on en a besoin? Oublie ton ego. Une personne n'est pas à blâmer pour ce qui lui arrive et on ne le mérite pas."
         },
         {
-            "text": "¿Por qué ese miedo a compartir lo que te sucede, lo que uno siente?"
+            "text": "Pourquoi cette peur de partager ce qui t'arrive, ce que tu ressens?"
         },
         {
-            "text": "¿Por qué dejamos que las personas sufran? ¿Por qué pensamos que es mejor permanecer callado? ¿Que el tiempo todo lo cura?"
+            "text": "Pourquoi est-ce que tu souffres? Pourquoi est-ce que tu ne veux rien dire? Penses-tu que le temps va tout guérir?"
         },
         {
-            "text": "Es fácil reírse de los demás, ¿pero qué pasa cuando el afectado eres tú?"
+            "text": "C'est facile de rire des autres, mais que se passe-il quand cela t'affecte?"
         },
         {
-            "text": "¿Por qué es mejor sufrir o ver a los demás pasarlo mal que pedir ayuda? ¿Acaso pedir ayuda es chivarse? ¿Es chivarse evitar que alguien lo pase mal?"
+            "text": "Pourquoi préfères-tu souffrir ou voir souffrir quelqu'un plutôt que de demander de l'aide ? Ou cela te permettra au contraire de calmer toutes tes souffrances? Est-ce que demander de l'aide c'est peut-être dénoncer ? Tu ne crois pas que si tu dénonces Alex, cela t'évitera de passer d'autres moments difficiles?"
         }
     ],
     "normalEnding": [
         {
-            "text": "Parece que al final no he conseguido mi propósito, pero al menos han mejorado un poco las cosas."
+            "text": "Il semble qu'en fin de compte, je n'ai pas atteint mon but, mais au moins les choses se sont un peu améliorées."
         },
         {
-            "text": "Álex ahora estará vigilado y al menos os dejará a todos un poco más en paz."
+            "text": "Alexandre sera maintenant surveillé et vous laissera au moins un petit peu plus tranquilles."
         },
         {
-            "text": "Hay que pedir ayuda cuando uno la necesita, olvidarse de nuestro ego. Uno no siempre tiene la culpa de lo que le pasa, ni se lo merece."
+            "text": "Tu dois demander de l'aide quand tu en a besoin. Oublie ton ego. Une personne n'est pas à blâmer pour ce qui lui arrive et on ne le mérite pas."
         },
         {
-            "text": "El tiempo no va a solucionar las cosas si sufres. No hay que dejarlo pasar."
+            "text": "Le temps ne va pas arranger les choses si tu souffres, tu ne dois pas le laisser s'écouler."
         },
         {
-            "text": "Todos necesitamos ayuda alguna vez, y espero que al menos ahora seas consciente de que, al igual que hay personas que te ayudan, hay otras que necesitan que tú les ayudes."
+            "text": "Nous avons tous besoin d'aide un jour ou l'autre et j'espère qu'au moins maintenant tu es conscient que tout comme il y a des gens qui t'aident, d'autres ont besoin de toi pour les aider."
         },
         {
-            "text": "¿Acaso es mejor sufrir o ver a los demás pasarlo mal que pedir ayuda? ¿Acaso pedir ayuda es chivarse? ¿Es chivarse evitar que alguien lo pase mal?"
+            "text": "Pourquoi est-ce que tu souffres? Pourquoi est-ce que tu ne veux rien dire? Penses-tu que le temps va tout guérir?"
         },
         {
-            "text": "Espero que con lo que has vivido pierdas ese miedo a contar las cosas malas que os pasan a ti y a tus compañeros."
+            "text": "J'espère qu'après avoir surmonté ce que tu as vécu, tu n'auras plus peur de dire ce qui t'arrive de mal, à toi et à tes camarades de classe."
         }
     ],
     "goodEnding": [
         {
-            "text": "Bien, hemos conseguido cambiar las cosas."
+            "text": "Bien, nous avons réussi à changer les choses."
         },
         {
-            "text": "Aún no lo sabes, pero hemos conseguido que Álex os deje en paz a sus compañeros y a ti."
+            "text": "Tu ne le sais pas encore, mais nous avons réussi à ce qu'Alex arrête de vous intimider, toi et tes camarades de classe."
         },
         {
-            "text": "Si nadie le hubiera parado los pies, tú no habrías sido la última persona en sufrir acoso."
-        },
-        {
-            "text": "Es bueno contar las cosas, pedir ayuda. Nadie se merece que lo marginen, humillen o se burlen de él, sea cual sea el motivo."
+            "text": "Si personne ne l'avait arrêté, tu n'aurais pas été la dernière personne à subir son intimidation."
         },
         {
             "text": "",
-            "text_male": "Habrá gente que diga que te chivaste al profesor, a los compañeros o a tus padres. Yo opino que has sido un héroe.",
-            "text_female": "Habrá gente que diga que te chivaste al profesor, a los compañeros o a tus padres. Yo opino que has sido una heroína."
-
+            "text_male": "Il est bon de prendre la parole et de demander de l'aide. Personne ne mérite d'être marginalisé, humilié ou bafoué, quelle que soit la raison.",
+            "text_female": "Il est bon de prendre la parole et de demander de l'aide. Personne ne mérite d'être marginalisée, humiliée ou bafouée, quelle que soit la raison."
         },
         {
             "text": "",
-            "text_male": "Espero que nunca más te quedes callado si alguien necesita ayuda o sufre. Que le des tu apoyo en vez de seguir al matón de turno.",
-            "text_female": "Espero que nunca más te quedes callada si alguien necesita ayuda o sufre. Que le des tu apoyo en vez de seguir al matón de turno."
+            "text_male": "Il y aura des gens qui diront que tu l'as balancé à ton professeur, à tes camarades de classe ou à tes parents. Je pense que tu as été un héros.",
+            "text_female": "Il y aura des gens qui diront que tu l'as balancé à ton professeur, à tes camarades de classe ou à tes parents. Je pense que tu as été une héroïne."
         },
         {
-            "text": "Es fácil no hacer nada, ¿pero has pensado que tu puedes ser su siguiente víctima como ha pasado ahora...?"
+            "text": "J'espère que tu ne te tairas plus jamais si quelqu'un a besoin d'aide ou souffre. Montre-lui ton soutien au lieu de suivre le tyran."
+        },
+        {
+            "text": "C'est facile de ne rien faire, mais as-tu pensé que tu pouvais être sa prochaine victime comme cela vient de se dérouler."
         }
     ],
     "playerQuestion": [
         {
-            "text": "¿Quién eres?"
+            "text": "Qui es-tu?"
         },
         {
-            "text": "Deja de decir estupideces y desaparece."
+            "text": "Arrête de dire des bêtises et disparais."
         }
     ],
     "curiousAnswer": [
         {
-            "text": "Me temo que eso no puedo decírtelo."
+            "text": "J'ai bien peur que je ne puisse pas te le dire."
         },
         {
-            "text": "Piensa en mí como alguien que está CONECTADO a ti por aquello que tenemos en común."
+            "text": "",
+            "text_male": "Considère-moi comme quelqu'un qui t'es lié par toutes les choses que nous avons en commun.",
+            "text_female": "Considère-moi comme quelqu'un qui t'es liée par toutes les choses que nous avons en commun."
         },
         {
-            "text": "Quizá una voz de la conciencia..."
+            "text": "Peut-être... une voix de ta conscience."
         },
         {
-            "text": "Pero poco importa quien yo sea. Lo importante es que lo que has vivido te ha hecho reflexionar y ser mejor persona."
+            "text": "Mais peu importe qui je suis. Ce qui compte, c'est que ce que tu as vécu t'as permis de réfléchir et devenir une meilleure personne."
         }
     ],
     "unpoliteAnswer": [
         {
-            "text": "Siento que mi presencia no te resulte cómoda."
+            "text": "Je suis désolée que ma présence ne te mette pas à l'aise."
         },
         {
-            "text": "Y que quizá esto no haya servido para nada..."
+            "text": "Et que cela n'a peut-être servi à rien..."
         }
     ]
 }

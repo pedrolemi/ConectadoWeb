@@ -1,13 +1,13 @@
 {
     "wardrobe1": {
         "root": {
-            "text": "No hay nada útil dentro."
+            "text": "Il n'y a rien d'utile ici."
         }
     },
 
     "wardrobe2": {
         "root": {
-            "text": "En verdad, no está tan mal organizado."
+            "text": "En fait, ce n'est pas si mal organisé."
         }
     }
 }

@@ -1,29 +1,29 @@
 {
     "alexAna": {
         "root": {
-            "text": "(Te han visto, pero pasan de ti, Álex y ana siguen hablando entre ellos)"
+            "text": "(Ils vous ont vu mais vous ignorent toujours, Alex et Anna se parlent)"
         },
         "suggestion": {
-            "text": "Creo que cabezabuque y gremlin son los más originales."
+            "text": "Je pense que \"tête de lit\" et Gremlin sont les plus originaux."
         },
         "opinion": [
             {
-				"text": "El de margi me parecía bien."
+				"text": "J'étais à fond sur Rejeté."
 			},
 			{
-				"text": "Aunque es verdad que {{name}} cabezabuque suena my bien. Jajaja."
+				"text": "Bien qu'il soit vrai {{name}} \"tête de lit\" ça sonne vraiment bien hahaha."
 			}
         ],
         "jose": {
-            "text": "Jajaja. A ver que opina Jose."
+            "text": "Hahaha, voyons ce que Joseph en pense."
         },
         "goOn": {
-            "text": "No os cortéis. Seguid ignorándome y pensando en el mote que me vais a poner."
+            "text": "Ne soyez pas timide, continuez à m'ignorer et à réfléchir à la façon de me nommer."
         }
     },
     "board": {
         "root": {
-            "text": "Parece que alguien ha arrancado ya la foto de ayer."
+            "text": "On dirait que quelqu'un a retiré la photo d'hier."
         }
     }
 }

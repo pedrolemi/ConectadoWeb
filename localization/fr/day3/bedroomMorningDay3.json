@@ -1,26 +1,26 @@
 {
     "bag": {
         "root": {
-            "text": "Cogeré todo para marcharme."
+            "text": "Je vais prendre mon sac et partir."
         }
     },
 
     "wardrobe1": {
         "root": {
-            "text": "Por ahora no necesito nada que pueda estar ahí dentro."
+            "text": "Je n'ai besoin de rien pour le moment."
         }
     },
 
     "wardrobe2": {
         "root": {
-            "text": "No tengo ganas de ordenar ahora."
+            "text": "Maintenant, je ne suis pas d'humeur à organiser."
         }
     },
 
     
     "bed": {
         "root": {
-            "text": "He de irme."
+            "text": "Je dois y aller."
         }
     }
     

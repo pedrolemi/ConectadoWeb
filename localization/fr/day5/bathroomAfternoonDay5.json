@@ -2,29 +2,29 @@
     "enter": {
         "root": {
             "text": "",
-            "text_male": "Mmm... ¿Pasa algo, Álex? ¿Por qué no entras?",
-            "text_female": "¿Ana? ¿Estás aquí?"
+            "text_male": "Mmm, qu'est-ce qui se passe Alex ? Pourquoi ne rentres-tu pas ?",
+            "text_female": "Anna, es-tu là ?"
         }
     },
 
     "door_enter": {
         "root": [
             {
-                "text": "¿Qué está pasando? La puerta no se abre."
+                "text": "Que se passe-t-il ? La porte ne s'ouvre pas."
             },
             {
-                "text": "¿Me han encerrado en el baño? ¡¡¡Ana!!! ¡¡Alex!! ¡¡Alguien!!"
+                "text": "M'ont-ils enfermé dans les toilettes ? ANNA!!! ALEX!!! N'IMPORTE QUI !!"
             },
             {
-                "text": "¿Qué hago ahora? Tengo que conseguir salir de aquí."
+                "text": "Que dois-je faire maintenant ? Je dois partir d'ici."
             }
         ],
         "getOut": [
             {
-                "text": "La luz. ¿En serio?"
+                "text": "Pourquoi est-ce qu'il n'y a plus de lumière? Mais qu'est-ce qui se passe?"
             },
             {
-                "text": "Tengo que salir de aquí."
+                "text": "Je dois partir d'ici."
             }
         ]
     },
@@ -32,251 +32,240 @@
     "door_locked": {
         "root":  [
             {
-                "text": "Este es el picaporte de la puerta, pero no se abre."
+                "text": "C'est le loquet, mais il ne s'ouvre pas."
             },
             {
-                "text": "¡¡¡Ana!!! ¡¡Alex!! ¡¡Alguien!!"
+                "text": "ANNA!!! ALEX!!! N'IMPORTE QUI !!"
             }
         ]
     },
 
     "sink": {
        "root": {
-            "text": "¡¡Agh!! Me acabo de dar con los lavabos.¡¡Mierda!!"
+            "text": "Agh !! Je viens de me prendre un coup contre le lavabo. PUTAIN !"
         } 
     },
     
     "floor": {
         "root": [
             {
-                "text": "Está mojado... Pero esto es el suelo"
+                "text": "C'est humide... mais c'est le sol."
             },
             {
-                "text": "¡¡Puaj!! Por favor, que no sea pis."
+                "text": "Agh !! s'il te plaît, ne te fais pas pipi dessus..."
             }
         ]
     },
 
     "lightsOn": {
         "root": {
-            "text": "¡¡La luz ha vuelto!! Y se oye algo en el pasillo. Debería poder salir ya."
+            "text": "Ouf la lumière est revenue ! J'entends du bruit dans le couloir, je devrais déjà pouvoir sortir."
         },
         "teacher": {
             "text": "",
-            "text_male": "¿Qué hacías aquí encerrado?",
-            "text_female": "¿Qué hacías aquí encerrada?"
+            "text_male": "Que fais-tu ici, enfermé ?",
+            "text_female": "Que fais-tu ici, enfermée ?"
         },
 
         "meetingFS": [
             {
-                "text": "Hoy he tenido reunión con tus padres y me han contado todo lo que les has contado a ellos."
+                "text": "Aujourd'hui, j'ai eu une réunion avec tes parents et ils m'ont tout dit."
             },
             {
-                "text": "Podrías habérmelo dicho a mi directamente."
+                "text": "Tu aurais pu me le dire directement."
             },
             {
-                "text": "",
-                "text_male": "Supongo que el que estuvieras encerrado dentro del baño ha sido cosa de Álex.",
-                "text_female": "Supongo que el que estuvieras encerrada dentro del baño ha sido cosa de Álex."
+                "text": "Je suppose que c'est Alex qui t'a enfermé dans les toilettes, n'est-ce pas ?"
             },
             {
-                "text": "Por ahora se va a expulsar a Álex 3 días. Si sigue dándote problemas cuando vuelva, debes decírmelo."
+                "text": "Il va être expulsé pendant 3 jours, s'il continue à te déranger à son retour, tu dois me le dire."
             },
             {
-                "text": "Si sigue igual, podríamos expulsarle del colegio e incluso llamar a la policía y tomar represalias legales."
+                "text": "S'il continue comme ça, nous pourrions le faire renvoyer du lycée pour de bon, ou même appeler la police et engager des poursuites contre lui."
             },
             {
-                "text": "Vete a casa y descansa."
+                "text": "Rentre chez toi et repose-toi."
             }
         ],
 
         "noMeetingFS": [
             {
-                "text": "(Chivarse de todo lo que te ha hecho Álex)"
+                "text": "(Raconter tout ce qu'Alex t'as fait)"
             },
             {
-                "text": "No sé qué ha pasado."
+                "text": "Je ne sais pas ce qui s'est passé."
             }
         ],
         "snitchNoMeetingFS": [
             {
-                "text": "¿Cómo no me has contado todo esto antes?"
+                "text": "Pourquoi ne m'as-tu pas dit tout cela avant?"
             },
             {
-                "text": "Voy a llamar a tus padres para hablar con ellos."
+                "text": "Je vais appeler tes parents pour en parler."
             },
             {
-                "text": "Y veremos que podemos hacer con Álex."
+                "text": "Et nous verrons ce que nous pouvons faire avec Alex."
             },
             {
-                "text": "Intentaré que le expulsen 3 días."
+                "text": "Je vais essayer de le renvoyer pendant 3 jours."
             },
             {
-                "text": "Y si pasa algo más no dudes en hablar conmigo o con la orientadora."
+                "text": "Et s'il arrive quelque chose, n'hésite pas à parler avec moi ou avec le conseiller scolaire."
             },
             {
-                "text": "Vete a casa y descansa."
+                "text": "Rentre chez toi et repose-toi."
             }
         ],
         "noSnitchNoMeetingFS": [
             {
-                "text": "",
-                "text_male": "¿Estás seguro de que no pasa nada?",
-                "text_female": "¿Estás segura de que no pasa nada?"
+                "text": "Es-tu sûr que tout va bien ?"
             },
             {
-                "text": "Bueno, vete a casa. Pero recuerda una cosa..."
+                "text": "Eh bien, rentre chez toi. Mais souviens-toi de ceci..."
             },
             {
-                "text": "Si alguien se mete contigo, habla conmigo o con la orientadora."
+                "text": "Si certains se moquent de toi, fais-le nous savoir, à moi ou au conseiller scolaire."
             },
             {
-                "text": "Busca ayuda. Las cosas no van a mejorar por sí solas, sólo pueden ir a peor."
+                "text": "Cherche de l'aide, les choses ne vont pas changer d'elles-mêmes, elles peuvent juste empirer."
             }
         ],
         
 
         "meetingNoFS": [
             {
-                "text": "(Chivarse de todo lo que te ha hecho Álex)"
+                "text": "(Raconter tout ce qu'Alex t'as fait)"
             },
             {
-                "text": "No sé qué ha pasado."
+                "text": "Je ne sais pas ce qui s'est passé."
             }
         ],
         "snitchMeetingNoFS": [
             {
-                "text": "¿Cómo no me lo contaste antes?"
+                "text": "Pourquoi ne pas me le dire plus tôt ?"
             },
             {
-                "text": "Además hoy he tenido reunión con tus padres y también hemos hablado de esto."
+                "text": "En outre, aujourd'hui, j'ai eu une réunion avec tes parents et nous en avons parlé."
             },
             {
-                "text": "Con todo lo que me has dicho... Hablaré con la directora para expulsar a Álex 3 días."
+                "text": "Avec tout ce que tu m'as dit... Je vais parler au directeur pour renvoyer Alex pendant 3 jours."
             },
             {
-                "text": "Si a la vuelta sigue acosándote ya sea en persona o en las redes dímelo."
+                "text": "S'il continue à te harceler, que ce soit en personne ou par le biais des médias sociaux, fais-le moi savoir."
             },
             {
-                "text": "Si sigue igual podríamos expulsarle del colegio e incluso llamar a la policía y tomar represalias legales."
+                "text": "S'il continue comme ça, nous pourrions le renvoyer de l'école définitivement, ou même appeler la police et engager des poursuites contre lui."
             },
             {
-                "text": "Vete a casa y descansa."
+                "text": "Rentre chez toi et repose-toi."
             }
         ],
         "noSnitchMeetingNoFSMaria": [
             {
-                "text": "",
-                "text_male": "¿Estás seguro?",
-                "text_female": "¿Estás segura?"
+                "text": "En es-tu sûr?"
             },
             {
-                "text": "He tenido reunión con tus padres y estás teniendo problemas con Álex."
+                "text": "J'ai eu une réunion avec tes parents et il semble que tu aies eu des problèmes avec Alex."
             },
             {
-                "text": "Además, María vino a hablar conmigo y la orientadora. Por lo que nos dijo, Álex se está metiendo contigo."
+                "text": "De plus, Marie et le conseiller scolaire sont venus me dire qu'Alex s'en prend à toi."
             },
             {
-                "text": "",
-                "text_male": "No tienes nada que encubrir y no eres un chivato por pedir ayuda. El comportamiento de Álex merece un castigo.",
-                "text_female": "No tienes nada que encubrir y no eres una chivata por pedir ayuda. El comportamiento de Álex merece un castigo."
+                "text": "Tu n'as pas besoin de cacher quoi que ce soit et tu n'es pas une balance quand tu demandes de l'aide. Le comportement d'Alex est inadmissible et nécessite vraiment une punition!"
             },
             {
-                "text": "Hemos decidido expulsar a Álex 3 días."
+                "text": "Nous avons décidé de renvoyer Alex pour 3 jours."
             },
             {
-                "text": "Si sigue igual podríamos expulsarle del colegio e incluso llamar a la policía y tomar represalias legales."
+                "text": "S'il continue comme ça, nous pourrions le renvoyer de l'école définitivement, ou même appeler la police et engager des poursuites contre lui."
             },
             {
-                "text": "Vete a casa y descansa."
+                "text": "Rentre chez toi et repose-toi."
             }
         ],
         "noSnitchMeetingNoFSNoMaria": [
             {
-                "text": "Hoy he tenido reunión con tus padres. Están preocupados."
+                "text": "Aujourd'hui, j'ai eu une réunion avec tes parents, ils sont inquiets."
             },
             {
-                "text": "Si estás teniendo problemas con alguno de tus compañeros deberías hablar conmigo o con la orientadora."
+                "text": "Mais n'oublie pas que si tu as des problèmes avec quelqu'un, c'est très important d'en parler."
             },
             {
-                "text": "Si evitas que te ayudemos, las cosas pueden ir a peor."
+                "text": "Sinon ce sera de pire en pire."
             },
             {
-                "text": "Y en cualquier caso, no te mereces que se burlen de ti y ridiculicen."
+                "text": "En tout cas, tu ne mérites pas qu'on se moque de toi et qu'on te ridiculise."
             },
             {
-                "text": "Si es lo que está pasando pídenos ayuda o las cosas seguirán igual."
+                "text": "Si c'est ce qui se passe, demande de l'aide ou les choses resteront les mêmes."
             }
         ],
-
         "noMeetingNoFS": [
             {
-                "text": "(Chivarse de todo lo que te ha hecho Álex)"
+                "text": "(Raconter tout ce qu'Alex t'as fait)"
             },
             {
-                "text": "No sé qué ha pasado."
+                "text": "Je ne sais pas ce qui s'est passé."
             }
         ],
         "snitchNoMeetingNoFSMaria": [
             {
-                "text": "¿Cómo no me has dicho nada antes?"
+                "text": "Pourquoi ne m'en avais-tu pas parlé avant?"
             },
             {
-                "text": "Además María vino a hablar conmigo y la orientadora. Nos ha contado lo mismo que tú ahora."
+                "text": "De plus, Marie et le conseiller scolaire sont venus me dire ce que tu viens de dire."
             },
             {
-                "text": "La chica se preocupa por ti. Todos necesitamos amigos así."
+                "text": "Elle se soucie de toi, nous avons tous besoin d'amis comme elle."
             },
             {
-                "text": "El comportamiento de Álex merece un castigo y es importante que me hayas contado todo."
+                "text": "Le comportement d'Alex mérite une punition et il est important que tu m'aies tout dit."
             },
             {
-                "text": "Todo esto no es culpa tuya ni te lo mereces."
+                "text": "Ce n'est pas de ta faute, et tu ne le mérites pas."
             },
             {
-                "text": "Hemos decidido expulsar a Álex 3 días."
+                "text": "Nous avons décidé de renvoyer Alex pour 3 jours."
             },
             {
-                "text": "Si sigue igual podríamos expulsarle del colegio e incluso llamar a la policía y tomar represalias legales."
+                "text": "S'il continue comme ça, nous pourrions le renvoyer de l'école définitivement, ou même appeler la police et engager des poursuites contre lui."
             },
             {
-                "text": "Vete a casa y descansa."
+                "text": "Rentre chez toi et repose-toi."
             }
         ],
         "snitchNoMeetingNoFSNoMaria": [
             {
-                "text": "Hablaré con tus padres del tema."
+                "text": "Je vais en parler avec tes parents."
             },
             {
-                "text": "Si tienes más problemas con Álex ven a hablar conmigo. Mañana le llamaré la atención."
+                "text": "Si tu as encore des problèmes avec Alex, viens me le dire, demain je le dénoncerai."
             },
             {
-                "text": "Es importante que si tienes problemas los cuentes. El tiempo por sí solo no va a hacer que vaya a mejor."
+                "text": "Il est important que tu en parles, il est temps que les choses changent pour de bon."
             },
             {
-                "text": "Y en cualquier caso, no te mereces que se burlen de ti y ridiculicen."
+                "text": "En tout cas, tu ne mérites pas qu'on se moque de toi et qu'on te ridiculise."
             },
             {
-                "text": "Si es lo que está pasando, pide ayuda o las cosas seguirán igual, incluso pueden ir a peor."
+                "text": "Les choses ne changeront pas tant que tu n'auras pas demandé de l'aide. Elles pourraient même s'aggraver."
             }
         ],
         "noSnitchNoMeetingNoFS": [
             {
-                "text": "",
-                "text_male": "¿Estás seguro de que no está pasando nada?",
-                "text_female": "¿Estás segura de que no está pasando nada?"
+                "text": "Es-tu sûr que tout va bien ?"
             },
             {
-                "text": "Pues venga, vete a casa."
+                "text": "Alors, rentre chez toi."
             },
             {
-                "text": "Pero acuérdate de esto: si estás teniendo problemas con un compañero y no buscas ayuda, lo más seguro es que todo empeore."
+                "text": "Mais n'oublie pas que si tu as des problèmes avec quelqu'un et que tu ne cherches pas d'aide, c'est sûr que ton état va empirer."
             },
             {
-                "text": "Y en cualquier caso, no te mereces que se burlen de ti y ridiculicen."
+                "text": "En tout cas, tu ne mérites pas qu'on se moque de toi et qu'on te ridiculise."
             },
             {
-                "text": "Si es lo que está pasando, pídenos ayuda o las cosas seguirán igual."
+                "text": "Les choses ne changeront pas tant que tu n'auras pas demandé de l'aide."
             }
         ]
     }

@@ -13,10 +13,10 @@ The original concept and the videogame have been carried out by the [eUCM](http:
 This repository consists of a **web version** developed by [Matt Castellanos](https://github.com/MattCastUCM) y [Pedro León](https://github.com/P4179) under the eye of eUCM group.
 
 ## Idiomas disponibles:
-- Spanish 🇪🇸 (versión original) 
+- Spanish 🇪🇸 (original version) 
 - English 🇬🇧
 - French 🇫🇷
-- Portuguese 🇵🇹 (en proceso)
+- Portuguese 🇵🇹 (in progress)
 
 ## Recursos
 All graphic resources of the project have a CC BY-NC-SA (Creative Commons Attribution Non-Commercial Share Alike) license.

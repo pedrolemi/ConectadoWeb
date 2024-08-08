@@ -10,7 +10,7 @@
 ## Team
 The original concept and the videogame have been carried out by the [eUCM](http://www.e-ucm.es/es/) group. Both the executable and a teacher's guide can be found on [e-ucm.es](https://www.e-ucm.es/es/portfolio-item/conectado/). 
 
-This repository consists of a **web version** developed by [Matt Castellanos](https://github.com/MattCastUCM) y [Pedro León](https://github.com/P4179) under the eye of eUCM group.
+This repository consists of a game **browser version** of the original game developed by [Matt Castellanos](https://github.com/MattCastUCM) y [Pedro León](https://github.com/P4179) under the eye of eUCM group.
 
 ## Available languages:
 - Spanish 🇪🇸 (original version) 

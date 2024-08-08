@@ -38,9 +38,9 @@ export default class LivingroomBase extends BaseScene {
             }
             else {
                 let params = {
-                    camPos: "left"
-                };
-                this.gameManager.changeScene(this.playground, params);
+                    nextScene: this.playground
+                }
+                this.gameManager.changeScene("BusScene", params);
             }
         }, false);
 

@@ -2,8 +2,8 @@
     "jose": {
         "notTalked": {
             "text": "",
-            "text_male": "Tu es nouveau, n'est-ce pas ?",
-            "text_female": "Tu es nouvelle, n'est-ce pas ?"
+            "text_male": "Tu es nouveau, n'est-ce pas?",
+            "text_female": "Tu es nouvelle, n'est-ce pas?"
         },
         "ask": {
             "text": "Est-ce que tu veux quelque chose?"
@@ -77,7 +77,7 @@
                 "text": "Le garçon avec le tee shirt jaune à côté du panier de basket est également dans notre classe."
             },
             {
-                "text": "Il est si gentil, pourquoi ne lui parles-tu pas ?"
+                "text": "Il est si gentil, pourquoi ne lui parles-tu pas?"
             }
         ],
         "goodbye": [

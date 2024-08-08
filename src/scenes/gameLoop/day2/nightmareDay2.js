@@ -1,4 +1,4 @@
-import NightmareMinigame from '../nightmareMinigame.js';
+import NightmareMinigame from '../baseScenarios/nightmareMinigame.js';
 import ChairWithGum from '../../../gameObjects/chairWithGum.js';
 
 export default class NightmareDay2 extends NightmareMinigame {

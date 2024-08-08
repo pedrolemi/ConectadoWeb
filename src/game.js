@@ -9,6 +9,7 @@ import CreditsScene from './scenes/menus/creditsScene.js';
 // Flujo de juego
 import TextOnlyScene from './scenes/gameLoop/textOnlyScene.js';
 import AlarmScene from './scenes/gameLoop/alarmScene.js';
+import BusScene from './scenes/gameLoop/busScene.js';
 import BathroomBase from './scenes/gameLoop/baseScenarios/bathroomBase.js';
 import OppositeBathroom from './scenes/gameLoop/oppositeBathroom.js';
 
@@ -111,7 +112,7 @@ const config = {
         // Menus
         LanguageMenu, TitleMenu, LoginMenu, CreditsScene,
         // Escenas bases
-        AlarmScene, BathroomBase, OppositeBathroom, TextOnlyScene,
+        AlarmScene, BathroomBase, BusScene, OppositeBathroom, TextOnlyScene,
         // Escenas dia 1
         BedroomMorningDay1, LivingroomMorningDay1, PlaygroundMorningDay1, StairsMorningDay1, CorridorMorningDay1, ClassFrontMorningDay1, ClassBackMorningDay1, ClassBackBreakDay1, CorridorBreakDay1, StairsBreakDay1, PlaygroundBreakDay1, PlaygroundAfternoonDay1, LivingroomAfternoonDay1, BedroomAfternoonDay1, NightmareDay1,
         // Escenas dia 2

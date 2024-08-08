@@ -13,6 +13,7 @@
     "mom": {
         "notTalked": [
             {
+                "text": "",
                 "text_male": "Tu es rentré {{name}}!",
                 "text_female": "Tu es rentrée {{name}}!"
             },

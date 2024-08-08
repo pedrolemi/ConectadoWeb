@@ -36,6 +36,8 @@ export default class TextOnlyScene extends BaseScene {
     create(params) {
         super.create(params);
 
+        let PADDING = 50;
+
         let text = "";
         let onComplete = () => { };
         let onCompleteDelay = 0;
@@ -47,7 +49,7 @@ export default class TextOnlyScene extends BaseScene {
         textConfig.fontSize = fontSize + 'px';
         textConfig.align = 'center';
         textConfig.wordWrap = {
-            width: this.CANVAS_WIDTH - 100,
+            width: this.CANVAS_WIDTH - PADDING * 2,
             useAdvancedWrap: true
         }
 
@@ -112,7 +114,7 @@ export default class TextOnlyScene extends BaseScene {
         // DE LINEA. SIN EMBARGO, ESTE PROCESO TOMARA MUCHO TIEMPO CUANTO MAS GRANDE
         // SEA EL TAMANO DE LA FUENTE, YA QUE VA REDUCIENDOLO POCO A POCO Y CREANDO
         // Y DESTRUYENDO EL TEXTO HASTA ENCONTRAR UN TAMANO CON EL QUE QUEPA.
-        while (screenText.displayHeight > this.CANVAS_HEIGHT) {
+        while (screenText.displayHeight > this.CANVAS_HEIGHT - PADDING * 2) {
             fontSize -= 5;
             textConfig.fontSize = fontSize + 'px';
             screenText.destroy();

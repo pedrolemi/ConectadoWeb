@@ -77,7 +77,7 @@
                 "text": "On va regarder un film chez moi ce samedi."
             },
             {
-                "text": "Tu veux venir ? J'ai aussi invité aussi des potes de la classe."
+                "text": "Tu veux venir? J'ai aussi invité aussi des potes de la classe."
             },
             {
                 "text": "Et on le verra sur la télé écran géant que mon père vient d'acheter pour les matchs de foot."
@@ -123,7 +123,7 @@
         },
 
         "distracted": {
-            "text": "Parece distraído."
+            "text": "Il semble distrait."
         }
     }
 }

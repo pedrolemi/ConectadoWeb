@@ -1,5 +1,4 @@
-
-import BaseScene from './baseScene.js';
+import BaseScene from "../baseScene.js";
 
 export default class NightmareBase extends BaseScene {
     /**

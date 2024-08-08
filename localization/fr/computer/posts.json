@@ -136,8 +136,9 @@
             },
             "oldComments": {
                 "root": {
-                    "text_male": "Regardé la tête k'il a... \"Tête de lit\", qu'en dites-vous ?",
-                    "text_female": "Regardé la tête k'elle a... \"Tête de lit\", qu'en dites-vous ?"
+                    "text": "",
+                    "text_male": "Regardé la tête k'il a... \"Tête de lit\", qu'en dites-vous?",
+                    "text_female": "Regardé la tête k'elle a... \"Tête de lit\", qu'en dites-vous?"
                 },
                 "secondComment": {
                     "text": "LOL, ressemble à 1 grand mur. Pourquoi pas TRUMP?"

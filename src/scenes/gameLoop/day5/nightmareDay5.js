@@ -1,4 +1,4 @@
-import NightmareBase from '../nightmareBase.js';
+import NightmareBase from '../baseScenarios/nightmareBase.js';
 
 export default class NightmareDay5 extends NightmareBase {
     /**

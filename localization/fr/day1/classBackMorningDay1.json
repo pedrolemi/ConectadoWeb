@@ -21,8 +21,8 @@
         },
         "alexAnswer": {
             "text": "",
-                "text_male":  "Le nouveau est à ma place.",
-                "text_female": "La nouvelle est à ma place."
+            "text_male": "Le nouveau est à ma place.",
+            "text_female": "La nouvelle est à ma place."
         },
         "teacherAnswer": {
             "text": "",

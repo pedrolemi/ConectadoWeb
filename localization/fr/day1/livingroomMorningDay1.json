@@ -7,7 +7,7 @@
                 "text_female": "On dirait que tu es prête à partir."
             },
             {
-                "text": "Tu as tout ? N'oublie pas de prendre ton sac à dos."
+                "text": "Tu as tout? N'oublie pas de prendre ton sac à dos."
             },
             {
                 "text": "Comporte-toi bien et fais-toi beaucoup d'amis."
@@ -15,7 +15,7 @@
         ],
         "notTalkedLate": [
             {
-                "text": "As-tu vu l'heure qu'il est ?"
+                "text": "As-tu vu l'heure qu'il est?"
             },
             {
                 "text": "Ton premier jour dans ton nouveau lycée et tu es déjà en retard."
@@ -35,6 +35,7 @@
         },
         "noBag": [
             {
+                "text": "",
                 "text_male": "Es-tu sûr de ne rien avoir oublié dans ton sac à dos?",
                 "text_female": "Es-tu sûre de ne rien avoir oublié dans ton sac à dos?"
             },

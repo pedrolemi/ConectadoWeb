@@ -43,8 +43,8 @@ export default class DialogManager {
         });
 
         this.textbox.activate(false);
-        this.activateOptions(false);
         this.bgBlock.disableInteractive();
+        this.activateOptions(false);
     }
 
 
@@ -66,7 +66,10 @@ export default class DialogManager {
     */
     changeScene(scene) {
         // Desactiva la caja de texto y las opciones (por si acaso)
-        if (this.textbox) this.textbox.activate(false);
+        if (this.textbox) {
+            this.textbox.activate(false);
+            this.bgBlock.disableInteractive();
+        }
         this.activateOptions(false);
         this.portraits.clear();
 
@@ -123,7 +126,10 @@ export default class DialogManager {
             this.setTalking(true);
 
             // Desactiva la caja de texto y las opciones (por si acaso)
-            if (this.textbox) this.textbox.activate(false);
+            if (this.textbox) {
+                this.textbox.activate(false);
+                this.bgBlock.disableInteractive();
+            }
             this.activateOptions(false);
 
             // Cambia el nodo por el indicado
@@ -131,7 +137,8 @@ export default class DialogManager {
             this.processNode(node);
         }
         else {
-            this.textbox.activate(false)
+            this.textbox.activate(false);
+            this.bgBlock.disableInteractive();
             this.setTalking(false);
             this.bgBlock.disableInteractive();
         }
@@ -310,9 +317,9 @@ export default class DialogManager {
         else {
             // Se resetea la configuracion del texto de la caja por si se habia cambiado a la de por defecto
             this.textbox.resetTextConfig();
-            this.textbox.activate(false)
-            this.setTalking(false);
+            this.textbox.activate(false);
             this.bgBlock.disableInteractive();
+            this.setTalking(false);
         }
     }
 

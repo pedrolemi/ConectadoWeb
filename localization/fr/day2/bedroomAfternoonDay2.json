@@ -42,7 +42,7 @@
             "text_female": "Hmm, elle n'a pas merité d'être ds ce groupe. Que quelqu'un l'expulse MAINTENANT!"
         },
         "message5": {
-            "text": "Il ne vous reste plus k inviter cette Marie bizarre ! "
+            "text": "Il ne vous reste plus k inviter cette Marie bizarre! "
         },
         "message6": {
             "text": "Joseph est l'admin, discutez avec lui 2main, il ne lit pas souvent ce chat"
@@ -66,10 +66,10 @@
         },
 
         "growUp": {
-            "text": "Grandissez, vous avez 2 ans ou quoi ?"
+            "text": "Grandissez, vous avez 2 ans ou quoi?"
         },
         "ask": {
-            "text": "Je ne comprends pas, qu'est-ce que je vous ai fait pour que vous m'insultiez, vous m'ignoriez et vous moquiez de moi ?"
+            "text": "Je ne comprends pas, qu'est-ce que je vous ai fait pour que vous m'insultiez, vous m'ignoriez et vous moquiez de moi?"
         },
         "message7": {
             "text": "Quel est votre problème avec {{name}}?"

@@ -1,97 +1,97 @@
 {
     "ana": {
         "talked": {
-            "text": "Piérdete. No tengo nada que hablar contigo."
+            "text": "Dégage, je n'ai rien à te dire."
         },
         "mean": {
-            "text": "¿Qué estás mirando? Di algo o vete."
+            "text": "Qu'est-ce que tu regardes? Dis quelque chose ou va-t'en!"
         },
         "normal": [
             {
-                "text": "Buenos días, {{name}}."
+                "text": "Bonjour, {{name}}."
             },
             {
-                "text": "¿Querías algo?"
+                "text": "Est-ce que tu veux quelque chose?"
             }
         ],
         "choices": [
             {
-                "text": "Nada (te vas)."
+                "text": "Rien (tu pars)."
             },
             {
-                "text": "Me han dicho que has hablado con Álex de gastarme una broma."
+                "text": "On m'a dit que toi et Alex aviez parlé d'une farce."
             }
         ],
         "warnMean": {
-            "text": "Oui, ¿y? Venga, vete."
+            "text": "Oui, et alors? Allez, va-t'en."
         },
         "warnNormal": [
             {
-                "text": "Vaya, nos has pillado. Era una tontería."
+                "text": "Wow, tu nous as eu, c'était une chose stupide à faire."
             },
             {
-                "text": "Pero ya no tiene gracia. No la haremos."
+                "text": "Mais ce n'est plus drôle, on ne la fera pas."
             }
         ]
     },
 
     "maria": {
         "talked": {
-            "text": "Ya he hablado con María. Debería ver quién más hay por el patio esperando a que suene la campana."
+            "text": "J'ai déjà parlé à Marie, je devrais chercher des gens dans la cour en attendent que la cloche sonne."
         },
         "notMet": {
-            "text":  "¿Querías algo?"
+            "text":  "Veux-tu quelque chose?"
         },
         "notMetChoices": [
             {
-                "text": "No, nada. Adiós."
+                "text": "Non, rien, au revoir."
             },
             {
-                "text": "Saludarte, siempre te veo sola y leyendo."
+                "text": "Te dire bonjour, je te vois toujours seule et en train de lire."
             }
         ],
         "niceResponse": [
             {
-                "text": "Muy amable."
+                "text": "Très aimable."
             },
             {
-                "text": "La gente no suele hablar conmigo."
+                "text": "Les gens n'ont pas l'habitude de me parler."
             },
             {
-                "text": "Que pases un buen día."
+                "text": "Passe une bonne journée."
             }
         ],
 
         "ignore": [
             {
-                "text": "Estoy leyendo."
+                "text": "Je suis en train de lire."
             },
             {
-                "text": "Si no te importa... (Te ignora y sigue leyendo)."
+                "text": "Si ça ne te dérange pas...(Elle t'ignore et continue à lire)"
             }
         ],
 
         "warn": [
             {
-                "text": "Buenos días, {{name}}."
+                "text": "Bonjour, {{name}}."
             },
             {
-                "text": "Antes he escuchado a Álex hablar con Ana sobre gastarte una broma."
+                "text": "J'ai entendu Alex parler à Anna de te faire une blague."
             },
             {
-                "text": "No sé qué puede ser, pero ten cuidado. No suelen ser graciosas precisamente."
+                "text": "Je ne sais pas ce que ça pourrait être, mais attention, elles ne sont généralement pas très drôles."
             }
         ],
         "warnChoices": [
             {
-                "text": "Gracias por avisar"
+                "text": "Merci pour l'avertissement"
             },
             {
-                "text": "No le tengo miedo"
+                "text": "Je n'ai pas peur de lui"
             }
         ],
         "warnGoodbye": {
-            "text": "Nos vemos después. Hasta luego"
+            "text": "A plus tard, bye."
         },
         "bellRinging": {
             "text": "<<La cloche sonne>>"
@@ -101,20 +101,20 @@
     "jose": {
         "notTalked": [
             {
-                "text": "¿Has visto la aplicación que comprueba tu relación con la gente con la que más hablas?"
+                "text": "Tu as vu cette appli sur ton portable qui vérifie ta relation avec les gens avec qui tu parles le plus?"
             },
             {
-                "text": "Te dice con quién te llevas mejor o peor de los que también tienen instalada la aplicación."
+                "text": "Elle t'indique avec qui tu t'entends ou non parmi toutes les personnes qui l'ont téléchargée."
             },
             {
-                "text": "Dicen que es muy exacta, pero aún no se sabe como funciona."
+                "text": "On dit que c'est vrai, mais la façon dont ça fonctionne n'est pas claire."
             },
             {
-                "text": "Veo que ya la tienes."
+                "text": "J'ai vu que tu l'avais déjà téléchargée!"
             }
         ],
         "talked": {
-            "text": "Nos vemos luego."
+            "text": "A plus"
         }
     }
 }

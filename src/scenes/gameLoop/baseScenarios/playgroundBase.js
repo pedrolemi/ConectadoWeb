@@ -37,9 +37,9 @@ export default class PlaygroundBase extends BaseScene {
             }
             else {
                 let params = {
-                    camPos: "left"
+                    nextScene: this.home
                 }
-                this.gameManager.changeScene(this.home, params);
+                this.gameManager.changeScene("BusScene", params);
             }
         });
 

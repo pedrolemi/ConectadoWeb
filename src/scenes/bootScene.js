@@ -30,8 +30,8 @@ export default class BootScene extends Phaser.Scene {
         let scale = width / bg.width;
         bg.setScale(scale);
 
-        // Fondo
-        this.add.rectangle(width / 2, 0, width, height / 1.2, 0x2B9E9E).setOrigin(0.5, 0);
+        // Fondo de la pantalla
+        let screenBg = this.add.rectangle(width / 2, 0, width, height / 1.2, 0x2B9E9E).setOrigin(0.5, 0);
 
         // Pantalla del ordenador con el tam del canvas
         let screen = this.add.image(width / 2, height / 2, 'PCscreen');
@@ -115,6 +115,9 @@ export default class BootScene extends Phaser.Scene {
             loadingText.destroy();
             percentText.destroy();
             assetText.destroy();
+            bg.destroy();
+            screenBg.destroy();
+            screen.destroy();
         });
     }
 
@@ -298,6 +301,9 @@ export default class BootScene extends Phaser.Scene {
         // Salon
         this.load.image('livingroomBg', 'livingroom/livingroomBg.png');
         this.load.atlas('livingroom', 'livingroom/livingroom.png', 'livingroom/livingroom.json');
+
+        // Autobus
+        this.load.spritesheet('bus', 'bus.png', { frameWidth: 632, frameHeight: 341 });
 
         // Patio
         this.load.image('playgroundClosed', 'playground/playgroundClosed.png');
@@ -494,6 +500,14 @@ export default class BootScene extends Phaser.Scene {
 
     create() {
         this.events.once('start', () => {
+            // Se crea la animacion del autobus en la primera escena para no tener que crearla de nuevo
+            this.anims.create({
+                key: 'moving',
+                frames: this.anims.generateFrameNumbers('bus', { start: 0, end: 1 }),
+                frameRate: 3,
+                repeat: -1
+            });
+            
             let gameManager = GameManager.create(this);
             gameManager.startLangMenu();
         })

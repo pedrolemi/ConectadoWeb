@@ -46,7 +46,7 @@
         "chat4": "Alexandre"
     },
     "settings": {
-        "text": "Vous reviendrez à l'écran d'accueil. Êtes-vous sûr ?",
+        "text": "Vous reviendrez à l'écran d'accueil. Êtes-vous sûr?",
         "yes": "Oui",
         "no": "Non" 
     }

@@ -80,9 +80,9 @@ export default class LoginMenu extends Phaser.Scene {
             passwordTranslation.sideText, passwordTranslation.defaultText);
 
         this.events.on('shutdown', () => {
-            nameText.remove();
-            userText.remove();
-            passwordText.remove();
+            nameText.removeHiddenInput();
+            userText.removeHiddenInput();
+            passwordText.removeHiddenInput();
         })
 
         // Texto de error si alguno de los parametros es incorrecto

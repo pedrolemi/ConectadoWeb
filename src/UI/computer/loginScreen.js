@@ -42,8 +42,8 @@ export default class LoginScreen extends Phaser.GameObjects.Group {
         this.passwordInput = this.createTextInput(2.5 * this.scene.CANVAS_WIDTH / 4, subtitleText.y + subtitleText.displayHeight + 160, textInputScale, passwordTranslation.sideText, "Pass ");
 
         this.scene.events.on('shutdown', () => {
-            this.userInput.remove();
-            this.passwordInput.remove();
+            this.userInput.removeHiddenInput();
+            this.passwordInput.removeHiddenInput();
         })
 
         // Texto para informar que los datos introducidos son incorrectos

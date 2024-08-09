@@ -174,15 +174,19 @@ export default class TextInput extends Phaser.GameObjects.Container {
         this.setScale(scale);
 
         this.typeWithKeyboard();
+
+        // Pantalla tactil (se usa el teclado virtual)
+        window.addEventListener('touchstart', () => {
+            this.hiddenInput.value = this.currentText;
+        });
     }
 
     /**
      * Escribir texto en la caja si la pantalla no es tactil (se usa el teclado fisico)
      */
     typeWithKeyboard() {
-        if (!IS_TOUCH) {
-            this.scene.input.keyboard.on('keydown', (event) => {
-
+        this.scene.input.keyboard.on('keydown', (event) => {
+            if (!IS_TOUCH) {
                 // Si se esta escribiendo en la caja, se van procesando las letras que se pulsan en el teclado
                 if (this.isEnteringName) {
                     let hasChanged = false;
@@ -204,8 +208,8 @@ export default class TextInput extends Phaser.GameObjects.Container {
                         this.adjustTextToBox();
                     }
                 }
-            });
-        }
+            }
+        });
     }
 
     /**
@@ -214,31 +218,31 @@ export default class TextInput extends Phaser.GameObjects.Container {
      * se hace invisible la propia caja de input porque no interesa que se muestre
      */
     typeWithOnScreenKeyboard() {
-        if (IS_TOUCH) {
-            // Se crea la caja del input del DOM
-            this.hiddenInput = document.createElement('input');
-            // Se coloca en un lugar en pantalla que no genere mas espacio
-            this.hiddenInput.style.position = 'absolute';
-            this.hiddenInput.style.top = '100px';
-            this.hiddenInput.style.left = '100px';
-            // Se hace invisible: opacity a 0 para que no se vea, pero se siga pudiendo interactuar con ella
-            // y zIndex a -1 para que se coloque debajo de cualquier objeto (por si acaso)
-            this.hiddenInput.style.opacity = '0';
-            this.hiddenInput.style.zIndex = '-1';
-            // Se coloca en el documento
-            document.body.appendChild(this.hiddenInput);
+        // Se crea la caja del input del DOM
+        this.hiddenInput = document.createElement('input');
+        // Se coloca en un lugar en pantalla que no genere mas espacio
+        this.hiddenInput.style.position = 'absolute';
+        this.hiddenInput.style.top = '50px';
+        this.hiddenInput.style.left = '50px';
+        // Se hace invisible: opacity a 0 para que no se vea, pero se siga pudiendo interactuar con ella
+        // y zIndex a -1 para que se coloque debajo de cualquier objeto (por si acaso)
+        this.hiddenInput.style.opacity = '0';
+        this.hiddenInput.style.zIndex = '-1';
+        // Se coloca en el documento
+        document.body.appendChild(this.hiddenInput);
 
-            this.hiddenInput.addEventListener('input', (event) => {
+        this.hiddenInput.addEventListener('input', (event) => {
+            if (IS_TOUCH) {
                 // El valor escrito en la caja de input del DOM escribe en la de la clase
                 this.currentText = event.target.value;
                 this.adjustTextToBox();
-            });
+            }
+        });
 
-            // Hacer que la aparicion del teclado virtual sea suave
-            this.hiddenInput.addEventListener('focus', () => {
-                this.hiddenInput.scrollIntoView({ behavior: 'smooth' });
-            });
-        }
+        // Hacer que la aparicion del teclado virtual sea suave
+        this.hiddenInput.addEventListener('focus', () => {
+            this.hiddenInput.scrollIntoView({ behavior: 'smooth' });
+        });
     }
 
     /**
@@ -270,17 +274,7 @@ export default class TextInput extends Phaser.GameObjects.Container {
         this.scene.input.once('pointerup', () => {
             // Se desactiva el poder escribir
             if (this.isEnteringName) {
-                this.isEnteringName = false;
-
-                // Se deja el texto ya escrito o si no se ha escrito ningun
-                // texto, se vuelve al texto por defecto
-                if (!this.currentText) {
-                    this.setDefaultText();
-                }
-
-                // Se desactiva el cursor
-                this.cursor.setAlpha(0);
-                this.cursorTween.pause();
+                this.deactiveBox();
 
                 if (IS_TOUCH) {
                     // Desaparece el teclado en pantalla
@@ -288,6 +282,20 @@ export default class TextInput extends Phaser.GameObjects.Container {
                 }
             }
         })
+    }
+
+    deactiveBox() {
+        this.isEnteringName = false;
+
+        // Se deja el texto ya escrito o si no se ha escrito ningun
+        // texto, se vuelve al texto por defecto
+        if (!this.currentText) {
+            this.setDefaultText();
+        }
+
+        // Se desactiva el cursor
+        this.cursor.setAlpha(0);
+        this.cursorTween.pause();
     }
 
     setText(text) {
@@ -322,7 +330,7 @@ export default class TextInput extends Phaser.GameObjects.Container {
      * Nota: conviene usar este metodo al destruir la escena donde se ha creado este objeto
      * porque la caja de input del DOM no se va a utilizar mas
      */
-    remove() {
+    removeHiddenInput() {
         this.hiddenInput.remove();
     }
 }

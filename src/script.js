@@ -9,3 +9,6 @@ var IS_TOUCH = false;
 window.addEventListener('touchstart', function () {
     IS_TOUCH = true;
 });
+window.addEventListener('mousedown', function () {
+    IS_TOUCH = false;
+});

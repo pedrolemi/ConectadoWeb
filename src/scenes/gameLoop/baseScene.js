@@ -66,11 +66,6 @@ export default class BaseScene extends Phaser.Scene {
 
         this.phoneManager.topLid.visible = false;
         this.phoneManager.botLid.visible = false;
-
-        // Si se esta usando un dispositivo con input tactil, se ajusta el limite para empezar a mover la camara
-        if (IS_TOUCH) {
-            this.START_SCROLLING *= 1.5;
-        }
     }
 
 
@@ -130,10 +125,16 @@ export default class BaseScene extends Phaser.Scene {
         // Si el puntero esta a la izquierda y el scroll de la camara no es inferior al del
         // extremo izquierdo, la mueve hacia la izquierda y lo mismo para el extremo derecho
         if (!IS_TOUCH || (IS_TOUCH && this.input.activePointer.isDown)) {
-            if (this.game.input.activePointer.x < this.START_SCROLLING && this.cameras.main.scrollX > this.leftBound + this.CAMERA_SPEED * dt) {
+            // Si se esta usando un dispositivo con input tactil, se ajusta el limite para empezar a mover la camara
+            let threshold = this.START_SCROLLING;
+            if (IS_TOUCH) {
+                threshold *= 1.5;
+            }
+
+            if (this.game.input.activePointer.x < threshold && this.cameras.main.scrollX > this.leftBound + this.CAMERA_SPEED * dt) {
                 this.cameras.main.scrollX -= this.CAMERA_SPEED * dt;
             }
-            else if (this.game.input.activePointer.x > this.CANVAS_WIDTH - this.START_SCROLLING
+            else if (this.game.input.activePointer.x > this.CANVAS_WIDTH - threshold
                 && this.cameras.main.scrollX < this.rightBound - this.CANVAS_WIDTH - this.CAMERA_SPEED * dt) {
                 this.cameras.main.scrollX += this.CAMERA_SPEED * dt;
             }

@@ -210,7 +210,7 @@ export default class BootScene extends Phaser.Scene {
             // Namespaces que se cargan para cada uno de los idiomas
             ns: namespaces,
             // Mostrar informacion de ayuda por consola
-            debug: true,
+            debug: false,
             // Cargar las traducciones de un servidor especificado en vez de ponerlas directamente
             backend: {
                 // La ruta desde donde cargamos las traducciones

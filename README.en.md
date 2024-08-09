@@ -7,7 +7,13 @@
 # Conectado Web
 **Conectado** is a video game that has been designed and developed with the aim of **raising awareness on bullying and cyberbullying** through emotions. It is aimed at being a tool to help education professionals to educate on this subject in a more interactive way and with greater emotional involvement of children and adolescents. young people aged 12 to 17.
 
-Play the game **[here](https://p4179.github.io/ConectadoWeb/)**!
+<div align="center">
+  <h3>
+    <em>
+      Play the game on a computer or a mobile <a href="https://p4179.github.io/ConectadoWeb/">here</a>!
+    </em>
+  </h3>
+</div>
 
 *Read README in other language: [Español](README.md).*
 

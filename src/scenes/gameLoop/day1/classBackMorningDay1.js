@@ -27,8 +27,8 @@ export default class ClassBackMorningDay1 extends ClassBackBase {
             y: this.CANVAS_HEIGHT * 0.37,
             scale: 0.07
         };
-        let teacher = this.add.image(tr.x, tr.y, 'characters', 'teacher').setOrigin(0, 0).setScale(tr.scale).setDepth(this.row1Tables.depth - 1);
-        let teacherPortrait = this.add.image(this.portraitTr.x, this.portraitTr.y + 20, 'characters', 'teacher').setOrigin(0.5, 1).setScale(this.portraitTr.scale);
+        let teacher = this.add.image(tr.x, tr.y, 'teacher').setOrigin(0, 0).setScale(tr.scale).setDepth(this.row1Tables.depth - 1);
+        let teacherPortrait = this.add.image(this.portraitTr.x, this.portraitTr.y + 20, 'teacher').setOrigin(0.5, 1).setScale(this.portraitTr.scale);
         this.portraits.set("teacher", teacherPortrait);
 
 
@@ -39,7 +39,7 @@ export default class ClassBackMorningDay1 extends ClassBackBase {
             scale: this.scale * 0.8
         };
         this.add.image(tr.x, tr.y, this.atlasName, 'backChar8').setOrigin(0, 0).setScale(tr.scale).setDepth(this.row4Chairs.depth - 1);
-        
+
         tr = {
             x: this.rightBound * 0.725,
             y: this.CANVAS_HEIGHT * 0.675,
@@ -68,7 +68,7 @@ export default class ClassBackMorningDay1 extends ClassBackBase {
             scale: this.scale * 0.53
         };
         this.add.image(tr.x, tr.y, this.atlasName, 'backChar2').setOrigin(0, 0).setScale(tr.scale).setDepth(this.row3Chairs.depth - 1);
-        
+
         tr = {
             x: this.rightBound * 0.655,
             y: this.CANVAS_HEIGHT * 0.625,
@@ -195,7 +195,7 @@ export default class ClassBackMorningDay1 extends ClassBackBase {
                 },
                 onCompleteDelay: 500
             };
-            
+
             // Se cambia a la escena de transicion
             this.gameManager.changeScene(sceneName, params);
 

@@ -27,8 +27,8 @@ export default class BathroomAfternoonDay5 extends BathroomBase {
             y: 1370 * this.scale,
             scale: 0.16
         };
-        let teacher = this.add.image(tr.x, tr.y, 'characters', 'teacher').setOrigin(0.5, 1).setScale(tr.scale);
-        let teacherPortrait = this.add.image(this.portraitTr.x, this.portraitTr.y + 20, 'characters', 'teacher').setOrigin(0.5, 1).setScale(this.portraitTr.scale);
+        let teacher = this.add.image(tr.x, tr.y, 'teacher').setOrigin(0.5, 1).setScale(tr.scale);
+        let teacherPortrait = this.add.image(this.portraitTr.x, this.portraitTr.y + 20, 'teacher').setOrigin(0.5, 1).setScale(this.portraitTr.scale);
         this.portraits.set("teacher", teacherPortrait);
         teacher.visible = false;
 
@@ -41,7 +41,7 @@ export default class BathroomAfternoonDay5 extends BathroomBase {
         let black = this.add.rectangle(0, 0, this.CANVAS_WIDTH, this.CANVAS_HEIGHT, 0x000, 1).setOrigin(0, 0).setScrollFactor(0).setDepth(this.stall3.depth + 1);
         black.visible = false;
 
-        
+
         // Se muestra el dialogo de nada mas entrar directamente
         setTimeout(() => {
             this.dialogManager.setNode(enterNode);
@@ -50,7 +50,7 @@ export default class BathroomAfternoonDay5 extends BathroomBase {
 
         this.dispatcher.addOnce("lightsOff", this, (obj) => {
             black.visible = true;
-            
+
             // Se desactiva el icono del telefono para que no se pueda sacar durante esta escena
             this.phoneManager.activate(false);
         });
@@ -112,7 +112,7 @@ export default class BathroomAfternoonDay5 extends BathroomBase {
                     this.dialogManager.setNode(null);
                     let lightOnNode = super.readNodes(nodes, "day5\\bathroomAfternoonDay5", "lightsOn", true);
                     this.dialogManager.setNode(lightOnNode);
-                    
+
                     doorNode = null;
                     sink.disableInteractive();
                     floor.disableInteractive();
@@ -120,7 +120,7 @@ export default class BathroomAfternoonDay5 extends BathroomBase {
             }, BLACKOUT_TIMER);
         });
 
-        
+
         // Evento que se llama cuando el profesor entra en el bano. Hace que la imagen del profesor sea visible 
         this.dispatcher.addOnce("enterTeacher", this, (obj) => {
             teacher.visible = true;
@@ -131,7 +131,7 @@ export default class BathroomAfternoonDay5 extends BathroomBase {
 
             // Se obtiene el texto de la escena de transicion del archivo de traducciones 
             let text = this.i18next.t("day5.endDay", { ns: "transitionScenes", returnObjects: true });
-            
+
             let params = {
                 text: text,
                 onComplete: () => {
@@ -142,7 +142,7 @@ export default class BathroomAfternoonDay5 extends BathroomBase {
 
             // Se cambia a la escena de transicion
             this.gameManager.changeScene(sceneName, params);
-            
+
         });
     }
 }

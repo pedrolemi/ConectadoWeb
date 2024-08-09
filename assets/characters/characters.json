@@ -1,71 +1,23 @@
 {
   "frames": {
-    "teacher": {
+    "Alison": {
       "frame": {
         "x": 0,
         "y": 0,
-        "w": 1214,
-        "h": 3470
+        "w": 664,
+        "h": 2259
       },
       "rotated": false,
       "trimmed": true,
       "spriteSourceSize": {
         "x": 0,
-        "y": 38,
-        "w": 1214,
-        "h": 3470
+        "y": 8,
+        "w": 664,
+        "h": 2259
       },
       "sourceSize": {
-        "w": 1214,
-        "h": 3508
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "Alex": {
-      "frame": {
-        "x": 1214,
-        "y": 0,
-        "w": 921,
-        "h": 2449
-      },
-      "rotated": false,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 14,
-        "w": 921,
-        "h": 2449
-      },
-      "sourceSize": {
-        "w": 932,
-        "h": 2463
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "Jose": {
-      "frame": {
-        "x": 2135,
-        "y": 0,
-        "w": 889,
-        "h": 2366
-      },
-      "rotated": false,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 12,
-        "w": 889,
-        "h": 2366
-      },
-      "sourceSize": {
-        "w": 889,
-        "h": 2378
+        "w": 669,
+        "h": 2270
       },
       "pivot": {
         "x": 0.5,
@@ -74,7 +26,7 @@
     },
     "Ana": {
       "frame": {
-        "x": 3024,
+        "x": 664,
         "y": 0,
         "w": 783,
         "h": 2304
@@ -96,10 +48,34 @@
         "y": 0.5
       }
     },
+    "Jose": {
+      "frame": {
+        "x": 1447,
+        "y": 0,
+        "w": 889,
+        "h": 2366
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 12,
+        "w": 889,
+        "h": 2366
+      },
+      "sourceSize": {
+        "w": 889,
+        "h": 2378
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
     "Guille": {
       "frame": {
-        "x": 3024,
-        "y": 2304,
+        "x": 2336,
+        "y": 0,
         "w": 720,
         "h": 2399
       },
@@ -122,8 +98,8 @@
     },
     "Maria": {
       "frame": {
-        "x": 2135,
-        "y": 2366,
+        "x": 3056,
+        "y": 0,
         "w": 639,
         "h": 2416
       },
@@ -144,24 +120,24 @@
         "y": 0.5
       }
     },
-    "Alison": {
+    "Alex": {
       "frame": {
-        "x": 1214,
-        "y": 2449,
-        "w": 664,
-        "h": 2259
+        "x": 3695,
+        "y": 0,
+        "w": 921,
+        "h": 2449
       },
       "rotated": false,
       "trimmed": true,
       "spriteSourceSize": {
         "x": 0,
-        "y": 8,
-        "w": 664,
-        "h": 2259
+        "y": 14,
+        "w": 921,
+        "h": 2449
       },
       "sourceSize": {
-        "w": 669,
-        "h": 2270
+        "w": 932,
+        "h": 2463
       },
       "pivot": {
         "x": 0.5,
@@ -172,11 +148,11 @@
   "meta": {
     "app": "http://free-tex-packer.com",
     "version": "0.6.7",
-    "image": "characters",
+    "image": "characters.png",
     "format": "RGBA8888",
     "size": {
-      "w": 3807,
-      "h": 4782
+      "w": 4616,
+      "h": 2449
     },
     "scale": 1
   }

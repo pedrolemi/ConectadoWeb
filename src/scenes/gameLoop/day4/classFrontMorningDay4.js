@@ -7,12 +7,12 @@ export default class ClassFrontMorningDay4 extends ClassFrontBase {
 
     create(params) {
         super.create(params);
-        
-        let teacher = this.add.image(this.portraitTr.x, this.portraitTr.y + 20, 'characters', 'teacher').setOrigin(0.5, 1).setScale(this.portraitTr.scale);
+
+        let teacher = this.add.image(this.portraitTr.x, this.portraitTr.y + 20, 'teacher').setOrigin(0.5, 1).setScale(this.portraitTr.scale);
         this.portraits.set("teacher", teacher);
 
         // Si no se ha llegado tarde, pone el nodo de dialogo al interactuar con las mesas
-        if (!this.gameManager.getValue("isLate")) {  
+        if (!this.gameManager.getValue("isLate")) {
             let nodes = this.cache.json.get('everydayDialog');
             this.tablesNode = super.readNodes(nodes, "everydayDialog", "class.table", true);
         }
@@ -78,7 +78,7 @@ export default class ClassFrontMorningDay4 extends ClassFrontBase {
 
 
             tr = {
-                x:  510,
+                x: 510,
                 y: this.CANVAS_HEIGHT * 0.49,
                 scale: this.scale * 0.76
             };
@@ -90,7 +90,7 @@ export default class ClassFrontMorningDay4 extends ClassFrontBase {
             this.dialogManager.setNode(teacherNode);
         }
 
-        
+
         // Evento llamado cuando terminan los dialogos y empieza la clase
         this.dispatcher.addOnce("startClass", this, (obj) => {
             let sceneName = 'TextOnlyScene';
@@ -102,7 +102,7 @@ export default class ClassFrontMorningDay4 extends ClassFrontBase {
                 text = this.i18next.t("day4.endDay", { ns: "transitionScenes", returnObjects: true });
                 nextScene = 'PlaygroundAfternoonDay4'
             }
-            
+
             let params = {
                 text: text,
                 onComplete: () => {

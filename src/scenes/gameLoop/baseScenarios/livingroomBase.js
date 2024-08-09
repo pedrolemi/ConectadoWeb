@@ -23,13 +23,17 @@ export default class LivingroomBase extends BaseScene {
         this.scale = this.CANVAS_HEIGHT / bg.height;
         bg.setScale(this.scale);
 
+        // Escala puesta a mano. La imagen original tenia otras dimensiones, pero debido a su gran
+        // tamano, no es posible cargarla en dispositivos moviles, por lo que se ha reducido 
+        this.scale = this.CANVAS_HEIGHT / 1500;
+
         this.rightBound = bg.displayWidth;
 
         // Puerta a la calle
         this.doorNode = null;
         this.canExit = false;
-        let playgroundDoorClosed = this.add.image(254 * this.scale - 1, 10 * this.scale - 1, this.atlasName, 'livingroomDoorClosed').setOrigin(0, 0).setScale(this.scale);
-        let playgroundDoorOpened = this.add.image(254 * this.scale - 1, 10 * this.scale - 1, this.atlasName, 'livingroomDoorOpened').setOrigin(0, 0).setScale(this.scale);
+        let playgroundDoorClosed = this.add.image(254 * this.scale - 4, 10 * this.scale - 4, this.atlasName, 'livingroomDoorClosed').setOrigin(0, 0).setScale(this.scale);
+        let playgroundDoorOpened = this.add.image(254 * this.scale - 4, 10 * this.scale - 4, this.atlasName, 'livingroomDoorOpened').setOrigin(0, 0).setScale(this.scale);
         // Al hacer click sobre la puerta abierta, si hay algun dialogo que mostrar (para indicar que no se puede salir), se 
         // mostrara. En caso contrario, se pasara a la escena del patio con la camara a la izquierda y se eliminara esta escena
         super.toggleDoor(playgroundDoorClosed, playgroundDoorOpened, () => {

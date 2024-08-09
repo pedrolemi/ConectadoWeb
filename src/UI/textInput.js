@@ -245,11 +245,9 @@ export default class TextInput extends Phaser.GameObjects.Container {
         });
 
         // Hacer que la aparicion del teclado virtual sea suave
-        /*
         this.hiddenInput.addEventListener('focus', () => {
             this.hiddenInput.scrollIntoView({ behavior: 'smooth' });
         });
-        */
     }
 
     /**

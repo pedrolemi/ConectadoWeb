@@ -35,3 +35,8 @@ Fuentes que se usan en Phaser
     font-family: "caladea-regular";
     src: url('assets/fonts/caladea-regular.ttf');
 }
+
+@font-face {
+    font-family: "roboto-regular";
+    src: url('assets/fonts/roboto-regular.ttf');
+}

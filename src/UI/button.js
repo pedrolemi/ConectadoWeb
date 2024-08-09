@@ -44,7 +44,7 @@ export default class Button extends Phaser.GameObjects.Container {
         this.hitArea = null;
         if (hitArea) {
             this.hitArea = hitArea;
-            this.fillImg.setInteractive({ useHandCursor: true }, hitArea.area, hitArea.callback);
+            this.fillImg.setInteractive(hitArea.area, hitArea.callback, { useHandCursor: true });
         }
         else {
             this.fillImg.setInteractive({ useHandCursor: true });
@@ -135,7 +135,7 @@ export default class Button extends Phaser.GameObjects.Container {
     setHitArea(hitArea) {
         this.fillImg.removeInteractive();
         this.hitArea = hitArea;
-        this.fillImg.setInteractive({ useHandCursor: true }, hitArea.area, hitArea.callback);
+        this.fillImg.setInteractive(hitArea.area, hitArea.callback, { useHandCursor: true });
         if (this.scene.sys.game.debug) {
             this.scene.input.enableDebug(this.fillImg, '0xffff00');
         }

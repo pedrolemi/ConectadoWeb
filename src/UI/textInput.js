@@ -27,7 +27,7 @@ export default class TextInput extends Phaser.GameObjects.Container {
         this.fillImg = this.scene.add.image(0, 0, fill);
         this.fillImg.setOrigin(0, 0.5);
         if (hitArea) {
-            this.fillImg.setInteractive({ useHandCursor: true }, hitArea.area, hitArea.callback);
+            this.fillImg.setInteractive(hitArea.area, hitArea.callback, { useHandCursor: true });
         }
         else {
             this.fillImg.setInteractive({ useHandCursor: true });
@@ -54,6 +54,8 @@ export default class TextInput extends Phaser.GameObjects.Container {
         style.color = '#000000';
 
         this.offset = offset;
+
+        this.typeWithOnScreenKeyboard();
 
         // El texto por defecto aparece en cursiva y con cierto grado de transparencia
         this.defaultTextAlpha = 0.3;
@@ -152,6 +154,11 @@ export default class TextInput extends Phaser.GameObjects.Container {
                     yoyo: true
                 });
 
+                if (IS_TOUCH) {
+                    // Aparece el teclado en pantalla
+                    this.hiddenInput.focus();
+                }
+
                 this.isEnteringName = true;
 
                 // Habilitar el salir de la caja y dejar de escribir
@@ -164,41 +171,91 @@ export default class TextInput extends Phaser.GameObjects.Container {
             }
         })
 
-        // Escribir texto en la caja
-        this.scene.input.keyboard.on('keydown', (event) => {
-            // Si se esta escribiendo en la caja, se van procesando las letras que se pulsan en el teclado
-            if (this.isEnteringName) {
-                let hasChanged = false;
-                // Borrar caracter
-                if (event.keyCode === 8 && this.currentText.length > 0) {
-                    hasChanged = true;
-                    this.currentText = this.currentText.slice(0, -1);
-                }
-                // Escribir un nuevo caracter
-                // Nota: \s --> espacio
-                else if (event.key.length === 1 && event.key.match(/[a-zA-Z0-9\s]/)) {
-                    hasChanged = true;
-                    this.currentText += event.key;
-                }
+        this.setScale(scale);
 
-                // Se puede escribir en la caja mas caracteres de los que visualmente caben.
-                // Sin embargo, solo se van a mostrar los ultimos
-                if (hasChanged) {
-                    // Se comprueba si el texto actual se puede mostrar visualmente entero en la caja
-                    this.setText(this.currentText);
-                    let cont = 1;
-                    // Si no caben todos los caracteres, se van quitando uno a uno del principio
-                    // hasta encontrar cual es el maximo que se puede mostrar visualmente
-                    while (this.text.width >= this.fillImg.displayWidth - this.offset * 2) {
-                        let aux = this.currentText.slice(-(this.currentText.length - cont));
-                        this.setText(aux);
-                        ++cont;
+        this.typeWithKeyboard();
+    }
+
+    /**
+     * Escribir texto en la caja si la pantalla no es tactil (se usa el teclado fisico)
+     */
+    typeWithKeyboard() {
+        if (!IS_TOUCH) {
+            this.scene.input.keyboard.on('keydown', (event) => {
+
+                // Si se esta escribiendo en la caja, se van procesando las letras que se pulsan en el teclado
+                if (this.isEnteringName) {
+                    let hasChanged = false;
+                    // Borrar caracter
+                    if (event.keyCode === 8 && this.currentText.length > 0) {
+                        hasChanged = true;
+                        this.currentText = this.currentText.slice(0, -1);
+                    }
+                    // Escribir un nuevo caracter
+                    // Nota: \s --> espacio
+                    else if (event.key.length === 1 && event.key.match(/[a-zA-Z0-9\s]/)) {
+                        hasChanged = true;
+                        this.currentText += event.key;
+                    }
+
+                    // Se puede escribir en la caja mas caracteres de los que visualmente caben.
+                    // Sin embargo, solo se van a mostrar los ultimos
+                    if (hasChanged) {
+                        this.adjustTextToBox();
                     }
                 }
-            }
-        });
+            });
+        }
+    }
 
-        this.setScale(scale);
+    /**
+     * Escribir texto en la caja si la pantalla es tactil (se usa el teclado virtual)
+     * Se utiliza una caja de input del DOM para poder tener acceso al teclado virtual, pero
+     * se hace invisible la propia caja de input porque no interesa que se muestre
+     */
+    typeWithOnScreenKeyboard() {
+        if (IS_TOUCH) {
+            // Se crea la caja del input del DOM
+            this.hiddenInput = document.createElement('input');
+            // Se coloca en un lugar en pantalla que no genere mas espacio
+            this.hiddenInput.style.position = 'absolute';
+            this.hiddenInput.style.top = '100px';
+            this.hiddenInput.style.left = '100px';
+            // Se hace invisible: opacity a 0 para que no se vea, pero se siga pudiendo interactuar con ella
+            // y zIndex a -1 para que se coloque debajo de cualquier objeto (por si acaso)
+            this.hiddenInput.style.opacity = '0';
+            this.hiddenInput.style.zIndex = '-1';
+            // Se coloca en el documento
+            document.body.appendChild(this.hiddenInput);
+
+            this.hiddenInput.addEventListener('input', (event) => {
+                // El valor escrito en la caja de input del DOM escribe en la de la clase
+                this.currentText = event.target.value;
+                this.adjustTextToBox();
+            });
+
+            // Hacer que la aparicion del teclado virtual sea suave
+            this.hiddenInput.addEventListener('focus', () => {
+                this.hiddenInput.scrollIntoView({ behavior: 'smooth' });
+            });
+        }
+    }
+
+    /**
+     * Ajustar el texto al ancho de la caja, de modo que solo se muestran los caracteres que visualmente caben
+     * Se pueden escribir mas caracteres de los que visualmente caben, pero solo se van a mostrar los ultimos
+     */
+    adjustTextToBox() {
+        // Se comprueba si el texto actual se puede mostrar visualmente entero en la caja
+        this.setText(this.currentText);
+        let cont = 1;
+        // Si no caben todos los caracteres, se van quitando uno a uno del principio
+        // hasta encontrar cual es el maximo que se puede mostrar visualmente
+        while (this.text.width >= this.fillImg.displayWidth - this.offset * 2) {
+            let aux = this.currentText.slice(-(this.currentText.length - cont));
+            this.setText(aux);
+            ++cont;
+        }
     }
 
     deactiveInput() {
@@ -219,13 +276,16 @@ export default class TextInput extends Phaser.GameObjects.Container {
                 // texto, se vuelve al texto por defecto
                 if (!this.currentText) {
                     this.setDefaultText();
-                    //this.setText(this.defaultText);
-                    //this.text.setAlpha(this.defaultTextAlpha).setFontStyle('italic');
                 }
 
                 // Se desactiva el cursor
                 this.cursor.setAlpha(0);
                 this.cursorTween.pause();
+
+                if (IS_TOUCH) {
+                    // Desaparece el teclado en pantalla
+                    this.hiddenInput.blur();
+                }
             }
         })
     }
@@ -255,5 +315,14 @@ export default class TextInput extends Phaser.GameObjects.Container {
     setDefaultText() {
         this.setText(this.defaultText);
         this.text.setAlpha(this.defaultTextAlpha).setFontStyle('italic');
+    }
+
+    /**
+     * Eliminar la caja de input del DOM de la escena
+     * Nota: conviene usar este metodo al destruir la escena donde se ha creado este objeto
+     * porque la caja de input del DOM no se va a utilizar mas
+     */
+    remove() {
+        this.hiddenInput.remove();
     }
 }

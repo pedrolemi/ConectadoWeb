@@ -52,6 +52,7 @@ export default class FriendsTab extends Phaser.GameObjects.Group {
         // SI EL CULLING ESTUVIERA ACTIVADO LOS VOLVERIA A HACER VISIBLES
         this.listView = new VerticalListView(this.scene, 2.2 * this.scene.CANVAS_WIDTH / 4, 1.1 * this.scene.CANVAS_HEIGHT / 5, 1, 0, { width: aux.w, height: 467 }, null, false);
         this.add(this.listView);
+        // Se hace el init despues de insertar la listview en un contenedor para que todos los colliders esten correctamente ajustados
         this.listView.init();
         aux.destroy();
 

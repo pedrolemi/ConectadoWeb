@@ -11,7 +11,7 @@ export default class NightmareDay1 extends NightmareMinigame {
 
     create(params) {
         super.create(params);
-        
+
         // Guardar las sillas
         this.chairs = [];
         // Ultima silla tocada (para saber cual hay que hacer desaparecer)
@@ -21,7 +21,7 @@ export default class NightmareDay1 extends NightmareMinigame {
         // Dialogo que emiten alguna de las sillas
         this.seatNode = this.readNodes('seat');
         // Numero de sillas que emiten el dialogo
-        this.nChairsWithDialogues = 2;
+        this.nChairsWithDialogs = 2;
 
         let upperRow = {
             y: 2.8 * this.CANVAS_HEIGHT / 4,
@@ -77,7 +77,7 @@ export default class NightmareDay1 extends NightmareMinigame {
 
     onMinigameStarts() {
         // Se seleccionan dos silla aleatorias para que emitan dialogos
-        for (let i = 0; i < this.nChairsWithDialogues; ++i) {
+        for (let i = 0; i < this.nChairsWithDialogs; ++i) {
             let randIndex = Phaser.Math.Between(0, this.chairs.length - 1);
             let chair = this.chairs[randIndex];
             this.activateChairForMinigame(chair, this.seatNode);

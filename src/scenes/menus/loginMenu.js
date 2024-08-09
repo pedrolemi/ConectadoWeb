@@ -79,6 +79,12 @@ export default class LoginMenu extends Phaser.Scene {
         let passwordText = this.createTextInputSet(2.1 * CANVAS_WIDTH / 3, 1.80 * CANVAS_HEIGHT / 5 + offset, 0.60,
             passwordTranslation.sideText, passwordTranslation.defaultText);
 
+        this.events.on('shutdown', () => {
+            nameText.remove();
+            userText.remove();
+            passwordText.remove();
+        })
+
         // Texto de error si alguno de los parametros es incorrecto
         let errorTextStyle = { ...this.gameManager.textConfig };
         errorTextStyle.fontFamily = 'adventpro-regular';
@@ -166,7 +172,7 @@ export default class LoginMenu extends Phaser.Scene {
     createBackButton(x, y, tweenTime, scaleIncrease) {
         let button = this.add.image(x, y, 'backButton');
         let origScale = button.scale;
-        button.setInteractive({ useHandCursor: true},);
+        button.setInteractive({ useHandCursor: true },);
 
         button.on('pointerover', () => {
             this.tweens.add({

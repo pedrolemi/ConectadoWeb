@@ -179,20 +179,19 @@ export default class BootScene extends Phaser.Scene {
         this.load.atlas('avatars', 'avatars.png', 'avatars.json');
     }
 
-    loadPlugins(dialogsAndNamespaces, onlyNamespaces) {
-        let namespaces = [...onlyNamespaces];
+    loadi18next(dialogsAndNamespaces, onlyNamespaces) {
+        let namespaces = dialogsAndNamespaces.concat(onlyNamespaces);
 
-        dialogsAndNamespaces.forEach((dialog) => {
-            // Quitar extension
-            let dialogWithoutExtension = dialog.substr(0, dialog.lastIndexOf('.'));
-            // Cambiar / por \\
-            let dialogAux = dialogWithoutExtension.replace('/', '\\');
-            // Se juntan los archivos de dialogos, que tienen tanto archivos de estructura como namespaces,
-            // con los archivos que solo son namespaces
-            namespaces.push(dialogAux);
-        });
+        for (let i = 0; i < namespaces.length; ++i) {
+            // IMPORTANTE: EN EL PLUGIN I18NEXT PARA LAS RUTAS HAY QUE USAR '\\' EN VEZ DE '/'
+            namespaces[i] = namespaces[i].replace('/', '\\');
+        }
 
-        // Se inicializa el plugin i18next
+        // i18next es un framework de internalizacion ampiamente usado en javascript
+        // PAGINA DONDE DESCARGARLO -> https://rexrainbow.github.io/phaser3-rex-notes/docs/site/i18next/
+        // DOCUMENTACION OFICIAL -> https://www.i18next.com/
+
+        // Se inicializa el plugin
         // Inicialmente solo se carga el idioma inicial y los de respaldo
         // Luego, conforme se usan tambien se cargan el resto
         this.plugins.get('rextexttranslationplugin').initI18Next(this, {
@@ -202,11 +201,10 @@ export default class BootScene extends Phaser.Scene {
             fallbackLng: 'en',
             // Idiomas permitidos
             // Sin esta propiedad a la hora de buscar las traducciones se podria buscar
-            // en cualquier idioma (aunque o existiese)
-            supportedLngs: ['en', 'es', 'fr'],
+            // en cualquier idioma (aunque no existiese)
+            supportedLngs: ['en', 'es', 'fr', 'pt'],
             // Namespaces que se cargan para cada uno de los idiomas
             ns: namespaces,
-            preload: ['en', 'es', 'fr'],
             // Mostrar informacion de ayuda por consola
             debug: false,
             // Cargar las traducciones de un servidor especificado en vez de ponerlas directamente
@@ -243,15 +241,15 @@ export default class BootScene extends Phaser.Scene {
         */
 
         // Archivos de dialogos (estructura)
-        this.load.setPath('localization');
+        this.load.setPath('localization/structure');
 
         dialogsAndNamespaces.forEach((dialog) => {
-            // Quitar extension
-            let dialogWithoutExtension = dialog.substr(0, dialog.lastIndexOf('.'));
-            // Quedarse con la ultima parte del paht, que corresponde con el id del archivo
-            let subPaths = dialogWithoutExtension.split('/');
+            // Quedarse con la ultima parte del path, que corresponde con el id del archivo
+            let subPaths = dialog.split('/');
             let name = subPaths[subPaths.length - 1];
-            this.load.json(name, dialog);
+            // Ruta completa (dentro de la carpeta structure y con el extension .json)
+            let wholePath = dialog + ".json";
+            this.load.json(name, wholePath);
         });
 
     }
@@ -370,88 +368,88 @@ export default class BootScene extends Phaser.Scene {
         this.createLoadingBar();
 
         // Son tanto archivos de dialogos como namespaces del plugin i18next
-        // Ruta archivo dialogo --> test/dialog.json
-        // ID archivo dialogo --> dialog
+        // Ruta archivo dialogo --> structure/test/dialog.json
+        // Id archivo dialogo --> dialog
         // Namespace --> test\\dialog.json
         let dialogsAndNamespaces = [
             // Ordenador
-            'computer/posts.json',
-            'computer/requests.json',
+            'computer/posts',
+            'computer/requests',
 
             // Dialogos de todos los dias
-            'everydayDialog.json',
+            'everydayDialog',
 
             // Dia 1
-            'day1/bedroomMorningDay1.json',
-            'day1/livingroomMorningDay1.json',
-            'day1/playgroundMorningDay1.json',
-            'day1/corridorMorningDay1.json',
-            'day1/classFrontMorningDay1.json',
-            'day1/classBackMorningDay1.json',
-            'day1/classBackBreakDay1.json',
-            'day1/corridorBreakDay1.json',
-            'day1/playgroundBreakDay1.json',
-            'day1/livingroomAfternoonDay1.json',
-            'day1/bedroomAfternoonDay1.json',
-            'day1/nightmareDay1.json',
+            'day1/bedroomMorningDay1',
+            'day1/livingroomMorningDay1',
+            'day1/playgroundMorningDay1',
+            'day1/corridorMorningDay1',
+            'day1/classFrontMorningDay1',
+            'day1/classBackMorningDay1',
+            'day1/classBackBreakDay1',
+            'day1/corridorBreakDay1',
+            'day1/playgroundBreakDay1',
+            'day1/livingroomAfternoonDay1',
+            'day1/bedroomAfternoonDay1',
+            'day1/nightmareDay1',
 
             // Dia 2
-            'day2/bedroomMorningDay2.json',
-            'day2/livingroomMorningDay2.json',
-            'day2/playgroundMorningDay2.json',
-            'day2/corridorMorningDay2.json',
-            'day2/classBackBreakDay2.json',
-            'day2/corridorBreakDay2.json',
-            'day2/bathroomBreakDay2.json',
-            'day2/playgroundBreakDay2.json',
-            'day2/playgroundAfternoonDay2.json',
-            'day2/livingroomAfternoonDay2.json',
-            'day2/bedroomAfternoonDay2.json',
-            'day2/nightmareDay2.json',
+            'day2/bedroomMorningDay2',
+            'day2/livingroomMorningDay2',
+            'day2/playgroundMorningDay2',
+            'day2/corridorMorningDay2',
+            'day2/classBackBreakDay2',
+            'day2/corridorBreakDay2',
+            'day2/bathroomBreakDay2',
+            'day2/playgroundBreakDay2',
+            'day2/playgroundAfternoonDay2',
+            'day2/livingroomAfternoonDay2',
+            'day2/bedroomAfternoonDay2',
+            'day2/nightmareDay2',
 
             // Dia 3
-            'day3/bedroomMorningDay3.json',
-            'day3/livingroomMorningDay3.json',
-            'day3/playgroundMorningDay3.json',
-            'day3/corridorMorningDay3.json',
-            'day3/classCorridorAfternoonDay3.json',
-            'day3/bathroomAfternoonDay3.json',
-            'day3/livingroomAfternoonDay3.json',
-            'day3/bedroomAfternoonDay3.json',
-            'day3/nightmareDay3.json',
+            'day3/bedroomMorningDay3',
+            'day3/livingroomMorningDay3',
+            'day3/playgroundMorningDay3',
+            'day3/corridorMorningDay3',
+            'day3/classCorridorAfternoonDay3',
+            'day3/bathroomAfternoonDay3',
+            'day3/livingroomAfternoonDay3',
+            'day3/bedroomAfternoonDay3',
+            'day3/nightmareDay3',
 
             // Dia 4
-            'day4/bedroomMorningDay4.json',
-            'day4/livingroomMorningDay4.json',
-            'day4/playgroundMorningDay4.json',
-            'day4/stairsMorningDay4.json',
-            'day4/corridorMorningDay4.json',
-            'day4/classBackBreakDay4.json',
-            'day4/corridorBreakDay4.json',
-            'day4/bathroomBreakDay4.json',
-            'day4/stairsBreakDay4.json',
-            'day4/playgroundBreakDay4.json',
-            'day4/playgroundAfternoonDay4.json',
-            'day4/livingroomAfternoonDay4.json',
-            'day4/bedroomAfternoonDay4.json',
-            'day4/nightmareDay4.json',
+            'day4/bedroomMorningDay4',
+            'day4/livingroomMorningDay4',
+            'day4/playgroundMorningDay4',
+            'day4/stairsMorningDay4',
+            'day4/corridorMorningDay4',
+            'day4/classBackBreakDay4',
+            'day4/corridorBreakDay4',
+            'day4/bathroomBreakDay4',
+            'day4/stairsBreakDay4',
+            'day4/playgroundBreakDay4',
+            'day4/playgroundAfternoonDay4',
+            'day4/livingroomAfternoonDay4',
+            'day4/bedroomAfternoonDay4',
+            'day4/nightmareDay4',
 
             // Dia 5
-            'day5/bedroomMorningDay5.json',
-            'day5/playgroundMorningDay5.json',
-            'day5/stairsMorningDay5.json',
-            'day5/corridorMorningDay5.json',
-            'day5/classCorridorAfternoonDay5.json',
-            'day5/bathroomAfternoonDay5.json',
-            'day5/nightmareDay5.json'
+            'day5/bedroomMorningDay5',
+            'day5/playgroundMorningDay5',
+            'day5/stairsMorningDay5',
+            'day5/corridorMorningDay5',
+            'day5/classCorridorAfternoonDay5',
+            'day5/bathroomAfternoonDay5',
+            'day5/nightmareDay5'
         ]
         // Solo son namespaces del plugin i18next
-        // El nombre corresponde tal cual con el namespace (incluye \\ si es necesario)
+        // Namespace --> test\\dialog.json
         let onlyNamespaces = [
             // Menus
-            'menus\\titleMenu',
-            'menus\\loginMenu',
-            'menus\\creditsScene',
+            'menus/titleMenu',
+            'menus/loginMenu',
+            'menus/creditsScene',
 
             // Nombres
             'names',
@@ -460,7 +458,7 @@ export default class BootScene extends Phaser.Scene {
             'phoneInfo',
 
             // Ordenador
-            'computer\\computerInfo',
+            'computer/computerInfo',
 
             // Escenas de transicion
             'transitionScenes',
@@ -478,10 +476,10 @@ export default class BootScene extends Phaser.Scene {
         this.load.setPath('assets');
         this.load.image('defaultParticle', 'defaultParticle.png');
 
-        this.loadPlugins(dialogsAndNamespaces, onlyNamespaces);
+        this.loadi18next(dialogsAndNamespaces, onlyNamespaces);
 
-        // Indica al LoadPlugin que hay que cargar los assets que se encuentran en la cola
-        // Despues del preload este metodo se llama automaticamente, pero si se quieren cargar assets en otra parte hay que llamarlo manualmente
+        // Indicar a LoaderPlugin que hay que cargar los assets que se encuentran en la cola
+        // Nota: despues del preload este metodo se llama automaticamente, pero si se quieren cargar assets en otra parte hay que llamarlo manualmente
         this.load.start();
 
         this.load.once('complete', () => {
@@ -507,7 +505,7 @@ export default class BootScene extends Phaser.Scene {
                 frameRate: 3,
                 repeat: -1
             });
-            
+
             let gameManager = GameManager.create(this);
             gameManager.startLangMenu();
         })

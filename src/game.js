@@ -135,7 +135,7 @@ const config = {
         default: 'arcade',
         arcade: {
             // Visibilidad de las colisiones 
-            debug: true,
+            debug: false,
         },
     },
     plugins: {

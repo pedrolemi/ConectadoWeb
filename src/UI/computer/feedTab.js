@@ -27,8 +27,8 @@ export default class FeedTab extends Phaser.GameObjects.Group {
 
         // Se crea un post que se va a destruir de inmediato para poder calcular el ancho de la listview
         let aux = new Post(this.scene, 0, 0, 1);
-        this.listView = new VerticalListView(this.scene, 3 * this.scene.CANVAS_WIDTH / 5, this.scene.CANVAS_HEIGHT / 5, 1, 45,
-            { width: aux.w, height: 482 }, null, true, 50);
+        this.listView = new VerticalListView(this.scene, 3.045 * this.scene.CANVAS_WIDTH / 5, this.scene.CANVAS_HEIGHT / 5, 1, 45,
+            { width: aux.w * 1.32, height: 482 }, null, true, 50);
         aux.destroy();
         this.add(this.listView);
     }
@@ -52,7 +52,7 @@ export default class FeedTab extends Phaser.GameObjects.Group {
         }
         let name = this.scene.i18next.t(character, { ns: "names" });
 
-        let post = new Post(this.scene, 0, 0, 1, avatar, name, photo, description);
+        let post = new Post(this.scene, this.listView.w / 2, 0, 1, avatar, name, photo, description);
         post.setCommentNode(commentNode);
 
         post.setVisible(false);

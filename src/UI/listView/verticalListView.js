@@ -99,8 +99,12 @@ export default class VerticalListView extends Phaser.GameObjects.Container {
         // Cuando se anade un item al final de la lista, enfocarlo
         this.focusLastItem = focusLastItem;
 
-        // Deslizar la lista
+        // Tams de la lista
+        this.w = boundaries.w * scale;
+        // Alto de la listview  por si se usa como un item dentro de otra listview
         this.h = boundaries.height * scale;
+
+        // Deslizar la lista
         let previousDrag = 0;
         this.currentDrag = 0;
 

@@ -41,6 +41,11 @@ export default class LoginScreen extends Phaser.GameObjects.Group {
         let passwordTranslation = this.scene.i18next.t(screenName + ".passwordInput", { ns: this.scene.namespace, returnObjects: true });
         this.passwordInput = this.createTextInput(2.5 * this.scene.CANVAS_WIDTH / 4, subtitleText.y + subtitleText.displayHeight + 160, textInputScale, passwordTranslation.sideText, "Pass ");
 
+        this.scene.events.on('shutdown', () => {
+            this.userInput.remove();
+            this.passwordInput.remove();
+        })
+
         // Texto para informar que los datos introducidos son incorrectos
         let errorTextStyle = { ...this.scene.gameManager.textConfig };
         errorTextStyle.fontFamily = 'AUdimat-regular';

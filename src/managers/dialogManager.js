@@ -140,7 +140,6 @@ export default class DialogManager {
             this.textbox.activate(false);
             this.bgBlock.disableInteractive();
             this.setTalking(false);
-            this.bgBlock.disableInteractive();
         }
     }
 
@@ -286,6 +285,7 @@ export default class DialogManager {
             else if (this.currNode.type === "chatMessage") {
                 this.setTalking(false);
                 this.scene.phoneManager.phone.setChatNode(this.currNode.chat, this.currNode);
+                this.bgBlock.disableInteractive();
             }
             else if (this.currNode.type === "socialNetMessage") {
                 // Funcion comun (se anade el comentario al post y se procesa el nodo)

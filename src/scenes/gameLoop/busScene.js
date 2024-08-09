@@ -17,6 +17,9 @@ export default class BusScene extends BaseScene {
     create(params) {
         super.create(params);
 
+        // Hace invisible el UIManager entero
+        this.scene.setVisible(false, this.UIManager);
+
         let duration = 1500;
         let nextScene = "";
         
@@ -27,16 +30,13 @@ export default class BusScene extends BaseScene {
             nextScene = params.nextScene;
         }
 
-        // Desactiva la interfaz del telefono y anade el fondo y la animacion del autobus
-        this.phoneManager.activate(false);
         this.add.rectangle(0, 0, this.CANVAS_WIDTH, this.CANVAS_HEIGHT, 0x2B9E9E, 1).setOrigin(0, 0);        
         let bus = this.add.sprite(this.CANVAS_WIDTH / 2, this.CANVAS_HEIGHT /2, 'autobus').setOrigin(0.5, 0.5);
         bus.play('moving');
         
         // Inicia un temporizador y cuando acabe, pasara a la proxima escena
         setTimeout(() => {
-            this.phoneManager.activate(true);
-
+            this.scene.setVisible(true, this.UIManager);
             // La proxima escena sera el salon o el patio, y ambas escenas comienzan 
             // desde la izquierda tanto al llegar a casa como al llegar al colegio
             let nextParams = {

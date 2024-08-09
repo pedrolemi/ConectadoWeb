@@ -181,7 +181,7 @@ export default class TextInput extends Phaser.GameObjects.Container {
         });
 
         // Se usa el teclado fisico
-        window.addEventListener('mousedown', function () {
+        window.addEventListener('mousedown', () => {
             this.hiddenInput.blur();
         });
     }

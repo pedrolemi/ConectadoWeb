@@ -110,7 +110,7 @@ export default class NightmareMinigame extends NightmareBase {
             y: offset,
             scale: 0.48
         }
-        let shadow = this.createCharFromImage(tr, 'Alex', null, charName);
+        let shadow = this.createCharFromImage(tr, 'AlexChar', null, null, charName);
 
         shadow.char.setOrigin(0).setDepth(2);
         //shadow.char.setVisible(false);
@@ -120,8 +120,8 @@ export default class NightmareMinigame extends NightmareBase {
 
         // Se va a colocar en la derecha mirando hacia la izquierda
         if (this.left !== undefined && this.left === false) {
-            shadow.char.x = this.CANVAS_WIDTH - offset;
-            // Se rota la imagen (tb afecta a la pos del origen)
+            shadow.char.x = this.CANVAS_WIDTH - shadow.char.displayWidth - offset;
+            // Se rota la imagen (si es un frame de un atlas tb afecta al origen)
             shadow.char.flipX = true;
             shadow.portrait.flipX = true;
         }
@@ -135,25 +135,42 @@ export default class NightmareMinigame extends NightmareBase {
     /**
      * 
      * @param {Object} tr - posicion y escala del personaje 
-     * @param {String} sprite - id del personaje
+     * @param {String} sprite - sprite del personaje
+     * @param {String} atlas - atlas de donde obtener la imagen (opcional)
      * @param {Object} portraitOffset - desplazamiento de la posicion y la escala respecto a la por defecto
      *                                  (opcional, sino se usa la por defecto)
-     * @param {String} portraitName - nombre con el guardar el retrato del personaje (opcional, sino se usa el id del personaje) 
+     * @param {String} portraitName - nombre con el guardar el retrato del personaje (opcional, sino se usa el nombre del sprite) 
      * @returns {Object} - personaje y retrato
      */
-    createCharFromImage(tr, charId, portraitOffset, portraitName) {
-        let char = this.add.image(tr.x, tr.y, 'characters', charId);
-        char.setScale(tr.scale);
-
+    createCharFromImage(tr, sprite, atlas, portraitOffset, portraitName) {
         // Si no se ha indicado ningun offset, se usa el por defecto
         if (!portraitOffset) {
             portraitOffset = this.portraitOffset;
         }
-        let portrait = this.add.image(this.portraitTr.x + portraitOffset.x, this.portraitTr.y + portraitOffset.y, 'characters', charId);
+
+        let char = null;
+        let portrait = null;
+        let portraitPos = {
+            x: this.portraitTr.x + portraitOffset.x,
+            y: this.portraitTr.y + portraitOffset.y
+        }
+
+        if (atlas) {
+            char = this.add.image(tr.x, tr.y, atlas, sprite);
+            portrait = this.add.image(portraitPos.x, portraitPos.y, atlas, sprite);
+        }
+        else {
+            char = this.add.image(tr.x, tr.y, sprite);
+            portrait = this.add.image(portraitPos.x, portraitPos.y, sprite);
+        }
+
+        char.setScale(tr.scale);
+
         // Se situa en este origen porque es el unico que tienen las animaciones esqueletales
         portrait.setOrigin(0.5, 1);
         portrait.setScale(this.portraitTr.scale * portraitOffset.scale);
-        let name = charId;
+
+        let name = sprite;
         // Si se indica un nombre para el retrato, se usa ese
         if (portraitName) {
             name = portraitName;

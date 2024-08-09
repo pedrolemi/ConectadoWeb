@@ -1,104 +1,8 @@
 {
   "frames": {
-    "Alison": {
-      "frame": {
-        "x": 0,
-        "y": 0,
-        "w": 664,
-        "h": 2259
-      },
-      "rotated": false,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 8,
-        "w": 664,
-        "h": 2259
-      },
-      "sourceSize": {
-        "w": 669,
-        "h": 2270
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "Ana": {
-      "frame": {
-        "x": 664,
-        "y": 0,
-        "w": 783,
-        "h": 2304
-      },
-      "rotated": false,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 11,
-        "w": 783,
-        "h": 2304
-      },
-      "sourceSize": {
-        "w": 796,
-        "h": 2315
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "Jose": {
-      "frame": {
-        "x": 1447,
-        "y": 0,
-        "w": 889,
-        "h": 2366
-      },
-      "rotated": false,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 12,
-        "w": 889,
-        "h": 2366
-      },
-      "sourceSize": {
-        "w": 889,
-        "h": 2378
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "Guille": {
-      "frame": {
-        "x": 2336,
-        "y": 0,
-        "w": 720,
-        "h": 2399
-      },
-      "rotated": false,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 720,
-        "h": 2399
-      },
-      "sourceSize": {
-        "w": 720,
-        "h": 2404
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
     "Maria": {
       "frame": {
-        "x": 3056,
+        "x": 0,
         "y": 0,
         "w": 639,
         "h": 2416
@@ -120,24 +24,96 @@
         "y": 0.5
       }
     },
-    "Alex": {
+    "Guille": {
       "frame": {
-        "x": 3695,
+        "x": 639,
         "y": 0,
-        "w": 921,
-        "h": 2449
+        "w": 720,
+        "h": 2399
       },
       "rotated": false,
       "trimmed": true,
       "spriteSourceSize": {
         "x": 0,
-        "y": 14,
-        "w": 921,
-        "h": 2449
+        "y": 0,
+        "w": 720,
+        "h": 2399
       },
       "sourceSize": {
-        "w": 932,
-        "h": 2463
+        "w": 720,
+        "h": 2404
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Jose": {
+      "frame": {
+        "x": 1359,
+        "y": 0,
+        "w": 889,
+        "h": 2366
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 12,
+        "w": 889,
+        "h": 2366
+      },
+      "sourceSize": {
+        "w": 889,
+        "h": 2378
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Ana": {
+      "frame": {
+        "x": 2248,
+        "y": 0,
+        "w": 783,
+        "h": 2304
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 11,
+        "w": 783,
+        "h": 2304
+      },
+      "sourceSize": {
+        "w": 796,
+        "h": 2315
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Alison": {
+      "frame": {
+        "x": 3031,
+        "y": 0,
+        "w": 664,
+        "h": 2259
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 8,
+        "w": 664,
+        "h": 2259
+      },
+      "sourceSize": {
+        "w": 669,
+        "h": 2270
       },
       "pivot": {
         "x": 0.5,
@@ -148,11 +124,11 @@
   "meta": {
     "app": "http://free-tex-packer.com",
     "version": "0.6.7",
-    "image": "characters.png",
+    "image": "someCharacters.png",
     "format": "RGBA8888",
     "size": {
-      "w": 4616,
-      "h": 2449
+      "w": 3695,
+      "h": 2416
     },
     "scale": 1
   }

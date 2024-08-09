@@ -259,12 +259,16 @@ export default class BootScene extends Phaser.Scene {
     }
 
     loadCharacters() {
-        this.load.setPath('assets/characters');
+        // Personajes planos sin animaciones
+        this.load.setPath('assets/characters/plains');
 
-        this.load.atlas('characters', 'characters.png', 'characters.json');
-        this.load.image('teacher', 'teacher.png');
+        this.load.atlas('someCharacters', 'someCharacters.png', 'someCharacters.json');
+        this.load.image('teacherChar', 'teacher.png');
+        this.load.image('AlexChar', 'Alex.png');
 
         // Personajes y sus respectivas animaciones esqueletales de Spine
+        this.load.setPath('assets/characters/Spine');
+
         // [Idle01, IdleBase, Walk]
         this.load.spine('mom', 'mom/Front.json', 'mom/Front.atlas');
 

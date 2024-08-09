@@ -8,7 +8,7 @@ export default class ClassFrontMorningDay3 extends ClassFrontBase {
     create(params) {
         super.create(params);
 
-        let teacher = this.add.image(this.portraitTr.x, this.portraitTr.y + 20, 'teacher').setOrigin(0.5, 1).setScale(this.portraitTr.scale);
+        let teacher = this.add.image(this.portraitTr.x, this.portraitTr.y + 20, 'teacherChar').setOrigin(0.5, 1).setScale(this.portraitTr.scale);
         this.portraits.set("teacher", teacher);
 
         // Si no se ha llegado tarde, pone el nodo de dialogo al interactuar con las mesas

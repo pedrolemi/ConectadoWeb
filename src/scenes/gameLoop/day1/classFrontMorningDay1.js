@@ -9,7 +9,7 @@ export default class ClassFrontMorningDay1 extends ClassFrontBase {
     create(params) {
         super.create(params);
 
-        let teacher = this.add.image(this.portraitTr.x, this.portraitTr.y + 20, 'teacher').setOrigin(0.5, 1).setScale(this.portraitTr.scale);
+        let teacher = this.add.image(this.portraitTr.x, this.portraitTr.y + 20, 'teacherChar').setOrigin(0.5, 1).setScale(this.portraitTr.scale);
         this.portraits.set("teacher", teacher);
 
         // Si no se ha llegado tarde, solo se coloca a Ana en clase

@@ -36,7 +36,7 @@ export default class NightmareDay3 extends NightmareMinigame {
             y: 2.95 * this.CANVAS_HEIGHT / 4,
             scale: 0.125
         }
-        let portraitOffset = {...this.portraitOffset};
+        let portraitOffset = { ...this.portraitOffset };
         portraitOffset.x += 5;
         portraitOffset.scale = 1.54;
         portraitOffset.y += -20
@@ -47,7 +47,7 @@ export default class NightmareDay3 extends NightmareMinigame {
             y: 7.8 * this.CANVAS_HEIGHT / 9,
             scale: 0.17
         }
-        portraitOffset = {...this.portraitOffset};
+        portraitOffset = { ...this.portraitOffset };
         portraitOffset.y -= 20;
         this.createClassmate(tr, 'Alison', portraitOffset);
 
@@ -56,7 +56,7 @@ export default class NightmareDay3 extends NightmareMinigame {
             y: this.CANVAS_HEIGHT - 17,
             scale: 0.182
         }
-        portraitOffset = {...this.portraitOffset};
+        portraitOffset = { ...this.portraitOffset };
         portraitOffset.y -= 23;
         portraitOffset.scale = 1.558;
         this.createClassmate(tr, 'Ana', portraitOffset);
@@ -105,7 +105,7 @@ export default class NightmareDay3 extends NightmareMinigame {
      * Crear personaje que aparece en la pesadillas con el que se puede interactuar
      */
     createClassmate(tr, charName, portraitOffset) {
-        let character = this.createCharFromImage(tr, charName, portraitOffset);
+        let character = this.createCharFromImage(tr, charName, 'someCharacters', portraitOffset);
         character.char.setOrigin(0.5, 1);
         character.char.setVisible(false);
 

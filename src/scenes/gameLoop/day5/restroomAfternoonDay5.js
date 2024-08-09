@@ -27,8 +27,8 @@ export default class RestroomAfternoonDay5 extends RestroomBase {
             y: 1370 * this.scale,
             scale: 0.16
         };
-        let teacher = this.add.image(tr.x, tr.y, 'teacher').setOrigin(0.5, 1).setScale(tr.scale);
-        let teacherPortrait = this.add.image(this.portraitTr.x, this.portraitTr.y + 20, 'teacher').setOrigin(0.5, 1).setScale(this.portraitTr.scale);
+        let teacher = this.add.image(tr.x, tr.y, 'teacherChar').setOrigin(0.5, 1).setScale(tr.scale);
+        let teacherPortrait = this.add.image(this.portraitTr.x, this.portraitTr.y + 20, 'teacherChar').setOrigin(0.5, 1).setScale(this.portraitTr.scale);
         this.portraits.set("teacher", teacherPortrait);
         teacher.visible = false;
 

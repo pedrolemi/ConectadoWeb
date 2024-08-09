@@ -51,6 +51,7 @@ export default class MessageBox extends Phaser.GameObjects.Container {
         // Configuracion de texto para la el texto del mensaje
         let textConfig = { ...scene.gameManager.textConfig };
         textConfig.fontFamily = 'roboto-regular';
+        textConfig.fontStyle = 'bold';
         textConfig.fontSize = 15 + 'px';
         textConfig.color = '#000';
         textConfig.wordWrap = {

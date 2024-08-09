@@ -613,29 +613,56 @@ export default class BaseScene extends Phaser.Scene {
         closed.setInteractive({ useHandCursor: true });
         opened.setInteractive({ useHandCursor: true });
 
+        // Oculta la imagen de la puerta abierta
         opened.visible = false;
+
+        // Establece el tipo de evento de puntero segun si
+        // hay que hacer click o pasar el raton por encima
         let openEvt = 'pointerdown';
         let closeEvt = 'pointerdown';
-
         if (!click) {
             openEvt = 'pointerover';
             closeEvt = 'pointerout';
         }
 
+        // Al producir el evento de puntero en la puerta cerrada, se oculta la 
+        // imagen de la puerta cerrada y se muestra la imagen de la puerta abierta.
         closed.on(openEvt, () => {
             closed.visible = false;
             opened.visible = true;
         });
+        // Al producir el evento de puntero en la puerta abierta, se oculta la
+        // imagen de la puerta abierta y se muestra la imagen de la puerta cerrada.
         opened.on(closeEvt, () => {
             opened.visible = false;
             closed.visible = true;
         });
-
+        
+        // Al pulsar la puerta abierta, se produce el evento indicado
         opened.on('pointerdown', () => {
             if (onClick !== null && typeof onClick === 'function') {
                 onClick();
             }
-        })
+        });
+
+
+        // Al pulsar la puerta cerrada, si se esta usando input tactil, se abre la puerta por un 
+        // momento, se produce el evento indicado despues de que se abra la puerta, y luego se cierra
+        closed.on('pointerdown', () => {
+            if (IS_TOUCH) {
+                opened.visible = true;
+                closed.visible = false;
+                setTimeout(() => {
+                    if (onClick !== null && typeof onClick === 'function') {
+                        onClick();
+                    }
+                    if (!click) {
+                        opened.visible = false;
+                        closed.visible = true;
+                    }
+                }, 100);
+            }
+        });
     }
 
 }

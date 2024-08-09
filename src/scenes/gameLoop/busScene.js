@@ -17,7 +17,7 @@ export default class BusScene extends BaseScene {
     create(params) {
         super.create(params);
 
-        let duration = 2000;
+        let duration = 1500;
         let nextScene = "";
         
         if (params.duration) {

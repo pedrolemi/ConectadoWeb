@@ -13,12 +13,12 @@ export default class CorridorAfternoonDay5 extends CorridorBase {
         this.class = "";
 
         if (this.gameManager.getUserInfo().gender === "male") {
-            this.boysBathroom = "BathroomAfternoonDay5";
-            this.girlsBathroom = "OppositeBathroom";
+            this.boysRestroom = "RestroomAfternoonDay5";
+            this.girlsRestroom = "OppositeRestroom";
         }
         else {
-            this.girlsBathroom = "BathroomAfternoonDay5";
-            this.boysBathroom = "OppositeBathroom";
+            this.girlsRestroom = "RestroomAfternoonDay5";
+            this.boysRestroom = "OppositeRestroom";
         }
 
         // Cambia la hora del movil

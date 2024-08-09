@@ -27,7 +27,7 @@
             "type": "condition",
             "conditions": [
                 {
-                    "next": "maleBathroom",
+                    "next": "maleRestroom",
                     "gender": {
                         "value": "male",
                         "operator": "equal",
@@ -36,7 +36,7 @@
                     }
                 },
                 {
-                    "next": "femaleBathroom",
+                    "next": "femaleRestroom",
                     "gender": {
                         "value": "female",
                         "operator": "equal",
@@ -47,18 +47,18 @@
             ]
         },
 
-        "maleBathroom": {
+        "maleRestroom": {
             "type": "text",
             "character": "player",
             "next": "ask"
         },
 
-        "femaleBathroom": {
+        "femaleRestroom": {
             "type": "text",
             "character": "player",
-            "next": "explainBathroom"
+            "next": "explainRestroom"
         },
-        "explainBathroom": {
+        "explainRestroom": {
             "type": "text",
             "character": "Guille",
             "next": "ask"

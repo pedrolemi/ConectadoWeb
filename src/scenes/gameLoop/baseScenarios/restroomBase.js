@@ -1,7 +1,7 @@
 
 import BaseScene from '../baseScene.js';
 
-export default class BathroomBase extends BaseScene {
+export default class RestroomBase extends BaseScene {
     /**
      * Escena base para los banos. Coloca los elementos que se mantienen igual todos los dias
      * @extends BaseScene
@@ -9,9 +9,9 @@ export default class BathroomBase extends BaseScene {
      */
     constructor(name) {
         if (!name) {
-            name = "BathroomBase";
+            name = "RestroomBase";
         }
-        super(name, 'bathroom');
+        super(name, 'restroom');
     }
 
     create(params) {
@@ -20,7 +20,7 @@ export default class BathroomBase extends BaseScene {
         this.corridor = "";
 
         // Pone la imagen de fondo con las dimensiones del canvas
-        let bg = this.add.image(0, 0, 'bathroomBg').setOrigin(0, 0);
+        let bg = this.add.image(0, 0, 'restroomBg').setOrigin(0, 0);
         this.scale = this.CANVAS_HEIGHT / bg.height;
         bg.setScale(this.scale);
 
@@ -32,8 +32,8 @@ export default class BathroomBase extends BaseScene {
             x: 1003 * this.scale,
             y: 168 * this.scale
         };
-        let doorClosed = this.add.image(doorPos.x, doorPos.y, this.atlasName, 'bathroomDoorClosed').setOrigin(0, 0).setScale(this.scale);
-        let doorOpened = this.add.image(doorPos.x, doorPos.y, this.atlasName, 'bathroomDoorOpened').setOrigin(0, 0).setScale(this.scale);
+        let doorClosed = this.add.image(doorPos.x, doorPos.y, this.atlasName, 'restroomDoorClosed').setOrigin(0, 0).setScale(this.scale);
+        let doorOpened = this.add.image(doorPos.x, doorPos.y, this.atlasName, 'restroomDoorOpened').setOrigin(0, 0).setScale(this.scale);
         // Al hacer click, se pasara a la escena del pasillo sin eliminar esta escena
         super.toggleDoor(doorClosed, doorOpened, () => {
             let params = {
@@ -44,14 +44,14 @@ export default class BathroomBase extends BaseScene {
 
 
         // Puerta del primer cubiculo
-        let stall1DoorClosed = this.add.image(1911 * this.scale, 296 * this.scale, this.atlasName, 'bathroomStall1Closed').setOrigin(0, 0).setScale(this.scale);
-        let stall1DoorOpened = this.add.image(1742 * this.scale, 276 * this.scale, this.atlasName, 'bathroomStall1Opened').setOrigin(0, 0).setScale(this.scale);
+        let stall1DoorClosed = this.add.image(1911 * this.scale, 296 * this.scale, this.atlasName, 'restroomStall1Closed').setOrigin(0, 0).setScale(this.scale);
+        let stall1DoorOpened = this.add.image(1742 * this.scale, 276 * this.scale, this.atlasName, 'restroomStall1Opened').setOrigin(0, 0).setScale(this.scale);
         super.toggleDoor(stall1DoorClosed, stall1DoorOpened);
 
         // Puerta del segundo cubiculo
         this.stall2 = this.add.image(2155 * this.scale, -6 * this.scale, this.atlasName, 'stall2').setOrigin(0, 0).setScale(this.scale);
-        let stall2DoorClosed = this.add.image(2197 * this.scale, 244 * this.scale, this.atlasName, 'bathroomStall2Closed').setOrigin(0, 0).setScale(this.scale);
-        let stall2DoorOpened = this.add.image(1844 * this.scale, 240 * this.scale, this.atlasName, 'bathroomStall2Opened').setOrigin(0, 0).setScale(this.scale);
+        let stall2DoorClosed = this.add.image(2197 * this.scale, 244 * this.scale, this.atlasName, 'restroomStall2Closed').setOrigin(0, 0).setScale(this.scale);
+        let stall2DoorOpened = this.add.image(1844 * this.scale, 240 * this.scale, this.atlasName, 'restroomStall2Opened').setOrigin(0, 0).setScale(this.scale);
         super.toggleDoor(stall2DoorClosed, stall2DoorOpened);
 
         // Tercer cubiculo (puerta cerrada siempre)

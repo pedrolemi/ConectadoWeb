@@ -16,12 +16,12 @@ export default class CorridorBreakDay2 extends CorridorBase {
         };
 
         if (this.gameManager.getUserInfo().gender === "male") {
-            this.boysBathroom = "BathroomBreakDay2";
-            this.girlsBathroom = "OppositeBathroom";
+            this.boysRestroom = "RestroomBreakDay2";
+            this.girlsRestroom = "OppositeRestroom";
         }
         else {
-            this.girlsBathroom = "BathroomBreakDay2";
-            this.boysBathroom = "OppositeBathroom";
+            this.girlsRestroom = "RestroomBreakDay2";
+            this.boysRestroom = "OppositeRestroom";
         }
 
         // Cambia la hora del movil

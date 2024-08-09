@@ -141,7 +141,7 @@
 
     
     "corridor": {
-        "bathroom": {
+        "restroom": {
             "root": {
                 "type": "text",
                 "character": "player"

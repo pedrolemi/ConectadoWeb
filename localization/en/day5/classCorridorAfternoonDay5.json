@@ -6,8 +6,8 @@
             },
             {
                 "text": "",
-                "text_male":"Should I trust Alex and go to the toilet to talk to him?",
-                "text_female": "Should I trust Alex and go to the toilet to talk to Anna?"
+                "text_male":"Should I trust Alex and go to the restroom to talk to him?",
+                "text_female": "Should I trust Alex and go to the restroom to talk to Anna?"
             },
             {
                 "text": "If I go, will it be over once for all?"
@@ -25,7 +25,7 @@
     "alex_stairs": {
         "root": [
             {
-                "text": "Really? Don't tell me you were leaving without stopping by the toilet."
+                "text": "Really? Don't tell me you were leaving without stopping by the restroom."
             },
             {
                 "text": "Think about it as an opportunity to fix everything. C'mon... I'll walk you there."
@@ -35,7 +35,7 @@
 
     "alex_corridor": {
         "root": {
-            "text": "C'mon, get in the toilet."
+            "text": "C'mon, get in the restroom."
         }
     }
 }

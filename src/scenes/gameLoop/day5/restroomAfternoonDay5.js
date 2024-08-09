@@ -1,9 +1,9 @@
 
-import BathroomBase from '../baseScenarios/bathroomBase.js';
+import RestroomBase from '../baseScenarios/restroomBase.js';
 
-export default class BathroomAfternoonDay5 extends BathroomBase {
+export default class RestroomAfternoonDay5 extends RestroomBase {
     constructor() {
-        super("BathroomAfternoonDay5");
+        super("RestroomAfternoonDay5");
     }
 
     create(params) {
@@ -15,7 +15,7 @@ export default class BathroomAfternoonDay5 extends BathroomBase {
             x: 1003 * this.scale,
             y: 168 * this.scale
         };
-        let doorClosed = this.add.image(doorPos.x, doorPos.y, this.atlasName, 'bathroomDoorClosed').setOrigin(0, 0).setScale(this.scale);
+        let doorClosed = this.add.image(doorPos.x, doorPos.y, this.atlasName, 'restroomDoorClosed').setOrigin(0, 0).setScale(this.scale);
         doorClosed.setInteractive({ useHandCursor: true });
         doorClosed.on('pointerdown', () => {
             this.dialogManager.setNode(doorNode);
@@ -32,9 +32,9 @@ export default class BathroomAfternoonDay5 extends BathroomBase {
         this.portraits.set("teacher", teacherPortrait);
         teacher.visible = false;
 
-        let nodes = this.cache.json.get('bathroomAfternoonDay5');
-        let doorNode = super.readNodes(nodes, "day5\\bathroomAfternoonDay5", "door_enter", true);
-        let enterNode = super.readNodes(nodes, "day5\\bathroomAfternoonDay5", "enter", true);
+        let nodes = this.cache.json.get('restroomAfternoonDay5');
+        let doorNode = super.readNodes(nodes, "day5\\restroomAfternoonDay5", "door_enter", true);
+        let enterNode = super.readNodes(nodes, "day5\\restroomAfternoonDay5", "enter", true);
 
         let BLACKOUT_TIMER = 15 * 1000;
 
@@ -100,9 +100,9 @@ export default class BathroomAfternoonDay5 extends BathroomBase {
                 this.dialogManager.setNode(floorNode);
             });
 
-            doorNode = super.readNodes(nodes, "day5\\bathroomAfternoonDay5", "door_locked", true);
-            let sinkNode = super.readNodes(nodes, "day5\\bathroomAfternoonDay5", "sink", true);
-            let floorNode = super.readNodes(nodes, "day5\\bathroomAfternoonDay5", "floor", true);
+            doorNode = super.readNodes(nodes, "day5\\restroomAfternoonDay5", "door_locked", true);
+            let sinkNode = super.readNodes(nodes, "day5\\restroomAfternoonDay5", "sink", true);
+            let floorNode = super.readNodes(nodes, "day5\\restroomAfternoonDay5", "floor", true);
 
             // Anade un temporizador durante el que el jugador puede interactuar con los elementos del fondo.
             // Cuando acabe el temporizador, volveran las luces, aparecera el profesor y comenzara su dialogo 
@@ -110,7 +110,7 @@ export default class BathroomAfternoonDay5 extends BathroomBase {
                 black.visible = false;
                 this.dialogManager.textbox.activate(false, () => {
                     this.dialogManager.setNode(null);
-                    let lightOnNode = super.readNodes(nodes, "day5\\bathroomAfternoonDay5", "lightsOn", true);
+                    let lightOnNode = super.readNodes(nodes, "day5\\restroomAfternoonDay5", "lightsOn", true);
                     this.dialogManager.setNode(lightOnNode);
 
                     doorNode = null;

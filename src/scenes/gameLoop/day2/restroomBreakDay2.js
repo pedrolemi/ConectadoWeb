@@ -1,17 +1,17 @@
 
-import BathroomBase from '../baseScenarios/bathroomBase.js';
+import RestroomBase from '../baseScenarios/restroomBase.js';
 
-export default class BathroomBreakDay2 extends BathroomBase {
+export default class RestroomBreakDay2 extends RestroomBase {
     constructor() {
-        super("BathroomBreakDay2");
+        super("RestroomBreakDay2");
     }
 
     create(params) {
         super.create(params);
         
 
-        let nodes = this.cache.json.get('bathroomBreakDay2');
-        let sinkNode = super.readNodes(nodes, "day2\\bathroomBreakDay2", "sink", true);
+        let nodes = this.cache.json.get('restroomBreakDay2');
+        let sinkNode = super.readNodes(nodes, "day2\\restroomBreakDay2", "sink", true);
 
         // Forma geometrica para poder interactuar con los lavabos
         let graphics = this.add.graphics(0, 0);

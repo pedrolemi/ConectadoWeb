@@ -121,7 +121,7 @@
     },
 
     "corridor": {
-        "bathroom": {
+        "restroom": {
             "root": {
                 "text": "",
                 "text_male": "Je ne peux pas y aller, ce sont les toilettes des filles.",

@@ -10,8 +10,8 @@ import CreditsScene from './scenes/menus/creditsScene.js';
 import TextOnlyScene from './scenes/gameLoop/textOnlyScene.js';
 import AlarmScene from './scenes/gameLoop/alarmScene.js';
 import BusScene from './scenes/gameLoop/busScene.js';
-import BathroomBase from './scenes/gameLoop/baseScenarios/bathroomBase.js';
-import OppositeBathroom from './scenes/gameLoop/oppositeBathroom.js';
+import RestroomBase from './scenes/gameLoop/baseScenarios/restroomBase.js';
+import OppositeRestroom from './scenes/gameLoop/oppositeRestroom.js';
 
 // Dia 1
 import BedroomMorningDay1 from './scenes/gameLoop/day1/bedroomMorningDay1.js';
@@ -39,7 +39,7 @@ import CorridorMorningDay2 from './scenes/gameLoop/day2/corridorMorningDay2.js';
 import ClassFrontMorningDay2 from './scenes/gameLoop/day2/classFrontMorningDay2.js';
 import ClassBackBreakDay2 from './scenes/gameLoop/day2/classBackBreakDay2.js';
 import CorridorBreakDay2 from './scenes/gameLoop/day2/corridorBreakDay2.js';
-import BathroomBreakDay2 from './scenes/gameLoop/day2/bathroomBreakDay2.js';
+import RestroomBreakDay2 from './scenes/gameLoop/day2/restroomBreakDay2.js';
 import StairsBreakDay2 from './scenes/gameLoop/day2/stairsBreakDay2.js';
 import PlaygroundBreakDay2 from './scenes/gameLoop/day2/playgroundBreakDay2.js';
 import PlaygroundAfternoonDay2 from './scenes/gameLoop/day2/playgroundAfternoonDay2.js';
@@ -56,7 +56,7 @@ import CorridorMorningDay3 from './scenes/gameLoop/day3/corridorMorningDay3.js';
 import ClassFrontMorningDay3 from './scenes/gameLoop/day3/classFrontMorningDay3.js';
 import ClassBackAfternoonDay3 from './scenes/gameLoop/day3/classBackAfternoonDay3.js';
 import CorridorAfternoonDay3 from './scenes/gameLoop/day3/corridorAfternoonDay3.js';
-import BathroomAfternoonDay3 from './scenes/gameLoop/day3/bathroomAfternoonDay3.js';
+import RestroomAfternoonDay3 from './scenes/gameLoop/day3/restroomAfternoonDay3.js';
 import StairsAfternoonDay3 from './scenes/gameLoop/day3/stairsAfternoonDay3.js';
 import PlaygroundAfternoonDay3 from './scenes/gameLoop/day3/playgroundAfternoonDay3.js';
 import LivingroomAfternoonDay3 from './scenes/gameLoop/day3/livingroomAfternoonDay3.js';
@@ -89,7 +89,7 @@ import ClassFrontMorningDay5 from './scenes/gameLoop/day5/classFrontMorningDay5.
 import ClassBackAfternoonDay5 from './scenes/gameLoop/day5/classBackAfternoonDay5.js';
 import CorridorAfternoonDay5 from './scenes/gameLoop/day5/corridorAfternoonDay5.js';
 import StairsAfternoonDay5 from './scenes/gameLoop/day5/stairsAfternoonDay5.js';
-import BathroomAfternoonDay5 from './scenes/gameLoop/day5/bathroomAfternoonDay5.js';
+import RestroomAfternoonDay5 from './scenes/gameLoop/day5/restroomAfternoonDay5.js';
 import NightmareDay5 from './scenes/gameLoop/day5/nightmareDay5.js';
 
 // UI
@@ -112,17 +112,17 @@ const config = {
         // Menus
         LanguageMenu, TitleMenu, LoginMenu, CreditsScene,
         // Escenas bases
-        AlarmScene, BathroomBase, BusScene, OppositeBathroom, TextOnlyScene,
+        AlarmScene, RestroomBase, BusScene, OppositeRestroom, TextOnlyScene,
         // Escenas dia 1
         BedroomMorningDay1, LivingroomMorningDay1, PlaygroundMorningDay1, StairsMorningDay1, CorridorMorningDay1, ClassFrontMorningDay1, ClassBackMorningDay1, ClassBackBreakDay1, CorridorBreakDay1, StairsBreakDay1, PlaygroundBreakDay1, PlaygroundAfternoonDay1, LivingroomAfternoonDay1, BedroomAfternoonDay1, NightmareDay1,
         // Escenas dia 2
-        BedroomMorningDay2, LivingroomMorningDay2, PlaygroundMorningDay2, StairsMorningDay2, CorridorMorningDay2, ClassFrontMorningDay2, ClassBackBreakDay2, CorridorBreakDay2, BathroomBreakDay2, StairsBreakDay2, PlaygroundBreakDay2, PlaygroundAfternoonDay2, LivingroomAfternoonDay2, BedroomAfternoonDay2, NightmareDay2,
+        BedroomMorningDay2, LivingroomMorningDay2, PlaygroundMorningDay2, StairsMorningDay2, CorridorMorningDay2, ClassFrontMorningDay2, ClassBackBreakDay2, CorridorBreakDay2, RestroomBreakDay2, StairsBreakDay2, PlaygroundBreakDay2, PlaygroundAfternoonDay2, LivingroomAfternoonDay2, BedroomAfternoonDay2, NightmareDay2,
         // Escenas dia 3
-        BedroomMorningDay3, LivingroomMorningDay3, PlaygroundMorningDay3, StairsMorningDay3, CorridorMorningDay3, ClassFrontMorningDay3, ClassBackAfternoonDay3, CorridorAfternoonDay3, BathroomAfternoonDay3, StairsAfternoonDay3, PlaygroundAfternoonDay3, LivingroomAfternoonDay3, BedroomAfternoonDay3, NightmareDay3,
+        BedroomMorningDay3, LivingroomMorningDay3, PlaygroundMorningDay3, StairsMorningDay3, CorridorMorningDay3, ClassFrontMorningDay3, ClassBackAfternoonDay3, CorridorAfternoonDay3, RestroomAfternoonDay3, StairsAfternoonDay3, PlaygroundAfternoonDay3, LivingroomAfternoonDay3, BedroomAfternoonDay3, NightmareDay3,
         // Escenas dia 4
         BedroomMorningDay4, LivingroomMorningDay4, PlaygroundMorningDay4, StairsMorningDay4, CorridorMorningDay4, ClassFrontMorningDay4, ClassBackBreakDay4, CorridorBreakDay4, StairsBreakDay4, PlaygroundBreakDay4, PlaygroundAfternoonDay4, LivingroomAfternoonDay4, BedroomAfternoonDay4, NightmareDay4,
         // Escenas dia 5
-        BedroomMorningDay5, LivingroomMorningDay5, PlaygroundMorningDay5, StairsMorningDay5, CorridorMorningDay5, ClassFrontMorningDay5, ClassBackAfternoonDay5, CorridorAfternoonDay5, StairsAfternoonDay5, BathroomAfternoonDay5, NightmareDay5,
+        BedroomMorningDay5, LivingroomMorningDay5, PlaygroundMorningDay5, StairsMorningDay5, CorridorMorningDay5, ClassFrontMorningDay5, ClassBackAfternoonDay5, CorridorAfternoonDay5, StairsAfternoonDay5, RestroomAfternoonDay5, NightmareDay5,
         // UI
         ComputerScene, UIManager],
     autoFocus: true,

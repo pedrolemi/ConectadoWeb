@@ -40,6 +40,11 @@ export default class DialogManager {
             if (this.textbox.box.input.enabled && this.textbox.box.alpha > 0) {
                 this.nextDialog();
             }
+
+            if (!this.currNode) {
+                this.textbox.activate(false);
+                this.bgBlock.disableInteractive();
+            }
         });
 
         this.textbox.activate(false);

@@ -323,8 +323,8 @@ export default class BootScene extends Phaser.Scene {
         this.load.atlas('corridor', 'corridor/corridor.png', 'corridor/corridor.json');
 
         // Banos
-        this.load.image('bathroomBg', 'bathroom/bathroomBg.png');
-        this.load.atlas('bathroom', 'bathroom/bathroom.png', 'bathroom/bathroom.json');
+        this.load.image('restroomBg', 'restroom/restroomBg.png');
+        this.load.atlas('restroom', 'restroom/restroom.png', 'restroom/restroom.json');
 
         // Clase desde el frente
         this.load.image('classFrontBg', 'classFront/classFrontBg.png');
@@ -405,7 +405,7 @@ export default class BootScene extends Phaser.Scene {
             'day2/corridorMorningDay2',
             'day2/classBackBreakDay2',
             'day2/corridorBreakDay2',
-            'day2/bathroomBreakDay2',
+            'day2/restroomBreakDay2',
             'day2/playgroundBreakDay2',
             'day2/playgroundAfternoonDay2',
             'day2/livingroomAfternoonDay2',
@@ -418,7 +418,7 @@ export default class BootScene extends Phaser.Scene {
             'day3/playgroundMorningDay3',
             'day3/corridorMorningDay3',
             'day3/classCorridorAfternoonDay3',
-            'day3/bathroomAfternoonDay3',
+            'day3/restroomAfternoonDay3',
             'day3/livingroomAfternoonDay3',
             'day3/bedroomAfternoonDay3',
             'day3/nightmareDay3',
@@ -431,7 +431,7 @@ export default class BootScene extends Phaser.Scene {
             'day4/corridorMorningDay4',
             'day4/classBackBreakDay4',
             'day4/corridorBreakDay4',
-            'day4/bathroomBreakDay4',
+            'day4/restroomBreakDay4',
             'day4/stairsBreakDay4',
             'day4/playgroundBreakDay4',
             'day4/playgroundAfternoonDay4',
@@ -445,7 +445,7 @@ export default class BootScene extends Phaser.Scene {
             'day5/stairsMorningDay5',
             'day5/corridorMorningDay5',
             'day5/classCorridorAfternoonDay5',
-            'day5/bathroomAfternoonDay5',
+            'day5/restroomAfternoonDay5',
             'day5/nightmareDay5'
         ]
         // Solo son namespaces del plugin i18next

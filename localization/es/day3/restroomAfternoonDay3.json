@@ -1,10 +1,10 @@
 {
     "guille": {
-        "maleBathroom": {
+        "maleRestroom": {
             "text": "Así que eras tú el de la nota, Guille."
         },
 
-        "femaleBathroom": [
+        "femaleRestroom": [
             {
                 "text": "¿Qué haces en el baño de chicas, Guille?"
             },
@@ -12,7 +12,7 @@
                 "text": "No puedes estar aquí. Vete."
             }
         ],
-        "explainBathroom": {
+        "explainRestroom": {
             "text": "Tenía que hablar contigo, yo te pasé la notita."
         },
 

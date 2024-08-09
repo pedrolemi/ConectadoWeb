@@ -36,22 +36,22 @@ export default class CorridorBreakDay4 extends CorridorBase {
         
         // Se activa el acceso al bano opuesto
         if (this.gameManager.getUserInfo().gender === "male") {
-            this.girlsBathroomNode = super.readNodes(nodes, "day4\\corridorBreakDay4", "bathroom", true);
+            this.girlsRestroomNode = super.readNodes(nodes, "day4\\corridorBreakDay4", "restroom", true);
         } 
         else {
-            this.boysBathroomNode = super.readNodes(nodes, "day4\\corridorBreakDay4", "bathroom", true);
+            this.boysRestroomNode = super.readNodes(nodes, "day4\\corridorBreakDay4", "restroom", true);
         }
 
-        this.dispatcher.add("enterBathroom", this, (obj) => {
+        this.dispatcher.add("enterRestroom", this, (obj) => {
             let params = {
                 camPos: "right",
                 corridor: this
             }
             if (this.gameManager.getUserInfo().gender === "male") {
-                this.gameManager.changeScene(this.girlsBathroom, params, true);
+                this.gameManager.changeScene(this.girlsRestroom, params, true);
             } 
             else {
-                this.gameManager.changeScene(this.boysBathroom, params, true);
+                this.gameManager.changeScene(this.boysRestroom, params, true);
             }
         });
         

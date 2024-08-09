@@ -1,10 +1,10 @@
 {
     "guille": {
-        "maleBathroom": {
+        "maleRestroom": {
             "text": "Donc le message que j'ai eu, c' était le tien, Guillaume?"
         },
 
-        "femaleBathroom": [
+        "femaleRestroom": [
             {
                 "text": "Que fais-tu dans les toilettes des filles, Guillaume ?"
             },
@@ -12,7 +12,7 @@
                 "text": "Tu ne peux pas être ici, pars."
             }
         ],
-        "explainBathroom": {
+        "explainRestroom": {
             "text": "J'ai besoin de te parler, c'est moi qui ai laissé le mot."
         },
 

@@ -1,10 +1,10 @@
 
-import BathroomBase from '../baseScenarios/bathroomBase.js';
+import RestroomBase from '../baseScenarios/restroomBase.js';
 import Character from "../../../gameObjects/character.js";
 
-export default class BathroomAfternoonDay3 extends BathroomBase {
+export default class RestroomAfternoonDay3 extends RestroomBase {
     constructor() {
-        super("BathroomAfternoonDay3");
+        super("RestroomAfternoonDay3");
     }
 
     create(params) {
@@ -22,8 +22,8 @@ export default class BathroomAfternoonDay3 extends BathroomBase {
         guille.setAnimation("IdleBase", true);
         this.portraits.set("Guille", guille.getPortrait());
 
-        let nodes = this.cache.json.get('bathroomAfternoonDay3');
-        let guilleNode = super.readNodes(nodes, "day3\\bathroomAfternoonDay3", "guille", true);
+        let nodes = this.cache.json.get('restroomAfternoonDay3');
+        let guilleNode = super.readNodes(nodes, "day3\\restroomAfternoonDay3", "guille", true);
 
         // Prepara las tandas de opciones. Solo se hace una vez, 
         // y quita de las opciones aquellas que no se puedan elegir

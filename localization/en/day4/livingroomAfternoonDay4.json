@@ -85,8 +85,8 @@
             },
             {
                 "text": "",
-                "text_male": "And then left it on the girls' toilet.",
-                "text_female": "And then left it on the boys' toilet."
+                "text_male": "And then left it on the girls' restroom.",
+                "text_female": "And then left it on the boys' restroom."
             }
         ],
         "foundPhone2": {
@@ -236,8 +236,8 @@
     "mariaChat": {
         "root": {
             "text": "",
-            "text_male": "youre hot, 2morrow in the toilet ya know ;)",
-            "text_female": "imma femme & I know u 2, 2morrow in the toilet ya know ;)"
+            "text_male": "youre hot, 2morrow in the restroom ya know ;)",
+            "text_female": "imma femme & I know u 2, 2morrow in the restroom ya know ;)"
         },
         "message2": {
             "text": "this is so unlike you {{name}}, u got trolled right?"

@@ -61,14 +61,14 @@
 			}
         ],
         "notTalked2": {
-            "text": "What a mess. Go straight to the toilet before class."
+            "text": "What a mess. Go straight to the restroom before class."
         },
         "notTalked3": {
             "text": "Yeah, maybe you're able to remove it."
         },
 
         "talked": {
-            "text": "Try to take that gum off in the toilet."
+            "text": "Try to take that gum off in the restroom."
         }
     }
 }

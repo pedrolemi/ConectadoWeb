@@ -20,14 +20,14 @@ export default class CorridorBase extends BaseScene {
         // Establece la escena de bano y el nodo por defecto del bano opuesto segun el genero del jugador
         let nodes = this.cache.json.get('everydayDialog');
         if (this.gameManager.getUserInfo().gender === "male") {
-            this.boysBathroom = "BathroomBase";
-            this.girlsBathroom = "OppositeBathroom";
-            this.girlsBathroomNode = super.readNodes(nodes, "everydayDialog", "corridor.bathroom", true);
+            this.boysRestroom = "RestroomBase";
+            this.girlsRestroom = "OppositeRestroom";
+            this.girlsRestroomNode = super.readNodes(nodes, "everydayDialog", "corridor.restroom", true);
         }
         else {
-            this.girlsBathroom = "BathroomBase";
-            this.boysBathroom = "OppositeBathroom";
-            this.boysBathroomNode = super.readNodes(nodes, "everydayDialog", "corridor.bathroom", true);
+            this.girlsRestroom = "RestroomBase";
+            this.boysRestroom = "OppositeRestroom";
+            this.boysRestroomNode = super.readNodes(nodes, "everydayDialog", "corridor.restroom", true);
         }
         
 
@@ -60,20 +60,20 @@ export default class CorridorBase extends BaseScene {
             x: 1485 * this.scale,
             y: 596 * this.scale
         };
-        let boysBathroomdoorClosed = this.add.image(doorPos.x, doorPos.y, this.atlasName, 'boysDoorClosed').setOrigin(0, 0).setScale(this.scale);
-        let boysBathroomDoorOpened = this.add.image(doorPos.x, doorPos.y, this.atlasName, 'boysDoorOpened').setOrigin(0, 0).setScale(this.scale);
+        let boysRestroomdoorClosed = this.add.image(doorPos.x, doorPos.y, this.atlasName, 'boysDoorClosed').setOrigin(0, 0).setScale(this.scale);
+        let boysRestroomDoorOpened = this.add.image(doorPos.x, doorPos.y, this.atlasName, 'boysDoorOpened').setOrigin(0, 0).setScale(this.scale);
         // Al hacer click, si hay algun dialogo que mostrar (para indicar que no se puede entrar), se
         // mostrara. En caso contrario, se pasara a la escena del bano sin eliminar esta escena
-        super.toggleDoor(boysBathroomdoorClosed, boysBathroomDoorOpened, () => {
-            if (this.boysBathroomNode) {
-                this.dialogManager.setNode(this.boysBathroomNode);
+        super.toggleDoor(boysRestroomdoorClosed, boysRestroomDoorOpened, () => {
+            if (this.boysRestroomNode) {
+                this.dialogManager.setNode(this.boysRestroomNode);
             }
             else {
                 let params = {
                     camPos: "left",
                     corridor: this
                 }
-                this.gameManager.changeScene(this.boysBathroom, params, true);
+                this.gameManager.changeScene(this.boysRestroom, params, true);
             }
         }, false);
 
@@ -82,20 +82,20 @@ export default class CorridorBase extends BaseScene {
             x: 1361 * this.scale,
             y: 636 * this.scale
         };
-        let girlsBathroomDoorClosed = this.add.image(doorPos.x, doorPos.y, this.atlasName, 'girlsDoorClosed').setOrigin(0, 0).setScale(this.scale);
-        let girlsBathroomDoorOpened = this.add.image(doorPos.x, doorPos.y, this.atlasName, 'girlsDoorOpened').setOrigin(0, 0).setScale(this.scale);
+        let girlsRestroomDoorClosed = this.add.image(doorPos.x, doorPos.y, this.atlasName, 'girlsDoorClosed').setOrigin(0, 0).setScale(this.scale);
+        let girlsRestroomDoorOpened = this.add.image(doorPos.x, doorPos.y, this.atlasName, 'girlsDoorOpened').setOrigin(0, 0).setScale(this.scale);
         // Al hacer click, si hay algun dialogo que mostrar (para indicar que no se puede entrar), se
         // mostrara. En caso contrario, se pasara a la escena del bano sin eliminar esta escena
-        super.toggleDoor(girlsBathroomDoorClosed, girlsBathroomDoorOpened, () => {
-            if (this.girlsBathroomNode) {
-                this.dialogManager.setNode(this.girlsBathroomNode);
+        super.toggleDoor(girlsRestroomDoorClosed, girlsRestroomDoorOpened, () => {
+            if (this.girlsRestroomNode) {
+                this.dialogManager.setNode(this.girlsRestroomNode);
             }
             else {
                 let params = {
                     camPos: "left",
                     corridor: this
                 }
-                this.gameManager.changeScene(this.girlsBathroom, params, true);
+                this.gameManager.changeScene(this.girlsRestroom, params, true);
             }
         }, false);
 

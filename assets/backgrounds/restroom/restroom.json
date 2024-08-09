@@ -48,7 +48,7 @@
         "y": 0.5
       }
     },
-    "bathroomStall1Opened": {
+    "restroomStall1Opened": {
       "frame": {
         "x": 0,
         "y": 3140,
@@ -72,7 +72,7 @@
         "y": 0.5
       }
     },
-    "bathroomDoorClosed": {
+    "restroomDoorClosed": {
       "frame": {
         "x": 250,
         "y": 1610,
@@ -96,7 +96,7 @@
         "y": 0.5
       }
     },
-    "bathroomDoorOpened": {
+    "restroomDoorOpened": {
       "frame": {
         "x": 320,
         "y": 2800,
@@ -144,7 +144,7 @@
         "y": 0.5
       }
     },
-    "bathroomStall2Closed": {
+    "restroomStall2Closed": {
       "frame": {
         "x": 510,
         "y": 0,
@@ -168,7 +168,7 @@
         "y": 0.5
       }
     },
-    "bathroomStall2Opened": {
+    "restroomStall2Opened": {
       "frame": {
         "x": 730,
         "y": 0,
@@ -192,7 +192,7 @@
         "y": 0.5
       }
     },
-    "bathroomStall1Closed": {
+    "restroomStall1Closed": {
       "frame": {
         "x": 800,
         "y": 1120,
@@ -220,7 +220,7 @@
   "meta": {
     "app": "http://free-tex-packer.com",
     "version": "0.6.7",
-    "image": "bathroom.png",
+    "image": "restroom.png",
     "format": "RGBA8888",
     "size": {
       "w": 1120,

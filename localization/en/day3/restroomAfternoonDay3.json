@@ -1,18 +1,18 @@
 {
     "guille": {
-        "maleBathroom": {
+        "maleRestroom": {
             "text": "So the guy of the note... it was you, Guille."
         },
 
-        "femaleBathroom": [
+        "femaleRestroom": [
             {
-                "text": "What are you doing in the girls' toilet, Guille?"
+                "text": "What are you doing in the girls' restroom, Guille?"
             },
             {
                 "text": "You can't be here. Go away."
             }
         ],
-        "explainBathroom": {
+        "explainRestroom": {
             "text": "I needed to talk with you. I'm the one who left the note."
         },
 

@@ -41,7 +41,7 @@
         ]
     },
 
-    "bathroom": {
+    "restroom": {
         "root": {
             "text": "",
             "text_male": "No puedo entrar ahí, es el baño de chicas.",

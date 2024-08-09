@@ -98,7 +98,7 @@
 
     },
 
-    "bathroom": {
+    "restroom": {
         "root": {
             "type": "text",
             "character": "player",
@@ -115,7 +115,7 @@
             "type": "event",
             "events": [
                 {
-                    "enterBathroom": {}
+                    "enterRestroom": {}
                 }
             ]
         }

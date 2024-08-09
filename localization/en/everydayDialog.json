@@ -117,11 +117,11 @@
     },
 
     "corridor": {
-        "bathroom": {
+        "restroom": {
             "root": {
                 "text": "",
-                "text_male": "I can't go there, It's the girls' toilet.",
-                "text_female": "I can't go there, It's the boys' toilet."
+                "text_male": "I can't go there, It's the girls' restroom.",
+                "text_female": "I can't go there, It's the boys' restroom."
             }
         },
         "class": {

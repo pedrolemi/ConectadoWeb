@@ -17,7 +17,7 @@
         ],
 
         "found": {
-            "text": "Have you seen anybody entering the toilets recently?"
+            "text": "Have you seen anybody entering the restrooms recently?"
         },
         "found2": {
             "text": "I haven't noticed, sorry."
@@ -41,11 +41,11 @@
         ]
     },
 
-    "bathroom": {
+    "restroom": {
         "root": {
             "text": "",
-            "text_male": "I can't go there, it's the girls' toilet.",
-            "text_female": "I can't go there, it's the boys' toilet."
+            "text_male": "I can't go there, it's the girls' restroom.",
+            "text_female": "I can't go there, it's the boys' restroom."
         },
         "choices": [
             {

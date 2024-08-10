@@ -307,11 +307,28 @@ export default class PhoneManager {
      * @param {Boolean} active - true si se va a mostrar, false en caso contrario
      */
     activate(active) {
+        // Se guarda el telefono al instante
         this.showPhone(false);
-        this.icon.visible = active;
-        this.notifications.visible = this.notificationAmount > 0 && active;
+        
+        // Si se quiere activar    
+        if (active) {
+            // Si no es el dia 4, o si se han intercambiado las contrasenas, o si no se han intercambiado
+            // pero se ha recuperado el movil, vuelven a aparecer el icono del telefono y las notificaciones
+            if (this.gameManager.day !== 4 || this.gameManager.getValue("passwordExchanged")
+                || (!this.gameManager.getValue("passwordExchanged") && this.gameManager.getValue("phoneFound"))) 
+            {
+                this.icon.visible = true;
+                // Las notificaciones solo aparecen si hay mas de 0 notificaciones
+                this.notifications.visible = this.notificationAmount > 0;
+            }
+        }
+        // Si no, se desactivan el icono y las notificaciones
+        else {
+            this.icon.visible = false;
+            this.notifications.visible = false;
+        }
     }
-
+    
     /**
      * Muestra/oculta el telefono de manera inmediata
      * @param {Boolean} active - true si se va a activar, false en caso contrario

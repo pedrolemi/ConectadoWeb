@@ -21,6 +21,7 @@ export class TextNode extends DialogNode {
             "type": "text",
             "character": "mom",
             "next": "setNotTalked"
+            "centered": "true"
         }
     */
     constructor() {
@@ -88,7 +89,7 @@ export class ConditionNode extends DialogNode {
                     "talked": {
                         "value": true,
                         "operator": "equal",
-                                            }
+                    }
                 }
             ]
         }
@@ -161,7 +162,8 @@ export class SocialNetNode extends DialogNode {
             "type": "socialNetMessaage",
             "character": "player",
             "owner": "mom",
-            "post": 0
+            "post": 0,
+            "replyDelay": 1000
         }
      */
     constructor() {

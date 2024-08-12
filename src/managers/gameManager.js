@@ -3,10 +3,10 @@ import BaseScene from "../scenes/gameLoop/baseScene.js";
 
 // Variable de nivel de modulo
 // - Se puede acceder desde cualquier parte del modulo, pero no es visible
-// al no pertencen a la clase y no ser exportada
+// al no pertenecer a la clase y no ser exportada
 // - No cambia con las instancia puesto que no pertenece a la clase, sino
-
 // al modulo y solo existe un modulo
+
 let instance = null;
 
 export default class GameManager {
@@ -241,7 +241,7 @@ export default class GameManager {
         // Nota: aunque luego se setean en AlarmScene, se setean restauran aqui por si acaso
         this.setValue("isLate", false);
         this.setValue("bagPicked", false);
-        
+
         // Se borra la informacion del usuario
         this.userInfo = null;
 

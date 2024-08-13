@@ -10,7 +10,7 @@
 <div align="center">
   <h3>
     <em>
-      Play the game on a computer or a mobile <a href="https://p4179.github.io/ConectadoWeb/">here</a>!
+      Play the game on a computer or a mobile <a href="https://pedrolemi.github.io/ConectadoWeb/">here</a>!
     </em>
   </h3>
 </div>

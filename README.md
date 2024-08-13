@@ -10,7 +10,7 @@
 <div align="center">
   <h3>
     <em>
-      ¡Juego al juego en ordenador o en móvil <a href="https://p4179.github.io/ConectadoWeb/">aquí</a>!
+      ¡Juego al juego en ordenador o en móvil <a href="https://pedrolemi.github.io/ConectadoWeb/">aquí</a>!
     </em>
   </h3>
 </div>

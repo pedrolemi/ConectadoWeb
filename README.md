@@ -1,5 +1,5 @@
 <div align="center">
-  <a href="https://p4179.github.io/ConectadoWeb/" target="_blank" rel="noopener noreferrer">
+  <a href="https://pedrolemi.github.io/ConectadoWeb/" target="_blank" rel="noopener noreferrer">
     <img src="https://user-images.githubusercontent.com/5657407/35525810-db5de806-0525-11e8-9481-161d44dfa78b.png" width="400" />
   </a>
 </div>

@@ -16,7 +16,9 @@
         ],
         "choices": [
             {
-                "text": "Muito obrigado por ser minha amiga."
+                "text": "",
+                "text_male": "Muito obrigado por ser minha amiga.",
+                "text_female": "Muito obrigada por ser minha amiga."
             },
             {
                 "text": "Não, e não tenho interesse em ganhar sua confiança."
@@ -51,7 +53,7 @@
             "text": "(Você escreve as senhas pelo celular)"
         },
         "exchange2": {
-            "text": "rfeito. \"Melhores amigos\" (sorrindo de orelha a orelha)."
+            "text": "Perfeito. \"Melhores amigos\" (sorrindo de orelha a orelha)."
         },
         "dont": [
             {
@@ -76,7 +78,7 @@
             "text": "<<O sinal está tocando>>"
         },
         "late": {
-            "text": "****I'm going to class now, it's late already, we'll get scolded for sure."
+            "text": "***Estou indo para a aula agora, já está bem tarde, com certeza vamos levar uma bronca."
         }
     },
 

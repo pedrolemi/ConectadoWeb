@@ -34,13 +34,12 @@
             }
         ]
     },
-
     "maria": {
         "talked": {
             "text": "Já falei com a Maria. Melhor eu dar uma olhada no pátio"
         },
         "notMet": {
-            "text":  "Você precisa de algo?"
+            "text": "Você precisa de algo?"
         },
         "notMetChoices": [
             {
@@ -61,7 +60,6 @@
                 "text": "Tenha um bom dia."
             }
         ],
-
         "ignore": [
             {
                 "text": "Estou lendo."
@@ -70,7 +68,6 @@
                 "text": "Se não se importa... (Ela te ignora e continua lendo)."
             }
         ],
-
         "warn": [
             {
                 "text": "Bom dia, {{name}}."
@@ -84,7 +81,9 @@
         ],
         "warnChoices": [
             {
-                "text": "Obrigado pelo aviso"
+                "text": "",
+                "text_male": "Obrigado pelo aviso",
+                "text_female": "Obrigada pelo aviso"
             },
             {
                 "text": "Eu não tenho medo dele"
@@ -97,7 +96,6 @@
             "text": "<<O sinal está tocando>>"
         }
     },
-
     "jose": {
         "notTalked": [
             {

@@ -8,7 +8,9 @@
         },
         "choices": [
             {
-                "text": "Obrigado."
+                "text": "",
+                "text_male": "Obrigado.",
+                "text_female": "Obrigada."
             },
             {
                 "text": "Vai piorar tudo."
@@ -17,7 +19,7 @@
         "thanks": {
             "text": "",
             "text_male": "De jeito nenhum, querido. Queremos que você fique bem.",
-            "text_female": "De jeito nenhum, querida. Queremos que você fique bem"
+            "text_female": "De jeito nenhum, querida. Queremos que você fique bem."
         },
         "thanks2": {
             "text": "Vamos tentar marcar essa reunião para amanhã, no máximo."

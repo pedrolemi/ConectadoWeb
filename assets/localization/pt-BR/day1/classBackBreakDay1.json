@@ -64,8 +64,8 @@
 
         "defyReply": {
             "text": "",
-            "text_male": "Você se acha o espertão não é?",
-            "text_female": "Você se acha a espertona não é?"
+            "text_male": "Você se acha o espertão, né?",
+            "text_female": "Você se acha a espertona, né?"
         },
         "push": {
             "text": "",

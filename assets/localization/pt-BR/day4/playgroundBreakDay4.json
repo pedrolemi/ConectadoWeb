@@ -36,7 +36,9 @@
                 "text": "A gente te conta onde está se você colar esse cartaz nas costas da Maria."
             },
             {
-                "text": "(Ela te entrega um papel com fita e a frase \"Gosto de ser xingada, me xingue se você ler isso\")."
+                "text": "",
+                "text_male": "(Ela te entrega um papel com fita e a frase \"Gosto de ser xingado, me xingue se você ler isso\").",
+                "text_female": "(Ela te entrega um papel com fita e a frase \"Gosto de ser xingada, me xingue se você ler isso\")."
             },
             {
                 "text": "Volte quando tiver feito isso... Senão, não me enche."

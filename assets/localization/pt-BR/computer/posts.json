@@ -10,7 +10,7 @@
             "comment": {
                 "decision": [
                     {
-                        "text": "(Excluir Postagem)"
+                        "text": "(Excluir postagem)"
                     },
                     {
                         "text": "Alice... Era por isso que você queria trocar senhas comigo."
@@ -31,7 +31,7 @@
             },
             "oldComments": {
                 "root": {
-                    "text": "to esperando sua ligação"
+                    "text": "tô esperando sua ligação"
                 },
                 "secondCommentMale": {
                     "text": "a gente se ve quando vc quiser ;)"
@@ -91,7 +91,7 @@
             },
             "oldComments": {
                 "root": {
-                    "text": "Que jogo, hein! Precisamos  nos encontrar para assistir ao próximo. Meu pai comprou uma TV nova e é enorme!"
+                    "text": "Que jogo, hein! Precisamos nos encontrar para assistir ao próximo. Meu pai comprou uma TV nova e é enorme!"
                 },
                 "secondComment": {
                     "text": "Tô dentro, galera, me avisem quando quiserem"

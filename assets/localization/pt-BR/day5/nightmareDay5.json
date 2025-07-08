@@ -33,7 +33,9 @@
             "text": "Alex será monitorado e, pelo menos, deixará vocês em paz."
         },
         {
-            "text": "Você deve pedir ajuda quando precisar. Deixe seu ego de lado. Nem sempre você é o culpado, nem sempre merece o que acontece com você."
+            "text": "",
+            "text_male": "Você deve pedir ajuda quando precisar. Deixe seu ego de lado. Nem sempre você é o culpado, nem sempre merece o que acontece com você.",
+            "text_female": "Você deve pedir ajuda quando precisar. Deixe seu ego de lado. Nem sempre você é a culpada, nem sempre merece o que acontece com você."
         },
         {
             "text": "O tempo não vai resolver tudo se você estiver sofrendo, você não deve ignorar o que sente."
@@ -62,7 +64,9 @@
             "text": "É importante falar e pedir ajuda. Ninguém merece passar pelo que você passou, não importa o motivo."
         },
         {
-            "text": "Haverá pessoas dizendo que você foi um dedo-duro ao contar ao seu professor, colegas ou pais. Mas eu acho que você foi um herói"
+            "text": "",
+            "text_male": "Haverá pessoas dizendo que você foi um dedo-duro ao contar ao seu professor, colegas ou pais. Mas eu acho que você foi um herói",
+            "text_female": "Haverá pessoas dizendo que você foi um dedo-duro ao contar ao seu professor, colegas ou pais. Mas eu acho que você foi um heroína"
         },
         {
             "text": "Espero que você nunca mais fique em silêncio se alguém precisar de ajuda ou estiver sofrendo. Você deve mostrar apoio em vez de seguir o agressor"

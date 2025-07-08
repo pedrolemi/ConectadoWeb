@@ -24,7 +24,9 @@
         ],
         "keepAsking": [
             {
-                "text": "Você está sendo um pouco chato fazendo tantas perguntas."
+                "text": "...",
+                "text_male": "Você está sendo um pouco chato fazendo tantas perguntas.",
+                "text_female": "Você está sendo um pouco chata fazendo tantas perguntas."
             },
             {
                 "text": "Eu não tenho amigos. Eles acham que sou esquisita."
@@ -60,7 +62,6 @@
                 "text": "Divirta-se lá embaixo e evite o Alex. Ele é um idiota."
             }
         ],
-        
         "talkedMean": {
             "text": "..."
         },
@@ -70,14 +71,12 @@
         "talkedNice": {
             "text": "Estou terminando de ler meu livro. Vamos conversar depois?"
         }
-
     },
-
     "phone": {
         "root": {
             "text": "Obrigado de novo por ter me ajudado"
         },
-        "choices":[
+        "choices": [
             {
                 "text": "Não é nada."
             },
@@ -89,7 +88,6 @@
             "text": "Não é nada"
         }
     },
-
     "alison": {
         "notFound": [
             {
@@ -99,7 +97,6 @@
                 "text": "Por favor, continue procurando."
             }
         ],
-
         "found": [
             {
                 "text": "Vejo que você achou meu brinco."

@@ -4,13 +4,11 @@
             "text": "Não tem nada útil aqui dentro."
         }
     },
-
     "wardrobe2": {
         "root": {
             "text": "Hoje não dá pra organizar tudo isso."
         }
     },
-
     "phone1": {
         "root": {
             "text": "{{name}} este é o chat que usamos com a galera"
@@ -27,11 +25,15 @@
     "phone2": {
         "root": [
             {
-                "text": "Obrigado :)"
+                "text": "",
+                "text_male": "Obrigado :)",
+                "text_female": "Obrigada :)"
             }
         ],
         "reply": {
-            "text": "Obrigado :)"
+            "text": "",
+            "text_male": "Obrigado :)",
+            "text_female": "Obrigada :)"
         }
     },
     "phone3": {
@@ -66,12 +68,11 @@
         "sad2": {
             "text": "Não estou dizendo que vocês precisam gostar de mim, mas poderiam me tratar com um pouco mais de respeito."
         },
-
         "growUp": {
             "text": "Cresçam, quantos anos vocês têm?"
         },
         "ask": {
-            "text": " não entendo, o que eu fiz para vocês me insultarem, ignorarem e fazerem piadas sobre mim?"
+            "text": "Não entendo, o que eu fiz para vocês me insultarem, ignorarem e fazerem piadas sobre mim?"
         },
         "message7": {
             "text": "Qual é o seu problema com {{name}}?"
@@ -106,6 +107,4 @@
             "text": "Vou para a cama, vejo você amanhã"
         }
     }
-    
-    
 }

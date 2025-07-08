@@ -2,8 +2,8 @@
     "jose": {
         "notTalked": {
             "text": "",
-            "text_male": "Você é novo, não é?",
-            "text_female": "Você é nova, não é?"
+            "text_male": "Você é novo, né?",
+            "text_female": "Você é nova, né?"
         },
         "ask": {
             "text": "Quer alguma coisa?"
@@ -24,7 +24,7 @@
             }
         ],
         "askClass": {
-            "text": "Essa também é a minha sala, que fica no segundo andar. Suba as escadas à sua direita assim que entrar no prédio. E no primeiro andar, está a sala do diretor."
+            "text": "Essa também é a minha sala, que fica no segundo andar. Suba as escadas à sua direita assim que entrar no prédio. E no primeiro andar está a sala do diretor."
         },
         "askMore":  {
             "text": "Precisa de mais alguma coisa?"
@@ -81,8 +81,8 @@
         "goodbye": [
             {
                 "text": "",
-                "text_male": "Não seja tímido , eu não mordo, viu?",
-                "text_female": "Não seja tímida , eu não mordo, viu?"
+                "text_male": "Não seja tímido, eu não mordo, viu?",
+                "text_female": "Não seja tímida, eu não mordo, viu?"
             },
             {
                 "text": "Então, até mais. Tenha um bom primeiro dia de aula."

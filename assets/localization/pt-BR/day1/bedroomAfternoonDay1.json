@@ -4,13 +4,11 @@
             "text": "Não tem nada útil aqui dentro."
         }
     },
-
     "wardrobe2": {
         "root": {
             "text": "Não estou com vontade de limpar essa bagunça."
         }
     },
-
     "phone": {
         "root": {
             "text": "Eu te enviei um pedido de amizade."
@@ -33,8 +31,9 @@
             "text": "Sim, aceito seu convite agora :)"
         },
         "acceptLater": {
-            "text": "Vou olhar isso quando puder. Estou ocupado agora."
+            "text": "...",
+            "text_male": "Vou olhar isso quando puder. Estou ocupado agora.",
+            "text_female": "Vou olhar isso quando puder. Estou ocupada agora."
         }
     }
-    
 }

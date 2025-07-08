@@ -1,5 +1,4 @@
 import GameManager from "../../managers/gameManager.js"
-import Button from '../../UI/button.js'
 import xapiTracker from "../../lib/xapi.js";
 
 export default class LanguageMenu extends Phaser.Scene {

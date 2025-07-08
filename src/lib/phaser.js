@@ -360,7 +360,7 @@ if (true) {
 
 /**
  * @author       samme
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -414,7 +414,7 @@ module.exports = AlignTo;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -456,7 +456,7 @@ module.exports = Angle;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -496,7 +496,7 @@ module.exports = Call;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -555,7 +555,7 @@ module.exports = GetFirst;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -614,7 +614,7 @@ module.exports = GetLast;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -734,7 +734,7 @@ module.exports = GridAlign;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -776,7 +776,7 @@ module.exports = IncAlpha;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -818,7 +818,7 @@ module.exports = IncX;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -866,7 +866,7 @@ module.exports = IncXY;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -908,7 +908,7 @@ module.exports = IncY;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -962,7 +962,7 @@ module.exports = PlaceOnCircle;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -1015,7 +1015,7 @@ module.exports = PlaceOnEllipse;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -1071,7 +1071,7 @@ module.exports = PlaceOnLine;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -1130,7 +1130,7 @@ module.exports = PlaceOnRectangle;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -1192,7 +1192,7 @@ module.exports = PlaceOnTriangle;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -1237,7 +1237,7 @@ module.exports = PlayAnimation;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -1305,7 +1305,7 @@ module.exports = PropertyValueInc;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -1373,7 +1373,7 @@ module.exports = PropertyValueSet;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -1414,7 +1414,7 @@ module.exports = RandomCircle;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -1455,7 +1455,7 @@ module.exports = RandomEllipse;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -1496,7 +1496,7 @@ module.exports = RandomLine;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -1535,7 +1535,7 @@ module.exports = RandomRectangle;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -1576,7 +1576,7 @@ module.exports = RandomTriangle;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -1618,7 +1618,7 @@ module.exports = Rotate;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -1665,7 +1665,7 @@ module.exports = RotateAround;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -1715,7 +1715,7 @@ module.exports = RotateAroundDistance;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -1757,7 +1757,7 @@ module.exports = ScaleX;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -1805,7 +1805,7 @@ module.exports = ScaleXY;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -1847,7 +1847,7 @@ module.exports = ScaleY;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -1889,7 +1889,7 @@ module.exports = SetAlpha;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -1928,7 +1928,7 @@ module.exports = SetBlendMode;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -1970,7 +1970,7 @@ module.exports = SetDepth;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -2010,7 +2010,7 @@ module.exports = SetHitArea;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -2064,7 +2064,7 @@ module.exports = SetOrigin;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -2106,7 +2106,7 @@ module.exports = SetRotation;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -2154,7 +2154,7 @@ module.exports = SetScale;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -2196,7 +2196,7 @@ module.exports = SetScaleX;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -2238,7 +2238,7 @@ module.exports = SetScaleY;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -2286,7 +2286,7 @@ module.exports = SetScrollFactor;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -2328,7 +2328,7 @@ module.exports = SetScrollFactorX;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -2370,7 +2370,7 @@ module.exports = SetScrollFactorY;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -2410,7 +2410,7 @@ module.exports = SetTint;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -2449,7 +2449,7 @@ module.exports = SetVisible;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -2491,7 +2491,7 @@ module.exports = SetX;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -2539,7 +2539,7 @@ module.exports = SetXY;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -2581,7 +2581,7 @@ module.exports = SetY;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -2707,7 +2707,7 @@ module.exports = ShiftPosition;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -2741,7 +2741,7 @@ module.exports = Shuffle;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -2809,7 +2809,7 @@ module.exports = SmoothStep;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -2868,7 +2868,7 @@ module.exports = SmootherStep;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -2946,7 +2946,7 @@ module.exports = Spread;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -2984,7 +2984,7 @@ module.exports = ToggleVisible;
 /**
  * @author       Richard Davey <rich@phaser.io>
  * @author       samme <samme.npm@gmail.com>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -3035,7 +3035,7 @@ module.exports = WrapInRectangle;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -3109,7 +3109,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -3470,8 +3470,8 @@ var Animation = new Class({
     {
         //  When is the first update due?
         state.accumulator = 0;
-
-        state.nextTick = (state.currentFrame.duration) ? state.currentFrame.duration : state.msPerFrame;
+        
+        state.nextTick = state.frameRate === state.currentAnim.frameRate ? state.currentFrame.duration || state.msPerFrame : state.msPerFrame;
     },
 
     /**
@@ -3624,7 +3624,7 @@ var Animation = new Class({
     {
         state.accumulator -= state.nextTick;
 
-        state.nextTick = (state.currentFrame.duration) ? state.currentFrame.duration : state.msPerFrame;
+        state.nextTick = state.frameRate === state.currentAnim.frameRate ? state.currentFrame.duration || state.msPerFrame : state.msPerFrame;
     },
 
     /**
@@ -4063,7 +4063,7 @@ module.exports = Animation;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -4250,7 +4250,7 @@ module.exports = AnimationFrame;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -5321,7 +5321,7 @@ module.exports = AnimationManager;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -5434,7 +5434,7 @@ var AnimationState = new Class({
         /**
          * The current Animation loaded into this Animation component.
          *
-         * Will by `null` if no animation is yet loaded.
+         * Will be `null` if no animation is yet loaded.
          *
          * @name Phaser.Animations.AnimationState#currentAnim
          * @type {?Phaser.Animations.Animation}
@@ -5446,7 +5446,7 @@ var AnimationState = new Class({
         /**
          * The current AnimationFrame being displayed by this Animation component.
          *
-         * Will by `null` if no animation is yet loaded.
+         * Will be `null` if no animation is yet loaded.
          *
          * @name Phaser.Animations.AnimationState#currentFrame
          * @type {?Phaser.Animations.AnimationFrame}
@@ -5459,7 +5459,7 @@ var AnimationState = new Class({
          * The key, instance, or config of the next Animation to be loaded into this Animation component
          * when the current animation completes.
          *
-         * Will by `null` if no animation has been queued.
+         * Will be `null` if no animation has been queued.
          *
          * @name Phaser.Animations.AnimationState#nextAnim
          * @type {?(string|Phaser.Animations.Animation|Phaser.Types.Animations.PlayAnimationConfig)}
@@ -7335,7 +7335,7 @@ module.exports = AnimationState;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -7364,7 +7364,7 @@ module.exports = 'add';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -7412,7 +7412,7 @@ module.exports = 'animationcomplete';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -7464,7 +7464,7 @@ module.exports = 'animationcomplete-';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -7509,7 +7509,7 @@ module.exports = 'animationrepeat';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -7552,7 +7552,7 @@ module.exports = 'animationrestart';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -7596,7 +7596,7 @@ module.exports = 'animationstart';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -7640,7 +7640,7 @@ module.exports = 'animationstop';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -7688,7 +7688,7 @@ module.exports = 'animationupdate';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -7714,7 +7714,7 @@ module.exports = 'pauseall';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -7740,7 +7740,7 @@ module.exports = 'remove';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -7765,7 +7765,7 @@ module.exports = 'resumeall';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -7797,7 +7797,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -7823,7 +7823,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -8010,7 +8010,7 @@ module.exports = BaseCache;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -8245,7 +8245,7 @@ module.exports = CacheManager;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -8272,7 +8272,7 @@ module.exports = 'add';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -8299,7 +8299,7 @@ module.exports = 'remove';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -8322,7 +8322,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -8346,7 +8346,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -8863,6 +8863,22 @@ var BaseCamera = new Class({
          * @since 3.60.0
          */
         this.isSceneCamera = true;
+
+        /**
+         * Can this Camera render rounded pixel values?
+         * 
+         * This property is updated during the `preRender` method and should not be
+         * set directly. It is set based on the `roundPixels` property of the Camera
+         * combined with the zoom level. If the zoom is an integer then the WebGL
+         * Renderer can apply rounding during rendering.
+         *
+         * @name Phaser.Cameras.Scene2D.BaseCamera#renderRoundPixels
+         * @type {boolean}
+         * @readonly
+         * @default true
+         * @since 3.86.0
+         */
+        this.renderRoundPixels = true;
     },
 
     /**
@@ -9256,64 +9272,6 @@ var BaseCamera = new Class({
         }
 
         return this;
-    },
-
-    /**
-     * Internal preRender step.
-     *
-     * @method Phaser.Cameras.Scene2D.BaseCamera#preRender
-     * @protected
-     * @since 3.0.0
-     */
-    preRender: function ()
-    {
-        this.renderList.length = 0;
-
-        var width = this.width;
-        var height = this.height;
-
-        var halfWidth = width * 0.5;
-        var halfHeight = height * 0.5;
-
-        var zoomX = this.zoomX;
-        var zoomY = this.zoomY;
-        var matrix = this.matrix;
-
-        var originX = width * this.originX;
-        var originY = height * this.originY;
-
-        var sx = this.scrollX;
-        var sy = this.scrollY;
-
-        if (this.useBounds)
-        {
-            sx = this.clampX(sx);
-            sy = this.clampY(sy);
-        }
-
-        //  Values are in pixels and not impacted by zooming the Camera
-        this.scrollX = sx;
-        this.scrollY = sy;
-
-        var midX = sx + halfWidth;
-        var midY = sy + halfHeight;
-
-        //  The center of the camera, in world space, so taking zoom into account
-        //  Basically the pixel value of what it's looking at in the middle of the cam
-        this.midPoint.set(midX, midY);
-
-        var displayWidth = width / zoomX;
-        var displayHeight = height / zoomY;
-
-        this.worldView.setTo(
-            midX - (displayWidth / 2),
-            midY - (displayHeight / 2),
-            displayWidth,
-            displayHeight
-        );
-
-        matrix.applyITRS(this.x + originX, this.y + originY, this.rotation, zoomX, zoomY);
-        matrix.translate(-originX, -originY);
     },
 
     /**
@@ -10356,7 +10314,7 @@ module.exports = BaseCamera;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -10837,10 +10795,9 @@ var Camera = new Class({
     },
 
     /**
-     * Internal preRender step.
+     * Updates camera matrix. Also resets any active effects on this Camera (such as shake, flash and fade) and quickly clears them all.
      *
      * @method Phaser.Cameras.Scene2D.Camera#preRender
-     * @protected
      * @since 3.0.0
      */
     preRender: function ()
@@ -10853,8 +10810,11 @@ var Camera = new Class({
         var halfWidth = width * 0.5;
         var halfHeight = height * 0.5;
 
-        var zoom = this.zoom;
+        var zoomX = this.zoomX;
+        var zoomY = this.zoomY;
         var matrix = this.matrix;
+
+        this.renderRoundPixels = (this.roundPixels && Number.isInteger(zoomX) && Number.isInteger(zoomY));
 
         var originX = width * this.originX;
         var originY = height * this.originY;
@@ -10908,6 +10868,12 @@ var Camera = new Class({
             emitFollowEvent = true;
         }
 
+        if (this.roundPixels)
+        {
+            sx = Math.floor(sx);
+            sy = Math.floor(sy);
+        }
+
         if (this.useBounds)
         {
             sx = this.clampX(sx);
@@ -10918,6 +10884,7 @@ var Camera = new Class({
         this.scrollX = sx;
         this.scrollY = sy;
 
+        //  Don't round the midPoint, otherwise it breaks things like smooth zoom
         var midX = sx + halfWidth;
         var midY = sy + halfHeight;
 
@@ -10925,15 +10892,20 @@ var Camera = new Class({
         //  Basically the pixel value of what it's looking at in the middle of the cam
         this.midPoint.set(midX, midY);
 
-        var displayWidth = width / zoom;
-        var displayHeight = height / zoom;
+        var displayWidth = Math.floor((width / zoomX) + 0.5);
+        var displayHeight = Math.floor((height / zoomY) + 0.5);
 
-        var vwx = Math.floor(midX - (displayWidth / 2));
-        var vwy = Math.floor(midY - (displayHeight / 2));
+        var vwx = Math.floor((midX - (displayWidth / 2)) + 0.5);
+        var vwy = Math.floor((midY - (displayHeight / 2)) + 0.5);
 
         this.worldView.setTo(vwx, vwy, displayWidth, displayHeight);
 
-        matrix.applyITRS(Math.floor(this.x + originX), Math.floor(this.y + originY), this.rotation, zoom, zoom);
+        matrix.applyITRS(
+            Math.floor(this.x + originX + 0.5),
+            Math.floor(this.y + originY + 0.5),
+            this.rotation,
+            zoomX, zoomY
+        );
 
         matrix.translate(-originX, -originY);
 
@@ -11151,7 +11123,7 @@ module.exports = Camera;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -11927,7 +11899,7 @@ module.exports = CameraManager;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -12316,7 +12288,7 @@ module.exports = Fade;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -12679,7 +12651,7 @@ module.exports = Flash;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -13439,7 +13411,7 @@ module.exports = RotateTo;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -13759,7 +13731,7 @@ module.exports = Shake;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -14053,7 +14025,7 @@ module.exports = Zoom;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -14080,7 +14052,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -14117,7 +14089,7 @@ module.exports = 'cameradestroy';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -14145,7 +14117,7 @@ module.exports = 'camerafadeincomplete';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -14177,7 +14149,7 @@ module.exports = 'camerafadeinstart';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -14205,7 +14177,7 @@ module.exports = 'camerafadeoutcomplete';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -14237,7 +14209,7 @@ module.exports = 'camerafadeoutstart';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -14275,7 +14247,7 @@ module.exports = 'cameraflashcomplete';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -14317,7 +14289,7 @@ module.exports = 'cameraflashstart';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -14347,7 +14319,7 @@ module.exports = 'followupdate';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -14385,7 +14357,7 @@ module.exports = 'camerapancomplete';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -14426,7 +14398,7 @@ module.exports = 'camerapanstart';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -14454,7 +14426,7 @@ module.exports = 'postrender';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -14482,7 +14454,7 @@ module.exports = 'prerender';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -14520,7 +14492,7 @@ module.exports = 'camerarotatecomplete';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -14560,7 +14532,7 @@ module.exports = 'camerarotatestart';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -14598,7 +14570,7 @@ module.exports = 'camerashakecomplete';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -14638,7 +14610,7 @@ module.exports = 'camerashakestart';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -14676,7 +14648,7 @@ module.exports = 'camerazoomcomplete';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -14716,7 +14688,7 @@ module.exports = 'camerazoomstart';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -14755,7 +14727,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -14781,7 +14753,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -15113,7 +15085,7 @@ module.exports = FixedKeyControl;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -15621,7 +15593,7 @@ module.exports = SmoothedKeyControl;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -15644,7 +15616,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -15671,7 +15643,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -15691,7 +15663,17 @@ var CONST = {
      * @type {string}
      * @since 3.0.0
      */
-    VERSION: '3.80.1',
+    VERSION: '3.90.0',
+
+    /**
+     * Phaser Release Version as displayed in the console.log header URL.
+     *
+     * @name Phaser.LOG_VERSION
+     * @const
+     * @type {string}
+     * @since 3.87.0
+     */
+    LOG_VERSION: 'v390',
 
     BlendModes: __webpack_require__(10312),
 
@@ -15816,7 +15798,7 @@ module.exports = CONST;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -15992,7 +15974,7 @@ var Config = new Class({
         /**
          * @const {string} Phaser.Core.Config#gameURL - The URL of the game.
          */
-        this.gameURL = GetValue(config, 'url', 'https://phaser.io');
+        this.gameURL = GetValue(config, 'url', 'https://phaser.io/' + CONST.LOG_VERSION);
 
         /**
          * @const {string} Phaser.Core.Config#gameVersion - The version of the game.
@@ -16128,7 +16110,7 @@ var Config = new Class({
         //  If you do: { banner: false } it won't display any banner at all
 
         /**
-         * @const {boolean} Phaser.Core.Config#hideBanner - Don't write the banner line to the console.log.
+         * @const {boolean} Phaser.Core.Config#hideBanner - Don't write the banner line to the console.log. See `Phaser.Types.Core.BannerConfig` for details of this object.
          */
         this.hideBanner = (GetValue(config, 'banner', null) === false);
 
@@ -16172,7 +16154,7 @@ var Config = new Class({
         var renderConfig = GetValue(config, 'render', null);
 
         /**
-         * @const {(Phaser.Types.Core.PipelineConfig|Phaser.Renderer.WebGL.WebGLPipeline[])} Phaser.Core.Config#pipeline - An object mapping WebGL names to WebGLPipeline classes. These should be class constructors, not instances.
+         * @const {Phaser.Types.Core.PipelineConfig} Phaser.Core.Config#pipeline - An object mapping WebGL names to WebGLPipeline classes. These should be class constructors, not instances.
          */
         this.pipeline = GetValue(renderConfig, 'pipeline', null, config);
 
@@ -16209,7 +16191,7 @@ var Config = new Class({
         /**
          * @const {boolean} Phaser.Core.Config#roundPixels - Draw texture-based Game Objects at only whole-integer positions. Game Objects without textures, like Graphics, ignore this property.
          */
-        this.roundPixels = GetValue(renderConfig, 'roundPixels', true, config);
+        this.roundPixels = GetValue(renderConfig, 'roundPixels', false, config);
 
         /**
          * @const {boolean} Phaser.Core.Config#pixelArt - Prevent pixel art from becoming blurred when scaled. It will remain crisp (tells the WebGL renderer to automatically create textures using a linear filter mode).
@@ -16347,6 +16329,11 @@ var Config = new Class({
         this.loaderTimeout = GetValue(config, 'loader.timeout', 0);
 
         /**
+         * @const {number} Phaser.Core.Config#loaderMaxRetries - The number of times to retry a file load if it fails.
+         */
+        this.loaderMaxRetries = GetValue(config, 'loader.maxRetries', 2);
+
+        /**
          * @const {boolean} Phaser.Core.Config#loaderWithCredentials - Optional XHR withCredentials value.
          */
         this.loaderWithCredentials = GetValue(config, 'loader.withCredentials', false);
@@ -16476,7 +16463,7 @@ module.exports = Config;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -16605,7 +16592,7 @@ module.exports = CreateRenderer;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -16675,7 +16662,6 @@ var DebugHeader = function (game)
                 args.push('background: ' + color);
 
                 lastColor = color;
-
             });
 
             //  inject the text color
@@ -16736,7 +16722,7 @@ module.exports = DebugHeader;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -17350,7 +17336,7 @@ var Game = new Class({
     {
         this.loop.resume();
 
-        this.events.emit(Events.RESUME);
+        this.events.emit(Events.RESUME, this.loop.pauseDuration);
     },
 
     /**
@@ -17370,7 +17356,7 @@ var Game = new Class({
 
         if (wasPaused)
         {
-            this.events.emit(Events.RESUME);
+            this.events.emit(Events.RESUME, 0);
         }
     },
 
@@ -17515,7 +17501,7 @@ module.exports = Game;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -17820,6 +17806,17 @@ var TimeStep = new Class({
         this.inFocus = true;
 
         /**
+         * The duration of the most recent game pause, if any, in ms.
+         *
+         * @name Phaser.Core.TimeStep#pauseDuration
+         * @type {number}
+         * @readonly
+         * @default 0
+         * @since 3.85.0
+         */
+        this.pauseDuration = 0;
+
+        /**
          * The timestamp at which the game became paused, as determined by the Page Visibility API.
          *
          * @name Phaser.Core.TimeStep#_pauseTime
@@ -17984,7 +17981,8 @@ var TimeStep = new Class({
     {
         this.resetDelta();
 
-        this.startTime += this.time - this._pauseTime;
+        this.pauseDuration = this.time - this._pauseTime;
+        this.startTime += this.pauseDuration;
     },
 
     /**
@@ -18394,7 +18392,7 @@ module.exports = TimeStep;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -18486,7 +18484,7 @@ module.exports = VisibilityHandler;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -18511,7 +18509,7 @@ module.exports = 'blur';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -18535,7 +18533,7 @@ module.exports = 'boot';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -18560,7 +18558,7 @@ module.exports = 'contextlost';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -18585,7 +18583,7 @@ module.exports = 'destroy';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -18609,7 +18607,7 @@ module.exports = 'focus';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -18637,7 +18635,7 @@ module.exports = 'hidden';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -18660,7 +18658,7 @@ module.exports = 'pause';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -18688,7 +18686,7 @@ module.exports = 'postrender';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -18715,7 +18713,7 @@ module.exports = 'poststep';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -18742,7 +18740,7 @@ module.exports = 'prerender';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -18769,7 +18767,7 @@ module.exports = 'prestep';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -18793,7 +18791,7 @@ module.exports = 'ready';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -18805,6 +18803,8 @@ module.exports = 'ready';
  * @event Phaser.Core.Events#RESUME
  * @type {string}
  * @since 3.0.0
+ *
+ * @param {number} pauseDuration - The duration, in ms, that the game was paused for, or 0 if {@link Phaser.Game#resume} was called.
  */
 module.exports = 'resume';
 
@@ -18816,7 +18816,7 @@ module.exports = 'resume';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -18843,7 +18843,7 @@ module.exports = 'step';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -18869,7 +18869,7 @@ module.exports = 'systemready';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -18895,7 +18895,7 @@ module.exports = 'visible';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -18932,7 +18932,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -18959,7 +18959,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -19082,7 +19082,7 @@ module.exports = GenerateTexture;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -19105,7 +19105,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -19144,7 +19144,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -19183,7 +19183,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -19222,7 +19222,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -19261,7 +19261,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -19300,7 +19300,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -19326,7 +19326,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -19554,7 +19554,7 @@ module.exports = CubicBezierCurve;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -20172,7 +20172,7 @@ module.exports = Curve;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -20797,7 +20797,7 @@ module.exports = EllipseCurve;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -21104,7 +21104,7 @@ module.exports = LineCurve;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -21322,7 +21322,7 @@ module.exports = QuadraticBezier;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -21548,7 +21548,7 @@ module.exports = SplineCurve;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -21576,7 +21576,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -21716,7 +21716,7 @@ module.exports = MoveTo;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -22654,7 +22654,7 @@ module.exports = Path;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -23366,7 +23366,7 @@ module.exports = DataManager;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -23494,7 +23494,7 @@ module.exports = DataManagerPlugin;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -23528,7 +23528,7 @@ module.exports = 'changedata';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -23560,7 +23560,7 @@ module.exports = 'changedata-';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -23583,7 +23583,7 @@ module.exports = 'destroy';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -23613,7 +23613,7 @@ module.exports = 'removedata';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -23643,7 +23643,7 @@ module.exports = 'setdata';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -23669,7 +23669,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -23693,7 +23693,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -23820,7 +23820,7 @@ module.exports = init();
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -23939,7 +23939,7 @@ module.exports = init();
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -24058,7 +24058,7 @@ module.exports = init();
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -24258,7 +24258,7 @@ module.exports = init();
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -24368,7 +24368,7 @@ module.exports = init();
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -24449,7 +24449,7 @@ module.exports = init();
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -24642,7 +24642,7 @@ module.exports = init();
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -24798,7 +24798,7 @@ module.exports = init();
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -24846,7 +24846,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -25538,7 +25538,7 @@ module.exports = ColorMatrix;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -25759,7 +25759,7 @@ module.exports = RGB;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -25894,7 +25894,7 @@ module.exports = ALIGN_CONST;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -25939,7 +25939,7 @@ module.exports = BottomCenter;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -25984,7 +25984,7 @@ module.exports = BottomLeft;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -26029,7 +26029,7 @@ module.exports = BottomRight;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -26072,7 +26072,7 @@ module.exports = Center;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -26117,7 +26117,7 @@ module.exports = LeftCenter;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -26171,7 +26171,7 @@ module.exports = QuickSet;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -26216,7 +26216,7 @@ module.exports = RightCenter;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -26261,7 +26261,7 @@ module.exports = TopCenter;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -26306,7 +26306,7 @@ module.exports = TopLeft;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -26351,7 +26351,7 @@ module.exports = TopRight;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -26382,7 +26382,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -26413,7 +26413,7 @@ module.exports = Align;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -26458,7 +26458,7 @@ module.exports = BottomCenter;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -26503,7 +26503,7 @@ module.exports = BottomLeft;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -26548,7 +26548,7 @@ module.exports = BottomRight;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -26593,7 +26593,7 @@ module.exports = LeftBottom;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -26638,7 +26638,7 @@ module.exports = LeftCenter;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -26683,7 +26683,7 @@ module.exports = LeftTop;
 
 /**
  * @author       samme
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -26736,7 +26736,7 @@ module.exports = QuickSet;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -26781,7 +26781,7 @@ module.exports = RightBottom;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -26826,7 +26826,7 @@ module.exports = RightCenter;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -26871,7 +26871,7 @@ module.exports = RightTop;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -26916,7 +26916,7 @@ module.exports = TopCenter;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -26961,7 +26961,7 @@ module.exports = TopLeft;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -27006,7 +27006,7 @@ module.exports = TopRight;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -27040,7 +27040,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -27078,7 +27078,7 @@ module.exports = CenterOn;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -27107,7 +27107,7 @@ module.exports = GetBottom;
 
 /**
  * @author       samme
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -27153,7 +27153,7 @@ module.exports = GetBounds;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -27182,7 +27182,7 @@ module.exports = GetCenterX;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -27211,7 +27211,7 @@ module.exports = GetCenterY;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -27240,7 +27240,7 @@ module.exports = GetLeft;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -27271,7 +27271,7 @@ module.exports = GetOffsetX;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -27302,7 +27302,7 @@ module.exports = GetOffsetY;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -27331,7 +27331,7 @@ module.exports = GetRight;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -27360,7 +27360,7 @@ module.exports = GetTop;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -27394,7 +27394,7 @@ module.exports = SetBottom;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -27430,7 +27430,7 @@ module.exports = SetCenterX;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -27466,7 +27466,7 @@ module.exports = SetCenterY;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -27500,7 +27500,7 @@ module.exports = SetLeft;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -27534,7 +27534,7 @@ module.exports = SetRight;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -27568,7 +27568,7 @@ module.exports = SetTop;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -27605,7 +27605,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -27669,7 +27669,7 @@ module.exports = CanvasInterpolation;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -27931,7 +27931,7 @@ module.exports = CanvasPool();
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -28064,7 +28064,7 @@ module.exports = Smoothing();
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -28100,7 +28100,7 @@ module.exports = TouchAction;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -28148,7 +28148,7 @@ module.exports = UserSelect;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -28174,7 +28174,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -29038,7 +29038,7 @@ module.exports = Color;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -29136,7 +29136,7 @@ module.exports = ColorSpectrum;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -29177,7 +29177,7 @@ module.exports = ColorToRGBA;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -29208,7 +29208,7 @@ module.exports = ComponentToHex;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -29239,7 +29239,7 @@ module.exports = GetColor;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -29271,7 +29271,7 @@ module.exports = GetColor32;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -29322,7 +29322,7 @@ module.exports = HSLToColor;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -29364,7 +29364,7 @@ module.exports = HSVColorWheel;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -29446,7 +29446,7 @@ module.exports = HSVToRGB;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -29500,7 +29500,7 @@ module.exports = HexStringToColor;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -29557,7 +29557,7 @@ module.exports = HueToComponent;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -29591,7 +29591,7 @@ module.exports = IntegerToColor;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -29640,11 +29640,12 @@ module.exports = IntegerToRGB;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
 var Linear = __webpack_require__(28915);
+var GetColor = __webpack_require__(37589);
 
 /**
  * @namespace Phaser.Display.Color.Interpolate
@@ -29677,11 +29678,16 @@ var RGBWithRGB = function (r1, g1, b1, r2, g2, b2, length, index)
     if (index === undefined) { index = 0; }
 
     var t = index / length;
+    var r = Linear(r1, r2, t);
+    var g = Linear(g1, g2, t);
+    var b = Linear(b1, b2, t);
 
     return {
-        r: Linear(r1, r2, t),
-        g: Linear(g1, g2, t),
-        b: Linear(b1, b2, t)
+        r: r,
+        g: g,
+        b: b,
+        a: 255,
+        color: GetColor(r, g, b)
     };
 };
 
@@ -29749,7 +29755,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -29780,7 +29786,7 @@ module.exports = ObjectToColor;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -29827,7 +29833,7 @@ module.exports = RGBStringToColor;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -29908,7 +29914,7 @@ module.exports = RGBToHSV;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -29953,7 +29959,7 @@ module.exports = RGBToString;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -29990,7 +29996,7 @@ module.exports = RandomRGB;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -30047,7 +30053,7 @@ module.exports = ValueToColor;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -30083,7 +30089,7 @@ module.exports = Color;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -30112,7 +30118,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -30355,7 +30361,7 @@ module.exports = BitmapMask;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -30671,7 +30677,7 @@ module.exports = GeometryMask;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -30694,7 +30700,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -30821,7 +30827,7 @@ module.exports = BaseShader;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -30880,7 +30886,7 @@ module.exports = AddToDOM;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -30925,7 +30931,7 @@ module.exports = CreateDOMContainer;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -30989,7 +30995,7 @@ module.exports = DOMContentLoaded;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -31049,7 +31055,7 @@ module.exports = GetInnerHeight;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -31115,7 +31121,7 @@ module.exports = GetScreenOrientation;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -31167,7 +31173,7 @@ module.exports = GetTarget;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -31225,7 +31231,7 @@ module.exports = ParseXML;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -31255,7 +31261,7 @@ module.exports = RemoveFromDOM;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -31445,7 +31451,7 @@ module.exports = RequestAnimationFrame;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -31476,7 +31482,7 @@ module.exports = Dom;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -31661,7 +31667,7 @@ module.exports = EventEmitter;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -31679,7 +31685,7 @@ module.exports = { EventEmitter: __webpack_require__(47565) };
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -31750,7 +31756,7 @@ module.exports = Barrel;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -31915,7 +31921,7 @@ module.exports = Bloom;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -32094,7 +32100,7 @@ module.exports = Blur;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -32245,7 +32251,7 @@ module.exports = Bokeh;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -32454,7 +32460,7 @@ module.exports = Circle;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -32549,7 +32555,7 @@ module.exports = ColorMatrix;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -32651,7 +32657,7 @@ module.exports = Controller;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -32771,7 +32777,7 @@ module.exports = Displacement;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -32906,7 +32912,7 @@ module.exports = Glow;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -33119,7 +33125,7 @@ module.exports = Gradient;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -33190,7 +33196,7 @@ module.exports = Pixelate;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -33359,7 +33365,7 @@ module.exports = Shadow;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -33463,7 +33469,7 @@ module.exports = Shine;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -33566,7 +33572,7 @@ module.exports = Vignette;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -33692,7 +33698,7 @@ module.exports = Wipe;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -33850,7 +33856,7 @@ module.exports = FX_CONST;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -33893,7 +33899,7 @@ module.exports = FX;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -34022,7 +34028,7 @@ module.exports = BuildGameObject;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -34120,7 +34126,7 @@ module.exports = BuildGameObjectAnimation;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -34355,11 +34361,17 @@ var DisplayList = new Class({
     shutdown: function ()
     {
         var list = this.list;
+        var i = list.length;
 
-        while (list.length)
+        while (i--)
         {
-            list[0].destroy(true);
+            if (list[i])
+            {
+                list[i].destroy(true);
+            }
         }
+
+        list.length = 0;
 
         this.events.off(SceneEvents.SHUTDOWN, this.shutdown, this);
     },
@@ -34397,7 +34409,7 @@ module.exports = DisplayList;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -34899,12 +34911,16 @@ var GameObject = new Class({
      *
      * @method Phaser.GameObjects.GameObject#disableInteractive
      * @since 3.7.0
+     * 
+     * @param {boolean} [resetCursor=false] - Should the currently active Input cursor, if any, be reset to the default cursor?
      *
      * @return {this} This GameObject.
      */
-    disableInteractive: function ()
+    disableInteractive: function (resetCursor)
     {
-        this.scene.sys.input.disable(this);
+        if (resetCursor === undefined) { resetCursor = false; }
+
+        this.scene.sys.input.disable(this, resetCursor);
 
         return this;
     },
@@ -34931,12 +34947,21 @@ var GameObject = new Class({
      *
      * @method Phaser.GameObjects.GameObject#removeInteractive
      * @since 3.7.0
+     * 
+     * @param {boolean} [resetCursor=false] - Should the currently active Input cursor, if any, be reset to the default cursor?
      *
      * @return {this} This GameObject.
      */
-    removeInteractive: function ()
+    removeInteractive: function (resetCursor)
     {
+        if (resetCursor === undefined) { resetCursor = false; }
+
         this.scene.sys.input.clear(this);
+
+        if (resetCursor)
+        {
+            this.scene.sys.input.resetCursor();
+        }
 
         this.input = undefined;
 
@@ -35123,7 +35148,7 @@ var GameObject = new Class({
      * every game frame. This method is passed two parameters: `delta` and `time`.
      *
      * If you wish to run your own logic within `preUpdate` then you should always call
-     * `super.preUpdate(delta, time)` within it, or it may fail to process required operations,
+     * `super.preUpdate(time, delta)` within it, or it may fail to process required operations,
      * such as Sprite animations.
      *
      * @method Phaser.GameObjects.GameObject#addToUpdateList
@@ -35202,6 +35227,38 @@ var GameObject = new Class({
         }
 
         return this;
+    },
+
+    /**
+     * Returns a reference to the underlying display list _array_ that contains this Game Object,
+     * which will be either the Scene's Display List or the internal list belonging
+     * to its parent Container, if it has one.
+     * 
+     * If this Game Object is not on a display list or in a container, it will return `null`.
+     * 
+     * You should be very careful with this method, and understand that it returns a direct reference to the
+     * internal array used by the Display List. Mutating this array directly can cause all kinds of subtle
+     * and difficult to debug issues in your game.
+     *
+     * @method Phaser.GameObjects.GameObject#getDisplayList
+     * @since 3.85.0
+     *
+     * @return {?Phaser.GameObjects.GameObject[]} The internal Display List array of Game Objects, or `null`.
+     */
+    getDisplayList: function ()
+    {
+        var list = null;
+
+        if (this.parentContainer)
+        {
+            list = this.parentContainer.list;
+        }
+        else if (this.displayList)
+        {
+            list = this.displayList.list;
+        }
+
+        return list;
     },
 
     /**
@@ -35313,7 +35370,7 @@ module.exports = GameObject;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -35517,7 +35574,7 @@ module.exports = GameObjectCreator;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -35751,7 +35808,7 @@ module.exports = GameObjectFactory;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -35823,7 +35880,7 @@ module.exports = GetCalcMatrix;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -36128,7 +36185,7 @@ module.exports = UpdateList;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -36163,17 +36220,39 @@ var BatchChar = function (pipeline, src, char, glyph, offsetX, offsetY, calcMatr
     var xw = x + char.w;
     var yh = y + char.h;
 
-    var tx0 = calcMatrix.getXRound(x, y, roundPixels);
-    var ty0 = calcMatrix.getYRound(x, y, roundPixels);
+    var a = calcMatrix.a;
+    var b = calcMatrix.b;
+    var c = calcMatrix.c;
+    var d = calcMatrix.d;
+    var e = calcMatrix.e;
+    var f = calcMatrix.f;
 
-    var tx1 = calcMatrix.getXRound(x, yh, roundPixels);
-    var ty1 = calcMatrix.getYRound(x, yh, roundPixels);
+    var tx0 = x * a + y * c + e;
+    var ty0 = x * b + y * d + f;
 
-    var tx2 = calcMatrix.getXRound(xw, yh, roundPixels);
-    var ty2 = calcMatrix.getYRound(xw, yh, roundPixels);
+    var tx1 = x * a + yh * c + e;
+    var ty1 = x * b + yh * d + f;
 
-    var tx3 = calcMatrix.getXRound(xw, y, roundPixels);
-    var ty3 = calcMatrix.getYRound(xw, y, roundPixels);
+    var tx2 = xw * a + yh * c + e;
+    var ty2 = xw * b + yh * d + f;
+
+    var tx3 = xw * a + y * c + e;
+    var ty3 = xw * b + y * d + f;
+
+    if (roundPixels)
+    {
+        tx0 = Math.round(tx0);
+        ty0 = Math.round(ty0);
+
+        tx1 = Math.round(tx1);
+        ty1 = Math.round(ty1);
+
+        tx2 = Math.round(tx2);
+        ty2 = Math.round(ty2);
+
+        tx3 = Math.round(tx3);
+        ty3 = Math.round(ty3);
+    }
 
     pipeline.batchQuad(src, tx0, ty0, tx1, ty1, tx2, ty2, tx3, ty3, glyph.u0, glyph.v0, glyph.u1, glyph.v1, tintTL, tintTR, tintBL, tintBR, tintEffect, texture, textureUnit);
 };
@@ -36188,7 +36267,7 @@ module.exports = BatchChar;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -36288,173 +36367,88 @@ var GetBitmapTextSize = function (src, round, updateOrigin, out)
     var currentLineWidth = 0;
 
     var i;
+    var j;
+    var lines;
     var words = [];
     var characters = [];
     var current = null;
 
+    // Measure the width of the text
+    var measureTextWidth = function (text, fontData)
+    {
+        var width = 0;
+
+        for (var i = 0; i < text.length; i++)
+        {
+            var charCode = text.charCodeAt(i);
+            var glyph = fontData.chars[charCode];
+
+            if (glyph)
+            {
+                width += glyph.xAdvance;
+            }
+        }
+
+        return width * sx;
+    };
+    
     //  Scan for breach of maxWidth and insert carriage-returns
     if (maxWidth > 0)
     {
-        for (i = 0; i < textLength; i++)
+        // Split the text into lines
+        lines = text.split('\n');
+        var wrappedLines = [];
+
+        // Loop through each line
+        for (i = 0; i < lines.length; i++)
         {
-            charCode = text.charCodeAt(i);
+            var line = lines[i];
+            var word = '';
+            var wrappedLine = '';
+            var lineToCheck = '';
+            var lineWithWord = '';
 
-            if (charCode === 10)
+            // Loop through each character in a line
+            for (j = 0; j < line.length; j++)
             {
-                if (current !== null)
+                charCode = line.charCodeAt(j);
+
+                word += line[j];
+
+                // White space or end of line?
+                if (charCode === wordWrapCharCode || j === line.length - 1)
                 {
-                    words.push({
-                        word: current.word,
-                        i: current.i,
-                        x: current.x * sx,
-                        y: current.y * sy,
-                        w: current.w * sx,
-                        h: current.h * sy,
-                        cr: true
-                    });
+                    lineWithWord = lineToCheck + word;
+                    
+                    var textWidth = measureTextWidth(lineWithWord, src.fontData);
 
-                    current = null;
-                }
+                    if (textWidth <= maxWidth)
+                    {
+                        lineToCheck = lineWithWord;
+                    }
+                    else
+                    {
+                        // If the current word is too long to fit on a line, wrap it
+                        // Remove trailing word wrap char to keep text length the same
+                        wrappedLine = wrappedLine.slice(0, -1);
+                        wrappedLine += (wrappedLine ? '\n' : '') + lineToCheck;
+                        lineToCheck = word;
+                    }
 
-                xAdvance = 0;
-                yAdvance += lineHeight + lineSpacing;
-                lastGlyph = null;
-
-                continue;
-            }
-
-            glyph = chars[charCode];
-
-            if (!glyph)
-            {
-                continue;
-            }
-
-            if (lastGlyph !== null)
-            {
-                var glyphKerningOffset = glyph.kerning[lastCharCode];
-            }
-
-            if (charCode === wordWrapCharCode)
-            {
-                if (current !== null)
-                {
-                    words.push({
-                        word: current.word,
-                        i: current.i,
-                        x: current.x * sx,
-                        y: current.y * sy,
-                        w: current.w * sx,
-                        h: current.h * sy,
-                        cr: false
-                    });
-
-                    current = null;
+                    word = '';
                 }
             }
-            else
-            {
-                if (current === null)
-                {
-                    //  We're starting a new word, recording the starting index, etc
-                    current = { word: '', i: i, x: xAdvance, y: yAdvance, w: 0, h: lineHeight, cr: false };
-                }
 
-                current.word = current.word.concat(text[i]);
-                current.w += glyph.xOffset + glyph.xAdvance + ((glyphKerningOffset !== undefined) ? glyphKerningOffset : 0);
-            }
-
-            xAdvance += glyph.xAdvance + letterSpacing;
-            lastGlyph = glyph;
-            lastCharCode = charCode;
+            wrappedLine = wrappedLine.slice(0, -1);
+            wrappedLine += (wrappedLine ? '\n' : '') + lineToCheck;
+            wrappedLines.push(wrappedLine);
         }
 
-        //  Last word
-        if (current !== null)
-        {
-            words.push({
-                word: current.word,
-                i: current.i,
-                x: current.x * sx,
-                y: current.y * sy,
-                w: current.w * sx,
-                h: current.h * sy,
-                cr: false
-            });
-        }
-
-        //  Reset for the next loop
-        xAdvance = 0;
-        yAdvance = 0;
-        lastGlyph = null;
-        lastCharCode = 0;
-
-        //  Loop through the words array and see if we've got any > maxWidth
-        var prev;
-        var offset = 0;
-        var crs = [];
-
-        for (i = 0; i < words.length; i++)
-        {
-            var entry = words[i];
-            var left = entry.x;
-            var right = entry.x + entry.w;
-
-            if (prev)
-            {
-                var diff = left - (prev.x + prev.w);
-
-                offset = left - (diff + prev.w);
-
-                prev = null;
-            }
-
-            var checkLeft = left - offset;
-            var checkRight = right - offset;
-
-            if (checkLeft > maxWidth || checkRight > maxWidth)
-            {
-                crs.push(entry.i - 1);
-
-                if (entry.cr)
-                {
-                    crs.push(entry.i + entry.word.length);
-
-                    offset = 0;
-                    prev = null;
-                }
-                else
-                {
-                    prev = entry;
-                }
-            }
-            else if (entry.cr)
-            {
-                crs.push(entry.i + entry.word.length);
-
-                offset = 0;
-                prev = null;
-            }
-        }
-
-        var stringInsert = function (str, index, value)
-        {
-            return str.substr(0, index) + value + str.substr(index + 1);
-        };
-
-        for (i = crs.length - 1; i >= 0; i--)
-        {
-            // eslint-disable-next-line quotes
-            text = stringInsert(text, crs[i], "\n");
-        }
+        text = wrappedLines.join('\n');
 
         out.wrappedText = text;
 
         textLength = text.length;
-
-        //  Recalculated in the next loop
-        words = [];
-        current = null;
     }
 
     var charIndex = 0;
@@ -36479,8 +36473,6 @@ var GetBitmapTextSize = function (src, round, updateOrigin, out)
                 current = null;
             }
 
-            xAdvance = 0;
-            yAdvance += lineHeight + lineSpacing;
             lastGlyph = null;
 
             lineWidths[currentLine] = currentLineWidth;
@@ -36497,6 +36489,9 @@ var GetBitmapTextSize = function (src, round, updateOrigin, out)
 
             currentLine++;
             currentLineWidth = 0;
+
+            xAdvance = 0;
+            yAdvance = (lineHeight + lineSpacing) * currentLine;
 
             continue;
         }
@@ -36645,7 +36640,8 @@ var GetBitmapTextSize = function (src, round, updateOrigin, out)
 
     var local = out.local;
     var global = out.global;
-    var lines = out.lines;
+    
+    lines = out.lines;
 
     local.x = bx * scale;
     local.y = by * scale;
@@ -36713,7 +36709,7 @@ module.exports = GetBitmapTextSize;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -36768,7 +36764,7 @@ module.exports = ParseFromAtlas;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -36901,7 +36897,7 @@ module.exports = ParseRetroFont;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -37063,7 +37059,7 @@ module.exports = ParseXMLBitmapFont;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -37090,7 +37086,7 @@ module.exports = RetroFont;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -37207,7 +37203,7 @@ module.exports = RETRO_FONT_CONST;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -37442,7 +37438,7 @@ module.exports = DynamicBitmapText;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -37657,7 +37653,7 @@ module.exports = DynamicBitmapTextCanvasRenderer;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -37709,7 +37705,7 @@ GameObjectCreator.register('dynamicBitmapText', function (config, addToScene)
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -37779,7 +37775,7 @@ GameObjectFactory.register('dynamicBitmapText', function (x, y, font, text, size
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -37812,7 +37808,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -37972,8 +37968,9 @@ var DynamicBitmapTextWebGLRenderer = function (renderer, src, camera, parentMatr
 
         if (lastGlyph !== null)
         {
-            var kerningOffset = glyph.kerning[lastCharCode];
-            x += (kerningOffset !== undefined) ? kerningOffset : 0;
+            var kerningOffset = glyph.kerning[lastCharCode] || 0;
+            x += kerningOffset;
+            xAdvance += kerningOffset;
         }
 
         xAdvance += glyph.xAdvance + letterSpacing;
@@ -38108,7 +38105,7 @@ module.exports = DynamicBitmapTextWebGLRenderer;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -38218,7 +38215,7 @@ var BitmapText = new Class({
 
         if (!entry)
         {
-            console.warn('Invalid BitmapText key: ' + font);
+            throw new Error('Invalid BitmapText key: ' + font);
         }
 
         /**
@@ -38961,6 +38958,34 @@ var BitmapText = new Class({
     },
 
     /**
+     * Sets the display size of this BitmapText Game Object.
+     *
+     * Calling this will adjust the scale.
+     *
+     * @method Phaser.GameObjects.BitmapText#setDisplaySize
+     * @since 3.61.0
+     *
+     * @param {number} width - The width of this BitmapText Game Object.
+     * @param {number} height - The height of this BitmapText Game Object.
+     *
+     * @return {this} This Game Object instance.
+     */
+    setDisplaySize: function (displayWidth, displayHeight)
+    {
+        this.setScale(1, 1);
+
+        this.getTextBounds(false);
+
+        var scaleX = displayWidth / this.width;
+
+        var scaleY = displayHeight / this.height;
+
+        this.setScale(scaleX, scaleY);
+
+        return this;
+    },
+
+    /**
      * Controls the alignment of each line of text in this BitmapText object.
      *
      * Only has any effect when this BitmapText contains multiple lines of text, split with carriage-returns.
@@ -39177,6 +39202,17 @@ var BitmapText = new Class({
      */
     displayWidth: {
 
+        set: function(value)
+        {
+            this.setScaleX(1);
+
+            this.getTextBounds(false);
+
+            var scale = value / this.width;
+
+            this.setScaleX(scale);
+        },
+
         get: function ()
         {
             return this.width;
@@ -39197,6 +39233,17 @@ var BitmapText = new Class({
      * @since 3.60.0
      */
     displayHeight: {
+
+        set: function(value)
+        {
+            this.setScaleY(1);
+
+            this.getTextBounds(false);
+
+            var scale = value / this.height;
+
+            this.setScaleY(scale);
+        },
 
         get: function ()
         {
@@ -39321,7 +39368,7 @@ module.exports = BitmapText;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -39509,7 +39556,7 @@ module.exports = BitmapTextCanvasRenderer;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -39563,7 +39610,7 @@ GameObjectCreator.register('bitmapText', function (config, addToScene)
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -39628,7 +39675,7 @@ GameObjectFactory.register('bitmapText', function (x, y, font, text, size, align
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -39661,7 +39708,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -39808,7 +39855,7 @@ module.exports = BitmapTextWebGLRenderer;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -40111,7 +40158,7 @@ module.exports = Blitter;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -40249,7 +40296,7 @@ module.exports = BlitterCanvasRenderer;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -40300,7 +40347,7 @@ GameObjectCreator.register('blitter', function (config, addToScene)
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -40343,7 +40390,7 @@ GameObjectFactory.register('blitter', function (x, y, texture, frame)
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -40376,7 +40423,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -40416,21 +40463,22 @@ var BlitterWebGLRenderer = function (renderer, src, camera, parentMatrix)
 
     var cameraScrollX = camera.scrollX * src.scrollFactorX;
     var cameraScrollY = camera.scrollY * src.scrollFactorY;
-
+    
     var calcMatrix = tempMatrix.copyFrom(camera.matrix);
-
+    
     if (parentMatrix)
     {
         calcMatrix.multiplyWithOffset(parentMatrix, -cameraScrollX, -cameraScrollY);
-
+        
         cameraScrollX = 0;
         cameraScrollY = 0;
     }
-
+    
     var blitterX = src.x - cameraScrollX;
     var blitterY = src.y - cameraScrollY;
     var prevTextureSourceIndex = -1;
     var tintEffect = false;
+    var roundPixels = camera.roundPixels;
 
     renderer.pipelines.preBatch(src);
 
@@ -40463,7 +40511,7 @@ var BlitterWebGLRenderer = function (renderer, src, camera, parentMatrix)
             y += frame.height;
         }
 
-        var quad = calcMatrix.setQuad(x, y, x + width, y + height);
+        var quad = calcMatrix.setQuad(x, y, x + width, y + height, roundPixels);
 
         var tint = Utils.getTintAppendFloatAlpha(bob.tint, bobAlpha);
 
@@ -40494,7 +40542,7 @@ module.exports = BlitterWebGLRenderer;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -40936,7 +40984,7 @@ module.exports = Bob;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -41232,7 +41280,7 @@ module.exports = Alpha;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -41343,7 +41391,7 @@ module.exports = AlphaSingle;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -41468,7 +41516,7 @@ module.exports = BlendMode;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -41618,7 +41666,7 @@ module.exports = ComputedSize;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -41742,11 +41790,11 @@ module.exports = Crop;
 /***/ }),
 
 /***/ 89272:
-/***/ ((module) => {
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -41757,6 +41805,8 @@ module.exports = Crop;
  * @namespace Phaser.GameObjects.Components.Depth
  * @since 3.0.0
  */
+
+var ArrayUtils = __webpack_require__(37105);
 
 var Depth = {
 
@@ -41830,6 +41880,110 @@ var Depth = {
         this.depth = value;
 
         return this;
+    },
+
+    /**
+     * Sets this Game Object to be at the top of the display list, or the top of its parent container.
+     * 
+     * Being at the top means it will render on-top of everything else.
+     * 
+     * This method does not change this Game Objects `depth` value, it simply alters its list position.
+     *
+     * @method Phaser.GameObjects.Components.Depth#setToTop
+     * @since 3.85.0
+     * 
+     * @return {this} This Game Object instance.
+     */
+    setToTop: function ()
+    {
+        var list = this.getDisplayList();
+
+        if (list)
+        {
+            ArrayUtils.BringToTop(list, this);
+        }
+
+        return this;
+    },
+
+    /**
+     * Sets this Game Object to the back of the display list, or the back of its parent container.
+     * 
+     * Being at the back means it will render below everything else.
+     * 
+     * This method does not change this Game Objects `depth` value, it simply alters its list position.
+     *
+     * @method Phaser.GameObjects.Components.Depth#setToBack
+     * @since 3.85.0
+     * 
+     * @return {this} This Game Object instance.
+     */
+    setToBack: function ()
+    {
+        var list = this.getDisplayList();
+
+        if (list)
+        {
+            ArrayUtils.SendToBack(list, this);
+        }
+
+        return this;
+    },
+
+    /**
+     * Move this Game Object so that it appears above the given Game Object.
+     * 
+     * This means it will render immediately after the other object in the display list.
+     * 
+     * Both objects must belong to the same display list, or parent container.
+     * 
+     * This method does not change this Game Objects `depth` value, it simply alters its list position.
+     *
+     * @method Phaser.GameObjects.Components.Depth#setAbove
+     * @since 3.85.0
+     * 
+     * @param {Phaser.GameObjects.GameObject} gameObject - The Game Object that this Game Object will be moved to be above.
+     * 
+     * @return {this} This Game Object instance.
+     */
+    setAbove: function (gameObject)
+    {
+        var list = this.getDisplayList();
+
+        if (list && gameObject)
+        {
+            ArrayUtils.MoveAbove(list, this, gameObject);
+        }
+
+        return this;
+    },
+
+    /**
+     * Move this Game Object so that it appears below the given Game Object.
+     * 
+     * This means it will render immediately under the other object in the display list.
+     * 
+     * Both objects must belong to the same display list, or parent container.
+     * 
+     * This method does not change this Game Objects `depth` value, it simply alters its list position.
+     *
+     * @method Phaser.GameObjects.Components.Depth#setBelow
+     * @since 3.85.0
+     * 
+     * @param {Phaser.GameObjects.GameObject} gameObject - The Game Object that this Game Object will be moved to be below.
+     * 
+     * @return {this} This Game Object instance.
+     */
+    setBelow: function (gameObject)
+    {
+        var list = this.getDisplayList();
+
+        if (list && gameObject)
+        {
+            ArrayUtils.MoveBelow(list, this, gameObject);
+        }
+
+        return this;
     }
 
 };
@@ -41844,7 +41998,7 @@ module.exports = Depth;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -42133,7 +42287,7 @@ var FX = new Class({
      * @generic {Phaser.FX.Controller} T
      * @genericUse {T} - [fx]
      *
-     * @param {Phaser.FX.Controller} fx - The FX Controller to remove from this FX Component.
+     * @param {Phaser.FX.Controller|Phaser.Display.ColorMatrix} fx - The FX Controller to remove from this FX Component.
      *
      * @return {this} This Game Object instance.
      */
@@ -42253,7 +42407,10 @@ var FX = new Class({
                     pipeline = pipeline.pop();
                 }
 
-                pipeline.controller = fx;
+                if (pipeline)
+                {
+                    pipeline.controller = fx;
+                }
 
                 return fx;
             }
@@ -42689,7 +42846,7 @@ module.exports = FX;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -42854,7 +43011,7 @@ module.exports = Flip;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -43234,7 +43391,7 @@ module.exports = GetBounds;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -43396,7 +43553,7 @@ module.exports = Mask;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -43604,7 +43761,7 @@ module.exports = Origin;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -44034,7 +44191,7 @@ module.exports = PathFollower;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -44239,11 +44396,11 @@ var Pipeline = {
      * @webglOnly
      * @since 3.0.0
      *
-     * @return {string} The string-based name of the pipeline being used by this Game Object.
+     * @return {?string} The string-based name of the pipeline being used by this Game Object, or null.
      */
     getPipelineName: function ()
     {
-        return this.pipeline.name;
+        return (this.pipeline === null) ? null : this.pipeline.name;
     }
 
 };
@@ -44258,7 +44415,7 @@ module.exports = Pipeline;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -44632,7 +44789,7 @@ module.exports = PostPipeline;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -44740,7 +44897,7 @@ module.exports = ScrollFactor;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -44936,7 +45093,7 @@ module.exports = Size;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -45086,7 +45243,7 @@ module.exports = Texture;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -45310,7 +45467,7 @@ module.exports = TextureCrop;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -45553,7 +45710,7 @@ module.exports = Tint;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -45615,7 +45772,7 @@ module.exports = ToJSON;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -46135,9 +46292,13 @@ var Transform = {
             return this.getLocalTransformMatrix(tempMatrix);
         }
 
+        var destroyParentMatrix = false;
+
         if (!parentMatrix)
         {
             parentMatrix = new TransformMatrix();
+
+            destroyParentMatrix = true;
         }
 
         tempMatrix.applyITRS(this.x, this.y, this._rotation, this._scaleX, this._scaleY);
@@ -46149,6 +46310,11 @@ var Transform = {
             parentMatrix.multiply(tempMatrix, tempMatrix);
 
             parent = parent.parentContainer;
+        }
+
+        if (destroyParentMatrix)
+        {
+            parentMatrix.destroy();
         }
 
         return tempMatrix;
@@ -46205,6 +46371,40 @@ var Transform = {
     },
 
     /**
+     * Gets the world position of this Game Object, factoring in any parent Containers.
+     *
+     * @method Phaser.GameObjects.Components.Transform#getWorldPoint
+     * @since 3.88.0
+     *
+     * @param {Phaser.Math.Vector2} [point] - A Vector2, or point-like object, to store the result in.
+     * @param {Phaser.GameObjects.Components.TransformMatrix} [tempMatrix] - A temporary matrix to hold the Game Object's values.
+     * @param {Phaser.GameObjects.Components.TransformMatrix} [parentMatrix] - A temporary matrix to hold parent values.
+     *
+     * @return {Phaser.Math.Vector2} The world position of this Game Object.
+     */
+    getWorldPoint: function (point, tempMatrix, parentMatrix)
+    {
+        if (point === undefined) { point = new Vector2(); }
+
+        var parent = this.parentContainer;
+
+        if (!parent)
+        {
+            point.x = this.x;
+            point.y = this.y;
+
+            return point;
+        }
+
+        var worldTransform = this.getWorldTransformMatrix(tempMatrix, parentMatrix);
+
+        point.x = worldTransform.tx;
+        point.y = worldTransform.ty;
+
+        return point;
+    },
+
+    /**
      * Gets the sum total rotation of all of this Game Objects parent Containers.
      *
      * The returned value is in radians and will be zero if this Game Object has no parent container.
@@ -46242,7 +46442,7 @@ module.exports = Transform;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -46949,7 +47149,8 @@ var TransformMatrix = new Class({
      */
     setToContext: function (ctx)
     {
-        ctx.setTransform(this);
+        // using old way for old browser compatibility #6965
+        ctx.setTransform(this.a, this.b, this.c, this.d, this.e, this.f);
 
         return ctx;
     },
@@ -47178,33 +47379,55 @@ var TransformMatrix = new Class({
         var e = matrix[4];
         var f = matrix[5];
 
+        // Compute the unrounded positions for the quad
+        var x0 = x * a + y * c + e;
+        var y0 = x * b + y * d + f;
+
+        var x1 = x * a + yh * c + e;
+        var y1 = x * b + yh * d + f;
+
+        var x2 = xw * a + yh * c + e;
+        var y2 = xw * b + yh * d + f;
+
+        var x3 = xw * a + y * c + e;
+        var y3 = xw * b + y * d + f;
+
         if (roundPixels)
         {
-            quad[0] = Math.round(x * a + y * c + e);
-            quad[1] = Math.round(x * b + y * d + f);
+            // Round the top-left corner
+            var rx0 = Math.floor(x0 + 0.5);
+            var ry0 = Math.floor(y0 + 0.5);
 
-            quad[2] = Math.round(x * a + yh * c + e);
-            quad[3] = Math.round(x * b + yh * d + f);
+            // Calculate the offset caused by rounding
+            var dx = rx0 - x0;
+            var dy = ry0 - y0;
 
-            quad[4] = Math.round(xw * a + yh * c + e);
-            quad[5] = Math.round(xw * b + yh * d + f);
+            // Adjust the other corners by the same offset
+            quad[0] = rx0;
+            quad[1] = ry0;
 
-            quad[6] = Math.round(xw * a + y * c + e);
-            quad[7] = Math.round(xw * b + y * d + f);
+            quad[2] = x1 + dx;
+            quad[3] = y1 + dy;
+
+            quad[4] = x2 + dx;
+            quad[5] = y2 + dy;
+
+            quad[6] = x3 + dx;
+            quad[7] = y3 + dy;
         }
         else
         {
-            quad[0] = x * a + y * c + e;
-            quad[1] = x * b + y * d + f;
+            quad[0] = x0;
+            quad[1] = y0;
 
-            quad[2] = x * a + yh * c + e;
-            quad[3] = x * b + yh * d + f;
+            quad[2] = x1;
+            quad[3] = y1;
 
-            quad[4] = xw * a + yh * c + e;
-            quad[5] = xw * b + yh * d + f;
+            quad[4] = x2;
+            quad[5] = y2;
 
-            quad[6] = xw * a + y * c + e;
-            quad[7] = xw * b + y * d + f;
+            quad[6] = x3;
+            quad[7] = y3;
         }
 
         return quad;
@@ -47264,7 +47487,7 @@ var TransformMatrix = new Class({
 
         if (round)
         {
-            v = Math.round(v);
+            v = Math.floor(v + 0.5);
         }
 
         return v;
@@ -47290,7 +47513,7 @@ var TransformMatrix = new Class({
 
         if (round)
         {
-            v = Math.round(v);
+            v = Math.floor(v + 0.5);
         }
 
         return v;
@@ -47336,7 +47559,7 @@ module.exports = TransformMatrix;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -47426,7 +47649,7 @@ module.exports = Visible;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -47471,7 +47694,7 @@ module.exports = {
 /**
  * @author       Richard Davey <rich@phaser.io>
  * @author       Felipe Alfonso <@bitnenfer>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -47485,6 +47708,8 @@ var Rectangle = __webpack_require__(87841);
 var Render = __webpack_require__(29959);
 var Union = __webpack_require__(36899);
 var Vector2 = __webpack_require__(26099);
+
+var tempTransformMatrix = new Components.TransformMatrix();
 
 /**
  * @classdesc
@@ -47525,7 +47750,7 @@ var Vector2 = __webpack_require__(26099);
  *
  * It's important to understand the impact of using Containers. They add additional processing overhead into
  * every one of their children. The deeper you nest them, the more the cost escalates. This is especially true
- * for input events. You also loose the ability to set the display depth of Container children in the same
+ * for input events. You also lose the ability to set the display depth of Container children in the same
  * flexible manner as those not within them. In short, don't use them for the sake of it. You pay a small cost
  * every time you create one, try to structure your game around avoiding that where possible.
  *
@@ -47629,16 +47854,6 @@ var Container = new Class({
          * @since 3.4.0
          */
         this.localTransform = new Components.TransformMatrix();
-
-        /**
-         * Internal temporary Transform Matrix used to avoid object creation.
-         *
-         * @name Phaser.GameObjects.Container#tempTransformMatrix
-         * @type {Phaser.GameObjects.Components.TransformMatrix}
-         * @private
-         * @since 3.4.0
-         */
-        this.tempTransformMatrix = new Components.TransformMatrix();
 
         /**
          * The property key to sort by.
@@ -47974,7 +48189,7 @@ var Container = new Class({
             output.y = source.y;
         }
 
-        var tempMatrix = this.tempTransformMatrix;
+        var tempMatrix = tempTransformMatrix;
 
         //  No need to loadIdentity because applyITRS overwrites every value anyway
         tempMatrix.applyITRS(this.x, this.y, this.rotation, this.scaleX, this.scaleY);
@@ -47998,7 +48213,7 @@ var Container = new Class({
      */
     getBoundsTransformMatrix: function ()
     {
-        return this.getWorldTransformMatrix(this.tempTransformMatrix, this.localTransform);
+        return this.getWorldTransformMatrix(tempTransformMatrix, this.localTransform);
     },
 
     /**
@@ -48288,6 +48503,7 @@ var Container = new Class({
 
     /**
      * Moves a Game Object above another one within this Container.
+     * If the Game Object is already above the other, it isn't moved.
      *
      * These 2 Game Objects must already be children of this Container.
      *
@@ -48311,6 +48527,7 @@ var Container = new Class({
 
     /**
      * Moves a Game Object below another one within this Container.
+     * If the Game Object is already below the other, it isn't moved.
      *
      * These 2 Game Objects must already be children of this Container.
      *
@@ -48919,7 +49136,6 @@ var Container = new Class({
         this.removeAll(!!this.exclusive);
 
         this.localTransform.destroy();
-        this.tempTransformMatrix.destroy();
 
         this.list = [];
     },
@@ -48956,7 +49172,7 @@ module.exports = Container;
 /**
  * @author       Richard Davey <rich@phaser.io>
  * @author       Felipe Alfonso <@bitnenfer>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -49065,7 +49281,7 @@ module.exports = ContainerCanvasRenderer;
 /**
  * @author       Richard Davey <rich@phaser.io>
  * @author       Felipe Alfonso <@bitnenfer>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -49117,7 +49333,7 @@ GameObjectCreator.register('container', function (config, addToScene)
 /**
  * @author       Richard Davey <rich@phaser.io>
  * @author       Felipe Alfonso <@bitnenfer>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -49152,7 +49368,7 @@ GameObjectFactory.register('container', function (x, y, children)
 /**
  * @author       Richard Davey <rich@phaser.io>
  * @author       Felipe Alfonso <@bitnenfer>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -49186,7 +49402,7 @@ module.exports = {
 /**
  * @author       Richard Davey <rich@phaser.io>
  * @author       Felipe Alfonso <@bitnenfer>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -49338,7 +49554,7 @@ module.exports = ContainerWebGLRenderer;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -49381,7 +49597,7 @@ module.exports = [
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -49510,6 +49726,11 @@ var DOMElement = new Class({
          * @since 3.17.0
          */
         this.parent = scene.sys.game.domContainer;
+
+        if (!this.parent)
+        {
+            throw new Error('No DOM Container set in game config');
+        }
 
         /**
          * A reference to the HTML Cache.
@@ -50014,10 +50235,7 @@ var DOMElement = new Class({
 
         target.phaser = this;
 
-        if (this.parent)
-        {
-            this.parent.appendChild(target);
-        }
+        this.parent.appendChild(target);
 
         //  InnerText
 
@@ -50129,10 +50347,7 @@ var DOMElement = new Class({
 
         element.phaser = this;
 
-        if (this.parent)
-        {
-            this.parent.appendChild(element);
-        }
+        this.parent.appendChild(element);
 
         element.innerHTML = html;
 
@@ -50161,9 +50376,8 @@ var DOMElement = new Class({
     },
 
     /**
-     * Internal method that calls `getBoundingClientRect` on the `node` and then sets the bounds width
-     * and height into the `displayWidth` and `displayHeight` properties, and the `clientWidth` and `clientHeight`
-     * values into the `width` and `height` properties respectively.
+     * Internal method that sets the `displayWidth` and `displayHeight` properties, and the `clientWidth` 
+     * and `clientHeight` values into the `width` and `height` properties respectively.
      *
      * This is called automatically whenever a new element is created or set.
      *
@@ -50176,13 +50390,11 @@ var DOMElement = new Class({
     {
         var node = this.node;
 
-        var nodeBounds = node.getBoundingClientRect();
-
         this.width = node.clientWidth;
         this.height = node.clientHeight;
 
-        this.displayWidth = nodeBounds.width || 0;
-        this.displayHeight = nodeBounds.height || 0;
+        this.displayWidth = this.width * this.scaleX;
+        this.displayHeight = this.height * this.scaleY;
 
         return this;
     },
@@ -50383,7 +50595,7 @@ module.exports = DOMElement;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -50468,7 +50680,7 @@ var DOMElementCSSRenderer = function (renderer, src, camera, parentMatrix)
         dx = (src.width) * src.originX;
         dy = (src.height) * src.originY;
 
-        srcMatrix.applyITRS(src.x - dx, src.y - dy, src.rotation, src.scaleX, src.scaleY);
+        srcMatrix.applyITRS(src.x, src.y, src.rotation, src.scaleX, src.scaleY);
 
         camMatrix.copyFrom(camera.matrix);
 
@@ -50480,6 +50692,9 @@ var DOMElementCSSRenderer = function (renderer, src, camera, parentMatrix)
 
         //  Multiply by the src matrix, store result in calcMatrix
         camMatrix.multiply(srcMatrix, calcMatrix);
+
+        calcMatrix.e -= dx;
+        calcMatrix.f -= dy;
     }
 
     if (!src.transformOnly)
@@ -50511,7 +50726,7 @@ module.exports = DOMElementCSSRenderer;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -50601,7 +50816,7 @@ GameObjectFactory.register('dom', function (x, y, element, style, innerText)
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -50634,7 +50849,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -50662,7 +50877,7 @@ module.exports = 'addedtoscene';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -50690,7 +50905,7 @@ module.exports = 'destroy';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -50718,7 +50933,7 @@ module.exports = 'removedfromscene';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -50752,7 +50967,7 @@ module.exports = 'complete';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -50783,7 +50998,7 @@ module.exports = 'created';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -50811,7 +51026,7 @@ module.exports = 'error';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -50843,7 +51058,7 @@ module.exports = 'locked';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -50877,7 +51092,7 @@ module.exports = 'loop';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -50905,7 +51120,7 @@ module.exports = 'metadata';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -50934,7 +51149,7 @@ module.exports = 'playing';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -50964,7 +51179,7 @@ module.exports = 'play';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -50991,7 +51206,7 @@ module.exports = 'seeked';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -51019,7 +51234,7 @@ module.exports = 'seeking';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -51059,7 +51274,7 @@ module.exports = 'stalled';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -51087,7 +51302,7 @@ module.exports = 'stop';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -51120,7 +51335,7 @@ module.exports = 'textureready';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -51148,7 +51363,7 @@ module.exports = 'unlocked';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -51178,7 +51393,7 @@ module.exports = 'unsupported';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -51217,7 +51432,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -51337,7 +51552,7 @@ module.exports = Extern;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -51379,7 +51594,7 @@ GameObjectFactory.register('extern', function ()
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -51412,7 +51627,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -51453,7 +51668,7 @@ module.exports = ExternWebGLRenderer;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -51489,7 +51704,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -53070,7 +53285,7 @@ module.exports = Graphics;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -53318,7 +53533,7 @@ module.exports = GraphicsCanvasRenderer;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -53367,7 +53582,7 @@ GameObjectCreator.register('graphics', function (config, addToScene)
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -53407,7 +53622,7 @@ GameObjectFactory.register('graphics', function (config)
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -53443,7 +53658,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -53799,7 +54014,7 @@ module.exports = GraphicsWebGLRenderer;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -54881,7 +55096,7 @@ var Group = new Class({
     },
 
     /**
-     * {@link Phaser.GameObjects.Components.Animation#play Plays} an animation for all members of this group.
+     * {@link Phaser.Animations.AnimationState#play Plays} an animation for all members of this group.
      *
      * @method Phaser.GameObjects.Group#playAnimation
      * @since 3.0.0
@@ -55562,7 +55777,7 @@ module.exports = Group;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -55596,7 +55811,7 @@ GameObjectCreator.register('group', function (config)
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -55629,7 +55844,7 @@ GameObjectFactory.register('group', function (children, config)
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -55734,7 +55949,7 @@ module.exports = Image;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -55769,7 +55984,7 @@ module.exports = ImageCanvasRenderer;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -55820,7 +56035,7 @@ GameObjectCreator.register('image', function (config, addToScene)
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -55863,7 +56078,7 @@ GameObjectFactory.register('image', function (x, y, texture, frame)
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -55896,7 +56111,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -55931,7 +56146,7 @@ module.exports = ImageWebGLRenderer;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -56090,7 +56305,7 @@ module.exports = GameObjects;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -56905,14 +57120,14 @@ var Layer = new Class({
     },
 
     /**
-     * Returns an array which contains all Game Objects within this Layer.
+     * Returns a reference to the array which contains all Game Objects in this Layer.
      *
-     * This is a reference to the main list array, not a copy of it, so be careful not to modify it.
+     * This is a reference, not a copy of it, so be very careful not to mutate it.
      *
      * @method Phaser.GameObjects.Layer#getChildren
      * @since 3.50.0
      *
-     * @return {Phaser.GameObjects.GameObject[]} The group members.
+     * @return {Phaser.GameObjects.GameObject[]} An array of Game Objects within this Layer.
      */
     getChildren: function ()
     {
@@ -56942,7 +57157,7 @@ var Layer = new Class({
      *
      * @param {(Phaser.GameObjects.DisplayList|Phaser.GameObjects.Layer)} [displayList] - The Display List to add to. Defaults to the Scene Display List.
      *
-     * @return {this} This Layer.
+     * @return {this} This Layer instance.
      */
     addToDisplayList: function (displayList)
     {
@@ -56986,7 +57201,7 @@ var Layer = new Class({
      * @fires Phaser.GameObjects.Events#REMOVED_FROM_SCENE
      * @since 3.60.0
      *
-     * @return {this} This Layer.
+     * @return {this} This Layer instance.
      */
     removeFromDisplayList: function ()
     {
@@ -57006,6 +57221,38 @@ var Layer = new Class({
         }
 
         return this;
+    },
+
+    /**
+     * Returns a reference to the underlying display list _array_ that contains this Game Object,
+     * which will be either the Scene's Display List or the internal list belonging
+     * to its parent Container, if it has one.
+     * 
+     * If this Game Object is not on a display list or in a container, it will return `null`.
+     * 
+     * You should be very careful with this method, and understand that it returns a direct reference to the
+     * internal array used by the Display List. Mutating this array directly can cause all kinds of subtle
+     * and difficult to debug issues in your game.
+     *
+     * @method Phaser.GameObjects.Layer#getDisplayList
+     * @since 3.88.0
+     *
+     * @return {?Phaser.GameObjects.GameObject[]} The internal Display List array of Game Objects, or `null`.
+     */
+    getDisplayList: function ()
+    {
+        var list = null;
+
+        if (this.parentContainer)
+        {
+            list = this.parentContainer.list;
+        }
+        else if (this.displayList)
+        {
+            list = this.displayList.list;
+        }
+
+        return list;
     },
 
     /**
@@ -57073,6 +57320,127 @@ var Layer = new Class({
         this.events = undefined;
     }
 
+    /**
+     * Return an array listing the events for which the emitter has registered listeners.
+     *
+     * @method Phaser.GameObjects.Layer#eventNames
+     * @since 3.50.0
+     *
+     * @return {Array.<string|symbol>}
+     */
+
+    /**
+     * Return the listeners registered for a given event.
+     *
+     * @method Phaser.GameObjects.Layer#listeners
+     * @since 3.50.0
+     *
+     * @param {(string|symbol)} event - The event name.
+     *
+     * @return {Function[]} The registered listeners.
+     */
+
+    /**
+     * Return the number of listeners listening to a given event.
+     *
+     * @method Phaser.GameObjects.Layer#listenerCount
+     * @since 3.50.0
+     *
+     * @param {(string|symbol)} event - The event name.
+     *
+     * @return {number} The number of listeners.
+     */
+
+    /**
+     * Calls each of the listeners registered for a given event.
+     *
+     * @method Phaser.GameObjects.Layer#emit
+     * @since 3.50.0
+     *
+     * @param {(string|symbol)} event - The event name.
+     * @param {...*} [args] - Additional arguments that will be passed to the event handler.
+     *
+     * @return {boolean} `true` if the event had listeners, else `false`.
+     */
+
+    /**
+     * Add a listener for a given event.
+     *
+     * @method Phaser.GameObjects.Layer#on
+     * @since 3.50.0
+     *
+     * @param {(string|symbol)} event - The event name.
+     * @param {function} fn - The listener function.
+     * @param {*} [context=this] - The context to invoke the listener with.
+     *
+     * @return {this} This Layer instance.
+     */
+
+    /**
+     * Add a listener for a given event.
+     *
+     * @method Phaser.GameObjects.Layer#addListener
+     * @since 3.50.0
+     *
+     * @param {(string|symbol)} event - The event name.
+     * @param {function} fn - The listener function.
+     * @param {*} [context=this] - The context to invoke the listener with.
+     *
+     * @return {this} This Layer instance.
+     */
+
+    /**
+     * Add a one-time listener for a given event.
+     *
+     * @method Phaser.GameObjects.Layer#once
+     * @since 3.50.0
+     *
+     * @param {(string|symbol)} event - The event name.
+     * @param {function} fn - The listener function.
+     * @param {*} [context=this] - The context to invoke the listener with.
+     *
+     * @return {this} This Layer instance.
+     */
+
+    /**
+     * Remove the listeners of a given event.
+     *
+     * @method Phaser.GameObjects.Layer#removeListener
+     * @since 3.50.0
+     *
+     * @param {(string|symbol)} event - The event name.
+     * @param {function} [fn] - Only remove the listeners that match this function.
+     * @param {*} [context] - Only remove the listeners that have this context.
+     * @param {boolean} [once] - Only remove one-time listeners.
+     *
+     * @return {this} This Layer instance.
+     */
+
+    /**
+     * Remove the listeners of a given event.
+     *
+     * @method Phaser.GameObjects.Layer#off
+     * @since 3.50.0
+     *
+     * @param {(string|symbol)} event - The event name.
+     * @param {function} [fn] - Only remove the listeners that match this function.
+     * @param {*} [context] - Only remove the listeners that have this context.
+     * @param {boolean} [once] - Only remove one-time listeners.
+     *
+     * @return {this} This Layer instance.
+     */
+
+    /**
+     * Remove all listeners, or those of the specified event.
+     *
+     * @method Phaser.GameObjects.Layer#removeAllListeners
+     * @since 3.50.0
+     *
+     * @param {(string|symbol)} [event] - The event name.
+     *
+     * @return {this} This Layer instance.
+     */
+
 });
 
 module.exports = Layer;
@@ -57085,7 +57453,7 @@ module.exports = Layer;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -57171,7 +57539,7 @@ module.exports = LayerCanvasRenderer;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -57219,7 +57587,7 @@ GameObjectCreator.register('layer', function (config, addToScene)
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -57251,7 +57619,7 @@ GameObjectFactory.register('layer', function (children)
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -57284,7 +57652,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -57408,7 +57776,7 @@ module.exports = LayerWebGLRenderer;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -57688,7 +58056,7 @@ module.exports = Light;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -57794,7 +58162,7 @@ var LightsManager = new Class({
      * ensuring they follow each other consecutively on the display list. Ideally, use a Layer
      * Game Object and then add just Point Lights to it, so that it can batch together the rendering
      * of the lights. You don't _have_ to do this, and if you've only a handful of Point Lights in
-     * your game then it's perfectly safe to mix them into the dislay list as normal. However, if
+     * your game then it's perfectly safe to mix them into the display list as normal. However, if
      * you're using a large number of them, please consider how they are mixed into the display list.
      *
      * The renderer will automatically cull Point Lights. Those with a radius that does not intersect
@@ -58050,7 +58418,7 @@ module.exports = LightsManager;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -58169,7 +58537,7 @@ module.exports = LightsPlugin;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -59571,7 +59939,7 @@ module.exports = Mesh;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -59600,7 +59968,7 @@ module.exports = MeshCanvasRenderer;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -59657,7 +60025,7 @@ GameObjectCreator.register('mesh', function (config, addToScene)
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -59703,7 +60071,7 @@ if (true)
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -59736,7 +60104,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -59818,7 +60186,7 @@ var MeshWebGLRenderer = function (renderer, src, camera, parentMatrix)
 
             textureUnit = pipeline.setGameObject(src);
 
-            vertexOffset = 0;
+            vertexOffset = (pipeline.vertexCount * pipeline.currentShader.vertexComponentCount) - 1;
         }
 
         vertexOffset = face.load(F32, U32, vertexOffset, textureUnit, tintEffect);
@@ -59855,7 +60223,7 @@ module.exports = MeshWebGLRenderer;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -60167,7 +60535,7 @@ var NineSlice = new Class({
          */
         this.is3Slice = (!topHeight && !bottomHeight);
 
-        if (textureFrame.scale9)
+        if (textureFrame && textureFrame.scale9)
         {
             //  If we're using the scale9 data from the frame, override the values from above
             this.is3Slice = textureFrame.is3Slice;
@@ -60237,7 +60605,7 @@ var NineSlice = new Class({
         }
         else
         {
-            if (frame.scale9 && !skipScale9)
+            if (frame && frame.scale9 && !skipScale9)
             {
                 var data = frame.data.scale9Borders;
 
@@ -60856,7 +61224,7 @@ module.exports = NineSlice;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -60912,7 +61280,7 @@ GameObjectCreator.register('nineslice', function (config, addToScene)
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -61022,7 +61390,7 @@ if (true)
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -61050,7 +61418,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -61150,7 +61518,7 @@ module.exports = NineSliceWebGLRenderer;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -61266,6 +61634,10 @@ var EmitterColorOp = new Class({
 
             this.active = true;
 
+            this.r.length = 0;
+            this.g.length = 0;
+            this.b.length = 0;
+
             //  Populate the r,g,b arrays
             for (var i = 0; i < value.length; i++)
             {
@@ -61361,7 +61733,7 @@ module.exports = EmitterColorOp;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -61830,6 +62202,7 @@ var EmitterOp = new Class({
             case 3:
                 this._onEmit = value;
                 onEmit = this.proxyEmit;
+                current = this.defaultValue;
                 break;
 
             //  Stepped start/end
@@ -61883,6 +62256,7 @@ var EmitterOp = new Class({
                 this._onUpdate = (this.has(value, 'onUpdate')) ? value.onUpdate : this.defaultUpdate;
                 onEmit = this.proxyEmit;
                 onUpdate = this.proxyUpdate;
+                current = this.defaultValue;
                 break;
 
             //  Interpolation
@@ -61960,15 +62334,11 @@ var EmitterOp = new Class({
      * @method Phaser.GameObjects.Particles.EmitterOp#defaultEmit
      * @since 3.0.0
      *
-     * @param {Phaser.GameObjects.Particles.Particle} particle - The particle.
-     * @param {string} key - The name of the property.
-     * @param {number} [value] - The current value of the property.
-     *
      * @return {number} The new value of the property.
      */
-    defaultEmit: function (particle, key, value)
+    defaultEmit: function ()
     {
-        return value;
+        return this.defaultValue;
     },
 
     /**
@@ -62289,7 +62659,7 @@ module.exports = EmitterOp;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -62498,7 +62868,7 @@ module.exports = GravityWell;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -62828,11 +63198,19 @@ var Particle = new Class({
          * It is responsible for playing, loading, queuing animations for later playback,
          * mixing between animations and setting the current animation frame to this Particle.
          *
+         * It is created only if the Particle's Emitter has at least one Animation.
+         *
          * @name Phaser.GameObjects.Particles.Particle#anims
-         * @type {Phaser.Animations.AnimationState}
+         * @type {?Phaser.Animations.AnimationState}
          * @since 3.60.0
+         * @see Phaser.GameObjects.Particles.ParticleEmitter#setAnim
          */
-        this.anims = new AnimationState(this);
+        this.anims = null;
+
+        if (this.emitter.anims.length > 0)
+        {
+            this.anims = new AnimationState(this);
+        }
 
         /**
          * A rectangle that holds the bounds of this Particle after a call to
@@ -63088,7 +63466,10 @@ var Particle = new Class({
             return false;
         }
 
-        this.anims.update(0, delta);
+        if (this.anims)
+        {
+            this.anims.update(0, delta);
+        }
 
         var emitter = this.emitter;
         var ops = emitter.ops;
@@ -63281,7 +63662,10 @@ var Particle = new Class({
      */
     destroy: function ()
     {
-        this.anims.destroy();
+        if (this.anims)
+        {
+            this.anims.destroy();
+        }
 
         this.anims = null;
         this.emitter = null;
@@ -63302,7 +63686,7 @@ module.exports = Particle;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -63457,7 +63841,7 @@ module.exports = ParticleBounds;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -63474,12 +63858,15 @@ var GameObject = __webpack_require__(95643);
 var GetFastValue = __webpack_require__(95540);
 var GetRandom = __webpack_require__(26546);
 var GravityWell = __webpack_require__(24502);
+var HasAll = __webpack_require__(69036);
 var HasAny = __webpack_require__(1985);
 var HasValue = __webpack_require__(97022);
 var Inflate = __webpack_require__(86091);
 var List = __webpack_require__(73162);
 var MergeRect = __webpack_require__(20074);
+var MergeRight = __webpack_require__(269);
 var Particle = __webpack_require__(56480);
+var ParticleBounds = __webpack_require__(69601);
 var RandomZone = __webpack_require__(68875);
 var Rectangle = __webpack_require__(87841);
 var RectangleToRectangle = __webpack_require__(59996);
@@ -63489,7 +63876,6 @@ var StableSort = __webpack_require__(19186);
 var TransformMatrix = __webpack_require__(61340);
 var Vector2 = __webpack_require__(26099);
 var Wrap = __webpack_require__(15994);
-var ParticleBounds = __webpack_require__(69601);
 
 /**
  * Names of simple configuration properties.
@@ -63825,6 +64211,20 @@ var ParticleEmitter = new Class({
          */
         this.particleClass = Particle;
 
+        /**
+         * An internal object holding the configuration for the Emitter.
+         *
+         * These are populated as part of the Emitter configuration parsing.
+         *
+         * You typically do not access them directly, but instead use the
+         * `ParticleEmitter.setConfig` or `ParticleEmitter.updateConfig` methods.
+         *
+         * @name Phaser.GameObjects.Particles.ParticleEmitter#config
+         * @type {Phaser.Types.GameObjects.Particles.ParticleEmitterConfig}
+         * @since 3.85.0
+         */
+        this.config = null;
+            
         /**
          * An internal object holding all of the EmitterOp instances.
          *
@@ -64393,6 +64793,8 @@ var ParticleEmitter = new Class({
             return this;
         }
 
+        this.config = config;
+
         var i = 0;
         var key = '';
 
@@ -64418,7 +64820,7 @@ var ParticleEmitter = new Class({
 
         this.acceleration = (this.accelerationX !== 0 || this.accelerationY !== 0);
 
-        this.moveTo = (this.moveToX !== 0 && this.moveToY !== 0);
+        this.moveTo = HasAll(config, [ 'moveToX', 'moveToY' ]);
 
         //  Special 'speed' override
 
@@ -64506,6 +64908,36 @@ var ParticleEmitter = new Class({
             this.emit(Events.START, this);
         }
 
+        return this;
+    },
+
+    /**
+     * Takes an existing Emitter Configuration file and updates this Emitter.
+     * Existing properties are overriden while new properties are added. The
+     * updated configuration is then passed to the `setConfig` method to reset
+     * the Emitter with the updated configuration.
+     *
+     * @method Phaser.GameObjects.Particles.ParticleEmitter#updateConfig
+     * @since 3.85.0
+     *
+     * @param {Phaser.Types.GameObjects.Particles.ParticleEmitterConfig} config - Settings for this emitter.
+     *
+     * @return {this} This Particle Emitter.
+     */
+    updateConfig: function (config)
+    {
+        if (config)
+        {
+            if (!this.config)
+            {
+                this.setConfig(config);
+            }
+            else
+            {
+                this.setConfig(MergeRight(this.config, config));
+            }
+        }
+        
         return this;
     },
 
@@ -64786,6 +65218,8 @@ var ParticleEmitter = new Class({
      * anim: 'red'
      * anim: [ 'red', 'green', 'blue', 'pink', 'white' ]
      * anim: { anims: [ 'red', 'green', 'blue', 'pink', 'white' ], [cycle: bool], [quantity: int] }
+     *
+     * Call this method at least once before any particles are created, or set `anim` in the Particle Emitter's configuration when creating the Emitter.
      *
      * @method Phaser.GameObjects.Particles.ParticleEmitter#setAnim
      * @since 3.60.0
@@ -65216,7 +65650,7 @@ var ParticleEmitter = new Class({
      * or any object with a suitable {@link Phaser.Types.GameObjects.Particles.EdgeZoneSourceCallback getPoints} method.
      *
      * A {@link Phaser.Types.GameObjects.Particles.ParticleEmitterRandomZoneConfig RandomZone} places the particles randomly within its interior.
-     * Its {@link RandomZoneSource source} can be a Circle, Ellipse, Line, Polygon, Rectangle, or Triangle; or any object with a suitable {@link Phaser.Types.GameObjects.Particles.RandomZoneSourceCallback getRandomPoint} method.
+     * Its {@link Phaser.GameObjects.Particles.Zones.RandomZone#source source} can be a Circle, Ellipse, Line, Polygon, Rectangle, or Triangle; or any object with a suitable {@link Phaser.Types.GameObjects.Particles.RandomZoneSourceCallback getRandomPoint} method.
      *
      * An Emission Zone can only exist once within this Emitter.
      *
@@ -67387,7 +67821,7 @@ module.exports = ParticleEmitter;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -67526,7 +67960,7 @@ module.exports = ParticleEmitterCanvasRenderer;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -67585,7 +68019,7 @@ GameObjectCreator.register('particles', function (config, addToScene)
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -67631,7 +68065,7 @@ GameObjectFactory.register('particles', function (x, y, texture, config)
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -67664,7 +68098,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -67824,7 +68258,7 @@ module.exports = ParticleEmitterWebGLRenderer;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -67942,7 +68376,7 @@ module.exports = ParticleProcessor;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -67971,7 +68405,7 @@ module.exports = 'complete';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -68002,7 +68436,7 @@ module.exports = 'deathzone';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -68030,7 +68464,7 @@ module.exports = 'explode';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -68057,7 +68491,7 @@ module.exports = 'start';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -68092,7 +68526,7 @@ module.exports = 'stop';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -68118,7 +68552,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -68148,7 +68582,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -68211,7 +68645,6 @@ var DeathZone = new Class({
     willKill: function (particle)
     {
         var pos = particle.worldPosition;
-
         var withinZone = this.source.contains(pos.x, pos.y);
 
         return (withinZone && this.killOnEnter || !withinZone && !this.killOnEnter);
@@ -68229,7 +68662,7 @@ module.exports = DeathZone;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -68494,7 +68927,7 @@ module.exports = EdgeZone;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -68586,7 +69019,7 @@ module.exports = RandomZone;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -68610,7 +69043,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -68693,7 +69126,7 @@ module.exports = PathFollower;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -68742,7 +69175,7 @@ GameObjectFactory.register('follower', function (path, x, y, key, frame)
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -69507,7 +69940,7 @@ module.exports = Plane;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -69576,7 +70009,7 @@ GameObjectCreator.register('plane', function (config, addToScene)
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -69614,7 +70047,7 @@ GameObjectFactory.register('plane', function (x, y, texture, frame, width, heigh
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -69640,7 +70073,7 @@ var Render = __webpack_require__(67277);
  * ensuring they follow each other consecutively on the display list. Ideally, use a Layer
  * Game Object and then add just Point Lights to it, so that it can batch together the rendering
  * of the lights. You don't _have_ to do this, and if you've only a handful of Point Lights in
- * your game then it's perfectly safe to mix them into the dislay list as normal. However, if
+ * your game then it's perfectly safe to mix them into the display list as normal. However, if
  * you're using a large number of them, please consider how they are mixed into the display list.
  *
  * The renderer will automatically cull Point Lights. Those with a radius that does not intersect
@@ -69822,7 +70255,7 @@ module.exports = PointLight;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -69873,7 +70306,7 @@ GameObjectCreator.register('pointlight', function (config, addToScene)
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -69898,7 +70331,7 @@ var PointLight = __webpack_require__(80321);
  * ensuring they follow each other consecutively on the display list. Ideally, use a Layer
  * Game Object and then add just Point Lights to it, so that it can batch together the rendering
  * of the lights. You don't _have_ to do this, and if you've only a handful of Point Lights in
- * your game then it's perfectly safe to mix them into the dislay list as normal. However, if
+ * your game then it's perfectly safe to mix them into the display list as normal. However, if
  * you're using a large number of them, please consider how they are mixed into the display list.
  *
  * The renderer will automatically cull Point Lights. Those with a radius that does not intersect
@@ -69934,7 +70367,7 @@ GameObjectFactory.register('pointlight', function (x, y, color, radius, intensit
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -69962,7 +70395,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -70031,7 +70464,7 @@ module.exports = PointLightWebGLRenderer;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -70087,6 +70520,7 @@ var Image = __webpack_require__(88571);
  * @param {number} [y=0] - The vertical position of this Game Object in the world.
  * @param {number} [width=32] - The width of the Render Texture.
  * @param {number} [height=32] - The height of the Render Texture.
+ * @param {boolean} [forceEven=true] - Force the given width and height to be rounded to even values. This significantly improves the rendering quality. Set to false if you know you need an odd sized texture.
  */
 var RenderTexture = new Class({
 
@@ -70094,14 +70528,15 @@ var RenderTexture = new Class({
 
     initialize:
 
-    function RenderTexture (scene, x, y, width, height)
+    function RenderTexture (scene, x, y, width, height, forceEven)
     {
         if (x === undefined) { x = 0; }
         if (y === undefined) { y = 0; }
         if (width === undefined) { width = 32; }
         if (height === undefined) { height = 32; }
+        if (forceEven === undefined) { forceEven = true; }
 
-        var dynamicTexture = new DynamicTexture(scene.sys.textures, '', width, height);
+        var dynamicTexture = new DynamicTexture(scene.sys.textures, '', width, height, forceEven);
 
         Image.call(this, scene, x, y, dynamicTexture);
 
@@ -70140,10 +70575,11 @@ var RenderTexture = new Class({
      * This will not change the size that the Game Object is rendered in-game.
      * For that you need to either set the scale of the Game Object (`setScale`) or call the
      * `setDisplaySize` method, which is the same thing as changing the scale but allows you
-     * to do so by giving pixel values.
+     * to do so by giving pixel values. You could also call the `resize` method, as that
+     * will resize the underlying texture.
      *
-     * If you have enabled this Game Object for input, changing the size will _not_ change the
-     * size of the hit area. To do this you should adjust the `input.hitArea` object directly.
+     * If you have enabled this Game Object for input, changing the size will also change the
+     * size of the hit area, unless you have defined a custom hit area.
      *
      * @method Phaser.GameObjects.RenderTexture#setSize
      * @since 3.0.0
@@ -70157,8 +70593,6 @@ var RenderTexture = new Class({
     {
         this.width = width;
         this.height = height;
-
-        this.texture.setSize(width, height);
 
         this.updateDisplayOrigin();
 
@@ -70180,6 +70614,9 @@ var RenderTexture = new Class({
      * In Canvas it will resize the underlying canvas element.
      *
      * Both approaches will erase everything currently drawn to the Render Texture.
+     * 
+     * Calling this will then invoke the `setSize` method, setting the internal size of this Game Object
+     * to the values given to this method.
      *
      * If the dimensions given are the same as those already being used, calling this method will do nothing.
      *
@@ -70188,12 +70625,15 @@ var RenderTexture = new Class({
      *
      * @param {number} width - The new width of the Render Texture.
      * @param {number} [height=width] - The new height of the Render Texture. If not specified, will be set the same as the `width`.
+     * @param {boolean} [forceEven=true] - Force the given width and height to be rounded to even values. This significantly improves the rendering quality. Set to false if you know you need an odd sized texture.
      *
      * @return {this} This Render Texture.
      */
-    resize: function (width, height)
+    resize: function (width, height, forceEven)
     {
-        this.setSize(width, height);
+        this.texture.setSize(width, height, forceEven);
+
+        this.setSize(this.texture.width, this.texture.height);
 
         return this;
     },
@@ -70866,7 +71306,7 @@ module.exports = RenderTexture;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -70930,7 +71370,7 @@ GameObjectCreator.register('renderTexture', function (config, addToScene)
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -70978,7 +71418,7 @@ GameObjectFactory.register('renderTexture', function (x, y, width, height)
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -72110,7 +72550,7 @@ module.exports = Rope;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -72139,7 +72579,7 @@ module.exports = RopeCanvasRenderer;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -72195,7 +72635,7 @@ GameObjectCreator.register('rope', function (config, addToScene)
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -72238,7 +72678,7 @@ if (true)
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -72271,7 +72711,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -72388,7 +72828,7 @@ module.exports = RopeWebGLRenderer;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -73678,7 +74118,7 @@ module.exports = Shader;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -73707,7 +74147,7 @@ module.exports = ShaderCanvasRenderer;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -73761,7 +74201,7 @@ GameObjectCreator.register('shader', function (config, addToScene)
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -73803,7 +74243,7 @@ if (true)
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -73836,7 +74276,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -73899,7 +74339,7 @@ module.exports = ShaderWebGLRenderer;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -73962,7 +74402,7 @@ module.exports = FillPathWebGL;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -74000,7 +74440,7 @@ module.exports = FillStyleCanvas;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -74039,7 +74479,7 @@ module.exports = LineStyleCanvas;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -74466,7 +74906,7 @@ module.exports = Shape;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -74540,7 +74980,7 @@ module.exports = StrokePathWebGL;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -74950,7 +75390,7 @@ module.exports = Arc;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -75028,7 +75468,7 @@ module.exports = ArcCanvasRenderer;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -75102,7 +75542,7 @@ GameObjectFactory.register('circle', function (x, y, radius, fillColor, fillAlph
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -75135,7 +75575,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -75197,7 +75637,7 @@ module.exports = ArcWebGLRenderer;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -75380,7 +75820,7 @@ module.exports = Curve;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -75470,7 +75910,7 @@ module.exports = CurveCanvasRenderer;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -75521,7 +75961,7 @@ GameObjectFactory.register('curve', function (x, y, curve, fillColor, fillAlpha)
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -75554,7 +75994,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -75616,7 +76056,7 @@ module.exports = CurveWebGLRenderer;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -75746,6 +76186,8 @@ var Ellipse = new Class({
         this.geom.setPosition(width / 2, height / 2);
         this.geom.setSize(width, height);
 
+        this.updateDisplayOrigin();
+
         return this.updateData();
     },
 
@@ -75807,7 +76249,7 @@ module.exports = Ellipse;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -75894,7 +76336,7 @@ module.exports = EllipseCanvasRenderer;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -75947,7 +76389,7 @@ GameObjectFactory.register('ellipse', function (x, y, width, height, fillColor, 
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -75980,7 +76422,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -76042,7 +76484,7 @@ module.exports = EllipseWebGLRenderer;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -76322,7 +76764,7 @@ module.exports = Grid;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -76513,7 +76955,7 @@ module.exports = GridCanvasRenderer;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -76569,7 +77011,7 @@ GameObjectFactory.register('grid', function (x, y, width, height, cellWidth, cel
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -76602,7 +77044,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -76780,14 +77222,14 @@ var GridWebGLRenderer = function (renderer, src, camera, parentMatrix)
         {
             var x1 = x * cellWidth;
 
-            pipeline.batchLine(x1, 0, x1, height, 1, 1, 1, 0, false);
+            pipeline.batchLine(x1, 0, x1, height, src.lineWidth, src.lineWidth, 1, 0, false);
         }
 
         for (y = 1; y < gridHeight; y++)
         {
             var y1 = y * cellHeight;
 
-            pipeline.batchLine(0, y1, width, y1, 1, 1, 1, 0, false);
+            pipeline.batchLine(0, y1, width, y1, src.lineWidth, src.lineWidth, 1, 0, false);
         }
     }
 
@@ -76804,7 +77246,7 @@ module.exports = GridWebGLRenderer;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -77020,7 +77462,7 @@ module.exports = IsoBox;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -77123,7 +77565,7 @@ module.exports = IsoBoxCanvasRenderer;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -77175,7 +77617,7 @@ GameObjectFactory.register('isobox', function (x, y, size, height, fillTop, fill
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -77208,7 +77650,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -77345,7 +77787,7 @@ module.exports = IsoBoxWebGLRenderer;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -77592,7 +78034,7 @@ module.exports = IsoTriangle;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -77708,7 +78150,7 @@ module.exports = IsoTriangleCanvasRenderer;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -77762,7 +78204,7 @@ GameObjectFactory.register('isotriangle', function (x, y, size, height, reversed
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -77795,7 +78237,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -77952,7 +78394,7 @@ module.exports = IsoTriangleWebGLRenderer;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -78120,7 +78562,7 @@ module.exports = Line;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -78179,7 +78621,7 @@ module.exports = LineCanvasRenderer;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -78231,7 +78673,7 @@ GameObjectFactory.register('line', function (x, y, x1, y1, x2, y2, strokeColor, 
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -78264,7 +78706,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -78339,7 +78781,7 @@ module.exports = LineWebGLRenderer;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -78519,7 +78961,7 @@ module.exports = Polygon;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -78609,7 +79051,7 @@ module.exports = PolygonCanvasRenderer;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -78663,7 +79105,7 @@ GameObjectFactory.register('polygon', function (x, y, points, fillColor, fillAlp
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -78696,7 +79138,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -78758,11 +79200,12 @@ module.exports = PolygonWebGLRenderer;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
 var Class = __webpack_require__(83419);
+var Earcut = __webpack_require__(94811);
 var GeomRectangle = __webpack_require__(87841);
 var Shape = __webpack_require__(17803);
 var RectangleRender = __webpack_require__(95597);
@@ -78811,6 +79254,32 @@ var Rectangle = new Class({
 
         Shape.call(this, scene, 'Rectangle', new GeomRectangle(0, 0, width, height));
 
+        /**
+         * The radius of the rectangle if this is set to use rounded corners.
+         *
+         * Do not modify this property. Instead, call the method `setRounded` to set the
+         * radius of the rounded corners.
+         *
+         * @name Phaser.GameObjects.Shape#radius
+         * @type {number}
+         * @readonly
+         * @since 3.90.0
+         */
+        this.radius = 20;
+
+        /**
+         * Does this Rectangle have rounded corners?
+         *
+         * Do not modify this property. Instead, call the method `setRounded` to set the
+         * radius state of this rectangle.
+         *
+         * @name Phaser.GameObjects.Shape#isRounded
+         * @type {boolean}
+         * @readonly
+         * @since 3.90.0
+         */
+        this.isRounded = false;
+
         this.setPosition(x, y);
         this.setSize(width, height);
 
@@ -78821,6 +79290,30 @@ var Rectangle = new Class({
 
         this.updateDisplayOrigin();
         this.updateData();
+    },
+
+    /**
+     * Sets this rectangle to have rounded corners by specifying the radius of the corner.
+     *
+     * The radius of the rounded corners is limited by the smallest dimension of the rectangle.
+     *
+     * To disable rounded corners, set the `radius` parameter to 0.
+     *
+     * @method Phaser.GameObjects.Rectangle#setRounded
+     * @since 3.90.0
+     *
+     * @param {number} [radius=16] - The radius of all four rounded corners.
+     *
+     * @return {this} This Game Object instance.
+     */
+    setRounded: function (radius)
+    {
+        if (radius === undefined) { radius = 16; }
+
+        this.radius = radius;
+        this.isRounded = radius > 0;
+
+        return this.updateRoundedData();
     },
 
     /**
@@ -78870,6 +79363,11 @@ var Rectangle = new Class({
      */
     updateData: function ()
     {
+        if (this.isRounded)
+        {
+            return this.updateRoundedData();
+        }
+
         var path = [];
         var rect = this.geom;
         var line = this._tempLine;
@@ -78893,6 +79391,92 @@ var Rectangle = new Class({
         this.pathData = path;
 
         return this;
+    },
+
+    /**
+     * Internal method that updates the data and path values when this rectangle is rounded.
+     *
+     * @method Phaser.GameObjects.Rectangle#updateRoundedData
+     * @private
+     * @since 3.90.0
+     *
+     * @return {this} This Game Object instance.
+     */
+    updateRoundedData: function ()
+    {
+        var path = [];
+        var halfWidth = this.width / 2;
+        var halfHeight = this.height / 2;
+
+        //  Limit max radius to half the smallest dimension
+        var maxRadius = Math.min(halfWidth, halfHeight);
+        var radius = Math.min(this.radius, maxRadius);
+
+        var x = halfWidth;
+        var y = halfHeight;
+
+        //  The number of segments is based on radius (more segments = larger radius)
+        var segments = Math.max(1, Math.floor(radius / 5));
+
+        //  Create points going clockwise from top-left
+
+        //  Top-left corner
+        this.arcTo(path, x - halfWidth + radius, y - halfHeight + radius, radius, Math.PI, Math.PI * 1.5, segments);
+
+        //  Top edge and top-right corner
+        path.push(x + halfWidth - radius, y - halfHeight);
+
+        this.arcTo(path, x + halfWidth - radius, y - halfHeight + radius, radius, Math.PI * 1.5, Math.PI * 2, segments);
+
+        //  Right edge and bottom-right corner
+        path.push(x + halfWidth, y + halfHeight - radius);
+
+        this.arcTo(path, x + halfWidth - radius, y + halfHeight - radius, radius, 0, Math.PI * 0.5, segments);
+
+        //  Bottom edge and bottom-left corner
+        path.push(x - halfWidth + radius, y + halfHeight);
+
+        this.arcTo(path, x - halfWidth + radius, y + halfHeight - radius, radius, Math.PI * 0.5, Math.PI, segments);
+
+        //  Left edge (connects back to first point)
+        path.push(x - halfWidth, y - halfHeight + radius);
+
+        this.pathIndexes = Earcut(path);
+        this.pathData = path;
+
+        return this;
+    },
+
+    /**
+     * Internal method placing points around the circumference of a circle for the rounded corners.
+     *
+     * @method Phaser.GameObjects.Rectangle#arcTo
+     * @private
+     * @since 3.90.0
+     *
+     * @param {number[]} path - The array to push the points into.
+     * @param {number} centerX - The center x coordinate of the circle.
+     * @param {number} centerY - The center y coordinate of the circle.
+     * @param {number} radius - The radius of the circle.
+     * @param {number} startAngle - The starting angle of the arc.
+     * @param {number} endAngle - The ending angle of the arc.
+     * @param {number} segments - The number of segments to create.
+     *
+     * @return {this} This Game Object instance.
+     */
+    arcTo: function (path, centerX, centerY, radius, startAngle, endAngle, segments)
+    {
+        var angleInc = (endAngle - startAngle) / segments;
+
+        for (var i = 0; i <= segments; i++)
+        {
+            var angle = startAngle + (angleInc * i);
+
+            path.push(
+                centerX + Math.cos(angle) * radius,
+                centerY + Math.sin(angle) * radius
+            );
+        }
     }
 
 });
@@ -78907,13 +79491,48 @@ module.exports = Rectangle;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
 var FillStyleCanvas = __webpack_require__(65960);
 var LineStyleCanvas = __webpack_require__(75177);
 var SetTransform = __webpack_require__(20926);
+
+var DrawRoundedRect = function (ctx, x, y, width, height, radius)
+{
+    // Limit radius to half of the smaller dimension
+    var maxRadius = Math.min(width / 2, height / 2);
+    var r = Math.min(radius, maxRadius);
+    
+    if (r === 0)
+    {
+        // Fall back to normal rectangle if radius is 0
+        ctx.rect(x, y, width, height);
+        return;
+    }
+    
+    // Start at top-left, after the corner
+    ctx.moveTo(x + r, y);
+    
+    // Top edge and top-right corner
+    ctx.lineTo(x + width - r, y);
+    ctx.arcTo(x + width, y, x + width, y + r, r);
+    
+    // Right edge and bottom-right corner
+    ctx.lineTo(x + width, y + height - r);
+    ctx.arcTo(x + width, y + height, x + width - r, y + height, r);
+    
+    // Bottom edge and bottom-left corner
+    ctx.lineTo(x + r, y + height);
+    ctx.arcTo(x, y + height, x, y + height - r, r);
+    
+    // Left edge and top-left corner
+    ctx.lineTo(x, y + r);
+    ctx.arcTo(x, y, x + r, y, r);
+    
+    ctx.closePath();
+};
 
 /**
  * Renders this Game Object with the Canvas Renderer to the given Camera.
@@ -78943,27 +79562,43 @@ var RectangleCanvasRenderer = function (renderer, src, camera, parentMatrix)
         if (src.isFilled)
         {
             FillStyleCanvas(ctx, src);
-
-            ctx.fillRect(
-                -dx,
-                -dy,
-                src.width,
-                src.height
-            );
+            
+            if (src.isRounded)
+            {
+                ctx.beginPath();
+                DrawRoundedRect(ctx, -dx, -dy, src.width, src.height, src.radius);
+                ctx.fill();
+            }
+            else
+            {
+                ctx.fillRect(
+                    -dx,
+                    -dy,
+                    src.width,
+                    src.height
+                );
+            }
         }
-
+        
         if (src.isStroked)
         {
             LineStyleCanvas(ctx, src);
-
+            
             ctx.beginPath();
 
-            ctx.rect(
-                -dx,
-                -dy,
-                src.width,
-                src.height
-            );
+            if (src.isRounded)
+            {
+                DrawRoundedRect(ctx, -dx, -dy, src.width, src.height, src.radius);
+            }
+            else
+            {
+                ctx.rect(
+                    -dx,
+                    -dy,
+                    src.width,
+                    src.height
+                );
+            }
 
             ctx.stroke();
         }
@@ -78972,6 +79607,8 @@ var RectangleCanvasRenderer = function (renderer, src, camera, parentMatrix)
         ctx.restore();
     }
 };
+
+
 
 module.exports = RectangleCanvasRenderer;
 
@@ -78983,7 +79620,7 @@ module.exports = RectangleCanvasRenderer;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -79029,7 +79666,7 @@ GameObjectFactory.register('rectangle', function (x, y, width, height, fillColor
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -79062,10 +79699,11 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
+var FillPathWebGL = __webpack_require__(10441);
 var GetCalcMatrix = __webpack_require__(91296);
 var StrokePathWebGL = __webpack_require__(34682);
 var Utils = __webpack_require__(70554);
@@ -79089,7 +79727,6 @@ var RectangleWebGLRenderer = function (renderer, src, camera, parentMatrix)
     camera.addToRenderList(src);
 
     var pipeline = renderer.pipelines.set(src.pipeline);
-
     var result = GetCalcMatrix(src, camera, parentMatrix);
 
     pipeline.calcMatrix.copyFrom(result.calc);
@@ -79100,7 +79737,11 @@ var RectangleWebGLRenderer = function (renderer, src, camera, parentMatrix)
 
     renderer.pipelines.preBatch(src);
 
-    if (src.isFilled)
+    if (src.isRounded && src.isFilled)
+    {
+        FillPathWebGL(pipeline, result.calc, src, alpha, dx, dy);
+    }
+    else if (src.isFilled)
     {
         var fillTint = pipeline.fillTint;
         var fillTintColor = Utils.getTintAppendFloatAlpha(src.fillColor, src.fillAlpha * alpha);
@@ -79136,7 +79777,7 @@ module.exports = RectangleWebGLRenderer;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -79425,7 +80066,7 @@ module.exports = Star;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -79512,7 +80153,7 @@ module.exports = StarCanvasRenderer;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -79565,7 +80206,7 @@ GameObjectFactory.register('star', function (x, y, points, innerRadius, outerRad
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -79598,7 +80239,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -79660,7 +80301,7 @@ module.exports = StarWebGLRenderer;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -79804,7 +80445,7 @@ module.exports = Triangle;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -79881,7 +80522,7 @@ module.exports = TriangleCanvasRenderer;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -79933,7 +80574,7 @@ GameObjectFactory.register('triangle', function (x, y, x1, y1, x2, y2, x3, y3, f
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -79966,7 +80607,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -80051,7 +80692,7 @@ module.exports = TriangleWebGLRenderer;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -80534,7 +81175,7 @@ module.exports = Sprite;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -80569,7 +81210,7 @@ module.exports = SpriteCanvasRenderer;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -80623,7 +81264,7 @@ GameObjectCreator.register('sprite', function (config, addToScene)
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -80666,7 +81307,7 @@ GameObjectFactory.register('sprite', function (x, y, texture, frame)
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -80699,7 +81340,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -80734,7 +81375,7 @@ module.exports = SpriteWebGLRenderer;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -80768,16 +81409,29 @@ var GetTextSize = function (text, size, lines)
     style.syncFont(canvas, context);
 
     //  Text Width
+    var letterSpacing = text.letterSpacing;
 
     for (var i = 0; i < drawnLines; i++)
     {
         var lineWidth = style.strokeThickness;
 
-        lineWidth += context.measureText(lines[i]).width;
-
-        if (lines[i].length > 1)
+        if (letterSpacing === 0)
         {
-            lineWidth += text.letterSpacing * (lines[i].length - 1);
+            lineWidth += context.measureText(lines[i]).width;
+        }
+        else
+        {
+            var line = lines[i];
+            
+            for (var j = 0; j < line.length; j++)
+            {
+                lineWidth += context.measureText(line[j]).width;
+            }
+
+            if (line.length > 1)
+            {
+                lineWidth += letterSpacing * (line.length - 1);
+            }
         }
 
         // Adjust for wrapped text
@@ -80822,7 +81476,7 @@ module.exports = GetTextSize;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -80973,7 +81627,7 @@ module.exports = MeasureText;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -81278,6 +81932,11 @@ var Text = new Class({
         {
             this.setLineSpacing(style.lineSpacing);
         }
+
+        if (style && style.letterSpacing)
+        {
+            this.setLetterSpacing(style.letterSpacing);
+        }
     },
 
     /**
@@ -81290,6 +81949,8 @@ var Text = new Class({
     {
         if (!this.style.rtl)
         {
+            this.canvas.dir = 'ltr';
+            this.context.direction = 'ltr';
             return;
         }
 
@@ -81390,7 +82051,8 @@ var Text = new Class({
             line = line.replace(/^ *|\s*$/gi, '');
 
             // If entire line is less than wordWrapWidth append the entire line and exit early
-            var lineWidth = context.measureText(line).width;
+            var lineLetterSpacingWidth = line.length * this.letterSpacing;
+            var lineWidth = context.measureText(line).width + lineLetterSpacingWidth;
 
             if (lineWidth < wordWrapWidth)
             {
@@ -81408,7 +82070,8 @@ var Text = new Class({
             {
                 var word = words[j];
                 var wordWithSpace = word + ' ';
-                var wordWidth = context.measureText(wordWithSpace).width;
+                var letterSpacingWidth = wordWithSpace.length * this.letterSpacing;
+                var wordWidth = context.measureText(wordWithSpace).width + letterSpacingWidth;
 
                 if (wordWidth > currentLineWidth)
                 {
@@ -81421,7 +82084,8 @@ var Text = new Class({
                         while (newWord.length)
                         {
                             newWord = newWord.slice(0, -1);
-                            wordWidth = context.measureText(newWord).width;
+                            var newLetterSpacingWidth = newWord.length * this.letterSpacing;
+                            wordWidth = context.measureText(newWord).width + newLetterSpacingWidth;
 
                             if (wordWidth <= currentLineWidth)
                             {
@@ -81455,7 +82119,6 @@ var Text = new Class({
                     lines.splice(i + 1, 0, remainder);
 
                     linesCount = lines.length;
-
                     break; // Processing on this line
 
                     // Append word with space to output
@@ -81506,7 +82169,8 @@ var Text = new Class({
             for (var j = 0; j <= lastWordIndex; j++)
             {
                 var word = words[j];
-                var wordWidth = context.measureText(word).width;
+                var letterSpacingWidth = word.length * this.letterSpacing;
+                var wordWidth = context.measureText(word).width + letterSpacingWidth;
                 var wordWidthWithSpace = wordWidth;
 
                 if (j < lastWordIndex)
@@ -81951,7 +82615,7 @@ var Text = new Class({
      * @method Phaser.GameObjects.Text#setWordWrapWidth
      * @since 3.0.0
      *
-     * @param {?number} width - The maximum width of a line in pixels. Set to null to remove wrapping.
+     * @param {number | null} width - The maximum width of a line in pixels. Set to null to remove wrapping.
      * @param {boolean} [useAdvancedWrap=false] - Whether or not to use the advanced wrapping
      * algorithm. If true, spaces are collapsed and whitespace is trimmed from lines. If false,
      * spaces and whitespace are left as is.
@@ -82364,7 +83028,11 @@ var Text = new Class({
                 linePositionY = Math.round(linePositionY);
             }
 
-            if (style.strokeThickness)
+            var letterSpacing = this.letterSpacing;
+
+            // Apply stroke to the whole line only if there's no custom letter spacing
+
+            if (style.strokeThickness && letterSpacing === 0)
             {
                 style.syncShadow(context, style.shadowStroke);
 
@@ -82377,8 +83045,6 @@ var Text = new Class({
 
                 // Looping fillText could be an expensive operation, we should ignore it if it is not needed
 
-                var letterSpacing = this.letterSpacing;
-
                 if (letterSpacing !== 0)
                 {
                     var charPositionX = 0;
@@ -82388,6 +83054,15 @@ var Text = new Class({
                     //  Draw text letter by letter
                     for (var l = 0; l < line.length; l++)
                     {
+                        if (style.strokeThickness)
+                        {
+                            style.syncShadow(context, style.shadowStroke);
+
+                            context.strokeText(line[l], linePositionX + charPositionX, linePositionY);
+
+                            style.syncShadow(context, style.shadowFill);
+                        }
+
                         context.fillText(line[l], linePositionX + charPositionX, linePositionY);
 
                         charPositionX += context.measureText(line[l]).width + letterSpacing;
@@ -82543,7 +83218,7 @@ module.exports = Text;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -82583,7 +83258,7 @@ module.exports = TextCanvasRenderer;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -82671,7 +83346,7 @@ GameObjectCreator.register('text', function (config, addToScene)
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -82737,7 +83412,7 @@ GameObjectFactory.register('text', function (x, y, text, style)
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -82770,7 +83445,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -83147,7 +83822,7 @@ var TextStyle = new Class({
      *
      * @param {Phaser.Types.GameObjects.Text.TextStyle} style - The style settings to set.
      * @param {boolean} [updateText=true] - Whether to update the text immediately.
-     * @param {boolean} [setDefaults=false] - Use the default values is not set, or the local values.
+     * @param {boolean} [setDefaults=false] - Use the default values if not set, or the local values.
      *
      * @return {Phaser.GameObjects.Text} The parent Text object.
      */
@@ -83155,13 +83830,6 @@ var TextStyle = new Class({
     {
         if (updateText === undefined) { updateText = true; }
         if (setDefaults === undefined) { setDefaults = false; }
-
-        //  Avoid type mutation
-        // eslint-disable-next-line no-prototype-builtins
-        if (style && style.hasOwnProperty('fontSize') && typeof style.fontSize === 'number')
-        {
-            style.fontSize = style.fontSize.toString() + 'px';
-        }
 
         for (var key in propertyMap)
         {
@@ -83171,6 +83839,10 @@ var TextStyle = new Class({
             {
                 // Callback & scope should be set without processing the values
                 this[key] = GetValue(style, propertyMap[key][0], value);
+            }
+            else if (style && key === 'fontSize' && typeof style.fontSize === 'number')
+            {
+                this[key] = style.fontSize.toString() + 'px';
             }
             else
             {
@@ -83727,7 +84399,7 @@ var TextStyle = new Class({
      * @method Phaser.GameObjects.TextStyle#setWordWrapWidth
      * @since 3.0.0
      *
-     * @param {number} width - The maximum width of a line in pixels. Set to null to remove wrapping.
+     * @param {number | null} width - The maximum width of a line in pixels. Set to null to remove wrapping.
      * @param {boolean} [useAdvancedWrap=false] - Whether or not to use the advanced wrapping
      * algorithm. If true, spaces are collapsed and whitespace is trimmed from lines. If false,
      * spaces and whitespace are left as is.
@@ -83876,7 +84548,7 @@ module.exports = TextStyle;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -83948,7 +84620,7 @@ module.exports = TextWebGLRenderer;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -84068,8 +84740,8 @@ var TileSprite = new Class({
 
         if (!width || !height)
         {
-            width = displayFrame.width;
-            height = displayFrame.height;
+            width = width ? width : displayFrame.width;
+            height = height ? height : displayFrame.height;
         }
         else
         {
@@ -84626,7 +85298,7 @@ module.exports = TileSprite;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -84663,7 +85335,7 @@ module.exports = TileSpriteCanvasRenderer;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -84716,7 +85388,7 @@ GameObjectCreator.register('tileSprite', function (config, addToScene)
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -84761,7 +85433,7 @@ GameObjectFactory.register('tileSprite', function (x, y, width, height, texture,
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -84794,7 +85466,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -84870,7 +85542,7 @@ module.exports = TileSpriteWebGLRenderer;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -85364,6 +86036,16 @@ var Video = new Class({
         this._playCalled = false;
 
         /**
+         * Has Video.getFirstFrame been called? This is reset if a new Video is loaded or played.
+         *
+         * @name Phaser.GameObjects.Video#_getFrame
+         * @type {boolean}
+         * @private
+         * @since 3.85.0
+         */
+        this._getFrame = false;
+
+        /**
          * The Callback ID returned by Request Video Frame.
          *
          * @name Phaser.GameObjects.Video#_rfvCallbackId
@@ -85549,7 +86231,7 @@ var Video = new Class({
      * @method Phaser.GameObjects.Video#loadMediaStream
      * @since 3.50.0
      *
-     * @param {string} stream - The MediaStream object.
+     * @param {MediaStream} stream - The MediaStream object.
      * @param {boolean} [noAudio=false] - Does the video have an audio track? If not you can enable auto-playing on it.
      * @param {string} [crossOrigin] - The value to use for the `crossOrigin` property in the video load request.  Either undefined, `anonymous` or `use-credentials`. If no value is given, `crossorigin` will not be set in the request.
      *
@@ -85796,7 +86478,18 @@ var Video = new Class({
 
         this._lastUpdate = currentTime;
 
-        this._rfvCallbackId = this.video.requestVideoFrameCallback(this.requestVideoFrame.bind(this));
+        if (this._getFrame)
+        {
+            this.removeEventHandlers();
+
+            video.pause();
+
+            this._getFrame = false;
+        }
+        else
+        {
+            this._rfvCallbackId = this.video.requestVideoFrameCallback(this.requestVideoFrame.bind(this));
+        }
     },
 
     /**
@@ -85864,9 +86557,49 @@ var Video = new Class({
 
         if (!this._playCalled)
         {
+            this._getFrame = false;
+
             this._rfvCallbackId = video.requestVideoFrameCallback(this.requestVideoFrame.bind(this));
 
             this._playCalled = true;
+
+            this.createPlayPromise();
+        }
+
+        return this;
+    },
+
+    /**
+     * Attempts to get the first frame of the video by running the `requestVideoFrame` callback once,
+     * then stopping. This is useful if you need to grab the first frame of the video to display behind
+     * a 'play' button, without actually calling the 'play' method.
+     *
+     * If the video is already playing, or has been queued to play with `changeSource` then this method just returns.
+     *
+     * @method Phaser.GameObjects.Video#getFirstFrame
+     * @since 3.85.0
+     *
+     * @return {this} This Video Game Object for method chaining.
+     */
+    getFirstFrame: function ()
+    {
+        var video = this.video;
+
+        if (!video || this.isPlaying())
+        {
+            if (!video)
+            {
+                console.warn('Video not loaded');
+            }
+
+            return this;
+        }
+
+        if (!this._playCalled)
+        {
+            this._getFrame = true;
+
+            this._rfvCallbackId = video.requestVideoFrameCallback(this.requestVideoFrame.bind(this));
 
             this.createPlayPromise();
         }
@@ -87163,7 +87896,7 @@ module.exports = Video;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -87201,7 +87934,7 @@ module.exports = VideoCanvasRenderer;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -87251,7 +87984,7 @@ GameObjectCreator.register('video', function (config, addToScene)
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -87352,7 +88085,7 @@ GameObjectFactory.register('video', function (x, y, key)
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -87385,7 +88118,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -87423,7 +88156,7 @@ module.exports = VideoWebGLRenderer;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -87745,7 +88478,7 @@ module.exports = Zone;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -87785,7 +88518,7 @@ GameObjectCreator.register('zone', function (config)
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -87828,7 +88561,7 @@ GameObjectFactory.register('zone', function (x, y, width, height)
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -87857,7 +88590,7 @@ module.exports = Area;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -88233,7 +88966,7 @@ module.exports = Circle;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -88262,7 +88995,7 @@ module.exports = Circumference;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -88302,7 +89035,7 @@ module.exports = CircumferencePoint;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -88333,7 +89066,7 @@ module.exports = Clone;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -88375,7 +89108,7 @@ module.exports = Contains;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -88407,7 +89140,7 @@ module.exports = ContainsPoint;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -88444,7 +89177,7 @@ module.exports = ContainsRect;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -88477,7 +89210,7 @@ module.exports = CopyFrom;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -88512,7 +89245,7 @@ module.exports = Equals;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -88553,7 +89286,7 @@ module.exports = GetBounds;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -88597,7 +89330,7 @@ module.exports = GetPoint;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -88650,7 +89383,7 @@ module.exports = GetPoints;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -88686,7 +89419,7 @@ module.exports = Offset;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -88721,7 +89454,7 @@ module.exports = OffsetPoint;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -88766,7 +89499,7 @@ module.exports = Random;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -88798,7 +89531,7 @@ module.exports = Circle;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -88879,7 +89612,7 @@ module.exports = GEOM_CONST;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -88914,7 +89647,7 @@ module.exports = Area;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -88947,7 +89680,7 @@ module.exports = Circumference;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -88990,7 +89723,7 @@ module.exports = CircumferencePoint;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -89021,7 +89754,7 @@ module.exports = Clone;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -89064,7 +89797,7 @@ module.exports = Contains;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -89096,7 +89829,7 @@ module.exports = ContainsPoint;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -89133,7 +89866,7 @@ module.exports = ContainsRect;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -89166,7 +89899,7 @@ module.exports = CopyFrom;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -89549,7 +90282,7 @@ module.exports = Ellipse;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -89585,7 +90318,7 @@ module.exports = Equals;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -89626,7 +90359,7 @@ module.exports = GetBounds;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -89670,7 +90403,7 @@ module.exports = GetPoint;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -89725,7 +90458,7 @@ module.exports = GetPoints;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -89761,7 +90494,7 @@ module.exports = Offset;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -89796,7 +90529,7 @@ module.exports = OffsetPoint;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -89838,7 +90571,7 @@ module.exports = Random;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -89870,7 +90603,7 @@ module.exports = Ellipse;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -89908,7 +90641,7 @@ module.exports = Geom;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -89940,7 +90673,7 @@ module.exports = CircleToCircle;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -89996,7 +90729,7 @@ module.exports = CircleToRectangle;
 /**
  * @author       Florian Vazelle
  * @author       Geoffrey Glaive
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -90091,7 +90824,7 @@ module.exports = GetCircleToCircle;
 /**
  * @author       Florian Vazelle
  * @author       Geoffrey Glaive
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -90142,7 +90875,7 @@ module.exports = GetCircleToRectangle;
 /**
  * @author       Florian Vazelle
  * @author       Geoffrey Glaive
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -90234,7 +90967,7 @@ module.exports = GetLineToCircle;
 
 /**
  * @author       Richard Davey
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -90297,7 +91030,19 @@ var GetLineToLine = function (line1, line2, isRay, out)
     if (isRay)
     {
         t = (dx1 * (y3 - y1) + dy1 * (x1 - x3)) / (dx2 * dy1 - dy2 * dx1);
-        u = (x3 + dx2 * t - x1) / dx1;
+        
+        if (dx1 !== 0)
+        {
+            u = (x3 + dx2 * t - x1) / dx1;
+        }
+        else if (dy1 !== 0)
+        {
+            u = (y3 + dy2 * t - y1) / dy1;
+        }
+        else
+        {
+            return null; // degenerate line segment
+        }
 
         //  Intersects?
         if (u < 0 || t < 0 || t > 1)
@@ -90343,7 +91088,7 @@ module.exports = GetLineToLine;
 
 /**
  * @author       Richard Davey
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -90423,7 +91168,7 @@ module.exports = GetLineToPoints;
 
 /**
  * @author       Richard Davey
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -90497,7 +91242,7 @@ module.exports = GetLineToPolygon;
 /**
  * @author       Florian Vazelle
  * @author       Geoffrey Glaive
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -90557,7 +91302,7 @@ module.exports = GetLineToRectangle;
 
 /**
  * @author       Richard Davey
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -90660,7 +91405,7 @@ module.exports = GetRaysFromPointToPolygon;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -90711,7 +91456,7 @@ module.exports = GetRectangleIntersection;
 /**
  * @author       Florian Vazelle
  * @author       Geoffrey Glaive
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -90763,7 +91508,7 @@ module.exports = GetRectangleToRectangle;
 /**
  * @author       Florian Vazelle
  * @author       Geoffrey Glaive
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -90812,7 +91557,7 @@ module.exports = GetRectangleToTriangle;
 /**
  * @author       Florian Vazelle
  * @author       Geoffrey Glaive
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -90862,7 +91607,7 @@ module.exports = GetTriangleToCircle;
 /**
  * @author       Florian Vazelle
  * @author       Geoffrey Glaive
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -90922,7 +91667,7 @@ module.exports = GetTriangleToLine;
 /**
  * @author       Florian Vazelle
  * @author       Geoffrey Glaive
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -90971,7 +91716,7 @@ module.exports = GetTriangleToTriangle;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -91056,7 +91801,7 @@ module.exports = LineToCircle;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -91139,7 +91884,7 @@ module.exports = LineToLine;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -91242,7 +91987,7 @@ module.exports = LineToRectangle;
 /**
  * @author       Richard Davey <rich@phaser.io>
  * @author       Florian Mertens
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -91312,7 +92057,7 @@ module.exports = PointToLine;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -91354,7 +92099,7 @@ module.exports = PointToLineSegment;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -91393,7 +92138,7 @@ module.exports = RectangleToRectangle;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -91487,7 +92232,7 @@ module.exports = RectangleToTriangle;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -91528,7 +92273,7 @@ module.exports = RectangleToValues;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -91594,7 +92339,7 @@ module.exports = TriangleToCircle;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -91650,7 +92395,7 @@ module.exports = TriangleToLine;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -91741,7 +92486,7 @@ module.exports = TriangleToTriangle;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -91789,7 +92534,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -91818,7 +92563,7 @@ module.exports = Angle;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -91893,7 +92638,7 @@ module.exports = BresenhamPoints;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -91934,7 +92679,7 @@ module.exports = CenterOn;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -91965,7 +92710,7 @@ module.exports = Clone;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -91997,7 +92742,7 @@ module.exports = CopyFrom;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -92032,7 +92777,7 @@ module.exports = Equals;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -92091,7 +92836,7 @@ module.exports = Extend;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -92212,7 +92957,7 @@ module.exports = GetEasedPoints;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -92252,7 +92997,7 @@ module.exports = GetMidPoint;
 /**
  * @author       Richard Davey <rich@phaser.io>
  * @author       Florian Mertens
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -92307,7 +93052,7 @@ module.exports = GetNearestPoint;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -92352,7 +93097,7 @@ module.exports = GetNormal;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -92392,7 +93137,7 @@ module.exports = GetPoint;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -92461,7 +93206,7 @@ module.exports = GetPoints;
 /**
  * @author       Richard Davey <rich@phaser.io>
  * @author       Florian Mertens
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -92506,7 +93251,7 @@ module.exports = GetShortestDistance;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -92535,7 +93280,7 @@ module.exports = Height;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -92564,7 +93309,7 @@ module.exports = Length;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -92924,7 +93669,7 @@ module.exports = Line;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -92959,7 +93704,7 @@ module.exports = NormalAngle;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -92991,7 +93736,7 @@ module.exports = NormalX;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -93024,7 +93769,7 @@ module.exports = NormalY;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -93063,7 +93808,7 @@ module.exports = Offset;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -93092,7 +93837,7 @@ module.exports = PerpSlope;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -93133,7 +93878,7 @@ module.exports = Random;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -93168,7 +93913,7 @@ module.exports = ReflectAngle;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -93205,7 +93950,7 @@ module.exports = Rotate;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -93240,7 +93985,7 @@ module.exports = RotateAroundPoint;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -93289,7 +94034,7 @@ module.exports = RotateAroundXY;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -93330,7 +94075,7 @@ module.exports = SetToAngle;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -93359,7 +94104,7 @@ module.exports = Slope;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -93388,7 +94133,7 @@ module.exports = Width;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -93434,7 +94179,7 @@ module.exports = Line;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -94097,7 +94842,7 @@ module.exports = Face;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -94350,7 +95095,7 @@ module.exports = GenerateGridVerts;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -94495,7 +95240,7 @@ module.exports = GenerateObjVerts;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -94694,7 +95439,7 @@ module.exports = GenerateVerts;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -95011,7 +95756,7 @@ module.exports = ParseObj;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -95090,7 +95835,7 @@ module.exports = ParseObjMaterial;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -95156,7 +95901,7 @@ module.exports = RotateFace;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -95571,7 +96316,7 @@ module.exports = Vertex;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -95602,7 +96347,7 @@ module.exports = Mesh;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -95633,7 +96378,7 @@ module.exports = Ceil;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -95664,7 +96409,7 @@ module.exports = Clone;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -95696,7 +96441,7 @@ module.exports = CopyFrom;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -95726,7 +96471,7 @@ module.exports = Equals;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -95757,7 +96502,7 @@ module.exports = Floor;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -95822,7 +96567,7 @@ module.exports = GetCentroid;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -95851,7 +96596,7 @@ module.exports = GetMagnitude;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -95880,7 +96625,7 @@ module.exports = GetMagnitudeSq;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -95951,7 +96696,7 @@ module.exports = GetRectangleFromPoints;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -95993,7 +96738,7 @@ module.exports = Interpolate;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -96024,7 +96769,7 @@ module.exports = Invert;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -96060,7 +96805,7 @@ module.exports = Negative;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -96154,7 +96899,7 @@ module.exports = Point;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -96202,7 +96947,7 @@ module.exports = Project;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -96248,7 +96993,7 @@ module.exports = ProjectUnit;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -96293,7 +97038,7 @@ module.exports = SetMagnitude;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -96325,7 +97070,7 @@ module.exports = Point;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -96356,7 +97101,7 @@ module.exports = Clone;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -96406,7 +97151,7 @@ module.exports = Contains;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -96439,7 +97184,7 @@ module.exports = ContainsPoint;
 "use strict";
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -97205,7 +97950,7 @@ module.exports = earcut;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -97262,7 +98007,7 @@ module.exports = GetAABB;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -97306,7 +98051,7 @@ module.exports = GetNumberArray;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -97384,7 +98129,7 @@ module.exports = GetPoints;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -97433,7 +98178,7 @@ module.exports = Perimeter;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -97661,7 +98406,7 @@ module.exports = Polygon;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -97901,7 +98646,7 @@ module.exports = Simplify;
 /**
  * @author       Richard Davey <rich@phaser.io>
  * @author       Igor Ognichenko <ognichenko.igor@gmail.com>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -97977,7 +98722,7 @@ module.exports = Smooth;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -98018,7 +98763,7 @@ module.exports = Translate;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -98047,7 +98792,7 @@ module.exports = Polygon;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -98076,7 +98821,7 @@ module.exports = Area;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -98110,7 +98855,7 @@ module.exports = Ceil;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -98146,7 +98891,7 @@ module.exports = CeilAll;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -98182,7 +98927,7 @@ module.exports = CenterOn;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -98213,7 +98958,7 @@ module.exports = Clone;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -98249,7 +98994,7 @@ module.exports = Contains;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -98281,7 +99026,7 @@ module.exports = ContainsPoint;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -98322,7 +99067,7 @@ module.exports = ContainsRect;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -98354,7 +99099,7 @@ module.exports = CopyFrom;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -98392,7 +99137,7 @@ module.exports = Decompose;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -98427,7 +99172,7 @@ module.exports = Equals;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -98481,7 +99226,7 @@ module.exports = FitInside;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -98535,7 +99280,7 @@ module.exports = FitOutside;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -98569,7 +99314,7 @@ module.exports = Floor;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -98605,7 +99350,7 @@ module.exports = FloorAll;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -98694,7 +99439,7 @@ module.exports = FromPoints;
 
 /**
  * @author       samme
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -98738,7 +99483,7 @@ module.exports = FromXY;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -98767,7 +99512,7 @@ module.exports = GetAspectRatio;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -98806,7 +99551,7 @@ module.exports = GetCenter;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -98888,7 +99633,7 @@ module.exports = GetPoint;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -98940,7 +99685,7 @@ module.exports = GetPoints;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -98980,7 +99725,7 @@ module.exports = GetSize;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -99022,7 +99767,7 @@ module.exports = Inflate;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -99074,7 +99819,7 @@ module.exports = Intersection;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -99193,7 +99938,7 @@ module.exports = MarchingAnts;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -99243,7 +99988,7 @@ module.exports = MergePoints;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -99288,7 +100033,7 @@ module.exports = MergeRect;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -99333,7 +100078,7 @@ module.exports = MergeXY;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -99369,7 +100114,7 @@ module.exports = Offset;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -99404,7 +100149,7 @@ module.exports = OffsetPoint;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -99439,7 +100184,7 @@ module.exports = Overlaps;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -99468,7 +100213,7 @@ module.exports = Perimeter;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -99526,7 +100271,7 @@ module.exports = PerimeterPoint;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -99565,7 +100310,7 @@ module.exports = Random;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -99637,7 +100382,7 @@ module.exports = RandomOutside;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -100149,7 +100894,7 @@ module.exports = Rectangle;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -100179,7 +100924,7 @@ module.exports = SameDimensions;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -100217,7 +100962,7 @@ module.exports = Scale;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -100260,7 +101005,7 @@ module.exports = Union;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -100315,7 +101060,7 @@ module.exports = Rectangle;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -100355,7 +101100,7 @@ module.exports = Area;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -100400,7 +101145,7 @@ module.exports = BuildEquilateral;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -100477,7 +101222,7 @@ module.exports = BuildFromPolygon;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -100527,7 +101272,7 @@ module.exports = BuildRight;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -100581,7 +101326,7 @@ module.exports = CenterOn;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -100626,7 +101371,7 @@ module.exports = Centroid;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -100703,7 +101448,7 @@ module.exports = CircumCenter;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -100787,7 +101532,7 @@ module.exports = CircumCircle;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -100818,7 +101563,7 @@ module.exports = Clone;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -100872,7 +101617,7 @@ module.exports = Contains;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -100960,7 +101705,7 @@ module.exports = ContainsArray;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -100992,7 +101737,7 @@ module.exports = ContainsPoint;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -101024,7 +101769,7 @@ module.exports = CopyFrom;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -101060,7 +101805,7 @@ module.exports = Decompose;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -101097,7 +101842,7 @@ module.exports = Equals;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -101185,7 +101930,7 @@ module.exports = GetPoint;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -101279,7 +102024,7 @@ module.exports = GetPoints;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -101345,7 +102090,7 @@ module.exports = InCenter;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -101387,7 +102132,7 @@ module.exports = Offset;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -101423,7 +102168,7 @@ module.exports = Perimeter;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -101480,7 +102225,7 @@ module.exports = Random;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -101517,7 +102262,7 @@ module.exports = Rotate;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -101552,7 +102297,7 @@ module.exports = RotateAroundPoint;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -101607,7 +102352,7 @@ module.exports = RotateAroundXY;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -102055,7 +102800,7 @@ module.exports = Triangle;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -102096,7 +102841,7 @@ module.exports = Triangle;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -102150,6 +102895,7 @@ var CreateInteractiveObject = function (gameObject, hitArea, hitAreaCallback)
         dragStartY: 0,
         dragStartXGlobal: 0,
         dragStartYGlobal: 0,
+        dragStartCamera: null,
 
         dragX: 0,
         dragY: 0
@@ -102167,7 +102913,7 @@ module.exports = CreateInteractiveObject;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -102204,7 +102950,7 @@ module.exports = CreatePixelPerfectHandler;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -102250,7 +102996,7 @@ var InputManager = new Class({
     {
         /**
          * The Game instance that owns the Input Manager.
-         * A Game only maintains on instance of the Input Manager at any time.
+         * A Game only maintains one instance of the Input Manager at any time.
          *
          * @name Phaser.Input.InputManager#game
          * @type {Phaser.Game}
@@ -102380,11 +103126,6 @@ var InputManager = new Class({
          * @since 3.10.0
          */
         this.pointersTotal = config.inputActivePointers;
-
-        if (config.inputTouch && this.pointersTotal === 1)
-        {
-            this.pointersTotal = 2;
-        }
 
         for (var i = 0; i <= this.pointersTotal; i++)
         {
@@ -102661,11 +103402,12 @@ var InputManager = new Class({
      * @private
      * @since 3.10.0
      *
-     * @param {Phaser.Types.Input.InteractiveObject} interactiveObject - The Interactive Object that called this method.
+     * @param {Phaser.Types.Input.InteractiveObject} interactiveObject - The Interactive Object that called this method. Pass `null` if you just want to set the force value.
+     * @param {boolean} [forceReset=false] - Should the reset happen regardless of the object's cursor state? Default false.
      */
-    resetCursor: function (interactiveObject)
+    resetCursor: function (interactiveObject, forceReset)
     {
-        if (interactiveObject.cursor && this.canvas)
+        if ((forceReset || (interactiveObject && interactiveObject.cursor)) && this.canvas)
         {
             this.canvas.style.cursor = this.defaultCursor;
         }
@@ -102774,7 +103516,7 @@ var InputManager = new Class({
         {
             var changedTouch = event.changedTouches[c];
 
-            for (var i = 1; i < this.pointersTotal; i++)
+            for (var i = 1; i < pointers.length; i++)
             {
                 var pointer = pointers[i];
 
@@ -102812,7 +103554,7 @@ var InputManager = new Class({
         {
             var changedTouch = event.changedTouches[c];
 
-            for (var i = 1; i < this.pointersTotal; i++)
+            for (var i = 1; i < pointers.length; i++)
             {
                 var pointer = pointers[i];
 
@@ -102869,7 +103611,7 @@ var InputManager = new Class({
         {
             var changedTouch = event.changedTouches[c];
 
-            for (var i = 1; i < this.pointersTotal; i++)
+            for (var i = 1; i < pointers.length; i++)
             {
                 var pointer = pointers[i];
 
@@ -102905,7 +103647,7 @@ var InputManager = new Class({
         {
             var changedTouch = event.changedTouches[c];
 
-            for (var i = 1; i < this.pointersTotal; i++)
+            for (var i = 1; i < pointers.length; i++)
             {
                 var pointer = pointers[i];
 
@@ -103315,7 +104057,7 @@ module.exports = InputManager;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -103841,7 +104583,7 @@ var InputPlugin = new Class({
     },
 
     /**
-     * Checks to see if both this plugin and the Scene to which it belongs is active.
+     * Checks to see if the Input Manager, this plugin and the Scene to which it belongs are all active and input enabled.
      *
      * @method Phaser.Input.InputPlugin#isActive
      * @since 3.10.0
@@ -103850,7 +104592,43 @@ var InputPlugin = new Class({
      */
     isActive: function ()
     {
-        return (this.enabled && this.scene.sys.canInput());
+        return (this.manager && this.manager.enabled && this.enabled && this.scene.sys.canInput());
+    },
+
+    /**
+     * Sets a custom cursor on the parent canvas element of the game, based on the `cursor`
+     * setting of the given Interactive Object (i.e. a Sprite).
+     * 
+     * See the CSS property `cursor` for more information on MDN:
+     *
+     * https://developer.mozilla.org/en-US/docs/Web/CSS/cursor
+     *
+     * @method Phaser.Input.InputPlugin#setCursor
+     * @since 3.85.0
+     *
+     * @param {Phaser.Types.Input.InteractiveObject} interactiveObject - The Interactive Object that will set the cursor on the canvas.
+     */
+    setCursor: function (interactiveObject)
+    {
+        if (this.manager)
+        {
+            this.manager.setCursor(interactiveObject);
+        }
+    },
+
+    /**
+     * Forces the Input Manager to clear the custom or hand cursor, regardless of the
+     * interactive state of any Game Objects.
+     *
+     * @method Phaser.Input.InputPlugin#resetCursor
+     * @since 3.85.0
+     */
+    resetCursor: function ()
+    {
+        if (this.manager)
+        {
+            this.manager.resetCursor(null, true);
+        }
     },
 
     /**
@@ -103888,9 +104666,8 @@ var InputPlugin = new Class({
         var manager = this.manager;
 
         var pointers = manager.pointers;
-        var pointersTotal = manager.pointersTotal;
 
-        for (i = 0; i < pointersTotal; i++)
+        for (i = 0; i < pointers.length; i++)
         {
             pointers[i].updateMotion();
         }
@@ -103926,7 +104703,7 @@ var InputPlugin = new Class({
         //  We got this far? Then we should poll for movement
         var captured = false;
 
-        for (i = 0; i < pointersTotal; i++)
+        for (i = 0; i < pointers.length; i++)
         {
             var total = 0;
 
@@ -103993,10 +104770,9 @@ var InputPlugin = new Class({
             return false;
         }
 
-        var pointersTotal = pointers.length;
         var captured = false;
 
-        for (var i = 0; i < pointersTotal; i++)
+        for (var i = 0; i < pointers.length; i++)
         {
             var total = 0;
             var pointer = pointers[i];
@@ -104135,11 +104911,14 @@ var InputPlugin = new Class({
      * @since 3.0.0
      *
      * @param {Phaser.GameObjects.GameObject} gameObject - The Game Object to have its input system disabled.
+     * @param {boolean} [resetCursor=false] - Reset the cursor to the default?
      *
      * @return {this} This Input Plugin.
      */
-    disable: function (gameObject)
+    disable: function (gameObject, resetCursor)
     {
+        if (resetCursor === undefined) { resetCursor = false; }
+
         var input = gameObject.input;
 
         if (input)
@@ -104153,7 +104932,7 @@ var InputPlugin = new Class({
         var over = this._over;
         var manager = this.manager;
 
-        for (var i = 0, index; i < manager.pointersTotal; i++)
+        for (var i = 0, index; i < manager.pointers.length; i++)
         {
             index = drag[i].indexOf(gameObject);
 
@@ -104168,6 +104947,11 @@ var InputPlugin = new Class({
             {
                 over[i].splice(index, 1);
             }
+        }
+
+        if (resetCursor)
+        {
+            this.resetCursor();
         }
 
         return this;
@@ -104206,7 +104990,7 @@ var InputPlugin = new Class({
 
         if (gameObject.input)
         {
-            //  If it is already has an InteractiveObject then just enable it and return
+            //  If it already has an InteractiveObject then just enable it and return
             gameObject.input.enabled = true;
         }
         else
@@ -104301,8 +105085,6 @@ var InputPlugin = new Class({
 
         _eventData.cancelled = false;
 
-        var aborted = false;
-
         //  Go through all objects the pointer was over and fire their events / callbacks
         for (var i = 0; i < currentlyOver.length; i++)
         {
@@ -104315,32 +105097,41 @@ var InputPlugin = new Class({
 
             total++;
 
+            //  1) GAMEOBJECT_POINTER_DOWN
             gameObject.emit(Events.GAMEOBJECT_POINTER_DOWN, pointer, gameObject.input.localX, gameObject.input.localY, _eventContainer);
 
-            if (_eventData.cancelled || !gameObject.input || !gameObject.input.enabled)
+            if (_eventData.cancelled || !this.isActive())
             {
-                aborted = true;
+                //  They cancelled the whole event, it can't go any further
                 break;
             }
 
-            this.emit(Events.GAMEOBJECT_DOWN, pointer, gameObject, _eventContainer);
-
-            if (_eventData.cancelled || !gameObject.input)
+            //  Check that the game object wasn't input disabled or destroyed as a result of its input event
+            if (gameObject.input && gameObject.input.enabled)
             {
-                aborted = true;
-                break;
+                //  2) GAMEOBJECT_DOWN
+
+                this.emit(Events.GAMEOBJECT_DOWN, pointer, gameObject, _eventContainer);
+
+                if (_eventData.cancelled || !this.isActive())
+                {
+                    //  They cancelled the whole event, it can't go any further
+                    break;
+                }
             }
         }
 
-        //  If they released outside the canvas, but pressed down inside it, we'll still dispatch the event.
-        if (!aborted && this.manager)
+        //  If they pressed down outside the canvas, dispatch that event.
+        if (!_eventData.cancelled && this.isActive())
         {
             if (pointer.downElement === this.manager.game.canvas)
             {
+                //  3) POINTER_DOWN
                 this.emit(Events.POINTER_DOWN, pointer, currentlyOver);
             }
             else
             {
+                //  4) POINTER_DOWN_OUTSIDE
                 this.emit(Events.POINTER_DOWN_OUTSIDE, pointer);
             }
         }
@@ -104454,6 +105245,11 @@ var InputPlugin = new Class({
 
         var list = this._drag[pointer.id];
 
+        if (list.length > 1)
+        {
+            list = list.slice(0);
+        }
+
         for (var i = 0; i < list.length; i++)
         {
             var gameObject = list[i];
@@ -104467,6 +105263,8 @@ var InputPlugin = new Class({
 
             input.dragStartXGlobal = pointer.worldX;
             input.dragStartYGlobal = pointer.worldY;
+
+            input.dragStartCamera = pointer.camera;
 
             input.dragX = input.dragStartXGlobal - input.dragStartX;
             input.dragY = input.dragStartYGlobal - input.dragStartY;
@@ -104591,6 +105389,11 @@ var InputPlugin = new Class({
 
         var list = this._drag[pointer.id];
 
+        if (list.length > 1)
+        {
+            list = list.slice(0);
+        }
+
         for (var i = 0; i < list.length; i++)
         {
             var gameObject = list[i];
@@ -104667,15 +105470,17 @@ var InputPlugin = new Class({
             var dragX;
             var dragY;
 
+            var dragWorldXY = pointer.positionToCamera(input.dragStartCamera);
+
             if (!gameObject.parentContainer)
             {
-                dragX = pointer.worldX - input.dragX;
-                dragY = pointer.worldY - input.dragY;
+                dragX = dragWorldXY.x - input.dragX;
+                dragY = dragWorldXY.y - input.dragY;
             }
             else
             {
-                var dx = pointer.worldX - input.dragStartXGlobal;
-                var dy = pointer.worldY - input.dragStartYGlobal;
+                var dx = dragWorldXY.x - input.dragStartXGlobal;
+                var dy = dragWorldXY.y - input.dragStartYGlobal;
 
                 var rotation = gameObject.getParentRotation();
 
@@ -104718,6 +105523,11 @@ var InputPlugin = new Class({
         //  5 = Pointer was actively dragging but has been released, notify draglist
         var list = this._drag[pointer.id];
 
+        if (list.length > 1)
+        {
+            list = list.slice(0);
+        }
+
         for (var i = 0; i < list.length; i++)
         {
             var gameObject = list[i];
@@ -104730,6 +105540,8 @@ var InputPlugin = new Class({
 
                 input.dragX = input.localX - gameObject.displayOriginX;
                 input.dragY = input.localY - gameObject.displayOriginY;
+
+                input.dragStartCamera = null;
 
                 var dropped = false;
 
@@ -104788,8 +105600,6 @@ var InputPlugin = new Class({
 
         _eventData.cancelled = false;
 
-        var aborted = false;
-
         //  Go through all objects the pointer was over and fire their events / callbacks
         for (var i = 0; i < currentlyOver.length; i++)
         {
@@ -104804,27 +105614,31 @@ var InputPlugin = new Class({
 
             gameObject.emit(Events.GAMEOBJECT_POINTER_MOVE, pointer, gameObject.input.localX, gameObject.input.localY, _eventContainer);
 
-            if (_eventData.cancelled || !gameObject.input || !gameObject.input.enabled)
+            if (_eventData.cancelled || !this.isActive())
             {
-                aborted = true;
+                //  They cancelled the whole event, it can't go any further
                 break;
             }
 
-            this.emit(Events.GAMEOBJECT_MOVE, pointer, gameObject, _eventContainer);
-
-            if (_eventData.cancelled || !gameObject.input || !gameObject.input.enabled)
+            //  Check that the game object wasn't input disabled or destroyed as a result of its input event
+            if (gameObject.input && gameObject.input.enabled)
             {
-                aborted = true;
-                break;
-            }
+                this.emit(Events.GAMEOBJECT_MOVE, pointer, gameObject, _eventContainer);
 
-            if (this.topOnly)
-            {
-                break;
+                if (_eventData.cancelled || !this.isActive())
+                {
+                    //  They cancelled the whole event, it can't go any further
+                    break;
+                }
+
+                if (this.topOnly)
+                {
+                    break;
+                }
             }
         }
 
-        if (!aborted)
+        if (!_eventData.cancelled && this.isActive())
         {
             this.emit(Events.POINTER_MOVE, pointer, currentlyOver);
         }
@@ -104856,8 +105670,6 @@ var InputPlugin = new Class({
 
         _eventData.cancelled = false;
 
-        var aborted = false;
-
         var dx = pointer.deltaX;
         var dy = pointer.deltaY;
         var dz = pointer.deltaZ;
@@ -104876,22 +105688,26 @@ var InputPlugin = new Class({
 
             gameObject.emit(Events.GAMEOBJECT_POINTER_WHEEL, pointer, dx, dy, dz, _eventContainer);
 
-            if (_eventData.cancelled || !gameObject.input || !gameObject.input.enabled)
+            if (_eventData.cancelled || !this.isActive())
             {
-                aborted = true;
+                //  They cancelled the whole event, it can't go any further
                 break;
             }
 
-            this.emit(Events.GAMEOBJECT_WHEEL, pointer, gameObject, dx, dy, dz, _eventContainer);
-
-            if (_eventData.cancelled || !gameObject.input || !gameObject.input.enabled)
+            //  Check that the game object wasn't input disabled or destroyed as a result of its input event
+            if (gameObject.input && gameObject.input.enabled)
             {
-                aborted = true;
-                break;
+                this.emit(Events.GAMEOBJECT_WHEEL, pointer, gameObject, dx, dy, dz, _eventContainer);
+
+                if (_eventData.cancelled || !this.isActive())
+                {
+                    //  They cancelled the whole event, it can't go any further
+                    break;
+                }
             }
         }
 
-        if (!aborted)
+        if (!_eventData.cancelled && this.isActive())
         {
             this.emit(Events.POINTER_WHEEL, pointer, currentlyOver, dx, dy, dz);
         }
@@ -104933,8 +105749,6 @@ var InputPlugin = new Class({
 
             _eventData.cancelled = false;
 
-            var aborted = false;
-
             for (var i = 0; i < total; i++)
             {
                 var gameObject = currentlyOver[i];
@@ -104952,22 +105766,26 @@ var InputPlugin = new Class({
 
                 totalInteracted++;
 
-                if (_eventData.cancelled || !gameObject.input || !gameObject.input.enabled)
+                if (_eventData.cancelled || !this.isActive())
                 {
-                    aborted = true;
+                    //  They cancelled the whole event, it can't go any further
                     break;
                 }
 
-                this.emit(Events.GAMEOBJECT_OVER, pointer, gameObject, _eventContainer);
-
-                if (_eventData.cancelled || !gameObject.input || !gameObject.input.enabled)
+                //  Check that the game object wasn't input disabled or destroyed as a result of its input event
+                if (gameObject.input && gameObject.input.enabled)
                 {
-                    aborted = true;
-                    break;
+                    this.emit(Events.GAMEOBJECT_OVER, pointer, gameObject, _eventContainer);
+
+                    if (_eventData.cancelled || !this.isActive())
+                    {
+                        //  They cancelled the whole event, it can't go any further
+                        break;
+                    }
                 }
             }
 
-            if (!aborted)
+            if (!_eventData.cancelled && this.isActive())
             {
                 this.emit(Events.POINTER_OVER, pointer, justOver);
             }
@@ -105011,8 +105829,6 @@ var InputPlugin = new Class({
 
             _eventData.cancelled = false;
 
-            var aborted = false;
-
             this.sortGameObjects(previouslyOver, pointer);
 
             for (var i = 0; i < total; i++)
@@ -105033,24 +105849,27 @@ var InputPlugin = new Class({
 
                 totalInteracted++;
 
-                if (_eventData.cancelled || !gameObject.input || !gameObject.input.enabled)
+                if (_eventData.cancelled || !this.isActive())
                 {
-                    aborted = true;
+                    //  They cancelled the whole event, it can't go any further
                     break;
                 }
 
-                this.emit(Events.GAMEOBJECT_OUT, pointer, gameObject, _eventContainer);
-
-                if (_eventData.cancelled || !gameObject.input || !gameObject.input.enabled)
+                if (gameObject.input && gameObject.input.enabled)
                 {
-                    aborted = true;
-                    break;
-                }
+                    this.emit(Events.GAMEOBJECT_OUT, pointer, gameObject, _eventContainer);
 
-                if (!aborted)
-                {
-                    this.emit(Events.POINTER_OUT, pointer, previouslyOver);
+                    if (_eventData.cancelled || !this.isActive())
+                    {
+                        //  They cancelled the whole event, it can't go any further
+                        break;
+                    }
                 }
+            }
+
+            if (!_eventData.cancelled && this.isActive())
+            {
+                this.emit(Events.POINTER_OUT, pointer, previouslyOver);
             }
 
             this._over[pointer.id] = [];
@@ -105135,8 +105954,6 @@ var InputPlugin = new Class({
 
         _eventData.cancelled = false;
 
-        var aborted = false;
-
         if (total > 0)
         {
             this.sortGameObjects(justOut, pointer);
@@ -105158,22 +105975,26 @@ var InputPlugin = new Class({
 
                 totalInteracted++;
 
-                if (_eventData.cancelled || !gameObject.input || !gameObject.input.enabled)
+                if (_eventData.cancelled || !this.isActive())
                 {
-                    aborted = true;
+                    //  They cancelled the whole event, it can't go any further
                     break;
                 }
 
-                this.emit(Events.GAMEOBJECT_OUT, pointer, gameObject, _eventContainer);
-
-                if (_eventData.cancelled || !gameObject.input || !gameObject.input.enabled)
+                //  Check that the game object wasn't input disabled or destroyed as a result of its input event
+                if (gameObject.input && gameObject.input.enabled)
                 {
-                    aborted = true;
-                    break;
+                    this.emit(Events.GAMEOBJECT_OUT, pointer, gameObject, _eventContainer);
+
+                    if (_eventData.cancelled || !this.isActive())
+                    {
+                        //  They cancelled the whole event, it can't go any further
+                        break;
+                    }
                 }
             }
 
-            if (!aborted)
+            if (!_eventData.cancelled || this.isActive())
             {
                 this.emit(Events.POINTER_OUT, pointer, justOut);
             }
@@ -105183,8 +106004,6 @@ var InputPlugin = new Class({
         total = justOver.length;
 
         _eventData.cancelled = false;
-
-        aborted = false;
 
         if (total > 0)
         {
@@ -105207,22 +106026,26 @@ var InputPlugin = new Class({
 
                 totalInteracted++;
 
-                if (_eventData.cancelled || !gameObject.input || !gameObject.input.enabled)
+                if (_eventData.cancelled || !this.isActive())
                 {
-                    aborted = true;
+                    //  They cancelled the whole event, it can't go any further
                     break;
                 }
 
-                this.emit(Events.GAMEOBJECT_OVER, pointer, gameObject, _eventContainer);
-
-                if (_eventData.cancelled || !gameObject.input || !gameObject.input.enabled)
+                //  Check that the game object wasn't input disabled or destroyed as a result of its input event
+                if (gameObject.input && gameObject.input.enabled)
                 {
-                    aborted = true;
-                    break;
+                    this.emit(Events.GAMEOBJECT_OVER, pointer, gameObject, _eventContainer);
+
+                    if (_eventData.cancelled || !this.isActive())
+                    {
+                        //  They cancelled the whole event, it can't go any further
+                        break;
+                    }
                 }
             }
 
-            if (!aborted)
+            if (!_eventData.cancelled && this.isActive())
             {
                 this.emit(Events.POINTER_OVER, pointer, justOver);
             }
@@ -105261,8 +106084,6 @@ var InputPlugin = new Class({
 
         _eventData.cancelled = false;
 
-        var aborted = false;
-
         //  Go through all objects the pointer was over and fire their events / callbacks
         for (var i = 0; i < currentlyOver.length; i++)
         {
@@ -105273,25 +106094,32 @@ var InputPlugin = new Class({
                 continue;
             }
 
+            //  1) GAMEOBJECT_POINTER_UP
             gameObject.emit(Events.GAMEOBJECT_POINTER_UP, pointer, gameObject.input.localX, gameObject.input.localY, _eventContainer);
 
-            if (_eventData.cancelled || !gameObject.input || !gameObject.input.enabled)
+            if (_eventData.cancelled || !this.isActive())
             {
-                aborted = true;
+                //  They cancelled the whole event, it can't go any further
                 break;
             }
 
-            this.emit(Events.GAMEOBJECT_UP, pointer, gameObject, _eventContainer);
-
-            if (_eventData.cancelled || !gameObject.input || !gameObject.input.enabled)
+            //  Check that the game object wasn't input disabled or destroyed as a result of its input event
+            if (gameObject.input && gameObject.input.enabled)
             {
-                aborted = true;
-                break;
+                //  2) GAMEOBJECT_UP
+
+                this.emit(Events.GAMEOBJECT_UP, pointer, gameObject, _eventContainer);
+
+                if (_eventData.cancelled || !this.isActive())
+                {
+                    //  They cancelled the whole event, it can't go any further
+                    break;
+                }
             }
         }
 
         //  If they released outside the canvas, but pressed down inside it, we'll still dispatch the event.
-        if (!aborted && this.manager)
+        if (!_eventData.cancelled && this.isActive())
         {
             if (pointer.upElement === this.manager.game.canvas)
             {
@@ -105304,6 +106132,133 @@ var InputPlugin = new Class({
         }
 
         return currentlyOver.length;
+    },
+
+    /**
+     * This method will force the given Game Object into the 'down' input state.
+     * 
+     * This will check to see if the Game Object is enabled for input, and if so,
+     * it will emit the `GAMEOBJECT_POINTER_DOWN` event for it. If that doesn't change
+     * the input state, it will then emit the `GAMEOBJECT_DOWN` event.
+     * 
+     * The Game Object is not checked against the Pointer to see if it can enter this state,
+     * that is up to you to do before calling this method.
+     *
+     * @method Phaser.Input.InputPlugin#forceDownState
+     * @fires Phaser.Input.Events#GAMEOBJECT_POINTER_DOWN
+     * @fires Phaser.Input.Events#GAMEOBJECT_DOWN
+     * @since 3.85.0
+     *
+     * @param {Phaser.Input.Pointer} pointer - The pointer to use when setting the state.
+     * @param {Phaser.GameObjects.GameObject} gameObject - The Game Object to have its state set.
+     */
+    forceDownState: function (pointer, gameObject)
+    {
+        this.forceState(pointer, gameObject, Events.GAMEOBJECT_POINTER_DOWN, Events.GAMEOBJECT_DOWN, false);
+    },
+
+    /**
+     * This method will force the given Game Object into the 'up' input state.
+     * 
+     * This will check to see if the Game Object is enabled for input, and if so,
+     * it will emit the `GAMEOBJECT_POINTER_UP` event for it. If that doesn't change
+     * the input state, it will then emit the `GAMEOBJECT_UP` event.
+     * 
+     * The Game Object is not checked against the Pointer to see if it can enter this state,
+     * that is up to you to do before calling this method.
+     *
+     * @method Phaser.Input.InputPlugin#forceUpState
+     * @fires Phaser.Input.Events#GAMEOBJECT_POINTER_UP
+     * @fires Phaser.Input.Events#GAMEOBJECT_UP
+     * @since 3.85.0
+     *
+     * @param {Phaser.Input.Pointer} pointer - The pointer to use when setting the state.
+     * @param {Phaser.GameObjects.GameObject} gameObject - The Game Object to have its state set.
+     */
+    forceUpState: function (pointer, gameObject)
+    {
+        this.forceState(pointer, gameObject, Events.GAMEOBJECT_POINTER_UP, Events.GAMEOBJECT_UP, false);
+    },
+
+    /**
+     * This method will force the given Game Object into the 'over' input state.
+     * 
+     * This will check to see if the Game Object is enabled for input, and if so,
+     * it will emit the `GAMEOBJECT_POINTER_OVER` event for it. If that doesn't change
+     * the input state, it will then emit the `GAMEOBJECT_OVER` event.
+     * 
+     * The Game Object is not checked against the Pointer to see if it can enter this state,
+     * that is up to you to do before calling this method.
+     *
+     * @method Phaser.Input.InputPlugin#forceOverState
+     * @fires Phaser.Input.Events#GAMEOBJECT_POINTER_OVER
+     * @fires Phaser.Input.Events#GAMEOBJECT_OVER
+     * @since 3.85.0
+     *
+     * @param {Phaser.Input.Pointer} pointer - The pointer to use when setting the state.
+     * @param {Phaser.GameObjects.GameObject} gameObject - The Game Object to have its state set.
+     */
+    forceOverState: function (pointer, gameObject)
+    {
+        this.forceState(pointer, gameObject, Events.GAMEOBJECT_POINTER_OVER, Events.GAMEOBJECT_OVER, true);
+    },
+
+    /**
+     * This method will force the given Game Object into the 'out' input state.
+     * 
+     * This will check to see if the Game Object is enabled for input, and if so,
+     * it will emit the `GAMEOBJECT_POINTER_OUT` event for it. If that doesn't change
+     * the input state, it will then emit the `GAMEOBJECT_OUT` event.
+     * 
+     * The Game Object is not checked against the Pointer to see if it can enter this state,
+     * that is up to you to do before calling this method.
+     *
+     * @method Phaser.Input.InputPlugin#forceOutState
+     * @fires Phaser.Input.Events#GAMEOBJECT_POINTER_OUT
+     * @fires Phaser.Input.Events#GAMEOBJECT_OUT
+     * @since 3.85.0
+     *
+     * @param {Phaser.Input.Pointer} pointer - The pointer to use when setting the state.
+     * @param {Phaser.GameObjects.GameObject} gameObject - The Game Object to have its state set.
+     */
+    forceOutState: function (pointer, gameObject)
+    {
+        this.forceState(pointer, gameObject, Events.GAMEOBJECT_POINTER_OUT, Events.GAMEOBJECT_OUT, false);
+    },
+
+    /**
+     * This method will force the given Game Object into the given input state.
+     * 
+     * @method Phaser.Input.InputPlugin#forceState
+     * @since 3.85.0
+     * 
+     * @param {Phaser.Input.Pointer} pointer - The pointer to use when setting the state.
+     * @param {Phaser.GameObjects.GameObject} gameObject - The Game Object to have its state set.
+     * @param {string} gameObjectEvent - The event to emit on the Game Object.
+     * @param {string} inputPluginEvent - The event to emit on the Input Plugin.
+     * @param {boolean} [setCursor=false] - Should the cursor be set to the Game Object's cursor?
+     */
+    forceState: function (pointer, gameObject, gameObjectEvent, inputPluginEvent, setCursor)
+    {
+        var _eventData = this._eventData;
+        var _eventContainer = this._eventContainer;
+
+        _eventData.cancelled = false;
+
+        if (gameObject.input && gameObject.input.enabled)
+        {
+            gameObject.emit(gameObjectEvent, pointer, gameObject.input.localX, gameObject.input.localY, _eventContainer);
+
+            if (setCursor)
+            {
+                this.setCursor(gameObject.input);
+            }
+
+            if (!_eventData.cancelled && this.isActive() && gameObject.input && gameObject.input.enabled)
+            {
+                this.emit(inputPluginEvent, pointer, gameObject, _eventContainer);
+            }
+        }
     },
 
     /**
@@ -106581,7 +107536,7 @@ module.exports = InputPlugin;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -106690,7 +107645,7 @@ module.exports = InputPluginCache;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -107644,68 +108599,68 @@ var Pointer = new Class({
     },
 
     /**
-     * Checks to see if the left button was just released on this Pointer.
+     * Checks to see if the release of the left button was the most recent activity on this Pointer.
      *
      * @method Phaser.Input.Pointer#leftButtonReleased
      * @since 3.18.0
      *
-     * @return {boolean} `true` if the left button was just released.
+     * @return {boolean} `true` if the release of the left button was the most recent activity on this Pointer.
      */
     leftButtonReleased: function ()
     {
-        return (this.button === 0 && !this.isDown);
+        return this.buttons === 0 ? (this.button === 0 && !this.isDown) : this.button === 0;
     },
 
     /**
-     * Checks to see if the right button was just released on this Pointer.
+     * Checks to see if the release of the right button was the most recent activity on this Pointer.
      *
      * @method Phaser.Input.Pointer#rightButtonReleased
      * @since 3.18.0
      *
-     * @return {boolean} `true` if the right button was just released.
+     * @return {boolean} `true` if the release of the right button was the most recent activity on this Pointer.
      */
     rightButtonReleased: function ()
     {
-        return (this.button === 2 && !this.isDown);
+        return this.buttons === 0 ? (this.button === 2 && !this.isDown) : this.button === 2;
     },
 
     /**
-     * Checks to see if the middle button was just released on this Pointer.
+     * Checks to see if the release of the middle button was the most recent activity on this Pointer.
      *
      * @method Phaser.Input.Pointer#middleButtonReleased
      * @since 3.18.0
      *
-     * @return {boolean} `true` if the middle button was just released.
+     * @return {boolean} `true` if the release of the middle button was the most recent activity on this Pointer.
      */
     middleButtonReleased: function ()
     {
-        return (this.button === 1 && !this.isDown);
+        return this.buttons === 0 ? (this.button === 1 && !this.isDown) : this.button === 1;
     },
 
     /**
-     * Checks to see if the back button was just released on this Pointer.
+     * Checks to see if the release of the back button was the most recent activity on this Pointer.
      *
      * @method Phaser.Input.Pointer#backButtonReleased
      * @since 3.18.0
      *
-     * @return {boolean} `true` if the back button was just released.
+     * @return {boolean} `true` if the release of the back button was the most recent activity on this Pointer.
      */
     backButtonReleased: function ()
     {
-        return (this.button === 3 && !this.isDown);
+        return this.buttons === 0 ? (this.button === 3 && !this.isDown) : this.button === 3;
     },
 
     /**
-     * Checks to see if the forward button was just released on this Pointer.
+     * Checks to see if the release of the forward button was the most recent activity on this Pointer.
      *
      * @method Phaser.Input.Pointer#forwardButtonReleased
      * @since 3.18.0
      *
-     * @return {boolean} `true` if the forward button was just released.
+     * @return {boolean} `true` if the release of the forward button was the most recent activity on this Pointer.
      */
     forwardButtonReleased: function ()
     {
-        return (this.button === 4 && !this.isDown);
+        return this.buttons === 0 ? (this.button === 4 && !this.isDown) : this.button === 4;
     },
 
     /**
@@ -108022,7 +108977,7 @@ module.exports = Pointer;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -108121,7 +109076,7 @@ module.exports = INPUT_CONST;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -108144,7 +109099,7 @@ module.exports = 'boot';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -108167,7 +109122,7 @@ module.exports = 'destroy';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -108198,7 +109153,7 @@ module.exports = 'dragend';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -108231,7 +109186,7 @@ module.exports = 'dragenter';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -108265,7 +109220,7 @@ module.exports = 'drag';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -108298,7 +109253,7 @@ module.exports = 'dragleave';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -108334,7 +109289,7 @@ module.exports = 'dragover';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -108366,7 +109321,7 @@ module.exports = 'dragstart';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -108397,7 +109352,7 @@ module.exports = 'drop';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -108440,7 +109395,7 @@ module.exports = 'gameobjectdown';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -108474,7 +109429,7 @@ module.exports = 'dragend';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -108506,7 +109461,7 @@ module.exports = 'dragenter';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -108539,7 +109494,7 @@ module.exports = 'drag';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -108571,7 +109526,7 @@ module.exports = 'dragleave';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -108606,7 +109561,7 @@ module.exports = 'dragover';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -108642,7 +109597,7 @@ module.exports = 'dragstart';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -108674,7 +109629,7 @@ module.exports = 'drop';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -108717,7 +109672,7 @@ module.exports = 'gameobjectmove';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -108763,7 +109718,7 @@ module.exports = 'gameobjectout';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -108806,7 +109761,7 @@ module.exports = 'gameobjectover';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -108849,7 +109804,7 @@ module.exports = 'pointerdown';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -108892,7 +109847,7 @@ module.exports = 'pointermove';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -108936,7 +109891,7 @@ module.exports = 'pointerout';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -108979,7 +109934,7 @@ module.exports = 'pointerover';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -109022,7 +109977,7 @@ module.exports = 'pointerup';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -109066,7 +110021,7 @@ module.exports = 'wheel';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -109109,7 +110064,7 @@ module.exports = 'gameobjectup';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -109155,7 +110110,7 @@ module.exports = 'gameobjectwheel';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -109184,7 +110139,7 @@ module.exports = 'gameout';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -109213,7 +110168,7 @@ module.exports = 'gameover';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -109236,7 +110191,7 @@ module.exports = 'boot';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -109263,7 +110218,7 @@ module.exports = 'process';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -109286,7 +110241,7 @@ module.exports = 'update';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -109312,7 +110267,7 @@ module.exports = 'pointerlockchange';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -109349,7 +110304,7 @@ module.exports = 'pointerdown';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -109385,7 +110340,7 @@ module.exports = 'pointerdownoutside';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -109422,7 +110377,7 @@ module.exports = 'pointermove';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -109462,7 +110417,7 @@ module.exports = 'pointerout';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -109499,7 +110454,7 @@ module.exports = 'pointerover';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -109536,7 +110491,7 @@ module.exports = 'pointerup';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -109572,7 +110527,7 @@ module.exports = 'pointerupoutside';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -109612,7 +110567,7 @@ module.exports = 'wheel';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -109636,7 +110591,7 @@ module.exports = 'preupdate';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -109659,7 +110614,7 @@ module.exports = 'shutdown';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -109683,7 +110638,7 @@ module.exports = 'start';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -109710,7 +110665,7 @@ module.exports = 'update';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -109777,7 +110732,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -109903,7 +110858,7 @@ module.exports = Axis;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -110050,7 +111005,7 @@ module.exports = Button;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -110824,7 +111779,7 @@ module.exports = Gamepad;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -111471,7 +112426,7 @@ module.exports = GamepadPlugin;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -111615,7 +112570,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -111859,7 +112814,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -112092,7 +113047,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -112116,7 +113071,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -112147,7 +113102,7 @@ module.exports = 'down';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -112178,7 +113133,7 @@ module.exports = 'up';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -112211,7 +113166,7 @@ module.exports = 'connected';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -112239,7 +113194,7 @@ module.exports = 'disconnected';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -112273,7 +113228,7 @@ module.exports = 'down';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -112307,7 +113262,7 @@ module.exports = 'up';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -112334,7 +113289,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -112361,7 +113316,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -112401,7 +113356,7 @@ module.exports = Input;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -112846,7 +113801,7 @@ module.exports = KeyboardManager;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -113809,7 +114764,7 @@ module.exports = KeyboardPlugin;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -113852,7 +114807,7 @@ module.exports = AdvanceKeyCombo;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -114146,7 +115101,7 @@ module.exports = KeyCombo;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -114228,7 +115183,7 @@ module.exports = ProcessKeyCombo;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -114264,7 +115219,7 @@ module.exports = ResetKeyCombo;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -114302,7 +115257,7 @@ module.exports = 'keydown';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -114333,7 +115288,7 @@ module.exports = 'keyup';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -114369,7 +115324,7 @@ module.exports = 'keycombomatch';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -114405,7 +115360,7 @@ module.exports = 'down';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -114446,7 +115401,7 @@ module.exports = 'keydown-';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -114480,7 +115435,7 @@ module.exports = 'keyup-';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -114516,7 +115471,7 @@ module.exports = 'up';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -114544,7 +115499,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -114583,7 +115538,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -114618,7 +115573,7 @@ module.exports = DownDuration;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -114661,7 +115616,7 @@ module.exports = JustDown;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -114704,7 +115659,7 @@ module.exports = JustUp;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -115107,7 +116062,7 @@ module.exports = Key;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -116014,7 +116969,7 @@ module.exports = KeyCodes;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -116037,7 +116992,7 @@ module.exports = KeyMap;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -116072,7 +117027,7 @@ module.exports = UpDuration;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -116649,7 +117604,7 @@ module.exports = MouseManager;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -116673,7 +117628,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -117081,7 +118036,7 @@ module.exports = TouchManager;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -117105,7 +118060,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -117346,6 +118301,25 @@ var File = new Class({
          * @since 3.80.0
          */
         this.base64 = (typeof url === 'string') && (url.indexOf('data:') === 0);
+
+        /**
+         * The counter for the number of times to retry loading this file before it fails.
+         * 
+         * You can set this property value in the FileConfig object. If not present,
+         * this property is read from the `LoaderPlugin.maxRetries` property when
+         * this File instance is created.
+         * 
+         * You can set this value via the Game Config, or you can adjust the `LoaderPlugin` property
+         * at any point after the Loader has started. However, it will not apply to files
+         * that have already been added to the Loader, only those added after this value
+         * is changed.
+         *
+         * @name Phaser.Loader.File#retryAttempts
+         * @type {number}
+         * @default 2
+         * @since 3.85.0
+         */
+        this.retryAttempts = GetFastValue(fileConfig, 'maxRetries', loader.maxRetries);
     },
 
     /**
@@ -117399,6 +118373,11 @@ var File = new Class({
             this.state = CONST.FILE_LOADING;
 
             this.src = GetURL(this, this.loader.baseURL);
+
+            if (!this.src)
+            {
+                throw new Error('URL Error in File: ' + this.key + ' from: ' + this.url);
+            }
 
             if (this.src.indexOf('data:') === 0)
             {
@@ -117476,7 +118455,16 @@ var File = new Class({
     {
         this.resetXHR();
 
-        this.loader.nextFile(this, false);
+        if (this.retryAttempts > 0)
+        {
+            this.retryAttempts--;
+
+            this.load();
+        }
+        else
+        {
+            this.loader.nextFile(this, false);
+        }
     },
 
     /**
@@ -117669,7 +118657,7 @@ File.createObjectURL = function (image, blob, defaultType)
 
 /**
  * Static method for releasing an existing object URL which was previously created
- * by calling {@link File#createObjectURL} method.
+ * by calling {@link Phaser.Loader.File.createObjectURL} method.
  *
  * @method Phaser.Loader.File.revokeObjectURL
  * @static
@@ -117695,7 +118683,7 @@ module.exports = File;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -117765,7 +118753,7 @@ module.exports = FileTypesManager;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -117807,7 +118795,7 @@ module.exports = GetURL;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -117819,6 +118807,7 @@ var Events = __webpack_require__(54899);
 var FileTypesManager = __webpack_require__(74099);
 var GetFastValue = __webpack_require__(95540);
 var GetValue = __webpack_require__(35154);
+var IsPlainObject = __webpack_require__(41212);
 var PluginCache = __webpack_require__(37277);
 var SceneEvents = __webpack_require__(44594);
 var XHRSettings = __webpack_require__(92638);
@@ -118153,6 +119142,24 @@ var LoaderPlugin = new Class({
          */
         this.multiKeyIndex = 0;
 
+        /**
+         * The number of times to retry loading a single file before it fails.
+         * 
+         * This property is read by the `File` object when it is created and set to
+         * the internal property of the same name. It's not used by the Loader itself.
+         * 
+         * You can set this value via the Game Config, or you can adjust this property
+         * at any point after the Loader has started. However, it will not apply to files
+         * that have already been added to the Loader, only those added after this value
+         * is changed.
+         *
+         * @name Phaser.Loader.LoaderPlugin#maxRetries
+         * @type {number}
+         * @default 2
+         * @since 3.85.0
+         */
+        this.maxRetries = GetFastValue(sceneConfig, 'maxRetries', gameConfig.loaderMaxRetries);
+
         scene.sys.events.once(SceneEvents.BOOT, this.boot, this);
         scene.sys.events.on(SceneEvents.START, this.pluginStart, this);
     },
@@ -118306,11 +119313,11 @@ var LoaderPlugin = new Class({
      *
      * The file must be an instance of `Phaser.Loader.File`, or a class that extends it. The Loader will check that the key
      * used by the file won't conflict with any other key either in the loader, the inflight queue or the target cache.
-     * If allowed it will then add the file into the pending list, read for the load to start. Or, if the load has already
+     * If allowed it will then add the file into the pending list, ready for the load to start. Or, if the load has already
      * started, ready for the next batch of files to be pulled from the list to the inflight queue.
      *
-     * You should not normally call this method directly, but rather use one of the Loader methods like `image` or `atlas`,
-     * however you can call this as long as the file given to it is well formed.
+     * You should not normally call this method directly, but rather use one of the Loader methods like `image` or `atlas`.
+     * However you can call this as long as the file given to it is well formed.
      *
      * @method Phaser.Loader.LoaderPlugin#addFile
      * @fires Phaser.Loader.Events#ADD
@@ -118415,7 +119422,7 @@ var LoaderPlugin = new Class({
      * @method Phaser.Loader.LoaderPlugin#addPack
      * @since 3.7.0
      *
-     * @param {any} pack - The Pack File data to be parsed and each entry of it to added to the load queue.
+     * @param {any} pack - The Pack File data to be parsed and have each entry in it added to the load queue.
      * @param {string} [packKey] - An optional key to use from the pack file data.
      *
      * @return {boolean} `true` if any files were added to the queue, otherwise `false`.
@@ -118483,6 +119490,180 @@ var LoaderPlugin = new Class({
         this.setPrefix(currentPrefix);
 
         return (total > 0);
+    },
+
+    /**
+     * Remove the resources listed in an Asset Pack.
+     *
+     * This removes Animations from the Animation Manager, Textures from the Texture Manager, and all other assets from their respective caches.
+     * It doesn't remove the Pack itself from the JSON cache, if it exists there.
+     * If the Pack includes another Pack, its resources will be removed too.
+     *
+     * @method Phaser.Loader.LoaderPlugin#removePack
+     * @since 3.85.0
+     *
+     * @param {(string|object)} packKey - The key of an Asset Pack in the JSON cache, or a Pack File data.
+     * @param {string} [dataKey] - A key in the Pack data, if you want to process only a section of it.
+     */
+    removePack: function (packKey, dataKey)
+    {
+        var animationManager = this.systems.anims;
+        var cacheManager = this.cacheManager;
+        var textureManager = this.textureManager;
+
+        var cacheMap = {
+            animation: 'json',
+            aseprite: 'json',
+            audio: 'audio',
+            audioSprite: 'audio',
+            binary: 'binary',
+            bitmapFont: 'bitmapFont',
+            css: null,
+            glsl: 'shader',
+            html: 'html',
+            json: 'json',
+            obj: 'obj',
+            plugin: null,
+            scenePlugin: null,
+            script: null,
+            spine: 'json',
+            text: 'text',
+            tilemapCSV: 'tilemap',
+            tilemapImpact: 'tilemap',
+            tilemapTiledJSON: 'tilemap',
+            video: 'video',
+            xml: 'xml'
+        };
+
+        var pack;
+
+        if (IsPlainObject(packKey))
+        {
+            pack = packKey;
+        }
+        else
+        {
+            pack = cacheManager.json.get(packKey);
+
+            if (!pack)
+            {
+                console.warn('Asset Pack not found in JSON cache:', packKey);
+
+                return;
+            }
+        }
+
+        if (dataKey)
+        {
+            pack = { _: pack[dataKey] };
+        }
+
+        for (var configKey in pack)
+        {
+            var config = pack[configKey];
+            var prefix = GetFastValue(config, 'prefix', '');
+            var files = GetFastValue(config, 'files');
+            var defaultType = GetFastValue(config, 'defaultType');
+
+            if (Array.isArray(files))
+            {
+                for (var i = 0; i < files.length; i++)
+                {
+                    var file = files[i];
+                    var type = (file.hasOwnProperty('type')) ? file.type : defaultType;
+
+                    if (!type)
+                    {
+                        console.warn('No type:', file);
+
+                        continue;
+                    }
+
+                    var fileKey = prefix + file.key;
+
+                    if (type === 'animation')
+                    {
+                        animationManager.remove(fileKey);
+                    }
+
+                    if (type === 'aseprite' || type === 'atlas' || type === 'atlasXML' || type === 'htmlTexture' || type === 'image' || type === 'multiatlas' || type === 'spritesheet' || type === 'svg' || type === 'texture' || type === 'unityAtlas')
+                    {
+                        textureManager.remove(fileKey);
+
+                        if (!cacheMap[type])
+                        {
+                            continue;
+                        }
+                    }
+
+                    if (type === 'pack')
+                    {
+                        this.removePack(fileKey, file.dataKey);
+
+                        continue;
+                    }
+
+                    if (type === 'spine')
+                    {
+                        var spineAtlas = cacheManager.custom.spine.get(fileKey);
+
+                        if (!spineAtlas)
+                        {
+                            continue;
+                        }
+
+                        var spinePrefix = (spineAtlas.prefix === undefined) ? '' : spineAtlas.prefix;
+
+                        cacheManager.custom.spine.remove(fileKey);
+
+                        var spineTexture = cacheManager.custom.spineTextures.get(fileKey);
+
+                        if (!spineTexture)
+                        {
+                            continue;
+                        }
+
+                        cacheManager.custom.spineTextures.remove(fileKey);
+
+                        for (var j = 0; j < spineTexture.pages.length; j++)
+                        {
+                            var page = spineTexture.pages[j];
+                            var textureKey = spinePrefix + page.name;
+                            var altTextureKey = fileKey + ':' + textureKey;
+
+                            if (textureManager.exists(altTextureKey))
+                            {
+                                textureManager.remove(altTextureKey);
+                            }
+                            else
+                            {
+                                textureManager.remove(textureKey);
+                            }
+                        }
+                    }
+
+                    var cacheName = cacheMap[type];
+
+                    if (cacheName === null)
+                    {
+                        //  Nothing to remove.
+
+                        continue;
+                    }
+
+                    if (!cacheName)
+                    {
+                        console.warn('Unknown type:', type);
+
+                        continue;
+                    }
+
+                    var cache = cacheManager[cacheName];
+
+                    cache.remove(fileKey);
+                }
+            }
+        }
     },
 
     /**
@@ -118631,7 +119812,7 @@ var LoaderPlugin = new Class({
     },
 
     /**
-     * An internal method called automatically by the XHRLoader belong to a File.
+     * An internal method called automatically by the XHRLoader belonging to a File.
      *
      * This method will remove the given file from the inflight Set and update the load progress.
      * If the file was successful its `onProcess` method is called, otherwise it is added to the delete queue.
@@ -118683,7 +119864,7 @@ var LoaderPlugin = new Class({
      *
      * If the process was successful, and the File isn't part of a MultiFile, its `addToCache` method is called.
      *
-     * It this then removed from the queue. If there are no more files to load `loadComplete` is called.
+     * It is then removed from the queue. If there are no more files to load `loadComplete` is called.
      *
      * @method Phaser.Loader.LoaderPlugin#fileProcessComplete
      * @since 3.7.0
@@ -118922,7 +120103,7 @@ module.exports = LoaderPlugin;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -118971,7 +120152,7 @@ module.exports = MergeXHRSettings;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -119285,7 +120466,7 @@ module.exports = MultiFile;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -119312,9 +120493,23 @@ var XHRLoader = function (file, globalXHRSettings)
     {
         var base64Data = file.url.split(';base64,').pop() || file.url.split(',').pop();
 
-        var fakeXHR = {
-            responseText: atob(base64Data)
-        };
+        var fakeXHR;
+
+        if (file.xhrSettings.responseType === 'arraybuffer')
+        {
+            fakeXHR = {
+                response: Uint8Array.from(atob(base64Data), function (c)
+                {
+                    return c.charCodeAt(0);
+                }).buffer
+            };
+        }
+        else
+        {
+            fakeXHR = {
+                responseText: atob(base64Data)
+            };
+        }
 
         file.onBase64Load(fakeXHR);
 
@@ -119381,7 +120576,7 @@ module.exports = XHRLoader;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -119452,7 +120647,7 @@ module.exports = XHRSettings;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -119614,7 +120809,7 @@ module.exports = FILE_CONST;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -119646,7 +120841,7 @@ module.exports = 'addfile';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -119676,7 +120871,7 @@ module.exports = 'complete';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -119709,7 +120904,7 @@ module.exports = 'filecomplete';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -119767,7 +120962,7 @@ module.exports = 'filecomplete-';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -119794,7 +120989,7 @@ module.exports = 'loaderror';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -119822,7 +121017,7 @@ module.exports = 'load';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -119851,7 +121046,7 @@ module.exports = 'fileprogress';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -119882,7 +121077,7 @@ module.exports = 'postprocess';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -119909,7 +121104,7 @@ module.exports = 'progress';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -119938,7 +121133,7 @@ module.exports = 'start';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -119969,7 +121164,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -120171,7 +121366,7 @@ module.exports = AnimationJSONFile;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -120442,7 +121637,7 @@ module.exports = AsepriteFile;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -120699,7 +121894,7 @@ module.exports = AtlasJSONFile;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -120941,7 +122136,7 @@ module.exports = AtlasXMLFile;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -121057,7 +122252,7 @@ AudioFile.create = function (loader, key, urls, config, xhrSettings)
 
     if (!urlConfig)
     {
-        console.warn('No audio URLs for "%s" matched this device', key);
+        console.warn('No audio URLs for "%s" can play on this device', key);
 
         return null;
     }
@@ -121218,7 +122413,7 @@ module.exports = AudioFile;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -121509,7 +122704,7 @@ FileTypesManager.register('audioSprite', function (key, jsonURL, audioURL, audio
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -121692,7 +122887,7 @@ module.exports = BinaryFile;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -121939,7 +123134,7 @@ module.exports = BitmapFontFile;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -122687,12 +123882,241 @@ module.exports = CompressedTextureFile;
 
 /***/ }),
 
+/***/ 87674:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+/**
+ * @author       Richard Davey <rich@phaser.io>
+ * @copyright    2013-2025 Phaser Studio Inc.
+ * @license      {@link https://opensource.org/licenses/MIT|MIT License}
+ */
+
+var Class = __webpack_require__(83419);
+var CONST = __webpack_require__(23906);
+var File = __webpack_require__(41299);
+var FileTypesManager = __webpack_require__(74099);
+var GetFastValue = __webpack_require__(95540);
+var GetURL = __webpack_require__(98356);
+var IsPlainObject = __webpack_require__(41212);
+
+/**
+ * @classdesc
+ * A single Font File suitable for loading by the Loader.
+ *
+ * These are created when you use the Phaser.Loader.LoaderPlugin#font method and are not typically created directly.
+ *
+ * For documentation about what all the arguments and configuration options mean please see Phaser.Loader.LoaderPlugin#font.
+ *
+ * @class FontFile
+ * @extends Phaser.Loader.File
+ * @memberof Phaser.Loader.FileTypes
+ * @constructor
+ * @since 3.87.0
+ *
+ * @param {Phaser.Loader.LoaderPlugin} loader - A reference to the Loader that is responsible for this file.
+ * @param {(string|Phaser.Types.Loader.FileTypes.FontFileConfig)} key - The key to use for this file, or a file configuration object.
+ * @param {string} [url] - The absolute or relative URL to load this file from. If undefined or `null` it will be set to `<key>.ttf`, i.e. if `key` was "alien" then the URL will be "alien.ttf".
+ * @param {string} [format='truetype'] - The font type. Should be a string, like 'truetype' or 'opentype'.
+ * @param {object} [descriptors] - An optional object containing font descriptors for the Font Face. See https://developer.mozilla.org/en-US/docs/Web/API/FontFace/FontFace#descriptors for more details.
+ * @param {Phaser.Types.Loader.XHRSettingsObject} [xhrSettings] - Extra XHR Settings specifically for this file.
+ */
+var FontFile = new Class({
+
+    Extends: File,
+
+    initialize:
+
+    function FontFile (loader, key, url, format, descriptors, xhrSettings)
+    {
+        var extension = 'ttf';
+
+        if (IsPlainObject(key))
+        {
+            var config = key;
+
+            key = GetFastValue(config, 'key');
+            url = GetFastValue(config, 'url');
+            format = GetFastValue(config, 'format', 'truetype');
+            descriptors = GetFastValue(config, 'descriptors', null);
+            xhrSettings = GetFastValue(config, 'xhrSettings');
+            extension = GetFastValue(config, 'extension', extension);
+        }
+        else if (format === undefined)
+        {
+            format = 'truetype';
+        }
+
+        var fileConfig = {
+            type: 'font',
+            cache: false,
+            extension: extension,
+            responseType: 'text',
+            key: key,
+            url: url,
+            xhrSettings: xhrSettings
+        };
+
+        File.call(this, loader, fileConfig);
+
+        this.data = {
+            format: format,
+            descriptors: descriptors
+        };
+
+        this.state = CONST.FILE_POPULATED;
+    },
+
+    /**
+     * Called automatically by Loader.nextFile.
+     * This method controls what extra work this File does with its loaded data.
+     *
+     * @method Phaser.Loader.FileTypes.FontFile#onProcess
+     * @since 3.87.0
+     */
+    onProcess: function ()
+    {
+        this.state = CONST.FILE_PROCESSING;
+
+        this.src = GetURL(this, this.loader.baseURL);
+
+        var font;
+        var key = this.key;
+        var source = 'url(' + this.src + ') format("' + this.data.format + '")';
+
+        if (this.data.descriptors)
+        {
+            font = new FontFace(key, source, this.data.descriptors);
+        }
+        else
+        {
+            font = new FontFace(key, source);
+        }
+
+        var _this = this;
+
+        font.load().then(function ()
+        {
+            document.fonts.add(font);
+            document.body.classList.add("fonts-loaded");
+            
+            _this.onProcessComplete();
+
+        }).catch(function ()
+        {
+            console.warn('Font failed to load', source);
+
+            _this.onProcessComplete();
+        });
+    }
+
+});
+
+/**
+ * Adds a Font file, or array of Font files, to the current load queue.
+ *
+ * You can call this method from within your Scene's `preload`, along with any other files you wish to load:
+ *
+ * ```javascript
+ * function preload ()
+ * {
+ *     this.load.font('Nokia', 'assets/nokia.ttf', 'truetype');
+ * }
+ * ```
+ *
+ * If the font file is open type, you can specify the format:
+ *
+ * ```javascript
+ * function preload ()
+ * {
+ *     this.load.font('Nokia', 'assets/nokia.otf', 'opentype');
+ * }
+ * ```
+ *
+ * The file is **not** loaded right away. It is added to a queue ready to be loaded either when the loader starts,
+ * or if it's already running, when the next free load slot becomes available. This happens automatically if you
+ * are calling this from within the Scene's `preload` method, or a related callback. Because the file is queued
+ * it means you cannot use the file immediately after calling this method, but must wait for the file to complete.
+ * The typical flow for a Phaser Scene is that you load assets in the Scene's `preload` method and then when the
+ * Scene's `create` method is called you are guaranteed that all of those assets are ready for use and have been
+ * loaded.
+ *
+ * The key must be a unique String and not already in-use by another file in the Loader.
+ *
+ * Instead of passing arguments you can pass a configuration object, such as:
+ *
+ * ```javascript
+ * this.load.font({
+ *     key: 'Nokia',
+ *     url: 'assets/nokia.ttf',
+ *     format: 'truetype',
+ *     descriptors: { style: 'normal', weight: '400' }
+ * });
+ * ```
+ *
+ * See the documentation for `Phaser.Types.Loader.FileTypes.FontFileConfig` for more details.
+ * 
+ * See the MDN documentation at https://developer.mozilla.org/en-US/docs/Web/API/FontFace/FontFace#descriptors for details about the descriptors.
+ * 
+ * When this file is handled by the Loader, it will create a new Font Face DOM element for it and add it to the document.
+ * 
+ * You should use the same key given for the font in your Text objects, such as:
+ * 
+ * ```javascript
+ * this.add.text(x, y, 'Hello World', { fontFamily: 'Nokia', fontSize: 48 });
+ * ```
+ * 
+ * See https://developer.mozilla.org/en-US/docs/Web/API/FontFace for more details.
+ *
+ * The URL can be relative or absolute. If the URL is relative the `Loader.baseURL` and `Loader.path` values will be prepended to it.
+ *
+ * If the URL isn't specified the Loader will take the key and create a filename from that. For example if the key is "alien"
+ * and no URL is given then the Loader will set the URL to be "alien.ttf". It will always add `.ttf` as the extension, although
+ * this can be overridden if using an object instead of method arguments. If you do not desire this action then provide a URL.
+ *
+ * Note: The ability to load this type of file will only be available if the Font File type has been built into Phaser.
+ * It is available in the default build but can be excluded from custom builds.
+ *
+ * @method Phaser.Loader.LoaderPlugin#font
+ * @fires Phaser.Loader.Events#ADD
+ * @since 3.87.0
+ *
+ * @param {(string|Phaser.Types.Loader.FileTypes.FontFileConfig|Phaser.Types.Loader.FileTypes.FontFileConfig[])} key - The key to use for this file, or a file configuration object, or array of them.
+ * @param {string} [url] - The absolute or relative URL to load this file from. If undefined or `null` it will be set to `<key>.ttf`, i.e. if `key` was "alien" then the URL will be "alien.ttf".
+ * @param {string} [format='truetype'] - The font type. Should be a string, like 'truetype' or 'opentype'.
+ * @param {object} [descriptors] - An optional object containing font descriptors for the Font Face. See https://developer.mozilla.org/en-US/docs/Web/API/FontFace/FontFace#descriptors for more details.
+ * @param {Phaser.Types.Loader.XHRSettingsObject} [xhrSettings] - An XHR Settings configuration object. Used in replacement of the Loaders default XHR Settings.
+ *
+ * @return {this} The Loader instance.
+ */
+FileTypesManager.register('font', function (key, url, format, descriptors, xhrSettings)
+{
+    if (Array.isArray(key))
+    {
+        for (var i = 0; i < key.length; i++)
+        {
+            //  If it's an array it has to be an array of Objects, so we get everything out of the 'key' object
+            this.addFile(new FontFile(this, key[i]));
+        }
+    }
+    else
+    {
+        this.addFile(new FontFile(this, key, url, format, descriptors, xhrSettings));
+    }
+
+    return this;
+});
+
+module.exports = FontFile;
+
+
+/***/ }),
+
 /***/ 47931:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -123102,7 +124526,7 @@ module.exports = GLSLFile;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -123306,7 +124730,7 @@ module.exports = HTML5AudioFile;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -123482,7 +124906,7 @@ module.exports = HTMLFile;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -123739,7 +125163,7 @@ module.exports = HTMLTextureFile;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -124093,7 +125517,7 @@ module.exports = ImageFile;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -124333,7 +125757,7 @@ module.exports = JSONFile;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -124662,7 +126086,7 @@ module.exports = MultiAtlasFile;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -124880,7 +126304,7 @@ module.exports = MultiScriptFile;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -125135,7 +126559,7 @@ module.exports = OBJFile;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -125363,7 +126787,7 @@ module.exports = PackFile;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -125576,7 +127000,7 @@ module.exports = PluginFile;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -125914,7 +127338,7 @@ module.exports = SVGFile;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -126135,7 +127559,7 @@ module.exports = SceneFile;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -126342,7 +127766,7 @@ module.exports = ScenePluginFile;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -126531,7 +127955,7 @@ module.exports = ScriptFile;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -126751,7 +128175,7 @@ module.exports = SpriteSheetFile;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -126931,7 +128355,7 @@ module.exports = TextFile;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -127125,7 +128549,7 @@ module.exports = TilemapCSVFile;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -127280,7 +128704,7 @@ module.exports = TilemapImpactFile;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -127298,7 +128722,7 @@ var TILEMAP_FORMATS = __webpack_require__(80341);
  * For documentation about what all the arguments and configuration options mean please see Phaser.Loader.LoaderPlugin#tilemapTiledJSON.
  *
  * @class TilemapJSONFile
- * @extends Phaser.Loader.File
+ * @extends Phaser.Loader.FileTypes.JSONFile
  * @memberof Phaser.Loader.FileTypes
  * @constructor
  * @since 3.0.0
@@ -127435,7 +128859,7 @@ module.exports = TilemapJSONFile;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -127676,7 +129100,7 @@ module.exports = UnityAtlasFile;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -127872,7 +129296,7 @@ module.exports = VideoFile;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -128056,7 +129480,7 @@ module.exports = XMLFile;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -128076,6 +129500,7 @@ module.exports = {
     BitmapFontFile: __webpack_require__(97025),
     CompressedTextureFile: __webpack_require__(69559),
     CSSFile: __webpack_require__(16024),
+    FontFile: __webpack_require__(87674),
     GLSLFile: __webpack_require__(47931),
     HTML5AudioFile: __webpack_require__(89749),
     HTMLFile: __webpack_require__(88470),
@@ -128110,7 +129535,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -128151,7 +129576,7 @@ module.exports = Loader;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -128187,7 +129612,7 @@ module.exports = Average;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -128219,7 +129644,7 @@ module.exports = Bernstein;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -128249,7 +129674,7 @@ module.exports = Between;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -128287,7 +129712,7 @@ module.exports = CatmullRom;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -128325,7 +129750,7 @@ module.exports = CeilTo;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -128356,7 +129781,7 @@ module.exports = Clamp;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -128387,7 +129812,7 @@ module.exports = DegToRad;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -128417,7 +129842,7 @@ module.exports = Difference;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -128701,7 +130126,7 @@ module.exports = Euler;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -128742,7 +130167,7 @@ module.exports = Factorial;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -128772,7 +130197,7 @@ module.exports = FloatBetween;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -128810,7 +130235,7 @@ module.exports = FloorTo;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -128845,7 +130270,7 @@ module.exports = FromPercent;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -128879,7 +130304,7 @@ module.exports = GetSpeed;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -128911,7 +130336,7 @@ module.exports = IsEven;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -128941,7 +130366,7 @@ module.exports = IsEvenStrict;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -129007,7 +130432,7 @@ module.exports = LinearXY;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -129601,7 +131026,7 @@ module.exports = Matrix3;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -130949,7 +132374,7 @@ var Matrix4 = new Class({
 
         _z.subVectors(eye, target);
 
-        if (_z.getLengthSquared() === 0)
+        if (_z.lengthSq() === 0)
         {
             // eye and target are in the same position
             _z.z = 1;
@@ -130958,7 +132383,7 @@ var Matrix4 = new Class({
         _z.normalize();
         _x.crossVectors(up, _z);
 
-        if (_x.getLengthSquared() === 0)
+        if (_x.lengthSq() === 0)
         {
             // up and z are parallel
 
@@ -131395,7 +132820,7 @@ module.exports = Matrix4;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -131468,7 +132893,7 @@ module.exports = Median;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -131499,7 +132924,7 @@ module.exports = MinSub;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -131559,7 +132984,7 @@ module.exports = Percent;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -132609,7 +134034,7 @@ module.exports = Quaternion;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -132640,7 +134065,7 @@ module.exports = RadToDeg;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -132681,7 +134106,7 @@ module.exports = RandomXY;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -132721,7 +134146,7 @@ module.exports = RandomXYZ;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -132758,7 +134183,7 @@ module.exports = RandomXYZW;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -132794,7 +134219,7 @@ module.exports = Rotate;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -132839,7 +134264,7 @@ module.exports = RotateAround;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -132881,7 +134306,7 @@ module.exports = RotateAroundDistance;
 
 /**
  * @author       samme
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -132919,7 +134344,7 @@ module.exports = RotateTo;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -132968,7 +134393,7 @@ module.exports = RotateVec3;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -132998,7 +134423,7 @@ module.exports = RoundAwayFromZero;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -133051,7 +134476,7 @@ module.exports = RoundTo;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -133105,7 +134530,7 @@ module.exports = SinCosTableGenerator;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -133153,7 +134578,7 @@ module.exports = SmoothStep;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -133193,7 +134618,7 @@ module.exports = SmootherStep;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -133250,7 +134675,7 @@ module.exports = ToXY;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -133306,7 +134731,7 @@ module.exports = TransformXY;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -134100,7 +135525,7 @@ module.exports = Vector2;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -134260,6 +135685,26 @@ var Vector3 = new Class({
         this.x = a.x + b.x;
         this.y = a.y + b.y;
         this.z = a.z + b.z;
+
+        return this;
+    },
+
+    /**
+     * Subtracts the two given Vector3s and sets the results into this Vector3.
+     *
+     * @method Phaser.Math.Vector3#subVectors
+     * @since 3.85.0
+     *
+     * @param {Phaser.Math.Vector3} a - The first Vector to sub.
+     * @param {Phaser.Math.Vector3} b - The second Vector to sub.
+     *
+     * @return {Phaser.Math.Vector3} This Vector3.
+     */
+    subVectors: function (a, b)
+    {
+        this.x = a.x - b.x;
+        this.y = a.y - b.y;
+        this.z = a.z - b.z;
 
         return this;
     },
@@ -135147,7 +136592,7 @@ module.exports = Vector3;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -135689,7 +137134,7 @@ module.exports = Vector4;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -135720,7 +137165,7 @@ module.exports = Within;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -135753,7 +137198,7 @@ module.exports = Wrap;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -135785,7 +137230,7 @@ module.exports = Between;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -135817,7 +137262,7 @@ module.exports = BetweenPoints;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -135850,7 +137295,7 @@ module.exports = BetweenPointsY;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -135885,7 +137330,7 @@ module.exports = BetweenY;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -135926,12 +137371,121 @@ module.exports = CounterClockwise;
 
 /***/ }),
 
+/***/ 49127:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+/**
+ * @author       samme
+ * @copyright    2025 Phaser Studio Inc.
+ * @license      {@link https://opensource.org/licenses/MIT|MIT License}
+ */
+
+var NormalizeAngle = __webpack_require__(12407);
+
+/**
+ * Gets the shortest nonnegative angular distance from angle1 to angle2.
+ *
+ * @function Phaser.Math.Angle.GetClockwiseDistance
+ * @since 4.0.0
+ *
+ * @param {number} angle1 - The starting angle in radians.
+ * @param {number} angle2 - The target angle in radians.
+ *
+ * @return {number} The distance in radians, in the range [0, 2pi).
+ */
+var GetClockwiseDistance = function (angle1, angle2)
+{
+    return NormalizeAngle(angle2 - angle1);
+};
+
+module.exports = GetClockwiseDistance;
+
+
+/***/ }),
+
+/***/ 52285:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+/**
+ * @author       samme
+ * @copyright    2025 Phaser Studio Inc.
+ * @license      {@link https://opensource.org/licenses/MIT|MIT License}
+ */
+
+var NormalizeAngle = __webpack_require__(12407);
+
+var TAU = 2 * Math.PI;
+
+/**
+ * Gets the shortest nonpositive angular distance from angle1 to angle2.
+ *
+ * @function Phaser.Math.Angle.GetCounterClockwiseDistance
+ * @since 4.0.0
+ *
+ * @param {number} angle1 - The starting angle in radians.
+ * @param {number} angle2 - The target angle in radians.
+ *
+ * @return {number} The distance in radians, in the range (-2pi, 0].
+ */
+var GetCounterClockwiseDistance = function (angle1, angle2)
+{
+    var distance = NormalizeAngle(angle2 - angle1);
+
+    if (distance > 0)
+    {
+        distance -= TAU;
+    }
+
+    return distance;
+};
+
+module.exports = GetCounterClockwiseDistance;
+
+
+/***/ }),
+
+/***/ 67317:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+/**
+ * @author       samme
+ * @copyright    2025 Phaser Studio Inc.
+ * @license      {@link https://opensource.org/licenses/MIT|MIT License}
+ */
+
+var WrapAngle = __webpack_require__(86554);
+
+/**
+ * Gets the shortest signed angular distance from angle1 to angle2.
+ * A positive distance is a clockwise rotation.
+ * A negative distance is a counter-clockwise rotation.
+ *
+ * For calculation in degrees use {@link Phaser.Math.Angle.ShortestBetween} instead.
+ *
+ * @function Phaser.Math.Angle.GetShortestDistance
+ * @since 4.0.0
+ *
+ * @param {number} angle1 - The first angle in radians.
+ * @param {number} angle2 - The second angle in radians.
+ *
+ * @return {number} The distance in radians, in the range [-pi, pi).
+ */
+var GetShortestDistance = function (angle1, angle2)
+{
+    return WrapAngle(angle2 - angle1);
+};
+
+module.exports = GetShortestDistance;
+
+
+/***/ }),
+
 /***/ 12407:
 /***/ ((module) => {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -135970,7 +137524,7 @@ module.exports = Normalize;
 /**
  * @author       Richard Davey <rich@phaser.io>
  * @author       @samme
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -136000,7 +137554,7 @@ module.exports = Random;
 /**
  * @author       Richard Davey <rich@phaser.io>
  * @author       @samme
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -136029,7 +137583,7 @@ module.exports = RandomDegrees;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -136060,7 +137614,7 @@ module.exports = Reverse;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -136128,7 +137682,7 @@ module.exports = RotateTo;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -136142,6 +137696,8 @@ module.exports = RotateTo;
  * The angle returned will be in the same range. If the returned angle is
  * greater than 0 then it's a counter-clockwise rotation, if < 0 then it's
  * a clockwise rotation.
+ *
+ * For calculation in radians use {@link Phaser.Math.Angle.GetShortestDistance} instead.
  *
  * @function Phaser.Math.Angle.ShortestBetween
  * @since 3.0.0
@@ -136176,7 +137732,7 @@ module.exports = ShortestBetween;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -136209,7 +137765,7 @@ module.exports = Wrap;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -136242,7 +137798,7 @@ module.exports = WrapDegrees;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -136257,6 +137813,9 @@ module.exports = {
     BetweenPointsY: __webpack_require__(128),
     BetweenY: __webpack_require__(41273),
     CounterClockwise: __webpack_require__(1432),
+    GetClockwiseDistance: __webpack_require__(49127),
+    GetCounterClockwiseDistance: __webpack_require__(52285),
+    GetShortestDistance: __webpack_require__(67317),
     Normalize: __webpack_require__(12407),
     Random: __webpack_require__(53993),
     RandomDegrees: __webpack_require__(86564),
@@ -136276,7 +137835,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -136373,7 +137932,7 @@ module.exports = MATH_CONST;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -136408,7 +137967,7 @@ module.exports = DistanceBetween;
 
 /**
  * @author       samme
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -136441,7 +138000,7 @@ module.exports = DistanceBetweenPoints;
 
 /**
  * @author       samme
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -136474,7 +138033,7 @@ module.exports = DistanceBetweenPointsSquared;
 
 /**
  * @author       samme
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -136509,7 +138068,7 @@ module.exports = ChebyshevDistance;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -136544,7 +138103,7 @@ module.exports = DistancePower;
 
 /**
  * @author       samme
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -136579,7 +138138,7 @@ module.exports = SnakeDistance;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -136614,7 +138173,7 @@ module.exports = DistanceSquared;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -136642,7 +138201,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -136724,7 +138283,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -136756,7 +138315,7 @@ module.exports = In;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -136797,7 +138356,7 @@ module.exports = InOut;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -136829,7 +138388,7 @@ module.exports = Out;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -136853,7 +138412,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -136899,7 +138458,7 @@ module.exports = In;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -136964,7 +138523,7 @@ module.exports = InOut;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -137008,7 +138567,7 @@ module.exports = Out;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -137032,7 +138591,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -137061,7 +138620,7 @@ module.exports = In;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -137097,7 +138656,7 @@ module.exports = InOut;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -137126,7 +138685,7 @@ module.exports = Out;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -137150,7 +138709,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -137179,7 +138738,7 @@ module.exports = In;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -137215,7 +138774,7 @@ module.exports = InOut;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -137244,7 +138803,7 @@ module.exports = Out;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -137268,7 +138827,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -137324,7 +138883,7 @@ module.exports = In;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -137387,7 +138946,7 @@ module.exports = InOut;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -137443,7 +139002,7 @@ module.exports = Out;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -137467,7 +139026,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -137496,7 +139055,7 @@ module.exports = In;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -137532,7 +139091,7 @@ module.exports = InOut;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -137561,7 +139120,7 @@ module.exports = Out;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -137585,7 +139144,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -137618,7 +139177,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -137647,7 +139206,7 @@ module.exports = Linear;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -137661,7 +139220,7 @@ module.exports = __webpack_require__(7147);
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -137690,7 +139249,7 @@ module.exports = In;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -137726,7 +139285,7 @@ module.exports = InOut;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -137755,7 +139314,7 @@ module.exports = Out;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -137779,7 +139338,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -137808,7 +139367,7 @@ module.exports = In;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -137844,7 +139403,7 @@ module.exports = InOut;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -137873,7 +139432,7 @@ module.exports = Out;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -137897,7 +139456,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -137926,7 +139485,7 @@ module.exports = In;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -137962,7 +139521,7 @@ module.exports = InOut;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -137991,7 +139550,7 @@ module.exports = Out;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -138015,7 +139574,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -138055,7 +139614,7 @@ module.exports = In;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -138095,7 +139654,7 @@ module.exports = InOut;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -138135,7 +139694,7 @@ module.exports = Out;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -138159,7 +139718,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -138202,7 +139761,7 @@ module.exports = Stepped;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -138220,7 +139779,7 @@ module.exports = __webpack_require__(72251);
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -138252,7 +139811,7 @@ module.exports = Ceil;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -138287,7 +139846,7 @@ module.exports = Equal;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -138319,7 +139878,7 @@ module.exports = Floor;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -138354,7 +139913,7 @@ module.exports = GreaterThan;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -138389,7 +139948,7 @@ module.exports = LessThan;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -138415,7 +139974,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -138508,7 +140067,7 @@ module.exports = PhaserMath;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -138548,7 +140107,7 @@ module.exports = BezierInterpolation;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -138606,7 +140165,7 @@ module.exports = CatmullRomInterpolation;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -138677,7 +140236,7 @@ module.exports = CubicBezierInterpolation;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -138725,7 +140284,7 @@ module.exports = LinearInterpolation;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -138785,7 +140344,7 @@ module.exports = QuadraticBezierInterpolation;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -138819,7 +140378,7 @@ module.exports = SmoothStepInterpolation;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -138853,7 +140412,7 @@ module.exports = SmootherStepInterpolation;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -138881,7 +140440,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -138912,7 +140471,7 @@ module.exports = GetPowerOfTwo;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -138943,7 +140502,7 @@ module.exports = IsSizePowerOfTwo;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -138972,7 +140531,7 @@ module.exports = IsValuePowerOfTwo;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -138996,7 +140555,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -139507,7 +141066,7 @@ module.exports = RandomDataGenerator;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -139552,7 +141111,7 @@ module.exports = SnapCeil;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -139597,7 +141156,7 @@ module.exports = SnapFloor;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -139641,7 +141200,7 @@ module.exports = SnapTo;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -139665,7 +141224,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -139760,7 +141319,7 @@ __webpack_require__.g.Phaser = Phaser;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -139867,7 +141426,7 @@ module.exports = ArcadeImage;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -140032,7 +141591,7 @@ var ArcadePhysics = new Class({
      *
      * If you wish to run the World update at your own rate, or from your own
      * component, then you should call this method to disable the built-in link,
-     * and then call `World.update(delta, time)` accordingly.
+     * and then call `World.update(time, delta)` accordingly.
      *
      * Note that `World.postUpdate` is always automatically called when the Scene
      * emits a `POST_UPDATE` event, regardless of this setting.
@@ -140097,7 +141656,7 @@ var ArcadePhysics = new Class({
      * @param {Phaser.Types.Physics.Arcade.ArcadeColliderType} object1 - The first object or array of objects to check.
      * @param {Phaser.Types.Physics.Arcade.ArcadeColliderType} [object2] - The second object or array of objects to check, or `undefined`.
      * @param {Phaser.Types.Physics.Arcade.ArcadePhysicsCallback} [overlapCallback] - An optional callback function that is called if the objects overlap.
-     * @param {Phaser.Types.Physics.Arcade.ArcadePhysicsCallback} [processCallback] - An optional callback function that lets you perform additional checks against the two objects if they overlap. If this is set then `collideCallback` will only be called if this callback returns `true`.
+     * @param {Phaser.Types.Physics.Arcade.ArcadePhysicsCallback} [processCallback] - An optional callback function that lets you perform additional checks against the two objects if they overlap. If this is set then `overlapCallback` will only be called if this callback returns `true`.
      * @param {*} [callbackContext] - The context in which to run the callbacks.
      *
      * @return {boolean} True if at least one Game Object overlaps another.
@@ -140205,15 +141764,15 @@ var ArcadePhysics = new Class({
      *
      * @param {Phaser.GameObjects.GameObject} sprite - The first object to check for collision.
      * @param {Phaser.Tilemaps.Tile[]} tiles - An array of Tiles to check for collision against.
-     * @param {Phaser.Types.Physics.Arcade.ArcadePhysicsCallback} [collideCallback] - An optional callback function that is called if the objects overlap.
-     * @param {Phaser.Types.Physics.Arcade.ArcadePhysicsCallback} [processCallback] - An optional callback function that lets you perform additional checks against the two objects if they collide. If this is set then `collideCallback` will only be called if this callback returns `true`.
+     * @param {Phaser.Types.Physics.Arcade.ArcadePhysicsCallback} [overlapCallback] - An optional callback function that is called if the objects overlap.
+     * @param {Phaser.Types.Physics.Arcade.ArcadePhysicsCallback} [processCallback] - An optional callback function that lets you perform additional checks against the two objects if they collide. If this is set then `overlapCallback` will only be called if this callback returns `true`.
      * @param {any} [callbackContext] - The context in which to run the callbacks.
      *
      * @return {boolean} True if any objects overlap (with `overlapOnly`); or true if any overlapping objects were separated.
      */
-    overlapTiles: function (sprite, tiles, collideCallback, processCallback, callbackContext)
+    overlapTiles: function (sprite, tiles, overlapCallback, processCallback, callbackContext)
     {
-        return this.world.overlapTiles(sprite, tiles, collideCallback, processCallback, callbackContext);
+        return this.world.overlapTiles(sprite, tiles, overlapCallback, processCallback, callbackContext);
     },
 
     /**
@@ -140627,7 +142186,7 @@ module.exports = ArcadePhysics;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -140735,7 +142294,7 @@ module.exports = ArcadeSprite;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -142149,12 +143708,12 @@ var Body = new Class({
      *
      * If this body already has a Game Object, then it will remove itself from that Game Object first.
      *
-     * Only if the given `gameObject` has a `body` property will this Body be assigned to it.
+     * If the given `gameObject` doesn't have a `body` property, it is created and this Body is assigned to it.
      *
      * @method Phaser.Physics.Arcade.Body#setGameObject
      * @since 3.60.0
      *
-     * @param {Phaser.GameObjects.GameObject} gameObject - The Game Object this Body belongs to.
+     * @param {Phaser.GameObjects.GameObject} gameObject - The Game Object to assign this Body to.
      * @param {boolean} [enable=true] - Automatically enable this Body for physics.
      *
      * @return {Phaser.Physics.Arcade.Body} This Body object.
@@ -142163,25 +143722,34 @@ var Body = new Class({
     {
         if (enable === undefined) { enable = true; }
 
-        //  Remove from the World
-        this.world.remove(this);
+        if (!gameObject || !gameObject.hasTransformComponent)
+        {
+            //  We need a valid Game Object to continue
+            return this;
+        }
+
+        var world = this.world;
 
         if (this.gameObject && this.gameObject.body)
         {
+            world.disable(this.gameObject);
+
             //  Disconnect the current Game Object
             this.gameObject.body = null;
         }
 
-        this.gameObject = gameObject;
-
         if (gameObject.body)
         {
-            gameObject.body = this;
+            //  Remove the body from the world, but don't disable the Game Object
+            world.disable(gameObject);
         }
 
-        this.setSize();
+        this.gameObject = gameObject;
 
-        this.world.add(this);
+        gameObject.body = this;
+
+        //  This will remove the body from the tree, if it's in there and add the new one in
+        this.setSize();
 
         this.enable = enable;
 
@@ -143531,7 +145099,7 @@ module.exports = Body;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -143718,7 +145286,7 @@ module.exports = Collider;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -144058,7 +145626,7 @@ module.exports = Factory;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -144102,7 +145670,7 @@ module.exports = GetCollidesWith;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -144211,7 +145779,7 @@ module.exports = GetOverlapX;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -144320,7 +145888,7 @@ module.exports = GetOverlapY;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -144471,7 +146039,7 @@ var PhysicsGroup = new Class({
          * @type {number}
          * @since 3.70.0
          */
-        this.collisionMask = 1;
+        this.collisionMask = 2147483647;
 
         /**
          * Default physics properties applied to Game Objects added to the Group or created by the Group. Derived from the `config` argument.
@@ -144653,7 +146221,7 @@ module.exports = PhysicsGroup;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -145010,7 +146578,9 @@ var RunImmovableBody1 = function (blockedState)
     //  This is special case code that handles things like vertically moving platforms you can ride
     if (body1.moves)
     {
-        body2.y += (body1.y - body1.prev.y) * body1.friction.y;
+        var body1Distance = body1.directControl ? (body1.y - body1.autoFrame.y) : (body1.y - body1.prev.y);
+
+        body2.y += body1Distance * body1.friction.y;
         body2._dy = body2.y - body2.prev.y;
     }
 };
@@ -145044,7 +146614,9 @@ var RunImmovableBody2 = function (blockedState)
     //  This is special case code that handles things like vertically moving platforms you can ride
     if (body2.moves)
     {
-        body1.y += (body2.y - body2.prev.y) * body2.friction.y;
+        var body2Distance = body2.directControl ? (body2.y - body2.autoFrame.y) : (body2.y - body2.prev.y);
+
+        body1.y += body2Distance * body2.friction.y;
         body1._dy = body1.y - body1.prev.y;
     }
 };
@@ -145071,7 +146643,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -145428,7 +147000,9 @@ var RunImmovableBody1 = function (blockedState)
     //  This is special case code that handles things like horizontally moving platforms you can ride
     if (body1.moves)
     {
-        body2.x += (body1.x - body1.prev.x) * body1.friction.x;
+        var body1Distance = body1.directControl ? (body1.x - body1.autoFrame.x) : (body1.x - body1.prev.x);
+
+        body2.x += body1Distance * body1.friction.x;
         body2._dx = body2.x - body2.prev.x;
     }
 };
@@ -145462,7 +147036,9 @@ var RunImmovableBody2 = function (blockedState)
     //  This is special case code that handles things like horizontally moving platforms you can ride
     if (body2.moves)
     {
-        body1.x += (body2.x - body2.prev.x) * body2.friction.x;
+        var body2Distance = body2.directControl ? (body2.x - body2.autoFrame.x) : (body2.x - body2.prev.x);
+
+        body1.x += body2Distance * body2.friction.x;
         body1._dx = body1.x - body1.prev.x;
     }
 };
@@ -145489,7 +147065,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -145562,7 +147138,7 @@ module.exports = SeparateX;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -145635,7 +147211,7 @@ module.exports = SeparateY;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -145683,7 +147259,7 @@ module.exports = SetCollisionObject;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -146190,36 +147766,63 @@ var StaticBody = new Class({
 
     /**
      * Changes the Game Object this Body is bound to.
+     * 
      * First it removes its reference from the old Game Object, then sets the new one.
+     * 
+     * This body will be resized to match the frame dimensions of the given Game Object, if it has a texture frame.
      * You can optionally update the position and dimensions of this Body to reflect that of the new Game Object.
      *
      * @method Phaser.Physics.Arcade.StaticBody#setGameObject
      * @since 3.1.0
      *
-     * @param {Phaser.GameObjects.GameObject} gameObject - The new Game Object that will own this Body.
+     * @param {Phaser.GameObjects.GameObject} gameObject - The Game Object to assign this Body to.
      * @param {boolean} [update=true] - Reposition and resize this Body to match the new Game Object?
+     * @param {boolean} [enable=true] - Automatically enable this Body for physics.
      *
      * @return {Phaser.Physics.Arcade.StaticBody} This Static Body object.
      *
      * @see Phaser.Physics.Arcade.StaticBody#updateFromGameObject
      */
-    setGameObject: function (gameObject, update)
+    setGameObject: function (gameObject, update, enable)
     {
-        if (gameObject && gameObject !== this.gameObject)
+        if (update === undefined) { update = true; }
+        if (enable === undefined) { enable = true; }
+
+        if (!gameObject || !gameObject.hasTransformComponent)
         {
-            //  Remove this body from the old game object
-            this.gameObject.body = null;
-
-            gameObject.body = this;
-
-            //  Update our reference
-            this.gameObject = gameObject;
+            //  We need a valid Game Object to continue
+            return this;
         }
+
+        var world = this.world;
+
+        if (this.gameObject && this.gameObject.body)
+        {
+            world.disable(this.gameObject);
+
+            //  Disconnect the current Game Object
+            this.gameObject.body = null;
+        }
+
+        if (gameObject.body)
+        {
+            //  Remove the body from the world, but don't disable the Game Object
+            world.disable(gameObject);
+        }
+
+        this.gameObject = gameObject;
+
+        gameObject.body = this;
+
+        //  This will remove the body from the tree, if it's in there and add the new one in
+        this.setSize();
 
         if (update)
         {
             this.updateFromGameObject();
         }
+
+        this.enable = enable;
 
         return this;
     },
@@ -146773,7 +148376,7 @@ module.exports = StaticBody;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -147004,7 +148607,7 @@ module.exports = StaticPhysicsGroup;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -148393,13 +149996,15 @@ var World = new Class({
             !body2.enable ||
             body1.checkCollision.none ||
             body2.checkCollision.none ||
-            !this.intersects(body1, body2))
+            !this.intersects(body1, body2) ||
+            (body1.collisionMask & body2.collisionCategory) === 0 ||
+            (body2.collisionMask & body1.collisionCategory) === 0)
         {
             return result;
         }
 
         //  They overlap. Is there a custom process callback? If it returns true then we can carry on, otherwise we should abort.
-        if (processCallback && processCallback.call(callbackContext, body1.gameObject, body2.gameObject) === false)
+        if (processCallback && processCallback.call(callbackContext, (body1.gameObject || body1), (body2.gameObject || body2)) === false)
         {
             return result;
         }
@@ -148613,19 +150218,19 @@ var World = new Class({
             var ny = ((body2Center.y - body1Center.y) / d) || 0;
             var p = 2 * (body1Velocity.x * nx + body1Velocity.y * ny - body2Velocity.x * nx - body2Velocity.y * ny) / (body1.mass + body2.mass);
 
-            if (body1Immovable || body2Immovable)
+            if (body1Immovable || body2Immovable || !body1.pushable || !body2.pushable)
             {
                 p *= 2;
             }
 
-            if (!body1Immovable)
+            if (!body1Immovable && body1.pushable)
             {
                 body1Velocity.x = (body1Velocity.x - p / body1.mass * nx);
                 body1Velocity.y = (body1Velocity.y - p / body1.mass * ny);
                 body1Velocity.multiply(body1.bounce);
             }
 
-            if (!body2Immovable)
+            if (!body2Immovable && body2.pushable)
             {
                 body2Velocity.x = (body2Velocity.x + p / body2.mass * nx);
                 body2Velocity.y = (body2Velocity.y + p / body2.mass * ny);
@@ -148638,15 +150243,15 @@ var World = new Class({
                 overlapY *= 0.5;
             }
 
-            if (!body1Immovable)
+            if (!body1Immovable || body1.pushable || deadlock)
             {
                 body1.x -= overlapX;
                 body1.y -= overlapY;
 
                 body1.updateCenter();
             }
-
-            if (!body2Immovable)
+            
+            if (!body2Immovable || body2.pushable || deadlock)
             {
                 body2.x += overlapX;
                 body2.y += overlapY;
@@ -148662,14 +150267,15 @@ var World = new Class({
             //  We'll only move the circle (if we can) and let
             //  the runSeparation handle the rectangle
 
-            if (!body1Immovable || body1.pushable || deadlock)
+            if (!body1Immovable && (body1.pushable || deadlock))
             {
                 body1.x -= overlapX;
                 body1.y -= overlapY;
 
                 body1.updateCenter();
             }
-            else if (!body2Immovable || body2.pushable || deadlock)
+
+            if (!body2Immovable && (body2.pushable || deadlock))
             {
                 body2.x += overlapX;
                 body2.y += overlapY;
@@ -149075,13 +150681,7 @@ var World = new Class({
     {
         var bodyA = (sprite.isBody) ? sprite : sprite.body;
 
-        if (
-            group.length === 0 ||
-            !bodyA ||
-            !bodyA.enable ||
-            bodyA.checkCollision.none ||
-            !this.canCollide(bodyA, group)
-        )
+        if (group.getLength() === 0 || !bodyA || !bodyA.enable || bodyA.checkCollision.none || !this.canCollide(bodyA, group))
         {
             return;
         }
@@ -149263,13 +150863,13 @@ var World = new Class({
      *
      * @param {Phaser.GameObjects.GameObject} sprite - The first object to check for collision.
      * @param {Phaser.Tilemaps.Tile[]} tiles - An array of Tiles to check for collision against.
-     * @param {Phaser.Types.Physics.Arcade.ArcadePhysicsCallback} [collideCallback] - An optional callback function that is called if the objects overlap.
-     * @param {Phaser.Types.Physics.Arcade.ArcadePhysicsCallback} [processCallback] - An optional callback function that lets you perform additional checks against the two objects if they collide. If this is set then `collideCallback` will only be called if this callback returns `true`.
+     * @param {Phaser.Types.Physics.Arcade.ArcadePhysicsCallback} [overlapCallback] - An optional callback function that is called if the objects overlap.
+     * @param {Phaser.Types.Physics.Arcade.ArcadePhysicsCallback} [processCallback] - An optional callback function that lets you perform additional checks against the two objects if they collide. If this is set then `overlapCallback` will only be called if this callback returns `true`.
      * @param {any} [callbackContext] - The context in which to run the callbacks.
      *
      * @return {boolean} True if any objects overlap (with `overlapOnly`); or true if any overlapping objects were separated.
      */
-    overlapTiles: function (sprite, tiles, collideCallback, processCallback, callbackContext)
+    overlapTiles: function (sprite, tiles, overlapCallback, processCallback, callbackContext)
     {
         if (tiles.length === 0 || (sprite.body && !sprite.body.enable) || (sprite.isBody && !sprite.enable))
         {
@@ -149277,7 +150877,7 @@ var World = new Class({
         }
         else
         {
-            return this.collideSpriteVsTilesHandler(sprite, tiles, collideCallback, processCallback, callbackContext, true, false);
+            return this.collideSpriteVsTilesHandler(sprite, tiles, overlapCallback, processCallback, callbackContext, true, false);
         }
     },
 
@@ -149423,13 +151023,13 @@ var World = new Class({
      */
     collideGroupVsGroup: function (group1, group2, collideCallback, processCallback, callbackContext, overlapOnly)
     {
-        if (group1.length === 0 || group2.length === 0 || !this.canCollide(group1, group2))
+        if (group1.getLength() === 0 || group2.getLength() === 0 || !this.canCollide(group1, group2))
         {
             return;
         }
 
         var children = group1.getChildren();
-
+        
         for (var i = 0; i < children.length; i++)
         {
             this.collideSpriteVsGroup(children[i], group2, collideCallback, processCallback, callbackContext, overlapOnly);
@@ -149549,7 +151149,7 @@ module.exports = World;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -149625,7 +151225,7 @@ module.exports = Acceleration;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -149708,7 +151308,7 @@ module.exports = Angular;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -149809,7 +151409,7 @@ module.exports = Bounce;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -149950,7 +151550,7 @@ var Collision = {
         var target = (this.body) ? this.body : this;
 
         target.collisionCategory = 0x0001;
-        target.collisionMask = 1;
+        target.collisionMask = 2147483647;
 
         return this;
     }
@@ -149967,7 +151567,7 @@ module.exports = Collision;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -150095,7 +151695,7 @@ module.exports = Debug;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -150229,7 +151829,7 @@ module.exports = Drag;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -150377,7 +151977,7 @@ module.exports = Enable;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -150466,7 +152066,7 @@ module.exports = Friction;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -150545,7 +152145,7 @@ module.exports = Gravity;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -150592,7 +152192,7 @@ module.exports = Immovable;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -150788,7 +152388,7 @@ module.exports = OverlapRect;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -150837,7 +152437,7 @@ module.exports = Pushable;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -150941,7 +152541,7 @@ module.exports = Size;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -150961,8 +152561,8 @@ var Velocity = {
      * @method Phaser.Physics.Arcade.Components.Velocity#setVelocity
      * @since 3.0.0
      *
-     * @param {number} x - The horizontal velocity of the body. Positive values move the body to the right, while negative values move it to the left.
-     * @param {number} [y=x] - The vertical velocity of the body. Positive values move the body down, while negative values move it up.
+     * @param {number} x - The horizontal velocity of the body, in pixels per second. Positive values move the body to the right, while negative values move it to the left.
+     * @param {number} [y=x] - The vertical velocity of the body, in pixels per second. Positive values move the body down, while negative values move it up.
      *
      * @return {this} This Game Object.
      */
@@ -150981,7 +152581,7 @@ var Velocity = {
      * @method Phaser.Physics.Arcade.Components.Velocity#setVelocityX
      * @since 3.0.0
      *
-     * @param {number} x - The new horizontal velocity.
+     * @param {number} x - The new horizontal velocity, in pixels per second.
      *
      * @return {this} This Game Object.
      */
@@ -151000,7 +152600,7 @@ var Velocity = {
      * @method Phaser.Physics.Arcade.Components.Velocity#setVelocityY
      * @since 3.0.0
      *
-     * @param {number} y - The new vertical velocity of the body.
+     * @param {number} y - The new vertical velocity, in pixels per second.
      *
      * @return {this} This Game Object.
      */
@@ -151017,8 +152617,8 @@ var Velocity = {
      * @method Phaser.Physics.Arcade.Components.Velocity#setMaxVelocity
      * @since 3.0.0
      *
-     * @param {number} x - The new maximum horizontal velocity.
-     * @param {number} [y=x] - The new maximum vertical velocity.
+     * @param {number} x - The new maximum horizontal velocity, in pixels per second.
+     * @param {number} [y=x] - The new maximum vertical velocity, in pixels per second.
      *
      * @return {this} This Game Object.
      */
@@ -151041,7 +152641,7 @@ module.exports = Velocity;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -151078,7 +152678,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -151208,7 +152808,7 @@ module.exports = CONST;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -151243,7 +152843,7 @@ module.exports = 'collide';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -151278,7 +152878,7 @@ module.exports = 'overlap';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -151303,7 +152903,7 @@ module.exports = 'pause';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -151328,7 +152928,7 @@ module.exports = 'resume';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -151362,7 +152962,7 @@ module.exports = 'tilecollide';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -151396,7 +152996,7 @@ module.exports = 'tileoverlap';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -151430,7 +153030,7 @@ module.exports = 'worldbounds';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -151460,7 +153060,7 @@ module.exports = 'worldstep';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -151489,7 +153089,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -151536,7 +153136,7 @@ module.exports = Arcade;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -151578,7 +153178,7 @@ module.exports = ProcessTileCallbacks;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -151627,7 +153227,7 @@ module.exports = ProcessTileSeparationX;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -151676,7 +153276,7 @@ module.exports = ProcessTileSeparationY;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -151797,7 +153397,7 @@ module.exports = SeparateTile;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -151888,7 +153488,7 @@ module.exports = TileCheckX;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -151979,7 +153579,7 @@ module.exports = TileCheckY;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -152016,7 +153616,7 @@ module.exports = TileIntersectsBody;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -152046,7 +153646,7 @@ module.exports = Tilemap;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -152073,7 +153673,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -152480,7 +154080,7 @@ module.exports = BodyBounds;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -152537,7 +154137,7 @@ module.exports = Matter;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -153468,7 +155068,7 @@ module.exports = Factory;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -153595,7 +155195,7 @@ module.exports = MatterGameObject;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -153745,7 +155345,7 @@ module.exports = MatterImage;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -153766,14 +155366,9 @@ var DistanceBetween = __webpack_require__(20339);
 var Factory = __webpack_require__(28137);
 var GetFastValue = __webpack_require__(95540);
 var GetValue = __webpack_require__(35154);
-var MatterAttractors = __webpack_require__(18210);
-var MatterCollisionEvents = __webpack_require__(40178);
-var MatterLib = __webpack_require__(6790);
-var MatterWrap = __webpack_require__(74507);
 var Merge = __webpack_require__(46975);
 var Pair = __webpack_require__(4506);
 var Pairs = __webpack_require__(99561);
-var Plugin = __webpack_require__(73832);
 var PluginCache = __webpack_require__(37277);
 var Query = __webpack_require__(73296);
 var Resolver = __webpack_require__(66272);
@@ -154135,23 +155730,6 @@ var MatterPhysics = new Class({
          */
         this._tempVec2 = Vector.create();
 
-        //  Matter plugins
-
-        if (GetValue(this.config, 'plugins.collisionevents', true))
-        {
-            this.enableCollisionEventsPlugin();
-        }
-
-        if (GetValue(this.config, 'plugins.attractors', false))
-        {
-            this.enableAttractorPlugin();
-        }
-
-        if (GetValue(this.config, 'plugins.wrap', false))
-        {
-            this.enableWrapPlugin();
-        }
-
         Resolver._restingThresh = GetValue(this.config, 'restingThresh', 4);
         Resolver._restingThreshTangent = GetValue(this.config, 'restingThreshTangent', 6);
         Resolver._positionDampen = GetValue(this.config, 'positionDampen', 0.9);
@@ -154222,94 +155800,6 @@ var MatterPhysics = new Class({
         );
 
         return config;
-    },
-
-    /**
-     * Enables the Matter Attractors Plugin.
-     *
-     * The attractors plugin that makes it easy to apply continual forces on bodies.
-     * It's possible to simulate effects such as wind, gravity and magnetism.
-     *
-     * https://github.com/liabru/matter-attractors
-     *
-     * This method is called automatically if `plugins.attractors` is set in the Matter World Config.
-     * However, you can also call it directly from within your game.
-     *
-     * @method Phaser.Physics.Matter.MatterPhysics#enableAttractorPlugin
-     * @since 3.0.0
-     *
-     * @return {this} This Matter Physics instance.
-     */
-    enableAttractorPlugin: function ()
-    {
-        Plugin.register(MatterAttractors);
-        Plugin.use(MatterLib, MatterAttractors);
-
-        return this;
-    },
-
-    /**
-     * Enables the Matter Wrap Plugin.
-     *
-     * The coordinate wrapping plugin that automatically wraps the position of bodies such that they always stay
-     * within the given bounds. Upon crossing a boundary the body will appear on the opposite side of the bounds,
-     * while maintaining its velocity.
-     *
-     * https://github.com/liabru/matter-wrap
-     *
-     * This method is called automatically if `plugins.wrap` is set in the Matter World Config.
-     * However, you can also call it directly from within your game.
-     *
-     * @method Phaser.Physics.Matter.MatterPhysics#enableWrapPlugin
-     * @since 3.0.0
-     *
-     * @return {this} This Matter Physics instance.
-     */
-    enableWrapPlugin: function ()
-    {
-        Plugin.register(MatterWrap);
-        Plugin.use(MatterLib, MatterWrap);
-
-        return this;
-    },
-
-    /**
-     * Enables the Matter Collision Events Plugin.
-     *
-     * Note that this plugin is enabled by default. So you should only ever need to call this
-     * method if you have specifically disabled the plugin in your Matter World Config.
-     * You can disable it by setting `plugins.collisionevents: false` in your Matter World Config.
-     *
-     * This plugin triggers three new events on Matter.Body:
-     *
-     * 1. `onCollide`
-     * 2. `onCollideEnd`
-     * 3. `onCollideActive`
-     *
-     * These events correspond to the Matter.js events `collisionStart`, `collisionActive` and `collisionEnd`, respectively.
-     * You can listen to these events via Matter.Events or they will also be emitted from the Matter World.
-     *
-     * This plugin also extends Matter.Body with three convenience functions:
-     *
-     * `Matter.Body.setOnCollide(callback)`
-     * `Matter.Body.setOnCollideEnd(callback)`
-     * `Matter.Body.setOnCollideActive(callback)`
-     *
-     * You can register event callbacks by providing a function of type (pair: Matter.Pair) => void
-     *
-     * https://github.com/dxu/matter-collision-events
-     *
-     * @method Phaser.Physics.Matter.MatterPhysics#enableCollisionEventsPlugin
-     * @since 3.22.0
-     *
-     * @return {this} This Matter Physics instance.
-     */
-    enableCollisionEventsPlugin: function ()
-    {
-        Plugin.register(MatterCollisionEvents);
-        Plugin.use(MatterLib, MatterCollisionEvents);
-
-        return this;
     },
 
     /**
@@ -155208,7 +156698,7 @@ module.exports = MatterPhysics;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -155364,7 +156854,7 @@ module.exports = MatterSprite;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -155700,7 +157190,7 @@ module.exports = MatterTileBody;
  * @author       Joachim Grill <joachim@codeandweb.com>
  * @author       Richard Davey <rich@phaser.io>
  * @copyright    2018 CodeAndWeb GmbH
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -155841,7 +157331,7 @@ module.exports = PhysicsEditorParser;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -155959,7 +157449,7 @@ module.exports = PhysicsJSONParser;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -156348,7 +157838,7 @@ module.exports = PointerConstraint;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -156366,6 +157856,7 @@ var MatterBody = __webpack_require__(22562);
 var MatterEvents = __webpack_require__(35810);
 var MatterTileBody = __webpack_require__(73834);
 var MatterWorld = __webpack_require__(4372);
+var MatterRunner = __webpack_require__(13037);
 var Vector = __webpack_require__(31725);
 
 /**
@@ -156492,15 +157983,9 @@ var World = new Class({
 
         var hasFPS = GetFastValue(runnerConfig, 'fps', false);
 
-        var fps = GetFastValue(runnerConfig, 'fps', 60);
-
-        var delta = GetFastValue(runnerConfig, 'delta', 1000 / fps);
-        var deltaMin = GetFastValue(runnerConfig, 'deltaMin', 1000 / fps);
-        var deltaMax = GetFastValue(runnerConfig, 'deltaMax', 1000 / (fps * 0.5));
-
-        if (!hasFPS)
+        if (hasFPS)
         {
-            fps = 1000 / delta;
+            runnerConfig.delta = 1000 / GetFastValue(runnerConfig, 'fps', 60);
         }
 
         /**
@@ -156513,20 +157998,7 @@ var World = new Class({
          * @type {Phaser.Types.Physics.Matter.MatterRunnerConfig}
          * @since 3.22.0
          */
-        this.runner = {
-            fps: fps,
-            deltaSampleSize: GetFastValue(runnerConfig, 'deltaSampleSize', 60),
-            counterTimestamp: 0,
-            frameCounter: 0,
-            deltaHistory: [],
-            timePrev: null,
-            timeScalePrev: 1,
-            frameRequestId: null,
-            isFixed: GetFastValue(runnerConfig, 'isFixed', false),
-            delta: delta,
-            deltaMin: deltaMin,
-            deltaMax: deltaMax
-        };
+        this.runner = MatterRunner.create(runnerConfig);
 
         /**
          * Automatically call Engine.update every time the game steps.
@@ -157009,8 +158481,44 @@ var World = new Class({
 
             if (pairs.length > 0)
             {
-                bodyA = pairs[0].bodyA;
-                bodyB = pairs[0].bodyB;
+                pairs.map(function (pair)
+                {
+                    bodyA = pair.bodyA;
+                    bodyB = pair.bodyB;
+
+                    if (bodyA.gameObject)
+                    {
+                        bodyA.gameObject.emit('collide', bodyA, bodyB, pair);
+                    }
+
+                    if (bodyB.gameObject)
+                    {
+                        bodyB.gameObject.emit('collide', bodyB, bodyA, pair);
+                    }
+
+                    MatterEvents.trigger(bodyA, 'onCollide', { pair: pair });
+                    MatterEvents.trigger(bodyB, 'onCollide', { pair: pair });
+
+                    if (bodyA.onCollideCallback)
+                    {
+                        bodyA.onCollideCallback(pair);
+                    }
+
+                    if (bodyB.onCollideCallback)
+                    {
+                        bodyB.onCollideCallback(pair);
+                    }
+
+                    if (bodyA.onCollideWith[bodyB.id])
+                    {
+                        bodyA.onCollideWith[bodyB.id](bodyB, pair);
+                    }
+
+                    if (bodyB.onCollideWith[bodyA.id])
+                    {
+                        bodyB.onCollideWith[bodyA.id](bodyA, pair);
+                    }
+                });
             }
 
             _this.emit(Events.COLLISION_START, event, bodyA, bodyB);
@@ -157024,8 +158532,34 @@ var World = new Class({
 
             if (pairs.length > 0)
             {
-                bodyA = pairs[0].bodyA;
-                bodyB = pairs[0].bodyB;
+                pairs.map(function (pair)
+                {
+                    bodyA = pair.bodyA;
+                    bodyB = pair.bodyB;
+
+                    if (bodyA.gameObject)
+                    {
+                        bodyA.gameObject.emit('collideActive', bodyA, bodyB, pair);
+                    }
+
+                    if (bodyB.gameObject)
+                    {
+                        bodyB.gameObject.emit('collideActive', bodyB, bodyA, pair);
+                    }
+
+                    MatterEvents.trigger(bodyA, 'onCollideActive', { pair: pair });
+                    MatterEvents.trigger(bodyB, 'onCollideActive', { pair: pair });
+
+                    if (bodyA.onCollideActiveCallback)
+                    {
+                        bodyA.onCollideActiveCallback(pair);
+                    }
+
+                    if (bodyB.onCollideActiveCallback)
+                    {
+                        bodyB.onCollideActiveCallback(pair);
+                    }
+                });
             }
 
             _this.emit(Events.COLLISION_ACTIVE, event, bodyA, bodyB);
@@ -157039,8 +158573,34 @@ var World = new Class({
 
             if (pairs.length > 0)
             {
-                bodyA = pairs[0].bodyA;
-                bodyB = pairs[0].bodyB;
+                pairs.map(function (pair)
+                {
+                    bodyA = pair.bodyA;
+                    bodyB = pair.bodyB;
+
+                    if (bodyA.gameObject)
+                    {
+                        bodyA.gameObject.emit('collideEnd', bodyA, bodyB, pair);
+                    }
+
+                    if (bodyB.gameObject)
+                    {
+                        bodyB.gameObject.emit('collideEnd', bodyB, bodyA, pair);
+                    }
+
+                    MatterEvents.trigger(bodyA, 'onCollideEnd', { pair: pair });
+                    MatterEvents.trigger(bodyB, 'onCollideEnd', { pair: pair });
+
+                    if (bodyA.onCollideEndCallback)
+                    {
+                        bodyA.onCollideEndCallback(pair);
+                    }
+
+                    if (bodyB.onCollideEndCallback)
+                    {
+                        bodyB.onCollideEndCallback(pair);
+                    }
+                });
             }
 
             _this.emit(Events.COLLISION_END, event, bodyA, bodyB);
@@ -157422,6 +158982,8 @@ var World = new Class({
     {
         this.enabled = true;
 
+        this.runner.timeLastTick = Common.now();
+
         this.emit(Events.RESUME);
 
         return this;
@@ -157447,7 +159009,7 @@ var World = new Class({
      * @param {number} time - The current time. Either a High Resolution Timer value if it comes from Request Animation Frame, or Date.now if using SetTimeout.
      * @param {number} delta - The delta time in ms since the last frame. This is a smoothed and capped value based on the FPS rate.
      */
-    update: function (time, delta)
+    update: function (time)
     {
         if (!this.enabled || !this.autoUpdate)
         {
@@ -157456,46 +159018,89 @@ var World = new Class({
 
         var engine = this.engine;
         var runner = this.runner;
+        
+        var tickStartTime = Common.now(),
+            engineDelta = runner.delta,
+            updateCount = 0;
 
-        var timing = engine.timing;
+        // find frame delta time since last call
+        var frameDelta = time - runner.timeLastTick;
 
-        if (runner.isFixed)
+        // fallback for unusable frame delta values (e.g. 0, NaN, on first frame or long pauses)
+        if (!frameDelta || !runner.timeLastTick || frameDelta > Math.max(MatterRunner._maxFrameDelta, runner.maxFrameTime))
         {
-            //  fixed timestep
-            delta = this.getDelta(time, delta);
-        }
-        else
-        {
-            //  dynamic timestep based on wall clock between calls
-            delta = (time - runner.timePrev) || runner.delta;
-            runner.timePrev = time;
-
-            // optimistically filter delta over a few frames, to improve stability
-            runner.deltaHistory.push(delta);
-            runner.deltaHistory = runner.deltaHistory.slice(-runner.deltaSampleSize);
-            delta = Math.min.apply(null, runner.deltaHistory);
-
-            // limit delta
-            delta = delta < runner.deltaMin ? runner.deltaMin : delta;
-            delta = delta > runner.deltaMax ? runner.deltaMax : delta;
-
-            // update engine timing object
-            runner.delta = delta;
+            // reuse last accepted frame delta else fallback
+            frameDelta = runner.frameDelta || MatterRunner._frameDeltaFallback;
         }
 
-        runner.timeScalePrev = timing.timeScale;
-
-        // fps counter
-        runner.frameCounter += 1;
-
-        if (time - runner.counterTimestamp >= 1000)
+        if (runner.frameDeltaSmoothing)
         {
-            runner.fps = runner.frameCounter * ((time - runner.counterTimestamp) / 1000);
-            runner.counterTimestamp = time;
-            runner.frameCounter = 0;
+            // record frame delta over a number of frames
+            runner.frameDeltaHistory.push(frameDelta);
+            runner.frameDeltaHistory = runner.frameDeltaHistory.slice(-runner.frameDeltaHistorySize);
+
+            // sort frame delta history
+            var deltaHistorySorted = runner.frameDeltaHistory.slice(0).sort();
+
+            // sample a central window to limit outliers
+            var deltaHistoryWindow = runner.frameDeltaHistory.slice(
+                deltaHistorySorted.length * MatterRunner._smoothingLowerBound,
+                deltaHistorySorted.length * MatterRunner._smoothingUpperBound
+            );
+
+            // take the mean of the central window
+            var frameDeltaSmoothed = MatterRunner._mean(deltaHistoryWindow);
+            frameDelta = frameDeltaSmoothed || frameDelta;
         }
 
-        Engine.update(engine, delta);
+        if (runner.frameDeltaSnapping)
+        {
+            // snap frame delta to the nearest 1 Hz
+            frameDelta = 1000 / Math.round(1000 / frameDelta);
+        }
+
+        // update runner values for next call
+        runner.frameDelta = frameDelta;
+        runner.timeLastTick = time;
+
+        // accumulate elapsed time
+        runner.timeBuffer += runner.frameDelta;
+
+        // limit time buffer size to a single frame of updates
+        runner.timeBuffer = Common.clamp(
+            runner.timeBuffer, 0, runner.frameDelta + engineDelta * MatterRunner._timeBufferMargin
+        );
+
+        // reset count of over budget updates
+        runner.lastUpdatesDeferred = 0;
+
+        // get max updates per frame
+        var maxUpdates = runner.maxUpdates || Math.ceil(runner.maxFrameTime / engineDelta);
+
+        var updateStartTime = Common.now();
+
+        // simulate time elapsed between calls
+        while (engineDelta > 0 && runner.timeBuffer >= engineDelta * MatterRunner._timeBufferMargin)
+        {
+            // update the engine
+            Engine.update(engine, engineDelta);
+
+            // consume time simulated from buffer
+            runner.timeBuffer -= engineDelta;
+            updateCount += 1;
+
+            // find elapsed time during this tick
+            var elapsedTimeTotal = Common.now() - tickStartTime,
+                elapsedTimeUpdates = Common.now() - updateStartTime,
+                elapsedNextEstimate = elapsedTimeTotal + MatterRunner._elapsedNextEstimate * elapsedTimeUpdates / updateCount;
+
+            // defer updates if over performance budgets for this frame
+            if (updateCount >= maxUpdates || elapsedNextEstimate > runner.maxFrameTime)
+            {
+                runner.lastUpdatesDeferred = Math.round(Math.max(0, (runner.timeBuffer / engineDelta) - MatterRunner._timeBufferMargin));
+                break;
+            }
+        }
     },
 
     /**
@@ -157827,12 +159432,15 @@ var World = new Class({
                 continue;
             }
 
-            for (var j = 0; j < pair.activeContacts.length; j++)
+            for (var j = 0; j < pair.contactCount; j++)
             {
-                var contact = pair.activeContacts[j];
+                var contact = pair.contacts[j];
                 var vertex = contact.vertex;
-
-                graphics.fillRect(vertex.x - 2, vertex.y - 2, 5, 5);
+                
+                if (vertex)
+                {
+                    graphics.fillRect(vertex.x - 2, vertex.y - 2, 5, 5);
+                }
             }
         }
 
@@ -157848,14 +159456,14 @@ var World = new Class({
             }
 
             var collision = pair.collision;
-            var contacts = pair.activeContacts;
+            var contacts = pair.contacts;
 
-            if (contacts.length > 0)
+            if (pair.contactCount > 0)
             {
                 var normalPosX = contacts[0].vertex.x;
                 var normalPosY = contacts[0].vertex.y;
 
-                if (contacts.length === 2)
+                if (pair.contactCount === 2)
                 {
                     normalPosX = (contacts[0].vertex.x + contacts[1].vertex.x) / 2;
                     normalPosY = (contacts[0].vertex.y + contacts[1].vertex.y) / 2;
@@ -158541,7 +160149,7 @@ module.exports = World;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -158582,7 +160190,7 @@ module.exports = Bounce;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -158769,7 +160377,7 @@ module.exports = Collision;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -158926,7 +160534,7 @@ module.exports = Force;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -159017,7 +160625,7 @@ module.exports = Friction;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -159058,7 +160666,7 @@ module.exports = Gravity;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -159141,7 +160749,7 @@ module.exports = Mass;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -159196,7 +160804,7 @@ module.exports = Sensor;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -159487,7 +161095,7 @@ module.exports = SetBody;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -159646,7 +161254,7 @@ module.exports = Sleep;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -159702,7 +161310,7 @@ module.exports = Static;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -159766,6 +161374,31 @@ var Transform = {
             this._tempVec2.set(this.x, value);
 
             Body.setPosition(this.body, this._tempVec2);
+        }
+
+    },
+
+    /**
+     * This is a special setter that allows you to set both the horizontal and vertical scale of this Game Object
+     * to the same value, at the same time. When reading this value the result returned is `(scaleX + scaleY) / 2`.
+     *
+     * Use of this property implies you wish the horizontal and vertical scales to be equal to each other. If this
+     * isn't the case, use the `scaleX` or `scaleY` properties instead.
+     *
+     * @name Phaser.Physics.Matter.Components.Transform#scale
+     * @type {number}
+     * @since 3.88.0
+     */
+    scale: {
+
+        get: function ()
+        {
+            return (this._scaleX + this._scaleY) / 2;
+        },
+
+        set: function (value)
+        {
+            this.setScale(value, value);
         }
 
     },
@@ -160018,7 +161651,7 @@ module.exports = Transform;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -160178,7 +161811,7 @@ module.exports = Velocity;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -160211,7 +161844,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -160247,7 +161880,7 @@ module.exports = 'afteradd';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -160283,7 +161916,7 @@ module.exports = 'afterremove';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -160318,7 +161951,7 @@ module.exports = 'afterupdate';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -160354,7 +161987,7 @@ module.exports = 'beforeadd';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -160390,7 +162023,7 @@ module.exports = 'beforeremove';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -160425,14 +162058,14 @@ module.exports = 'beforeupdate';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
 /**
  * @typedef {object} Phaser.Physics.Matter.Events.CollisionActiveEvent
  *
- * @property {Phaser.Types.Physics.Matter.MatterCollisionData[]} pairs - A list of all affected pairs in the collision.
+ * @property {Phaser.Types.Physics.Matter.MatterCollisionPair[]} pairs - A list of all affected pairs in the collision.
  * @property {number} timestamp - The Matter Engine `timing.timestamp` value for the event.
  * @property {any} source - The source object of the event.
  * @property {string} name - The name of the event.
@@ -160464,14 +162097,14 @@ module.exports = 'collisionactive';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
 /**
  * @typedef {object} Phaser.Physics.Matter.Events.CollisionEndEvent
  *
- * @property {Phaser.Types.Physics.Matter.MatterCollisionData[]} pairs - A list of all affected pairs in the collision.
+ * @property {Phaser.Types.Physics.Matter.MatterCollisionPair[]} pairs - A list of all affected pairs in the collision.
  * @property {number} timestamp - The Matter Engine `timing.timestamp` value for the event.
  * @property {any} source - The source object of the event.
  * @property {string} name - The name of the event.
@@ -160503,14 +162136,14 @@ module.exports = 'collisionend';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
 /**
  * @typedef {object} Phaser.Physics.Matter.Events.CollisionStartEvent
  *
- * @property {Phaser.Types.Physics.Matter.MatterCollisionData[]} pairs - A list of all affected pairs in the collision.
+ * @property {Phaser.Types.Physics.Matter.MatterCollisionPair[]} pairs - A list of all affected pairs in the collision.
  * @property {number} timestamp - The Matter Engine `timing.timestamp` value for the event.
  * @property {any} source - The source object of the event.
  * @property {string} name - The name of the event.
@@ -160542,7 +162175,7 @@ module.exports = 'collisionstart';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -160571,7 +162204,7 @@ module.exports = 'dragend';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -160600,7 +162233,7 @@ module.exports = 'drag';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -160630,7 +162263,7 @@ module.exports = 'dragstart';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -160655,7 +162288,7 @@ module.exports = 'pause';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -160680,7 +162313,7 @@ module.exports = 'resume';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -160715,7 +162348,7 @@ module.exports = 'sleepend';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -160750,7 +162383,7 @@ module.exports = 'sleepstart';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -160787,7 +162420,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -160866,6 +162499,8 @@ var Axes = __webpack_require__(66615);
             label: 'Body',
             parts: [],
             plugin: {},
+            attractors: options.attractors || [],
+            wrapBounds: null,
             angle: 0,
             vertices: null, // Phaser change: no point calling fromPath if they pass in vertices anyway
             position: { x: 0, y: 0 },
@@ -161363,7 +162998,7 @@ var Axes = __webpack_require__(66615);
      * @method setPosition
      * @param {body} body
      * @param {vector} position
-     * @param {boolean} updateVelocity
+     * @param {boolean} [updateVelocity=false]
      */
     Body.setPosition = function(body, position, updateVelocity) {
         var delta = Vector.sub(position, body.position);
@@ -161392,7 +163027,7 @@ var Axes = __webpack_require__(66615);
      * @method setAngle
      * @param {body} body
      * @param {number} angle
-     * @param {boolean} updateVelocity
+     * @param {boolean} [updateVelocity=false]
      */
     Body.setAngle = function(body, angle, updateVelocity) {
         var delta = angle - body.angle;
@@ -161518,7 +163153,7 @@ var Axes = __webpack_require__(66615);
      * @method translate
      * @param {body} body
      * @param {vector} translation
-     * @param {boolean} [updateVelocity]
+     * @param {boolean} [updateVelocity=false]
      */
     Body.translate = function(body, translation, updateVelocity) {
         Body.setPosition(body, Vector.add(body.position, translation), updateVelocity);
@@ -161530,7 +163165,7 @@ var Axes = __webpack_require__(66615);
      * @param {body} body
      * @param {number} rotation
      * @param {vector} [point]
-     * @param {boolean} [updateVelocity]
+     * @param {boolean} [updateVelocity=false]
      */
     Body.rotate = function(body, rotation, point, updateVelocity) {
         if (!point) {
@@ -161748,6 +163383,25 @@ var Axes = __webpack_require__(66615);
         return properties;
     };
 
+    /**
+     * Wraps the `body` position such that it always stays within the given bounds.
+     * Upon crossing a boundary the body will appear on the opposite side of the bounds,
+     * while maintaining its velocity.
+     * @function wrap
+     * @param {body} body The body to wrap.
+     * @param {Matter.Bounds} bounds The bounds to wrap the body inside.
+     * @returns {?Matter.Vector} The translation vector that was applied (only if wrapping was required).
+     */
+    Body.wrap = function(body, bounds) {
+        var translation = Bounds.wrap(body.bounds, bounds);
+
+        if (translation) {
+            Body.translate(body, translation);
+        }
+
+        return translation;
+    };
+
     /*
     *
     *  Events Documentation
@@ -161830,6 +163484,21 @@ var Axes = __webpack_require__(66615);
      *
      * @property parent
      * @type body
+     */
+
+    /**
+     * An object storing axis-aligned bounding boxes (AABB).
+     *
+     * @property wrapBounds
+     * @type {}
+     */
+
+    /**
+     * An array of callback functions that will be called automatically
+     * for every pair of bodies, on every engine update.
+     *
+     * @property attractors
+     * @type Function[]
      */
 
     /**
@@ -162378,6 +164047,7 @@ var Body = __webpack_require__(22562);
             composites: [],
             label: 'Composite',
             plugin: {},
+            wrapBounds: null,
             cache: {
                 allBodies: null,
                 allConstraints: null,
@@ -162533,7 +164203,11 @@ var Body = __webpack_require__(22562);
     Composite.removeComposite = function(compositeA, compositeB, deep) {
         var position = Common.indexOf(compositeA.composites, compositeB);
         if (position !== -1) {
+            var bodies = Composite.allBodies(compositeB);
             Composite.removeCompositeAt(compositeA, position);
+            for (var i = 0; i < bodies.length; i++) {
+                bodies[i].sleepCounter = 0;
+            }
         }
 
         if (deep) {
@@ -162586,6 +164260,7 @@ var Body = __webpack_require__(22562);
         var position = Common.indexOf(composite.bodies, body);
         if (position !== -1) {
             Composite.removeBodyAt(composite, position);
+            body.sleepCounter = 0;
         }
 
         if (deep) {
@@ -162919,6 +164594,29 @@ var Body = __webpack_require__(22562);
 
         return Bounds.create(vertices);
     };
+  
+    /**
+     * Wraps the `composite` position such that it always stays within the given bounds.
+     * Upon crossing a boundary the composite will appear on the opposite side of the bounds,
+     * while maintaining its velocity.
+     * This is called automatically by the plugin.
+     * @function wrap
+     * @param {composite} composite The composite to wrap.
+     * @param {bounds} bounds The bounds to wrap the composite inside.
+     * @returns {?Matter.Vector} The translation vector that was applied (only if wrapping was required).
+     */
+    Composite.wrap = function(composite, bounds) {
+        var translation = Bounds.wrap(
+          Composite.bounds(composite),
+          bounds
+        );
+  
+        if (translation) {
+          Composite.translate(composite, translation);
+        }
+  
+        return translation;
+    };
 
     /*
     *
@@ -163048,6 +164746,13 @@ var Body = __webpack_require__(22562);
      * An object reserved for storing plugin-specific properties.
      *
      * @property plugin
+     * @type {}
+     */
+
+    /**
+     * An object storing axis-aligned bounding boxes (AABB).
+     *
+     * @property wrapBounds
      * @type {}
      */
 
@@ -163255,7 +164960,8 @@ var Pair = __webpack_require__(4506);
             normal: { x: 0, y: 0 },
             tangent: { x: 0, y: 0 },
             penetration: { x: 0, y: 0 },
-            supports: []
+            supports: [null, null],
+            supportCount: 0
         };
     };
 
@@ -163307,27 +165013,31 @@ var Pair = __webpack_require__(4506);
         }
 
         var normal = collision.normal,
+            tangent = collision.tangent,
+            penetration = collision.penetration,
             supports = collision.supports,
+            depth = minOverlap.overlap,
             minAxis = minOverlap.axis,
-            minAxisX = minAxis.x,
-            minAxisY = minAxis.y;
+            normalX = minAxis.x,
+            normalY = minAxis.y,
+            deltaX = bodyB.position.x - bodyA.position.x,
+            deltaY = bodyB.position.y - bodyA.position.y;
 
         // ensure normal is facing away from bodyA
-        if (minAxisX * (bodyB.position.x - bodyA.position.x) + minAxisY * (bodyB.position.y - bodyA.position.y) < 0) {
-            normal.x = minAxisX;
-            normal.y = minAxisY;
-        } else {
-            normal.x = -minAxisX;
-            normal.y = -minAxisY;
+        if (normalX * deltaX + normalY * deltaY >= 0) {
+            normalX = -normalX;
+            normalY = -normalY;
         }
+        normal.x = normalX;
+        normal.y = normalY;
         
-        collision.tangent.x = -normal.y;
-        collision.tangent.y = normal.x;
+        tangent.x = -normalY;
+        tangent.y = normalX;
 
-        collision.depth = minOverlap.overlap;
 
-        collision.penetration.x = normal.x * collision.depth;
-        collision.penetration.y = normal.y * collision.depth;
+        penetration.x = normalX * depth;
+        penetration.y = normalY * depth;
+        collision.depth = depth;
 
         // find support points, there is always either exactly one or two
         var supportsB = Collision._findSupports(bodyA, bodyB, normal, 1),
@@ -163361,7 +165071,7 @@ var Pair = __webpack_require__(4506);
         }
 
         // update supports array size
-        supports.length = supportCount;
+        collision.supportCount = supportCount;
 
         return collision;
     };
@@ -163441,32 +165151,6 @@ var Pair = __webpack_require__(4506);
     };
 
     /**
-     * Projects vertices on an axis and returns an interval.
-     * @method _projectToAxis
-     * @private
-     * @param {} projection
-     * @param {} vertices
-     * @param {} axis
-     */
-    Collision._projectToAxis = function(projection, vertices, axis) {
-        var min = vertices[0].x * axis.x + vertices[0].y * axis.y,
-            max = min;
-
-        for (var i = 1; i < vertices.length; i += 1) {
-            var dot = vertices[i].x * axis.x + vertices[i].y * axis.y;
-
-            if (dot > max) { 
-                max = dot; 
-            } else if (dot < min) { 
-                min = dot; 
-            }
-        }
-
-        projection.min = min;
-        projection.max = max;
-    };
-
-    /**
      * Finds supporting vertices given two bodies along a given direction using hill-climbing.
      * @method _findSupports
      * @private
@@ -163483,15 +165167,15 @@ var Pair = __webpack_require__(4506);
             bodyAPositionY = bodyA.position.y,
             normalX = normal.x * direction,
             normalY = normal.y * direction,
-            nearestDistance = Number.MAX_VALUE,
-            vertexA,
-            vertexB,
+            vertexA = vertices[0],
+            vertexB = vertexA,
+            nearestDistance = normalX * (bodyAPositionX - vertexB.x) + normalY * (bodyAPositionY - vertexB.y),
             vertexC,
             distance,
             j;
 
         // find deepest vertex relative to the axis
-        for (j = 0; j < verticesLength; j += 1) {
+        for (j = 1; j < verticesLength; j += 1) {
             vertexB = vertices[j];
             distance = normalX * (bodyAPositionX - vertexB.x) + normalY * (bodyAPositionY - vertexB.y);
 
@@ -163679,6 +165363,7 @@ var Collision = __webpack_require__(52284);
     Detector.create = function(options) {
         var defaults = {
             bodies: [],
+            collisions: [],
             pairs: null
         };
 
@@ -163702,6 +165387,7 @@ var Collision = __webpack_require__(52284);
      */
     Detector.clear = function(detector) {
         detector.bodies = [];
+        detector.collisions = [];
     };
 
     /**
@@ -163714,12 +165400,13 @@ var Collision = __webpack_require__(52284);
      * @return {collision[]} collisions
      */
     Detector.collisions = function(detector) {
-        var collisions = [],
-            pairs = detector.pairs,
+        var pairs = detector.pairs,
             bodies = detector.bodies,
             bodiesLength = bodies.length,
             canCollide = Detector.canCollide,
             collides = Collision.collides,
+            collisions = detector.collisions,
+            collisionIndex = 0,
             i,
             j;
 
@@ -163761,7 +165448,7 @@ var Collision = __webpack_require__(52284);
                     var collision = collides(bodyA, bodyB, pairs);
 
                     if (collision) {
-                        collisions.push(collision);
+                        collisions[collisionIndex++] = collision;
                     }
                 } else {
                     var partsAStart = partsALength > 1 ? 1 : 0,
@@ -163783,12 +165470,15 @@ var Collision = __webpack_require__(52284);
                             var collision = collides(partA, partB, pairs);
 
                             if (collision) {
-                                collisions.push(collision);
+                                collisions[collisionIndex++] = collision;
                             }
                         }
                     }
                 }
             }
+        }
+        if (collisions.length !== collisionIndex) {
+            collisions.length = collisionIndex;
         }
 
         return collisions;
@@ -163838,6 +165528,13 @@ var Collision = __webpack_require__(52284);
      */
 
     /**
+     * The array of `Matter.Collision` found in the last call to `Detector.collisions` on this detector.
+     * @property collisions
+     * @type collision[]
+     * @default []
+     */
+     
+    /**
      * Optional. A `Matter.Pairs` object from which previous collision objects may be reused. Intended for internal `Matter.Engine` usage.
      * @property pairs
      * @type {pairs|null}
@@ -163882,11 +165579,10 @@ var Contact = __webpack_require__(43424);
             bodyA: bodyA,
             bodyB: bodyB,
             collision: collision,
-            contacts: [],
-            activeContacts: [],
+            contacts: [Contact.create(), Contact.create()],
+            contactCount: 0,
             separation: 0,
             isActive: true,
-            confirmedActive: true,
             isSensor: bodyA.isSensor || bodyB.isSensor,
             timeCreated: timestamp,
             timeUpdated: timestamp,
@@ -163910,12 +165606,11 @@ var Contact = __webpack_require__(43424);
      * @param {number} timestamp
      */
     Pair.update = function(pair, collision, timestamp) {
-        var contacts = pair.contacts,
-            supports = collision.supports,
-            activeContacts = pair.activeContacts,
+        var supports = collision.supports,
+            supportCount = collision.supportCount,
+            contacts = pair.contacts,
             parentA = collision.parentA,
-            parentB = collision.parentB,
-            parentAVerticesLength = parentA.vertices.length;
+            parentB = collision.parentB;
         
         pair.isActive = true;
         pair.timeUpdated = timestamp;
@@ -163927,20 +165622,22 @@ var Contact = __webpack_require__(43424);
         pair.restitution = parentA.restitution > parentB.restitution ? parentA.restitution : parentB.restitution;
         pair.slop = parentA.slop > parentB.slop ? parentA.slop : parentB.slop;
 
+        pair.contactCount = supportCount;
         collision.pair = pair;
-        activeContacts.length = 0;
+        var supportA = supports[0],
+            contactA = contacts[0],
         
-        for (var i = 0; i < supports.length; i++) {
-            var support = supports[i],
-                contactId = support.body === parentA ? support.index : parentAVerticesLength + support.index,
-                contact = contacts[contactId];
+            supportB = supports[1],
+            contactB = contacts[1];
+        if (contactB.vertex === supportA || contactA.vertex === supportB) {
+            contacts[1] = contactA;
+            contacts[0] = contactA = contactB;
 
-            if (contact) {
-                activeContacts.push(contact);
-            } else {
-                activeContacts.push(contacts[contactId] = Contact.create(support));
+            contactB = contacts[1];
             }
-        }
+
+        contactA.vertex = supportA;
+        contactB.vertex = supportB;
     };
     
     /**
@@ -163956,7 +165653,7 @@ var Contact = __webpack_require__(43424);
             pair.timeUpdated = timestamp;
         } else {
             pair.isActive = false;
-            pair.activeContacts.length = 0;
+            pair.contactCount = 0;
         }
     };
 
@@ -163968,11 +165665,8 @@ var Contact = __webpack_require__(43424);
      * @return {string} Unique pairId
      */
     Pair.id = function(bodyA, bodyB) {
-        if (bodyA.id < bodyB.id) {
-            return 'A' + bodyA.id + 'B' + bodyB.id;
-        } else {
-            return 'A' + bodyB.id + 'B' + bodyA.id;
-        }
+        return bodyA.id < bodyB.id ? bodyA.id.toString(36) + ':' + bodyB.id.toString(36) 
+            : bodyB.id.toString(36) + ':' + bodyA.id.toString(36);
     };
 
 })();
@@ -164022,26 +165716,26 @@ var Common = __webpack_require__(53402);
      * @param {number} timestamp
      */
     Pairs.update = function(pairs, collisions, timestamp) {
-        var pairsList = pairs.list,
-            pairsListLength = pairsList.length,
+        var pairUpdate = Pair.update,
+            pairCreate = Pair.create,
+            pairSetActive = Pair.setActive,
             pairsTable = pairs.table,
-            collisionsLength = collisions.length,
+            pairsList = pairs.list,
+            pairsListLength = pairsList.length,
+            pairsListIndex = pairsListLength,
             collisionStart = pairs.collisionStart,
             collisionEnd = pairs.collisionEnd,
             collisionActive = pairs.collisionActive,
+            collisionsLength = collisions.length,
+            collisionStartIndex = 0,
+            collisionEndIndex = 0,
+            collisionActiveIndex = 0,
             collision,
-            pairIndex,
             pair,
             i;
 
         // clear collision state arrays, but maintain old reference
-        collisionStart.length = 0;
-        collisionEnd.length = 0;
-        collisionActive.length = 0;
 
-        for (i = 0; i < pairsListLength; i++) {
-            pairsList[i].confirmedActive = false;
-        }
 
         for (i = 0; i < collisionsLength; i++) {
             collision = collisions[i];
@@ -164051,49 +165745,56 @@ var Common = __webpack_require__(53402);
                 // pair already exists (but may or may not be active)
                 if (pair.isActive) {
                     // pair exists and is active
-                    collisionActive.push(pair);
-                } else {
+                    collisionActive[collisionActiveIndex++] = pair;
                     // pair exists but was inactive, so a collision has just started again
-                    collisionStart.push(pair);
                 }
 
                 // update the pair
-                Pair.update(pair, collision, timestamp);
-                pair.confirmedActive = true;
+                pairUpdate(pair, collision, timestamp);
             } else {
                 // pair did not exist, create a new pair
-                pair = Pair.create(collision, timestamp);
+                pair = pairCreate(collision, timestamp);
                 pairsTable[pair.id] = pair;
 
                 // push the new pair
-                collisionStart.push(pair);
-                pairsList.push(pair);
+                collisionStart[collisionStartIndex++] = pair;
+                pairsList[pairsListIndex++] = pair;
             }
         }
 
         // find pairs that are no longer active
-        var removePairIndex = [];
+        pairsListIndex = 0;
         pairsListLength = pairsList.length;
 
         for (i = 0; i < pairsListLength; i++) {
             pair = pairsList[i];
             
-            if (!pair.confirmedActive) {
-                Pair.setActive(pair, false, timestamp);
-                collisionEnd.push(pair);
+            if (pair.timeUpdated >= timestamp) {
+                pairsList[pairsListIndex++] = pair;
+            } else {
+                pairSetActive(pair, false, timestamp);
 
-                if (!pair.collision.bodyA.isSleeping && !pair.collision.bodyB.isSleeping) {
-                    removePairIndex.push(i);
+                if (pair.collision.bodyA.sleepCounter > 0 && pair.collision.bodyB.sleepCounter > 0) {
+                    pairsList[pairsListIndex++] = pair;
+                } else {
+                    collisionEnd[collisionEndIndex++] = pair;
+                    delete pairsTable[pair.id];
                 }
             }
         }
 
         // remove inactive pairs
-        for (i = 0; i < removePairIndex.length; i++) {
-            pairIndex = removePairIndex[i] - i;
-            pair = pairsList[pairIndex];
-            pairsList.splice(pairIndex, 1);
-            delete pairsTable[pair.id];
+        if (pairsList.length !== pairsListIndex) {
+            pairsList.length = pairsListIndex;
+        }
+        if (collisionStart.length !== collisionStartIndex) {
+            collisionStart.length = collisionStartIndex;
+        }
+        if (collisionEnd.length !== collisionEndIndex) {
+            collisionEnd.length = collisionEndIndex;
+        }
+        if (collisionActive.length !== collisionActiveIndex) {
+            collisionActive.length = collisionActiveIndex;
         }
     };
 
@@ -164300,7 +166001,7 @@ var Bounds = __webpack_require__(15647);
     Resolver.preSolvePosition = function(pairs) {
         var i,
             pair,
-            activeCount,
+            contactCount,
             pairsLength = pairs.length;
 
         // find total contacts on each body
@@ -164310,9 +166011,9 @@ var Bounds = __webpack_require__(15647);
             if (!pair.isActive)
                 continue;
 
-            activeCount = pair.activeContacts.length;
-            pair.collision.parentA.totalContacts += activeCount;
-            pair.collision.parentB.totalContacts += activeCount;
+            contactCount = pair.contactCount;
+            pair.collision.parentA.totalContacts += contactCount;
+            pair.collision.parentB.totalContacts += contactCount;
         }
     };
 
@@ -164350,8 +166051,8 @@ var Bounds = __webpack_require__(15647);
 
             // get current separation between body edges involved in collision
             pair.separation =
-                normal.x * (bodyB.positionImpulse.x + collision.penetration.x - bodyA.positionImpulse.x)
-                + normal.y * (bodyB.positionImpulse.y + collision.penetration.y - bodyA.positionImpulse.y);
+                collision.depth + normal.x * (bodyB.positionImpulse.x - bodyA.positionImpulse.x)
+                + normal.y * (bodyB.positionImpulse.y - bodyA.positionImpulse.y);
         }
 
         for (i = 0; i < pairsLength; i++) {
@@ -164447,8 +166148,8 @@ var Bounds = __webpack_require__(15647);
             if (!pair.isActive || pair.isSensor)
                 continue;
 
-            var contacts = pair.activeContacts,
-                contactsLength = contacts.length,
+            var contacts = pair.contacts,
+                contactCount = pair.contactCount,
                 collision = pair.collision,
                 bodyA = collision.parentA,
                 bodyB = collision.parentB,
@@ -164456,7 +166157,7 @@ var Bounds = __webpack_require__(15647);
                 tangent = collision.tangent;
 
             // resolve each contact
-            for (j = 0; j < contactsLength; j++) {
+            for (j = 0; j < contactCount; j++) {
                 var contact = contacts[j],
                     contactVertex = contact.vertex,
                     normalImpulse = contact.normalImpulse,
@@ -164519,28 +166220,26 @@ var Bounds = __webpack_require__(15647);
             var collision = pair.collision,
                 bodyA = collision.parentA,
                 bodyB = collision.parentB,
-                bodyAVelocity = bodyA.velocity,
-                bodyBVelocity = bodyB.velocity,
                 normalX = collision.normal.x,
                 normalY = collision.normal.y,
                 tangentX = collision.tangent.x,
                 tangentY = collision.tangent.y,
-                contacts = pair.activeContacts,
-                contactsLength = contacts.length,
-                contactShare = 1 / contactsLength,
-                inverseMassTotal = bodyA.inverseMass + bodyB.inverseMass,
-                friction = pair.friction * pair.frictionStatic * frictionNormalMultiplier;
+                inverseMassTotal = pair.inverseMass,
+                friction = pair.friction * pair.frictionStatic * frictionNormalMultiplier,
+                contacts = pair.contacts,
+                contactCount = pair.contactCount,
+                contactShare = 1 / contactCount;
 
             // update body velocities
-            bodyAVelocity.x = bodyA.position.x - bodyA.positionPrev.x;
-            bodyAVelocity.y = bodyA.position.y - bodyA.positionPrev.y;
-            bodyBVelocity.x = bodyB.position.x - bodyB.positionPrev.x;
-            bodyBVelocity.y = bodyB.position.y - bodyB.positionPrev.y;
-            bodyA.angularVelocity = bodyA.angle - bodyA.anglePrev;
-            bodyB.angularVelocity = bodyB.angle - bodyB.anglePrev;
+            var bodyAVelocityX = bodyA.position.x - bodyA.positionPrev.x,
+                bodyAVelocityY = bodyA.position.y - bodyA.positionPrev.y,
+                bodyAAngularVelocity = bodyA.angle - bodyA.anglePrev,
+                bodyBVelocityX = bodyB.position.x - bodyB.positionPrev.x,
+                bodyBVelocityY = bodyB.position.y - bodyB.positionPrev.y,
+                bodyBAngularVelocity = bodyB.angle - bodyB.anglePrev;
 
             // resolve each contact
-            for (j = 0; j < contactsLength; j++) {
+            for (j = 0; j < contactCount; j++) {
                 var contact = contacts[j],
                     contactVertex = contact.vertex;
 
@@ -164549,10 +166248,10 @@ var Bounds = __webpack_require__(15647);
                     offsetBX = contactVertex.x - bodyB.position.x,
                     offsetBY = contactVertex.y - bodyB.position.y;
 
-                var velocityPointAX = bodyAVelocity.x - offsetAY * bodyA.angularVelocity,
-                    velocityPointAY = bodyAVelocity.y + offsetAX * bodyA.angularVelocity,
-                    velocityPointBX = bodyBVelocity.x - offsetBY * bodyB.angularVelocity,
-                    velocityPointBY = bodyBVelocity.y + offsetBX * bodyB.angularVelocity;
+                var velocityPointAX = bodyAVelocityX - offsetAY * bodyAAngularVelocity,
+                    velocityPointAY = bodyAVelocityY + offsetAX * bodyAAngularVelocity,
+                    velocityPointBX = bodyBVelocityX - offsetBY * bodyBAngularVelocity,
+                    velocityPointBY = bodyBVelocityY + offsetBX * bodyBAngularVelocity;
 
                 var relativeVelocityX = velocityPointAX - velocityPointBX,
                     relativeVelocityY = velocityPointAY - velocityPointBY;
@@ -165814,6 +167513,7 @@ var Body = __webpack_require__(22562);
 
 (function() {
 
+    Engine._deltaMax = 1000 / 60;
     /**
      * Creates a new engine. The options parameter is an object that specifies any properties you wish to override the defaults.
      * All properties have default values, and many are pre-calculated automatically based on other properties.
@@ -165841,7 +167541,8 @@ var Body = __webpack_require__(22562);
                 timestamp: 0,
                 timeScale: 1,
                 lastDelta: 0,
-                lastElapsed: 0
+                lastElapsed: 0,
+                lastUpdatesPerFrame: 0
             }
         };
 
@@ -165850,6 +167551,7 @@ var Body = __webpack_require__(22562);
         engine.world = options.world || Composite.create({ label: 'World' });
         engine.pairs = options.pairs || Pairs.create();
         engine.detector = options.detector || Detector.create();
+        engine.detector.pairs = engine.pairs;
 
         // for temporary back compatibility only
         engine.grid = { buckets: [] };
@@ -165877,6 +167579,11 @@ var Body = __webpack_require__(22562);
             timing = engine.timing,
             timestamp = timing.timestamp,
             i;
+        if (delta > Engine._deltaMax) {
+            Common.warnOnce(
+                'Matter.Engine.update: delta argument is recommended to be less than or equal to', Engine._deltaMax.toFixed(3), 'ms.'
+            );
+        }
 
         delta = typeof delta !== 'undefined' ? delta : Common._baseDelta;
         delta *= timing.timeScale;
@@ -165895,7 +167602,8 @@ var Body = __webpack_require__(22562);
 
         // get all bodies and all constraints in the world
         var allBodies = Composite.allBodies(world),
-            allConstraints = Composite.allConstraints(world);
+            allConstraints = Composite.allConstraints(world),
+            allComposites = Composite.allComposites(world);
 
         // if the world has changed
         if (world.isModified) {
@@ -165913,6 +167621,9 @@ var Body = __webpack_require__(22562);
         // apply gravity to all bodies
         Engine._bodiesApplyGravity(allBodies, engine.gravity);
 
+        Engine.wrap(allBodies, allComposites);
+        Engine.attractors(allBodies);
+        
         // update all body position and rotation by integration
         if (delta > 0) {
             Engine._bodiesUpdate(allBodies, delta);
@@ -165928,7 +167639,6 @@ var Body = __webpack_require__(22562);
         Constraint.postSolveAll(allBodies);
 
         // find all collisions
-        detector.pairs = engine.pairs;
         var collisions = Detector.collisions(detector);
 
         // update collision pairs
@@ -166110,6 +167820,74 @@ var Body = __webpack_require__(22562);
 
         for (var i = 0; i < bodiesLength; i++) {
             Body.updateVelocities(bodies[i]);
+        }
+    };
+
+    /**
+     * Applies `Body.wrap` and `Composite.wrap` and to all given `bodies`.
+     * @method wrap
+     * @private
+     * @param {body[]} bodies
+     */
+    Engine.wrap = function(bodies, composites) {
+        // wrap bodies within the wrapBounds parameters
+        for (var i = 0; i < bodies.length; i += 1) {
+            var body = bodies[i];
+    
+            if (body.wrapBounds !== null) {
+              Body.wrap(body, body.wrapBounds);
+            }
+        }
+
+        // wrap composites within the wrapBounds parameters
+        for (i = 0; i < composites.length; i += 1) {
+            var composite = composites[i];
+
+            if (composite.wrapBounds !== null) {
+                Composite.wrap(composite, composite.wrapBounds);
+            }
+        }
+    };
+
+    /**
+     * Applies all attractors for all bodies in the `engine`.
+     * This is called automatically.
+     * @method attractors
+     * @private
+     * @param {body[]} bodies
+     */
+    Engine.attractors = function(bodies) {
+        for (var i = 0; i < bodies.length; i++)
+        {
+            var bodyA = bodies[i];
+            var attractors = bodyA.attractors;
+
+            if (attractors && attractors.length > 0)
+            {
+                for (var j = 0; j < bodies.length; j++)
+                {
+                    var bodyB = bodies[j];
+
+                    if (i !== j)
+                    {
+                        for (var k = 0; k < attractors.length; k++)
+                        {
+                            var attractor = attractors[k];
+                            var forceVector = attractor;
+
+                            if (Common.isFunction(attractor))
+                            {
+                                forceVector = attractor(bodyA, bodyB);
+                            }
+
+                            if (forceVector)
+                            {
+                                Body.applyForce(bodyB, bodyB.position, forceVector);
+                            }
+                        }
+                    }
+                }
+            }
         }
     };
 
@@ -166490,7 +168268,7 @@ var Common = __webpack_require__(53402);
      * @readOnly
      * @type {String}
      */
-    Matter.version = '0.19.0';
+    Matter.version = '0.20.0';
 
     /**
      * A list of plugin dependencies to be installed. These are normally set and installed through `Matter.use`.
@@ -166909,6 +168687,312 @@ var Common = __webpack_require__(53402);
 
 /***/ }),
 
+/***/ 13037:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+/**
+* The `Matter.Runner` module is an optional utility which provides a game loop,
+* that handles continuously updating a `Matter.Engine` for you within a browser.
+* It is intended for development and debugging purposes, but may also be suitable for simple games.
+* If you are using your own game loop instead, then you do not need the `Matter.Runner` module.
+* Instead just call `Engine.update(engine, delta)` in your own loop.
+*
+* See the included usage [examples](https://github.com/liabru/matter-js/tree/master/examples).
+*
+* @class Runner
+*/
+
+var Runner = {};
+
+module.exports = Runner;
+
+var Events = __webpack_require__(35810);
+var Engine = __webpack_require__(48413);
+var Common = __webpack_require__(53402);
+
+(function() {
+
+    Runner._maxFrameDelta = 1000 / 15;
+    Runner._frameDeltaFallback = 1000 / 60;
+    Runner._timeBufferMargin = 1.5;
+    Runner._elapsedNextEstimate = 1;
+    Runner._smoothingLowerBound = 0.1;
+    Runner._smoothingUpperBound = 0.9;
+
+
+    /**
+     * Creates a new Runner. The options parameter is an object that specifies any properties you wish to override the defaults.
+     * @method create
+     * @param {} options
+     */
+    Runner.create = function(options) {
+        var defaults = {
+            delta: 1000 / 60,
+            frameDelta: null,
+            frameDeltaSmoothing: true,
+            frameDeltaSnapping: true,
+            frameDeltaHistory: [],
+            frameDeltaHistorySize: 100,
+            frameRequestId: null,
+            timeBuffer: 0,
+            timeLastTick: null,
+            maxUpdates: null,
+            maxFrameTime: 1000 / 30,
+            lastUpdatesDeferred: 0,
+            enabled: true
+        };
+
+        var runner = Common.extend(defaults, options);
+
+        // for temporary back compatibility only
+        runner.fps = 0;
+
+        return runner;
+    };
+
+    /**
+     * Continuously ticks a `Matter.Engine` by calling `Runner.tick` on the `requestAnimationFrame` event.
+     * @method run
+     * @param {engine} engine
+     */
+    Runner.run = function(runner, engine) {
+        // create runner if engine is first argument
+        runner.timeBuffer = Runner._frameDeltaFallback;
+
+        (function onFrame(time){
+            runner.frameRequestId = Runner._onNextFrame(runner, onFrame);
+
+            if (time && runner.enabled) {
+                Runner.tick(runner, engine, time);
+            }
+        })();
+
+        return runner;
+    };
+
+    /**
+     * A game loop utility that updates the engine and renderer by one step (a 'tick').
+     * Features delta smoothing, time correction and fixed or dynamic timing.
+     * Consider just `Engine.update(engine, delta)` if you're using your own loop.
+     * @method tick
+     * @param {runner} runner
+     * @param {engine} engine
+     * @param {number} time
+     */
+    Runner.tick = function(runner, engine, time) {
+        var tickStartTime = Common.now(),
+            engineDelta = runner.delta,
+            updateCount = 0;
+
+            // fixed timestep
+        var frameDelta = time - runner.timeLastTick;
+
+        if (!frameDelta || !runner.timeLastTick || frameDelta > Math.max(Runner._maxFrameDelta, runner.maxFrameTime)) {
+            // dynamic timestep based on wall clock between calls
+            frameDelta = runner.frameDelta || Runner._frameDeltaFallback;
+        }
+
+        if (runner.frameDeltaSmoothing) {
+            // optimistically filter delta over a few frames, to improve stability
+            runner.frameDeltaHistory.push(frameDelta);
+            runner.frameDeltaHistory = runner.frameDeltaHistory.slice(-runner.frameDeltaHistorySize);
+            var deltaHistorySorted = runner.frameDeltaHistory.slice(0).sort();
+
+            // limit delta
+            var deltaHistoryWindow = runner.frameDeltaHistory.slice(
+                deltaHistorySorted.length * Runner._smoothingLowerBound,
+                deltaHistorySorted.length * Runner._smoothingUpperBound
+            );
+
+            // update engine timing object
+            var frameDeltaSmoothed = _mean(deltaHistoryWindow);
+            frameDelta = frameDeltaSmoothed || frameDelta;
+        }
+
+        if (runner.frameDeltaSnapping) {
+            frameDelta = 1000 / Math.round(1000 / frameDelta);
+        }
+        runner.frameDelta = frameDelta;
+        runner.timeLastTick = time;
+        runner.timeBuffer += runner.frameDelta;
+        runner.timeBuffer = Common.clamp(
+            runner.timeBuffer, 0, runner.frameDelta + engineDelta * Runner._timeBufferMargin
+        );
+        runner.lastUpdatesDeferred = 0;
+        var maxUpdates = runner.maxUpdates || Math.ceil(runner.maxFrameTime / engineDelta);
+        // create an event object
+        var event = {
+            timestamp: engine.timing.timestamp
+        };
+
+        Events.trigger(runner, 'beforeTick', event);
+
+        // fps counter
+
+        Events.trigger(runner, 'tick', event);
+
+        var updateStartTime = Common.now();
+        while (engineDelta > 0 && runner.timeBuffer >= engineDelta * Runner._timeBufferMargin) {
+        // update
+        Events.trigger(runner, 'beforeUpdate', event);
+
+            Engine.update(engine, engineDelta);
+        Events.trigger(runner, 'afterUpdate', event);
+
+            runner.timeBuffer -= engineDelta;
+            updateCount += 1;
+            var elapsedTimeTotal = Common.now() - tickStartTime,
+                elapsedTimeUpdates = Common.now() - updateStartTime,
+                elapsedNextEstimate = elapsedTimeTotal + Runner._elapsedNextEstimate * elapsedTimeUpdates / updateCount;
+            if (updateCount >= maxUpdates || elapsedNextEstimate > runner.maxFrameTime) {
+                runner.lastUpdatesDeferred = Math.round(Math.max(0, (runner.timeBuffer / engineDelta) - Runner._timeBufferMargin));
+                break;
+            }
+        }
+        engine.timing.lastUpdatesPerFrame = updateCount;
+        Events.trigger(runner, 'afterTick', event);
+        if (runner.frameDeltaHistory.length >= 100) {
+            if (runner.lastUpdatesDeferred && Math.round(runner.frameDelta / engineDelta) > maxUpdates) {
+                Common.warnOnce('Matter.Runner: runner reached runner.maxUpdates, see docs.');
+            } else if (runner.lastUpdatesDeferred) {
+                Common.warnOnce('Matter.Runner: runner reached runner.maxFrameTime, see docs.');
+            }
+            if (typeof runner.isFixed !== 'undefined') {
+                Common.warnOnce('Matter.Runner: runner.isFixed is now redundant, see docs.');
+            }
+            if (runner.deltaMin || runner.deltaMax) {
+                Common.warnOnce('Matter.Runner: runner.deltaMin and runner.deltaMax were removed, see docs.');
+            }
+            if (runner.fps !== 0) {
+                Common.warnOnce('Matter.Runner: runner.fps was replaced by runner.delta, see docs.');
+            }
+        }
+    };
+
+    /**
+     * Ends execution of `Runner.run` on the given `runner`, by canceling the animation frame request event loop.
+     * If you wish to only temporarily pause the engine, see `engine.enabled` instead.
+     * @method stop
+     * @param {runner} runner
+     */
+    Runner.stop = function(runner) {
+        Runner._cancelNextFrame(runner);
+    };
+
+    /**
+     * Alias for `Runner.run`.
+     * @method start
+     * @param {runner} runner
+     * @param {engine} engine
+     */
+    Runner._onNextFrame = function(runner, callback) {
+        if (typeof window !== 'undefined' && window.requestAnimationFrame) {
+            runner.frameRequestId = window.requestAnimationFrame(callback);
+        } else {
+            throw new Error('Matter.Runner: missing required global window.requestAnimationFrame.');
+        }
+        return runner.frameRequestId;
+    };
+    Runner._cancelNextFrame = function(runner) {
+        if (typeof window !== 'undefined' && window.cancelAnimationFrame) {
+            window.cancelAnimationFrame(runner.frameRequestId);
+        } else {
+            throw new Error('Matter.Runner: missing required global window.cancelAnimationFrame.');
+        }
+    };
+
+    var _mean = function(values) {
+        var result = 0,
+            valuesLength = values.length;
+        for (var i = 0; i < valuesLength; i += 1) {
+            result += values[i];
+        }
+        return (result / valuesLength) || 0;
+    };
+    Runner._mean = _mean;
+    /*
+    *
+    *  Events Documentation
+    *
+    */
+
+    /**
+    * Fired at the start of a tick, before any updates to the engine or timing
+    *
+    * @event beforeTick
+    * @param {} event An event object
+    * @param {number} event.timestamp The engine.timing.timestamp of the event
+    * @param {} event.source The source object of the event
+    * @param {} event.name The name of the event
+    */
+
+    /**
+    * Fired after engine timing updated, but just before update
+    *
+    * @event tick
+    * @param {} event An event object
+    * @param {number} event.timestamp The engine.timing.timestamp of the event
+    * @param {} event.source The source object of the event
+    * @param {} event.name The name of the event
+    */
+
+    /**
+    * Fired at the end of a tick, after engine update and after rendering
+    *
+    * @event afterTick
+    * @param {} event An event object
+    * @param {number} event.timestamp The engine.timing.timestamp of the event
+    * @param {} event.source The source object of the event
+    * @param {} event.name The name of the event
+    */
+
+    /**
+    * Fired before update
+    *
+    * @event beforeUpdate
+    * @param {} event An event object
+    * @param {number} event.timestamp The engine.timing.timestamp of the event
+    * @param {} event.source The source object of the event
+    * @param {} event.name The name of the event
+    */
+
+    /**
+    * Fired after update
+    *
+    * @event afterUpdate
+    * @param {} event An event object
+    * @param {number} event.timestamp The engine.timing.timestamp of the event
+    * @param {} event.source The source object of the event
+    * @param {} event.name The name of the event
+    */
+
+    /*
+    *
+    *  Properties Documentation
+    *
+    */
+
+    /**
+     * A flag that specifies whether the runner is running or not.
+     *
+     * @property enabled
+     * @type boolean
+     * @default true
+     */
+
+    /**
+     * A `Number` that specifies the time step between updates in milliseconds.
+     *
+     * @property delta
+     * @type number
+     * @default 1000 / 60
+     */
+
+})();
+
+
+/***/ }),
+
 /***/ 53614:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
@@ -167124,6 +169208,9 @@ var Vector = __webpack_require__(31725);
     Bodies.trapezoid = function(x, y, width, height, slope, options) {
         options = options || {};
 
+        if (slope >= 1) {
+            Common.warn('Bodies.trapezoid: slope parameter must be < 1.');
+        }
         slope *= 0.5;
         var roof = (1 - (slope * 2)) * width;
 
@@ -167996,6 +170083,42 @@ module.exports = Bounds;
         bounds.min.y = position.y;
         bounds.max.y = position.y + deltaY;
     };
+
+    /**
+     * Returns a translation vector that wraps the `objectBounds` inside the `bounds`.
+     * @method wrap
+     * @param {bounds} objectBounds The bounds of the object to wrap inside the bounds.
+     * @param {bounds} bounds The bounds to wrap the body inside.
+     * @param {number} [padding=0] - An amount added to the boundary.
+     * @returns {?Matter.Vector} A translation vector (only if wrapping is required).
+     */
+    Bounds.wrap = function(objectBounds, bounds, padding) {
+        var x = null,
+          y = null;
+
+        if (typeof bounds.min.x !== 'undefined' && typeof bounds.max.x !== 'undefined') {
+          if (objectBounds.min.x > bounds.max.x) {
+            x = bounds.min.x - objectBounds.max.x;
+          } else if (objectBounds.max.x < bounds.min.x) {
+            x = bounds.max.x - objectBounds.min.x;
+          }
+        }
+  
+        if (typeof bounds.min.y !== 'undefined' && typeof bounds.max.y !== 'undefined') {
+          if (objectBounds.min.y > bounds.max.y) {
+            y = bounds.min.y - objectBounds.max.y;
+          } else if (objectBounds.max.y < bounds.min.y) {
+            y = bounds.max.y - objectBounds.min.y;
+          }
+        }
+  
+        if (x !== null || y !== null) {
+          return {
+            x: x || 0,
+            y: y || 0
+          };
+        }
+      };
     
 })();
 
@@ -168947,484 +171070,6 @@ var Common = __webpack_require__(53402);
 
 /***/ }),
 
-/***/ 18210:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var Matter = __webpack_require__(19933);
-
-/**
- * An attractors plugin for matter.js.
- * See the readme for usage and examples.
- * @module MatterAttractors
- */
-var MatterAttractors =
-{
-    name: 'matter-attractors',
-    version: '0.1.7',
-    for: 'matter-js@^0.19.0',
-    silent: true,
-
-    // installs the plugin where `base` is `Matter`
-    // you should not need to call this directly.
-    install: function (base)
-    {
-        base.after('Body.create', function ()
-        {
-            MatterAttractors.Body.init(this);
-        });
-
-        base.before('Engine.update', function (engine)
-        {
-            MatterAttractors.Engine.update(engine);
-        });
-    },
-
-    Body:
-    {
-        /**
-         * Initialises the `body` to support attractors.
-         * This is called automatically by the plugin.
-         * @function MatterAttractors.Body.init
-         * @param {Matter.Body} body The body to init.
-         * @returns {void} No return value.
-         */
-        init: function (body)
-        {
-            body.plugin.attractors = body.plugin.attractors || [];
-        }
-    },
-
-    Engine:
-    {
-        /**
-         * Applies all attractors for all bodies in the `engine`.
-         * This is called automatically by the plugin.
-         * @function MatterAttractors.Engine.update
-         * @param {Matter.Engine} engine The engine to update.
-         * @returns {void} No return value.
-         */
-        update: function (engine)
-        {
-            var bodies = Matter.Composite.allBodies(engine.world);
-
-            for (var i = 0; i < bodies.length; i++)
-            {
-                var bodyA = bodies[i];
-                var attractors = bodyA.plugin.attractors;
-
-                if (attractors && attractors.length > 0)
-                {
-                    for (var j = 0; j < bodies.length; j++)
-                    {
-                        var bodyB = bodies[j];
-
-                        if (i !== j)
-                        {
-                            for (var k = 0; k < attractors.length; k++)
-                            {
-                                var attractor = attractors[k];
-                                var forceVector = attractor;
-
-                                if (Matter.Common.isFunction(attractor))
-                                {
-                                    forceVector = attractor(bodyA, bodyB);
-                                }
-
-                                if (forceVector)
-                                {
-                                    Matter.Body.applyForce(bodyB, bodyB.position, forceVector);
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    },
-
-    /**
-     * Defines some useful common attractor functions that can be used
-     * by pushing them to your body's `body.plugin.attractors` array.
-     * @namespace MatterAttractors.Attractors
-     * @property {number} gravityConstant The gravitational constant used by the gravity attractor.
-     */
-    Attractors:
-    {
-        gravityConstant: 0.001,
-
-        /**
-         * An attractor function that applies Newton's law of gravitation.
-         * Use this by pushing `MatterAttractors.Attractors.gravity` to your body's `body.plugin.attractors` array.
-         * The gravitational constant defaults to `0.001` which you can change
-         * at `MatterAttractors.Attractors.gravityConstant`.
-         * @function MatterAttractors.Attractors.gravity
-         * @param {Matter.Body} bodyA The first body.
-         * @param {Matter.Body} bodyB The second body.
-         * @returns {void} No return value.
-         */
-        gravity: function (bodyA, bodyB)
-        {
-            // use Newton's law of gravitation
-            var bToA = Matter.Vector.sub(bodyB.position, bodyA.position);
-            var distanceSq = Matter.Vector.magnitudeSquared(bToA) || 0.0001;
-            var normal = Matter.Vector.normalise(bToA);
-            var magnitude = -MatterAttractors.Attractors.gravityConstant * (bodyA.mass * bodyB.mass / distanceSq);
-            var force = Matter.Vector.mult(normal, magnitude);
-
-            // to apply forces to both bodies
-            Matter.Body.applyForce(bodyA, bodyA.position, Matter.Vector.neg(force));
-            Matter.Body.applyForce(bodyB, bodyB.position, force);
-        }
-    }
-};
-
-module.exports = MatterAttractors;
-
-/**
- * @namespace Matter.Body
- * @see http://brm.io/matter-js/docs/classes/Body.html
- */
-
-/**
- * This plugin adds a new property `body.plugin.attractors` to instances of `Matter.Body`.
- * This is an array of callback functions that will be called automatically
- * for every pair of bodies, on every engine update.
- * @property {Function[]} body.plugin.attractors
- * @memberof Matter.Body
- */
-
-/**
- * An attractor function calculates the force to be applied
- * to `bodyB`, it should either:
- * - return the force vector to be applied to `bodyB`
- * - or apply the force to the body(s) itself
- * @callback AttractorFunction
- * @param {Matter.Body} bodyA
- * @param {Matter.Body} bodyB
- * @returns {(Vector|undefined)} a force vector (optional)
- */
-
-
-/***/ }),
-
-/***/ 40178:
-/***/ ((module) => {
-
-/**
- * @author       @dxu https://github.com/dxu/matter-collision-events
- * @author       Richard Davey <rich@phaser.io>
- * @license      {@link https://opensource.org/licenses/MIT|MIT License}
- */
-
-var MatterCollisionEvents = {
-
-    name: 'matter-collision-events',
-    version: '0.1.6',
-    for: 'matter-js@^0.19.0',
-    silent: true,
-
-    install: function (matter)
-    {
-        matter.after('Engine.create', function ()
-        {
-            matter.Events.on(this, 'collisionStart', function (event)
-            {
-                event.pairs.map(function (pair)
-                {
-                    var bodyA = pair.bodyA;
-                    var bodyB = pair.bodyB;
-
-                    if (bodyA.gameObject)
-                    {
-                        bodyA.gameObject.emit('collide', bodyA, bodyB, pair);
-                    }
-
-                    if (bodyB.gameObject)
-                    {
-                        bodyB.gameObject.emit('collide', bodyB, bodyA, pair);
-                    }
-
-                    matter.Events.trigger(bodyA, 'onCollide', { pair: pair });
-                    matter.Events.trigger(bodyB, 'onCollide', { pair: pair });
-
-                    if (bodyA.onCollideCallback)
-                    {
-                        bodyA.onCollideCallback(pair);
-                    }
-
-                    if (bodyB.onCollideCallback)
-                    {
-                        bodyB.onCollideCallback(pair);
-                    }
-
-                    if (bodyA.onCollideWith[bodyB.id])
-                    {
-                        bodyA.onCollideWith[bodyB.id](bodyB, pair);
-                    }
-
-                    if (bodyB.onCollideWith[bodyA.id])
-                    {
-                        bodyB.onCollideWith[bodyA.id](bodyA, pair);
-                    }
-                });
-            });
-
-            matter.Events.on(this, 'collisionActive', function (event)
-            {
-                event.pairs.map(function (pair)
-                {
-                    var bodyA = pair.bodyA;
-                    var bodyB = pair.bodyB;
-
-                    if (bodyA.gameObject)
-                    {
-                        bodyA.gameObject.emit('collideActive', bodyA, bodyB, pair);
-                    }
-
-                    if (bodyB.gameObject)
-                    {
-                        bodyB.gameObject.emit('collideActive', bodyB, bodyA, pair);
-                    }
-
-                    matter.Events.trigger(bodyA, 'onCollideActive', { pair: pair });
-                    matter.Events.trigger(bodyB, 'onCollideActive', { pair: pair });
-
-                    if (bodyA.onCollideActiveCallback)
-                    {
-                        bodyA.onCollideActiveCallback(pair);
-                    }
-
-                    if (bodyB.onCollideActiveCallback)
-                    {
-                        bodyB.onCollideActiveCallback(pair);
-                    }
-                });
-            });
-
-            matter.Events.on(this, 'collisionEnd', function (event)
-            {
-                event.pairs.map(function (pair)
-                {
-                    var bodyA = pair.bodyA;
-                    var bodyB = pair.bodyB;
-
-                    if (bodyA.gameObject)
-                    {
-                        bodyA.gameObject.emit('collideEnd', bodyA, bodyB, pair);
-                    }
-
-                    if (bodyB.gameObject)
-                    {
-                        bodyB.gameObject.emit('collideEnd', bodyB, bodyA, pair);
-                    }
-
-                    matter.Events.trigger(bodyA, 'onCollideEnd', { pair: pair });
-                    matter.Events.trigger(bodyB, 'onCollideEnd', { pair: pair });
-
-                    if (bodyA.onCollideEndCallback)
-                    {
-                        bodyA.onCollideEndCallback(pair);
-                    }
-
-                    if (bodyB.onCollideEndCallback)
-                    {
-                        bodyB.onCollideEndCallback(pair);
-                    }
-                });
-            });
-        });
-    }
-};
-
-module.exports = MatterCollisionEvents;
-
-
-/***/ }),
-
-/***/ 74507:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var Matter = __webpack_require__(19933);
-
-/**
- * A coordinate wrapping plugin for matter.js.
- * See the readme for usage and examples.
- * @module MatterWrap
- */
-var MatterWrap = {
-  // plugin meta
-  name: 'matter-wrap', // PLUGIN_NAME
-  version: '0.1.4', // PLUGIN_VERSION
-  for: 'matter-js@^0.19.0',
-  silent: true, // no console log please
-
-  // installs the plugin where `base` is `Matter`
-  // you should not need to call this directly.
-  install: function(base) {
-    base.after('Engine.update', function() {
-      MatterWrap.Engine.update(this);
-    });
-  },
-
-  Engine: {
-    /**
-     * Updates the engine by wrapping bodies and composites inside `engine.world`.
-     * This is called automatically by the plugin.
-     * @function MatterWrap.Engine.update
-     * @param {Matter.Engine} engine The engine to update.
-     * @returns {void} No return value.
-     */
-    update: function(engine) {
-      var world = engine.world,
-        bodies = Matter.Composite.allBodies(world),
-        composites = Matter.Composite.allComposites(world);
-
-      for (var i = 0; i < bodies.length; i += 1) {
-        var body = bodies[i];
-
-        if (body.plugin.wrap) {
-          MatterWrap.Body.wrap(body, body.plugin.wrap);
-        }
-      }
-
-      for (i = 0; i < composites.length; i += 1) {
-        var composite = composites[i];
-
-        if (composite.plugin.wrap) {
-          MatterWrap.Composite.wrap(composite, composite.plugin.wrap);
-        }
-      }
-    }
-  },
-
-  Bounds: {
-    /**
-     * Returns a translation vector that wraps the `objectBounds` inside the `bounds`.
-     * @function MatterWrap.Bounds.wrap
-     * @param {Matter.Bounds} objectBounds The bounds of the object to wrap inside the bounds.
-     * @param {Matter.Bounds} bounds The bounds to wrap the body inside.
-     * @returns {?Matter.Vector} A translation vector (only if wrapping is required).
-     */
-    wrap: function(objectBounds, bounds) {
-      var x = null,
-        y = null;
-
-      if (typeof bounds.min.x !== 'undefined' && typeof bounds.max.x !== 'undefined') {
-        if (objectBounds.min.x > bounds.max.x) {
-          x = bounds.min.x - objectBounds.max.x;
-        } else if (objectBounds.max.x < bounds.min.x) {
-          x = bounds.max.x - objectBounds.min.x;
-        }
-      }
-
-      if (typeof bounds.min.y !== 'undefined' && typeof bounds.max.y !== 'undefined') {
-        if (objectBounds.min.y > bounds.max.y) {
-          y = bounds.min.y - objectBounds.max.y;
-        } else if (objectBounds.max.y < bounds.min.y) {
-          y = bounds.max.y - objectBounds.min.y;
-        }
-      }
-
-      if (x !== null || y !== null) {
-        return {
-          x: x || 0,
-          y: y || 0
-        };
-      }
-    }
-  },
-
-  Body: {
-    /**
-     * Wraps the `body` position such that it always stays within the given bounds.
-     * Upon crossing a boundary the body will appear on the opposite side of the bounds,
-     * while maintaining its velocity.
-     * This is called automatically by the plugin.
-     * @function MatterWrap.Body.wrap
-     * @param {Matter.Body} body The body to wrap.
-     * @param {Matter.Bounds} bounds The bounds to wrap the body inside.
-     * @returns {?Matter.Vector} The translation vector that was applied (only if wrapping was required).
-     */
-    wrap: function(body, bounds) {
-      var translation = MatterWrap.Bounds.wrap(body.bounds, bounds);
-
-      if (translation) {
-        Matter.Body.translate(body, translation);
-      }
-
-      return translation;
-    }
-  },
-
-  Composite: {
-    /**
-     * Returns the union of the bounds of all of the composite's bodies
-     * (not accounting for constraints).
-     * @function MatterWrap.Composite.bounds
-     * @param {Matter.Composite} composite The composite.
-     * @returns {Matter.Bounds} The composite bounds.
-     */
-    bounds: function(composite) {
-      var bodies = Matter.Composite.allBodies(composite),
-        vertices = [];
-
-      for (var i = 0; i < bodies.length; i += 1) {
-        var body = bodies[i];
-        vertices.push(body.bounds.min, body.bounds.max);
-      }
-
-      return Matter.Bounds.create(vertices);
-    },
-
-    /**
-     * Wraps the `composite` position such that it always stays within the given bounds.
-     * Upon crossing a boundary the composite will appear on the opposite side of the bounds,
-     * while maintaining its velocity.
-     * This is called automatically by the plugin.
-     * @function MatterWrap.Composite.wrap
-     * @param {Matter.Composite} composite The composite to wrap.
-     * @param {Matter.Bounds} bounds The bounds to wrap the composite inside.
-     * @returns {?Matter.Vector} The translation vector that was applied (only if wrapping was required).
-     */
-    wrap: function(composite, bounds) {
-      var translation = MatterWrap.Bounds.wrap(
-        MatterWrap.Composite.bounds(composite),
-        bounds
-      );
-
-      if (translation) {
-        Matter.Composite.translate(composite, translation);
-      }
-
-      return translation;
-    }
-  }
-};
-
-module.exports = MatterWrap;
-
-/**
- * @namespace Matter.Body
- * @see http://brm.io/matter-js/docs/classes/Body.html
- */
-
-/**
- * This plugin adds a new property `body.plugin.wrap` to instances of `Matter.Body`.
- * This is a `Matter.Bounds` instance that specifies the wrapping region.
- * @property {Matter.Bounds} body.plugin.wrap
- * @memberof Matter.Body
- */
-
-/**
- * This plugin adds a new property `composite.plugin.wrap` to instances of `Matter.Composite`.
- * This is a `Matter.Bounds` instance that specifies the wrapping region.
- * @property {Matter.Bounds} composite.plugin.wrap
- * @memberof Matter.Composite
- */
-
-
-/***/ }),
-
 /***/ 55973:
 /***/ ((module) => {
 
@@ -170101,7 +171746,7 @@ function points_eq(a,b,precision){
 
 /**
 * @author       Richard Davey <rich@phaser.io>
-* @copyright    2013-2024 Phaser Studio Inc.
+* @copyright    2013-2025 Phaser Studio Inc.
 * @license      {@link https://github.com/photonstorm/phaser3-plugin-template/blob/master/LICENSE|MIT License}
 */
 
@@ -170232,7 +171877,7 @@ module.exports = BasePlugin;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -170335,7 +171980,7 @@ module.exports = DefaultPlugins;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -170545,7 +172190,7 @@ module.exports = PluginCache;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -170558,6 +172203,7 @@ var GameObjectFactory = __webpack_require__(39429);
 var GetFastValue = __webpack_require__(95540);
 var PluginCache = __webpack_require__(37277);
 var Remove = __webpack_require__(72905);
+var CONST = __webpack_require__(8054);
 
 /**
  * @classdesc
@@ -170575,12 +172221,12 @@ var Remove = __webpack_require__(72905);
  *
  * A Global Plugin is a plugin that lives within the Plugin Manager rather than a Scene. You can get
  * access to it by calling `PluginManager.get` and providing a key. Any Scene that requests a plugin in
- * this way will all get access to the same plugin instance, allowing you to use a single plugin across
+ * this way will get access to the same plugin instance, allowing you to use a single plugin across
  * multiple Scenes.
  *
  * A Scene Plugin is a plugin dedicated to running within a Scene. These are different to Global Plugins
  * in that their instances do not live within the Plugin Manager, but within the Scene Systems class instead.
- * And that every Scene created is given its own unique instance of a Scene Plugin. Examples of core Scene
+ * Also, every Scene created is given its own unique instance of a Scene Plugin. Examples of core Scene
  * Plugins include the Input Plugin, the Tween Plugin and the physics Plugins.
  *
  * You can add a plugin to Phaser in three different ways:
@@ -170658,7 +172304,7 @@ var PluginManager = new Class({
          */
         this._pendingScene = [];
 
-        if (game.isBooted)
+        if (game.isBooted || game.config.renderType === CONST.HEADLESS)
         {
             this.boot();
         }
@@ -170669,7 +172315,7 @@ var PluginManager = new Class({
     },
 
     /**
-     * Run once the game has booted and installs all of the plugins configured in the Game Config.
+     * Runs once the game has booted and installs all of the plugins configured in the Game Config.
      *
      * @method Phaser.Plugins.PluginManager#boot
      * @protected
@@ -171453,7 +173099,7 @@ module.exports = PluginManager;
 
 /**
 * @author       Richard Davey <rich@phaser.io>
-* @copyright    2013-2024 Phaser Studio Inc.
+* @copyright    2013-2025 Phaser Studio Inc.
 * @license      {@link https://github.com/photonstorm/phaser3-plugin-template/blob/master/LICENSE|MIT License}
 */
 
@@ -171596,7 +173242,7 @@ module.exports = ScenePlugin;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -171622,7 +173268,7 @@ module.exports = {
 
 //  From https://github.com/ThaUnknown/rvfc-polyfill
 
-if (HTMLVideoElement && !('requestVideoFrameCallback' in HTMLVideoElement.prototype) && 'getVideoPlaybackQuality' in HTMLVideoElement.prototype)
+if (typeof HTMLVideoElement !== 'undefined' && !('requestVideoFrameCallback' in HTMLVideoElement.prototype) && 'getVideoPlaybackQuality' in HTMLVideoElement.prototype)
 {
     HTMLVideoElement.prototype._rvfcpolyfillmap = {}
     HTMLVideoElement.prototype.requestVideoFrameCallback = function (callback) {
@@ -171668,7 +173314,7 @@ if (HTMLVideoElement && !('requestVideoFrameCallback' in HTMLVideoElement.protot
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -172008,7 +173654,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -172064,7 +173710,7 @@ module.exports = ScaleModes;
 /**
  * @author       Richard Davey <rich@phaser.io>
  * @author       Felipe Alfonso <@bitnenfer>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -172077,6 +173723,7 @@ var Events = __webpack_require__(92503);
 var GetBlendModes = __webpack_require__(56373);
 var ScaleEvents = __webpack_require__(97480);
 var TextureEvents = __webpack_require__(69442);
+var GameEvents = __webpack_require__(8443);
 var TransformMatrix = __webpack_require__(61340);
 
 /**
@@ -172117,7 +173764,8 @@ var CanvasRenderer = new Class({
             clearBeforeRender: gameConfig.clearBeforeRender,
             backgroundColor: gameConfig.backgroundColor,
             antialias: gameConfig.antialias,
-            roundPixels: gameConfig.roundPixels
+            roundPixels: gameConfig.roundPixels,
+            transparent: gameConfig.transparent
         };
 
         /**
@@ -172176,8 +173824,8 @@ var CanvasRenderer = new Class({
         this.gameCanvas = game.canvas;
 
         var contextOptions = {
-            alpha: game.config.transparent,
-            desynchronized: game.config.desynchronized,
+            alpha: gameConfig.transparent,
+            desynchronized: gameConfig.desynchronized,
             willReadFrequently: false
         };
 
@@ -172206,7 +173854,7 @@ var CanvasRenderer = new Class({
          * @type {boolean}
          * @since 3.20.0
          */
-        this.antialias = game.config.antialias;
+        this.antialias = gameConfig.antialias;
 
         /**
          * The blend modes supported by the Canvas Renderer.
@@ -172289,7 +173937,24 @@ var CanvasRenderer = new Class({
      */
     init: function ()
     {
-        this.game.textures.once(TextureEvents.READY, this.boot, this);
+        var game = this.game;
+
+        game.events.once(GameEvents.BOOT, function ()
+        {
+            var config = this.config;
+
+            if (!config.transparent)
+            {
+                var ctx = this.gameContext;
+                var gameCanvas = this.gameCanvas;
+
+                ctx.fillStyle = config.backgroundColor.rgba;
+                ctx.fillRect(0, 0, gameCanvas.width, gameCanvas.height);
+            }
+
+        }, this);
+
+        game.textures.once(TextureEvents.READY, this.boot, this);
     },
 
     /**
@@ -172417,6 +174082,7 @@ var CanvasRenderer = new Class({
      * Called at the start of the render loop.
      *
      * @method Phaser.Renderer.Canvas.CanvasRenderer#preRender
+     * @fires Phaser.Renderer.Events#PRE_RENDER_CLEAR
      * @fires Phaser.Renderer.Events#PRE_RENDER
      * @since 3.0.0
      */
@@ -172431,6 +174097,8 @@ var CanvasRenderer = new Class({
         ctx.globalAlpha = 1;
         ctx.globalCompositeOperation = 'source-over';
         ctx.setTransform(1, 0, 0, 1, 0, 0);
+
+        this.emit(Events.PRE_RENDER_CLEAR);
 
         if (config.clearBeforeRender)
         {
@@ -172842,6 +174510,12 @@ var CanvasRenderer = new Class({
         var gx = sprite.x;
         var gy = sprite.y;
 
+        if (camera.roundPixels)
+        {
+            gx = Math.floor(gx);
+            gy = Math.floor(gy);
+        }
+
         spriteMatrix.applyITRS(gx, gy, sprite.rotation, sprite.scaleX * flipX, sprite.scaleY * flipY);
 
         camMatrix.copyFrom(camera.matrix);
@@ -172864,10 +174538,10 @@ var CanvasRenderer = new Class({
         //  Multiply by the Sprite matrix
         camMatrix.multiply(spriteMatrix);
 
-        if (camera.roundPixels)
+        if (camera.renderRoundPixels)
         {
-            camMatrix.e = Math.round(camMatrix.e);
-            camMatrix.f = Math.round(camMatrix.f);
+            camMatrix.e = Math.floor(camMatrix.e + 0.5);
+            camMatrix.f = Math.floor(camMatrix.f + 0.5);
         }
 
         ctx.save();
@@ -172887,26 +174561,24 @@ var CanvasRenderer = new Class({
 
         if (frameWidth > 0 && frameHeight > 0)
         {
+            var fw = frameWidth / res;
+            var fh = frameHeight / res;
+
             if (camera.roundPixels)
             {
-                ctx.drawImage(
-                    frame.source.image,
-                    frameX, frameY,
-                    frameWidth, frameHeight,
-                    Math.round(x), Math.round(y),
-                    Math.round(frameWidth / res), Math.round(frameHeight / res)
-                );
+                x = Math.floor(x + 0.5);
+                y = Math.floor(y + 0.5);
+                fw += 0.5;
+                fh += 0.5;
             }
-            else
-            {
-                ctx.drawImage(
-                    frame.source.image,
-                    frameX, frameY,
-                    frameWidth, frameHeight,
-                    x, y,
-                    frameWidth / res, frameHeight / res
-                );
-            }
+
+            ctx.drawImage(
+                frame.source.image,
+                frameX, frameY,
+                frameWidth, frameHeight,
+                x, y,
+                fw, fh
+            );
         }
 
         if (sprite.mask)
@@ -172944,7 +174616,7 @@ module.exports = CanvasRenderer;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -172968,7 +174640,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -173033,7 +174705,7 @@ module.exports = GetBlendModes;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -173102,7 +174774,7 @@ module.exports = SetTransform;
 
 /**
  * @author       Benjamin D. Richards <benjamindrichards@gmail.com>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -173139,7 +174811,7 @@ module.exports = 'losewebgl';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -173163,7 +174835,7 @@ module.exports = 'postrender';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -173188,7 +174860,7 @@ module.exports = 'prerender';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -173216,7 +174888,7 @@ module.exports = 'render';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -173243,7 +174915,7 @@ module.exports = 'resize';
 
 /**
  * @author       Benjamin D. Richards <benjamindrichards@gmail.com>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -173283,7 +174955,7 @@ module.exports = 'restorewebgl';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -173310,7 +174982,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -173347,7 +175019,7 @@ if (true)
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -173444,7 +175116,7 @@ module.exports = CanvasSnapshot;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -173556,7 +175228,7 @@ module.exports = WebGLSnapshot;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -173579,7 +175251,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -175091,7 +176763,7 @@ module.exports = PipelineManager;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -175251,17 +176923,39 @@ var RenderTarget = new Class({
          */
         this.forceClamp = forceClamp;
 
-        this.resize(width, height);
+        this.init(width, height);
 
         if (autoResize)
         {
-            this.setAutoResize(true);
+            this.renderer.on(Events.RESIZE, this.resize, this);
         }
         else
         {
             //  Block resizing unless this RT allows it
             this.autoResize = false;
         }
+    },
+
+    /**
+     * Sets up this Render Target to the given width and height, creating a new
+     * frame buffer and texture. This method is called automatically by the constructor
+     * and at no other time.
+     *
+     * @method Phaser.Renderer.WebGL.RenderTarget#init
+     * @since 3.86.0
+     *
+     * @param {number} width - The new width of this Render Target.
+     * @param {number} height - The new height of this Render Target.
+     */
+    init: function (width, height)
+    {
+        var renderer = this.renderer;
+
+        this.texture = renderer.createTextureFromSource(null, width, height, this.minFilter, this.forceClamp);
+        this.framebuffer = renderer.createFramebuffer(width, height, this.texture, this.hasDepthBuffer);
+
+        this.width = width;
+        this.height = height;
     },
 
     /**
@@ -175294,7 +176988,8 @@ var RenderTarget = new Class({
     },
 
     /**
-     * Resizes this Render Target.
+     * Resizes this Render Target as long as the given width and height are different
+     * to the current width and height.
      *
      * Deletes both the frame buffer and texture, if they exist and then re-creates
      * them using the new sizes.
@@ -175311,20 +177006,7 @@ var RenderTarget = new Class({
      */
     resize: function (width, height)
     {
-        width = Math.round(width * this.scale);
-        height = Math.round(height * this.scale);
-
-        if (width <= 0)
-        {
-            width = 1;
-        }
-
-        if (height <= 0)
-        {
-            height = 1;
-        }
-
-        if (this.autoResize && (width !== this.width || height !== this.height))
+        if (this.autoResize && this.willResize(width, height))
         {
             var renderer = this.renderer;
 
@@ -175356,19 +177038,17 @@ var RenderTarget = new Class({
      */
     willResize: function (width, height)
     {
+        if (typeof width !== 'number' || typeof height !== 'number')
+        {
+            return false;
+        }
+
         width = Math.round(width * this.scale);
         height = Math.round(height * this.scale);
 
-        if (width <= 0)
-        {
-            width = 1;
-        }
-
-        if (height <= 0)
-        {
-            height = 1;
-        }
-
+        width = Math.max(width, 1);
+        height = Math.max(height, 1);
+        
         return (width !== this.width || height !== this.height);
     },
 
@@ -175439,19 +177119,33 @@ var RenderTarget = new Class({
     },
 
     /**
-     * Clears this Render Target.
+     * Clears a portion or everything from this Render Target. To clear an area,
+     * specify the `x`, `y`, `width` and `height`.
+     * 
+     * @param {number} [x=0] - The left coordinate of the fill rectangle.
+     * @param {number} [y=0] - The top coordinate of the fill rectangle.
+     * @param {number} [width=this.width] - The width of the fill rectangle.
+     * @param {number} [height=this.height] - The height of the fill rectangle.
      *
      * @method Phaser.Renderer.WebGL.RenderTarget#clear
      * @since 3.50.0
      */
-    clear: function ()
+    clear: function (x, y, width, height)
     {
         var renderer = this.renderer;
         var gl = renderer.gl;
 
         renderer.pushFramebuffer(this.framebuffer);
 
-        gl.disable(gl.SCISSOR_TEST);
+        if (x !== undefined && y !== undefined && width !== undefined && height !== undefined)
+        {
+            gl.enable(gl.SCISSOR_TEST);
+            gl.scissor(x, y, width, height);
+        }
+        else
+        {
+            gl.disable(gl.SCISSOR_TEST);
+        }
 
         gl.clearColor(0, 0, 0, 0);
 
@@ -175523,7 +177217,7 @@ module.exports = RenderTarget;
  * @author       Richard Davey <rich@phaser.io>
  * @author       Felipe Alfonso <@bitnenfer>
  * @author       Matthew Groves <@doormat>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -175734,7 +177428,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -178408,7 +180102,7 @@ module.exports = WebGLPipeline;
 /**
  * @author       Richard Davey <rich@phaser.io>
  * @author       Felipe Alfonso <@bitnenfer>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -178732,7 +180426,7 @@ var WebGLRenderer = new Class({
         this.currentBlendMode = Infinity;
 
         /**
-         * Indicates if the the scissor state is enabled in WebGLRenderingContext
+         * Indicates if the scissor state is enabled in WebGLRenderingContext
          *
          * @name Phaser.Renderer.WebGL.WebGLRenderer#currentScissorEnabled
          * @type {boolean}
@@ -178761,7 +180455,7 @@ var WebGLRenderer = new Class({
 
         /**
          * The handler to invoke when the context is lost.
-         * This should not be changed and is set in the boot method.
+         * This should not be changed and is set in the init method.
          *
          * @name Phaser.Renderer.WebGL.WebGLRenderer#contextLostHandler
          * @type {function}
@@ -178771,13 +180465,33 @@ var WebGLRenderer = new Class({
 
         /**
          * The handler to invoke when the context is restored.
-         * This should not be changed and is set in the boot method.
+         * This should not be changed and is set in the init method.
          *
          * @name Phaser.Renderer.WebGL.WebGLRenderer#contextRestoredHandler
          * @type {function}
          * @since 3.19.0
          */
         this.contextRestoredHandler = NOOP;
+
+        /**
+         * The previous contextLostHandler that was in use.
+         * This is set when `setContextHandlers` is called.
+         *
+         * @name Phaser.Renderer.WebGL.WebGLRenderer#previousContextLostHandler
+         * @type {function}
+         * @since 3.19.0
+         */
+        this.previousContextLostHandler = NOOP;
+
+        /**
+         * The previous contextRestoredHandler that was in use.
+         * This is set when `setContextHandlers` is called.
+         *
+         * @name Phaser.Renderer.WebGL.WebGLRenderer#previousContextRestoredHandler
+         * @type {function}
+         * @since 3.19.0
+         */
+        this.previousContextRestoredHandler = NOOP;
 
         /**
          * The underlying WebGL context of the renderer.
@@ -178791,7 +180505,7 @@ var WebGLRenderer = new Class({
 
         /**
          * Array of strings that indicate which WebGL extensions are supported by the browser.
-         * This is populated in the `boot` method.
+         * This is populated in the `setExtensions` method.
          *
          * @name Phaser.Renderer.WebGL.WebGLRenderer#supportedExtensions
          * @type {string[]}
@@ -178804,6 +180518,8 @@ var WebGLRenderer = new Class({
          * If the browser supports the `ANGLE_instanced_arrays` extension, this property will hold
          * a reference to the glExtension for it.
          *
+         * This is populated in the `setExtensions` method.
+         *
          * @name Phaser.Renderer.WebGL.WebGLRenderer#instancedArraysExtension
          * @type {ANGLE_instanced_arrays}
          * @default null
@@ -178814,6 +180530,8 @@ var WebGLRenderer = new Class({
         /**
          * If the browser supports the `OES_vertex_array_object` extension, this property will hold
          * a reference to the glExtension for it.
+         *
+         * This is populated in the `setExtensions` method.
          *
          * @name Phaser.Renderer.WebGL.WebGLRenderer#vaoExtension
          * @type {OES_vertex_array_object}
@@ -179159,112 +180877,9 @@ var WebGLRenderer = new Class({
 
         this.gl = gl;
 
-        var _this = this;
+        this.setExtensions();
 
-        //  Load supported extensions
-        var setupExtensions = function ()
-        {
-            var exts = gl.getSupportedExtensions();
-
-            _this.supportedExtensions = exts;
-
-            var angleString = 'ANGLE_instanced_arrays';
-
-            _this.instancedArraysExtension = (exts.indexOf(angleString) > -1) ? gl.getExtension(angleString) : null;
-
-            var vaoString = 'OES_vertex_array_object';
-
-            _this.vaoExtension = (exts.indexOf(vaoString) > -1) ? gl.getExtension(vaoString) : null;
-
-        };
-
-        setupExtensions();
-
-        this.contextLostHandler = function (event)
-        {
-            _this.contextLost = true;
-
-            if (console)
-            {
-                console.warn('WebGL Context lost. Renderer disabled');
-            }
-
-            _this.emit(Events.LOSE_WEBGL, _this);
-
-            event.preventDefault();
-        };
-
-        canvas.addEventListener('webglcontextlost', this.contextLostHandler, false);
-
-        this.contextRestoredHandler = function (event)
-        {
-            if (gl.isContextLost())
-            {
-                if (console)
-                {
-                    console.log('WebGL Context restored, but context is still lost');
-                }
-                return;
-            }
-
-            // Clear "current" settings so they can be set again.
-            _this.currentProgram = null;
-            _this.currentFramebuffer = null;
-            _this.setBlendMode(CONST.BlendModes.NORMAL);
-
-            // Settings we DON'T need to reset:
-            // Scissor is set during preRender.
-            // Mask is set during preRender.
-            // Camera mask is set during preRenderCamera.
-
-            // Restore GL flags.
-            gl.disable(gl.BLEND);
-            gl.disable(gl.DEPTH_TEST);
-            gl.enable(gl.CULL_FACE);
-
-            // Re-enable compressed texture formats.
-            _this.compression = _this.getCompressedTextures();
-
-            // Restore wrapped GL objects.
-            // Order matters, as some wrappers depend on others.
-            var wrapperCreateResource = function (wrapper)
-            {
-                wrapper.createResource();
-            };
-            ArrayEach(_this.glTextureWrappers, wrapperCreateResource);
-            ArrayEach(_this.glBufferWrappers, wrapperCreateResource);
-            ArrayEach(_this.glFramebufferWrappers, wrapperCreateResource);
-            ArrayEach(_this.glProgramWrappers, wrapperCreateResource);
-            ArrayEach(_this.glAttribLocationWrappers, wrapperCreateResource);
-            ArrayEach(_this.glUniformLocationWrappers, wrapperCreateResource);
-
-            // Create temporary textures.
-            _this.createTemporaryTextures();
-
-            // Restore pipelines.
-            _this.pipelines.restoreContext();
-
-            // Apply resize.
-            _this.resize(_this.game.scale.baseSize.width, _this.game.scale.baseSize.height);
-
-            // Restore GL extensions.
-            setupExtensions();
-
-            // Context has been restored.
-
-            _this.contextLost = false;
-
-            if (console)
-            {
-                console.warn('WebGL Context restored. Renderer running again.');
-            }
-
-            _this.emit(Events.RESTORE_WEBGL, _this);
-
-            event.preventDefault();
-        };
-
-        canvas.addEventListener('webglcontextrestored', this.contextRestoredHandler, false);
+        this.setContextHandlers();
 
         //  Set it back into the Game, so developers can access it from there too
         game.context = gl;
@@ -179336,6 +180951,7 @@ var WebGLRenderer = new Class({
         gl.enable(gl.BLEND);
 
         gl.clearColor(clearColor.redGL, clearColor.greenGL, clearColor.blueGL, clearColor.alphaGL);
+        gl.clear(gl.COLOR_BUFFER_BIT);
 
         //  Mipmaps
         var validMipMaps = [ 'NEAREST', 'LINEAR', 'NEAREST_MIPMAP_NEAREST', 'LINEAR_MIPMAP_NEAREST', 'NEAREST_MIPMAP_LINEAR', 'LINEAR_MIPMAP_LINEAR' ];
@@ -179413,7 +181029,193 @@ var WebGLRenderer = new Class({
     },
 
     /**
-     * Create temporary WebGL textures to stop WebGL errors on mac os
+     * Queries the GL context to get the supported extensions.
+     *
+     * Then sets them into the `supportedExtensions`, `instancedArraysExtension` and `vaoExtension` properties.
+     *
+     * Called automatically during the `init` method.
+     *
+     * @method Phaser.Renderer.WebGL.WebGLRenderer#setExtensions
+     * @since 3.85.2
+     */
+    setExtensions: function ()
+    {
+        var gl = this.gl;
+
+        var exts = gl.getSupportedExtensions();
+
+        this.supportedExtensions = exts;
+
+        var angleString = 'ANGLE_instanced_arrays';
+
+        this.instancedArraysExtension = (exts.indexOf(angleString) > -1) ? gl.getExtension(angleString) : null;
+
+        var vaoString = 'OES_vertex_array_object';
+
+        this.vaoExtension = (exts.indexOf(vaoString) > -1) ? gl.getExtension(vaoString) : null;
+    },
+
+    /**
+     * Sets the handlers that are called when WebGL context is lost or restored by the browser.
+     *
+     * The default handlers are referenced via the properties `WebGLRenderer.contextLostHandler` and `WebGLRenderer.contextRestoredHandler`.
+     * By default, these map to the methods `WebGLRenderer.dispatchContextLost` and `WebGLRenderer.dispatchContextRestored`.
+     *
+     * You can override these handlers with your own via this method.
+     *
+     * If you do override them, make sure that your handlers invoke the methods `WebGLRenderer.dispatchContextLost` and `WebGLRenderer.dispatchContextRestored` in due course, otherwise the renderer will not be able to restore itself fully.
+     *
+     * @method Phaser.Renderer.WebGL.WebGLRenderer#setContextHandlers
+     * @since 3.85.0
+     *
+     * @param {function} [contextLost] - Custom handler for responding to the WebGL context lost event. Set as `undefined` to use the default handler.
+     * @param {function} [contextRestored] - Custom handler for responding to the WebGL context restored event. Set as `undefined` to use the default handler.
+     */
+    setContextHandlers: function (contextLost, contextRestored)
+    {
+        if (this.previousContextLostHandler)
+        {
+            this.canvas.removeEventListener('webglcontextlost', this.previousContextLostHandler, false);
+        }
+        if (this.previousContextRestoredHandler)
+        {
+            this.canvas.removeEventListener('webglcontextlost', this.previousContextRestoredHandler, false);
+        }
+
+        if (typeof contextLost === 'function')
+        {
+            this.contextLostHandler = contextLost.bind(this);
+        }
+        else
+        {
+            this.contextLostHandler = this.dispatchContextLost.bind(this);
+        }
+
+        if (typeof contextRestored === 'function')
+        {
+            this.contextRestoredHandler = contextRestored.bind(this);
+        }
+        else
+        {
+            this.contextRestoredHandler = this.dispatchContextRestored.bind(this);
+        }
+
+        this.canvas.addEventListener('webglcontextlost', this.contextLostHandler, false);
+        this.canvas.addEventListener('webglcontextrestored', this.contextRestoredHandler, false);
+
+        this.previousContextLostHandler = this.contextLostHandler;
+        this.previousContextRestoredHandler = this.contextRestoredHandler;
+    },
+
+    /**
+     * This method is called when the WebGL context is lost. By default this is bound to the property `WebGLRenderer.contextLostHandler`.
+     * If you override the context loss handler via the `setContextHandlers` method then be sure to invoke this method in due course.
+     *
+     * @method Phaser.Renderer.WebGL.WebGLRenderer#dispatchContextLost
+     * @since 3.85.0
+     *
+     * @param {WebGLContextEvent } event - The WebGL context lost Event.
+     */
+    dispatchContextLost: function (event)
+    {
+        this.contextLost = true;
+
+        if (console)
+        {
+            console.warn('WebGL Context lost. Renderer disabled');
+        }
+
+        this.emit(Events.LOSE_WEBGL, this);
+
+        event.preventDefault();
+    },
+
+    /**
+     * This method is called when the WebGL context is restored. By default this is bound to the property `WebGLRenderer.contextRestoredHandler`.
+     * If you override the context restored handler via the `setContextHandlers` method then be sure to invoke this method in due course.
+     *
+     * @method Phaser.Renderer.WebGL.WebGLRenderer#dispatchContextRestored
+     * @since 3.85.0
+     *
+     * @param {WebGLContextEvent } event - The WebGL context restored Event.
+     */
+    dispatchContextRestored: function (event)
+    {
+        var gl = this.gl;
+
+        if (gl.isContextLost())
+        {
+            if (console)
+            {
+                console.log('WebGL Context restored, but context is still lost');
+            }
+
+            return;
+        }
+
+        // Clear "current" settings so they can be set again.
+        this.currentProgram = null;
+        this.currentFramebuffer = null;
+        this.setBlendMode(CONST.BlendModes.NORMAL);
+
+        // Settings we DON'T need to reset:
+        // Scissor is set during preRender.
+        // Mask is set during preRender.
+        // Camera mask is set during preRenderCamera.
+
+        // Restore GL flags.
+        gl.disable(gl.BLEND);
+        gl.disable(gl.DEPTH_TEST);
+        gl.enable(gl.CULL_FACE);
+
+        // Re-enable compressed texture formats.
+        this.compression = this.getCompressedTextures();
+
+        // Restore wrapped GL objects.
+        // Order matters, as some wrappers depend on others.
+        var wrapperCreateResource = function (wrapper)
+        {
+            wrapper.createResource();
+        };
+
+        ArrayEach(this.glTextureWrappers, wrapperCreateResource);
+        ArrayEach(this.glBufferWrappers, wrapperCreateResource);
+        ArrayEach(this.glFramebufferWrappers, wrapperCreateResource);
+        ArrayEach(this.glProgramWrappers, wrapperCreateResource);
+        ArrayEach(this.glAttribLocationWrappers, wrapperCreateResource);
+        ArrayEach(this.glUniformLocationWrappers, wrapperCreateResource);
+
+        // Create temporary textures.
+        this.createTemporaryTextures();
+
+        // Restore pipelines.
+        this.pipelines.restoreContext();
+
+        // Apply resize.
+        this.resize(this.game.scale.baseSize.width, this.game.scale.baseSize.height);
+
+        // Restore GL extensions.
+        this.setExtensions();
+
+        // Context has been restored.
+
+        this.contextLost = false;
+
+        if (console)
+        {
+            console.warn('WebGL Context restored. Renderer running again.');
+        }
+
+        this.emit(Events.RESTORE_WEBGL, this);
+
+        event.preventDefault();
+    },
+
+    /**
+     * Create temporary WebGL textures to stop WebGL errors on macOS.
+     *
+     * @method Phaser.Renderer.WebGL.WebGLRenderer#createTemporaryTextures
+     * @since 3.60.0
      */
     createTemporaryTextures: function ()
     {
@@ -180952,6 +182754,7 @@ var WebGLRenderer = new Class({
      * Clears the current vertex buffer and updates pipelines.
      *
      * @method Phaser.Renderer.WebGL.WebGLRenderer#preRender
+     * @fires Phaser.Renderer.Events#PRE_RENDER_CLEAR
      * @fires Phaser.Renderer.Events#PRE_RENDER
      * @since 3.0.0
      */
@@ -180963,6 +182766,8 @@ var WebGLRenderer = new Class({
 
         //  Make sure we are bound to the main frame buffer
         gl.bindFramebuffer(gl.FRAMEBUFFER, null);
+
+        this.emit(Events.PRE_RENDER_CLEAR);
 
         if (this.config.clearBeforeRender)
         {
@@ -181437,7 +183242,7 @@ var WebGLRenderer = new Class({
      * If the `dstTexture` parameter is given, the WebGL Texture is updated, rather than created fresh.
      *
      * @method Phaser.Renderer.WebGL.WebGLRenderer#videoToTexture
-     * @since 3.90.0
+     * @since 3.85.0
      *
      * @param {HTMLVideoElement} srcVideo - The Video to create the WebGL Texture from
      * @param {Phaser.Renderer.WebGL.Wrappers.WebGLTextureWrapper} [dstTexture] - The destination WebGLTextureWrapper to set.
@@ -181670,7 +183475,7 @@ module.exports = WebGLRenderer;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -182925,7 +184730,7 @@ module.exports = WebGLShader;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -183006,7 +184811,7 @@ module.exports = WEBGL_CONST;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -183047,7 +184852,7 @@ module.exports = WebGL;
 /**
  * @author       Richard Davey <rich@phaser.io>
  * @author       Felipe Alfonso <@bitnenfer>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -183197,7 +185002,7 @@ module.exports = BitmapMaskPipeline;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -183822,7 +185627,7 @@ module.exports = FXPipeline;
 /**
  * @author       Richard Davey <rich@phaser.io>
  * @author       Felipe Alfonso <@bitnenfer>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -184113,6 +185918,13 @@ var LightPipeline = new Class({
             rotation = gameObject.rotation;
         }
 
+        if (this.currentBatch === null)
+        {
+            this.createBatch(texture);
+
+            this.addTextureToBatch(normalMap);
+        }
+
         this.setNormalMapRotation(rotation);
 
         return 0;
@@ -184158,6 +185970,13 @@ var LightPipeline = new Class({
         else
         {
             this.setNormalMapRotation(gameObject.rotation);
+        }
+
+        if (this.currentBatch === null)
+        {
+            this.createBatch(texture);
+
+            this.addTextureToBatch(normalMap);
         }
 
         return 0;
@@ -184374,7 +186193,7 @@ module.exports = LightPipeline;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -184418,7 +186237,6 @@ var WebGLPipeline = __webpack_require__(29100);
  * The default shader uniforms for this pipeline are:
  *
  * `uProjectionMatrix` (mat4)
- * `uRoundPixels` (int)
  * `uResolution` (vec2)
  * `uMainSampler` (sampler2D, or sampler2D array)
  *
@@ -184485,7 +186303,6 @@ var MobilePipeline = new Class({
 
         this.set1i('uMainSampler', 0);
         this.set2f('uResolution', renderer.width, renderer.height);
-        this.set1i('uRoundPixels', renderer.config.roundPixels);
     }
 
 });
@@ -184501,7 +186318,7 @@ module.exports = MobilePipeline;
 /**
  * @author       Richard Davey <rich@phaser.io>
  * @author       Felipe Alfonso <@bitnenfer>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -184542,7 +186359,6 @@ var WebGLPipeline = __webpack_require__(29100);
  * The default shader uniforms for this pipeline are:
  *
  * `uProjectionMatrix` (mat4)
- * `uRoundPixels` (int)
  * `uResolution` (vec2)
  * `uMainSampler` (sampler2D, or sampler2D array)
  *
@@ -184784,7 +186600,6 @@ var MultiPipeline = new Class({
 
         this.set1iv('uMainSampler', renderer.textureIndexes);
         this.set2f('uResolution', renderer.width, renderer.height);
-        this.set1i('uRoundPixels', renderer.config.roundPixels);
     },
 
     /**
@@ -184874,6 +186689,12 @@ var MultiPipeline = new Class({
         var gx = gameObject.x;
         var gy = gameObject.y;
 
+        if (camera.roundPixels)
+        {
+            gx = Math.floor(gx);
+            gy = Math.floor(gy);
+        }
+
         spriteMatrix.applyITRS(gx, gy, gameObject.rotation, gameObject.scaleX * flipX, gameObject.scaleY * flipY);
 
         camMatrix.copyFrom(camera.matrix);
@@ -184896,7 +186717,7 @@ var MultiPipeline = new Class({
         //  Multiply by the Sprite matrix, store result in calcMatrix
         camMatrix.multiply(spriteMatrix, calcMatrix);
 
-        var quad = calcMatrix.setQuad(x, y, x + frameWidth, y + frameHeight);
+        var quad = calcMatrix.setQuad(x, y, x + frameWidth, y + frameHeight, camera.renderRoundPixels);
 
         var getTint = Utils.getTintAppendFloatAlpha;
         var cameraAlpha = camera.alpha;
@@ -184914,8 +186735,6 @@ var MultiPipeline = new Class({
         var unit = this.setGameObject(gameObject, frame);
 
         this.manager.preBatch(gameObject);
-
-        this.currentShader.set1i('uRoundPixels', camera.roundPixels);
 
         this.batchQuad(gameObject, quad[0], quad[1], quad[2], quad[3], quad[4], quad[5], quad[6], quad[7], u0, v0, u1, v1, tintTL, tintTR, tintBL, tintBR, gameObject.tintFill, texture, unit);
 
@@ -185054,6 +186873,12 @@ var MultiPipeline = new Class({
             y += srcHeight;
         }
 
+        if (camera.roundPixels)
+        {
+            srcX = Math.floor(srcX);
+            srcY = Math.floor(srcY);
+        }
+        
         spriteMatrix.applyITRS(srcX, srcY, rotation, scaleX, scaleY);
 
         camMatrix.copyFrom(camera.matrix);
@@ -185076,7 +186901,7 @@ var MultiPipeline = new Class({
         //  Multiply by the Sprite matrix, store result in calcMatrix
         camMatrix.multiply(spriteMatrix, calcMatrix);
 
-        var quad = calcMatrix.setQuad(x, y, x + width, y + height);
+        var quad = calcMatrix.setQuad(x, y, x + width, y + height, camera.renderRoundPixels);
 
         if (textureUnit === undefined || textureUnit === null)
         {
@@ -185087,8 +186912,6 @@ var MultiPipeline = new Class({
         {
             this.manager.preBatch(gameObject);
         }
-
-        this.currentShader.set1i('uRoundPixels', camera.roundPixels);
 
         this.batchQuad(gameObject, quad[0], quad[1], quad[2], quad[3], quad[4], quad[5], quad[6], quad[7], u0, v0, u1, v1, tintTL, tintTR, tintBL, tintBR, tintEffect, texture, textureUnit);
 
@@ -185217,8 +187040,6 @@ var MultiPipeline = new Class({
 
         var tint = this.fillTint;
 
-        this.currentShader.set1i('uRoundPixels', false);
-
         this.batchTri(null, tx0, ty0, tx1, ty1, tx2, ty2, 0, 0, 1, 1, tint.TL, tint.TR, tint.BL, 2);
     },
 
@@ -185309,8 +187130,6 @@ var MultiPipeline = new Class({
 
         polygonIndexArray = Earcut(polygonCache);
         length = polygonIndexArray.length;
-
-        this.currentShader.set1i('uRoundPixels', false);
 
         for (var index = 0; index < length; index += 3)
         {
@@ -185465,8 +187284,6 @@ var MultiPipeline = new Class({
         var tintBL = tint.BL;
         var tintBR = tint.BR;
 
-        this.currentShader.set1i('uRoundPixels', false);
-
         //  TL, BL, BR, TR
         this.batchQuad(null, tlX, tlY, blX, blY, brX, brY, trX, trY, 0, 0, 1, 1, tintTL, tintTR, tintBL, tintBR, 2);
 
@@ -185545,7 +187362,7 @@ module.exports = MultiPipeline;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -185727,7 +187544,7 @@ module.exports = PointLightPipeline;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -185983,7 +187800,6 @@ var PostFXPipeline = new Class({
 
         this.set1i('uMainSampler', 0);
         this.set2f('uResolution', renderer.width, renderer.height);
-        this.set1i('uRoundPixels', renderer.config.roundPixels);
 
         var targets = this.renderTargets;
 
@@ -186386,7 +188202,7 @@ module.exports = PostFXPipeline;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -186642,7 +188458,6 @@ var PreFXPipeline = new Class({
         this.currentShader = this.copyShader;
 
         this.set2f('uResolution', renderer.width, renderer.height);
-        this.set1i('uRoundPixels', renderer.config.roundPixels);
     },
 
     /**
@@ -186742,7 +188557,7 @@ var PreFXPipeline = new Class({
 
         //  targetBounds is the same size as the fbo and centered on the spriteBounds
         //  so we can use it when we re-render this back to the game
-        CenterOn(targetBounds, bounds.centerX, bounds.centerY);
+        CenterOn(targetBounds, Math.round(bounds.centerX), Math.round(bounds.centerY));
 
         this.tempSprite = gameObject;
 
@@ -186756,7 +188571,6 @@ var PreFXPipeline = new Class({
 
         this.set1i('uMainSampler', 0);
         this.set2f('uResolution', renderer.width, renderer.height);
-        this.set1i('uRoundPixels', renderer.config.roundPixels);
 
         this.flipProjectionMatrix(true);
 
@@ -186903,7 +188717,6 @@ var PreFXPipeline = new Class({
 
         this.set1i('uMainSampler', 0);
         this.set2f('uResolution', renderer.width, renderer.height);
-        this.set1i('uRoundPixels', renderer.config.roundPixels);
 
         sprite.preFX.onFXCopy(this);
 
@@ -187316,7 +189129,7 @@ module.exports = PreFXPipeline;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -187346,7 +189159,6 @@ var MultiPipeline = __webpack_require__(57516);
  * The default shader uniforms for this pipeline are:
  *
  * `uProjectionMatrix` (mat4)
- * `uRoundPixels` (int)
  * `uResolution` (vec2)
  * `uMainSampler` (sampler2D, or sampler2D array)
  *
@@ -187386,7 +189198,7 @@ module.exports = RopePipeline;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -187420,7 +189232,6 @@ var WebGLPipeline = __webpack_require__(29100);
  * The default shader uniforms for this pipeline are:
  *
  * `uProjectionMatrix` (mat4)
- * `uRoundPixels` (int)
  * `uResolution` (vec2)
  * `uMainSampler` (sampler2D, or sampler2D array)
  *
@@ -187455,7 +189266,6 @@ var SinglePipeline = new Class({
 
         this.set1i('uMainSampler', 0);
         this.set2f('uResolution', renderer.width, renderer.height);
-        this.set1i('uRoundPixels', renderer.config.roundPixels);
     }
 
 });
@@ -187470,7 +189280,7 @@ module.exports = SinglePipeline;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -188271,7 +190081,7 @@ module.exports = UtilityPipeline;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -188399,7 +190209,7 @@ module.exports = PIPELINE_CONST;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -188425,7 +190235,7 @@ module.exports = 'pipelineafterflush';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -188451,7 +190261,7 @@ module.exports = 'pipelinebeforeflush';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -188476,7 +190286,7 @@ module.exports = 'pipelinebind';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -188500,7 +190310,7 @@ module.exports = 'pipelineboot';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -188524,7 +190334,7 @@ module.exports = 'pipelinedestroy';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -188549,7 +190359,7 @@ module.exports = 'pipelinerebind';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -188576,7 +190386,7 @@ module.exports = 'pipelineresize';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -188604,7 +190414,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -188679,7 +190489,7 @@ module.exports = BarrelFXPipeline;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -188834,7 +190644,7 @@ module.exports = BloomFXPipeline;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -189042,7 +190852,7 @@ module.exports = BlurFXPipeline;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -189202,7 +191012,7 @@ module.exports = BokehFXPipeline;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -189341,7 +191151,7 @@ module.exports = CircleFXPipeline;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -189415,7 +191225,7 @@ module.exports = ColorMatrixFXPipeline;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -189536,7 +191346,7 @@ module.exports = DisplacementFXPipeline;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -189659,7 +191469,7 @@ module.exports = GlowFXPipeline;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -189805,7 +191615,7 @@ module.exports = GradientFXPipeline;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -189892,7 +191702,7 @@ module.exports = PixelateFXPipeline;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -190029,7 +191839,7 @@ module.exports = ShadowFXPipeline;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -190148,7 +191958,7 @@ module.exports = ShineFXPipeline;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -190251,7 +192061,7 @@ module.exports = VignetteFXPipeline;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -190380,7 +192190,7 @@ module.exports = WipeFXPipeline;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -190419,7 +192229,7 @@ module.exports = FX;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -191321,7 +193131,6 @@ module.exports = [
     '#define SHADER_NAME PHASER_MOBILE_VS',
     'precision mediump float;',
     'uniform mat4 uProjectionMatrix;',
-    'uniform int uRoundPixels;',
     'uniform vec2 uResolution;',
     'attribute vec2 inPosition;',
     'attribute vec2 inTexCoord;',
@@ -191334,10 +193143,6 @@ module.exports = [
     'void main ()',
     '{',
     '    gl_Position = uProjectionMatrix * vec4(inPosition, 1.0, 1.0);',
-    '    if (uRoundPixels == 1)',
-    '    {',
-    '        gl_Position.xy = floor(((gl_Position.xy + 1.0) * 0.5 * uResolution) + 0.5) / uResolution * 2.0 - 1.0;',
-    '    }',
     '    outTexCoord = inTexCoord;',
     '    outTint = inTint;',
     '    outTintEffect = inTintEffect;',
@@ -191390,7 +193195,6 @@ module.exports = [
     '#define SHADER_NAME PHASER_MULTI_VS',
     'precision mediump float;',
     'uniform mat4 uProjectionMatrix;',
-    'uniform int uRoundPixels;',
     'uniform vec2 uResolution;',
     'attribute vec2 inPosition;',
     'attribute vec2 inTexCoord;',
@@ -191404,10 +193208,6 @@ module.exports = [
     'void main ()',
     '{',
     '    gl_Position = uProjectionMatrix * vec4(inPosition, 1.0, 1.0);',
-    '    if (uRoundPixels == 1)',
-    '    {',
-    '        gl_Position.xy = floor(((gl_Position.xy + 1.0) * 0.5 * uResolution) + 0.5) / uResolution * 2.0 - 1.0;',
-    '    }',
     '    outTexCoord = inTexCoord;',
     '    outTexId = inTexId;',
     '    outTint = inTint;',
@@ -191552,7 +193352,6 @@ module.exports = [
     '#define SHADER_NAME PHASER_SINGLE_VS',
     'precision mediump float;',
     'uniform mat4 uProjectionMatrix;',
-    'uniform int uRoundPixels;',
     'uniform vec2 uResolution;',
     'attribute vec2 inPosition;',
     'attribute vec2 inTexCoord;',
@@ -191565,10 +193364,6 @@ module.exports = [
     'void main ()',
     '{',
     '    gl_Position = uProjectionMatrix * vec4(inPosition, 1.0, 1.0);',
-    '    if (uRoundPixels == 1)',
-    '    {',
-    '        gl_Position.xy = floor(((gl_Position.xy + 1.0) * 0.5 * uResolution) + 0.5) / uResolution * 2.0 - 1.0;',
-    '    }',
     '    outTexCoord = inTexCoord;',
     '    outTint = inTint;',
     '    outTintEffect = inTintEffect;',
@@ -191582,8 +193377,8 @@ module.exports = [
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 /**
- * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @author       Richard Davey <rich@photonstorm.com>
+ * @copyright    2013-2023 Photon Storm Ltd.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -191638,7 +193433,7 @@ module.exports = {
 
 /**
  * @author       Benjamin D. Richards <benjamindrichards@gmail.com>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -191762,7 +193557,7 @@ module.exports = WebGLAttribLocationWrapper;
 
 /**
  * @author       Benjamin D. Richards <benjamindrichards@gmail.com>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -191912,15 +193707,15 @@ module.exports = WebGLBufferWrapper;
 
 /**
  * @author       Benjamin D. Richards <benjamindrichards@gmail.com>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
 var Class = __webpack_require__(83419);
 
+// Possible errors that can be thrown by `gl.checkFramebufferStatus()`.
 /**
- * @ignore
- * Possible errors that can be thrown by `gl.checkFramebufferStatus()`.
+ * @ignore 
  */
 var errors = {
     36054: 'Incomplete Attachment',
@@ -192128,7 +193923,7 @@ module.exports = WebGLFramebufferWrapper;
 
 /**
  * @author       Benjamin D. Richards <benjamindrichards@gmail.com>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -192293,7 +194088,7 @@ module.exports = WebGLProgramWrapper;
 
 /**
  * @author       Benjamin D. Richards <benjamindrichards@gmail.com>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -192504,7 +194299,7 @@ var WebGLTextureWrapper = new Class({
     createResource: function ()
     {
         var gl = this.gl;
-        
+
         if (gl.isContextLost())
         {
             // GL state can't be updated right now.
@@ -192584,7 +194379,7 @@ var WebGLTextureWrapper = new Class({
      *
      * @function Phaser.Renderer.WebGL.Wrappers.WebGLTextureWrapper#_processTexture
      * @protected
-     * @since 3.90.0
+     * @since 3.85.0
      * @ignore
      */
     _processTexture: function ()
@@ -192731,7 +194526,7 @@ module.exports = WebGLTextureWrapper;
 
 /**
  * @author       Benjamin D. Richards <benjamindrichards@gmail.com>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -192855,7 +194650,7 @@ module.exports = WebGLUniformLocationWrapper;
 
 /**
  * @author       Benjamin D. Richards <benjamindrichards@gmail.com>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -192882,12 +194677,13 @@ module.exports = Wrappers;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
 var CONST = __webpack_require__(13560);
 var Class = __webpack_require__(83419);
+var Clamp = __webpack_require__(45319);
 var EventEmitter = __webpack_require__(50792);
 var Events = __webpack_require__(97480);
 var GameEvents = __webpack_require__(8443);
@@ -193313,12 +195109,14 @@ var ScaleManager = new Class({
 
         this.fullscreen = game.device.fullscreen;
 
-        if ((this.scaleMode !== CONST.SCALE_MODE.RESIZE) && (this.scaleMode !== CONST.SCALE_MODE.EXPAND))
+        var scaleMode = this.scaleMode;
+
+        if (scaleMode !== CONST.SCALE_MODE.RESIZE && scaleMode !== CONST.SCALE_MODE.EXPAND)
         {
-            this.displaySize.setAspectMode(this.scaleMode);
+            this.displaySize.setAspectMode(scaleMode);
         }
 
-        if (this.scaleMode === CONST.SCALE_MODE.NONE)
+        if (scaleMode === CONST.SCALE_MODE.NONE)
         {
             this.resize(this.width, this.height);
         }
@@ -193966,10 +195764,51 @@ var ScaleManager = new Class({
         }
         else if (this.scaleMode === CONST.SCALE_MODE.EXPAND)
         {
-            //  Resize to match parent, like RESIZE mode
+            // Expand canvas size to fit game size's width or height
 
-            //  This will constrain using min/max
-            this.displaySize.setSize(this.parentSize.width, this.parentSize.height);
+            var baseWidth = this.game.config.width;
+            var baseHeight = this.game.config.height;
+
+            var windowWidth = this.parentSize.width;
+            var windowHeight = this.parentSize.height;
+
+            var scaleX = windowWidth / baseWidth;
+            var scaleY = windowHeight / baseHeight;
+
+            var canvasWidth;
+            var canvasHeight;
+
+            if (scaleX < scaleY)
+            {
+                canvasWidth = baseWidth;
+                canvasHeight = (scaleX !== 0)? windowHeight / scaleX : baseHeight;
+            }
+            else
+            {
+                canvasWidth = (scaleY !== 0)? windowWidth / scaleY : baseWidth;
+                canvasHeight = baseHeight;
+            }
+
+            var clampedCanvasWidth = Clamp(canvasWidth, this.displaySize.minWidth, this.displaySize.maxWidth);
+            var clampedCanvasHeight = Clamp(canvasHeight, this.displaySize.minHeight, this.displaySize.maxHeight);
+
+            this.baseSize.setSize(clampedCanvasWidth, clampedCanvasHeight);
+
+            this.gameSize.setSize(clampedCanvasWidth, clampedCanvasHeight);
+            
+            if (autoRound)
+            {
+                clampedCanvasWidth = Math.floor(clampedCanvasWidth);
+                clampedCanvasHeight = Math.floor(clampedCanvasHeight);
+            }
+    
+            this.canvas.width = clampedCanvasWidth;
+            this.canvas.height = clampedCanvasHeight;
+
+            //  Resize to match parent, like RESIZE mode
+            var clampedWindowWidth = windowWidth * (clampedCanvasWidth / canvasWidth);
+            var clampedWindowHeight = windowHeight * (clampedCanvasHeight / canvasHeight);
+            this.displaySize.setSize(clampedWindowWidth, clampedWindowHeight);
 
             styleWidth = this.displaySize.width;
             styleHeight = this.displaySize.height;
@@ -193983,33 +195822,6 @@ var ScaleManager = new Class({
             style.width = styleWidth + 'px';
             style.height = styleHeight + 'px';
 
-
-            // Expand canvas size to fit game size's width or height
-
-            var scaleX = this.parentSize.width / this.gameSize.width;
-
-            var scaleY = this.parentSize.height / this.gameSize.height;
-
-            if (scaleX < scaleY)
-            {
-                this.baseSize.setSize(this.gameSize.width, this.parentSize.height / scaleX);
-            }
-            else
-            {
-                this.baseSize.setSize(this.displaySize.width / scaleY, this.gameSize.height);
-            }
-
-            styleWidth = this.baseSize.width;
-            styleHeight = this.baseSize.height;
-
-            if (autoRound)
-            {
-                styleWidth = Math.floor(styleWidth);
-                styleHeight = Math.floor(styleHeight);
-            }
-
-            this.canvas.width = styleWidth;
-            this.canvas.height = styleHeight;
         }
         else
         {
@@ -194084,9 +195896,6 @@ var ScaleManager = new Class({
         var style = canvas.style;
 
         var bounds = canvas.getBoundingClientRect();
-
-        // var width = parseInt(canvas.style.width, 10) || canvas.width;
-        // var height = parseInt(canvas.style.height, 10) || canvas.height;
 
         var width = bounds.width;
         var height = bounds.height;
@@ -194315,7 +196124,6 @@ var ScaleManager = new Class({
      * Calling this method will cancel fullscreen mode, if the browser has entered it.
      *
      * @method Phaser.Scale.ScaleManager#stopFullscreen
-     * @fires Phaser.Scale.Events#LEAVE_FULLSCREEN
      * @fires Phaser.Scale.Events#FULLSCREEN_UNSUPPORTED
      * @since 3.16.0
      */
@@ -194336,7 +196144,17 @@ var ScaleManager = new Class({
         }
 
         this.removeFullscreenTarget();
+    },
 
+    /**
+     * The browser has successfully left fullscreen mode.
+     *
+     * @method Phaser.Scale.ScaleManager#leaveFullScreenSuccessHandler
+     * @fires Phaser.Scale.Events#LEAVE_FULLSCREEN
+     * @since 3.85.0
+     */
+    leaveFullScreenSuccessHandler: function ()
+    {
         //  Get the parent size again as it will have changed
         this.getParentBounds();
 
@@ -194405,7 +196223,14 @@ var ScaleManager = new Class({
         };
 
         //  Only dispatched on mobile devices
-        window.addEventListener('orientationchange', listeners.orientationChange, false);
+        if (screen.orientation && screen.orientation.addEventListener)
+        {
+            screen.orientation.addEventListener('change', listeners.orientationChange, false);
+        }
+        else
+        {
+            window.addEventListener('orientationchange', listeners.orientationChange, false);
+        }
 
         window.addEventListener('resize', listeners.windowResize, false);
 
@@ -194452,6 +196277,7 @@ var ScaleManager = new Class({
         {
             //  They pressed ESC while in fullscreen mode
             this.stopFullscreen();
+            this.leaveFullScreenSuccessHandler();
         }
     },
 
@@ -194574,7 +196400,15 @@ var ScaleManager = new Class({
     {
         var listeners = this.domlisteners;
 
-        window.removeEventListener('orientationchange', listeners.orientationChange, false);
+        if (screen.orientation && screen.orientation.addEventListener)
+        {
+            screen.orientation.removeEventListener('change', listeners.orientationChange, false);
+        }
+        else
+        {
+            window.removeEventListener('orientationchange', listeners.orientationChange, false);
+        }
+        
         window.removeEventListener('resize', listeners.windowResize, false);
 
         var vendors = [ 'webkit', 'moz', '' ];
@@ -194756,7 +196590,7 @@ module.exports = ScaleManager;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -194843,7 +196677,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -194868,7 +196702,7 @@ module.exports = {
 module.exports = {
 
     /**
-     * A landscape orientation.
+     * The primary landscape orientation.
      *
      * @name Phaser.Scale.Orientation.LANDSCAPE
      * @type {string}
@@ -194878,14 +196712,34 @@ module.exports = {
     LANDSCAPE: 'landscape-primary',
 
     /**
-     * A portrait orientation.
+     * The secondary landscape orientation.
+     *
+     * @name Phaser.Scale.Orientation.LANDSCAPE_SECONDARY
+     * @type {string}
+     * @const
+     * @since 3.85.0
+     */
+    LANDSCAPE_SECONDARY: 'landscape-secondary',
+
+    /**
+     * The primary portrait orientation.
      *
      * @name Phaser.Scale.Orientation.PORTRAIT
      * @type {string}
      * @const
      * @since 3.16.0
      */
-    PORTRAIT: 'portrait-primary'
+    PORTRAIT: 'portrait-primary',
+
+    /**
+     * The secondary portrait orientation.
+     *
+     * @name Phaser.Scale.Orientation.PORTRAIT_SECONDARY
+     * @type {string}
+     * @const
+     * @since 3.16.0
+     */
+    PORTRAIT_SECONDARY: 'portrait-secondary'
 
 };
 
@@ -194897,7 +196751,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -195007,7 +196861,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -195082,7 +196936,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -195105,7 +196959,7 @@ module.exports = CONST;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -195126,7 +196980,7 @@ module.exports = 'enterfullscreen';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -195147,7 +197001,7 @@ module.exports = 'fullscreenfailed';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -195168,7 +197022,7 @@ module.exports = 'fullscreenunsupported';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -195190,7 +197044,7 @@ module.exports = 'leavefullscreen';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -195215,7 +197069,7 @@ module.exports = 'orientationchange';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -195247,7 +197101,7 @@ module.exports = 'resize';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -195274,7 +197128,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -195298,6 +197152,7 @@ var CONST = __webpack_require__(13560);
  * @borrows Phaser.Scale.ScaleModes.FIT as FIT
  * @borrows Phaser.Scale.ScaleModes.ENVELOP as ENVELOP
  * @borrows Phaser.Scale.ScaleModes.RESIZE as RESIZE
+ * @borrows Phaser.Scale.ScaleModes.EXPAND as EXPAND 
  *
  * @borrows Phaser.Scale.Zoom.NO_ZOOM as NO_ZOOM
  * @borrows Phaser.Scale.Zoom.ZOOM_2X as ZOOM_2X
@@ -195331,7 +197186,7 @@ module.exports = Scale;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -195394,7 +197249,7 @@ module.exports = GetPhysicsPlugins;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -195442,7 +197297,7 @@ module.exports = GetScenePlugins;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -195505,7 +197360,7 @@ module.exports = InjectionMap;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -195532,7 +197387,7 @@ var Scene = new Class({
     function Scene (config)
     {
         /**
-         * The Scene Systems. You must never overwrite this property, or all hell will break lose.
+         * The Scene Systems. You must never overwrite this property, or all hell will break loose.
          *
          * @name Phaser.Scene#sys
          * @type {Phaser.Scenes.Systems}
@@ -195825,7 +197680,7 @@ module.exports = Scene;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -196135,7 +197990,7 @@ var SceneManager = new Class({
         {
             entry = this._queue[i];
 
-            this[entry.op](entry.keyA, entry.keyB);
+            this[entry.op](entry.keyA, entry.keyB, entry.data);
         }
 
         this._queue.length = 0;
@@ -196252,33 +198107,31 @@ var SceneManager = new Class({
     {
         if (this.isProcessing)
         {
-            this._queue.push({ op: 'remove', keyA: key, keyB: null });
+            return this.queueOp('remove', key);
         }
-        else
+
+        var sceneToRemove = this.getScene(key);
+
+        if (!sceneToRemove || sceneToRemove.sys.isTransitioning())
         {
-            var sceneToRemove = this.getScene(key);
+            return this;
+        }
 
-            if (!sceneToRemove || sceneToRemove.sys.isTransitioning())
+        var index = this.scenes.indexOf(sceneToRemove);
+        var sceneKey = sceneToRemove.sys.settings.key;
+
+        if (index > -1)
+        {
+            delete this.keys[sceneKey];
+            this.scenes.splice(index, 1);
+
+            if (this._start.indexOf(sceneKey) > -1)
             {
-                return this;
+                index = this._start.indexOf(sceneKey);
+                this._start.splice(index, 1);
             }
 
-            var index = this.scenes.indexOf(sceneToRemove);
-            var sceneKey = sceneToRemove.sys.settings.key;
-
-            if (index > -1)
-            {
-                delete this.keys[sceneKey];
-                this.scenes.splice(index, 1);
-
-                if (this._start.indexOf(sceneKey) > -1)
-                {
-                    index = this._start.indexOf(sceneKey);
-                    this._start.splice(index, 1);
-                }
-
-                sceneToRemove.sys.destroy();
-            }
+            sceneToRemove.sys.destroy();
         }
 
         return this;
@@ -196353,13 +198206,6 @@ var SceneManager = new Class({
      */
     loadComplete: function (loader)
     {
-        //  TODO - Remove. This should *not* be handled here
-        //  Try to unlock HTML5 sounds every time any loader completes
-        if (this.game.sound && this.game.sound.onBlurPausedSounds)
-        {
-            this.game.sound.unlock();
-        }
-
         this.create(loader.scene);
     },
 
@@ -196504,7 +198350,7 @@ var SceneManager = new Class({
 
             if (this.keys.hasOwnProperty(key))
             {
-                throw new Error('Cannot add a Scene with duplicate key: ' + key);
+                throw new Error('Cannot add Scene with duplicate key: ' + key);
             }
 
             return this.createSceneFromInstance(key, newScene);
@@ -196663,7 +198509,7 @@ var SceneManager = new Class({
 
         if (this.keys.hasOwnProperty(key))
         {
-            throw new Error('Cannot add a Scene with duplicate key: ' + key);
+            throw new Error('Cannot add Scene with duplicate key: ' + key);
         }
         else
         {
@@ -196681,6 +198527,7 @@ var SceneManager = new Class({
      * @since 3.16.0
      *
      * @generic {Phaser.Scene[]} T - [$return]
+     * @genericUse {T} - [$return]
      *
      * @param {boolean} [isActive=true] - Only include Scene's that are currently active?
      * @param {boolean} [inReverse=false] - Return the array of Scenes in reverse?
@@ -197039,7 +198886,7 @@ var SceneManager = new Class({
 
         if (!scene)
         {
-            console.warn('Scene not found for key: ' + key);
+            console.warn('Scene key not found: ' + key);
             return this;
         }
 
@@ -197147,10 +198994,11 @@ var SceneManager = new Class({
      *
      * @param {(string|Phaser.Scene)} from - The Scene to sleep.
      * @param {(string|Phaser.Scene)} to - The Scene to start.
+     * @param {object} [data] - Optional data object to pass to `Scene.Settings` and `Scene.init`, and `Scene.create`. It is only passed when the scene starts for the first time.
      *
      * @return {this} This Scene Manager instance.
      */
-    switch: function (from, to)
+    switch: function (from, to, data)
     {
         var sceneA = this.getScene(from);
         var sceneB = this.getScene(to);
@@ -197161,11 +199009,11 @@ var SceneManager = new Class({
 
             if (this.isSleeping(to))
             {
-                this.wake(to);
+                this.wake(to, data);
             }
             else
             {
-                this.start(to);
+                this.start(to, data);
             }
         }
 
@@ -197229,19 +199077,18 @@ var SceneManager = new Class({
     {
         if (this.isProcessing)
         {
-            this._queue.push({ op: 'bringToTop', keyA: key, keyB: null });
+            return this.queueOp('bringToTop', key);
         }
-        else
+
+        var index = this.getIndex(key);
+        var scenes = this.scenes;
+
+        if (index !== -1 && index < scenes.length)
         {
-            var index = this.getIndex(key);
+            var scene = this.getScene(key);
 
-            if (index !== -1 && index < this.scenes.length)
-            {
-                var scene = this.getScene(key);
-
-                this.scenes.splice(index, 1);
-                this.scenes.push(scene);
-            }
+            scenes.splice(index, 1);
+            scenes.push(scene);
         }
 
         return this;
@@ -197266,19 +199113,17 @@ var SceneManager = new Class({
     {
         if (this.isProcessing)
         {
-            this._queue.push({ op: 'sendToBack', keyA: key, keyB: null });
+            return this.queueOp('sendToBack', key);
         }
-        else
+
+        var index = this.getIndex(key);
+
+        if (index !== -1 && index > 0)
         {
-            var index = this.getIndex(key);
+            var scene = this.getScene(key);
 
-            if (index !== -1 && index > 0)
-            {
-                var scene = this.getScene(key);
-
-                this.scenes.splice(index, 1);
-                this.scenes.unshift(scene);
-            }
+            this.scenes.splice(index, 1);
+            this.scenes.unshift(scene);
         }
 
         return this;
@@ -197301,21 +199146,19 @@ var SceneManager = new Class({
     {
         if (this.isProcessing)
         {
-            this._queue.push({ op: 'moveDown', keyA: key, keyB: null });
+            return this.queueOp('moveDown', key);
         }
-        else
+
+        var indexA = this.getIndex(key);
+
+        if (indexA > 0)
         {
-            var indexA = this.getIndex(key);
+            var indexB = indexA - 1;
+            var sceneA = this.getScene(key);
+            var sceneB = this.getAt(indexB);
 
-            if (indexA > 0)
-            {
-                var indexB = indexA - 1;
-                var sceneA = this.getScene(key);
-                var sceneB = this.getAt(indexB);
-
-                this.scenes[indexA] = sceneB;
-                this.scenes[indexB] = sceneA;
-            }
+            this.scenes[indexA] = sceneB;
+            this.scenes[indexB] = sceneA;
         }
 
         return this;
@@ -197338,21 +199181,19 @@ var SceneManager = new Class({
     {
         if (this.isProcessing)
         {
-            this._queue.push({ op: 'moveUp', keyA: key, keyB: null });
+            return this.queueOp('moveUp', key);
         }
-        else
+
+        var indexA = this.getIndex(key);
+
+        if (indexA < this.scenes.length - 1)
         {
-            var indexA = this.getIndex(key);
+            var indexB = indexA + 1;
+            var sceneA = this.getScene(key);
+            var sceneB = this.getAt(indexB);
 
-            if (indexA < this.scenes.length - 1)
-            {
-                var indexB = indexA + 1;
-                var sceneA = this.getScene(key);
-                var sceneB = this.getAt(indexB);
-
-                this.scenes[indexA] = sceneB;
-                this.scenes[indexB] = sceneA;
-            }
+            this.scenes[indexA] = sceneB;
+            this.scenes[indexB] = sceneA;
         }
 
         return this;
@@ -197360,6 +199201,7 @@ var SceneManager = new Class({
 
     /**
      * Moves a Scene so it is immediately above another Scene in the Scenes list.
+     * If the Scene is already above the other, it isn't moved.
      *
      * This means it will render over the top of the other Scene.
      *
@@ -197383,23 +199225,21 @@ var SceneManager = new Class({
 
         if (this.isProcessing)
         {
-            this._queue.push({ op: 'moveAbove', keyA: keyA, keyB: keyB });
+            return this.queueOp('moveAbove', keyA, keyB);
         }
-        else
+
+        var indexA = this.getIndex(keyA);
+        var indexB = this.getIndex(keyB);
+
+        if (indexA !== -1 && indexB !== -1 && indexB < indexA)
         {
-            var indexA = this.getIndex(keyA);
-            var indexB = this.getIndex(keyB);
+            var tempScene = this.getAt(indexB);
 
-            if (indexA !== -1 && indexB !== -1 && indexB < indexA)
-            {
-                var tempScene = this.getAt(indexB);
+            //  Remove
+            this.scenes.splice(indexB, 1);
 
-                //  Remove
-                this.scenes.splice(indexB, 1);
-
-                //  Add in new location
-                this.scenes.splice(indexA + (indexB > indexA), 0, tempScene);
-            }
+            //  Add in new location
+            this.scenes.splice(indexA + (indexB > indexA), 0, tempScene);
         }
 
         return this;
@@ -197407,6 +199247,7 @@ var SceneManager = new Class({
 
     /**
      * Moves a Scene so it is immediately below another Scene in the Scenes list.
+     * If the Scene is already below the other, it isn't moved.
      *
      * This means it will render behind the other Scene.
      *
@@ -197430,29 +199271,27 @@ var SceneManager = new Class({
 
         if (this.isProcessing)
         {
-            this._queue.push({ op: 'moveBelow', keyA: keyA, keyB: keyB });
+            return this.queueOp('moveBelow', keyA, keyB);
         }
-        else
+
+        var indexA = this.getIndex(keyA);
+        var indexB = this.getIndex(keyB);
+
+        if (indexA !== -1 && indexB !== -1 && indexB > indexA)
         {
-            var indexA = this.getIndex(keyA);
-            var indexB = this.getIndex(keyB);
+            var tempScene = this.getAt(indexB);
 
-            if (indexA !== -1 && indexB !== -1 && indexB > indexA)
+            //  Remove
+            this.scenes.splice(indexB, 1);
+
+            if (indexA === 0)
             {
-                var tempScene = this.getAt(indexB);
-
-                //  Remove
-                this.scenes.splice(indexB, 1);
-
-                if (indexA === 0)
-                {
-                    this.scenes.unshift(tempScene);
-                }
-                else
-                {
-                    //  Add in new location
-                    this.scenes.splice(indexA - (indexB < indexA), 0, tempScene);
-                }
+                this.scenes.unshift(tempScene);
+            }
+            else
+            {
+                //  Add in new location
+                this.scenes.splice(indexA - (indexB < indexA), 0, tempScene);
             }
         }
 
@@ -197469,12 +199308,13 @@ var SceneManager = new Class({
      * @param {string} op - The operation to perform.
      * @param {(string|Phaser.Scene)} keyA - Scene A.
      * @param {(any|string|Phaser.Scene)} [keyB] - Scene B, or a data object.
+     * @param {any} [data] - Optional data object to pass.
      *
      * @return {this} This Scene Manager instance.
      */
-    queueOp: function (op, keyA, keyB)
+    queueOp: function (op, keyA, keyB, data)
     {
-        this._queue.push({ op: op, keyA: keyA, keyB: keyB });
+        this._queue.push({ op: op, keyA: keyA, keyB: keyB, data: data });
 
         return this;
     },
@@ -197502,20 +199342,18 @@ var SceneManager = new Class({
 
         if (this.isProcessing)
         {
-            this._queue.push({ op: 'swapPosition', keyA: keyA, keyB: keyB });
+            return this.queueOp('swapPosition', keyA, keyB);
         }
-        else
+
+        var indexA = this.getIndex(keyA);
+        var indexB = this.getIndex(keyB);
+
+        if (indexA !== indexB && indexA !== -1 && indexB !== -1)
         {
-            var indexA = this.getIndex(keyA);
-            var indexB = this.getIndex(keyB);
+            var tempScene = this.getAt(indexA);
 
-            if (indexA !== indexB && indexA !== -1 && indexB !== -1)
-            {
-                var tempScene = this.getAt(indexA);
-
-                this.scenes[indexA] = this.scenes[indexB];
-                this.scenes[indexB] = tempScene;
-            }
+            this.scenes[indexA] = this.scenes[indexB];
+            this.scenes[indexB] = tempScene;
         }
 
         return this;
@@ -197590,7 +199428,7 @@ module.exports = SceneManager;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -198222,14 +200060,15 @@ var ScenePlugin = new Class({
      * @genericUse {(T|string)} - [key]
      *
      * @param {(string|Phaser.Scene)} key - The Scene to start.
+     * @param {any} [data] - Optional data object to pass to either the Scene `wake` or `start` method.
      *
      * @return {this} This Scene Plugin instance.
      */
-    switch: function (key)
+    switch: function (key, data)
     {
         if (key !== this.key)
         {
-            this.manager.queueOp('switch', this.key, key);
+            this.manager.queueOp('switch', this.key, key, data);
         }
 
         return this;
@@ -198426,9 +200265,10 @@ var ScenePlugin = new Class({
     },
 
     /**
-     * Swaps the position of two scenes in the Scenes list, so that Scene B is directly above Scene A.
+     * Moves a Scene so it is immediately above another Scene in the Scenes list.
+     * If the Scene is already above the other, it isn't moved.
      *
-     * This controls the order in which they are rendered and updated.
+     * This means it will render over the top of the other Scene.
      *
      * @method Phaser.Scenes.ScenePlugin#moveAbove
      * @since 3.2.0
@@ -198454,9 +200294,10 @@ var ScenePlugin = new Class({
     },
 
     /**
-     * Swaps the position of two scenes in the Scenes list, so that Scene B is directly below Scene A.
+     * Moves a Scene so it is immediately below another Scene in the Scenes list.
+     * If the Scene is already below the other, it isn't moved.
      *
-     * This controls the order in which they are rendered and updated.
+     * This means it will render behind the other Scene.
      *
      * @method Phaser.Scenes.ScenePlugin#moveBelow
      * @since 3.2.0
@@ -198602,7 +200443,10 @@ var ScenePlugin = new Class({
     },
 
     /**
-     * Retrieve a Scene.
+     * Retrieves a Scene based on the given key.
+     *
+     * If an actual Scene is passed to this method, it can be used to check if
+     * its currently within the Scene Manager, or not.
      *
      * @generic {Phaser.Scene} T
      * @genericUse {(T|string)} - [key]
@@ -198715,7 +200559,7 @@ module.exports = ScenePlugin;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -198812,7 +200656,7 @@ module.exports = Settings;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -198927,7 +200771,7 @@ var Systems = new Class({
         this.anims;
 
         /**
-         * A reference to the global Cache. The Cache stores all files bought in to Phaser via
+         * A reference to the global Cache. The Cache stores all files brought in to Phaser via
          * the Loader, with the exception of images. Images are stored in the Texture Manager.
          *
          * In the default set-up you can access this from within a Scene via the `this.cache` property.
@@ -198999,7 +200843,7 @@ var Systems = new Class({
         /**
          * A reference to the Scene's Game Object Factory.
          *
-         * Use this to quickly and easily create new Game Object's.
+         * Use this to quickly and easily create new Game Objects.
          *
          * In the default set-up you can access this from within a Scene via the `this.add` property.
          *
@@ -199051,7 +200895,7 @@ var Systems = new Class({
         /**
          * A reference to the Scene's Game Object Creator.
          *
-         * Use this to quickly and easily create new Game Object's. The difference between this and the
+         * Use this to quickly and easily create new Game Objects. The difference between this and the
          * Game Object Factory, is that the Creator just creates and returns Game Object instances, it
          * doesn't then add them to the Display List or Update List.
          *
@@ -199066,7 +200910,7 @@ var Systems = new Class({
         /**
          * A reference to the Scene Manager Plugin.
          *
-         * Use this to manipulate both this and other Scene's in your game, for example to launch a parallel Scene,
+         * Use this to manipulate both this and other Scenes in your game. For example, to launch a parallel Scene,
          * or pause or resume a Scene, or switch from this Scene to another.
          *
          * In the default set-up you can access this from within a Scene via the `this.scene` property.
@@ -199083,7 +200927,7 @@ var Systems = new Class({
          * Use this to organize the children contained in the update list.
          *
          * The Update List is responsible for managing children that need their `preUpdate` methods called,
-         * in order to process so internal components, such as Sprites with Animations.
+         * in order to process internal components - such as Sprites with Animations.
          *
          * In the default set-up there is no reference to this from within the Scene itself.
          *
@@ -199589,7 +201433,7 @@ var Systems = new Class({
     },
 
     /**
-     * Destroy this Scene and send a destroy event all of its systems.
+     * Destroy this Scene and send a destroy event to all of its systems.
      * A destroyed Scene cannot be restarted.
      * You should not call this directly, instead use `SceneManager.remove`.
      *
@@ -199632,7 +201476,7 @@ module.exports = Systems;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -199756,7 +201600,7 @@ module.exports = CONST;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -199784,7 +201628,7 @@ module.exports = 'addedtoscene';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -199811,7 +201655,7 @@ module.exports = 'boot';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -199842,7 +201686,7 @@ module.exports = 'create';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -199871,7 +201715,7 @@ module.exports = 'destroy';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -199900,7 +201744,7 @@ module.exports = 'pause';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -199926,7 +201770,6 @@ module.exports = 'pause';
  * @type {string}
  * @since 3.0.0
  *
- * @param {Phaser.Scenes.Systems} sys - A reference to the Scene Systems class of the Scene that emitted this event.
  * @param {number} time - The current time. Either a High Resolution Timer value if it comes from Request Animation Frame, or Date.now if using SetTimeout.
  * @param {number} delta - The delta time in ms since the last frame. This is a smoothed and capped value based on the FPS rate.
  */
@@ -199980,7 +201823,7 @@ module.exports = 'prerender';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -200006,7 +201849,6 @@ module.exports = 'prerender';
  * @type {string}
  * @since 3.0.0
  *
- * @param {Phaser.Scenes.Systems} sys - A reference to the Scene Systems class of the Scene that emitted this event.
  * @param {number} time - The current time. Either a High Resolution Timer value if it comes from Request Animation Frame, or Date.now if using SetTimeout.
  * @param {number} delta - The delta time in ms since the last frame. This is a smoothed and capped value based on the FPS rate.
  */
@@ -200020,7 +201862,7 @@ module.exports = 'preupdate';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -200050,7 +201892,7 @@ module.exports = 'ready';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -200078,7 +201920,7 @@ module.exports = 'removedfromscene';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -200118,7 +201960,7 @@ module.exports = 'render';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -200147,7 +201989,7 @@ module.exports = 'resume';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -200179,7 +202021,7 @@ module.exports = 'shutdown';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -200208,7 +202050,7 @@ module.exports = 'sleep';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -200235,7 +202077,7 @@ module.exports = 'start';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -200273,7 +202115,7 @@ module.exports = 'transitioncomplete';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -200312,7 +202154,7 @@ module.exports = 'transitioninit';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -200348,7 +202190,7 @@ module.exports = 'transitionout';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -200390,7 +202232,7 @@ module.exports = 'transitionstart';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -200427,7 +202269,7 @@ module.exports = 'transitionwake';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -200453,7 +202295,6 @@ module.exports = 'transitionwake';
  * @type {string}
  * @since 3.0.0
  *
- * @param {Phaser.Scenes.Systems} sys - A reference to the Scene Systems class of the Scene that emitted this event.
  * @param {number} time - The current time. Either a High Resolution Timer value if it comes from Request Animation Frame, or Date.now if using SetTimeout.
  * @param {number} delta - The delta time in ms since the last frame. This is a smoothed and capped value based on the FPS rate.
  */
@@ -200467,7 +202308,7 @@ module.exports = 'update';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -200496,7 +202337,7 @@ module.exports = 'wake';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -200539,7 +202380,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -200576,7 +202417,7 @@ module.exports = Scene;
 /**
  * @author       Richard Davey <rich@phaser.io>
  * @author       Pavle Goloskokovic <pgoloskokovic@gmail.com> (http://prunegames.com)
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -201080,7 +202921,7 @@ module.exports = BaseSound;
 /**
  * @author       Richard Davey <rich@phaser.io>
  * @author       Pavle Goloskokovic <pgoloskokovic@gmail.com> (http://prunegames.com)
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -201252,10 +203093,12 @@ var BaseSoundManager = new Class({
          */
         this.listenerPosition = new Vector2();
 
-        game.events.on(GameEvents.BLUR, this.onGameBlur, this);
-        game.events.on(GameEvents.FOCUS, this.onGameFocus, this);
-        game.events.on(GameEvents.PRE_STEP, this.update, this);
-        game.events.once(GameEvents.DESTROY, this.destroy, this);
+        var ee = game.events;
+
+        ee.on(GameEvents.BLUR, this.onGameBlur, this);
+        ee.on(GameEvents.FOCUS, this.onGameFocus, this);
+        ee.on(GameEvents.PRE_STEP, this.update, this);
+        ee.once(GameEvents.DESTROY, this.destroy, this);
     },
 
     /**
@@ -201613,6 +203456,52 @@ var BaseSoundManager = new Class({
     },
 
     /**
+     * When a key is given, returns true if any sound with that key is playing.
+     *
+     * When no key is given, returns true if any sound is playing.
+     *
+     * @method Phaser.Sound.BaseSoundManager#isPlaying
+     * @since 3.85.0
+     *
+     * @param {?string} key - Sound asset key.
+     *
+     * @return {boolean} - Per the key argument, true if any matching sound is playing, otherwise false.
+     */
+    isPlaying: function (key)
+    {
+        var sounds = this.sounds;
+        var i = sounds.length - 1;
+        var sound;
+
+        if (key === undefined)
+        {
+            for (; i >= 0; i--)
+            {
+                sound = this.sounds[i];
+
+                if (sound.isPlaying)
+                {
+                    return true;
+                }
+            }
+        }
+        else
+        {
+            for (; i >= 0; i--)
+            {
+                sound = this.sounds[i];
+
+                if (sound.key === key && sound.isPlaying)
+                {
+                    return true;
+                }
+            }
+        }
+
+        return false;
+    },
+
+    /**
      * Method used internally for unlocking audio playback on devices that
      * require user interaction before any sound can be played on a web page.
      *
@@ -201876,7 +203765,7 @@ module.exports = BaseSoundManager;
 /**
  * @author       Richard Davey <rich@phaser.io>
  * @author       Pavle Goloskokovic <pgoloskokovic@gmail.com> (http://prunegames.com)
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -201928,7 +203817,7 @@ module.exports = SoundManagerCreator;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -201961,7 +203850,7 @@ module.exports = 'complete';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -201995,7 +203884,7 @@ module.exports = 'decodedall';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -202027,7 +203916,7 @@ module.exports = 'decoded';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -202061,7 +203950,7 @@ module.exports = 'destroy';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -202096,7 +203985,7 @@ module.exports = 'detune';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -202126,7 +204015,7 @@ module.exports = 'detune';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -202155,7 +204044,7 @@ module.exports = 'mute';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -202185,7 +204074,7 @@ module.exports = 'rate';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -202214,7 +204103,7 @@ module.exports = 'volume';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -202250,7 +204139,7 @@ module.exports = 'looped';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -202286,7 +204175,7 @@ module.exports = 'loop';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -202321,7 +204210,7 @@ module.exports = 'mute';
 
 /**
  * @author       pi-kei
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -202356,7 +204245,7 @@ module.exports = 'pan';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -202385,7 +204274,7 @@ module.exports = 'pauseall';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -202419,7 +204308,7 @@ module.exports = 'pause';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -202452,7 +204341,7 @@ module.exports = 'play';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -202487,7 +204376,7 @@ module.exports = 'rate';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -202516,7 +204405,7 @@ module.exports = 'resumeall';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -202551,7 +204440,7 @@ module.exports = 'resume';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -202586,7 +204475,7 @@ module.exports = 'seek';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -202615,7 +204504,7 @@ module.exports = 'stopall';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -202649,7 +204538,7 @@ module.exports = 'stop';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -202678,7 +204567,7 @@ module.exports = 'unlocked';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -202713,7 +204602,7 @@ module.exports = 'volume';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -202759,7 +204648,7 @@ module.exports = {
 /**
  * @author       Richard Davey <rich@phaser.io>
  * @author       Pavle Goloskokovic <pgoloskokovic@gmail.com> (http://prunegames.com)
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -203725,7 +205614,7 @@ module.exports = HTML5AudioSound;
 /**
  * @author       Richard Davey <rich@phaser.io>
  * @author       Pavle Goloskokovic <pgoloskokovic@gmail.com> (http://prunegames.com)
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -204195,7 +206084,7 @@ module.exports = HTML5AudioSoundManager;
 /**
  * @author       Richard Davey <rich@phaser.io>
  * @author       Pavle Goloskokovic <pgoloskokovic@gmail.com> (http://prunegames.com)
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -204232,7 +206121,7 @@ module.exports = {
 /**
  * @author       Richard Davey <rich@phaser.io>
  * @author       Pavle Goloskokovic <pgoloskokovic@gmail.com> (http://prunegames.com)
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -204731,7 +206620,7 @@ module.exports = NoAudioSound;
 /**
  * @author       Richard Davey <rich@phaser.io>
  * @author       Pavle Goloskokovic <pgoloskokovic@gmail.com> (http://prunegames.com)
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -205098,7 +206987,7 @@ module.exports = NoAudioSoundManager;
 /**
  * @author       Richard Davey <rich@phaser.io>
  * @author       Pavle Goloskokovic <pgoloskokovic@gmail.com> (http://prunegames.com)
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -205142,7 +207031,7 @@ var WebAudioSound = new Class({
 
         if (!this.audioBuffer)
         {
-            throw new Error('Audio key "' + key + '" missing from cache');
+            throw new Error('Audio key "' + key + '" not found in cache');
         }
 
         /**
@@ -205512,7 +207401,9 @@ var WebAudioSound = new Class({
 
         source.onended = function (ev)
         {
-            if (ev.target === _this.source)
+            var target = ev.target;
+
+            if (target === _this.source || target === _this.loopSource)
             {
                 // sound ended
                 if (_this.currentConfig.loop)
@@ -206254,7 +208145,7 @@ module.exports = WebAudioSound;
 /**
  * @author       Richard Davey <rich@phaser.io>
  * @author       Pavle Goloskokovic <pgoloskokovic@gmail.com> (http://prunegames.com)
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -206330,18 +208221,50 @@ var WebAudioSoundManager = new Class({
          */
         this.destination = this.masterMuteNode;
 
-        this.locked = this.context.state === 'suspended' && ('ontouchstart' in window || 'onclick' in window);
+        this.locked = this.context.state === 'suspended';
 
         BaseSoundManager.call(this, game);
 
-        if (this.locked && game.isBooted)
+        if (this.locked)
         {
-            this.unlock();
+            if (game.isBooted)
+            {
+                this.unlock();
+            }
+            else
+            {
+                game.events.once(GameEvents.BOOT, this.unlock, this);
+            }
         }
-        else
+
+        game.events.on(GameEvents.VISIBLE, this.onGameVisible, this);
+    },
+
+    /**
+     * Internal handler for Phaser.Core.Events#VISIBLE.
+     * 
+     * Needed to handle resuming audio on iOS17/iOS18+ if you hide the browser, press
+     * the home button, etc. See https://github.com/phaserjs/phaser/issues/6829
+     *
+     * @method Phaser.Sound.WebAudioSoundManager#onGameVisible
+     * @private
+     * @since 3.88.0
+     */
+    onGameVisible: function ()
+    {
+        var context = this.context;
+
+        //  setTimeout to avoid weird audio artifacts (thanks Apple)
+        window.setTimeout(function ()
         {
-            game.events.once(GameEvents.BOOT, this.unlock, this);
-        }
+
+            if (context)
+            {
+                context.suspend();
+                context.resume();
+            }
+
+        }, 100);
     },
 
     /**
@@ -206573,15 +208496,18 @@ var WebAudioSoundManager = new Class({
                 {
                     bodyRemove('touchstart', unlockHandler);
                     bodyRemove('touchend', unlockHandler);
-                    bodyRemove('click', unlockHandler);
+                    bodyRemove('mousedown', unlockHandler);
+                    bodyRemove('mouseup', unlockHandler);
                     bodyRemove('keydown', unlockHandler);
 
                     _this.unlocked = true;
+
                 }, function ()
                 {
                     bodyRemove('touchstart', unlockHandler);
                     bodyRemove('touchend', unlockHandler);
-                    bodyRemove('click', unlockHandler);
+                    bodyRemove('mousedown', unlockHandler);
+                    bodyRemove('mouseup', unlockHandler);
                     bodyRemove('keydown', unlockHandler);
                 });
             }
@@ -206591,7 +208517,8 @@ var WebAudioSoundManager = new Class({
         {
             body.addEventListener('touchstart', unlockHandler, false);
             body.addEventListener('touchend', unlockHandler, false);
-            body.addEventListener('click', unlockHandler, false);
+            body.addEventListener('mousedown', unlockHandler, false);
+            body.addEventListener('mouseup', unlockHandler, false);
             body.addEventListener('keydown', unlockHandler, false);
         }
     },
@@ -206647,11 +208574,12 @@ var WebAudioSoundManager = new Class({
     {
         var listener = this.context.listener;
 
+        var x = GetFastValue(this.listenerPosition, 'x', null);
+        var y = GetFastValue(this.listenerPosition, 'y', null);
+
+
         if (listener && listener.positionX !== undefined)
         {
-            var x = GetFastValue(this.listenerPosition, 'x', null);
-            var y = GetFastValue(this.listenerPosition, 'y', null);
-
             if (x && x !== this._spatialx)
             {
                 this._spatialx = listener.positionX.value = x;
@@ -206660,6 +208588,24 @@ var WebAudioSoundManager = new Class({
             {
                 this._spatialy = listener.positionY.value = y;
             }
+        }
+
+        // Firefox doesn't currently implement positionX, positionY and positionZ properties on AudioListener,
+        // falling back on AudioListener.prototype.setPosition() method. @see https://developer.mozilla.org/en-US/docs/Web/API/AudioListener/setPosition
+        else if (listener)
+        {
+            if (x && x !== this._spatialx)
+            {
+                this._spatialx = x;
+            }
+            if (y && y !== this._spatialy)
+            {
+                this._spatialy = y;
+            }
+
+            var z = GetFastValue(listener, 'z', 0);
+
+            listener.setPosition(this._spatialx || 0, this._spatialy || 0, z);
         }
 
         BaseSoundManager.prototype.update.call(this, time, delta);
@@ -206699,6 +208645,8 @@ var WebAudioSoundManager = new Class({
                 _this.context = null;
             });
         }
+
+        this.game.events.off(GameEvents.VISIBLE, this.onGameVisible, this);
 
         BaseSoundManager.prototype.destroy.call(this);
     },
@@ -206795,7 +208743,7 @@ module.exports = WebAudioSoundManager;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -207151,7 +209099,9 @@ var List = new Class({
     },
 
     /**
-     * Moves the given array element above another one in the array.
+     * Moves an item above another one in the List.
+     * If the given item is already above the other, it isn't moved.
+     * Above means toward the end of the List.
      *
      * @method Phaser.Structs.List#moveAbove
      * @since 3.55.0
@@ -207167,7 +209117,9 @@ var List = new Class({
     },
 
     /**
-     * Moves the given array element below another one in the array.
+     * Moves an item below another one in the List.
+     * If the given item is already below the other, it isn't moved.
+     * Below means toward the start of the List.
      *
      * @method Phaser.Structs.List#moveBelow
      * @since 3.55.0
@@ -207637,7 +209589,7 @@ module.exports = List;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -208039,7 +209991,7 @@ module.exports = Map;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -208424,7 +210376,7 @@ module.exports = ProcessQueue;
 /**
  * @author       Vladimir Agafonkin
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -209036,7 +210988,7 @@ module.exports = rbush;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -209491,7 +211443,7 @@ module.exports = Set;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -210270,7 +212222,7 @@ module.exports = Size;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -210299,7 +212251,7 @@ module.exports = 'add';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -210328,7 +212280,7 @@ module.exports = 'remove';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -210351,7 +212303,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -210379,7 +212331,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -211033,12 +212985,12 @@ module.exports = CanvasTexture;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
 var BlendModes = __webpack_require__(10312);
-var Camera = __webpack_require__(71911);
+var Camera = __webpack_require__(38058);
 var CanvasPool = __webpack_require__(27919);
 var Class = __webpack_require__(83419);
 var CONST = __webpack_require__(8054);
@@ -211091,6 +213043,7 @@ var Utils = __webpack_require__(70554);
  * @param {string} key - The unique string-based key of this Texture.
  * @param {number} [width=256] - The width of this Dymamic Texture in pixels. Defaults to 256 x 256.
  * @param {number} [height=256] - The height of this Dymamic Texture in pixels. Defaults to 256 x 256.
+ * @param {boolean} [forceEven=true] - Force the given width and height to be rounded to even values. This significantly improves the rendering quality. Set to false if you know you need an odd sized texture.
  */
 var DynamicTexture = new Class({
 
@@ -211098,10 +213051,11 @@ var DynamicTexture = new Class({
 
     initialize:
 
-    function DynamicTexture (manager, key, width, height)
+    function DynamicTexture (manager, key, width, height, forceEven)
     {
         if (width === undefined) { width = 256; }
         if (height === undefined) { height = 256; }
+        if (forceEven === undefined) { forceEven = true; }
 
         /**
          * The internal data type of this object.
@@ -211230,7 +213184,7 @@ var DynamicTexture = new Class({
          * You can scroll, zoom and rotate this Camera.
          *
          * @name Phaser.Textures.DynamicTexture#camera
-         * @type {Phaser.Cameras.Scene2D.BaseCamera}
+         * @type {Phaser.Cameras.Scene2D.Camera}
          * @since 3.12.0
          */
         this.camera = new Camera(0, 0, width, height).setScene(manager.game.scene.systemScene, false);
@@ -211246,7 +213200,7 @@ var DynamicTexture = new Class({
          * @type {Phaser.Renderer.WebGL.RenderTarget}
          * @since 3.60.0
          */
-        this.renderTarget = (!isCanvas) ? new RenderTarget(renderer, width, height, 1, 0, false, true, true, false) : null;
+        this.renderTarget = (!isCanvas) ? new RenderTarget(renderer, width, height, 1, 0, false, false, true, false) : null;
 
         /**
          * A reference to the WebGL Single Pipeline.
@@ -211259,7 +213213,7 @@ var DynamicTexture = new Class({
          */
         this.pipeline = (!isCanvas) ? renderer.pipelines.get(PIPELINES.SINGLE_PIPELINE) : null;
 
-        this.setSize(width, height);
+        this.setSize(width, height, forceEven);
     },
 
     /**
@@ -211277,12 +213231,30 @@ var DynamicTexture = new Class({
      *
      * @param {number} width - The new width of this Dynamic Texture.
      * @param {number} [height=width] - The new height of this Dynamic Texture. If not specified, will be set the same as the `width`.
+     * @param {boolean} [forceEven=true] - Force the given width and height to be rounded to even values. This significantly improves the rendering quality. Set to false if you know you need an odd sized texture.
      *
      * @return {this} This Dynamic Texture.
      */
-    setSize: function (width, height)
+    setSize: function (width, height, forceEven)
     {
         if (height === undefined) { height = width; }
+        if (forceEven === undefined) { forceEven = true; }
+
+        if (forceEven)
+        {
+            width = Math.floor(width);
+            height = Math.floor(height);
+
+            if (width % 2 !== 0)
+            {
+                width++;
+            }
+
+            if (height % 2 !== 0)
+            {
+                height++;
+            }
+        }
 
         var frame = this.get();
         var source = frame.source;
@@ -211464,36 +213436,48 @@ var DynamicTexture = new Class({
     },
 
     /**
-     * Fully clears this Dynamic Texture, erasing everything from it and resetting it back to
-     * a blank, transparent, texture.
-     *
+     * Clears a portion or everything from this Dynamic Texture by erasing it and resetting it back to
+     * a blank, transparent, texture. To clear an area, specify the `x`, `y`, `width` and `height`.
      * @method Phaser.Textures.DynamicTexture#clear
      * @since 3.2.0
      *
+     * @param {number} [x=0] - The left coordinate of the fill rectangle.
+     * @param {number} [y=0] - The top coordinate of the fill rectangle.
+     * @param {number} [width=this.width] - The width of the fill rectangle.
+     * @param {number} [height=this.height] - The height of the fill rectangle.
+     * 
      * @return {this} This Dynamic Texture instance.
      */
-    clear: function ()
+    clear: function (x, y, width, height)
     {
         if (this.dirty)
         {
             var ctx = this.context;
+            
             var renderTarget = this.renderTarget;
 
             if (renderTarget)
             {
-                renderTarget.clear();
+                renderTarget.clear(x, y, width, height);
             }
             else if (ctx)
             {
-                ctx.save();
-                ctx.setTransform(1, 0, 0, 1, 0, 0);
-                ctx.clearRect(0, 0, this.width, this.height);
-                ctx.restore();
+                if (x !== undefined && y !== undefined && width !== undefined && height !== undefined)
+                {
+                    ctx.clearRect(x, y, width, height);
+                }
+                else
+                {
+                    ctx.save();
+                    ctx.setTransform(1, 0, 0, 1, 0, 0);
+                    ctx.clearRect(0, 0, this.width, this.height);
+                    ctx.restore();
+                }
             }
 
             this.dirty = false;
         }
-
+        
         return this;
     },
 
@@ -212671,7 +214655,7 @@ module.exports = DynamicTexture;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -213008,6 +214992,47 @@ var Frame = new Class({
     },
 
     /**
+     * Sets the x and y position within the source image to cut from.
+     *
+     * @method Phaser.Textures.Frame#setCutPosition
+     * @since 3.85.0
+     *
+     * @param {number} [x=0] - X position within the source image to cut from.
+     * @param {number} [y=0] - Y position within the source image to cut from.
+     *
+     * @return {this} This Frame object.
+     */
+    setCutPosition: function (x, y)
+    {
+        if (x === undefined) { x = 0; }
+        if (y === undefined) { y = 0; }
+
+        this.cutX = x;
+        this.cutY = y;
+
+        return this.updateUVs();
+    },
+
+    /**
+     * Sets the width, and height of the area in the source image to cut.
+     *
+     * @method Phaser.Textures.Frame#setCutSize
+     * @since 3.85.0
+     *
+     * @param {number} width - The width of the area in the source image to cut.
+     * @param {number} height - The height of the area in the source image to cut.
+     *
+     * @return {this} This Frame object.
+     */
+    setCutSize: function (width, height)
+    {
+        this.cutWidth = width;
+        this.cutHeight = height;
+
+        return this.updateUVs();
+    },
+
+    /**
      * Sets the width, height, x and y of this Frame.
      *
      * This is called automatically by the constructor
@@ -213028,10 +215053,8 @@ var Frame = new Class({
         if (x === undefined) { x = 0; }
         if (y === undefined) { y = 0; }
 
-        this.cutX = x;
-        this.cutY = y;
-        this.cutWidth = width;
-        this.cutHeight = height;
+        this.setCutPosition(x, y);
+        this.setCutSize(width, height);
 
         this.width = width;
         this.height = height;
@@ -213205,8 +215228,8 @@ var Frame = new Class({
             //  Need to check for intersection between the cut area and the crop area
             //  If there is none, we set UV to be empty, otherwise set it to be the intersection area
 
-            width = Clamp(width, 0, cw - x);
-            height = Clamp(height, 0, ch - y);
+            width = Clamp(width, 0, ss.x + cw - x);
+            height = Clamp(height, 0, ss.y + ch - y);
 
             var cropRight = x + width;
             var cropBottom = y + height;
@@ -213610,7 +215633,7 @@ module.exports = Frame;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -213936,7 +215959,7 @@ var Texture = new Class({
      * @method Phaser.Textures.Texture#getFrameBounds
      * @since 3.80.0
      *
-     * @param {number} sourceIndex - The index of the TextureSource to get the Frame bounds from.
+     * @param {number} [sourceIndex=0] - The index of the TextureSource to get the Frame bounds from.
      *
      * @return {Phaser.Types.Math.RectangleLike} An object containing the bounds of the Frames using the given Texture Source Index.
      */
@@ -213944,14 +215967,16 @@ var Texture = new Class({
     {
         if (sourceIndex === undefined) { sourceIndex = 0; }
 
-        var frames = this.getFramesFromTextureSource(sourceIndex);
+        var frames = this.getFramesFromTextureSource(sourceIndex, true);
 
-        var minX = Infinity;
-        var minY = Infinity;
-        var maxX = 0;
-        var maxY = 0;
+        var baseFrame = frames[0];
 
-        for (var i = 0; i < frames.length; i++)
+        var minX = baseFrame.cutX;
+        var minY = baseFrame.cutY;
+        var maxX = baseFrame.cutX + baseFrame.cutWidth;
+        var maxY = baseFrame.cutY + baseFrame.cutHeight;
+
+        for (var i = 1; i < frames.length; i++)
         {
             var frame = frames[i];
 
@@ -214195,7 +216220,7 @@ module.exports = Texture;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -214379,9 +216404,21 @@ var TextureManager = new Class({
 
         var config = this.game.config;
 
-        this.addBase64('__DEFAULT', config.defaultImage);
-        this.addBase64('__MISSING', config.missingImage);
-        this.addBase64('__WHITE', config.whiteImage);
+        if (config.defaultImage !== null)
+        {
+            this.addBase64('__DEFAULT', config.defaultImage);
+        }
+
+        if (config.missingImage !== null)
+        {
+            this.addBase64('__MISSING', config.missingImage);
+        }
+        
+        if (config.whiteImage !== null)
+        {
+            this.addBase64('__WHITE', config.whiteImage);
+        }
+
         if (this.game.renderer && this.game.renderer.gl)
         {
             this.addUint8Array('__NORMAL', new Uint8Array([ 127, 127, 255, 255 ]), 1, 1);
@@ -214430,7 +216467,7 @@ var TextureManager = new Class({
      */
     checkKey: function (key)
     {
-        if (this.exists(key))
+        if (!key || typeof key !== 'string' || this.exists(key))
         {
             if (!this.silentWarnings)
             {
@@ -214549,6 +216586,11 @@ var TextureManager = new Class({
             {
                 var texture = _this.create(key, image);
 
+                if (!texture)
+                {
+                    return;
+                }
+                
                 Parser.Image(texture, 0);
 
                 _this.emit(Events.ADD, key, texture);
@@ -214668,7 +216710,7 @@ var TextureManager = new Class({
      * This allows you to then use the Texture as a normal texture for texture based Game Objects like Sprites.
      *
      * This is a WebGL only feature.
-     * 
+     *
      * Prior to Phaser 3.80.0, this method took a bare `WebGLTexture`
      * as the `glTexture` parameter. You must now wrap the `WebGLTexture` in a
      * `WebGLTextureWrapper` instance before passing it to this method.
@@ -215361,12 +217403,12 @@ var TextureManager = new Class({
 
     /**
      * Creates a texture from an array of colour data.
-     * 
+     *
      * This is only available in WebGL mode.
-     * 
+     *
      * If the dimensions provided are powers of two, the resulting texture
      * will be automatically set to wrap by the WebGL Renderer.
-     * 
+     *
      * @method Phaser.Textures.TextureManager#addUint8Array
      * @fires Phaser.Textures.Events#ADD
      * @since 3.80.0
@@ -215830,7 +217872,7 @@ module.exports = TextureManager;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -216203,7 +218245,7 @@ module.exports = TextureSource;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -216248,7 +218290,7 @@ module.exports = CONST;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -216276,7 +218318,7 @@ module.exports = 'addtexture';
 
 /**
  * @author       samme
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -216303,7 +218345,7 @@ module.exports = 'addtexture-';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -216331,7 +218373,7 @@ module.exports = 'onerror';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -216362,7 +218404,7 @@ module.exports = 'onload';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -216387,7 +218429,7 @@ module.exports = 'ready';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -216417,7 +218459,7 @@ module.exports = 'removetexture';
 
 /**
  * @author       samme
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -216445,7 +218487,7 @@ module.exports = 'removetexture-';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -216473,7 +218515,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -216528,7 +218570,7 @@ module.exports = Textures;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -216610,7 +218652,7 @@ module.exports = AtlasXML;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -216646,7 +218688,7 @@ module.exports = Canvas;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -216682,7 +218724,7 @@ module.exports = Image;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -216809,7 +218851,7 @@ module.exports = JSONArray;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -217360,7 +219402,7 @@ module.exports = PVRParser;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -217492,7 +219534,7 @@ module.exports = SpriteSheet;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -217684,7 +219726,7 @@ module.exports = SpriteSheetFromAtlas;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -218186,7 +220228,7 @@ module.exports = verifyCompressedTexture;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -218217,7 +220259,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -218273,7 +220315,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -218423,12 +220465,14 @@ var ImageCollection = new Class({
      *
      * @param {number} gid - The gid of the image in the Image Collection.
      * @param {string} image - The the key of the image in the Image Collection and in the cache.
+     * @param {number} width - The width of the image in the Image Collection.
+     * @param {number} height - The height of the image in the Image Collection.
      *
      * @return {Phaser.Tilemaps.ImageCollection} This ImageCollection object.
      */
-    addImage: function (gid, image)
+    addImage: function (gid, image, width, height)
     {
-        this.images.push({ gid: gid, image: image });
+        this.images.push({ gid: gid, image: image, width: width, height: height });
         this.total++;
 
         return this;
@@ -218695,7 +220739,7 @@ module.exports = ObjectHelper;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -218782,7 +220826,7 @@ module.exports = ParseToTilemap;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -219760,7 +221804,7 @@ module.exports = Tile;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -219863,223 +221907,223 @@ var Tilemap = new Class({
 
     initialize:
 
-    function Tilemap (scene, mapData)
-    {
-        /**
-         * @name Phaser.Tilemaps.Tilemap#scene
-         * @type {Phaser.Scene}
-         * @since 3.0.0
-         */
-        this.scene = scene;
+        function Tilemap (scene, mapData)
+        {
+            /**
+             * @name Phaser.Tilemaps.Tilemap#scene
+             * @type {Phaser.Scene}
+             * @since 3.0.0
+             */
+            this.scene = scene;
 
-        /**
-         * The base width of a tile in pixels. Note that individual layers may have a different tile
-         * width.
-         *
-         * @name Phaser.Tilemaps.Tilemap#tileWidth
-         * @type {number}
-         * @since 3.0.0
-         */
-        this.tileWidth = mapData.tileWidth;
+            /**
+             * The base width of a tile in pixels. Note that individual layers may have a different tile
+             * width.
+             *
+             * @name Phaser.Tilemaps.Tilemap#tileWidth
+             * @type {number}
+             * @since 3.0.0
+             */
+            this.tileWidth = mapData.tileWidth;
 
-        /**
-         * The base height of a tile in pixels. Note that individual layers may have a different
-         * tile height.
-         *
-         * @name Phaser.Tilemaps.Tilemap#tileHeight
-         * @type {number}
-         * @since 3.0.0
-         */
-        this.tileHeight = mapData.tileHeight;
+            /**
+             * The base height of a tile in pixels. Note that individual layers may have a different
+             * tile height.
+             *
+             * @name Phaser.Tilemaps.Tilemap#tileHeight
+             * @type {number}
+             * @since 3.0.0
+             */
+            this.tileHeight = mapData.tileHeight;
 
-        /**
-         * The width of the map (in tiles).
-         *
-         * @name Phaser.Tilemaps.Tilemap#width
-         * @type {number}
-         * @since 3.0.0
-         */
-        this.width = mapData.width;
+            /**
+             * The width of the map (in tiles).
+             *
+             * @name Phaser.Tilemaps.Tilemap#width
+             * @type {number}
+             * @since 3.0.0
+             */
+            this.width = mapData.width;
 
-        /**
-         * The height of the map (in tiles).
-         *
-         * @name Phaser.Tilemaps.Tilemap#height
-         * @type {number}
-         * @since 3.0.0
-         */
-        this.height = mapData.height;
+            /**
+             * The height of the map (in tiles).
+             *
+             * @name Phaser.Tilemaps.Tilemap#height
+             * @type {number}
+             * @since 3.0.0
+             */
+            this.height = mapData.height;
 
-        /**
-         * The orientation of the map data (as specified in Tiled), usually 'orthogonal'.
-         *
-         * @name Phaser.Tilemaps.Tilemap#orientation
-         * @type {string}
-         * @since 3.0.0
-         */
-        this.orientation = mapData.orientation;
+            /**
+             * The orientation of the map data (as specified in Tiled), usually 'orthogonal'.
+             *
+             * @name Phaser.Tilemaps.Tilemap#orientation
+             * @type {string}
+             * @since 3.0.0
+             */
+            this.orientation = mapData.orientation;
 
-        /**
-         * The render (draw) order of the map data (as specified in Tiled), usually 'right-down'.
-         *
-         * The draw orders are:
-         *
-         * right-down
-         * left-down
-         * right-up
-         * left-up
-         *
-         * This can be changed via the `setRenderOrder` method.
-         *
-         * @name Phaser.Tilemaps.Tilemap#renderOrder
-         * @type {string}
-         * @since 3.12.0
-         */
-        this.renderOrder = mapData.renderOrder;
+            /**
+             * The render (draw) order of the map data (as specified in Tiled), usually 'right-down'.
+             *
+             * The draw orders are:
+             *
+             * right-down
+             * left-down
+             * right-up
+             * left-up
+             *
+             * This can be changed via the `setRenderOrder` method.
+             *
+             * @name Phaser.Tilemaps.Tilemap#renderOrder
+             * @type {string}
+             * @since 3.12.0
+             */
+            this.renderOrder = mapData.renderOrder;
 
-        /**
-         * The format of the map data.
-         *
-         * @name Phaser.Tilemaps.Tilemap#format
-         * @type {number}
-         * @since 3.0.0
-         */
-        this.format = mapData.format;
+            /**
+             * The format of the map data.
+             *
+             * @name Phaser.Tilemaps.Tilemap#format
+             * @type {number}
+             * @since 3.0.0
+             */
+            this.format = mapData.format;
 
-        /**
-         * The version of the map data (as specified in Tiled, usually 1).
-         *
-         * @name Phaser.Tilemaps.Tilemap#version
-         * @type {number}
-         * @since 3.0.0
-         */
-        this.version = mapData.version;
+            /**
+             * The version of the map data (as specified in Tiled, usually 1).
+             *
+             * @name Phaser.Tilemaps.Tilemap#version
+             * @type {number}
+             * @since 3.0.0
+             */
+            this.version = mapData.version;
 
-        /**
-         * Map specific properties as specified in Tiled.
-         *
-         * Depending on the version of Tiled and the JSON export used, this will be either
-         * an object or an array of objects. For Tiled 1.2.0+ maps, it will be an array.
-         *
-         * @name Phaser.Tilemaps.Tilemap#properties
-         * @type {object|object[]}
-         * @since 3.0.0
-         */
-        this.properties = mapData.properties;
+            /**
+             * Map specific properties as specified in Tiled.
+             *
+             * Depending on the version of Tiled and the JSON export used, this will be either
+             * an object or an array of objects. For Tiled 1.2.0+ maps, it will be an array.
+             *
+             * @name Phaser.Tilemaps.Tilemap#properties
+             * @type {object|object[]}
+             * @since 3.0.0
+             */
+            this.properties = mapData.properties;
 
-        /**
-         * The width of the map in pixels based on width * tileWidth.
-         *
-         * @name Phaser.Tilemaps.Tilemap#widthInPixels
-         * @type {number}
-         * @since 3.0.0
-         */
-        this.widthInPixels = mapData.widthInPixels;
+            /**
+             * The width of the map in pixels based on width * tileWidth.
+             *
+             * @name Phaser.Tilemaps.Tilemap#widthInPixels
+             * @type {number}
+             * @since 3.0.0
+             */
+            this.widthInPixels = mapData.widthInPixels;
 
-        /**
-         * The height of the map in pixels based on height * tileHeight.
-         *
-         * @name Phaser.Tilemaps.Tilemap#heightInPixels
-         * @type {number}
-         * @since 3.0.0
-         */
-        this.heightInPixels = mapData.heightInPixels;
+            /**
+             * The height of the map in pixels based on height * tileHeight.
+             *
+             * @name Phaser.Tilemaps.Tilemap#heightInPixels
+             * @type {number}
+             * @since 3.0.0
+             */
+            this.heightInPixels = mapData.heightInPixels;
 
-        /**
-         * A collection of Images, as parsed from Tiled map data.
-         *
-         * @name Phaser.Tilemaps.Tilemap#imageCollections
-         * @type {Phaser.Tilemaps.ImageCollection[]}
-         * @since 3.0.0
-         */
-        this.imageCollections = mapData.imageCollections;
+            /**
+             * A collection of Images, as parsed from Tiled map data.
+             *
+             * @name Phaser.Tilemaps.Tilemap#imageCollections
+             * @type {Phaser.Tilemaps.ImageCollection[]}
+             * @since 3.0.0
+             */
+            this.imageCollections = mapData.imageCollections;
 
-        /**
-         * An array of Tiled Image Layers.
-         *
-         * @name Phaser.Tilemaps.Tilemap#images
-         * @type {array}
-         * @since 3.0.0
-         */
-        this.images = mapData.images;
+            /**
+             * An array of Tiled Image Layers.
+             *
+             * @name Phaser.Tilemaps.Tilemap#images
+             * @type {array}
+             * @since 3.0.0
+             */
+            this.images = mapData.images;
 
-        /**
-         * An array of Tilemap layer data.
-         *
-         * @name Phaser.Tilemaps.Tilemap#layers
-         * @type {Phaser.Tilemaps.LayerData[]}
-         * @since 3.0.0
-         */
-        this.layers = mapData.layers;
+            /**
+             * An array of Tilemap layer data.
+             *
+             * @name Phaser.Tilemaps.Tilemap#layers
+             * @type {Phaser.Tilemaps.LayerData[]}
+             * @since 3.0.0
+             */
+            this.layers = mapData.layers;
 
-        /**
-         * Master list of tiles -> x, y, index in tileset.
-         *
-         * @name Phaser.Tilemaps.Tilemap#tiles
-         * @type {array}
-         * @since 3.60.0
-         * @see Phaser.Tilemaps.Parsers.Tiled.BuildTilesetIndex
-         */
-        this.tiles = mapData.tiles;
+            /**
+             * Master list of tiles -> x, y, index in tileset.
+             *
+             * @name Phaser.Tilemaps.Tilemap#tiles
+             * @type {array}
+             * @since 3.60.0
+             * @see Phaser.Tilemaps.Parsers.Tiled.BuildTilesetIndex
+             */
+            this.tiles = mapData.tiles;
 
-        /**
-         * An array of Tilesets used in the map.
-         *
-         * @name Phaser.Tilemaps.Tilemap#tilesets
-         * @type {Phaser.Tilemaps.Tileset[]}
-         * @since 3.0.0
-         */
-        this.tilesets = mapData.tilesets;
+            /**
+             * An array of Tilesets used in the map.
+             *
+             * @name Phaser.Tilemaps.Tilemap#tilesets
+             * @type {Phaser.Tilemaps.Tileset[]}
+             * @since 3.0.0
+             */
+            this.tilesets = mapData.tilesets;
 
-        /**
-         * An array of ObjectLayer instances parsed from Tiled object layers.
-         *
-         * @name Phaser.Tilemaps.Tilemap#objects
-         * @type {Phaser.Tilemaps.ObjectLayer[]}
-         * @since 3.0.0
-         */
-        this.objects = mapData.objects;
+            /**
+             * An array of ObjectLayer instances parsed from Tiled object layers.
+             *
+             * @name Phaser.Tilemaps.Tilemap#objects
+             * @type {Phaser.Tilemaps.ObjectLayer[]}
+             * @since 3.0.0
+             */
+            this.objects = mapData.objects;
 
-        /**
-         * The index of the currently selected LayerData object.
-         *
-         * @name Phaser.Tilemaps.Tilemap#currentLayerIndex
-         * @type {number}
-         * @since 3.0.0
-         */
-        this.currentLayerIndex = 0;
+            /**
+             * The index of the currently selected LayerData object.
+             *
+             * @name Phaser.Tilemaps.Tilemap#currentLayerIndex
+             * @type {number}
+             * @since 3.0.0
+             */
+            this.currentLayerIndex = 0;
 
-        /**
-         * The length of the horizontal sides of the hexagon.
-         * Only used for hexagonal orientation Tilemaps.
-         *
-         * @name Phaser.Tilemaps.Tilemap#hexSideLength
-         * @type {number}
-         * @since 3.50.0
-         */
-        this.hexSideLength = mapData.hexSideLength;
+            /**
+             * The length of the horizontal sides of the hexagon.
+             * Only used for hexagonal orientation Tilemaps.
+             *
+             * @name Phaser.Tilemaps.Tilemap#hexSideLength
+             * @type {number}
+             * @since 3.50.0
+             */
+            this.hexSideLength = mapData.hexSideLength;
 
-        var orientation = this.orientation;
+            var orientation = this.orientation;
 
-        /**
-         * Functions used to handle world to tile, and tile to world, conversion.
-         * Cached here for internal use by public methods such as `worldToTileXY`, etc.
-         *
-         * @name Phaser.Tilemaps.Tilemap#_convert
-         * @private
-         * @type {object}
-         * @since 3.50.0
-         */
-        this._convert = {
-            WorldToTileXY: TilemapComponents.GetWorldToTileXYFunction(orientation),
-            WorldToTileX: TilemapComponents.GetWorldToTileXFunction(orientation),
-            WorldToTileY: TilemapComponents.GetWorldToTileYFunction(orientation),
-            TileToWorldXY: TilemapComponents.GetTileToWorldXYFunction(orientation),
-            TileToWorldX: TilemapComponents.GetTileToWorldXFunction(orientation),
-            TileToWorldY: TilemapComponents.GetTileToWorldYFunction(orientation),
-            GetTileCorners: TilemapComponents.GetTileCornersFunction(orientation)
-        };
-    },
+            /**
+             * Functions used to handle world to tile, and tile to world, conversion.
+             * Cached here for internal use by public methods such as `worldToTileXY`, etc.
+             *
+             * @name Phaser.Tilemaps.Tilemap#_convert
+             * @private
+             * @type {object}
+             * @since 3.50.0
+             */
+            this._convert = {
+                WorldToTileXY: TilemapComponents.GetWorldToTileXYFunction(orientation),
+                WorldToTileX: TilemapComponents.GetWorldToTileXFunction(orientation),
+                WorldToTileY: TilemapComponents.GetWorldToTileYFunction(orientation),
+                TileToWorldXY: TilemapComponents.GetTileToWorldXYFunction(orientation),
+                TileToWorldX: TilemapComponents.GetTileToWorldXFunction(orientation),
+                TileToWorldY: TilemapComponents.GetTileToWorldYFunction(orientation),
+                GetTileCorners: TilemapComponents.GetTileCornersFunction(orientation)
+            };
+        },
 
     /**
      * Sets the rendering (draw) order of the tiles in this map.
@@ -220116,7 +222160,7 @@ var Tilemap = new Class({
 
         if (typeof renderOrder === 'number')
         {
-            renderOrder = orders[renderOrder];
+            renderOrder = orders[ renderOrder ];
         }
 
         if (orders.indexOf(renderOrder) > -1)
@@ -220179,12 +222223,20 @@ var Tilemap = new Class({
             return null;
         }
 
-        var tileset = this.tilesets[index];
+        var tileset = this.tilesets[ index ];
 
         if (tileset)
         {
-            tileset.setTileSize(tileWidth, tileHeight);
-            tileset.setSpacing(tileMargin, tileSpacing);
+            if (tileWidth || tileHeight)
+            {
+                tileset.setTileSize(tileWidth, tileHeight);
+            }
+
+            if (tileMargin || tileSpacing)
+            {
+                tileset.setSpacing(tileMargin, tileSpacing);
+            }
+
             tileset.setImage(texture);
 
             return tileset;
@@ -220292,7 +222344,8 @@ var Tilemap = new Class({
             tileHeight: tileHeight,
             width: width,
             height: height,
-            orientation: this.orientation
+            orientation: this.orientation,
+            hexSideLength: this.hexSideLength
         });
 
         var row;
@@ -220358,7 +222411,7 @@ var Tilemap = new Class({
             return null;
         }
 
-        var layerData = this.layers[index];
+        var layerData = this.layers[ index ];
 
         // Check for an associated tilemap layer
         if (layerData.tilemapLayer)
@@ -220558,7 +222611,7 @@ var Tilemap = new Class({
 
         for (var c = 0; c < config.length; c++)
         {
-            var singleConfig = config[c];
+            var singleConfig = config[ c ];
 
             var id = GetFastValue(singleConfig, 'id', null);
             var gid = GetFastValue(singleConfig, 'gid', null);
@@ -220572,7 +222625,7 @@ var Tilemap = new Class({
             //  Sweep to get all the objects we want to convert in this pass
             for (var s = 0; s < objects.length; s++)
             {
-                obj = objects[s];
+                obj = objects[ s ];
 
                 if (
                     (id === null && gid === null && name === null && type === null) ||
@@ -220596,7 +222649,7 @@ var Tilemap = new Class({
 
             for (var i = 0; i < toConvert.length; i++)
             {
-                obj = toConvert[i];
+                obj = toConvert[ i ];
 
                 var sprite = new classType(scene);
 
@@ -220987,7 +223040,7 @@ var Tilemap = new Class({
     {
         for (var i = 0; i < location.length; i++)
         {
-            if (location[i].name === name)
+            if (location[ i ].name === name)
             {
                 return i;
             }
@@ -221010,7 +223063,7 @@ var Tilemap = new Class({
     {
         var index = this.getLayerIndex(layer);
 
-        return (index !== null) ? this.layers[index] : null;
+        return (index !== null) ? this.layers[ index ] : null;
     },
 
     /**
@@ -221027,7 +223080,7 @@ var Tilemap = new Class({
     {
         var index = this.getIndex(this.objects, name);
 
-        return (index !== null) ? this.objects[index] : null;
+        return (index !== null) ? this.objects[ index ] : null;
     },
 
     /**
@@ -221112,7 +223165,7 @@ var Tilemap = new Class({
      *
      * @param {number} tileX - X position to get the tile from (given in tile units, not pixels).
      * @param {number} tileY - Y position to get the tile from (given in tile units, not pixels).
-     * @param {boolean} [nonNull] - If true getTile won't return null for empty tiles, but a Tile object with an index of -1.
+     * @param {boolean} [nonNull=false] - For empty tiles, return a Tile object with an index of -1 instead of null.
      * @param {(string|number|Phaser.Tilemaps.TilemapLayer)} [layer] - The tile layer to use. If not given the current layer is used.
      *
      * @return {?Phaser.Tilemaps.Tile} Returns a Tile, or null if the layer given was invalid.
@@ -221136,7 +223189,7 @@ var Tilemap = new Class({
      *
      * @param {number} worldX - X position to get the tile from (given in pixels)
      * @param {number} worldY - Y position to get the tile from (given in pixels)
-     * @param {boolean} [nonNull] - If true, function won't return null for empty tiles, but a Tile object with an index of -1.
+     * @param {boolean} [nonNull=false] - For empty tiles, return a Tile object with an index of -1 instead of null.
      * @param {Phaser.Cameras.Scene2D.Camera} [camera] - The Camera to use when calculating the tile index from the world values.
      * @param {(string|number|Phaser.Tilemaps.TilemapLayer)} [layer] - The tile layer to use. If not given the current layer is used.
      *
@@ -221264,7 +223317,7 @@ var Tilemap = new Class({
     {
         var index = this.getIndex(this.tilesets, name);
 
-        return (index !== null) ? this.tilesets[index] : null;
+        return (index !== null) ? this.tilesets[ index ] : null;
     },
 
     /**
@@ -221343,7 +223396,7 @@ var Tilemap = new Class({
     layer: {
         get: function ()
         {
-            return this.layers[this.currentLayerIndex];
+            return this.layers[ this.currentLayerIndex ];
         },
 
         set: function (layer)
@@ -221556,9 +223609,9 @@ var Tilemap = new Class({
 
             for (var i = index; i < this.layers.length; i++)
             {
-                if (this.layers[i].tilemapLayer)
+                if (this.layers[ i ].tilemapLayer)
                 {
-                    this.layers[i].tilemapLayer.layerIndex--;
+                    this.layers[ i ].tilemapLayer.layerIndex--;
                 }
             }
 
@@ -221593,7 +223646,7 @@ var Tilemap = new Class({
 
         if (index !== null)
         {
-            layer = this.layers[index];
+            layer = this.layers[ index ];
 
             layer.tilemapLayer.destroy();
 
@@ -221626,9 +223679,9 @@ var Tilemap = new Class({
 
         for (var i = 0; i < layers.length; i++)
         {
-            if (layers[i].tilemapLayer)
+            if (layers[ i ].tilemapLayer)
             {
-                layers[i].tilemapLayer.destroy(false);
+                layers[ i ].tilemapLayer.destroy(false);
             }
         }
 
@@ -221666,7 +223719,7 @@ var Tilemap = new Class({
 
         for (var i = 0; i < tiles.length; i++)
         {
-            var tile = tiles[i];
+            var tile = tiles[ i ];
 
             removed.push(this.removeTileAt(tile.x, tile.y, true, recalculateFaces, tile.tilemapLayer));
 
@@ -221790,7 +223843,7 @@ var Tilemap = new Class({
 
         for (var i = 0; i < layers.length; i++)
         {
-            TilemapComponents.RenderDebug(graphics, styleConfig, layers[i]);
+            TilemapComponents.RenderDebug(graphics, styleConfig, layers[ i ]);
         }
 
         return this;
@@ -222094,18 +224147,18 @@ var Tilemap = new Class({
         //  Update the base tile size on all layers & tiles
         for (var i = 0; i < this.layers.length; i++)
         {
-            this.layers[i].baseTileWidth = tileWidth;
-            this.layers[i].baseTileHeight = tileHeight;
+            this.layers[ i ].baseTileWidth = tileWidth;
+            this.layers[ i ].baseTileHeight = tileHeight;
 
-            var mapData = this.layers[i].data;
-            var mapWidth = this.layers[i].width;
-            var mapHeight = this.layers[i].height;
+            var mapData = this.layers[ i ].data;
+            var mapWidth = this.layers[ i ].width;
+            var mapHeight = this.layers[ i ].height;
 
             for (var row = 0; row < mapHeight; row++)
             {
                 for (var col = 0; col < mapWidth; col++)
                 {
-                    var tile = mapData[row][col];
+                    var tile = mapData[ row ][ col ];
 
                     if (tile !== null)
                     {
@@ -222149,7 +224202,7 @@ var Tilemap = new Class({
         {
             for (var col = 0; col < mapWidth; col++)
             {
-                var tile = mapData[row][col];
+                var tile = mapData[ row ][ col ];
 
                 if (tile !== null)
                 {
@@ -222486,7 +224539,7 @@ module.exports = Tilemap;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -222531,7 +224584,7 @@ GameObjectCreator.register('tilemap', function (config)
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -222598,7 +224651,7 @@ GameObjectFactory.register('tilemap', function (key, tileWidth, tileHeight, widt
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -222614,6 +224667,8 @@ var Vector2 = __webpack_require__(26099);
  * @classdesc
  * A Tilemap Layer is a Game Object that renders LayerData from a Tilemap when used in combination
  * with one, or more, Tilesets.
+ * 
+ * Do not add TilemapLayers to Containers, they are stand-alone display objects.
  *
  * @class TilemapLayer
  * @extends Phaser.GameObjects.GameObject
@@ -223332,7 +225387,7 @@ var TilemapLayer = new Class({
      *
      * @param {number} tileX - X position to get the tile from (given in tile units, not pixels).
      * @param {number} tileY - Y position to get the tile from (given in tile units, not pixels).
-     * @param {boolean} [nonNull=false] - If true getTile won't return null for empty tiles, but a Tile object with an index of -1.
+     * @param {boolean} [nonNull=false] - For empty tiles, return a Tile object with an index of -1 instead of null.
      *
      * @return {Phaser.Tilemaps.Tile} The Tile at the given coordinates or null if no tile was found or the coordinates were invalid.
      */
@@ -223349,7 +225404,7 @@ var TilemapLayer = new Class({
      *
      * @param {number} worldX - X position to get the tile from (given in pixels)
      * @param {number} worldY - Y position to get the tile from (given in pixels)
-     * @param {boolean} [nonNull=false] - If true, function won't return null for empty tiles, but a Tile object with an index of -1.
+     * @param {boolean} [nonNull=false] - For empty tiles, return a Tile object with an index of -1 instead of null.
      * @param {Phaser.Cameras.Scene2D.Camera} [camera] - The Camera to use when calculating the tile index from the world values.
      *
      * @return {Phaser.Tilemaps.Tile} The tile at the given coordinates or null if no tile was found or the coordinates were invalid.
@@ -223368,7 +225423,7 @@ var TilemapLayer = new Class({
      * @param {number} worldX - X position to get the tile from (given in pixels)
      * @param {number} worldY - Y position to get the tile from (given in pixels)
      * @param {boolean} [originTop=true] - Which is the active face of the isometric tile? The top (default, true), or the base? (false)
-     * @param {boolean} [nonNull=false] - If true, function won't return null for empty tiles, but a Tile object with an index of -1.
+     * @param {boolean} [nonNull=false] - For empty tiles, return a Tile object with an index of -1 instead of null.
      * @param {Phaser.Cameras.Scene2D.Camera} [camera] - The Camera to use when calculating the tile index from the world values.
      *
      * @return {Phaser.Tilemaps.Tile} The tile at the given coordinates or null if no tile was found or the coordinates were invalid.
@@ -224136,7 +226191,7 @@ module.exports = TilemapLayer;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -224280,7 +226335,7 @@ module.exports = TilemapLayerCanvasRenderer;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -224313,7 +226368,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -224434,7 +226489,7 @@ module.exports = TilemapLayerWebGLRenderer;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -224476,7 +226531,7 @@ var Tileset = new Class({
         if (tileData === undefined) { tileData = {}; }
 
         /**
-         * The name of the Tileset.s
+         * The name of the Tileset.
          *
          * @name Phaser.Tilemaps.Tileset#name
          * @type {string}
@@ -224779,7 +226834,7 @@ var Tileset = new Class({
     },
 
     /**
-     * Sets the tile margin & spacing and updates the tile data (rows, columns, etc.).
+     * Sets the tile margin and spacing and updates the tile data (rows, columns, etc.).
      *
      * @method Phaser.Tilemaps.Tileset#setSpacing
      * @since 3.0.0
@@ -224871,7 +226926,7 @@ module.exports = Tileset;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -224966,7 +227021,7 @@ module.exports = CalculateFacesAt;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -225032,7 +227087,7 @@ module.exports = CalculateFacesWithin;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -225079,7 +227134,7 @@ module.exports = CheckIsoBounds;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -225175,7 +227230,7 @@ module.exports = Copy;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -225258,7 +227313,7 @@ var CreateFromTiles = function (indexes, replacements, spriteConfig, scene, came
             if (config.hasOwnProperty('useSpriteSheet'))
             {
                 config.key = tile.tileset.image;
-                config.frame = tile.index - 1;
+                config.frame = tile.index - tile.tileset.firstgid;
             }
 
             sprites.push(scene.make.sprite(config));
@@ -225295,7 +227350,7 @@ module.exports = CreateFromTiles;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -225352,7 +227407,7 @@ module.exports = CullBounds;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -225408,7 +227463,7 @@ module.exports = CullTiles;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -225462,7 +227517,7 @@ module.exports = Fill;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -225506,7 +227561,7 @@ module.exports = FilterTiles;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -225593,7 +227648,7 @@ module.exports = FindByIndex;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -225645,7 +227700,7 @@ module.exports = FindTile;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -225692,7 +227747,7 @@ module.exports = ForEachTile;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -225747,7 +227802,7 @@ module.exports = GetCullTilesFunction;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -225761,15 +227816,13 @@ var IsInLayerBounds = __webpack_require__(62991);
  *
  * @param {number} tileX - X position to get the tile from (given in tile units, not pixels).
  * @param {number} tileY - Y position to get the tile from (given in tile units, not pixels).
- * @param {boolean} nonNull - If true getTile won't return null for empty tiles, but a Tile object with an index of -1.
+ * @param {boolean} nonNull - For empty tiles, return a Tile object with an index of -1 instead of null.
  * @param {Phaser.Tilemaps.LayerData} layer - The Tilemap Layer to act upon.
  *
  * @return {Phaser.Tilemaps.Tile} The tile at the given coordinates or null if no tile was found or the coordinates were invalid.
  */
 var GetTileAt = function (tileX, tileY, nonNull, layer)
 {
-    if (nonNull === undefined) { nonNull = false; }
-
     if (IsInLayerBounds(tileX, tileY, layer))
     {
         var tile = layer.data[tileY][tileX] || null;
@@ -225803,7 +227856,7 @@ module.exports = GetTileAt;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -225820,7 +227873,7 @@ var point = new Vector2();
  *
  * @param {number} worldX - X position to get the tile from (given in pixels)
  * @param {number} worldY - Y position to get the tile from (given in pixels)
- * @param {boolean} nonNull - If true, function won't return null for empty tiles, but a Tile object with an index of -1.
+ * @param {boolean} nonNull - For empty tiles, return a Tile object with an index of -1 instead of null.
  * @param {Phaser.Cameras.Scene2D.Camera} camera - The Camera to use when calculating the tile index from the world values.
  * @param {Phaser.Tilemaps.LayerData} layer - The Tilemap Layer to act upon.
  *
@@ -225843,7 +227896,7 @@ module.exports = GetTileAtWorldXY;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -225908,7 +227961,7 @@ module.exports = GetTileCorners;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -225961,7 +228014,7 @@ module.exports = GetTileCornersFunction;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -226001,7 +228054,7 @@ module.exports = GetTileToWorldXFunction;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -226056,7 +228109,7 @@ module.exports = GetTileToWorldXYFunction;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -226101,7 +228154,7 @@ module.exports = GetTileToWorldYFunction;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -226204,7 +228257,7 @@ module.exports = GetTilesWithin;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -226213,6 +228266,7 @@ var GetTilesWithin = __webpack_require__(7386);
 var Intersects = __webpack_require__(91865);
 var NOOP = __webpack_require__(29747);
 var Vector2 = __webpack_require__(26099);
+var CONST = __webpack_require__(91907);
 
 var TriangleToRectangle = function (triangle, rect)
 {
@@ -226226,6 +228280,8 @@ var pointEnd = new Vector2();
 /**
  * Gets the tiles that overlap with the given shape in the given layer. The shape must be a Circle,
  * Line, Rectangle or Triangle. The shape should be in world coordinates.
+ * 
+ * **Note:** This method currently only works with orthogonal tilemap layers.
  *
  * @function Phaser.Tilemaps.Components.GetTilesWithinShape
  * @since 3.0.0
@@ -226239,6 +228295,12 @@ var pointEnd = new Vector2();
  */
 var GetTilesWithinShape = function (shape, filteringOptions, camera, layer)
 {
+    if (layer.orientation !== CONST.ORTHOGONAL)
+    {
+        console.warn('GetTilesWithinShape only works with orthogonal tilemaps');
+        return [];
+    }
+
     if (shape === undefined) { return []; }
 
     // intersectTest is a function with parameters: shape, rect
@@ -226320,7 +228382,7 @@ module.exports = GetTilesWithinShape;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -226375,7 +228437,7 @@ module.exports = GetTilesWithinWorldXY;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -226417,7 +228479,7 @@ module.exports = GetWorldToTileXFunction;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -226472,7 +228534,7 @@ module.exports = GetWorldToTileXYFunction;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -226517,7 +228579,7 @@ module.exports = GetWorldToTileYFunction;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -226560,7 +228622,7 @@ module.exports = HasTileAt;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -226603,7 +228665,7 @@ module.exports = HasTileAtWorldXY;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -226679,7 +228741,7 @@ module.exports = HexagonalCullBounds;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -226736,7 +228798,7 @@ module.exports = HexagonalCullTiles;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -226812,7 +228874,7 @@ module.exports = HexagonalGetTileCorners;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -226864,15 +228926,17 @@ var HexagonalTileToWorldXY = function (tileX, tileY, point, camera, layer)
 
     var x;
     var y;
+    var staggerAxis = layer.staggerAxis;
+    var staggerIndex = layer.staggerIndex;
 
-    if (layer.staggerAxis === 'y')
+    if (staggerAxis === 'y')
     {
         x = worldX + (tileWidth * tileX) + tileWidth;
         y = worldY + ((1.5 * tileY) * tileHeightHalf) + tileHeightHalf;
 
         if (tileY % 2 === 0)
         {
-            if (this.staggerIndex === 'odd')
+            if (staggerIndex === 'odd')
             {
                 x -= tileWidthHalf;
             }
@@ -226882,14 +228946,14 @@ var HexagonalTileToWorldXY = function (tileX, tileY, point, camera, layer)
             }
         }
     }
-    else if ((this.staggerAxis === 'x') && (this.staggerIndex === 'odd'))
+    else if ((staggerAxis === 'x') && (staggerIndex === 'odd'))
     {
         x = worldX + ((1.5 * tileX) * tileWidthHalf) + tileWidthHalf;
         y = worldY + (tileHeight * tileX) + tileHeight;
 
         if (tileX % 2 === 0)
         {
-            if (this.staggerIndex === 'odd')
+            if (staggerIndex === 'odd')
             {
                 y -= tileHeightHalf;
             }
@@ -226913,7 +228977,7 @@ module.exports = HexagonalTileToWorldXY;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -227040,7 +229104,7 @@ module.exports = HexagonalWorldToTileXY;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -227071,7 +229135,7 @@ module.exports = IsInLayerBounds;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -227226,7 +229290,7 @@ module.exports = IsometricCullTiles;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -227288,7 +229352,7 @@ module.exports = IsometricTileToWorldXY;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -227371,7 +229435,7 @@ module.exports = IsometricWorldToTileXY;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -227476,7 +229540,7 @@ module.exports = PutTileAt;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -227520,7 +229584,7 @@ module.exports = PutTileAtWorldXY;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -227588,7 +229652,7 @@ module.exports = PutTilesAt;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -227647,7 +229711,7 @@ module.exports = Randomize;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -227710,7 +229774,7 @@ module.exports = RemoveTileAt;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -227752,7 +229816,7 @@ module.exports = RemoveTileAtWorldXY;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -227794,10 +229858,11 @@ var RenderDebug = function (graphics, styleConfig, layer)
     {
         var tile = tiles[i];
 
+        var offset = tile.tileset ? tile.tileset.tileOffset : { x: 0, y: 0 };
         var tw = tile.width;
         var th = tile.height;
-        var x = tile.pixelX;
-        var y = tile.pixelY;
+        var x = tile.pixelX - offset.x;
+        var y = tile.pixelY - offset.y;
 
         var color = tile.collides ? collidingTileColor : tileColor;
 
@@ -227977,7 +230042,7 @@ for (var q = 0; q <= 9; q++)
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -228022,7 +230087,7 @@ module.exports = ReplaceByIndex;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -228149,7 +230214,7 @@ module.exports = RunCull;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -228221,7 +230286,7 @@ module.exports = SetCollision;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -228298,7 +230363,7 @@ module.exports = SetCollisionBetween;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -228360,7 +230425,7 @@ module.exports = SetCollisionByExclusion;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -228436,7 +230501,7 @@ module.exports = SetCollisionByProperty;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -228496,7 +230561,7 @@ module.exports = SetCollisionFromCollisionGroup;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -228535,7 +230600,7 @@ module.exports = SetLayerCollisionIndex;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -228571,7 +230636,7 @@ module.exports = SetTileCollision;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -228618,7 +230683,7 @@ module.exports = SetTileIndexCallback;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -228660,7 +230725,7 @@ module.exports = SetTileLocationCallback;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -228706,7 +230771,7 @@ module.exports = Shuffle;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -228760,7 +230825,7 @@ module.exports = StaggeredCullBounds;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -228817,7 +230882,7 @@ module.exports = StaggeredCullTiles;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -228879,7 +230944,7 @@ module.exports = StaggeredTileToWorldXY;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -228924,7 +230989,7 @@ module.exports = StaggeredTileToWorldY;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -228990,7 +231055,7 @@ module.exports = StaggeredWorldToTileXY;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -229038,7 +231103,7 @@ module.exports = StaggeredWorldToTileY;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -229090,7 +231155,7 @@ module.exports = SwapByIndex;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -229135,7 +231200,7 @@ module.exports = TileToWorldX;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -229179,7 +231244,7 @@ module.exports = TileToWorldXY;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -229224,7 +231289,7 @@ module.exports = TileToWorldY;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -229309,7 +231374,7 @@ module.exports = WeightedRandomize;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -229349,7 +231414,7 @@ module.exports = WorldToTileX;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -229416,7 +231481,7 @@ module.exports = WorldToTileXY;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -229456,7 +231521,7 @@ module.exports = WorldToTileY;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -229547,7 +231612,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -229621,7 +231686,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -229641,7 +231706,7 @@ module.exports = CONST;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -229691,7 +231756,7 @@ module.exports = Tilemaps;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -229967,7 +232032,7 @@ module.exports = LayerData;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -230235,7 +232300,7 @@ module.exports = MapData;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -230373,7 +232438,7 @@ module.exports = ObjectLayer;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -230421,7 +232486,7 @@ module.exports = FromOrientationString;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -230492,7 +232557,7 @@ module.exports = Parse;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -230585,7 +232650,7 @@ module.exports = Parse2DArray;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -230634,7 +232699,7 @@ module.exports = ParseCSV;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -230721,7 +232786,7 @@ module.exports = ParseTileLayers;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -230773,7 +232838,7 @@ module.exports = ParseTilesets;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -230841,7 +232906,7 @@ module.exports = ParseWeltmeister;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -230865,7 +232930,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -230893,7 +232958,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -230967,7 +233032,7 @@ module.exports = AssignTileProperties;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -231011,7 +233076,7 @@ module.exports = Base64Decode;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -231041,10 +233106,14 @@ var BuildTilesetIndex = function (mapData)
         for (var j = 0; j < images.length; j++)
         {
             var image = images[j];
+            var offset = {
+                x: 0,
+                y: image.height - mapData.tileHeight
+            };
+            
+            set = new Tileset(image.image, image.gid, image.width, image.height, 0, 0, undefined, undefined, offset);
 
-            set = new Tileset(image.image, image.gid, collection.imageWidth, collection.imageHeight, 0, 0);
-
-            set.updateTileData(collection.imageWidth, collection.imageHeight);
+            set.updateTileData(image.width, image.height);
 
             mapData.tilesets.push(set);
         }
@@ -231106,7 +233175,7 @@ module.exports = BuildTilesetIndex;
 
 /**
  * @author       Seth Berrier <berriers@uwstout.edu>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -231167,7 +233236,7 @@ module.exports = CreateGroupLayer;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -231258,7 +233327,7 @@ module.exports = ParseGID;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -231347,7 +233416,7 @@ module.exports = ParseImageLayers;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -231404,6 +233473,19 @@ var ParseJSONTiled = function (name, source, insertNull)
         mapData.hexSideLength = json.hexsidelength;
         mapData.staggerAxis = json.staggeraxis;
         mapData.staggerIndex = json.staggerindex;
+
+        if (mapData.staggerAxis === 'y')
+        {
+            var triangleHeight = (mapData.tileHeight - mapData.hexSideLength) / 2;
+            mapData.widthInPixels = mapData.tileWidth * (mapData.width + 0.5);
+            mapData.heightInPixels = mapData.height * (mapData.hexSideLength + triangleHeight) + triangleHeight;
+        }
+        else
+        {
+            var triangleWidth = (mapData.tileWidth - mapData.hexSideLength) / 2;
+            mapData.widthInPixels = mapData.width * (mapData.hexSideLength + triangleWidth) + triangleWidth;
+            mapData.heightInPixels = mapData.tileHeight * (mapData.height + 0.5);
+        }
     }
 
     mapData.layers = ParseTileLayers(json, insertNull);
@@ -231433,7 +233515,7 @@ module.exports = ParseJSONTiled;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -231514,7 +233596,7 @@ module.exports = ParseObject;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -231614,7 +233696,7 @@ module.exports = ParseObjectLayers;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -231725,6 +233807,8 @@ var ParseTileLayers = function (json, insertNull)
         var gidInfo;
         var tile;
         var blankTile;
+        var triangleHeight;
+        var triangleWidth;
 
         var output = [];
         var x = 0;
@@ -231754,6 +233838,19 @@ var ParseTileLayers = function (json, insertNull)
                 layerData.hexSideLength = json.hexsidelength;
                 layerData.staggerAxis = json.staggeraxis;
                 layerData.staggerIndex = json.staggerindex;
+
+                if (layerData.staggerAxis === 'y')
+                {
+                    triangleHeight = (layerData.tileHeight - layerData.hexSideLength) / 2;
+                    layerData.widthInPixels = layerData.tileWidth * (layerData.width + 0.5);
+                    layerData.heightInPixels = layerData.height * (layerData.hexSideLength + triangleHeight) + triangleHeight;
+                }
+                else
+                {
+                    triangleWidth = (layerData.tileWidth - layerData.hexSideLength) / 2;
+                    layerData.widthInPixels = layerData.width * (layerData.hexSideLength + triangleWidth) + triangleWidth;
+                    layerData.heightInPixels = layerData.tileHeight * (layerData.height + 0.5);
+                }
             }
 
             for (var c = 0; c < curl.height; c++)
@@ -231835,6 +233932,19 @@ var ParseTileLayers = function (json, insertNull)
                 layerData.hexSideLength = json.hexsidelength;
                 layerData.staggerAxis = json.staggeraxis;
                 layerData.staggerIndex = json.staggerindex;
+
+                if (layerData.staggerAxis === 'y')
+                {
+                    triangleHeight = (layerData.tileHeight - layerData.hexSideLength) / 2;
+                    layerData.widthInPixels = layerData.tileWidth * (layerData.width + 0.5);
+                    layerData.heightInPixels = layerData.height * (layerData.hexSideLength + triangleHeight) + triangleHeight;
+                }
+                else
+                {
+                    triangleWidth = (layerData.tileWidth - layerData.hexSideLength) / 2;
+                    layerData.widthInPixels = layerData.width * (layerData.hexSideLength + triangleWidth) + triangleWidth;
+                    layerData.heightInPixels = layerData.tileHeight * (layerData.height + 0.5);
+                }
             }
             var row = [];
 
@@ -231891,7 +234001,7 @@ module.exports = ParseTileLayers;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -232055,7 +234165,9 @@ var ParseTilesets = function (json)
                 var image = tile.image;
                 var tileId = parseInt(tile.id, 10);
                 var gid = set.firstgid + tileId;
-                newCollection.addImage(gid, image);
+                var width = tile.imagewidth;
+                var height = tile.imageheight;
+                newCollection.addImage(gid, image, width, height);
 
                 maxId = Math.max(tileId, maxId);
             }
@@ -232087,7 +234199,7 @@ module.exports = ParseTilesets;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -232229,7 +234341,7 @@ module.exports = ParseWangsets;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -232261,7 +234373,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -232458,6 +234570,11 @@ var Clock = new Class({
             event.elapsed = event.startAt;
             event.hasDispatched = false;
             event.repeatCount = (event.repeat === -1 || event.loop) ? 999999999999 : event.repeat;
+
+            if (event.delay <= 0 && event.repeatCount > 0)
+            {
+                throw new Error('TimerEvent infinite loop created via zero delay');
+            }
         }
         else
         {
@@ -232751,7 +234868,7 @@ module.exports = Clock;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -232885,6 +235002,22 @@ var Timeline = new Class({
         this.elapsed = 0;
 
         /**
+         * The Timeline's delta time scale.
+         *
+         * Values higher than 1 increase the speed of time, while values smaller than 1 decrease it.
+         * A value of 0 freezes time and is effectively equivalent to pausing the Timeline.
+         *
+         * This doesn't affect the delta time scale of any Tweens created by the Timeline.
+         * You will have to set the `timeScale` of each Tween or the Tween Manager if you want them to match.
+         *
+         * @name Phaser.Time.Timeline#timeScale
+         * @type {number}
+         * @default
+         * @since 3.85.0
+         */
+        this.timeScale = 1;
+
+        /**
          * Whether the Timeline is running (`true`) or active (`false`).
          *
          * When paused, the Timeline will not run any of its actions.
@@ -232992,7 +235125,7 @@ var Timeline = new Class({
             return;
         }
 
-        this.elapsed += delta;
+        this.elapsed += delta * this.timeScale;
     },
 
     /**
@@ -233078,7 +235211,7 @@ var Timeline = new Class({
 
                 if (event.tween)
                 {
-                    sys.tweens.add(event.tween);
+                    event.tweenInstance = sys.tweens.add(event.tween);
                 }
 
                 if (event.sound)
@@ -233195,6 +235328,18 @@ var Timeline = new Class({
     {
         this.paused = true;
 
+        var events = this.events;
+
+        for (var i = 0; i < events.length; i++)
+        {
+            var event = events[i];
+
+            if (event.tweenInstance)
+            {
+                event.tweenInstance.paused = true;
+            }
+        }
+
         return this;
     },
 
@@ -233242,6 +235387,18 @@ var Timeline = new Class({
     {
         this.paused = false;
 
+        var events = this.events;
+
+        for (var i = 0; i < events.length; i++)
+        {
+            var event = events[i];
+
+            if (event.tweenInstance)
+            {
+                event.tweenInstance.paused = false;
+            }
+        }
+
         return this;
     },
 
@@ -233275,6 +235432,8 @@ var Timeline = new Class({
      *
      * If the Timeline isn't currently running (i.e. it's paused or complete) then
      * calling this method resets those states, the same as calling `Timeline.play(true)`.
+     * 
+     * Any Tweens that were currently running by this Timeline will be stopped.
      *
      * @method Phaser.Time.Timeline#reset
      * @since 3.60.0
@@ -233294,13 +235453,22 @@ var Timeline = new Class({
             this.iteration = 0;
         }
 
-        for (var i = 0; i < this.events.length; i++)
+        var events = this.events;
+
+        for (var i = 0; i < events.length; i++)
         {
-            this.events[i].complete = false;
+            var event = events[i];
+
+            event.complete = false;
             
             if (!loop)
             {
-                this.events[i].repeat = 0;
+                event.repeat = 0;
+            }
+
+            if (event.tweenInstance)
+            {
+                event.tweenInstance.stop();
             }
         }
 
@@ -233393,6 +235561,8 @@ var Timeline = new Class({
     /**
      * Removes all events from this Timeline, resets the elapsed time to zero
      * and pauses the Timeline.
+     * 
+     * Any Tweens that were currently running as a result of this Timeline will be stopped.
      *
      * @method Phaser.Time.Timeline#clear
      * @since 3.60.0
@@ -233401,7 +235571,20 @@ var Timeline = new Class({
      */
     clear: function ()
     {
-        this.events = [];
+        var events = this.events;
+
+        for (var i = 0; i < events.length; i++)
+        {
+            var event = events[i];
+
+            if (event.tweenInstance)
+            {
+                event.tweenInstance.stop();
+            }
+        }
+
+        events = [];
+
         this.elapsed = 0;
         this.paused = true;
 
@@ -233452,6 +235635,8 @@ var Timeline = new Class({
      * Destroys this Timeline.
      *
      * This will remove all events from the Timeline and stop it from processing.
+     * 
+     * Any Tweens that were currently running as a result of this Timeline will be stopped.
      *
      * This method is called automatically when the Scene shuts down, but you may
      * also call it directly should you need to destroy the Timeline earlier.
@@ -233467,9 +235652,10 @@ var Timeline = new Class({
         eventEmitter.off(SceneEvents.UPDATE, this.update, this);
         eventEmitter.off(SceneEvents.SHUTDOWN, this.destroy, this);
 
+        this.clear();
+
         this.scene = null;
         this.systems = null;
-        this.events = [];
     }
 
 });
@@ -233569,7 +235755,7 @@ module.exports = Timeline;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -233757,7 +235943,7 @@ var TimerEvent = new Class({
         this.hasDispatched = false;
         this.repeatCount = (this.repeat === -1 || this.loop) ? 999999999999 : this.repeat;
 
-        if (this.delay === 0 && (this.repeat > 0 || this.loop))
+        if (this.delay <= 0 && this.repeatCount > 0)
         {
             throw new Error('TimerEvent infinite loop created via zero delay');
         }
@@ -233940,7 +236126,7 @@ module.exports = TimerEvent;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -233973,7 +236159,7 @@ module.exports = 'complete';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -233995,7 +236181,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -234020,7 +236206,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -235182,7 +237368,7 @@ module.exports = TweenManager;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -235224,7 +237410,7 @@ module.exports = GetBoolean;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -235332,7 +237518,7 @@ module.exports = GetEaseFunction;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -235400,7 +237586,7 @@ module.exports = GetInterpolationFunction;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -235465,7 +237651,7 @@ module.exports = GetNewValue;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -235527,7 +237713,7 @@ module.exports = GetProps;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -235577,7 +237763,7 @@ module.exports = GetTargets;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -235908,7 +238094,7 @@ module.exports = GetValueOp;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -235917,6 +238103,7 @@ var Defaults = __webpack_require__(69902);
 var GetAdvancedValue = __webpack_require__(23568);
 var GetBoolean = __webpack_require__(57355);
 var GetEaseFunction = __webpack_require__(6113);
+var GetFastValue = __webpack_require__(95540);
 var GetNewValue = __webpack_require__(55292);
 var GetValue = __webpack_require__(35154);
 var GetValueOp = __webpack_require__(17777);
@@ -235963,14 +238150,14 @@ var NumberTweenBuilder = function (parent, config, defaults)
     //
     //  tween.getValue()
 
-    var from = GetValue(config, 'from', 0);
-    var to = GetValue(config, 'to', 1);
+    var from = GetFastValue(config, 'from', 0);
+    var to = GetFastValue(config, 'to', 1);
 
     var targets = [ { value: from } ];
 
-    var delay = GetValue(config, 'delay', defaults.delay);
-    var easeParams = GetValue(config, 'easeParams', defaults.easeParams);
-    var ease = GetValue(config, 'ease', defaults.ease);
+    var delay = GetFastValue(config, 'delay', defaults.delay);
+    var easeParams = GetFastValue(config, 'easeParams', defaults.easeParams);
+    var ease = GetFastValue(config, 'ease', defaults.ease);
 
     var ops = GetValueOp('value', to);
 
@@ -235982,13 +238169,13 @@ var NumberTweenBuilder = function (parent, config, defaults)
         ops.getEnd,
         ops.getStart,
         ops.getActive,
-        GetEaseFunction(GetValue(config, 'ease', ease), GetValue(config, 'easeParams', easeParams)),
+        GetEaseFunction(GetFastValue(config, 'ease', ease), GetFastValue(config, 'easeParams', easeParams)),
         GetNewValue(config, 'delay', delay),
-        GetValue(config, 'duration', defaults.duration),
+        GetFastValue(config, 'duration', defaults.duration),
         GetBoolean(config, 'yoyo', defaults.yoyo),
-        GetValue(config, 'hold', defaults.hold),
-        GetValue(config, 'repeat', defaults.repeat),
-        GetValue(config, 'repeatDelay', defaults.repeatDelay),
+        GetFastValue(config, 'hold', defaults.hold),
+        GetFastValue(config, 'repeat', defaults.repeat),
+        GetFastValue(config, 'repeatDelay', defaults.repeatDelay),
         false,
         false
     );
@@ -236001,6 +238188,7 @@ var NumberTweenBuilder = function (parent, config, defaults)
     tween.loopDelay = Math.round(GetAdvancedValue(config, 'loopDelay', 0));
     tween.paused = GetBoolean(config, 'paused', false);
     tween.persist = GetBoolean(config, 'persist', false);
+    tween.isNumberTween = true;
 
     //  Set the Callbacks
     tween.callbackScope = GetValue(config, 'callbackScope', tween);
@@ -236034,7 +238222,7 @@ module.exports = NumberTweenBuilder;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -236281,7 +238469,7 @@ module.exports = StaggerBuilder;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -236290,6 +238478,7 @@ var Defaults = __webpack_require__(69902);
 var GetAdvancedValue = __webpack_require__(23568);
 var GetBoolean = __webpack_require__(57355);
 var GetEaseFunction = __webpack_require__(6113);
+var GetFastValue = __webpack_require__(95540);
 var GetInterpolationFunction = __webpack_require__(91389);
 var GetNewValue = __webpack_require__(55292);
 var GetProps = __webpack_require__(82985);
@@ -236329,7 +238518,7 @@ var TweenBuilder = function (parent, config, defaults)
         defaults = MergeRight(Defaults, defaults);
     }
 
-    //  Create arrays of the Targets and the Properties
+    //  Create arrays of the Targets and the Properties. This Targets array should not be manipulated outside of this Tween.
     var targets = GetTargets(config);
 
     if (!targets && defaults.targets)
@@ -236341,17 +238530,17 @@ var TweenBuilder = function (parent, config, defaults)
 
     //  Default Tween values
 
-    var delay = GetValue(config, 'delay', defaults.delay);
-    var duration = GetValue(config, 'duration', defaults.duration);
-    var easeParams = GetValue(config, 'easeParams', defaults.easeParams);
-    var ease = GetValue(config, 'ease', defaults.ease);
-    var hold = GetValue(config, 'hold', defaults.hold);
-    var repeat = GetValue(config, 'repeat', defaults.repeat);
-    var repeatDelay = GetValue(config, 'repeatDelay', defaults.repeatDelay);
+    var delay = GetFastValue(config, 'delay', defaults.delay);
+    var duration = GetFastValue(config, 'duration', defaults.duration);
+    var easeParams = GetFastValue(config, 'easeParams', defaults.easeParams);
+    var ease = GetFastValue(config, 'ease', defaults.ease);
+    var hold = GetFastValue(config, 'hold', defaults.hold);
+    var repeat = GetFastValue(config, 'repeat', defaults.repeat);
+    var repeatDelay = GetFastValue(config, 'repeatDelay', defaults.repeatDelay);
     var yoyo = GetBoolean(config, 'yoyo', defaults.yoyo);
     var flipX = GetBoolean(config, 'flipX', defaults.flipX);
     var flipY = GetBoolean(config, 'flipY', defaults.flipY);
-    var interpolation = GetValue(config, 'interpolation', defaults.interpolation);
+    var interpolation = GetFastValue(config, 'interpolation', defaults.interpolation);
 
     var addTarget = function (tween, targetIndex, key, value)
     {
@@ -236389,10 +238578,10 @@ var TweenBuilder = function (parent, config, defaults)
                 texture,
                 frame,
                 GetNewValue(value, 'delay', delay),
-                GetValue(value, 'duration', duration),
-                GetValue(value, 'hold', hold),
-                GetValue(value, 'repeat', repeat),
-                GetValue(value, 'repeatDelay', repeatDelay),
+                GetFastValue(value, 'duration', duration),
+                GetFastValue(value, 'hold', hold),
+                GetFastValue(value, 'repeat', repeat),
+                GetFastValue(value, 'repeatDelay', repeatDelay),
                 GetBoolean(value, 'flipX', flipX),
                 GetBoolean(value, 'flipY', flipY)
             );
@@ -236401,7 +238590,7 @@ var TweenBuilder = function (parent, config, defaults)
         {
             var ops = GetValueOp(key, value);
 
-            var interpolationFunc = GetInterpolationFunction(GetValue(value, 'interpolation', interpolation));
+            var interpolationFunc = GetInterpolationFunction(GetFastValue(value, 'interpolation', interpolation));
 
             tween.add(
                 targetIndex,
@@ -236409,13 +238598,13 @@ var TweenBuilder = function (parent, config, defaults)
                 ops.getEnd,
                 ops.getStart,
                 ops.getActive,
-                GetEaseFunction(GetValue(value, 'ease', ease), GetValue(value, 'easeParams', easeParams)),
+                GetEaseFunction(GetFastValue(value, 'ease', ease), GetFastValue(value, 'easeParams', easeParams)),
                 GetNewValue(value, 'delay', delay),
-                GetValue(value, 'duration', duration),
+                GetFastValue(value, 'duration', duration),
                 GetBoolean(value, 'yoyo', yoyo),
-                GetValue(value, 'hold', hold),
-                GetValue(value, 'repeat', repeat),
-                GetValue(value, 'repeatDelay', repeatDelay),
+                GetFastValue(value, 'hold', hold),
+                GetFastValue(value, 'repeat', repeat),
+                GetFastValue(value, 'repeatDelay', repeatDelay),
                 GetBoolean(value, 'flipX', flipX),
                 GetBoolean(value, 'flipY', flipY),
                 interpolationFunc,
@@ -236455,7 +238644,7 @@ var TweenBuilder = function (parent, config, defaults)
     tween.persist = GetBoolean(config, 'persist', false);
 
     //  Set the Callbacks
-    tween.callbackScope = GetValue(config, 'callbackScope', tween);
+    tween.callbackScope = GetFastValue(config, 'callbackScope', tween);
 
     var callbacks = BaseTween.TYPES;
 
@@ -236486,7 +238675,7 @@ module.exports = TweenBuilder;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -236585,7 +238774,7 @@ module.exports = TweenChainBuilder;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -236616,7 +238805,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -236662,7 +238851,7 @@ module.exports = 'active';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -236705,7 +238894,7 @@ module.exports = 'complete';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -236751,7 +238940,7 @@ module.exports = 'loop';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -236790,7 +238979,7 @@ module.exports = 'pause';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -236839,7 +239028,7 @@ module.exports = 'repeat';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -236878,7 +239067,7 @@ module.exports = 'resume';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -236920,7 +239109,7 @@ module.exports = 'start';
 
 /**
  * @author       samme
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -236958,7 +239147,7 @@ module.exports = 'stop';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -237003,7 +239192,7 @@ module.exports = 'update';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -237053,7 +239242,7 @@ module.exports = 'yoyo';
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -237084,7 +239273,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -237118,7 +239307,7 @@ module.exports = Tweens;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -237369,9 +239558,7 @@ var BaseTween = new Class({
          * or they will retain references you may no longer require and waste memory.
          *
          * By default, `Tweens` are set to _not_ persist, so they are automatically cleaned-up by
-         * the Tween Manager. But `TweenChains` _do_ persist by default, unless overridden in their
-         * config. This is because the type of situations you use a chain for is far more likely to
-         * need to be replayed again in the future, rather than disposed of.
+         * the Tween Manager.
          *
          * @name Phaser.Tweens.BaseTween#persist
          * @type {boolean}
@@ -237766,6 +239953,8 @@ var BaseTween = new Class({
     setActiveState: function ()
     {
         this.state = TWEEN_CONST.ACTIVE;
+
+        this.hasStarted = false;
     },
 
     /**
@@ -238018,7 +240207,7 @@ module.exports = BaseTween;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -238084,13 +240273,14 @@ var BaseTweenData = new Class({
 
         /**
          * The duration of the tween in milliseconds, excluding any time required
-         * for yoyo or repeats.
+         * for yoyo or repeats. A tween can never have a duration of zero, so this
+         * will be set to 0.01 if the value is incorrectly less than or equal to zero.
          *
          * @name Phaser.Tweens.BaseTweenData#duration
          * @type {number}
          * @since 3.60.0
          */
-        this.duration = duration;
+        this.duration = (duration <= 0) ? 0.01 : duration;
 
         /**
          * The total calculated duration, in milliseconds, of this TweenData.
@@ -238692,7 +240882,7 @@ module.exports = BaseTweenData;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -238741,7 +240931,7 @@ module.exports = TWEEN_DEFAULTS;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -238814,7 +241004,7 @@ module.exports = [
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -238843,7 +241033,7 @@ var TweenFrameData = __webpack_require__(42220);
  * @since 3.0.0
  *
  * @param {Phaser.Tweens.TweenManager} parent - A reference to the Tween Manager that owns this Tween.
- * @param {object[]} targets - An array of targets to be tweened.
+ * @param {object[]} targets - An array of targets to be tweened. This array should not be manipulated outside of this Tween.
  */
 var Tween = new Class({
 
@@ -238968,6 +241158,16 @@ var Tween = new Class({
          * @since 3.60.0
          */
         this.totalProgress = 0;
+
+        /**
+         * Is this Tween a Number Tween? Number Tweens are a special kind of tween that don't have a target.
+         *
+         * @name Phaser.Tweens.Tween#isNumberTween
+         * @type {boolean}
+         * @default false
+         * @since 3.88.0
+         */
+        this.isNumberTween = false;
     },
 
     /**
@@ -239046,7 +241246,7 @@ var Tween = new Class({
      *
      * @param {number} [index=0] - The Tween Data to return the value from.
      *
-     * @return {number} The value of the requested Tween Data, or `null` if this Tween has been destroyed.
+     * @return {number|null} The value of the requested Tween Data, or `null` if this Tween has been destroyed.
      */
     getValue: function (index)
     {
@@ -239458,6 +241658,13 @@ var Tween = new Class({
     {
         if (this.isPendingRemove() || this.isDestroyed())
         {
+            if (this.persist)
+            {
+                this.setFinishedState();
+
+                return false;
+            }
+            
             return true;
         }
         else if (this.paused || this.isFinished())
@@ -239596,6 +241803,11 @@ var Tween = new Class({
         {
             this.emit(event, this, this.targets);
 
+            if (!this.callbacks)
+            {
+                return;
+            }
+
             var handler = this.callbacks[callback];
 
             if (handler)
@@ -239666,7 +241878,7 @@ module.exports = Tween;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -239754,8 +241966,6 @@ var TweenChain = new Class({
         {
             this.setActiveState();
         }
-
-        this.dispatchEvent(Events.TWEEN_ACTIVE, 'onActive');
 
         return this;
     },
@@ -239917,7 +242127,7 @@ var TweenChain = new Class({
     },
 
     /**
-     * Re-initiases the given Tween and sets it to the Active state.
+     * Re-initialises the given Tween and sets it to the Active state.
      *
      * @method Phaser.Tweens.TweenChain#makeActive
      * @since 3.60.0
@@ -240042,8 +242252,7 @@ var TweenChain = new Class({
             data[i].reset(false);
         }
 
-        this.currentIndex = 0;
-        this.currentTween = data[0];
+        this.setCurrentTween(0);
     },
 
     /**
@@ -240063,6 +242272,13 @@ var TweenChain = new Class({
     {
         if (this.isPendingRemove() || this.isDestroyed())
         {
+            if (this.persist)
+            {
+                this.setFinishedState();
+
+                return false;
+            }
+                
             return true;
         }
         else if (this.isFinished() || this.paused)
@@ -240070,21 +242286,34 @@ var TweenChain = new Class({
             return false;
         }
 
-        //  The TweehChain.timeScale is applied within Tween.update, so doesn't need including here
+        //  The TweenChain.timeScale is applied within Tween.update, so doesn't need including here
         delta *= this.parent.timeScale;
 
         if (this.isLoopDelayed())
         {
             this.updateLoopCountdown(delta);
+
+            return false;
         }
         else if (this.isCompleteDelayed())
         {
             this.updateCompleteDelay(delta);
+
+            return false;
         }
-        else if (this.isStartDelayed())
+        else if (!this.hasStarted)
         {
-            //  Reset the delta so we always start progress from zero
-            delta = this.updateStartCountdown(delta);
+            this.startDelay -= delta;
+
+            if (this.startDelay <= 0)
+            {
+                this.hasStarted = true;
+
+                this.dispatchEvent(Events.TWEEN_START, 'onStart');
+
+                //  Reset the delta so we always start progress from zero
+                delta = 0;
+            }
         }
 
         var remove = false;
@@ -240093,14 +242322,14 @@ var TweenChain = new Class({
         {
             if (this.currentTween.update(delta))
             {
-                //  This tween has finshed playback, so move to the next one
+                //  This tween has finished playback, so move to the next one
                 if (this.nextTween())
                 {
                     this.nextState();
                 }
             }
 
-            //  if nextState called onCompleteHandler then we're ready to be removed, unless we persist
+            //  If nextState called onCompleteHandler then it is ready to be removed, unless persist is set to true
             remove = this.isPendingRemove();
 
             if (remove && this.persist)
@@ -240157,8 +242386,6 @@ var TweenChain = new Class({
         this.currentTween = this.data[index];
 
         this.currentTween.setActiveState();
-
-        this.currentTween.dispatchEvent(Events.TWEEN_ACTIVE, 'onActive');
     },
 
     /**
@@ -240241,7 +242468,7 @@ module.exports = TweenChain;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -240312,7 +242539,7 @@ var TweenData = new Class({
          * A function that returns what to set the target property to,
          * the moment the TweenData is invoked.
          *
-         * This is called when this TweenData is inititalised or reset.
+         * This is called when this TweenData is initialised or reset.
          *
          * @name Phaser.Tweens.TweenData#getActiveValue
          * @type {?Phaser.Types.Tweens.GetActiveCallback}
@@ -240546,13 +242773,33 @@ var TweenData = new Class({
             this.progress = progress;
             this.previous = this.current;
 
+            if (!forward)
+            {
+                progress = 1 - progress;
+            }
+
+            var v = this.ease(progress);
+
+            if (this.interpolation)
+            {
+                this.current = this.interpolation(this.interpolationData, v);
+            }
+            else
+            {
+                this.current = this.start + ((this.end - this.start) * v);
+            }
+
+            target[key] = this.current;
+
             if (complete)
             {
                 if (forward)
                 {
-                    this.current = this.end;
-
-                    target[key] = this.end;
+                    if (tween.isNumberTween)
+                    {
+                        this.current = this.end;
+                        target[key] = this.current;
+                    }
 
                     if (this.hold > 0)
                     {
@@ -240567,32 +242814,14 @@ var TweenData = new Class({
                 }
                 else
                 {
-                    this.current = this.start;
-
-                    target[key] = this.start;
+                    if (tween.isNumberTween)
+                    {
+                        this.current = this.start;
+                        target[key] = this.current;
+                    }
 
                     this.setStateFromStart(diff);
                 }
-            }
-            else
-            {
-                if (!forward)
-                {
-                    progress = 1 - progress;
-                }
-
-                var v = this.ease(progress);
-
-                if (this.interpolation)
-                {
-                    this.current = this.interpolation(this.interpolationData, v);
-                }
-                else
-                {
-                    this.current = this.start + ((this.end - this.start) * v);
-                }
-
-                target[key] = this.current;
             }
 
             this.dispatchEvent(Events.TWEEN_UPDATE, 'onUpdate');
@@ -240663,7 +242892,7 @@ module.exports = TweenData;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -240678,7 +242907,7 @@ var Events = __webpack_require__(842);
  * at the conclusion of the Tween.
  *
  * TweenFrameData instances are typically created by the TweenBuilder automatically, when it
- * detects the prescence of a 'texture' property as the key being tweened.
+ * detects the presence of a 'texture' property as the key being tweened.
  *
  * A Tween can own multiple TweenFrameData instances, but a TweenFrameData only
  * ever belongs to a single Tween.
@@ -240986,7 +243215,7 @@ module.exports = TweenFrameData;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -241212,7 +243441,7 @@ module.exports = TWEEN_CONST;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -241469,7 +243698,7 @@ module.exports = Class;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -241497,7 +243726,7 @@ module.exports = NOOP;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -241527,7 +243756,7 @@ module.exports = NULL;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -241645,7 +243874,7 @@ module.exports = Add;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -241768,7 +243997,7 @@ module.exports = AddAt;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -241807,7 +244036,7 @@ module.exports = BringToTop;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -241860,7 +244089,7 @@ module.exports = CountAllMatching;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -241907,7 +244136,7 @@ module.exports = Each;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -241964,7 +244193,7 @@ module.exports = EachInRange;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -242049,7 +244278,7 @@ module.exports = FindClosestInSorted;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -242093,7 +244322,7 @@ module.exports = Flatten;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -242156,7 +244385,7 @@ module.exports = GetAll;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -242171,6 +244400,8 @@ var SafeRange = __webpack_require__(82011);
  *
  * Optionally you can specify a start and end index. For example if the array had 100 elements,
  * and you set `startIndex` to 0 and `endIndex` to 50, it would search only the first 50 elements.
+ * 
+ * You can also specify a negative `startIndex`, such as `-1`, which would start the search at the end of the array
  *
  * @function Phaser.Utils.Array.GetFirst
  * @since 3.4.0
@@ -242178,7 +244409,7 @@ var SafeRange = __webpack_require__(82011);
  * @param {array} array - The array to search.
  * @param {string} [property] - The property to test on each array element.
  * @param {*} [value] - The value to test the property against. Must pass a strict (`===`) comparison check.
- * @param {number} [startIndex=0] - An optional start index to search from.
+ * @param {number} [startIndex=0] - An optional start index to search from. You can also set `startIndex` to -1 to start the search from the end of the array.
  * @param {number} [endIndex=array.length] - An optional end index to search up to (but not included)
  *
  * @return {?object} The first matching element from the array, or `null` if no element could be found in the range given.
@@ -242188,21 +244419,41 @@ var GetFirst = function (array, property, value, startIndex, endIndex)
     if (startIndex === undefined) { startIndex = 0; }
     if (endIndex === undefined) { endIndex = array.length; }
 
-    if (SafeRange(array, startIndex, endIndex))
+    if (startIndex !== -1)
     {
-        for (var i = startIndex; i < endIndex; i++)
+        if (SafeRange(array, startIndex, endIndex))
         {
-            var child = array[i];
-
-            if (!property ||
-                (property && value === undefined && child.hasOwnProperty(property)) ||
-                (property && value !== undefined && child[property] === value))
+            for (var i = startIndex; i < endIndex; i++)
             {
-                return child;
+                var child = array[i];
+        
+                if (!property ||
+                    (property && value === undefined && child.hasOwnProperty(property)) ||
+                    (property && value !== undefined && child[property] === value))
+                {
+                    return child;
+                }
             }
         }
     }
-
+    else
+    {
+        if (SafeRange(array, 0, endIndex))
+        {
+            for (var i = endIndex; i >= 0; i--)
+            {
+                var child = array[i];
+        
+                if (!property ||
+                    (property && value === undefined && child.hasOwnProperty(property)) ||
+                    (property && value !== undefined && child[property] === value))
+                {
+                    return child;
+                }
+            }
+        }
+    }
+        
     return null;
 };
 
@@ -242216,7 +244467,7 @@ module.exports = GetFirst;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -242256,12 +244507,14 @@ module.exports = GetRandom;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
 /**
  * Moves the given array element above another one in the array.
+ * If the given element is already above the other, it isn't moved.
+ * Above means toward the end of the array.
  * The array is modified in-place.
  *
  * @function Phaser.Utils.Array.MoveAbove
@@ -242295,19 +244548,15 @@ var MoveAbove = function (array, item1, item2)
         return array;
     }
 
-    //  Remove
+    // Remove item1 from its current position
     array.splice(currentIndex, 1);
 
-    //  Add in new location
-    if (baseIndex === array.length - 1)
-    {
-        array.push(item1);
-    }
-    else
-    {
-        array.splice(baseIndex, 0, item1);
-    }
+    // Recalculate baseIndex after removal
+    baseIndex = array.indexOf(item2);
 
+    // Insert item1 immediately after item2
+    array.splice(baseIndex + 1, 0, item1);
+    
     return array;
 };
 
@@ -242321,12 +244570,14 @@ module.exports = MoveAbove;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
 /**
  * Moves the given array element below another one in the array.
+ * If the given element is already below the other, it isn't moved.
+ * Below means toward the start of the array.
  * The array is modified in-place.
  *
  * @function Phaser.Utils.Array.MoveBelow
@@ -242386,7 +244637,7 @@ module.exports = MoveBelow;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -242429,7 +244680,7 @@ module.exports = MoveDown;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -242477,7 +244728,7 @@ module.exports = MoveTo;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -242520,7 +244771,7 @@ module.exports = MoveUp;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -242614,7 +244865,7 @@ module.exports = NumberArray;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -242692,7 +244943,7 @@ module.exports = NumberArrayStep;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -242815,7 +245066,7 @@ module.exports = QuickSelect;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -242954,7 +245205,7 @@ module.exports = Range;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -243044,7 +245295,7 @@ module.exports = Remove;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -243096,7 +245347,7 @@ module.exports = RemoveAt;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -243160,7 +245411,7 @@ module.exports = RemoveBetween;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -243199,7 +245450,7 @@ module.exports = RemoveRandomElement;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -243244,7 +245495,7 @@ module.exports = Replace;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -243285,7 +245536,7 @@ module.exports = RotateLeft;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -243326,7 +245577,7 @@ module.exports = RotateRight;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -243339,7 +245590,7 @@ module.exports = RotateRight;
  * @param {array} array - The array to check.
  * @param {number} startIndex - The start index.
  * @param {number} endIndex - The end index.
- * @param {boolean} [throwError=true] - Throw an error if the range is out of bounds.
+ * @param {boolean} [throwError=false] - Throw an error if the range is out of bounds.
  *
  * @return {boolean} True if the range is safe, otherwise false.
  */
@@ -243348,7 +245599,7 @@ var SafeRange = function (array, startIndex, endIndex, throwError)
     var len = array.length;
 
     if (startIndex < 0 ||
-        startIndex > len ||
+        startIndex >= len ||
         startIndex >= endIndex ||
         endIndex > len)
     {
@@ -243375,7 +245626,7 @@ module.exports = SafeRange;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -243414,7 +245665,7 @@ module.exports = SendToBack;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -243470,7 +245721,7 @@ module.exports = SetAll;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -243512,7 +245763,7 @@ module.exports = Shuffle;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -243551,7 +245802,7 @@ module.exports = SortByDigits;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -243599,7 +245850,7 @@ module.exports = SpliceOne;
 /**
  * @author       Richard Davey <rich@phaser.io>
  * @author       Angry Bytes (and contributors)
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -243788,7 +246039,7 @@ module.exports = StableSort;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -243837,7 +246088,7 @@ module.exports = Swap;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -243895,7 +246146,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -243958,7 +246209,7 @@ module.exports = CheckMatrix;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -244054,7 +246305,7 @@ module.exports = MatrixToString;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -244100,7 +246351,7 @@ module.exports = ReverseColumns;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -244151,7 +246402,7 @@ module.exports = ReverseRows;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -244199,7 +246450,7 @@ module.exports = Rotate180;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -244255,7 +246506,7 @@ module.exports = RotateLeft;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -244342,7 +246593,7 @@ module.exports = RotateMatrix;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -244398,7 +246649,7 @@ module.exports = RotateRight;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -244488,7 +246739,7 @@ module.exports = TranslateMatrix;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -244551,7 +246802,7 @@ module.exports = TransposeMatrix;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -244583,7 +246834,7 @@ module.exports = {
 /**
  * @author       Niklas von Hertzen (https://github.com/niklasvh/base64-arraybuffer)
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -244642,7 +246893,7 @@ module.exports = ArrayBufferToBase64;
 /**
  * @author       Niklas von Hertzen (https://github.com/niklasvh/base64-arraybuffer)
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -244717,7 +246968,7 @@ module.exports = Base64ToArrayBuffer;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -244740,7 +246991,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -244767,7 +247018,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -244810,7 +247061,7 @@ module.exports = Clone;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -244860,7 +247111,7 @@ module.exports = DeepCopy;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -244962,7 +247213,7 @@ module.exports = Extend;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -245050,7 +247301,7 @@ module.exports = GetAdvancedValue;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -245094,7 +247345,7 @@ module.exports = GetFastValue;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -245134,7 +247385,7 @@ module.exports = GetMinMaxValue;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -245253,7 +247504,7 @@ module.exports = GetValue;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -245291,7 +247542,7 @@ module.exports = HasAll;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -245329,7 +247580,7 @@ module.exports = HasAny;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -245359,7 +247610,7 @@ module.exports = HasValue;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -245416,7 +247667,7 @@ module.exports = IsPlainObject;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -245462,7 +247713,7 @@ module.exports = Merge;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -245506,7 +247757,7 @@ module.exports = MergeRight;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -245551,7 +247802,7 @@ module.exports = Pick;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -245635,7 +247886,7 @@ module.exports = SetValue;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -245671,7 +247922,7 @@ module.exports = {
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -245707,7 +247958,7 @@ module.exports = Format;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -245784,18 +248035,20 @@ module.exports = Pad;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
 /**
  * Takes a string and removes the character at the given index.
+ * 
+ * The index is zero based.
  *
  * @function Phaser.Utils.String.RemoveAt
  * @since 3.50.0
  *
  * @param {string} string - The string to be worked on.
- * @param {number} index - The index of the character to be removed.
+ * @param {number} index - The index of the character to be removed. This value is zero-based.
  *
  * @return {string} The modified string.
  */
@@ -245807,7 +248060,7 @@ var RemoveAt = function (string, index)
     }
     else
     {
-        return string.slice(0, index - 1) + string.slice(index);
+        return string.slice(0, index) + string.slice(index + 1);
     }
 };
 
@@ -245821,7 +248074,7 @@ module.exports = RemoveAt;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -245851,7 +248104,7 @@ module.exports = Reverse;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -245887,7 +248140,7 @@ module.exports = UUID;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
@@ -245925,7 +248178,7 @@ module.exports = UppercaseFirst;
 
 /**
  * @author       Richard Davey <rich@phaser.io>
- * @copyright    2013-2024 Phaser Studio Inc.
+ * @copyright    2013-2025 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 

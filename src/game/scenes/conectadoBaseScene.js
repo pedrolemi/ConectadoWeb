@@ -13,5 +13,4 @@ export default class ConectadoBaseScene extends BaseScene {
         this.gameManager = GameManager.getInstance();
         this.dialogManager = DialogManager.getInstance();
     }
-
 }

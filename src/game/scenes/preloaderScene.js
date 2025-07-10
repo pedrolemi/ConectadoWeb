@@ -5,7 +5,7 @@ import GameManager from "../managers/gameManager.js";
 export default class PreloaderScene extends BasePreloaderScene {
     init() {
         super.init();
-        this.DEFAULT_LOADING_BAR_CONFIG.y = this.CANVAS_HEIGHT * 0.43;
+        this.DEFAULT_LOADING_BAR_CONFIG.y = this.CANVAS_HEIGHT * 0.425;
         this.DEFAULT_LOADING_BAR_CONFIG.bgColor = 0xFF408E86;
         this.DEFAULT_LOADING_BAR_CONFIG.fillColor = 0xFF004E46;
 
@@ -34,7 +34,8 @@ export default class PreloaderScene extends BasePreloaderScene {
         let dialogNamespaces = [
         ];
         let basicNamespaces = [
-            "menus/titleMenu"
+            "menus/titleMenu",
+            "menus/credits"
         ]
 
         let loadAssets = () => {

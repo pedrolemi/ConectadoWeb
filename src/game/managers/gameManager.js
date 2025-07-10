@@ -25,19 +25,22 @@ export default class GameManager extends Singleton {
     }
 
     startMainMenu() {
-        if (this.ui == null) {
-            this.sceneManager.runInParalell("UI");
-            this.ui = this.sceneManager.getScene("UI");
-        }
-
         this.sceneManager.changeScene("MainMenu", null);
     }
 
     startLoginMenu() {
         // this.sceneManager.changeScene("LoginMenu", null, false);
     }
-
+    
     startCredits() {
-        // this.sceneManager.changeScene("Credits", null, false);
+        this.sceneManager.changeScene("Credits", null, false);
+    }
+
+    startGame() {
+        if (this.ui == null) {
+            this.sceneManager.runInParalell("UI");
+            this.ui = this.sceneManager.getScene("UI");
+        }
+
     }
 }

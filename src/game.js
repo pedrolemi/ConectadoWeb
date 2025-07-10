@@ -3,6 +3,7 @@ import PreloaderScene from "./game/scenes/preloaderScene.js";
 
 import LanguageMenu from "./game/scenes/menus/languageMenu.js";
 import MainMenu from "./game/scenes/menus/mainMenu.js";
+import Credits from "./game/scenes/menus/credits.js";
 
 const MAX_W = 1129, MAX_H = 847, MIN_W = 320, MIN_H = 240;
 const CONFIG = {
@@ -17,13 +18,14 @@ const CONFIG = {
         // Carga de assets
         BootScene, PreloaderScene,
 
-        LanguageMenu, MainMenu,
+        LanguageMenu, MainMenu, Credits,
     ],
     autoFocus: true,
     // Desactivar que aparezca el menu de inspeccionar al hacer click derecho
     disableContextMenu: true,
     render: {
         antialias: true,
+        transparent: true,
     },
     scale: {
         autoCenter: Phaser.Scale.CENTER_BOTH,   // CENTER_BOTH, CENTER_HORIZONTALLY, CENTER_VERTICALLY
@@ -52,6 +54,6 @@ const CONFIG = {
 
 const GAME = new Phaser.Game(CONFIG);
 GAME.debug = {
-    enable: true,
+    enable: false,
     color: "0x00ff00"
 }

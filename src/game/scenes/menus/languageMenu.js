@@ -1,12 +1,12 @@
 import ConectadoBaseScene from "../conectadoBaseScene.js";
 import Grid from "../../../framework/UI/grid.js";
 
-import xApiTracker from "../../../lib/xApiTracker.js";
+import xApiTracker from "../../../framework/lib/xApiTracker.js";
 
 export default class LanguageMenu extends ConectadoBaseScene {
     /**
     * Escena que muestra el menu de selección de idioma
-    * @extends LaEntrevistaBaseScene
+    * @extends ConectadoBaseScene
     */
     constructor() {
         super("LanguageMenu",);

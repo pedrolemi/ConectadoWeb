@@ -1,5 +1,4 @@
 import NightmareBase from './nightmareBase.js'
-import xapiTracker from "../../../lib/xapi.js";
 
 export default class NightmareMinigame extends NightmareBase {
     /**

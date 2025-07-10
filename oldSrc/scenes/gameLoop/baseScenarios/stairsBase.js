@@ -1,7 +1,6 @@
 
 import BaseScene from '../baseScene.js';
-
-import xapiTracker from "../../../lib/xapi.js";
+import xapiTracker from '../../../lib/xapi.js';
 
 export default class StairsBase extends BaseScene {
     /**
@@ -33,7 +32,8 @@ export default class StairsBase extends BaseScene {
         wallTag.setInteractive({ useHandCursor: true });
         wallTag.on('pointerdown', () => {
             this.dialogManager.setNode(wallTagNode);
-            xapiTracker.enqueue(this.gameManager.Interacted("wallTag", JSTracker.GAMEOBJECTTYPE.ITEM));
+            this.gameManager.Interacted("wallTag", xapiTracker.GAMEOBJECTTYPE.ITEM)
+                            .Send();
         });
 
         // Puerta del despacho
@@ -46,7 +46,8 @@ export default class StairsBase extends BaseScene {
         let doorOpened = this.add.image(doorPos.x, doorPos.y, 'stairsDoorOpened').setOrigin(0, 0).setScale(this.scale);
         // Al hacer click en la puerta, se muestra un dialogo
         super.toggleDoor(doorClosed, doorOpened, () => {
-            xapiTracker.enqueue(this.gameManager.Interacted("stairsDoor", JSTracker.GAMEOBJECTTYPE.ITEM));
+            this.gameManager.Interacted("stairsDoor", xapiTracker.GAMEOBJECTTYPE.ITEM)
+                            .Send();
             this.dialogManager.setNode(this.doorNode);
         }, false);
 
@@ -58,7 +59,8 @@ export default class StairsBase extends BaseScene {
         // Al hacer click sobre las escaleras de bajada, si hay algun dialogo que mostrar (para indicar que no se puede bajar), se
         // mostrara. En caso contrario, se pasara a la escena del patio con la camara a la derecha sin eliminar esta escena
         playgroundStairs.on('pointerdown', () => {
-            xapiTracker.enqueue(this.gameManager.Interacted("playgroundStairs", JSTracker.GAMEOBJECTTYPE.ITEM));
+            this.gameManager.Interacted("playgroundStairs", xapiTracker.GAMEOBJECTTYPE.ITEM)
+                            .Send();
             if (this.playgroundNode) {
                 this.dialogManager.setNode(this.playgroundNode);
             }
@@ -77,7 +79,8 @@ export default class StairsBase extends BaseScene {
         // Al hacer click sobre las escaleras de subida, si hay algun dialogo que mostrar (para indicar que no se puede subir), se
         // mostrara. En caso contrario, se pasara a la escena del pasillo sin eliminar esta escena
         corridorStairs.on('pointerdown', () => {
-            xapiTracker.enqueue(this.gameManager.Interacted("corridorStairs", JSTracker.GAMEOBJECTTYPE.ITEM));
+            this.gameManager.Interacted("corridorStairs", xapiTracker.GAMEOBJECTTYPE.ITEM)
+                            .Send();
             if (this.corridorNode) {
                 this.dialogManager.setNode(this.corridorNode);
             }

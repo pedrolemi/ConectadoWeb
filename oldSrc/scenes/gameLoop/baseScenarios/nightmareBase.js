@@ -1,5 +1,4 @@
 import BaseScene from "../baseScene.js";
-import xapiTracker from "../../../lib/xapi.js";
 
 export default class NightmareBase extends BaseScene {
     /**

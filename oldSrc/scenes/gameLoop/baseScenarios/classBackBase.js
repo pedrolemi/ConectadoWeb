@@ -1,7 +1,6 @@
 
 import BaseScene from '../baseScene.js';
-import xapiTracker from "../../../lib/xapi.js";
-
+import xapiTracker from '../../../lib/xapi.js';
 export default class ClassBackBase extends BaseScene {
     /**
      * Escena base para el fondo de la clase. Coloca los elementos que se mantienen igual todos los dias
@@ -36,7 +35,8 @@ export default class ClassBackBase extends BaseScene {
         // Al hacer click, si hay algun dialogo que mostrar (para indicar que no se puede salir), se
         // mostrara. En caso contrario, se pasara a la escena del pasillo y se elimina esta escena
         super.toggleDoor(doorClosed, doorOpened, () => {
-            xapiTracker.enqueue(this.gameManager.Interacted("classDoor", JSTracker.GAMEOBJECTTYPE.ITEM));
+            this.gameManager.Interacted("classDoor", xapiTracker.GAMEOBJECTTYPE.ITEM)
+                            .Send();
             if (this.doorNode) {
                 this.dialogManager.setNode(this.doorNode);
             }

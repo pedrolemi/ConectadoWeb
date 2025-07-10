@@ -1,6 +1,6 @@
 
 import BaseScene from './baseScene.js';
-import xapiTracker from "../../lib/xapi.js";
+import xapiTracker from '../../lib/xapi.js';
 
 export default class OppositeRestroom extends BaseScene {
     /**
@@ -35,7 +35,8 @@ export default class OppositeRestroom extends BaseScene {
         let doorOpened = this.add.image(doorPos.x, doorPos.y, this.atlasName, 'restroomDoorOpened').setOrigin(0, 0).setScale(this.scale);
         // Al hacer click, se pasara a la escena del pasillo sin eliminar esta escena
         super.toggleDoor(doorClosed, doorOpened, () => {
-            xapiTracker.enqueue(this.gameManager.Interacted("restroomDoor", xapiTracker.JSTracker.GAMEOBJECTTYPE.ITEM));
+            this.gameManager.Interacted("restroomDoor", xapiTracker.GAMEOBJECTTYPE.ITEM)
+                            .Send();
             let params = {
                 camPos: "left"
             }
@@ -47,13 +48,13 @@ export default class OppositeRestroom extends BaseScene {
         let stall2DoorClosed = this.add.image(593 * this.scale, 244 * this.scale, this.atlasName, 'restroomStall2Closed').setOrigin(0.5, 0).setScale(this.scale);
         let stall2DoorOpened = this.add.image(861 * this.scale, 240 * this.scale, this.atlasName, 'restroomStall2Opened').setOrigin(0.5, 0).setScale(this.scale);
         super.toggleDoor(stall2DoorClosed, stall2DoorOpened, () => {
-            var statement = this.gameManager.Interacted("restroomStall2", JSTracker.GAMEOBJECTTYPE.ITEM);
-            statement.addResultExtension("status", "closed");
-            xapiTracker.enqueue(statement);
+            this.gameManager.Interacted("restroomStall2", xapiTracker.GAMEOBJECTTYPE.ITEM)
+                            .WithResultExtension("status", "closed")
+                            .Send();
         }, true, () => {
-            var statement = this.gameManager.Interacted("restroomStall2", JSTracker.GAMEOBJECTTYPE.ITEM);
-            statement.addResultExtension("status", "opened");
-            xapiTracker.enqueue(statement);
+            this.gameManager.Interacted("restroomStall2", xapiTracker.GAMEOBJECTTYPE.ITEM)
+                            .WithResultExtension("status", "opened")
+                            .Send();
         });
         stall2DoorClosed.flipX = true;
         stall2DoorOpened.flipX = true;
@@ -63,7 +64,8 @@ export default class OppositeRestroom extends BaseScene {
         let phone = this.add.image(2100 * this.scale, 1280 * this.scale, this.atlasName, 'stolenPhone').setOrigin(0, 0).setScale(this.scale * 1.7);
         phone.setInteractive({ useHandCursor: true });
         phone.on('pointerdown', () => {
-            xapiTracker.enqueue(this.gameManager.Interacted("phone", JSTracker.GAMEOBJECTTYPE.ITEM));
+            this.gameManager.Interacted("phone", xapiTracker.GAMEOBJECTTYPE.ITEM)
+                            .Send();
             this.dialogManager.setNode(phoneNode);
         })
 

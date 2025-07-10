@@ -71,7 +71,7 @@ export default class DialogManager {
     * @param {Phaser.Scene} scene - escena a la que se va a pasar
     */
     changeScene(scene) {
-        xapiTracker.enqueue(xapiTracker.accessibleTracker.Accessed(scene.scene.key, JSTracker.ACCESSIBLETYPE.SCREEN));
+        xapiTracker.Accessible(scene.scene.key, xapiTracker.ACCESSIBLETYPE.SCREEN).Accessed().Send();
         // Desactiva la caja de texto y las opciones (por si acaso)
         this.textbox.activate(false);
         // console.log("bgBlock interactive disabled when changing scene");
@@ -260,7 +260,7 @@ export default class DialogManager {
             else if (this.currNode.type === "text") {
                 if(!this.launched) {
                     var dialog = this.currNode.dialogs[0];
-                    xapiTracker.enqueue(xapiTracker.completableTracker.Initialized(`${dialog.name} ${dialog.text}`, JSTracker.COMPLETABLETYPE.STORYNODE));
+                    xapiTracker.Completable(`${dialog.name} ${dialog.text}`, xapiTracker.COMPLETABLETYPE.STORYNODE).Initialized().Send();
                     this.launched=true;
                 }
                 // Si el nodo no tiene texto, se lo salta y pasa al siguiente nodo
@@ -308,7 +308,7 @@ export default class DialogManager {
             else if (this.currNode.type === "socialNetMessage") {
                 // Funcion comun (se anade el comentario al post y se procesa el nodo)
                 let fnAux = () => {
-                    xapiTracker.enqueue(xapiTracker.alternativeTracker.Selected(this.currNode.postName, this.currNode.text, JSTracker.ALTERNATIVETYPE.DIALOG));
+                    xapiTracker.Alternative(this.currNode.postName, xapiTracker.ALTERNATIVETYPE.DIALOG).Selected(this.currNode.text).Send();
                     this.gameManager.computerScene.socialNetScreen.addCommentToPost(this.currNode.owner, this.currNode.postName,
                         this.currNode.character, this.currNode.name, this.currNode.text);
 
@@ -360,8 +360,8 @@ export default class DialogManager {
                 else {
                     // Actualiza el ultimo personaje que se ha hablado
                     this.lastCharacter = this.currNode.character;
-                    var dialog = this.currNode.dialogs[this.currNode.currDialog-1];
-                    xapiTracker.enqueue(xapiTracker.completableTracker.Completed(`${dialog.name} ${dialog.text}`, JSTracker.COMPLETABLETYPE.STORYNODE,true, true));
+                    var dialog = this.currNode.dialogs[0];
+                    xapiTracker.Completable(`${dialog.name} ${dialog.text}`, xapiTracker.COMPLETABLETYPE.STORYNODE).Completed(true, true).Send();
                     this.launched=false;
                     // Se reinicia el dialogo del nodo actual y actualiza el nodo al siguiente
                     // IMPORTANTE: DESPUES DE UN NODO DE DIALOGO SOLO HAY UN NODO, POR LO QUE 
@@ -433,7 +433,7 @@ export default class DialogManager {
         this.activateOptions(false);
 
         let next = this.currNode.next[index];
-        xapiTracker.enqueue(xapiTracker.alternativeTracker.Selected(this.currNode.fullId, this.currNode.choices[index].text, JSTracker.ALTERNATIVETYPE.DIALOG));
+        xapiTracker.Alternative(this.currNode.fullId, xapiTracker.ALTERNATIVETYPE.DIALOG).Selected(this.currNode.choices[index].text).Send();
         // Si la opcion no se puede elegir de nuevo, elimina tanto la opcion
         // como el nodo al que lleva de sus arrays correspondientes
         if (!this.currNode.choices[index].repeat) {

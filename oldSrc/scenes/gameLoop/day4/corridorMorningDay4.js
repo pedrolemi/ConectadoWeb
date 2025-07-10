@@ -1,6 +1,6 @@
 import CorridorBase from "../baseScenarios/corridorBase.js";
 import Character from "../../../gameObjects/character.js";
-import xapiTracker from "../../../lib/xapi.js";
+import xapiTracker from '../../../lib/xapi.js';
 
 export default class CorridorMorningDay4 extends CorridorBase {
     constructor() {
@@ -17,7 +17,8 @@ export default class CorridorMorningDay4 extends CorridorBase {
         let bulletinBoard = this.add.rectangle(2261 * this.scale, 388 * this.scale, 570 * this.scale, 590 * this.scale, 0xfff, 0).setOrigin(0, 0);
         bulletinBoard.setInteractive({ useHandCursor: true });
         bulletinBoard.on('pointerdown', () => {
-            xapiTracker.enqueue(this.gameManager.Interacted("bulletinBoard", JSTracker.GAMEOBJECTTYPE.ITEM));
+            this.gameManager.Interacted("bulletinBoard", xapiTracker.GAMEOBJECTTYPE.ITEM)
+                            .Send();
             this.dialogManager.setNode(boardNode);
         })
 

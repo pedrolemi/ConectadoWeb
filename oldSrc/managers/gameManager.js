@@ -389,7 +389,7 @@ export default class GameManager {
     }
 
     switchToComputer() {
-        xapiTracker.enqueue(this.Interacted("ShowComputerLogin", JSTracker.GAMEOBJECTTYPE.ITEM));
+        this.Interacted("ShowComputerLogin", xapiTracker.GAMEOBJECTTYPE.ITEM).Send();
         // Se desactiva la interfaz del telefono
         this.UIManager.phoneManager.activate(false);
         
@@ -402,7 +402,7 @@ export default class GameManager {
     }
 
     leaveComputer() {
-        xapiTracker.enqueue(this.Interacted("offComputer", JSTracker.GAMEOBJECTTYPE.ITEM));
+        this.Interacted("offComputer", xapiTracker.GAMEOBJECTTYPE.ITEM).Send();
         // Se reactiva la interfaz del telefono
         this.UIManager.phoneManager.activate(true);
 
@@ -470,8 +470,8 @@ export default class GameManager {
 
         // Si no se encuentra el personaje en la blackboard, se anade con 50 de amistad por defecto
         if (!this.getValue(varName)) {
-            xapiTracker.enqueue(xapiTracker.alternativeTracker.Unlocked("friend", character, JSTracker.ALTERNATIVETYPE.ALTERNATIVE));
-            xapiTracker.enqueue(xapiTracker.completableTracker.Initialized(varName, JSTracker.COMPLETABLETYPE.COMPLETABLE));
+            xapiTracker.Alternative("friend",xapiTracker.ALTERNATIVETYPE.ALTERNATIVE).Unlocked(character).Send();
+            xapiTracker.Completable(varName, xapiTracker.COMPLETABLETYPE.COMPLETABLE).Initialized().Send();
             this.setValue(varName, 50);
         }
 
@@ -479,30 +479,26 @@ export default class GameManager {
         let val = this.getValue(varName)
         val += amount;
         this.setValue(varName, val);
-        xapiTracker.enqueue(xapiTracker.completableTracker.Progressed(varName, JSTracker.COMPLETABLETYPE.COMPLETABLE, val));
+        xapiTracker.Completable(varName, xapiTracker.COMPLETABLETYPE.COMPLETABLE).Progressed(val).Send();
         // Actualiza el valor tambien en la pantalla de relaciones del movil
         this.UIManager.phoneManager.phone.updateRelationShip(character, val);
     }
 
     Interacted(id, type) {
-        var statement = xapiTracker.gameObjectTracker.Interacted(id, type);
-        statement.addResultExtension("GameDay",this.dayText);
-        statement.addResultExtension("GameHour", this.hour);
-        statement.addResultExtension("IsRepeatedDay", this.isRepeatedDay); //TODO GlobalState.Repeated.ToString() 
-        statement.addResultExtension("MobileMessages", this.notificationAmount);
-        this.blackboard.forEach((value, key) => {
-            statement.addResultExtension(key, value);
-        });
-        return statement;
+        return xapiTracker.GameObject(id, type).Interacted()
+            .WithResultExtension("GameDay",this.dayText)
+            .WithResultExtension("GameHour", this.hour)
+            .WithResultExtension("IsRepeatedDay", this.isRepeatedDay) //TODO GlobalState.Repeated.ToString() 
+            .WithResultExtension("MobileMessages", this.notificationAmount)
+            .Apply(statement => {
+                this.blackboard.forEach((value, key) => {
+                 statement.addResultExtension(key, value);
+                });
+            });
     }
 
     Completed(id, type, completion) {
-        var statement = xapiTracker.completableTracker.Completed(id, type, null, completion);
-        var actualTime = new Date();
-        var durationInMs = actualTime.getTime() - this.startedTime.getTime();
-        var duration = durationInMs/1000;
-        statement.setDuration(duration);
-        return statement;
+        return xapiTracker.Completable(id, type).Completed(null, completion);
     }
 
     AddStateExtensions(statement) {
@@ -525,26 +521,22 @@ export default class GameManager {
     async InitializedGame() {
         this.startedTime=new Date();
         this.Initialized=true;
-        await xapiTracker.enqueue(xapiTracker.completableTracker.Initialized("ConnectadoWeb",JSTracker.COMPLETABLETYPE.GAME));
-        await xapiTracker.sendBatch();
+        await xapiTracker.Completable("ConnectadoWeb",xapiTracker.COMPLETABLETYPE.GAME).Initialized().Send();
+        await xapiTracker.flush();
     }
 
-    ProgressedGame() {
-        var statement = xapiTracker.completableTracker.Progressed("ConnectadoWeb",JSTracker.COMPLETABLETYPE.GAME, this.day/5);
+    async ProgressedGame() {
         var actualTime = new Date();
-        var durationInMs = actualTime.getTime() - this.startedTime.getTime();
-        var duration = durationInMs/1000;
-        statement.setDuration(duration);
-        statement = this.AddStateExtensions(statement);
-        xapiTracker.enqueue(statement);
-        xapiTracker.sendBatch();
+        await xapiTracker.Completable("ConnectadoWeb",xapiTracker.COMPLETABLETYPE.GAME).Progressed(this.day/5)
+            .WithDuration(this.startedTime, actualTime)
+            .Apply(statement => this.AddStateExtensions(statement))
+            .Send();
+        await xapiTracker.flush();
     }
 
-    CompletedGame(completion) {
+    async CompletedGame(completion) {
         this.Initialized=false;
-        var statement = this.Completed("ConnectadoWeb",JSTracker.COMPLETABLETYPE.GAME, completion);
-        xapiTracker.enqueue(statement);
-        xapiTracker.sendBackup();
-        xapiTracker.sendBatch();
+        await this.Completed("ConnectadoWeb",xapiTracker.COMPLETABLETYPE.GAME, completion).Send();
+        await xapiTracker.flush({withBackup:true});
     }
 }

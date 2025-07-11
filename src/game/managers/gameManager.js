@@ -21,7 +21,7 @@ export default class GameManager extends Singleton {
     }
 
     startLanguageMenu() {
-        this.sceneManager.changeScene("LanguageMenu", null, false);
+        this.sceneManager.changeScene("LanguageMenu", null);
     }
 
     startMainMenu() {
@@ -30,13 +30,22 @@ export default class GameManager extends Singleton {
 
     startLoginMenu() {
         // this.sceneManager.changeScene("LoginMenu", null, false);
+
+        let params = {
+            text: "Test",
+            onComplete: () => {
+                this.startCredits(false);
+            },
+            onCompleteDelay: 500
+        };
+        this.sceneManager.changeScene("TextOnlyScene", params, true);
     }
-    
+
     startCredits(fromMainMenu = true) {
         let params = {
             fromMainMenu: fromMainMenu
         };
-        this.sceneManager.changeScene("Credits", params, false);
+        this.sceneManager.changeScene("Credits", params, !fromMainMenu);
     }
 
     startGame() {

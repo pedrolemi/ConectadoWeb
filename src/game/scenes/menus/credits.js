@@ -41,7 +41,7 @@ export default class Credits extends ConectadoBaseScene {
         this.container = this.add.container(0, 0);
         this.createCreditsContents();
 
-        
+
         // Botones
         this.BUTTONS_TEXT_CONFIG = {
             fontFamily: "kimberley",
@@ -128,13 +128,13 @@ export default class Credits extends ConectadoBaseScene {
             fontStyle: "normal",
             color: "#00685D",
             align: "center",
-            wordWrap : {
+            wordWrap: {
                 width: this.CANVAS_WIDTH - this.TOP_PADDING * 2,
                 useAdvancedWrap: true
             }
         };
         let TEXTS_X = this.CANVAS_WIDTH / 2;
-        
+
         // Tamanos de los textos
         let sizes = {
             title: 95,              // titulos
@@ -203,16 +203,16 @@ export default class Credits extends ConectadoBaseScene {
         let creditsNames = this.cache.json.get("creditsNames");
 
         this.nextY = 0;
-        
+
         // Titulo
         this.createTextBelow(TEXTS_X, 0, this.localizationManager.translate("titleText", this.namespace), fontParams.title);
 
         // Direccion, diseno, arte, animacion, version web
-        this.createSequenceSection(creditsStructure, "section1", creditsNames, TEXTS_X, fontParams.team, fontParams.name, upperSpacing.title, upperSpacing.teamName, 
+        this.createSequenceSection(creditsStructure, "section1", creditsNames, TEXTS_X, fontParams.team, fontParams.name, upperSpacing.title, upperSpacing.teamName,
             upperSpacing.name, upperSpacing.team);
 
         // Idea original
-        this.createSequenceSection(creditsStructure, "section2", creditsNames, TEXTS_X, fontParams.smallerSubtitle, fontParams.name, upperSpacing.team, 
+        this.createSequenceSection(creditsStructure, "section2", creditsNames, TEXTS_X, fontParams.smallerSubtitle, fontParams.name, upperSpacing.team,
             upperSpacing.teamName, upperSpacing.name, upperSpacing.team);
 
         // Agradecimientos1
@@ -223,11 +223,11 @@ export default class Credits extends ConectadoBaseScene {
         // Beta testers
         this.createTextBelow(TEXTS_X, upperSpacing.team * 1.5, this.localizationManager.translate("betaTestersText", this.namespace), fontParams.smallerSubtitle);
         this.createBetaTestersSection(creditsStructure, "betaTestersSection", creditsNames, TEXTS_X, fontParams.name, upperSpacing.team * 1.5);
-            
+
         // Localizacion y traducciones
-        this.createSequenceSection(creditsStructure, "section3", creditsNames, TEXTS_X, fontParams.smallerSubtitle, fontParams.name, upperSpacing.team * 1.5, 
+        this.createSequenceSection(creditsStructure, "section3", creditsNames, TEXTS_X, fontParams.smallerSubtitle, fontParams.name, upperSpacing.team * 1.5,
             upperSpacing.teamName, upperSpacing.name, upperSpacing.team);
-        this.createSequenceSection(creditsStructure, "section4", creditsNames, TEXTS_X, fontParams.team, fontParams.name, upperSpacing.team, upperSpacing.teamName, 
+        this.createSequenceSection(creditsStructure, "section4", creditsNames, TEXTS_X, fontParams.team, fontParams.name, upperSpacing.team, upperSpacing.teamName,
             upperSpacing.name, upperSpacing.team);
 
         // Colaboradores
@@ -240,25 +240,25 @@ export default class Credits extends ConectadoBaseScene {
         this.createSchoolsText(creditsStructure, "schools", creditsNames, fontParams.school, fontParams.schoolPlace, upperSpacing.team, upperSpacing.team, upperSpacing.subText);
 
         // Agradecimientos 2
-        this.createSequenceSection(creditsStructure, "section5", creditsNames, TEXTS_X, fontParams.smallerSubtitle, fontParams.name, upperSpacing.team * 2, 
+        this.createSequenceSection(creditsStructure, "section5", creditsNames, TEXTS_X, fontParams.smallerSubtitle, fontParams.name, upperSpacing.team * 2,
             upperSpacing.teamName, upperSpacing.team, upperSpacing.team);
 
         // Patrocinadores
         this.createTextBelow(TEXTS_X, upperSpacing.team * 1.5, this.localizationManager.translate("sponsorsText", this.namespace), fontParams.smallerSubtitle);
         this.createSponsorsImages(upperSpacing.team);
-        
+
         // Texto final
         this.createTextBelow(TEXTS_X, upperSpacing.title * 2, this.localizationManager.translate("endThanksText", this.namespace), fontParams.title);
 
-        
+
         let bounds = this.container.getBounds();
         this.container.setSize(bounds.width, bounds.height);
-        
+
         // Se coloca el container en la posicion inicial
         this.container.y = this.CREDITS_INIT_Y;
     }
 
-    
+
     /**
     * Crea texto debajo de la ultima posicion guardada
     * @param {Number} x - posicion x del centro del texto
@@ -270,7 +270,7 @@ export default class Credits extends ConectadoBaseScene {
     createTextBelow(x, spacing, text, textParams) {
         this.CREDITS_TEXT_CONFIG.fontSize = textParams.size;
         this.CREDITS_TEXT_CONFIG.fontFamily = textParams.font;
-        
+
         let textObj = new TextArea(this, x, this.nextY + spacing, 0, 0, text, this.CREDITS_TEXT_CONFIG).setOrigin(0.5, 0);
         this.container.add(textObj);
         this.nextY = textObj.y + textObj.displayHeight;
@@ -396,7 +396,7 @@ export default class Credits extends ConectadoBaseScene {
 
             spacing = subtitlePadding;
             this.createTextBelow(x, spacing, this.localizationManager.translate(subtitleInfo["subtitleKey"], this.namespace), subtitleParams);
-            
+
             spacing = fragmentPadding;
         });
     }
@@ -422,7 +422,7 @@ export default class Credits extends ConectadoBaseScene {
     */
     createBetaTestersSection(structure, sectionName, names, x, normalParams, padding) {
         let namesText = [];
-        
+
         structure[sectionName].forEach((name) => {
             namesText.push(this.createTextBelow(x, padding, names[name], normalParams));
         });
@@ -434,9 +434,9 @@ export default class Credits extends ConectadoBaseScene {
         });
         startX += BADGE_OFFSET;
 
-        this.createBadge(startX , namesText[0].y, "first");
-        this.createBadge(startX , namesText[1].y, "second");
-        this.createBadge(startX , namesText[2].y, "third");
+        this.createBadge(startX, namesText[0].y, "first");
+        this.createBadge(startX, namesText[1].y, "second");
+        this.createBadge(startX, namesText[2].y, "third");
     }
 
     createBadge(x, y, frame) {
@@ -444,7 +444,7 @@ export default class Credits extends ConectadoBaseScene {
         badge.setTint(0x00685d);
         this.container.add(badge);
     }
-    
+
 
     /**
     * Crea los textos para la informacion de cada escuela con la estructura
@@ -474,14 +474,14 @@ export default class Credits extends ConectadoBaseScene {
     */
     createSchoolsText(structure, sectionName, names, normalParams, subtitleParams, initialPadding, normalPadding, subtitlePadding) {
         let textContainers = [];
-        
+
         // Se crean y guardan containers con cada nombre y su localizacion. Cada conjunto esta guardado dentro de otro container
         structure[sectionName].forEach((schoolInfo) => {
             let nameText = names[schoolInfo["nameKey"]];
             let placeText = "(" + names[schoolInfo["placeKey"]] + ")";
 
             let textContainer = this.add.container(0, 0);
-            
+
             this.CREDITS_TEXT_CONFIG.fontSize = normalParams.size;
             this.CREDITS_TEXT_CONFIG.fontFamily = normalParams.font;
             let textObj = new TextArea(this, 0, 0, 0, 0, nameText, this.CREDITS_TEXT_CONFIG).setOrigin(0.5, 0);
@@ -489,10 +489,10 @@ export default class Credits extends ConectadoBaseScene {
             this.CREDITS_TEXT_CONFIG.fontSize = subtitleParams.size;
             this.CREDITS_TEXT_CONFIG.fontFamily = subtitleParams.font;
             let subTextObj = new TextArea(this, 0, textObj.y + textObj.displayHeight + subtitlePadding, 0, 0, placeText, this.CREDITS_TEXT_CONFIG).setOrigin(0.5, 0);
-            
+
             textContainer.add(textObj);
             textContainer.add(subTextObj);
-            
+
             let bounds = textContainer.getBounds();
             textContainer.setSize(bounds.width, bounds.height);
 
@@ -514,7 +514,7 @@ export default class Credits extends ConectadoBaseScene {
 
     createSponsorsImages(initialPadding) {
         let images = [];
-        
+
         images.push(this.add.image(0, 0, "credits_atlas", "rage_logo").setOrigin(0.5).setScale(0.5));
         images.push(this.add.image(0, 0, "credits_atlas", "telefonica_logo").setOrigin(0.5).setScale(0.3));
 

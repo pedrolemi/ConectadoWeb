@@ -51,8 +51,8 @@ export default class MainMenu extends ConectadoBaseScene {
         let creditsButton = this.createMainMenuButtons(BUTTON_START_Y + offset, this.localizationManager.translate("creditsButton", namespace), () => {
             this.gameManager.startCredits();
         });
-        
-        
+
+
         // Boton de salir
         let exitTextConfig = { ...this.TEXT_CONFIG };
         exitTextConfig.fontSize = '40px';
@@ -71,7 +71,7 @@ export default class MainMenu extends ConectadoBaseScene {
         // Contador con la explosion
         this.createCounter(offset);
     }
-    
+
     createMainMenuButtons(y, text, callback) {
         let BUTTON_X = this.CANVAS_WIDTH / 2;
         let BUTTON_W = 300;
@@ -79,7 +79,7 @@ export default class MainMenu extends ConectadoBaseScene {
 
         let button = new Button(this, BUTTON_X, y, BUTTON_W, BUTTON_H);
         button.createRectButton(text, this.TEXT_CONFIG, callback, "menuButton", 15, 0xFFFFFF, 1, 1, 0x0, 1, 10, 10, 0, 0, 0.5, 0.5, 0.5, 0.5, 0xffffff, 0x408e86, 0xc8c8c8);
-        
+
         return button;
     }
 
@@ -89,7 +89,7 @@ export default class MainMenu extends ConectadoBaseScene {
         this.COUNTER_LIMIT = 100;
         this.COUNTER_INCREASE_SPEED = 1.8;
         this.counterNumber = 0;
-        
+
         let counterTextConfig = {
             fontFamily: "gidolinya-regular",
             fontSize: 35,
@@ -116,7 +116,7 @@ export default class MainMenu extends ConectadoBaseScene {
             frequency: -1,                      // modo explosion
             quantity: 22                        // particulas generadas cada vez
         })
-        
+
         this.counter.add(this.counterRect);
         this.counter.add(this.counterText);
         this.counter.add(this.emitter)

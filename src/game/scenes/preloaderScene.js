@@ -36,6 +36,7 @@ export default class PreloaderScene extends BasePreloaderScene {
         ];
         let basicNamespaces = [
             "menus/titleMenu",
+            "transitionScenes",
         ]
 
         let loadAssets = () => {

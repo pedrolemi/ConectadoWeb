@@ -23,5 +23,7 @@
         "startClass": "Otro día más dónde todos cuchichean a tus espaldas. Es hora de irse a casa.",
         "endDay": "Vuelves a casa y hoy te duermes pronto. Como todos los días, es la hora de tu sueño...",
         "end": "FIN"
-    }
+    },
+
+    "transitionInfo": "Pulsa en pantalla para continuar"
 }

@@ -23,5 +23,7 @@
         "startClass": "Encore un jour de murmures dans ton dos, il est temps de rentrer à la maison.",
         "endDay": "Tu rentres chez toi et tu vas te coucher plus tôt ce soir. Comme d'habitude, c'est le temps des rêves...",
         "end": "FIN"
-    }
+    },
+
+    "transitionInfo": "****Press on screen to continue"
 }

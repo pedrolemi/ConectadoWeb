@@ -23,5 +23,7 @@
         "startClass": "又是被人耳语的一天。该回家了。",
         "endDay": "今天你回家早点睡吧，照例是做梦的时间了…",
         "end": "恭喜！您已完成游戏！"
-    }
+    },
+
+    "transitionInfo": "****Press on screen to continue"
 }

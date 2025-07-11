@@ -4,6 +4,8 @@ import PreloaderScene from "./game/scenes/preloaderScene.js";
 import LanguageMenu from "./game/scenes/menus/languageMenu.js";
 import MainMenu from "./game/scenes/menus/mainMenu.js";
 import Credits from "./game/scenes/menus/credits.js";
+import TextOnlyScene from "./game/scenes/textOnlyScene.js";
+
 
 const MAX_W = 1129, MAX_H = 847, MIN_W = 320, MIN_H = 240;
 const CONFIG = {
@@ -19,6 +21,8 @@ const CONFIG = {
         BootScene, PreloaderScene,
 
         LanguageMenu, MainMenu, Credits,
+
+        TextOnlyScene
     ],
     autoFocus: true,
     // Desactivar que aparezca el menu de inspeccionar al hacer click derecho

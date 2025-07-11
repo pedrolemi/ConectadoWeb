@@ -23,5 +23,7 @@
         "startClass": "Another day of whispers at your back. It's time to go home.",
         "endDay": "You go back home and sleep earlier today. As usual, it's dream time...",
         "end": "THE END"
-    }
+    },
+
+    "transitionInfo": "Press on screen to continue"
 }

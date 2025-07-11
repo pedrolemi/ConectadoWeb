@@ -18,7 +18,7 @@ export default class LanguageMenu extends ConectadoBaseScene {
         // Fondo escalado en cuanto al canvas
         let bg = this.add.image(0, 0, "basePC").setOrigin(0, 0);
         let scale = this.CANVAS_WIDTH / bg.width;
-        bg.setScale(scale); 
+        bg.setScale(scale);
 
         // Pantalla del ordenador con el tam del canvas
         let screen = this.add.image(0, 0, "PCscreen").setOrigin(0, 0);
@@ -77,7 +77,7 @@ export default class LanguageMenu extends ConectadoBaseScene {
             });
             // TRACKER EVENT
             xApiTracker.alternativeTracker.Selected("language", language, JSTracker.ALTERNATIVETYPE.MENU);
-            
+
             this.localizationManager.changeLanguage(language);
             this.gameManager.startMainMenu();
         });

@@ -32,10 +32,10 @@ export default class PreloaderScene extends BasePreloaderScene {
 
     preload() {
         let dialogNamespaces = [
+            "menus/credits"
         ];
         let basicNamespaces = [
             "menus/titleMenu",
-            "menus/credits"
         ]
 
         let loadAssets = () => {
@@ -45,12 +45,13 @@ export default class PreloaderScene extends BasePreloaderScene {
             // this.loadAvatars();
             // this.loadCharacters();
             this.loadBackgrounds();
-            // this.loadCreditsSceneAssets();
+            this.loadCreditsSceneAssets();
 
             this.load.setPath("assets");
             this.load.image("defaultParticle", "defaultParticle.png");
 
             this.load.setPath("");
+            this.load.json("creditsNames", this.LOCALIZATION_PATH + "/creditsNames.json");
         }
 
         super.preload(loadAssets, dialogNamespaces, basicNamespaces);
@@ -224,12 +225,7 @@ export default class PreloaderScene extends BasePreloaderScene {
 
     loadCreditsSceneAssets() {
         this.load.setPath("assets/UI/creditsScene");
-        this.load.atlas("someBrands", "brands/someBrands.png", "brands/someBrands.json");
-        this.load.image("logo_rage", "brands/logo_rage.png");
-        this.load.image("logo_ucm", "brands/logo_ucm.png");
-        this.load.image("beaconing", "brands/beaconing.png");
-        this.load.atlas("medals", "medals.png", "medals.json");
-        this.load.image("rewind", "rewind.png");
+        this.load.atlas("credits_atlas", "credits_atlas.png", "credits_atlas.json");
     }
 
 }

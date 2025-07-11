@@ -100,7 +100,7 @@ export default class MainMenu extends ConectadoBaseScene {
 
         this.counter = this.add.container(2 * this.CANVAS_WIDTH / 3 + 20, this.CANVAS_HEIGHT / 4 + 30 + offset);
 
-        createRectTexture(this, "counterTexture", 40, 40, 0xFF0808, 1, 1, 0x0, 1, 15);
+        createRectTexture(this, "counterTexture", 40, 40, 0xFF0808, 1, 0.5, 0x0, 1, 15);
         this.counterRect = this.add.image(0, 0, "counterTexture");
 
         this.counterText = new TextArea(this, 0, 0, this.counterRect.displayWidth, this.counterRect.displayHeight, this.COUNTER_LIMIT - 1, counterTextConfig).setOrigin(0.5, 0.5);

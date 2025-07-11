@@ -1,0 +1,279 @@
+{
+  "frames": {
+    "telefonica_logo": {
+      "frame": {
+        "x": 10,
+        "y": 10,
+        "w": 772,
+        "h": 127
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 59,
+        "y": 92,
+        "w": 772,
+        "h": 127
+      },
+      "sourceSize": {
+        "w": 880,
+        "h": 319
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "impress_logo": {
+      "frame": {
+        "x": 802,
+        "y": 10,
+        "w": 709,
+        "h": 308
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 35,
+        "y": 26,
+        "w": 709,
+        "h": 308
+      },
+      "sourceSize": {
+        "w": 800,
+        "h": 350
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "eucm_logo": {
+      "frame": {
+        "x": 1531,
+        "y": 10,
+        "w": 467,
+        "h": 177
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 467,
+        "h": 177
+      },
+      "sourceSize": {
+        "w": 467,
+        "h": 177
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "ucm_logo": {
+      "frame": {
+        "x": 10,
+        "y": 157,
+        "w": 650,
+        "h": 745
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 650,
+        "h": 745
+      },
+      "sourceSize": {
+        "w": 650,
+        "h": 745
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "first": {
+      "frame": {
+        "x": 680,
+        "y": 157,
+        "w": 64,
+        "h": 87
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 87
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 87
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "rewind": {
+      "frame": {
+        "x": 680,
+        "y": 264,
+        "w": 64,
+        "h": 34
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 15,
+        "w": 64,
+        "h": 34
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "second": {
+      "frame": {
+        "x": 680,
+        "y": 318,
+        "w": 59,
+        "h": 87
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 3,
+        "y": 0,
+        "w": 59,
+        "h": 87
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 87
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "third": {
+      "frame": {
+        "x": 1531,
+        "y": 207,
+        "w": 59,
+        "h": 57
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 3,
+        "y": 0,
+        "w": 59,
+        "h": 57
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 87
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "rage_logo": {
+      "frame": {
+        "x": 759,
+        "y": 338,
+        "w": 648,
+        "h": 190
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 1,
+        "y": 0,
+        "w": 648,
+        "h": 190
+      },
+      "sourceSize": {
+        "w": 650,
+        "h": 190
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "beaconing_logo": {
+      "frame": {
+        "x": 759,
+        "y": 548,
+        "w": 620,
+        "h": 115
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 15,
+        "y": 15,
+        "w": 620,
+        "h": 115
+      },
+      "sourceSize": {
+        "w": 650,
+        "h": 145
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "orientacion_madrid": {
+      "frame": {
+        "x": 1399,
+        "y": 548,
+        "w": 615,
+        "h": 610
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 11,
+        "y": 13,
+        "w": 615,
+        "h": 610
+      },
+      "sourceSize": {
+        "w": 640,
+        "h": 635
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    }
+  },
+  "meta": {
+    "app": "http://free-tex-packer.com",
+    "version": "0.6.7",
+    "image": "credits_atlas.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 2024,
+      "h": 1168
+    },
+    "scale": 1
+  }
+}

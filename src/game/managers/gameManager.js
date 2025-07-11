@@ -32,8 +32,11 @@ export default class GameManager extends Singleton {
         // this.sceneManager.changeScene("LoginMenu", null, false);
     }
     
-    startCredits() {
-        this.sceneManager.changeScene("Credits", null, false);
+    startCredits(fromMainMenu = true) {
+        let params = {
+            fromMainMenu: fromMainMenu
+        };
+        this.sceneManager.changeScene("Credits", params, false);
     }
 
     startGame() {

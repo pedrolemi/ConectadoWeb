@@ -1,0 +1,169 @@
+{
+    "section1": [
+        {
+            "titleKey": "projectManagerText",
+            "namesKeys": [
+                "manager"
+            ]
+        },
+        {
+            "titleKey": "design-devText",
+            "namesKeys": [
+                "designDev"
+            ]
+        },
+        {
+            "titleKey": "artManagerText",
+            "namesKeys": [
+                "artManager"
+            ]
+        },
+        {
+            "titleKey": "art-animationText",
+            "namesKeys": [
+                "artAnimation1",
+                "artAnimation2"
+            ]
+        },
+        {
+            "titleKey": "webVersionText",
+            "namesKeys": [
+                "webVersion1",
+                "webVersion2"
+            ]
+        }
+    ],
+
+    "section2": [
+        {
+            "titleKey": "originalConceptText",
+            "namesKeys": [
+                "concept1",
+                "concept2",
+                "concept3",
+                "concept4"
+            ]
+        }
+    ],
+
+    "acknowledgmentsSection": [
+        {
+            "namesKeys": [
+                "acknowledgments1"
+            ],
+            "subtitleKey": "libraryText"
+        },
+        {
+            "namesKeys": [
+                "acknowledgments2",
+                "acknowledgments3",
+                "acknowledgments4"
+            ],
+            "subtitleKey": "hackatonText"
+        }
+    ],
+
+    "betaTestersSection": [
+        "betaTest1",
+        "betaTest2",
+        "betaTest3",
+        "betaTest4"
+    ],
+
+    "section3": [
+        {
+            "titleKey": "localizationText",
+            "namesKeys": [
+                "localization1",
+                "localization2",
+                "localization3",
+                "localization4"
+            ]
+        }
+    ],
+
+    "section4": [
+        {
+            "titleKey": "frenchText",
+            "namesKeys": [
+                "fr1"
+            ]
+        },
+        {
+            "titleKey": "brText",
+            "namesKeys": [
+                "br1"
+            ]
+        },
+        {
+            "titleKey": "cnText",
+            "namesKeys": [
+                "cn1",
+                "cn2",
+                "cn3",
+                "cn4"
+            ]
+        },
+        {
+            "titleKey": "hkText",
+            "namesKeys": [
+                "hk1",
+                "hk2",
+                "hk3"
+            ]
+        }
+    ],
+
+    "schools": [
+        {
+            "nameKey": "school1",
+            "placeKey": "place1"
+        },
+        {
+            "nameKey": "school2",
+            "placeKey": "place2"
+        },
+        {
+            "nameKey": "school3",
+            "placeKey": "place3"
+        },
+        {
+            "nameKey": "school4",
+            "placeKey": "place4"
+        },
+        {
+            "nameKey": "school5",
+            "placeKey": "place5"
+        },
+        {
+            "nameKey": "school6",
+            "placeKey": "place6"
+        },
+        {
+            "nameKey": "school7",
+            "placeKey": "place7"
+        },
+        {
+            "nameKey": "school8",
+            "placeKey": "place8"
+        },
+        {
+            "nameKey": "school9",
+            "placeKey": "place9"
+        },
+        {
+            "nameKey": "school10",
+            "placeKey": "place10"
+        }
+    ],
+
+    "section5": [
+        {
+            "titleKey": "specialThanksText",
+            "namesKeys": [
+                "specialThanks1",
+                "specialThanks2"
+            ]
+        }
+    ]
+}

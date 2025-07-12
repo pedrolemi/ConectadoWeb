@@ -1,14 +1,15 @@
-import ConectadoBaseScene from "./conectadoBaseScene.js";
-import { DEFAULT_TEXT_CONFIG } from "../../framework/utils/graphics.js";
-import TextArea from "../../framework/UI/textArea.js";
+import ConectadoBaseScene from "../conectadoBaseScene.js";
+import { DEFAULT_TEXT_CONFIG } from "../../../framework/utils/graphics.js";
+import TextArea from "../../../framework/UI/textArea.js";
 
 export default class TextOnlyScene extends ConectadoBaseScene {
     /**
     * Escena para las transiciones en las que solo hay texto
+    * DEBE IR DESPUES DE LA UI PARA PINTARSE POR ENCIMA DE ELLA
     * @extends ConectadoBaseScene
     */
     constructor() {
-        super('TextOnlyScene');
+        super("TextOnlyScene");
     }
 
     /**
@@ -65,7 +66,7 @@ export default class TextOnlyScene extends ConectadoBaseScene {
         }
 
         // Se anade el evento de hacer click sobre el fondo para que solo se pueda ejecutar una vez.
-        bg.once('pointerdown', this.exit);
+        bg.once("pointerdown", this.exit);
 
 
         // Se calculan las dimensiones del texto, se crea, y se ajusta al tamano
@@ -86,7 +87,7 @@ export default class TextOnlyScene extends ConectadoBaseScene {
 
         // Se crea el texto del mensaje de informacion
         textConfig.fontSize = 20;
-        textConfig.align = 'right';
+        textConfig.align = "right";
         let infoTextObj = new TextArea(this, this.CANVAS_WIDTH - PADDING / 2, this.CANVAS_HEIGHT - PADDING / 2, 0, 0,
             this.localizationManager.translate("transitionInfo", "transitionScenes"), textConfig).setOrigin(1, 1);
 

@@ -1,17 +1,29 @@
+// Carga de assets
 import BootScene from "./game/scenes/bootScene.js";
 import PreloaderScene from "./game/scenes/preloaderScene.js";
 
+// Menus
 import LanguageMenu from "./game/scenes/menus/languageMenu.js";
 import MainMenu from "./game/scenes/menus/mainMenu.js";
 import Credits from "./game/scenes/menus/credits.js";
-import TextOnlyScene from "./game/scenes/textOnlyScene.js";
+
+// Escenas del flujo de juego
+import AlarmScene from "./game/scenes/gameLoop/alarmScene.js";
+
+// UI
+import UI from "./game/UI/UI.js";
+
+// Escenas que se pintan por encima de la UI
+import TextOnlyScene from "./game/scenes/gameLoop/textOnlyScene.js";
+import BusScene from "./game/scenes/gameLoop/busScene.js";
+
 
 
 const MAX_W = 1129, MAX_H = 847, MIN_W = 320, MIN_H = 240;
 const CONFIG = {
     width: MAX_W,
     height: MAX_H,
-    backgroundColor: '#000000',
+    backgroundColor: "#000000",
     version: "1.0",
 
     type: Phaser.AUTO,
@@ -22,7 +34,10 @@ const CONFIG = {
 
         LanguageMenu, MainMenu, Credits,
 
-        TextOnlyScene
+        AlarmScene,
+
+        UI,
+        TextOnlyScene, BusScene
     ],
     autoFocus: true,
     // Desactivar que aparezca el menu de inspeccionar al hacer click derecho
@@ -43,15 +58,15 @@ const CONFIG = {
             height: MAX_H,
         },
         zoom: 1,
-        parent: 'game',
+        parent: "game",
     },
     physics: {
-        default: 'arcade'
+        default: "arcade"
     },
     plugins: {
         // Plugin para utilizar animaciones esqueletales creadas con Spine
         scene: [
-            { key: 'SpinePlugin', plugin: window.SpinePlugin, mapping: 'spine' }
+            { key: "SpinePlugin", plugin: window.SpinePlugin, mapping: "spine" }
         ]
     },
 }

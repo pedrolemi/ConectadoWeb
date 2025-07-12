@@ -1,7 +1,8 @@
-import Blackboard from "../../framework/utils/blackboard.js";
 import Singleton from "../../framework/utils/singleton.js";
 import SceneManager from "../../framework/managers/sceneManager.js";
 import EventDispatcher from "../../framework/managers/eventDispatcher.js";
+import LocalizationManager from "../../framework/managers/localizationManager.js";
+import Blackboard from "../../framework/utils/blackboard.js";
 
 export default class GameManager extends Singleton {
     constructor() {
@@ -9,50 +10,70 @@ export default class GameManager extends Singleton {
 
         this.sceneManager = SceneManager.getInstance();
         this.dispatcher = EventDispatcher.getInstance();
+        this.localizationManager = LocalizationManager.getInstance();
 
         // Blackboard de variables de todo el juego
         this.blackboard = new Blackboard();
 
         this.ui = null;
+
+        this.day = 1;
     }
 
     init() {
+        this.localizationManager.subscribeBlackboard(this.blackboard);
         this.startLanguageMenu();
     }
 
+    changeScene(sceneKey, params = null, anim = false, canReturn = false) {
+        this.sceneManager.changeScene(sceneKey, params, anim, canReturn);
+    }
+
     startLanguageMenu() {
-        this.sceneManager.changeScene("LanguageMenu", null);
+        if (this.ui == null) {
+            this.sceneManager.runInParalell("UI");
+            this.ui = this.sceneManager.getScene("UI");
+        }
+        this.changeScene("LanguageMenu", null);
     }
 
     startMainMenu() {
-        this.sceneManager.changeScene("MainMenu", null);
+        this.changeScene("MainMenu", null);
     }
 
     startLoginMenu() {
-        // this.sceneManager.changeScene("LoginMenu", null, false);
+        // this.changeScene("LoginMenu", null, false);
 
-        let params = {
-            text: "Test",
-            onComplete: () => {
-                this.startCredits(false);
-            },
-            onCompleteDelay: 500
-        };
-        this.sceneManager.changeScene("TextOnlyScene", params, true);
+        // TEST
+        this.startGame();
     }
 
     startCredits(fromMainMenu = true) {
         let params = {
             fromMainMenu: fromMainMenu
         };
-        this.sceneManager.changeScene("Credits", params, !fromMainMenu);
+        this.changeScene("Credits", params, !fromMainMenu);
     }
 
     startGame() {
+        this.blackboard.clear();
+        this.dispatcher.removeAll();
         if (this.ui == null) {
             this.sceneManager.runInParalell("UI");
             this.ui = this.sceneManager.getScene("UI");
         }
+        
+        this.day = 0;
 
+        let params = {
+            text: this.localizationManager.translate("day1.start", "transitionScenes"),
+            onComplete: () => {
+                this.changeScene("AlarmScene", null, true);
+            },
+            onCompleteDelay: 500
+        };
+        this.changeScene("TextOnlyScene", params, true);
     }
+
+   
 }

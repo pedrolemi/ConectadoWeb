@@ -1,8 +1,6 @@
 import ConectadoBaseScene from "../conectadoBaseScene.js";
 import Grid from "../../../framework/UI/grid.js";
 
-import xApiTracker from "../../../framework/lib/xApiTracker.js";
-
 export default class LanguageMenu extends ConectadoBaseScene {
     /**
     * Escena que muestra el menu de selección de idioma
@@ -19,6 +17,8 @@ export default class LanguageMenu extends ConectadoBaseScene {
         let bg = this.add.image(0, 0, "basePC").setOrigin(0, 0);
         let scale = this.CANVAS_WIDTH / bg.width;
         bg.setScale(scale);
+
+        this.add.rectangle(this.CANVAS_WIDTH / 2, 10, this.CANVAS_WIDTH - 20, this.CANVAS_HEIGHT / 1.2, 0xFF2B9E9E).setOrigin(0.5, 0);
 
         // Pantalla del ordenador con el tam del canvas
         let screen = this.add.image(0, 0, "PCscreen").setOrigin(0, 0);
@@ -76,7 +76,7 @@ export default class LanguageMenu extends ConectadoBaseScene {
                 repeat: 0,
             });
             // TRACKER EVENT
-            xApiTracker.alternativeTracker.Selected("language", language, JSTracker.ALTERNATIVETYPE.MENU);
+            this.trackerManager.sendSelectLanguage(language);
 
             this.localizationManager.changeLanguage(language);
             this.gameManager.startMainMenu();

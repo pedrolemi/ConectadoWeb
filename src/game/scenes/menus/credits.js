@@ -587,7 +587,7 @@ export default class Credits extends ConectadoBaseScene {
     enableManualScrolling() {
         this.rect.setInteractive();
 
-        this.rect.on('pointerdown', (pointer) => {
+        this.rect.on("pointerdown", (pointer) => {
             // Pulsacion en pantalla
             if (IS_TOUCH) {
                 // Si se presiona a la derecha de la pantalla, van hacia adelante
@@ -622,7 +622,7 @@ export default class Credits extends ConectadoBaseScene {
         });
 
         // Si se ha dejado de pulsar, la velocidad de scroll se pone a 0 y desaparecen las flechas
-        this.rect.on('pointerup', (pointer) => {
+        this.rect.on("pointerup", (pointer) => {
             this.currentScrollSpeed = 0;
             this.leftRewind.setVisible(false);
             this.rightRewind.setVisible(false);

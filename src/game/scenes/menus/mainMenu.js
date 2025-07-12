@@ -7,7 +7,7 @@ import TextArea from "../../../framework/UI/textArea.js";
 export default class MainMenu extends ConectadoBaseScene {
     /**
     * Pantalla principal
-    * @extends BaseScene
+    * @extends ConectadoBaseScene
     */
     constructor() {
         super("MainMenu");
@@ -20,7 +20,7 @@ export default class MainMenu extends ConectadoBaseScene {
         let bg = this.add.image(0, 0, "basePC").setOrigin(0, 0);
         let scale = this.CANVAS_WIDTH / bg.width;
         bg.setScale(scale);
-
+        
         this.add.rectangle(this.CANVAS_WIDTH / 2, 10, this.CANVAS_WIDTH - 20, this.CANVAS_HEIGHT / 1.2, 0xFFFFFF).setOrigin(0.5, 0);
 
         // Pantalla del ordenador con el tam del canvas
@@ -55,13 +55,22 @@ export default class MainMenu extends ConectadoBaseScene {
 
         // Boton de salir
         let exitTextConfig = { ...this.TEXT_CONFIG };
-        exitTextConfig.fontSize = '40px';
-        exitTextConfig.color = '#004E46';
+        exitTextConfig.fontSize = 40;
+        exitTextConfig.color = "#FFFFFF";
         let exitButton = new Button(this, 100, 3 * this.CANVAS_HEIGHT / 4 + 10, 220, 64);
         exitButton.createImgButton(this.localizationManager.translate("exitText", namespace), exitTextConfig, () => {
             this.gameManager.startLanguageMenu();
         }, "powerOff", 0.5, 0.5, 0.5, 0.5, 1, 0, 0, 160, 35, 0, 0.5, 0, 0, 0x408e86, 0x00685d, 0xc8c8c8);
         exitButton.image.setTint(0x00685d);
+        exitButton.textObj.setTint(0x00685d);
+
+        // Se obtiene la version del juego (especificada en los parametros de configuracion de game)
+        let gameVersion = this.sys.game.config.gameVersion;
+        let gameVersionTextStyle = { ...this.TEXT_CONFIG };
+        gameVersionTextStyle.fontFamily = "AUdimat-regular";
+        gameVersionTextStyle.fontSize = 22;
+        gameVersionTextStyle.color = "#323232";
+        new TextArea(this, this.CANVAS_WIDTH - 55, 3 * this.CANVAS_HEIGHT / 4 + 40, 0, 0, "V " + gameVersion, gameVersionTextStyle).setOrigin(1, 0.5);
 
         // Logo
         offset = -20;

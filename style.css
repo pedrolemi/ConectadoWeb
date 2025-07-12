@@ -14,40 +14,40 @@ Fuentes que se usan en Phaser
 */
 @font-face {
     font-family: "AUdimat-regular";
-    src: url('assets/fonts/AUdimat-regular.otf');
+    src: url("assets/fonts/AUdimat-regular.otf");
 }
 
 @font-face {
     font-family: "gidolinya-regular";
-    src: url('assets/fonts/gidolinya-regular.otf');
+    src: url("assets/fonts/gidolinya-regular.otf");
 }
 
 @font-face {
     font-family: "kimberley";
-    src: url('assets/fonts/kimberley.ttf');
+    src: url("assets/fonts/kimberley.ttf");
 }
 
 @font-face {
     font-family: "adventpro-regular";
-    src: url('assets/fonts/adventpro-regular.ttf');
+    src: url("assets/fonts/adventpro-regular.ttf");
 }
 
 @font-face {
     font-family: "gidole-regular";
-    src: url('assets/fonts/gidole-regular.otf');
+    src: url("assets/fonts/gidole-regular.otf");
 }
 
 @font-face {
     font-family: "dadha";
-    src: url('assets/fonts/dadha___.ttf');
+    src: url("assets/fonts/dadha___.ttf");
 }
 
 @font-face {
     font-family: "caladea-regular";
-    src: url('assets/fonts/caladea-regular.ttf');
+    src: url("assets/fonts/caladea-regular.ttf");
 }
 
 @font-face {
     font-family: "roboto-regular";
-    src: url('assets/fonts/roboto-regular.ttf');
+    src: url("assets/fonts/roboto-regular.ttf");
 }

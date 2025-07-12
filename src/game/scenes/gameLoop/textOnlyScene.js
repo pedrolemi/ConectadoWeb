@@ -15,7 +15,7 @@ export default class TextOnlyScene extends ConectadoBaseScene {
     /**
     * Crear los elementos de la escena
     * 
-    * @param {Object} params - parametros de la escena. Debe contener text, onComplete y onCompleteDelay.
+    * @param {Object} params - parametros de la escena. Debe contener text, y onComplete.
     * Como opcional, puede contener textConfig con la configuracion para el texto a mostrar
     * 
     * IMPORTANTE: Esta escena es general para todas las transiciones, por lo que hay que especificar
@@ -27,9 +27,8 @@ export default class TextOnlyScene extends ConectadoBaseScene {
     create(params) {
         super.create(params);
 
+        let SKIP_DELAY = 500;
         let text = "";
-        let onComplete = () => { };
-        let onCompleteDelay = 0;
 
         let textConfig = { ...DEFAULT_TEXT_CONFIG };
         textConfig.fontSize = 100;
@@ -38,35 +37,12 @@ export default class TextOnlyScene extends ConectadoBaseScene {
         if (params.text) {
             text = params.text
         }
-        if (params.onComplete) {
-            onComplete = params.onComplete;
-        }
-        if (params.onCompleteDelay) {
-            onCompleteDelay = params.onCompleteDelay;
-        }
         if (params.textConfig) {
             textConfig.fontSize = params.fontSize
         }
 
         // Fondo negro 
         let bg = this.add.rectangle(0, 0, this.CANVAS_WIDTH, this.CANVAS_HEIGHT, 0x000, 1).setOrigin(0, 0);
-
-        // Se puede hacer click en la imagen de fondo una vez termine el fade in
-        this.cameras.main.once(Phaser.Cameras.Scene2D.Events.FADE_IN_COMPLETE, (cam, effect) => {
-            this.setInteractive(bg);
-        });
-
-        this.exiting = false;
-        this.exit = () => {
-            if (!this.exiting) {
-                this.exiting = true;
-                this.scene.setVisible(true, this.UIManager);
-                setTimeout(onComplete, onCompleteDelay);
-            }
-        }
-
-        // Se anade el evento de hacer click sobre el fondo para que solo se pueda ejecutar una vez.
-        bg.once("pointerdown", this.exit);
 
 
         // Se calculan las dimensiones del texto, se crea, y se ajusta al tamano
@@ -85,17 +61,43 @@ export default class TextOnlyScene extends ConectadoBaseScene {
         textObj.adjustFontSize();
 
 
-        // Se crea el texto del mensaje de informacion
-        textConfig.fontSize = 20;
-        textConfig.align = "right";
-        let infoTextObj = new TextArea(this, this.CANVAS_WIDTH - PADDING / 2, this.CANVAS_HEIGHT - PADDING / 2, 0, 0,
-            this.localizationManager.translate("transitionInfo", "transitionScenes"), textConfig).setOrigin(1, 1);
+        // Se puede hacer click en el fondo una vez termine el fade in y pase el delay para poder saltar la transicion
+        this.cameras.main.once(Phaser.Cameras.Scene2D.Events.FADE_IN_COMPLETE, (cam, effect) => {
+            setTimeout(() => {
+                this.setInteractive(bg);
 
-        this.tweens.add({
-            targets: infoTextObj,
-            alpha: { from: 1, to: 0.3 },
-            repeat: -1,
-            yoyo: true
+                // Se anade el evento de hacer click sobre el fondo para que solo se pueda ejecutar una vez.
+                bg.once("pointerdown", () => {
+                    this.scene.setVisible(true, this.UIManager);
+
+                    if (params.onComplete != null && typeof params.onComplete == "function") {
+                        params.onComplete();
+                    }
+                });
+
+                // Se crea el texto del mensaje de informacion
+                textConfig.fontSize = 20;
+                textConfig.align = "right";
+                let infoTextObj = new TextArea(this, this.CANVAS_WIDTH - PADDING / 2, this.CANVAS_HEIGHT - PADDING / 2, 0, 0,
+                    this.localizationManager.translate("transitionInfo", "transitionScenes"), textConfig).setOrigin(1, 1);
+
+                // Se hace una animacion de aparicion
+                let appear = this.tweens.add({
+                    targets: infoTextObj,
+                    alpha: { from: 0, to: 1 },
+                    repeat: 0
+                });
+                // Cuando termina la animacion de aparicion, se crea la animacion de parpadeo
+                appear.on("complete", () => {
+                    this.tweens.add({
+                        targets: infoTextObj,
+                        alpha: { from: 1, to: 0.3 },
+                        repeat: -1,
+                        yoyo: true
+                    });
+                });
+            }, SKIP_DELAY);
+
         });
     }
 }

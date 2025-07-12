@@ -30,10 +30,6 @@ export default class GameManager extends Singleton {
     }
 
     startLanguageMenu() {
-        if (this.ui == null) {
-            this.sceneManager.runInParalell("UI");
-            this.ui = this.sceneManager.getScene("UI");
-        }
         this.changeScene("LanguageMenu", null);
     }
 
@@ -58,21 +54,28 @@ export default class GameManager extends Singleton {
     startGame() {
         this.blackboard.clear();
         this.dispatcher.removeAll();
+
         if (this.ui == null) {
             this.sceneManager.runInParalell("UI");
             this.ui = this.sceneManager.getScene("UI");
         }
+        else {
+            this.ui.shutdown();
+            this.sceneManager.restartScene("UI");
+        }
         
         this.day = 0;
 
-        let params = {
-            text: this.localizationManager.translate("day1.start", "transitionScenes"),
-            onComplete: () => {
-                this.changeScene("AlarmScene", null, true);
-            },
-            onCompleteDelay: 500
-        };
-        this.changeScene("TextOnlyScene", params, true);
+        // let params = {
+        //     text: this.localizationManager.translate("day1.start", "transitionScenes"),
+        //     onComplete: () => {
+        //         this.changeScene("AlarmScene", null, true);
+        //     }
+        // };
+        // this.changeScene("TextOnlyScene", params, true);
+
+        this.changeScene("AlarmScene", null, true);
+
     }
 
    

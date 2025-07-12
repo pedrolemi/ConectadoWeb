@@ -45,6 +45,7 @@ const CONFIG = {
     render: {
         antialias: true,
         transparent: true,
+        roundPixels: true,
     },
     scale: {
         autoCenter: Phaser.Scale.CENTER_BOTH,   // CENTER_BOTH, CENTER_HORIZONTALLY, CENTER_VERTICALLY

@@ -38,7 +38,14 @@ export default class PreloaderScene extends BasePreloaderScene {
         ];
         let basicNamespaces = [
             "menus/titleMenu",
-            "transitionScenes",
+            "menus/loginMenu",
+
+            "names",
+            
+            "phoneInfo",
+            "computer/computerInfo",
+
+            "transitionScenes"
         ]
 
         let loadAssets = () => {
@@ -48,7 +55,7 @@ export default class PreloaderScene extends BasePreloaderScene {
             this.loadBackgrounds();
             this.loadDialogAssets();
             // this.loadCharacters();
-            // this.loadPhoneAssets();
+            this.loadPhoneAssets();
             // this.loadAvatars();
 
             this.load.setPath("assets");

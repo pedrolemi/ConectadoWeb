@@ -1,7 +1,7 @@
 {
     "alarm": {
         "title": "Alarma",
-        "message": "No puedes dormir más.\nDeberías levantarte ya"
+        "message": "No puedes dormir más. Deberías levantarte ya"
     },
     "clock": {
         "days": [

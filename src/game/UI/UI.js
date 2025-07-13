@@ -1,7 +1,9 @@
 import BaseUI from "../../framework/UI/baseUI.js";
 import ConectadoEventNames from "../eventNames.js";
 import ConectadoDialogBox from "./conectadoDialogBox.js";
-import Phone from "./phone.js";
+import Phone from "./phone/phone.js";
+import { growAnimation } from "../../framework/utils/graphics.js";
+import Button from "../../framework/UI/button.js";
 
 export default class UI extends BaseUI {
     constructor() {
@@ -45,62 +47,7 @@ export default class UI extends BaseUI {
         this.createLids();
 
 
-        // Configurar eventos
-        this.initalScrollX = 0;
-        this.alarmScene = null;
-
-        // Al empezar el dia se ocultan el telefono y el icono del telefono y se abren los ojos
-        this.dispatcher.add(ConectadoEventNames.startDay, this, () => {
-            this.phoneIcon.setVisible(false);
-            this.phone.activate(false, 0);
-            this.openEyes();
-        });
-
-        // Al mostrar la alarma se cambia a dicha pantalla en el movil
-        this.dispatcher.add(ConectadoEventNames.showAlarm, this, (params) => {
-            this.phone.setAlarm();
-            this.phone.toggle(params.animTime);
-            this.phone.bgBlock.disableInteractive();
-            
-            // Se configura el scroll para que el telefono se mueva junto a la camara
-            this.alarmScene = params.alarmScene;
-            this.initalScrollX = this.alarmScene.cameras.main.scrollX;
-        });
-
-        // Al retrasar la alarma se oculta el telefono y se vuelven a cerrar los ojos
-        this.dispatcher.add(ConectadoEventNames.delayAlarm, this, (params) => {
-            this.phone.toggle(params.animTime);
-            this.alarmScene = null;
-
-            setTimeout(() => {
-                this.closeEyes(true);
-            }, params.animTime + this.SLEEP_DELAY);
-        });
-
-        // Al despertar, se oculta el telefono
-        this.dispatcher.add(ConectadoEventNames.wakeUp, this, (params) => {
-            this.phone.toggle(params.animTime);
-            this.alarmScene = null;
-
-            // Una vez se oculta el telefono, se reinicia la posicion de la camara
-            setTimeout(() => {
-                this.cameras.main.scrollX = 0;
-            }, params.animTime);
-        });
-
-
-        // TEST
-        let rect = this.add.rectangle(100, 100, 100, 100, 0x0, 1);
-        rect.setInteractive();
-        rect.on("pointerdown", () => {
-            this.dispatcher.dispatch(ConectadoEventNames.tryDelayingAlarm, null);
-        });
-
-        rect = this.add.rectangle(100, 300, 100, 100, 0x0, 1);
-        rect.setInteractive();
-        rect.on("pointerdown", () => {
-            this.dispatcher.dispatch(ConectadoEventNames.wakeUp, { animTime: 1500 });
-        });
+        this.configureAlarmEvents();
     }
 
     update(t, dt) {
@@ -114,41 +61,16 @@ export default class UI extends BaseUI {
         let ICON_OFFSET_X = 70;
         let ICON_OFFSET_Y = 75;
         let ICON_SCALE = 0.3;
+        let ICON_GROW_SCALE = 1.1;
 
         // Anade el icono del telefono
         this.phoneIcon = this.add.image(this.CANVAS_WIDTH - ICON_OFFSET_X, this.CANVAS_HEIGHT - ICON_OFFSET_Y, "phoneElements", "phoneIcon").setScale(ICON_SCALE);
         this.setInteractive(this.phoneIcon);
 
-        // Al pasar el raton por encima del icono, se hace mas grande
-        this.phoneIcon.on('pointerover', () => {
-            this.tweens.add({
-                targets: this.phoneIcon,
-                scale: ICON_SCALE * 1.1,
-                duration: 0,
-                repeat: 0,
-            });
-        });
-        // Al quitar el raton de encima vuelve a su tamano original
-        this.phoneIcon.on('pointerout', () => {
-            this.tweens.add({
-                targets: this.phoneIcon,
-                scale: ICON_SCALE,
-                duration: 0,
-                repeat: 0,
-            });
-        });
-        // Al pulsar, se hace pequeno y grande de nuevo y se activa/desactiva el telefono
-        this.phoneIcon.on('pointerdown', () => {
+        growAnimation(this.phoneIcon, () => {
             this.phone.toggle();
-            this.tweens.add({
-                targets: this.phoneIcon,
-                scale: ICON_SCALE,
-                duration: 20,
-                repeat: 0,
-                yoyo: true
-            });
-        });
-
+        }, ICON_GROW_SCALE, false, 20);
+        
         this.phoneIcon.setVisible(false);
     }
 
@@ -169,6 +91,67 @@ export default class UI extends BaseUI {
         this.botLid.setDepth(100).setScrollFactor(0);
 
         this.SLEEP_DELAY = 500;
+    }
+
+
+    configureAlarmEvents() {
+        // Configurar eventos
+        let WAKE_TOGGLE_TIME = 1500;
+        this.initalScrollX = 0;
+        this.alarmScene = null;
+
+        // Al empezar el dia se ocultan el telefono y el icono del telefono y se abren los ojos
+        this.dispatcher.add(ConectadoEventNames.startDay, this, (alarmScene) => {
+            this.phoneIcon.setVisible(false);
+            this.phone.activate(false, 0);
+            this.openEyes();
+
+            // Se configura el scroll para que el telefono se mueva junto a la camara
+            this.alarmScene = alarmScene;
+            this.initalScrollX = this.alarmScene.cameras.main.scrollX;
+        });
+
+        // Al terminar de abrir los ojos se activa la alarma y se muestra el movil
+        this.dispatcher.add(ConectadoEventNames.eyesOpened, this, () => {
+            this.phone.setAlarm();
+            this.phone.toggle(WAKE_TOGGLE_TIME);
+            this.phone.bgBlock.disableInteractive();
+        });
+
+        // Al retrasar la alarma se oculta el telefono y se vuelven a cerrar los ojos
+        this.dispatcher.add(ConectadoEventNames.delayAlarm, this, (params) => {
+            this.phone.toggle(WAKE_TOGGLE_TIME);
+
+            // Se anade el evento solo una vez para que no se cierren los ojos cada vez que se cierra el movil
+            this.dispatcher.addOnce(ConectadoEventNames.phoneClosed, this, () => {
+                this.closeEyes(true);
+            });
+        });
+
+        // Al despertar, se oculta el telefono
+        this.dispatcher.add(ConectadoEventNames.wakeUp, this, (params) => {
+            this.phone.toggle(WAKE_TOGGLE_TIME);
+            this.alarmScene = null;
+
+            // Una vez se oculta el telefono, se reinicia la posicion de la camara
+            this.dispatcher.addOnce(ConectadoEventNames.phoneClosed, this, () => {
+                this.cameras.main.scrollX = 0;
+            });
+        });
+
+
+        // TEST
+        let rect = this.add.rectangle(100, 100, 100, 100, 0x0, 1);
+        rect.setInteractive();
+        rect.on("pointerdown", () => {
+            this.dispatcher.dispatch(ConectadoEventNames.tryDelayingAlarm, null);
+        });
+
+        rect = this.add.rectangle(100, 300, 100, 100, 0x0, 1);
+        rect.setInteractive();
+        rect.on("pointerdown", () => {
+            this.dispatcher.dispatch(ConectadoEventNames.wakeUp, null);
+        });
     }
 
 

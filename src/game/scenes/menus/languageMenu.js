@@ -1,5 +1,6 @@
 import ConectadoBaseScene from "../conectadoBaseScene.js";
 import Grid from "../../../framework/UI/grid.js";
+import { growAnimation } from "../../../framework/utils/graphics.js";
 
 export default class LanguageMenu extends ConectadoBaseScene {
     /**
@@ -47,40 +48,15 @@ export default class LanguageMenu extends ConectadoBaseScene {
     createFlagButton(frame, language, scale = 1) {
         let animTime = 50;
 
-        let button = this.add.image(0, 0, "flags", frame);
-        this.setInteractive(button);
-
-        button.on("pointerover", () => {
-            this.tweens.add({
-                targets: button,
-                scale: scale * 1.1,
-                duration: animTime,
-                repeat: 0,
-            });
-        });
-
-        button.on("pointerout", () => {
-            this.tweens.add({
-                targets: button,
-                scale: scale,
-                duration: 0,
-                repeat: 0,
-            });
-        });
-
-        button.on("pointerdown", () => {
-            this.tweens.add({
-                targets: button,
-                scale: scale,
-                duration: 0,
-                repeat: 0,
-            });
+        let button = this.add.image(0, 0, "flags", frame).setScale(scale);
+        growAnimation(button, button, () => {
             // TRACKER EVENT
             this.trackerManager.sendSelectLanguage(language);
 
             this.localizationManager.changeLanguage(language);
             this.gameManager.startMainMenu();
-        });
+        }, 1.1, true, animTime);
+        
         return button;
     }
 }

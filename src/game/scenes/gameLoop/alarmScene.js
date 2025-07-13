@@ -30,7 +30,7 @@ export default class AlarmScene extends ConectadoBaseScene {
         this.rightBound = this.bg.x + this.bg.displayWidth / 2;
         
         // Pone la velocidad de scroll inicial a 0
-        let CAMERA_SPEED = this.CAMERA_SPEED;
+        let ORIGINAL_CAMERA_SPEED = this.CAMERA_SPEED;
         this.CAMERA_SPEED = 0;
         
 
@@ -65,19 +65,13 @@ export default class AlarmScene extends ConectadoBaseScene {
 
         // Eventos
         let delayed = false;
-        let ANIM_TIME = 1500;
         
         // Se lanza el evento de que ha empezado el dia
         this.dispatcher.dispatch(ConectadoEventNames.startDay, this);
         
-        // Cuando se han abierto los ojos lanza el evento de mostrar la alarma
-        this.dispatcher.add(ConectadoEventNames.eyesOpened, this, () => {
-            this.dispatcher.dispatch(ConectadoEventNames.showAlarm, { animTime: ANIM_TIME, alarmScene: this });
-
-            // Cuando termina la animacion, se activa el movimiento de la camara
-            setTimeout(() => {
-                this.CAMERA_SPEED = CAMERA_SPEED;
-            }, ANIM_TIME);
+        // Cuando el telefono termina de mostrarse, se comienza a poder mover la camara
+        this.dispatcher.add(ConectadoEventNames.phoneOpened, this, () => {
+            this.CAMERA_SPEED = ORIGINAL_CAMERA_SPEED;
         });
 
         // Cuando se intenta retrasar la alarma
@@ -86,7 +80,7 @@ export default class AlarmScene extends ConectadoBaseScene {
             if (!delayed) {
                 delayed = true;
                 this.CAMERA_SPEED = 0;
-                this.dispatcher.dispatch(ConectadoEventNames.delayAlarm, { animTime: ANIM_TIME });
+                this.dispatcher.dispatch(ConectadoEventNames.delayAlarm, null);
             }
             // Si ya se ha retrasado, muestra el aviso
             else {
@@ -99,14 +93,17 @@ export default class AlarmScene extends ConectadoBaseScene {
             this.initialSetup();
         });
                 
-        // Si se va a despertar, espera el tiempo de la animacion de cerrar el movil y cambia de escena
+        // Si se va a despertar se desactiva el movimiento de la camara
         this.dispatcher.add(ConectadoEventNames.wakeUp, this, (params) => {
-            setTimeout(() => {
+            this.CAMERA_SPEED = 0;
+
+            // Cuando el telefono termina de cerrarse, cambia a la siguiente escena
+            this.dispatcher.add(ConectadoEventNames.phoneClosed, this, () => {
                 let params = {
                     camPos: "right"
                 }
                 this.gameManager.changeScene("BedroomMorningDay" + this.gameManager.day, params);
-            }, params.animTime);
+            });
         });
     }
 }

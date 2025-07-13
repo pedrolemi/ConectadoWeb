@@ -1,4 +1,7 @@
-import { setInteractive } from "../../framework/utils/misc.js";
+import { setInteractive } from "../../../framework/utils/misc.js";
+import { growAnimation } from "../../../framework/utils/graphics.js";
+import BaseScreen from "./baseScreen.js";
+import ConectadoEventNames from "../../eventNames.js";
 
 export default class Phone extends Phaser.GameObjects.Container {
     constructor(scene) {
@@ -10,9 +13,9 @@ export default class Phone extends Phaser.GameObjects.Container {
         this.dispatcher = scene.dispatcher;
         
         // scene.add.rectangle(0, 0, scene.CANVAS_WIDTH / 2, scene.CANVAS_HEIGHT, 0x000, 0.4).setOrigin(0, 0);
-        
+
         // Fondo
-        this.bgBlock = scene.add.rectangle(0, 0, scene.CANVAS_WIDTH, scene.CANVAS_HEIGHT, 0x000, 0).setOrigin(0, 0);
+        this.bgBlock = scene.add.rectangle(0, 0, scene.CANVAS_WIDTH, scene.CANVAS_HEIGHT, 0x000, 0).setOrigin(0, 0).setDepth(-1);
         setInteractive(this.bgBlock);
         this.bgBlock.setInteractive();
         // Al pulsar el fondo, se muestra/oculta el telefono
@@ -38,10 +41,10 @@ export default class Phone extends Phaser.GameObjects.Container {
         this.add(hand);
         hand.setInteractive(polygon, Phaser.Geom.Polygon.Contains);
         graphics.destroy();
-        
+
         
         // Configuracion de las posiciones y dimensiones
-        this.PHONE_X = 405;
+        this.PHONE_X = 413;
         this.PHONE_Y = 800;
         this.HIDDEN_X = -815;
         this.HIDDEN_Y = 780;
@@ -55,14 +58,46 @@ export default class Phone extends Phaser.GameObjects.Container {
 
 
         // Se crean las imagenes y diferentes pantallas
-        this.phone = scene.add.image(this.PHONE_X, this.PHONE_Y, "phone");
+        this.phoneImage = scene.add.image(this.PHONE_X, this.PHONE_Y, "phone");
+        
 
-        this.add(this.phone);
+        // Botones de interaccion
+        let BUTTONS_START_X = this.PHONE_X - 14;
+        let BUTTONS_Y = this.PHONE_Y - 78;
+        let BUTTONS_BAR_WIDTH = 330;
+        let BUTTONS_SPACING = 10;
+        this.buttons = scene.add.container(BUTTONS_START_X, BUTTONS_Y);
+        // this.add(scene.add.rectangle(BUTTONS_START_X, BUTTONS_Y, BUTTONS_BAR_WIDTH, 20, 0x1, 1).setOrigin(0, 0.5));
+        
+        this.createButton((BUTTONS_BAR_WIDTH / 4) - BUTTONS_SPACING, "returnButton", () => {
+
+        });
+        this.createButton((BUTTONS_BAR_WIDTH / 4) * 2, "homeButton", () => {
+            
+        });
+        this.createButton((BUTTONS_BAR_WIDTH / 4) * 3 + BUTTONS_SPACING, "uselessButton", () => { });
+
+        this.add(this.phoneImage);
+        this.add(this.buttons);
+
+
+        this.screens = new Set();
+        this.currentScreen = null;
+
+        this.addNewScreen(new BaseScreen(scene, this, "mainScreenBg", null));
+        
 
         let bounds = this.getBounds();
         this.setSize(bounds.width, bounds.height);
-
+        
         this.activate(false, 0);
+    }
+
+    createButton(x, img, onClick) {
+        let BUTTONS_SCALE = 0.34;
+        let button = this.scene.add.image(x, 0, "phoneElements", img).setOrigin(0.5, 0.5).setScale(BUTTONS_SCALE);
+        growAnimation(button, button, onClick, 1.1, true, 50);
+        this.buttons.add(button);
     }
 
     setAlarm() {
@@ -120,6 +155,7 @@ export default class Phone extends Phaser.GameObjects.Container {
 
                 this.toggleAnim.on("complete", () => {
                     this.toggleAnim = null;
+                    this.dispatcher.dispatch(ConectadoEventNames.phoneOpened, this);
                 })
             }
             // Si esta visible y se quiere desactivar
@@ -150,8 +186,17 @@ export default class Phone extends Phaser.GameObjects.Container {
                     this.bgBlock.disableInteractive();
                     this.setVisible(false);
                     this.toggleAnim = null;
+                    this.dispatcher.dispatch(ConectadoEventNames.phoneClosed, this);
                 })
             }
         }
     }
+
+    
+    addNewScreen(screen) {
+        this.screens.add(screen);
+        this.bringToTop(this.buttons);
+    }
+
+    
 }

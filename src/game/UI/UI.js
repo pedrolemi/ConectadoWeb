@@ -1,9 +1,10 @@
 import BaseUI from "../../framework/UI/baseUI.js";
+import GameManager from "../managers/gameManager.js";
+
 import ConectadoEventNames from "../eventNames.js";
 import ConectadoDialogBox from "./conectadoDialogBox.js";
 import Phone from "./phone/phone.js";
 import { growAnimation } from "../../framework/utils/graphics.js";
-import Button from "../../framework/UI/button.js";
 
 export default class UI extends BaseUI {
     constructor() {
@@ -38,6 +39,8 @@ export default class UI extends BaseUI {
         super.create(params);
         this.textbox.destroy();
 
+        this.gameManager = GameManager.getInstance();
+
         this.phone = new Phone(this);
         this.createIcon();
         // TODO: CREAR ICONO DE NOTIFICACIONES
@@ -65,13 +68,11 @@ export default class UI extends BaseUI {
 
         // Anade el icono del telefono
         this.phoneIcon = this.add.image(this.CANVAS_WIDTH - ICON_OFFSET_X, this.CANVAS_HEIGHT - ICON_OFFSET_Y, "phoneElements", "phoneIcon").setScale(ICON_SCALE);
-        this.setInteractive(this.phoneIcon);
-
-        growAnimation(this.phoneIcon, () => {
+        growAnimation(this.phoneIcon, this.phoneIcon, () => {
             this.phone.toggle();
         }, ICON_GROW_SCALE, false, 20);
         
-        this.phoneIcon.setVisible(false);
+        // this.phoneIcon.setVisible(false);
     }
 
     createNotificationIcon() {
@@ -124,6 +125,7 @@ export default class UI extends BaseUI {
 
             // Se anade el evento solo una vez para que no se cierren los ojos cada vez que se cierra el movil
             this.dispatcher.addOnce(ConectadoEventNames.phoneClosed, this, () => {
+                this.dispatcher.dispatch(ConectadoEventNames.changeHour, "alarmLateHour");
                 this.closeEyes(true);
             });
         });
@@ -136,21 +138,9 @@ export default class UI extends BaseUI {
             // Una vez se oculta el telefono, se reinicia la posicion de la camara
             this.dispatcher.addOnce(ConectadoEventNames.phoneClosed, this, () => {
                 this.cameras.main.scrollX = 0;
+                this.phoneIcon.setVisible(true);
+                this.phone.toMainScreen();
             });
-        });
-
-
-        // TEST
-        let rect = this.add.rectangle(100, 100, 100, 100, 0x0, 1);
-        rect.setInteractive();
-        rect.on("pointerdown", () => {
-            this.dispatcher.dispatch(ConectadoEventNames.tryDelayingAlarm, null);
-        });
-
-        rect = this.add.rectangle(100, 300, 100, 100, 0x0, 1);
-        rect.setInteractive();
-        rect.on("pointerdown", () => {
-            this.dispatcher.dispatch(ConectadoEventNames.wakeUp, null);
         });
     }
 

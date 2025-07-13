@@ -3,8 +3,8 @@ import DialogManager from "./../managers/dialogManager.js";
 import GameManager from "./../managers/gameManager.js";
 
 export default class ConectadoBaseScene extends BaseScene {
-    constructor(name) {
-        super(name);
+    constructor(name, atlasName) {
+        super(name, atlasName);
     }
 
     create(params) {
@@ -78,5 +78,63 @@ export default class ConectadoBaseScene extends BaseScene {
                 this.cameras.main.scrollX += this.CAMERA_SPEED * dt;
             }
         }
+    }
+
+
+    setInteractive(name, obj, onClick = () => {}) {
+        super.setInteractive(obj);
+        obj.setInteractive();
+        
+        obj.on("pointerdown", () => {
+            // TODO: TRACKER EVENT: Enviar interaccion con el elemento
+
+            onClick();
+        });
+    }
+
+    createToggle(elemInitialState, elemEndState, permanent, onClick = () => {}) {
+        // Oculta el estado final del elemento
+        elemEndState.setVisible(false);
+        
+        // Establece el tipo de evento de puntero segun si el toggle es permanente
+        let initialEvt = "pointerdown";
+        let endEvt = "pointerdown";
+        if (!permanent) {
+            initialEvt = "pointerover",
+            endEvt = "pointerour"
+        }
+
+        // Al producir el evento de puntero del estado inicial, se oculta y se muestra el estado final
+        elemInitialState.on(initialEvt, () => {
+            elemInitialState.setVisible(false);
+            elemEndState.setVisible(true);
+        });
+
+        // Al producir el evento de puntero del estado final, se oculta y se muestra el estado inicial
+        elemEndState.on(endEvt, () => {
+            elemInitialState.setVisible(true);
+            elemEndState.setVisible(false);
+        });
+
+        elemEndState.on("pointerdown", () => {
+            onClick();
+        });
+
+        // Al pulsar el estado inicial, si se esta usando input tactil, se muestra el estado final por 
+        // un momento, se produce el evento indicado, y luego se muestra el estado inicial de vuelta
+        elemInitialState.on("pointerdown", () => {
+            if (IS_TOUCH) {
+                elemInitialState.setVisible(false);
+                elemEndState.visible(true);
+
+                setTimeout(() => {
+                    onClick();
+                    if (!permanent) {
+                        elemInitialState.setVisible(true);
+                        elemEndState.visible(false);
+                    }
+                }, 100);
+            }
+        });
     }
 }

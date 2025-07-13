@@ -2,8 +2,13 @@ import { setInteractive } from "../../../framework/utils/misc.js";
 import { growAnimation } from "../../../framework/utils/graphics.js";
 import BaseScreen from "./baseScreen.js";
 import ConectadoEventNames from "../../eventNames.js";
+import AlarmScreen from "./alarmScreen.js";
 
 export default class Phone extends Phaser.GameObjects.Container {
+    /**
+    * Clase que gestiona la interaccion con el telefono
+    * @param {BaseScene} scene - escena en la que esta el movil (idealmente la UI)
+    */
     constructor(scene) {
         super(scene, 0, 0);
 
@@ -12,8 +17,6 @@ export default class Phone extends Phaser.GameObjects.Container {
         this.scene = scene;
         this.dispatcher = scene.dispatcher;
         
-        // scene.add.rectangle(0, 0, scene.CANVAS_WIDTH / 2, scene.CANVAS_HEIGHT, 0x000, 0.4).setOrigin(0, 0);
-
         // Fondo
         this.bgBlock = scene.add.rectangle(0, 0, scene.CANVAS_WIDTH, scene.CANVAS_HEIGHT, 0x000, 0).setOrigin(0, 0).setDepth(-1);
         setInteractive(this.bgBlock);
@@ -56,36 +59,39 @@ export default class Phone extends Phaser.GameObjects.Container {
         this.TOGGLE_SPEED = 700;
         this.toggleAnim = null;
 
-
-        // Se crean las imagenes y diferentes pantallas
         this.phoneImage = scene.add.image(this.PHONE_X, this.PHONE_Y, "phone");
-        
 
+
+        // Pantallas de las aplicaciones
+        this.screens = new Set([
+            this.mainScreen = new BaseScreen(scene, this, "mainScreenBg", null),
+            this.alarmScreen = new AlarmScreen(scene, this, this.mainScreen),
+        ]);
+
+        this.currentScreen = this.mainScreen;
+        
+        
         // Botones de interaccion
         let BUTTONS_START_X = this.PHONE_X - 14;
         let BUTTONS_Y = this.PHONE_Y - 78;
         let BUTTONS_BAR_WIDTH = 330;
         let BUTTONS_SPACING = 10;
+
         this.buttons = scene.add.container(BUTTONS_START_X, BUTTONS_Y);
         // this.add(scene.add.rectangle(BUTTONS_START_X, BUTTONS_Y, BUTTONS_BAR_WIDTH, 20, 0x1, 1).setOrigin(0, 0.5));
         
         this.createButton((BUTTONS_BAR_WIDTH / 4) - BUTTONS_SPACING, "returnButton", () => {
-
+            this.toPrevScreen();
         });
         this.createButton((BUTTONS_BAR_WIDTH / 4) * 2, "homeButton", () => {
-            
+            this.goToScreen(this.mainScreen);
         });
         this.createButton((BUTTONS_BAR_WIDTH / 4) * 3 + BUTTONS_SPACING, "uselessButton", () => { });
 
+        
         this.add(this.phoneImage);
         this.add(this.buttons);
 
-
-        this.screens = new Set();
-        this.currentScreen = null;
-
-        this.addNewScreen(new BaseScreen(scene, this, "mainScreenBg", null));
-        
 
         let bounds = this.getBounds();
         this.setSize(bounds.width, bounds.height);
@@ -100,10 +106,13 @@ export default class Phone extends Phaser.GameObjects.Container {
         this.buttons.add(button);
     }
 
+
     setAlarm() {
         this.x += this.ALARM_OFFSET_X;
         this.y += this.ALARM_OFFSET_Y;
         this.setScale(this.ALARM_SCALE);
+
+        this.goToScreen(this.alarmScreen);
     }
 
     disableAlarm() {
@@ -192,11 +201,46 @@ export default class Phone extends Phaser.GameObjects.Container {
         }
     }
 
-    
+    /**
+    * Anade una nueva pantalla
+    * @param {BaseScreen} screen - pantalla que anadir al telefono
+    */
     addNewScreen(screen) {
         this.screens.add(screen);
+
+        // Se ponen mas adelante de todo la imagen del telefono y los botones inferiores
+        this.bringToTop(this.phoneImage);
         this.bringToTop(this.buttons);
     }
 
-    
+    /**
+    * Oculta la pantalla actual, la cambia por la indicada, y la muestra
+    * @param {BaseScreen} screen - pantalla que anadir al telefono
+    */
+    goToScreen(screen) {
+        // this.screens.forEach((screen) => {
+        //     screen.setVisible(false);
+        // });
+        this.currentScreen.setVisible(false);
+        this.buttons.setVisible(true);
+        screen.setVisible(true);
+        this.currentScreen = screen;
+    }
+
+    /**
+    * Vuelve a la pantalla anterior a la pantalla actual. Si no
+    * hay ninguna pantalla anterior, se oculta el telefono
+    */
+    toPrevScreen() {
+        if (this.currentScreen.prevScreen != null) {
+            this.goToScreen(this.currentScreen.prevScreen);
+        }
+        else {
+            this.toggle();
+        }
+    }
+
+    toMainScreen() {
+        this.goToScreen(this.mainScreen);
+    }
 }

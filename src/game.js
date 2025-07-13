@@ -10,6 +10,9 @@ import Credits from "./game/scenes/menus/credits.js";
 // Escenas del flujo de juego
 import AlarmScene from "./game/scenes/gameLoop/alarmScene.js";
 
+    // Dia 1
+    import BedroomMorningDay1 from "./game/scenes/gameLoop/day1/bedroomMorningDay1.js";
+
 // UI
 import UI from "./game/UI/UI.js";
 
@@ -25,8 +28,8 @@ const CONFIG = {
     height: MAX_H,
     backgroundColor: "#000000",
     version: "1.0",
-
     type: Phaser.AUTO,
+
     // Nota: el orden de las escenas es relevante, y las que se encuentren antes en el array se renderizaran por debajo de las siguientes
     scene: [
         // Carga de assets
@@ -35,6 +38,8 @@ const CONFIG = {
         LanguageMenu, MainMenu, Credits,
 
         AlarmScene,
+
+        BedroomMorningDay1,
 
         UI,
         TextOnlyScene, BusScene

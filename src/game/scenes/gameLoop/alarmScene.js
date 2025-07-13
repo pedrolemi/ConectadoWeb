@@ -78,6 +78,8 @@ export default class AlarmScene extends ConectadoBaseScene {
         this.dispatcher.add(ConectadoEventNames.tryDelayingAlarm, this, (params) => {
             // Si no se ha retrasado antes, desactiva el movimiento de la camara y lanza el evento de retrasarla
             if (!delayed) {
+                this.gameManager.blackboard.set("isLate", true);
+                
                 delayed = true;
                 this.CAMERA_SPEED = 0;
                 this.dispatcher.dispatch(ConectadoEventNames.delayAlarm, null);

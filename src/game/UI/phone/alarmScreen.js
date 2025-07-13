@@ -1,6 +1,7 @@
 import TextArea from "../../../framework/UI/textArea.js";
 import BaseScreen from "./baseScreen.js";
 import { setInteractive } from "../../../framework/utils/misc.js";
+import { growAnimation } from "../../../framework/utils/graphics.js";
 import ConectadoEventNames from "../../eventNames.js";
 
 export default class AlarmScreen extends BaseScreen {
@@ -31,13 +32,13 @@ export default class AlarmScreen extends BaseScreen {
 
 
         // Se crea la imagen del deslizable
-        let scrollable = scene.add.image(this.BG_X, this.BG_Y + 78, "phoneElements", "homeButton").setScale(this.ICON_SCALE);
+        let scrollable = scene.add.image(this.BG_X, this.BG_Y + 78, "phoneElements", "homeButton");
         setInteractive(scrollable, { draggable: true });
         scrollable.setInteractive();
 
         // Limites de hasta donde se puede deslizar el icono
-        let leftBound = this.BG_X - this.bg.displayWidth / 2 + scrollable.displayWidth / 2 - 3;
-        let rightBound = this.BG_X + this.bg.displayWidth / 2 - scrollable.displayWidth / 2 - 4;
+        let leftBound = this.BG_X - this.bg.displayWidth / 2 + scrollable.displayWidth / 2 + 5;
+        let rightBound = this.BG_X + this.bg.displayWidth / 2 - scrollable.displayWidth / 2 - 10;
 
         // Bloquea el deslizamiento para que solo se pueda mover horizontalmente hasta los limites
         scrollable.on("drag", (pointer, dragX, dragY) => {
@@ -60,12 +61,28 @@ export default class AlarmScreen extends BaseScreen {
             scrollable.x = this.BG_X;
         });
 
+        let ALARM_ICONS_SCALE = 0.2;
+        let ICON_OFFSET_X = this.bg.displayWidth / 4 + 25;
+        let ICON_POS_Y = this.BG_Y + 78;
+
+        let sleepIcon = scene.add.image(this.BG_X - ICON_OFFSET_X, ICON_POS_Y, "phoneElements", "sleepIcon").setScale(ALARM_ICONS_SCALE);
+        let wakeUpIcon = scene.add.image(this.BG_X + ICON_OFFSET_X, ICON_POS_Y, "phoneElements", "wakeUpIcon").setScale(ALARM_ICONS_SCALE);
+
+        growAnimation(sleepIcon, sleepIcon, () => {
+            this.dispatcher.dispatch(ConectadoEventNames.tryDelayingAlarm, null);
+        }, 1.1, true, 50);
+        growAnimation(wakeUpIcon, wakeUpIcon, () => {
+            this.dispatcher.dispatch(ConectadoEventNames.wakeUp, null);
+        }, 1.1, true, 50);
+
         this.configureEvents();
 
         this.add(alarmText);
         this.add(this.hourText)
         this.add(this.dayText);
         this.add(scrollable);
+        this.add(sleepIcon);
+        this.add(wakeUpIcon);
 
         this.bringToTop(scrollable);
     }

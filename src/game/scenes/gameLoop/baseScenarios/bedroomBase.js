@@ -13,33 +13,29 @@ export default class BedroomBase extends ConectadoBaseScene {
     create(params) {
         super.create(params);
 
-        this.livingroom = "";
+        this.livingroomScene = "";
 
-        // Pone la imagen de fondo con las dimensiones del canvas
-        this.bg = this.add.image(0, 0, 'bedroomBg').setOrigin(0, 0);
-        this.bgScale = this.CANVAS_HEIGHT / this.bg.height;
-        this.bg.setScale(this.bgScale);
-
+        this.createBg("bedroomBg", 0, 0, 0, 0);
         this.rightBound = this.bg.displayWidth;
 
 
         // Puerta del armario individual
-        this.smallDoorClosed = this.add.image(2190 * this.scale, 330 * this.scale, this.atlasName, 'wardrobeDoor1Closed').setOrigin(0, 0).setScale(this.scale);
-        this.smallDoorOpened = this.add.image(2110 * this.scale, 330 * this.scale, this.atlasName, 'wardrobeDoor1Opened').setOrigin(0, 0).setScale(this.scale);
+        this.smallDoorClosed = this.add.image(2190 * this.bgScale, 330 * this.bgScale, this.atlasName, 'wardrobeDoor1Closed').setOrigin(0, 0).setScale(this.bgScale);
+        this.smallDoorOpened = this.add.image(2110 * this.bgScale, 330 * this.bgScale, this.atlasName, 'wardrobeDoor1Opened').setOrigin(0, 0).setScale(this.bgScale);
         this.setInteractive("bedroomSmallDoorClosed", this.smallDoorClosed);
         this.setInteractive("bedroomSmallDoorOpened", this.smallDoorOpened);
         this.createToggle(this.smallDoorClosed, this.smallDoorOpened, true);
 
         // Puerta izquierda del armario
-        this.leftDoorClosed = this.add.image(2500 * this.scale, 330 * this.scale, this.atlasName, 'wardrobeDoor2Closed').setOrigin(0, 0).setScale(this.scale);
-        this.leftDoorOpened = this.add.image(2435 * this.scale, 307 * this.scale, this.atlasName, 'wardrobeDoor2Opened').setOrigin(0, 0).setScale(this.scale);
+        this.leftDoorClosed = this.add.image(2500 * this.bgScale, 330 * this.bgScale, this.atlasName, 'wardrobeDoor2Closed').setOrigin(0, 0).setScale(this.bgScale);
+        this.leftDoorOpened = this.add.image(2435 * this.bgScale, 307 * this.bgScale, this.atlasName, 'wardrobeDoor2Opened').setOrigin(0, 0).setScale(this.bgScale);
         this.setInteractive("bedroomLeftDoorClosed", this.leftDoorClosed);
         this.setInteractive("bedroomLeftDoorOpened", this.leftDoorOpened);
         this.createToggle(this.leftDoorClosed, this.leftDoorOpened, true);
 
         // Puerta derecha del armario
-        this.rightDoorClosed = this.add.image(3155 * this.scale, 330 * this.scale, this.atlasName, 'wardrobeDoor3Closed').setOrigin(1, 0).setScale(this.scale);
-        this.rightDoorOpened = this.add.image(3220 * this.scale, 330 * this.scale, this.atlasName, 'wardrobeDoor3Opened').setOrigin(1, 0).setScale(this.scale);
+        this.rightDoorClosed = this.add.image(3155 * this.bgScale, 330 * this.bgScale, this.atlasName, 'wardrobeDoor3Closed').setOrigin(1, 0).setScale(this.bgScale);
+        this.rightDoorOpened = this.add.image(3220 * this.bgScale, 330 * this.bgScale, this.atlasName, 'wardrobeDoor3Opened').setOrigin(1, 0).setScale(this.bgScale);
         this.setInteractive("bedroomLeftDoorClosed", this.leftDoorClosed);
         this.setInteractive("bedroomLeftDoorOpened", this.leftDoorOpened);
         this.createToggle(this.rightDoorClosed, this.rightDoorOpened, true);
@@ -54,20 +50,14 @@ export default class BedroomBase extends ConectadoBaseScene {
 
         this.smallWardrobeInside = this.add.rectangle(this.smallDoorClosed.x, this.smallDoorClosed.y, this.smallDoorClosed.displayWidth, this.smallDoorClosed.displayHeight, 
             0xfff, 1).setOrigin(0, 0);
-        // this.smallDoorClosed.setDepth(this.bg.depth + 3);
-        // this.smallDoorOpened.setDepth(this.smallDoorClosed.depth - 1);
-        // this.smallWardrobeInside.setDepth(this.smallDoorOpened.depth - 1);
-        // this.setInteractive("bedroomSmallWardrobe", this.smallWardrobeInside, () => {
+        this.smallDoorClosed.setDepth(this.bg.depth + 3);
+        this.smallDoorOpened.setDepth(this.smallDoorClosed.depth - 1);
+        this.smallWardrobeInside.setDepth(this.smallDoorOpened.depth - 1);
+        this.setInteractive("bedroomSmallWardrobe", this.smallWardrobeInside, () => {
+            this.dialogManager.setNode(this.smallWardrobeNode);
+        });
 
-        // });
-        // this.smallWardrobeInside.setInteractive({ useHandCursor: true });
-        // this.smallWardrobeInside.on('pointerdown', () => {
-        //     if (this.smallDoorOpened.visible) {
-        //         // this.dialogManager.setNode(this.smallWardrobeNode);
-        //     }
-        // });
-
-        // let wardrobe2 = this.add.rectangle(door2Closed.x, door2Closed.y, door2Closed.displayWidth + door3Closed.displayWidth - 15, this.smallDoorClosed.displayHeight, 0xfff, 0).setOrigin(0, 0);
+        // this.bigWardrobeInside = this.add.rectangle(door2Closed.x, door2Closed.y, door2Closed.displayWidth + door3Closed.displayWidth - 15, this.smallDoorClosed.displayHeight, 0xfff, 0).setOrigin(0, 0);
         // door2Closed.setDepth(this.bg.depth + 4);
         // door2Opened.setDepth(door2Closed.depth);
         // door3Closed.setDepth(this.bg.depth + 4);

@@ -16,6 +16,8 @@ export default class Phone extends Phaser.GameObjects.Container {
 
         this.scene = scene;
         this.dispatcher = scene.dispatcher;
+
+        // scene.add.rectangle(0, 0, scene.CANVAS_WIDTH / 2, scene.CANVAS_HEIGHT, 0x000, 0.4).setOrigin(0, 0);
         
         // Fondo
         this.bgBlock = scene.add.rectangle(0, 0, scene.CANVAS_WIDTH, scene.CANVAS_HEIGHT, 0x000, 0).setOrigin(0, 0).setDepth(-1);
@@ -100,10 +102,10 @@ export default class Phone extends Phaser.GameObjects.Container {
     }
 
     createButton(x, img, onClick) {
-        let BUTTONS_SCALE = 0.34;
-        let button = this.scene.add.image(x, 0, "phoneElements", img).setOrigin(0.5, 0.5).setScale(BUTTONS_SCALE);
-        growAnimation(button, button, onClick, 1.1, true, 50);
-        this.buttons.add(button);
+        // let BUTTONS_SCALE = 0.34;
+        // let button = this.scene.add.image(x, 0, "phoneElements", img).setOrigin(0.5, 0.5).setScale(BUTTONS_SCALE);
+        // growAnimation(button, button, onClick, 1.1, true, 50);
+        // this.buttons.add(button);
     }
 
 

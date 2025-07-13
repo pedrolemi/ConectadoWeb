@@ -9,7 +9,7 @@ export default class AlarmScene extends ConectadoBaseScene {
     }
 
     create(params) {
-        super.create();
+        super.create(params);
 
         // Reinicia la variable de llegar tarde y de haber cogido la mochila
         this.gameManager.blackboard.set("isLate", false);
@@ -18,16 +18,7 @@ export default class AlarmScene extends ConectadoBaseScene {
         // Actualiza el dia en el gameManager y cambia el dia y la hora del telefono
         this.gameManager.day++;
 
-
-        // Pone la imagen de fondo con las dimensiones del canvas
-        this.bg = this.add.image(0, 0, "bedroomCeiling").setOrigin(0.5, 0);
-        this.bgScale = this.CANVAS_HEIGHT / this.bg.height;
-        this.bg.setScale(this.bgScale);
-
-        // Centra la imagen de fondo
-        this.bg.x += this.CANVAS_WIDTH / 2;
-        this.leftBound = this.bg.x - this.bg.displayWidth / 2;
-        this.rightBound = this.bg.x + this.bg.displayWidth / 2;
+        this.createBg("bedroomCeiling", this.CANVAS_WIDTH / 2, 0, 0.5, 0);
         
         // Pone la velocidad de scroll inicial a 0
         let ORIGINAL_CAMERA_SPEED = this.CAMERA_SPEED;
@@ -102,7 +93,7 @@ export default class AlarmScene extends ConectadoBaseScene {
             // Cuando el telefono termina de cerrarse, cambia a la siguiente escena
             this.dispatcher.add(ConectadoEventNames.phoneClosed, this, () => {
                 let params = {
-                    camPos: "right"
+                    camPos: ConectadoBaseScene.CAM_POS_RIGHT
                 }
                 this.gameManager.changeScene("BedroomMorningDay" + this.gameManager.day, params);
             });

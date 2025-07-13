@@ -3,6 +3,11 @@ import DialogManager from "./../managers/dialogManager.js";
 import GameManager from "./../managers/gameManager.js";
 
 export default class ConectadoBaseScene extends BaseScene {
+    // Posibles valores de la posicion inicial de la camara
+    static CAM_POS_LEFT = 0;
+    static CAM_POS_RIGHT = 1;
+    static CAM_POS_CENTER = 0.5;
+    
     constructor(name, atlasName) {
         super(name, atlasName);
     }
@@ -20,21 +25,23 @@ export default class ConectadoBaseScene extends BaseScene {
         this.rightBound = this.CANVAS_WIDTH;
         this.START_SCROLLING = 30;
         this.CAMERA_SPEED = 0.7;
+
+        this.BG_DEPTH = 0;
     }
 
     /**
-     * Metodo que se llama al terminar de crear la escena. Se encarga de llamar initialSetup
-     * @param {Object} params - objeto con los parametros que pasarle a initialSetup 
-     */
+    * Metodo que se llama al terminar de crear la escena. Se encarga de llamar initialSetup
+    * @param {Object} params - objeto con los parametros que pasarle a initialSetup 
+    */
     onCreate(params) {
         super.onCreate(params);
         this.initialSetup(params);
     }
 
     /**
-     * Metodo que se llama al despertar la escena. Se encarga de llamar initialSetup
-     * @param {Object} params - objeto con los parametros que pasarle a initialSetup 
-     */
+    * Metodo que se llama al despertar la escena. Se encarga de llamar initialSetup
+    * @param {Object} params - objeto con los parametros que pasarle a initialSetup 
+    */
     onWake(params) {
         super.onWake(params);
         this.initialSetup(params);
@@ -45,14 +52,18 @@ export default class ConectadoBaseScene extends BaseScene {
 
         // Por defecto se pone la camara en el centro y si hay parametros que indiquen
         // donde colocar la camara, se coloca a la izquierda o a la derecha
-        this.cameras.main.scrollX = this.rightBound / 2 - this.CANVAS_WIDTH / 2;
-        if (params) {
-            if (params.camPos === "left") {
-                this.cameras.main.scrollX = this.leftBound;
-            }
-            else if (params.camPos === "right") {
-                this.cameras.main.scrollX = this.rightBound - this.CANVAS_WIDTH;
-            }
+        if (params == null) {
+            params = {
+                camPos: ConectadoBaseScene.CAM_POS_CENTER 
+            };
+        }
+        else if (params.camPos == null) {
+            params.camPos = ConectadoBaseScene.CAM_POS_CENTER;
+        }
+        if (params.camPos != null) {
+            let camOffset = this.CANVAS_WIDTH * params.camPos;
+            let startOffset = (this.rightBound - this.leftBound) * (1 - params.camPos);
+            this.cameras.main.scrollX = this.rightBound - camOffset - startOffset;
         }
     }
 
@@ -90,6 +101,23 @@ export default class ConectadoBaseScene extends BaseScene {
 
             onClick();
         });
+    }
+
+    /**
+    * Crea la imagen de fondo y le aplica la escala necesaria para ocupar todo el alto de la pantalla
+    * @param {String} img - id de la imagen de fondo
+    * @param {Number} x - posicion x de la imagen de fondo
+    * @param {Number} y - posicion y de la imagen de fondo
+    * @param {Number} originX - origen x de la imagen de fondo
+    * @param {Number} originY - origen y de la imagen de fondo
+    */
+    createBg(img, x = 0, y = 0, originX = 0, originY = 0) {
+        this.bg = this.add.image(x, y, img).setOrigin(originX, originY);
+        this.bgScale = this.CANVAS_HEIGHT / this.bg.height;
+        this.bg.setScale(this.bgScale);
+
+        this.leftBound = this.bg.x - this.bg.displayWidth * originX;
+        this.rightBound = this.bg.x + this.bg.displayWidth * (1 - originX);
     }
 
     createToggle(elemInitialState, elemEndState, permanent, onClick = () => {}) {

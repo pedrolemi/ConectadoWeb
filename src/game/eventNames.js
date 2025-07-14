@@ -9,4 +9,6 @@ export default class ConectadoEventNames {
 
     static phoneOpened = "phoneOpened";
     static phoneClosed = "phoneClosed";
+
+    static startNightmare = "startNightmare"
 }

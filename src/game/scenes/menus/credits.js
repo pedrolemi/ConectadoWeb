@@ -108,9 +108,9 @@ export default class Credits extends ConectadoBaseScene {
         let BUTTON_W = 160;
         let BUTTON_H = 40;
 
-        let button = new Button(this, x, y, BUTTON_W, BUTTON_H);
+        let button = new Button(this, x, y);
 
-        button.createRectButton(text, this.BUTTONS_TEXT_CONFIG, callback, "creditsButton", 15, 0xFFF0F0F0, 1, 0.5, 0x0, 1, 0, 0, 0, 2, 0.5, 0.5, 0.5, 0.5, 0xffffff, 0x408e86, 0xc8c8c8);
+        button.createRectButton(text, this.BUTTONS_TEXT_CONFIG, BUTTON_W, BUTTON_H, callback, "creditsButton", 15, 0xFFF0F0F0, 1, 0.5, 0x0, 1, 0, 0, 0, 2, 0.5, 0.5, 0.5, 0.5, 0xffffff, 0x408e86, 0xc8c8c8);
         button.textObj.maxHeight *= 2;
         button.textObj.adjustFontSize();
 

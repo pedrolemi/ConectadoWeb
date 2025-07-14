@@ -26,7 +26,13 @@ export default class ConectadoBaseScene extends BaseScene {
         this.START_SCROLLING = 30;
         this.CAMERA_SPEED = 0.7;
 
+        // Configuraciones de profundidad para los elementos del fondo
         this.BG_DEPTH = 0;
+        this.INTERACTABLES_DEPTH = 3;
+        this.TOGGLES_DEPTH = 5;
+        
+        // Nodo con los dialogos de todos los dias
+        this.everydayNodes = this.cache.json.get("everydayDialog");
     }
 
     /**
@@ -91,10 +97,18 @@ export default class ConectadoBaseScene extends BaseScene {
         }
     }
 
-
+    /**
+    * Hace un objeto interactivo y configura la llamada al tracker para su interaccion con este
+    * @param {String} name - nombre del objeto con el que se interactua
+    * @param {Phaser.GameObject} obj - objeto a hacer interactivo
+    * @param {Function} onClick -  funcion a la que se llamara al pulsar sobre el
+    */
     setInteractive(name, obj, onClick = () => {}) {
         super.setInteractive(obj);
         obj.setInteractive();
+
+        // Se recoloca el objeto
+        obj.setDepth(this.INTERACTABLES_DEPTH);
         
         obj.on("pointerdown", () => {
             // TODO: TRACKER EVENT: Enviar interaccion con el elemento
@@ -112,7 +126,7 @@ export default class ConectadoBaseScene extends BaseScene {
     * @param {Number} originY - origen y de la imagen de fondo
     */
     createBg(img, x = 0, y = 0, originX = 0, originY = 0) {
-        this.bg = this.add.image(x, y, img).setOrigin(originX, originY);
+        this.bg = this.add.image(x, y, img).setOrigin(originX, originY).setDepth(this.BG_DEPTH);
         this.bgScale = this.CANVAS_HEIGHT / this.bg.height;
         this.bg.setScale(this.bgScale);
 
@@ -120,46 +134,61 @@ export default class ConectadoBaseScene extends BaseScene {
         this.rightBound = this.bg.x + this.bg.displayWidth * (1 - originX);
     }
 
-    createToggle(elemInitialState, elemEndState, permanent, onClick = () => {}) {
+    /**
+    * Hace interactivos los objetos indicados y los configura para cambiar entre uno y otro al interactuar con ellos
+    * @param {Phaser.GameObject} initialStateObj - objeto que representa el estado incial del toggle
+    * @param {String} initialStateName - nombre del objeto inicial
+    * @param {Phaser.GameObject} endStateObj - objeto que representa el estado final del toggle
+    * @param {String} endStateName - nombre del objeto final
+    * @param {Boolean} permanent - true si el toggle se queda activo/inactivo hasta que se vuelve a interactuar 
+    *                              con el, false si cambia en cuanto se termina la interaccion
+    * @param {Function} onClick - funcion a llamar al pulsar sobre el objeto en su estado final
+    */
+    createToggle(initialStateObj, initialStateName, endStateObj, endStateName, permanent, onClick = () => {}) {
+        this.setInteractive(initialStateName, initialStateObj);
+        this.setInteractive(endStateName, endStateObj);
+        initialStateObj.setDepth(this.TOGGLES_DEPTH);
+        endStateObj.setDepth(this.TOGGLES_DEPTH);
+        
         // Oculta el estado final del elemento
-        elemEndState.setVisible(false);
+        endStateObj.setVisible(false);
         
         // Establece el tipo de evento de puntero segun si el toggle es permanente
         let initialEvt = "pointerdown";
         let endEvt = "pointerdown";
         if (!permanent) {
             initialEvt = "pointerover",
-            endEvt = "pointerour"
+            endEvt = "pointerout"
         }
 
         // Al producir el evento de puntero del estado inicial, se oculta y se muestra el estado final
-        elemInitialState.on(initialEvt, () => {
-            elemInitialState.setVisible(false);
-            elemEndState.setVisible(true);
+        initialStateObj.on(initialEvt, () => {
+            initialStateObj.setVisible(false);
+            endStateObj.setVisible(true);
         });
 
         // Al producir el evento de puntero del estado final, se oculta y se muestra el estado inicial
-        elemEndState.on(endEvt, () => {
-            elemInitialState.setVisible(true);
-            elemEndState.setVisible(false);
+        endStateObj.on(endEvt, () => {
+            initialStateObj.setVisible(true);
+            endStateObj.setVisible(false);
         });
 
-        elemEndState.on("pointerdown", () => {
+        endStateObj.on("pointerdown", () => {
             onClick();
         });
 
         // Al pulsar el estado inicial, si se esta usando input tactil, se muestra el estado final por 
         // un momento, se produce el evento indicado, y luego se muestra el estado inicial de vuelta
-        elemInitialState.on("pointerdown", () => {
+        initialStateObj.on("pointerdown", () => {
             if (IS_TOUCH) {
-                elemInitialState.setVisible(false);
-                elemEndState.visible(true);
+                initialStateObj.setVisible(false);
+                endStateObj.visible(true);
 
                 setTimeout(() => {
                     onClick();
                     if (!permanent) {
-                        elemInitialState.setVisible(true);
-                        elemEndState.visible(false);
+                        initialStateObj.setVisible(true);
+                        endStateObj.visible(false);
                     }
                 }, 100);
             }

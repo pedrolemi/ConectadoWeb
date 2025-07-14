@@ -34,7 +34,10 @@ export default class GameManager extends Singleton {
     }
 
     startMainMenu() {
-        this.changeScene("MainMenu", null);
+        // this.changeScene("MainMenu", null);
+
+        // TEST
+        this.startGame();
     }
 
     startLoginMenu() {
@@ -64,7 +67,7 @@ export default class GameManager extends Singleton {
             this.sceneManager.restartScene("UI");
         }
         
-        this.day = 0;
+        // this.day = 0;
 
         // let params = {
         //     text: this.localizationManager.translate("day1.start", "transitionScenes"),
@@ -74,9 +77,10 @@ export default class GameManager extends Singleton {
         // };
         // this.changeScene("TextOnlyScene", params, true);
 
-        this.changeScene("AlarmScene", null, true);
-
+        this.changeScene("BedroomMorningDay1", null, false, false);
     }
 
-   
+    startComputer() {
+
+    }
 }

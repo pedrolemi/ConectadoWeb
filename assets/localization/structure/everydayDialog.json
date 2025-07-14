@@ -29,10 +29,9 @@
                 "type": "event",
                 "events": [
                     { 
-                        "turnPC": {
-                            "variable": "isLate",
-                            "value": true
-                        }
+                        "name": "turnPC",
+                        "variable": "isLate",
+                        "value": true
                     }
                 ]
             },
@@ -66,7 +65,7 @@
                 "type": "event",
                     "events": [
                         { 
-                            "sleep": { }
+                            "name": "sleep"
                         }
                     ]
             }
@@ -164,7 +163,7 @@
                 "type": "event",
                 "events": [
                     { 
-                        "endBreak": { }
+                        "name": "endBreak"
                     }
                 ]
             }
@@ -195,7 +194,7 @@
                 "type": "event",
                 "events": [
                     {
-                        "startClass": {}
+                        "name": "startClass"
                     }
                 ]
             }
@@ -210,7 +209,7 @@
                 "type": "event",
                 "events": [
                     {
-                        "startClass": {}
+                        "name": "startClass"
                     }
                 ]
             }
@@ -255,11 +254,10 @@
             "type": "event",
             "events": [
                 {
-                    "closePhoto": {
-                        "variable": "seenPhoto",
-                        "value": true,
-                        "global": true
-                    }
+                    "name": "closePhoto",
+                    "variable": "seenPhoto",
+                    "value": true,
+                    "global": true
                 }
             ]
         }

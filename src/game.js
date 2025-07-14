@@ -13,6 +13,8 @@ import AlarmScene from "./game/scenes/gameLoop/alarmScene.js";
     // Dia 1
     import BedroomMorningDay1 from "./game/scenes/gameLoop/day1/bedroomMorningDay1.js";
 
+    import NightmareDay1 from "./game/scenes/gameLoop/day1/nightmareDay1.js";
+
 // UI
 import UI from "./game/UI/UI.js";
 
@@ -39,7 +41,7 @@ const CONFIG = {
 
         AlarmScene,
 
-        BedroomMorningDay1,
+        BedroomMorningDay1, NightmareDay1,
 
         UI,
         TextOnlyScene, BusScene
@@ -77,8 +79,5 @@ const CONFIG = {
     },
 }
 
+gameDebug.enable = true;
 const GAME = new Phaser.Game(CONFIG);
-GAME.debug = {
-    enable: false,
-    color: "0x00ff00"
-}

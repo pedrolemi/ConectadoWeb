@@ -5,6 +5,7 @@ import ConectadoEventNames from "../eventNames.js";
 import ConectadoDialogBox from "./conectadoDialogBox.js";
 import Phone from "./phone/phone.js";
 import { growAnimation } from "../../framework/utils/graphics.js";
+import OptionBox from "../../framework/UI/optionBox.js";
 
 export default class UI extends BaseUI {
     constructor() {
@@ -13,22 +14,34 @@ export default class UI extends BaseUI {
 
     init(params) {
         super.init(params);
-
+        
+        let PADDING =  10;
+        let OPTION_BOX_SCALE_X = (this.CANVAS_WIDTH - PADDING * 2) / this.textures.get("dialogs").get("optionBg").width;
+        
         this.textConfig = {
             fontFamily: "Arial",
             fontSize: 27,
             fontStyle: 600
         }
         this.optionBoxConfig = {
-            boxSpacing: 10,
-            textPaddingX: 70,
-            textPaddingY: 10,
+            imgAtlas: "dialogs",
+            img: "optionBg",
+            imgScaleX: OPTION_BOX_SCALE_X,
+            
+            boxSpacing: 0,
+            
+            textPaddingY: 15,
+            
             textOffsetX: 0,
             textOffsetY: 0,
+
+            textOriginX: 0,
+
+            textAlignX: 0,
         }
         this.optionsTextConfig = { ... this.textConfig };
         this.optionsTextConfig.fontSize = 35;
-        this.optionsTextConfig.align = "center";
+        this.optionsTextConfig.align = "left";
         this.optionsTextConfig.wordWrap = {
             width: 1,
             useAdvancedWrap: true
@@ -46,11 +59,13 @@ export default class UI extends BaseUI {
         // TODO: CREAR ICONO DE NOTIFICACIONES
 
         this.textbox = new ConectadoDialogBox(this);
-        
+        this.textbox.on("pointerdown", () => { this.skipDialog(); });
+
         this.createLids();
 
 
         this.configureAlarmEvents();
+        this.configureGameEvents();
     }
 
     update(t, dt) {
@@ -105,7 +120,7 @@ export default class UI extends BaseUI {
         this.dispatcher.add(ConectadoEventNames.startDay, this, (alarmScene) => {
             this.phoneIcon.setVisible(false);
             this.phone.activate(false, 0);
-            this.openEyes();
+            this.openEyesAnimation();
 
             // Se configura el scroll para que el telefono se mueva junto a la camara
             this.alarmScene = alarmScene;
@@ -144,11 +159,27 @@ export default class UI extends BaseUI {
         });
     }
 
+    configureGameEvents() {
+        this.dispatcher.add("sleep", this, () => {
+            this.closeEyes(false);
+        });
+
+        this.dispatcher.add(ConectadoEventNames.startNightmare, this, () => {
+            this.openEyesAnimation(true);
+        });
+    }
 
     /**
     * Animacion de abrir los ojos. Mueve los parpados varias veces hasta abrirlos del todo
     */
-    openEyes() {
+    openEyesAnimation(instant = false) {
+        if (instant) {
+            // Recoloca los parpados para que esten abiertos
+            this.topLid.y = this.OPENED_TOP_LID_Y;
+            this.botLid.y = this.OPENED_BOT_LID_Y;
+            return;
+        }
+        
         // Recoloca los parpados para que esten cerrados
         this.topLid.y = this.CLOSED_TOP_LID_Y;
         this.botLid.y = this.CLOSED_BOT_LID_Y;
@@ -298,7 +329,7 @@ export default class UI extends BaseUI {
             // Si se establece, se vuelve a reproducir la animacion de abrir los ojos
             if (openAgain) {
                 setTimeout(() => {
-                    this.openEyes();
+                    this.openEyesAnimation();
                 }, this.SLEEP_DELAY * 2);
             }
         });

@@ -21,7 +21,7 @@ export default class MainMenu extends ConectadoBaseScene {
         let scale = this.CANVAS_WIDTH / bg.width;
         bg.setScale(scale);
         
-        this.add.rectangle(this.CANVAS_WIDTH / 2, 10, this.CANVAS_WIDTH - 20, this.CANVAS_HEIGHT / 1.2, 0xFFFFFF).setOrigin(0.5, 0);
+        this.add.rectangle(this.CANVAS_WIDTH / 2, 10, this.CANVAS_WIDTH - 20, this.CANVAS_HEIGHT / 1.2, 0xFFFFFF, 1).setOrigin(0.5, 0);
 
         // Pantalla del ordenador con el tam del canvas
         let screen = this.add.image(0, 0, "PCscreen").setOrigin(0, 0);
@@ -57,10 +57,10 @@ export default class MainMenu extends ConectadoBaseScene {
         let exitTextConfig = { ...this.TEXT_CONFIG };
         exitTextConfig.fontSize = 40;
         exitTextConfig.color = "#FFFFFF";
-        let exitButton = new Button(this, 100, 3 * this.CANVAS_HEIGHT / 4 + 10, 220, 64);
+        let exitButton = new Button(this, 100, 3 * this.CANVAS_HEIGHT / 4 + 10);
         exitButton.createImgButton(this.localizationManager.translate("exitText", namespace), exitTextConfig, () => {
             this.gameManager.startLanguageMenu();
-        }, "powerOff", 0.5, 0.5, 0.5, 0.5, 1, 0, 0, 160, 35, 0, 0.5, 0, 0, 0x408e86, 0x00685d, 0xc8c8c8);
+        }, "powerOff", 0.5, 0.5, 0.5, 0.5, 1, -20, -20, 90, 3, 0, 0.5, 0, 0.5, 0x408e86, 0x00685d, 0xc8c8c8);
         exitButton.image.setTint(0x00685d);
         exitButton.textObj.setTint(0x00685d);
 
@@ -86,8 +86,8 @@ export default class MainMenu extends ConectadoBaseScene {
         let BUTTON_W = 300;
         let BUTTON_H = 75;
 
-        let button = new Button(this, BUTTON_X, y, BUTTON_W, BUTTON_H);
-        button.createRectButton(text, this.TEXT_CONFIG, callback, "menuButton", 15, 0xFFFFFF, 1, 1, 0x0, 1, 10, 10, 0, 0, 0.5, 0.5, 0.5, 0.5, 0xffffff, 0x408e86, 0xc8c8c8);
+        let button = new Button(this, BUTTON_X, y);
+        button.createRectButton(text, this.TEXT_CONFIG, BUTTON_W, BUTTON_H, callback, "menuButton", 15, 0xFFFFFF, 1, 1, 0x0, 1, 10, 10, 0, 0, 0.5, 0.5, 0.5, 0.5, 0xffffff, 0x408e86, 0xc8c8c8);
 
         return button;
     }

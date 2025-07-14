@@ -34,18 +34,27 @@ export default class PreloaderScene extends BasePreloaderScene {
 
     preload() {
         let dialogNamespaces = [
-            "menus/credits"
+            "menus/credits",
+
+            // Dialogos de todos los dias
+            "everydayDialog"
         ];
         let basicNamespaces = [
+            // Menus
             "menus/titleMenu",
             "menus/loginMenu",
 
+            // Nombres
             "names",
             
+            // Movil
             "phoneInfo",
+
+            // Ordenador
             "computer/computerInfo",
 
-            "transitionScenes"
+            // Escenas de transicion
+            "transitionScenes",
         ]
 
         let loadAssets = () => {

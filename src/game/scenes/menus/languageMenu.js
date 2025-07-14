@@ -19,7 +19,7 @@ export default class LanguageMenu extends ConectadoBaseScene {
         let scale = this.CANVAS_WIDTH / bg.width;
         bg.setScale(scale);
 
-        this.add.rectangle(this.CANVAS_WIDTH / 2, 10, this.CANVAS_WIDTH - 20, this.CANVAS_HEIGHT / 1.2, 0xFF2B9E9E).setOrigin(0.5, 0);
+        this.add.rectangle(this.CANVAS_WIDTH / 2, 10, this.CANVAS_WIDTH - 20, this.CANVAS_HEIGHT / 1.2, 0xFF2B9E9E, 1).setOrigin(0.5, 0);
 
         // Pantalla del ordenador con el tam del canvas
         let screen = this.add.image(0, 0, "PCscreen").setOrigin(0, 0);

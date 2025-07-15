@@ -44,7 +44,7 @@ export default class AlarmScene extends ConectadoBaseScene {
         }
 
         let warnText = new TextArea(this, warnRect.x, warnRect.y + warnRect.displayHeight / 2, warnRect.displayWidth - TEXT_PADDING * 2, warnRect.displayHeight - TEXT_PADDING * 2,
-            this.localizationManager.translate("alarm.message", "phoneInfo"), TEXT_CONFIG).setOrigin(0.5, 0.5);
+            this.localizationManager.translate("alarm.message", "phoneInfo"), TEXT_CONFIG, 0.5, 0.5);
         warnText.adjustFontSize();
         
         sleepWarning.add(warnRect);

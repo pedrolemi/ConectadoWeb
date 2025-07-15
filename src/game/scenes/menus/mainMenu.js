@@ -1,6 +1,7 @@
 import ConectadoBaseScene from "../conectadoBaseScene.js";
-import Button from "../../../framework/UI/button.js"
-import { createCircleTexture, createRectTexture } from "../../../framework/utils/graphics.js";
+import RectTextButton from "../../../framework/UI/rectTextButton.js";
+import ImageTextButton from "../../../framework/UI/imageTextButton.js";
+import { createCircleTexture, createRectTexture, tintAnimation } from "../../../framework/utils/graphics.js";
 import TextArea from "../../../framework/UI/textArea.js";
 
 
@@ -57,12 +58,11 @@ export default class MainMenu extends ConectadoBaseScene {
         let exitTextConfig = { ...this.TEXT_CONFIG };
         exitTextConfig.fontSize = 40;
         exitTextConfig.color = "#FFFFFF";
-        let exitButton = new Button(this, 100, 3 * this.CANVAS_HEIGHT / 4 + 10);
-        exitButton.createImgButton(this.localizationManager.translate("exitText", namespace), exitTextConfig, () => {
+
+        let exitButton = new ImageTextButton(this, 100, 3 * this.CANVAS_HEIGHT / 4 + 10, this.localizationManager.translate("exitText", namespace), exitTextConfig, () => {
             this.gameManager.startLanguageMenu();
-        }, "powerOff", 0.5, 0.5, 0.5, 0.5, 1, -20, -20, 90, 3, 0, 0.5, 0, 0.5, 0x408e86, 0x00685d, 0xc8c8c8);
-        exitButton.image.setTint(0x00685d);
-        exitButton.textObj.setTint(0x00685d);
+        }, "", "powerOff", 0.5, 0.5, 0.5, 0.5, 1, 0, 0.5, -20, -20, 70, 3, 0, 0.5);
+        tintAnimation(exitButton, exitButton.list, exitButton.onClick, true, 0x408e86, 0x00685d, 0xc8c8c8);
 
         // Se obtiene la version del juego (especificada en los parametros de configuracion de game)
         let gameVersion = this.sys.game.config.gameVersion;
@@ -70,7 +70,7 @@ export default class MainMenu extends ConectadoBaseScene {
         gameVersionTextStyle.fontFamily = "AUdimat-regular";
         gameVersionTextStyle.fontSize = 22;
         gameVersionTextStyle.color = "#323232";
-        new TextArea(this, this.CANVAS_WIDTH - 55, 3 * this.CANVAS_HEIGHT / 4 + 40, 0, 0, "V " + gameVersion, gameVersionTextStyle).setOrigin(1, 0.5);
+        new TextArea(this, this.CANVAS_WIDTH - 55, 3 * this.CANVAS_HEIGHT / 4 + 40, 0, 0, "V " + gameVersion, gameVersionTextStyle, 1, 0.5);
 
         // Logo
         offset = -20;
@@ -86,8 +86,9 @@ export default class MainMenu extends ConectadoBaseScene {
         let BUTTON_W = 300;
         let BUTTON_H = 75;
 
-        let button = new Button(this, BUTTON_X, y);
-        button.createRectButton(text, this.TEXT_CONFIG, BUTTON_W, BUTTON_H, callback, "menuButton", 15, 0xFFFFFF, 1, 1, 0x0, 1, 10, 10, 0, 0, 0.5, 0.5, 0.5, 0.5, 0xffffff, 0x408e86, 0xc8c8c8);
+        let button = new RectTextButton(this, BUTTON_X, y, BUTTON_W, BUTTON_H, text, this.TEXT_CONFIG, callback, "menuButton",
+            0.5, 0.5, 15, 0xffffff, 1, 1, 0x0, 1);
+        tintAnimation(button, button.list, callback, true, 0xffffff, 0x408e86, 0xc8c8c8);
 
         return button;
     }
@@ -112,7 +113,7 @@ export default class MainMenu extends ConectadoBaseScene {
         createRectTexture(this, "counterTexture", 40, 40, 0xFF0808, 1, 0.5, 0x0, 1, 15);
         this.counterRect = this.add.image(0, 0, "counterTexture");
 
-        this.counterText = new TextArea(this, 0, 0, this.counterRect.displayWidth, this.counterRect.displayHeight, this.COUNTER_LIMIT - 1, counterTextConfig).setOrigin(0.5, 0.5);
+        this.counterText = new TextArea(this, 0, 0, this.counterRect.displayWidth, this.counterRect.displayHeight, this.COUNTER_LIMIT - 1, counterTextConfig);
         this.counterText.adjustFontSize();
 
         // Se crea el emisor de particula que funciona en modo explosion

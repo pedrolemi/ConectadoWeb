@@ -57,15 +57,16 @@ export default class TextOnlyScene extends ConectadoBaseScene {
             width: TEXT_WIDTH,
             useAdvancedWrap: true
         }
-        let textObj = new TextArea(this, this.CANVAS_WIDTH / 2, TEXT_Y, TEXT_WIDTH, TEXT_HEIGHT, text, textConfig).setOrigin(0.5, 0.5);
+        let textObj = new TextArea(this, this.CANVAS_WIDTH / 2, TEXT_Y, TEXT_WIDTH, TEXT_HEIGHT, text, textConfig, 0.5, 0.5);
         textObj.adjustFontSize();
 
 
         // Se puede hacer click en el fondo una vez termine el fade in y pase el delay para poder saltar la transicion
         this.cameras.main.once(Phaser.Cameras.Scene2D.Events.FADE_IN_COMPLETE, (cam, effect) => {
             setTimeout(() => {
-                this.setInteractive(bg);
-
+                this.setInteractive("transitionScene", bg);
+                bg.setDepth(this.BG_DEPTH);
+                
                 // Se anade el evento de hacer click sobre el fondo para que solo se pueda ejecutar una vez.
                 bg.once("pointerdown", () => {
                     this.scene.setVisible(true, this.UIManager);
@@ -79,7 +80,7 @@ export default class TextOnlyScene extends ConectadoBaseScene {
                 textConfig.fontSize = 20;
                 textConfig.align = "right";
                 let infoTextObj = new TextArea(this, this.CANVAS_WIDTH - PADDING / 2, this.CANVAS_HEIGHT - PADDING / 2, 0, 0,
-                    this.localizationManager.translate("transitionInfo", "transitionScenes"), textConfig).setOrigin(1, 1);
+                    this.localizationManager.translate("transitionInfo", "transitionScenes"), textConfig, 1, 1);
 
                 // Se hace una animacion de aparicion
                 let appear = this.tweens.add({

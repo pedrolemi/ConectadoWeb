@@ -32,7 +32,7 @@ export default class UI extends BaseUI {
             
             textPaddingY: 15,
             
-            textOffsetX: 0,
+            textOffsetX: 25,
             textOffsetY: 0,
 
             textOriginX: 0,
@@ -42,10 +42,6 @@ export default class UI extends BaseUI {
         this.optionsTextConfig = { ... this.textConfig };
         this.optionsTextConfig.fontSize = 35;
         this.optionsTextConfig.align = "left";
-        this.optionsTextConfig.wordWrap = {
-            width: 1,
-            useAdvancedWrap: true
-        }
     }
 
     create(params) {
@@ -85,7 +81,7 @@ export default class UI extends BaseUI {
         this.phoneIcon = this.add.image(this.CANVAS_WIDTH - ICON_OFFSET_X, this.CANVAS_HEIGHT - ICON_OFFSET_Y, "phoneElements", "phoneIcon").setScale(ICON_SCALE);
         growAnimation(this.phoneIcon, this.phoneIcon, () => {
             this.phone.toggle();
-        }, ICON_GROW_SCALE, false, 20);
+        }, true, ICON_GROW_SCALE, false, 20);
         
         this.phoneIcon.setVisible(false);
     }
@@ -147,6 +143,7 @@ export default class UI extends BaseUI {
 
         // Al despertar, se oculta el telefono
         this.dispatcher.add(ConectadoEventNames.wakeUp, this, (params) => {
+            this.bgBlock.disableInteractive();
             this.phone.toggle(WAKE_TOGGLE_TIME);
             this.alarmScene = null;
 
@@ -154,7 +151,8 @@ export default class UI extends BaseUI {
             this.dispatcher.addOnce(ConectadoEventNames.phoneClosed, this, () => {
                 this.cameras.main.scrollX = 0;
                 this.phoneIcon.setVisible(true);
-                this.phone.toMainScreen();
+                this.phone.disableAlarm();
+                // this.phone.toMainScreen();
             });
         });
     }

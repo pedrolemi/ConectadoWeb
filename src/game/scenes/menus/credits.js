@@ -1,7 +1,8 @@
 import ConectadoBaseScene from "../conectadoBaseScene.js";
-import Button from "../../../framework/UI/button.js";
 import TextArea from "../../../framework/UI/textArea.js";
 import Grid from "../../../framework/UI/grid.js";
+import RectTextButton from "../../../framework/UI/rectTextButton.js";
+import { tintAnimation } from "../../../framework/utils/graphics.js";
 
 export default class Credits extends ConectadoBaseScene {
     /**
@@ -108,11 +109,9 @@ export default class Credits extends ConectadoBaseScene {
         let BUTTON_W = 160;
         let BUTTON_H = 40;
 
-        let button = new Button(this, x, y);
-
-        button.createRectButton(text, this.BUTTONS_TEXT_CONFIG, BUTTON_W, BUTTON_H, callback, "creditsButton", 15, 0xFFF0F0F0, 1, 0.5, 0x0, 1, 0, 0, 0, 2, 0.5, 0.5, 0.5, 0.5, 0xffffff, 0x408e86, 0xc8c8c8);
-        button.textObj.maxHeight *= 2;
-        button.textObj.adjustFontSize();
+        let button = new RectTextButton(this, x, y, BUTTON_W, BUTTON_H, text, this.BUTTONS_TEXT_CONFIG, callback, "creditsButton", 
+            0.5, 0.5, 15, 0xFFF0F0F0, 1, 1, 0x0, 1, 0.5, 0.5, 0, -20, 0, 2);
+        tintAnimation(button, button.list, callback, true, 0xffffff, 0x408e86, 0xc8c8c8);
 
         return button
     }
@@ -271,7 +270,7 @@ export default class Credits extends ConectadoBaseScene {
         this.CREDITS_TEXT_CONFIG.fontSize = textParams.size;
         this.CREDITS_TEXT_CONFIG.fontFamily = textParams.font;
 
-        let textObj = new TextArea(this, x, this.nextY + spacing, 0, 0, text, this.CREDITS_TEXT_CONFIG).setOrigin(0.5, 0);
+        let textObj = new TextArea(this, x, this.nextY + spacing, 0, 0, text, this.CREDITS_TEXT_CONFIG, 0.5, 0);
         this.container.add(textObj);
         this.nextY = textObj.y + textObj.displayHeight;
 
@@ -484,11 +483,11 @@ export default class Credits extends ConectadoBaseScene {
 
             this.CREDITS_TEXT_CONFIG.fontSize = normalParams.size;
             this.CREDITS_TEXT_CONFIG.fontFamily = normalParams.font;
-            let textObj = new TextArea(this, 0, 0, 0, 0, nameText, this.CREDITS_TEXT_CONFIG).setOrigin(0.5, 0);
+            let textObj = new TextArea(this, 0, 0, 0, 0, nameText, this.CREDITS_TEXT_CONFIG, 0.5, 0);
 
             this.CREDITS_TEXT_CONFIG.fontSize = subtitleParams.size;
             this.CREDITS_TEXT_CONFIG.fontFamily = subtitleParams.font;
-            let subTextObj = new TextArea(this, 0, textObj.y + textObj.displayHeight + subtitlePadding, 0, 0, placeText, this.CREDITS_TEXT_CONFIG).setOrigin(0.5, 0);
+            let subTextObj = new TextArea(this, 0, textObj.y + textObj.displayHeight + subtitlePadding, 0, 0, placeText, this.CREDITS_TEXT_CONFIG, 0.5, 0);
 
             textContainer.add(textObj);
             textContainer.add(subTextObj);

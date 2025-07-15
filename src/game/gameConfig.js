@@ -1,26 +1,26 @@
 // Carga de assets
-import BootScene from "./game/scenes/bootScene.js";
-import PreloaderScene from "./game/scenes/preloaderScene.js";
+import BootScene from "./scenes/bootScene.js";
+import PreloaderScene from "./scenes/preloaderScene.js";
 
 // Menus
-import LanguageMenu from "./game/scenes/menus/languageMenu.js";
-import MainMenu from "./game/scenes/menus/mainMenu.js";
-import Credits from "./game/scenes/menus/credits.js";
+import LanguageMenu from "./scenes/menus/languageMenu.js";
+import MainMenu from "./scenes/menus/mainMenu.js";
+import Credits from "./scenes/menus/credits.js";
 
 // Escenas del flujo de juego
-import AlarmScene from "./game/scenes/gameLoop/alarmScene.js";
+import AlarmScene from "./scenes/gameLoop/alarmScene.js";
 
     // Dia 1
-    import BedroomMorningDay1 from "./game/scenes/gameLoop/day1/bedroomMorningDay1.js";
+    import BedroomMorningDay1 from "./scenes/gameLoop/day1/bedroomMorningDay1.js";
 
-    import NightmareDay1 from "./game/scenes/gameLoop/day1/nightmareDay1.js";
+    import NightmareDay1 from "./scenes/gameLoop/day1/nightmareDay1.js";
 
 // UI
-import UI from "./game/UI/UI.js";
+import UI from "./UI/UI.js";
 
 // Escenas que se pintan por encima de la UI
-import TextOnlyScene from "./game/scenes/gameLoop/textOnlyScene.js";
-import BusScene from "./game/scenes/gameLoop/busScene.js";
+import TextOnlyScene from "./scenes/gameLoop/textOnlyScene.js";
+import BusScene from "./scenes/gameLoop/busScene.js";
 
 
 
@@ -79,5 +79,6 @@ const CONFIG = {
     },
 }
 
-gameDebug.enable = true;
+gameDebug.enable = false;
+gameDebug.enableText = false;
 const GAME = new Phaser.Game(CONFIG);

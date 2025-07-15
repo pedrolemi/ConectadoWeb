@@ -67,7 +67,7 @@ export default class GameManager extends Singleton {
             this.sceneManager.restartScene("UI");
         }
         
-        // this.day = 0;
+        this.day = 0;
 
         // let params = {
         //     text: this.localizationManager.translate("day1.start", "transitionScenes"),

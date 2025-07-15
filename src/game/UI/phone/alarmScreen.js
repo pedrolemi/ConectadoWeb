@@ -17,16 +17,14 @@ export default class AlarmScreen extends BaseScreen {
 
         // Crea los textos
         let alarmText = new TextArea(scene, this.BG_X, this.BG_Y * 0.4, this.bg.displayWidth, this.bg.displayHeight,
-            this.localizationManager.translate("alarm.title", this.namespace), this.DEFAULT_TEXT_CONFIG).setOrigin(0.5, 0);
+            this.localizationManager.translate("alarm.title", this.namespace), this.DEFAULT_TEXT_CONFIG, 0.5, 0);
         alarmText.adjustFontSize();
 
-        this.hourText = new TextArea(scene, this.BG_X, this.BG_Y * 0.55, this.bg.displayWidth, this.bg.displayHeight,
-            "hour", this.DEFAULT_TEXT_CONFIG).setOrigin(0.5, 0);
+        this.hourText = new TextArea(scene, this.BG_X, this.BG_Y * 0.55, this.bg.displayWidth, this.bg.displayHeight, "hour", this.DEFAULT_TEXT_CONFIG, 0.5, 0);
         this.hourText.setFontSize(100);
         this.hourText.adjustFontSize();
 
-        this.dayText = new TextArea(scene, this.BG_X, this.BG_Y * 0.8, this.bg.displayWidth, this.bg.displayHeight,
-            "day", this.DEFAULT_TEXT_CONFIG).setOrigin(0.5, 0);
+        this.dayText = new TextArea(scene, this.BG_X, this.BG_Y * 0.8, this.bg.displayWidth, this.bg.displayHeight, "day", this.DEFAULT_TEXT_CONFIG, 0.5, 0);
         this.dayText.setFontSize(25);
         this.dayText.adjustFontSize();
 
@@ -70,10 +68,10 @@ export default class AlarmScreen extends BaseScreen {
 
         growAnimation(sleepIcon, sleepIcon, () => {
             this.dispatcher.dispatch(ConectadoEventNames.tryDelayingAlarm, null);
-        }, 1.1, true, 50);
+        }, true, 1.1, true, 50);
         growAnimation(wakeUpIcon, wakeUpIcon, () => {
             this.dispatcher.dispatch(ConectadoEventNames.wakeUp, null);
-        }, 1.1, true, 50);
+        }, true, 1.1, true, 50);
 
         this.configureEvents();
 

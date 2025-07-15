@@ -104,7 +104,7 @@ export default class Phone extends Phaser.GameObjects.Container {
     createButton(x, img, onClick) {
         let BUTTONS_SCALE = 0.34;
         let button = this.scene.add.image(x, 0, "phoneElements", img).setOrigin(0.5, 0.5).setScale(BUTTONS_SCALE);
-        growAnimation(button, button, onClick, 1.1, true, 50);
+        growAnimation(button, button, onClick, true, 1.1, true, 50);
         this.buttons.add(button);
     }
 
@@ -121,6 +121,8 @@ export default class Phone extends Phaser.GameObjects.Container {
         this.x -= this.ALARM_OFFSET_X;
         this.y -= this.ALARM_OFFSET_Y;
         this.setScale(1);
+
+        this.goToScreen(this.mainScreen);
     }
 
     /**

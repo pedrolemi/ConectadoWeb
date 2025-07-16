@@ -1,7 +1,5 @@
 <div align="center">
-  <a href="https://pedrolemi.github.io/ConectadoWeb/" target="_blank" rel="noopener noreferrer">
-    <img src="https://user-images.githubusercontent.com/5657407/35525810-db5de806-0525-11e8-9481-161d44dfa78b.png" width="400" />
-  </a>
+  <img src="https://user-images.githubusercontent.com/5657407/35525810-db5de806-0525-11e8-9481-161d44dfa78b.png" width="400" />
 </div>
 
 # Conectado Web
@@ -20,13 +18,15 @@
 ## Team
 The original concept and the videogame have been carried out by the [eUCM](http://www.e-ucm.es/es/) group. Both the executable and a teacher's guide can be found on [e-ucm.es](https://www.e-ucm.es/es/portfolio-item/conectado/). 
 
-This repository consists of a **browser version** of the original game developed by [Matt Castellanos](https://github.com/MattCastUCM) y [Pedro León](https://github.com/P4179) under the eye of eUCM group.
+This repository consists of a **browser version** of the original game developed by [Matt Castellanos](https://github.com/MattCastUCM) y [Pedro León](https://github.com/pedrolemi) under the eye of eUCM group.
 
 ## Available languages:
 - Spanish 🇪🇸 (original version) 
 - English 🇬🇧
 - French 🇫🇷
-- Portuguese 🇵🇹 (in progress)
+- Brazilian Portuguese 🇧🇷
+- Traditional Chinese 🇨🇳
+- Cantonese 🇭🇰
 
 ## Resources
 All graphic resources of the project have a CC BY-NC-SA (Creative Commons Attribution Non-Commercial Share Alike) license.

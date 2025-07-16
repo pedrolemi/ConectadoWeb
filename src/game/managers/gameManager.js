@@ -34,10 +34,10 @@ export default class GameManager extends Singleton {
     }
 
     startMainMenu() {
-        // this.changeScene("MainMenu", null);
+        this.changeScene("MainMenu", null);
 
         // TEST
-        this.startGame();
+        // this.startGame();
     }
 
     startLoginMenu() {

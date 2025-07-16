@@ -83,7 +83,7 @@ export default class UI extends BaseUI {
             this.phone.toggle();
         }, true, ICON_GROW_SCALE, false, 20);
         
-        this.phoneIcon.setVisible(false);
+        // this.phoneIcon.setVisible(false);
     }
 
     createNotificationIcon() {

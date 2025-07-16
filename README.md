@@ -1,7 +1,5 @@
 <div align="center">
-  <a href="https://pedrolemi.github.io/ConectadoWeb/" target="_blank" rel="noopener noreferrer">
-    <img src="https://user-images.githubusercontent.com/5657407/35525810-db5de806-0525-11e8-9481-161d44dfa78b.png" width="400" />
-  </a>
+  <img src="https://user-images.githubusercontent.com/5657407/35525810-db5de806-0525-11e8-9481-161d44dfa78b.png" width="400" />
 </div>
 
 # Conectado Web
@@ -20,13 +18,15 @@
 ## Equipo
 La idea y el videojuego originales han sido llevados a cabo por el grupo [eUCM](http://www.e-ucm.es/es/). Tanto el ejecutable como una guía para el docente se encuentran en [e-ucm.es](https://www.e-ucm.es/es/portfolio-item/conectado/). 
 
-Este repositorio se trata de una **versión web** del videojuego original desarrollada por [Matt Castellanos](https://github.com/MattCastUCM) y [Pedro León](https://github.com/P4179) bajo la supervisión del grupo eUCM.
+Este repositorio se trata de una **versión web** del videojuego original desarrollada por [Matt Castellanos](https://github.com/MattCastUCM) y [Pedro León](https://github.com/pedrolemi) bajo la supervisión del grupo eUCM.
 
 ## Idiomas disponibles:
 - Español 🇪🇸 (versión original) 
 - Inglés 🇬🇧
 - Francés 🇫🇷
-- Portugués 🇵🇹 (en proceso)
+- Portugués de Brasil 🇧🇷
+- Chino tradicional 🇨🇳
+- Cantonés 🇭🇰
 
 ## Recursos
 Todos los recursos gráficos del proyecto poseen una licencia CC BY-NC-SA (Creative Commons Attribution Non-Commercial Share Alike). Los recusos gráficos han sido diseñados por [Ana Vallecillos Ruiz](https://nashek.artstation.com/) (Directora de Arte) y [Lola González Gutiérrez](https://www.redbubble.com/es/people/lolagonzalez/shop?asc=u).

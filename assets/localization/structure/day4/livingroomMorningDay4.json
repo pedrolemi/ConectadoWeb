@@ -78,11 +78,10 @@
             "type": "event",
             "events": [
                 { 
-                    "setMeeting": { 
-                        "variable": "meeting", 
-                        "value": true, 
-                        "global": true
-                    }
+                    "name": "setMeeting",
+                    "variable": "meeting", 
+                    "value": true, 
+                    "global": true
                 }
             ],
             "next": "setTalked"
@@ -103,11 +102,10 @@
             "type": "event",
             "events": [
                 { 
-                    "setTalked": { 
-                        "variable": "talked", 
-                        "value": true, 
-                        "global": false
-                    }
+                    "name": "setTalked",
+                    "variable": "talked", 
+                    "value": true, 
+                    "global": false
                 }
             ]
         },

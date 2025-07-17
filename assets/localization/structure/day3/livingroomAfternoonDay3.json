@@ -32,11 +32,10 @@
             "type": "event",
             "events": [
                 { 
-                    "setTalked": { 
-                        "variable": "talked", 
-                        "value": true, 
-                        "global": false
-                    }
+                    "name": "setTalked", 
+                    "variable": "talked", 
+                    "value": true, 
+                    "global": false
                 }
             ],
             "next": "choices1"
@@ -72,17 +71,15 @@
             "type": "event",
             "events": [
                 { 
-                    "changeFriendship": { 
-                        "character": "parents", 
-                        "value": -15
-                    }
+                    "name": "changeFriendship",
+                    "character": "parents", 
+                    "value": -15
                 },
                 { 
-                    "ignore": { 
-                        "variable": "canIgnore", 
-                        "value": false, 
-                        "global": false
-                    }
+                    "name": "ignore",
+                    "variable": "canIgnore", 
+                    "value": false, 
+                    "global": false
                 }
             ]
         },
@@ -95,10 +92,9 @@
             "type": "event",
             "events": [
                 { 
-                    "changeFriendship": { 
-                        "character": "parents", 
-                        "value": 5
-                    }
+                    "name": "changeFriendship",
+                    "character": "parents", 
+                    "value": 5
                 }
             ],
             "next": "choices1"
@@ -108,7 +104,7 @@
             "type": "event",
             "events": [
                 { 
-                    "prepareChoices2": { }
+                    "name": "prepareChoices2"
                 }
             ],
             "next": "choices2"
@@ -130,10 +126,9 @@
             "type": "event",
             "events": [
                 { 
-                    "changeFriendship": { 
-                        "character": "parents", 
-                        "value": 5
-                    }
+                    "name": "changeFriendship",
+                    "character": "parents", 
+                    "value": 5
                 }
             ],
             "next": "choices2"
@@ -152,10 +147,9 @@
             "type": "event",
             "events": [
                 { 
-                    "changeFriendship": { 
-                        "character": "parents", 
-                        "value": 15
-                    }
+                    "name": "changeFriendship",
+                    "character": "parents", 
+                    "value": 15
                 }
             ],
             "next": "choices2"
@@ -207,10 +201,9 @@
             "type": "event",
             "events": [
                 { 
-                    "changeFriendship": { 
-                        "character": "parents", 
-                        "value": 10
-                    }
+                    "name": "changeFriendship",
+                    "character": "parents", 
+                    "value": 10
                 }
             ],
             "next": "choices3"

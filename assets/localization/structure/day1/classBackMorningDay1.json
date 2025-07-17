@@ -19,7 +19,7 @@
             "type": "event",
             "events": [
                 { 
-                    "enterClass": { }
+                    "name": "enterClass"
                 }
             ]
         }
@@ -44,13 +44,12 @@
             "type": "event",
             "events": [
                 { 
-                    "startBreak": { }
+                    "name": "startBreak"
                 },
                 { 
-                    "changeFriendship": { 
-                        "character": "Alex", 
-                        "value": -10
-                    }
+                    "name": "changeFriendship",
+                    "character": "Alex", 
+                    "value": -10
                 }
             ]
         }

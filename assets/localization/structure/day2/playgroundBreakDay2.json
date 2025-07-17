@@ -130,11 +130,10 @@
             "type": "event",
             "events": [
                 { 
-                    "talked": { 
-                        "variable": "talked", 
-                        "value": true, 
-                        "global": false
-                    }
+                    "name": "talked",
+                    "variable": "talked", 
+                    "value": true, 
+                    "global": false
                 }
             ]
         },

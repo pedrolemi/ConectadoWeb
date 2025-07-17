@@ -9,11 +9,10 @@
             "type": "event",
             "events": [
                 {
-                    "pickPhone": {
-                        "variable": "phoneFound",
-                        "value": true,
-                        "global": true
-                    }
+                    "name": "pickPhone",
+                    "variable": "phoneFound",
+                    "value": true,
+                    "global": true
                 }
             ]
         }

@@ -28,7 +28,7 @@
             "type": "event",
             "events": [
                 { 
-                    "prepareChoicesAlexAna": { }
+                    "name": "prepareChoicesAlexAna"
                 }
             ],
             "next": "choices"
@@ -62,18 +62,16 @@
             "type": "event",
             "events": [
                 { 
-                    "setPrank": { 
-                        "variable": "canPrank", 
-                        "value": true, 
-                        "global": true
-                    }
+                    "name": "setPrank",
+                    "variable": "canPrank", 
+                    "value": true, 
+                    "global": true
                 },
                 { 
-                    "setPrank": { 
-                        "variable": "askedPrank", 
-                        "value": true, 
-                        "global": true
-                    }
+                    "name": "setPrank",
+                    "variable": "askedPrank", 
+                    "value": true, 
+                    "global": true
                 }
             ],
             "next": "setTalked"
@@ -83,11 +81,10 @@
             "type": "event",
             "events": [
                 { 
-                    "setTalked": { 
-                        "variable": "talked", 
-                        "value": true, 
-                        "global": false
-                    }
+                    "name": "setTalked",
+                    "variable": "talked", 
+                    "value": true, 
+                    "global": false
                 }
             ]
         },
@@ -183,11 +180,10 @@
             "type": "event",
             "events": [
                 { 
-                    "setTalked": { 
-                        "variable": "canPrank", 
-                        "value": false, 
-                        "global": true
-                    }
+                    "name": "setTalked",
+                    "variable": "canPrank", 
+                    "value": false, 
+                    "global": true
                 }
             ],
             "next": "setTalked"

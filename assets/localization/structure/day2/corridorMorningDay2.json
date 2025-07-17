@@ -63,11 +63,10 @@
             "type": "event",
             "events": [
                 { 
-                    "setPrank": { 
-                        "variable": "alexMorningTalk", 
-                        "value": "prank", 
-                        "global": true
-                    }
+                    "name": "setPrank",
+                    "variable": "alexMorningTalk", 
+                    "value": "prank", 
+                    "global": true
                 }
             ],
             "next": "setTalked"
@@ -87,11 +86,10 @@
             "type": "event",
             "events": [
                 { 
-                    "setAsk": { 
-                        "variable": "alexMorningTalk", 
-                        "value": "ask", 
-                        "global": true
-                    }
+                    "name": "setAsk",
+                    "variable": "alexMorningTalk", 
+                    "value": "ask", 
+                    "global": true
                 }
             ],
             "next": "setTalked"
@@ -111,11 +109,10 @@
             "type": "event",
             "events": [
                 { 
-                    "setDistrust": { 
-                        "variable": "alexMorningTalk", 
-                        "value": "distrust", 
-                        "global": true
-                    }
+                    "name": "setDistrust",
+                    "variable": "alexMorningTalk", 
+                    "value": "distrust", 
+                    "global": true
                 }
             ],
             "next": "setTalked"
@@ -136,11 +133,10 @@
             "type": "event",
             "events": [
                 { 
-                    "talkedAlex": { 
-                        "variable": "talkedAlex", 
-                        "value": true, 
-                        "global": false
-                    }
+                    "name": "talkedAlex",
+                    "variable": "talkedAlex", 
+                    "value": true, 
+                    "global": false
                 }
             ]
         },
@@ -212,18 +208,16 @@
             "type": "event",
             "events": [
                 { 
-                    "setWarned": { 
-                        "variable": "warned", 
-                        "value": true, 
-                        "global": true
-                    }
+                    "name": "setWarned",
+                    "variable": "warned", 
+                    "value": true, 
+                    "global": true
                 },
                 { 
-                    "setWarnedAlison": { 
-                        "variable": "warnedAlison", 
-                        "value": true, 
-                        "global": true
-                    }
+                    "name": "setWarnedAlison",
+                    "variable": "warnedAlison", 
+                    "value": true, 
+                    "global": true
                 }
             ],
             "next": "setTalked"
@@ -232,11 +226,10 @@
             "type": "event",
             "events": [
                 { 
-                    "setTalkedAlison": { 
-                        "variable": "talkedAlison", 
-                        "value": true, 
-                        "global": false
-                    }
+                    "name": "setTalkedAlison",
+                    "variable": "talkedAlison", 
+                    "value": true, 
+                    "global": false
                 }
             ]
         },
@@ -303,11 +296,10 @@
             "type": "event",
             "events": [
                 { 
-                    "setTalk": { 
-                        "variable": "aboutMatch", 
-                        "value": true, 
-                        "global": true
-                    }
+                    "name": "setTalk",
+                    "variable": "aboutMatch", 
+                    "value": true, 
+                    "global": true
                 }
             ],
             "next": "choices"
@@ -339,18 +331,16 @@
             "type": "event",
             "events": [
                 { 
-                    "setMatch": { 
-                        "variable": "goToMatch", 
-                        "value": true, 
-                        "global": true
-                    }
+                    "name": "setMatch",
+                    "variable": "goToMatch", 
+                    "value": true, 
+                    "global": true
                 },
                 { 
-                    "setGuilleResponse": { 
-                        "variable": "guilleResponse", 
-                        "value": "yes", 
-                        "global": true
-                    }
+                    "name": "setGuilleResponse",
+                    "variable": "guilleResponse", 
+                    "value": "yes", 
+                    "global": true
                 }
             ],
             "next": "setTalked"
@@ -359,18 +349,16 @@
             "type": "event",
             "events": [
                 { 
-                    "setMatch": { 
-                        "variable": "goToMatch", 
-                        "value": false, 
-                        "global": true
-                    }
+                    "name": "setMatch",
+                    "variable": "goToMatch", 
+                    "value": false, 
+                    "global": true
                 },
                 { 
-                    "setGuilleResponse": { 
-                        "variable": "guilleResponse", 
-                        "value": "no", 
-                        "global": true
-                    }
+                    "name": "setGuilleResponse",
+                    "variable": "guilleResponse", 
+                    "value": "no", 
+                    "global": true
                 }
             ],
             "next": "setTalked"
@@ -379,18 +367,16 @@
             "type": "event",
             "events": [
                 { 
-                    "setMatch": { 
-                        "variable": "goToMatch", 
-                        "value": false, 
-                        "global": true
-                    }
+                    "name": "setMatch",
+                    "variable": "goToMatch", 
+                    "value": false, 
+                    "global": true
                 },
                 { 
-                    "setGuilleResponse": { 
-                        "variable": "guilleResponse", 
-                        "value": "ask", 
-                        "global": true
-                    }
+                    "name": "setGuilleResponse",
+                    "variable": "guilleResponse", 
+                    "value": "ask", 
+                    "global": true
                 }
             ],
             "next": "setTalked"
@@ -400,11 +386,10 @@
             "type": "event",
             "events": [
                 { 
-                    "talkedGuille": { 
-                        "variable": "talkedGuille", 
-                        "value": true, 
-                        "global": false
-                    }
+                    "name": "talkedGuille",
+                    "variable": "talkedGuille", 
+                    "value": true, 
+                    "global": false
                 }
             ]
         },

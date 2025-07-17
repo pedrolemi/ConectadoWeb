@@ -83,7 +83,7 @@
             "type": "event",
             "events": [
                 {
-                    "sleep": {}
+                    "name": "sleep"
                 }
             ]
         }
@@ -101,7 +101,8 @@
             "type": "event",
             "events": [
                 { 
-                    "endChat": { "chat": "chat4" }
+                    "name": "endChat",
+                    "chat": "chat4"
                 }
             ]
         }

@@ -12,7 +12,7 @@ import AlarmScene from "./scenes/gameLoop/alarmScene.js";
 
     // Dia 1
     import BedroomMorningDay1 from "./scenes/gameLoop/day1/bedroomMorningDay1.js";
-
+    import LivingroomMorningDay1 from "./scenes/gameLoop/day1/livingroomMorningDay1.js";
     import NightmareDay1 from "./scenes/gameLoop/day1/nightmareDay1.js";
 
 // UI
@@ -41,7 +41,7 @@ const CONFIG = {
 
         AlarmScene,
 
-        BedroomMorningDay1, NightmareDay1,
+        BedroomMorningDay1, LivingroomMorningDay1, NightmareDay1,
 
         UI,
         TextOnlyScene, BusScene

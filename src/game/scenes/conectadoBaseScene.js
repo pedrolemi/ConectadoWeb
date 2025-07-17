@@ -175,23 +175,27 @@ export default class ConectadoBaseScene extends BaseScene {
 
         endStateObj.on("pointerdown", () => {
             onClick();
+
+            initialStateObj.setVisible(true);
+            endStateObj.setVisible(false);
         });
 
-        // Al pulsar el estado inicial, si se esta usando input tactil, se muestra el estado final por 
-        // un momento, se produce el evento indicado, y luego se muestra el estado inicial de vuelta
-        initialStateObj.on("pointerdown", () => {
-            if (IS_TOUCH) {
-                initialStateObj.setVisible(false);
-                endStateObj.visible(true);
+        if (!permanent) {
+            // Al pulsar el estado inicial, si se esta usando input tactil, se muestra el estado final por 
+            // un momento, se produce el evento indicado, y luego se muestra el estado inicial de vuelta
+            initialStateObj.on("pointerdown", () => {
+                if (IS_TOUCH) {
+                    initialStateObj.setVisible(false);
+                    endStateObj.setVisible(true);
 
-                setTimeout(() => {
-                    onClick();
-                    if (!permanent) {
+                    setTimeout(() => {
+                        onClick();
+
                         initialStateObj.setVisible(true);
-                        endStateObj.visible(false);
-                    }
-                }, 100);
-            }
-        });
+                        endStateObj.setVisible(false);
+                    }, 100);
+                }
+            });
+        }
     }
 }

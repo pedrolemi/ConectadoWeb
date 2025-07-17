@@ -33,11 +33,10 @@
             "type": "event",
             "events": [
                 { 
-                    "setTalked": { 
-                        "variable": "talked", 
-                        "value": true, 
-                        "global": false
-                    }
+                    "name": "setTalked",
+                    "variable": "talked", 
+                    "value": true, 
+                    "global": false
                 }
             ]
         },

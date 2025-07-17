@@ -40,7 +40,8 @@
             "type": "event",
             "events": [
                 {
-                    "startTimer1": { "time": 5000 }
+                    "name": "startTimer1",
+                    "time": 5000
                 }
             ]
         }
@@ -64,7 +65,7 @@
             "type": "event",
             "events": [
                 {
-                    "reply1": { }
+                    "name": "reply1"
                 }
             ]
         }
@@ -197,7 +198,8 @@
             "type": "event",
             "events": [
                 { 
-                    "endChat": { "chat": "chat2" }
+                    "name": "endChat",
+                    "chat": "chat2"
                 }
             ]
         }

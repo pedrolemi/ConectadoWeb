@@ -9,11 +9,10 @@
             "type": "event",
             "events": [
                 { 
-                    "pickEarring": { 
-                        "variable": "foundEarring", 
-                        "value": true, 
-                        "global": true
-                    }
+                    "name": "pickEarring",
+                    "variable": "foundEarring", 
+                    "value": true, 
+                    "global": true
                 }
             ]
         }
@@ -59,11 +58,10 @@
             "type": "event",
             "events": [
                 { 
-                    "metAna": { 
-                        "variable": "metAna", 
-                        "value": true, 
-                        "global": true
-                    }
+                    "name": "metAna",
+                    "variable": "metAna", 
+                    "value": true, 
+                    "global": true
                 }
             ]
         }
@@ -79,11 +77,10 @@
             "type": "event",
             "events": [
                 { 
-                    "metGuille": { 
-                        "variable": "metGuille", 
-                        "value": true, 
-                        "global": true
-                    }
+                    "name": "metGuille",
+                    "variable": "metGuille", 
+                    "value": true, 
+                    "global": true
                 }
             ]
         }

@@ -30,9 +30,10 @@ export default class UI extends BaseUI {
             
             boxSpacing: 0,
             
+            textPaddingX: 10,
             textPaddingY: 15,
             
-            textOffsetX: 25,
+            textOffsetX: 0,
             textOffsetY: 0,
 
             textOriginX: 0,

@@ -14,7 +14,7 @@ export default class BedroomBase extends ConectadoBaseScene {
     create(params) {
         super.create(params);
 
-        this.createBg("bedroomBg", 0, 0, 0, 0);
+        this.createBg("bedroomBg");
         this.rightBound = this.bg.displayWidth;
 
 

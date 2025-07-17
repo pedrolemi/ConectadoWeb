@@ -10,7 +10,7 @@
                 "type": "event",
                 "events": [
                     {
-                        "startNightmare2": {}
+                        "name": "startNightmare2"
                     }
                 ]
             }
@@ -25,7 +25,7 @@
                 "type": "event",
                 "events": [
                     {
-                        "finishNightmare2": {}
+                        "name": "finishNightmare2"
                     }
                 ]
             }

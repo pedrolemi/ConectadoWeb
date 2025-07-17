@@ -10,7 +10,7 @@
                 "type": "event",
                 "events": [
                     {
-                        "startNightmare3": {}
+                        "name": "startNightmare3"
                     }
                 ]
             }
@@ -25,7 +25,7 @@
                 "type": "event",
                 "events": [
                     {
-                        "finishNightmare3": {}
+                        "name": "finishNightmare3"
                     }
                 ]
             }
@@ -55,9 +55,8 @@
             "type": "event",
             "events": [
                 {
-                    "characterFadesOut": {
-                        "character": "Maria"
-                    }
+                    "name": "characterFadesOut",
+                    "character": "Maria"
                 }
             ]
         }
@@ -86,9 +85,8 @@
             "type": "event",
             "events": [
                 {
-                    "characterFadesOut": {
-                        "character": "Guille"
-                    }
+                    "name": "characterFadesOut",
+                    "character": "Guille"
                 }
             ]
         }
@@ -117,9 +115,8 @@
             "type": "event",
             "events": [
                 {
-                    "characterFadesOut": {
-                        "character": "Jose"
-                    }
+                    "name": "characterFadesOut",
+                    "character": "Jose"
                 }
             ]
         }
@@ -148,9 +145,8 @@
             "type": "event",
             "events": [
                 {
-                    "characterFadesOut": {
-                        "character": "Alison"
-                    }
+                    "name": "characterFadesOut",
+                    "character": "Alison"
                 }
             ]
         }
@@ -179,9 +175,8 @@
             "type": "event",
             "events": [
                 {
-                    "characterFadesOut": {
-                        "character": "Ana"
-                    }
+                    "name": "characterFadesOut",
+                    "character": "Ana"
                 }
             ]
         }

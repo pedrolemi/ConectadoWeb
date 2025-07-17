@@ -72,7 +72,7 @@
         "type": "event",
         "events": [
             {
-                "endGame": {}
+                "name": "endGame"
             }
         ]
     }

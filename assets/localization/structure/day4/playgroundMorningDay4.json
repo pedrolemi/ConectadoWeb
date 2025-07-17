@@ -38,11 +38,10 @@
             "type": "event",
             "events": [
                 { 
-                    "setExchange": { 
-                        "variable": "passwordExchanged", 
-                        "value": true, 
-                        "global": true
-                    }
+                    "name": "setExchange",
+                    "variable": "passwordExchanged", 
+                    "value": true, 
+                    "global": true
                 }
             ],
             "next": "checkHour"
@@ -63,10 +62,9 @@
             "type": "event",
             "events": [
                 { 
-                    "changeFriendship": { 
-                        "character": "Alison", 
-                        "value": -50
-                    }
+                    "name": "changeFriendship",
+                    "character": "Alison", 
+                    "value": -50
                 }
             ],
             "next": "checkHour"
@@ -103,7 +101,7 @@
             "type": "event",
             "events": [
                 {
-                    "openDoors": { }
+                    "name": "openDoors"
                 }
             ]
         },
@@ -116,7 +114,7 @@
             "type": "event",
             "events": [
                 {
-                    "alisonLeave": { }
+                    "name": "alisonLeave"
                 }
             ]
         }

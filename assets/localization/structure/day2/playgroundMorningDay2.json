@@ -65,7 +65,7 @@
             "type": "event",
             "events": [
                 { 
-                    "prepareChoices": { }
+                    "name": "prepareChoices"
                 }
             ],
             "next": "choices"
@@ -115,11 +115,10 @@
             "type": "event",
             "events": [
                 { 
-                    "setTalkedAna": { 
-                        "variable": "talkedAna", 
-                        "value": true, 
-                        "global": false
-                    }
+                    "name": "setTalkedAna",
+                    "variable": "talkedAna", 
+                    "value": true, 
+                    "global": false
                 }
             ]
         }
@@ -242,11 +241,10 @@
             "type": "event",
             "events": [
                 { 
-                    "setWarned": { 
-                        "variable": "warned", 
-                        "value": true, 
-                        "global": true
-                    }
+                    "name": "setWarned",
+                    "variable": "warned", 
+                    "value": true, 
+                    "global": true
                 }
             ],
             "next": "bellRinging"
@@ -261,14 +259,13 @@
             "type": "event",
             "events": [
                 {
-                    "openDoors": { }
+                    "name": "openDoors"
                 },
                 { 
-                    "setTalkedMaria": { 
-                        "variable": "talkedMaria", 
-                        "value": true, 
-                        "global": false
-                    }
+                    "name": "setTalkedMaria",
+                    "variable": "talkedMaria", 
+                    "value": true, 
+                    "global": false
                 }
             ]
         }
@@ -307,11 +304,10 @@
             "type": "event",
             "events": [
                 { 
-                    "setTalkedJose": { 
-                        "variable": "talkedJose", 
-                        "value": true, 
-                        "global": false
-                    }
+                    "name": "setTalkedJose",
+                    "variable": "talkedJose", 
+                    "value": true, 
+                    "global": false
                 }
             ]
         },

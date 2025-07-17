@@ -34,10 +34,10 @@ export default class GameManager extends Singleton {
     }
 
     startMainMenu() {
-        this.changeScene("MainMenu", null);
+        // this.changeScene("MainMenu", null);
 
         // TEST
-        // this.startGame();
+        this.startGame();
     }
 
     startLoginMenu() {
@@ -77,7 +77,10 @@ export default class GameManager extends Singleton {
         // };
         // this.changeScene("TextOnlyScene", params, true);
 
-        this.changeScene("BedroomMorningDay1", null, false, false);
+        // this.changeScene("AlarmScene", null, true);
+        // this.changeScene("BedroomMorningDay1", null, false, false);
+        // this.changeScene("LivingroomMorningDay1", null, false, false);
+        this.changeScene("LivingroomMorningDay1", {camPos: 1}, false, false);
     }
 
     startComputer() {

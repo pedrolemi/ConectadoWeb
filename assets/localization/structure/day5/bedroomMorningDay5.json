@@ -9,10 +9,9 @@
             "type": "event",
             "events": [
                 { 
-                    "pickBag": { 
-                        "variable": "bagPicked", 
-                        "value": true
-                    }
+                    "name": "pickBag",
+                    "variable": "bagPicked", 
+                    "value": true
                 }
             ]
         }

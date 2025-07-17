@@ -16,7 +16,7 @@
             "type": "event",
             "events": [
                 { 
-                    "lightsOff": { }
+                    "name": "lightsOff"
                 }
             ],
             "next": "getOut"
@@ -30,7 +30,7 @@
             "type": "event",
             "events": [
                 { 
-                    "startTimer": { }
+                    "name": "startTimer"
                 }
             ]
         }
@@ -67,7 +67,7 @@
             "type": "event",
             "events": [
                 { 
-                    "enterTeacher": { }
+                    "name": "enterTeacher"
                 }
             ],
             "next": "teacher"
@@ -266,11 +266,10 @@
             "type": "event",
             "events": [
                 {
-                    "setEnding": { 
-                        "variable": "ending", 
-                        "value": "bad", 
-                        "global": true
-                    }
+                    "name": "setEnding",
+                    "variable": "ending", 
+                    "value": "bad", 
+                    "global": true
                 }
             ],
             "next": "goHome"
@@ -279,11 +278,10 @@
             "type": "event",
             "events": [
                 {
-                    "setEnding": { 
-                        "variable": "ending", 
-                        "value": "normal", 
-                        "global": true
-                    }
+                    "name": "setEnding",
+                    "variable": "ending", 
+                    "value": "normal", 
+                    "global": true
                 }
             ],
             "next": "goHome"
@@ -292,11 +290,10 @@
             "type": "event",
             "events": [
                 {
-                    "setEnding": { 
-                        "variable": "ending", 
-                        "value": "good", 
-                        "global": true
-                    }
+                    "name": "setEnding",
+                    "variable": "ending", 
+                    "value": "good", 
+                    "global": true
                 }
             ],
             "next": "goHome"
@@ -306,7 +303,7 @@
             "type": "event",
             "events": [
                 {
-                    "goHome": {  }
+                    "name": "goHome"
                 }
             ]
         }

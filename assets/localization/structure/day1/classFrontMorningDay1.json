@@ -28,11 +28,10 @@
             "type": "event",
             "events": [
                 { 
-                    "metAna": { 
-                        "variable": "metAna", 
-                        "value": true, 
-                        "global": true
-                    }
+                    "name": "metAna",
+                    "variable": "metAna", 
+                    "value": true, 
+                    "global": true
                 }
             ],
             "next": "teacherArrive"
@@ -41,17 +40,15 @@
             "type": "event",
             "events": [
                 { 
-                    "metAna": { 
-                        "variable": "metAna", 
-                        "value": true, 
-                        "global": true
-                    }
+                    "name": "metAna",
+                    "variable": "metAna", 
+                    "value": true, 
+                    "global": true
                 },
                 { 
-                    "changeFriendship": { 
-                        "character": "Ana", 
-                        "value": -20
-                    }
+                    "name": "changeFriendship",
+                    "character": "Ana", 
+                    "value": -20
                 }
             ],
             "next": "teacherArrive"
@@ -86,7 +83,7 @@
             "type": "event",
             "events": [
                 { 
-                    "startClass": { }
+                    "name": "startClass"
                 }
             ]
         }
@@ -103,7 +100,7 @@
             "type": "event",
             "events": [
                 { 
-                    "startClass": { }
+                    "name": "startClass"
                 }
             ]
         }

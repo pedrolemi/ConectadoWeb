@@ -32,9 +32,8 @@
                 "type": "event",
                 "events": [
                     {
-                        "eraseFriendRequest": {
-                            "character": "Guille"
-                        }
+                        "name": "eraseFriendRequest",
+                        "character": "Guille"
                     }
                 ]
             }

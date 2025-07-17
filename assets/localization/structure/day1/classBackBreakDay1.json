@@ -47,11 +47,10 @@
             "type": "event",
             "events": [
                 { 
-                    "setResponse": { 
-                        "variable": "alexResponse", 
-                        "value": "submit", 
-                        "global": true
-                    }
+                    "name": "setResponse",
+                    "variable": "alexResponse", 
+                    "value": "submit", 
+                    "global": true
                 }
             ],
             "next": "submitReply"
@@ -76,17 +75,15 @@
             "type": "event",
             "events": [
                 { 
-                    "setResponse": { 
-                        "variable": "alexResponse", 
-                        "value": "downplay", 
-                        "global": true
-                    }
+                    "name": "setResponse",
+                    "variable": "alexResponse", 
+                    "value": "downplay", 
+                    "global": true
                 },
                 { 
-                    "changeFriendship": { 
-                        "character": "Alex", 
-                        "value": -10
-                    }
+                    "name": "changeFriendship",
+                    "character": "Alex", 
+                    "value": -10
                 }
             ],
             "next": "downplayReply"
@@ -101,17 +98,15 @@
             "type": "event",
             "events": [
                 { 
-                    "setResponse": { 
-                        "variable": "alexResponse", 
-                        "value": "defy", 
-                        "global": true
-                    }
+                    "name": "setResponse",
+                    "variable": "alexResponse", 
+                    "value": "defy", 
+                    "global": true
                 },
                 { 
-                    "changeFriendship": { 
-                        "character": "Alex", 
-                        "value": -20
-                    }
+                    "name": "changeFriendship",
+                    "character": "Alex", 
+                    "value": -20
                 }
             ],
             "next": "defyReply"
@@ -142,11 +137,10 @@
             "type": "event",
             "events": [
                 { 
-                    "moveAlex": { 
-                        "variable": "talkedAlex", 
-                        "value": true, 
-                        "global": false
-                    }
+                    "name": "moveAlex",
+                    "variable": "talkedAlex", 
+                    "value": true, 
+                    "global": false
                 }
             ]
         },
@@ -154,7 +148,7 @@
             "type": "event",
             "events": [
                 { 
-                    "leaveAlex": { }
+                    "name": "leaveAlex"
                 }
             ]
         }
@@ -245,11 +239,10 @@
             "type": "event",
             "events": [
                 { 
-                    "setTalkedAlison": { 
-                        "variable": "talkedAlison", 
-                        "value": true, 
-                        "global": false
-                    }
+                    "name": "setTalkedAlison",
+                    "variable": "talkedAlison", 
+                    "value": true, 
+                    "global": false
                 }
             ]
         }

@@ -61,7 +61,7 @@ export default class MainMenu extends ConectadoBaseScene {
 
         let exitButton = new ImageTextButton(this, 100, 3 * this.CANVAS_HEIGHT / 4 + 10, this.localizationManager.translate("exitText", namespace), exitTextConfig, () => {
             this.gameManager.startLanguageMenu();
-        }, "", "powerOff", 0.5, 0.5, 0.5, 0.5, 1, 0, 0.5, -20, -20, 70, 3, 0, 0.5);
+        }, "", "powerOff", 0.5, 0.5, 0.5, 0.5, 1, 0, 0.5, -20, -20, 110, 3, 0, 0.5);
         tintAnimation(exitButton, exitButton.list, exitButton.onClick, true, 0x408e86, 0x00685d, 0xc8c8c8);
 
         // Se obtiene la version del juego (especificada en los parametros de configuracion de game)

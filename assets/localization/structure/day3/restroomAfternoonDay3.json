@@ -88,7 +88,7 @@
             "type": "event",
             "events": [
                 { 
-                    "prepareChoices": { }
+                    "name": "prepareChoices"
                 }
             ],
             "next": "choices"
@@ -114,11 +114,10 @@
             "type": "event",
             "events": [
                 { 
-                    "explain": { 
-                        "variable": "explainedPhotoBoard", 
-                        "value": true, 
-                        "global": true
-                    }
+                    "name": "explain",
+                    "variable": "explainedPhotoBoard", 
+                    "value": true, 
+                    "global": true
                 }
             ],
             "next": "setTalked"
@@ -128,11 +127,10 @@
             "type": "event",
             "events": [
                 { 
-                    "setTalked": { 
-                        "variable": "talked", 
-                        "value": true, 
-                        "global": false
-                    }
+                    "name": "setTalked",
+                    "variable": "talked", 
+                    "value": true, 
+                    "global": false
                 }
             ]
         },

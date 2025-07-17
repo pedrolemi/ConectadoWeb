@@ -37,7 +37,71 @@ export default class PreloaderScene extends BasePreloaderScene {
             "menus/credits",
 
             // Dialogos de todos los dias
-            "everydayDialog"
+            "everydayDialog",
+
+            // Dia 1
+            "day1/bedroomMorningDay1",
+            "day1/livingroomMorningDay1",
+            "day1/playgroundMorningDay1",
+            "day1/corridorMorningDay1",
+            "day1/classFrontMorningDay1",
+            "day1/classBackMorningDay1",
+            "day1/classBackBreakDay1",
+            "day1/corridorBreakDay1",
+            "day1/playgroundBreakDay1",
+            "day1/livingroomAfternoonDay1",
+            "day1/bedroomAfternoonDay1",
+            "day1/nightmareDay1",
+
+            // Dia 2
+            "day2/bedroomMorningDay2",
+            "day2/livingroomMorningDay2",
+            "day2/playgroundMorningDay2",
+            "day2/corridorMorningDay2",
+            "day2/classBackBreakDay2",
+            "day2/corridorBreakDay2",
+            "day2/restroomBreakDay2",
+            "day2/playgroundBreakDay2",
+            "day2/playgroundAfternoonDay2",
+            "day2/livingroomAfternoonDay2",
+            "day2/bedroomAfternoonDay2",
+            "day2/nightmareDay2",
+
+            // Dia 3
+            "day3/bedroomMorningDay3",
+            "day3/livingroomMorningDay3",
+            "day3/playgroundMorningDay3",
+            "day3/corridorMorningDay3",
+            "day3/classCorridorAfternoonDay3",
+            "day3/restroomAfternoonDay3",
+            "day3/livingroomAfternoonDay3",
+            "day3/bedroomAfternoonDay3",
+            "day3/nightmareDay3",
+
+            // Dia 4
+            "day4/bedroomMorningDay4",
+            "day4/livingroomMorningDay4",
+            "day4/playgroundMorningDay4",
+            "day4/stairsMorningDay4",
+            "day4/corridorMorningDay4",
+            "day4/classBackBreakDay4",
+            "day4/corridorBreakDay4",
+            "day4/restroomBreakDay4",
+            "day4/stairsBreakDay4",
+            "day4/playgroundBreakDay4",
+            "day4/playgroundAfternoonDay4",
+            "day4/livingroomAfternoonDay4",
+            "day4/bedroomAfternoonDay4",
+            "day4/nightmareDay4",
+
+            // Dia 5
+            "day5/bedroomMorningDay5",
+            "day5/playgroundMorningDay5",
+            "day5/stairsMorningDay5",
+            "day5/corridorMorningDay5",
+            "day5/classCorridorAfternoonDay5",
+            "day5/restroomAfternoonDay5",
+            "day5/nightmareDay5"
         ];
         let basicNamespaces = [
             // Menus

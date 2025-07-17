@@ -52,25 +52,22 @@
             "type": "event",
             "events": [
                 { 
-                    "setTalkedGuille": { 
-                        "variable": "talked", 
-                        "value": true, 
-                        "global": false
-                    }
+                    "name": "setTalkedGuille",
+                    "variable": "talked", 
+                    "value": true, 
+                    "global": false
                 },
                 { 
-                    "metGuille": { 
-                        "variable": "metGuille", 
-                        "value": true, 
-                        "global": true
-                    }
+                    "name": "metGuille",
+                    "variable": "metGuille", 
+                    "value": true, 
+                    "global": true
                 },
                 { 
-                    "explainBulletinBoard": { 
-                        "variable": "explainedBulletinBoard", 
-                        "value": true, 
-                        "global": true
-                    }
+                    "name": "explainBulletinBoard",
+                    "variable": "explainedBulletinBoard", 
+                    "value": true, 
+                    "global": true
                 }
             ]
         },

@@ -43,11 +43,10 @@
             "type": "event",
             "events": [
                 { 
-                    "wash": { 
-                        "variable": "gumWashed", 
-                        "value": true, 
-                        "global": true
-                    }
+                    "name": "wash",
+                    "variable": "gumWashed", 
+                    "value": true, 
+                    "global": true
                 }
             ]
         }

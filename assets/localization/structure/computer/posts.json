@@ -77,13 +77,12 @@
                     "type": "event",
                     "events": [
                         {
-                            "erasePost": {
-                                "character": "player",
-                                "postName": "postStolen"
-                            }
+                            "name": "erasePost",
+                            "character": "player",
+                            "postName": "postStolen"
                         },
                         {
-                            "addMessageToAlex": {}
+                            "name": "addMessageToAlex"
                         }
                     ]
                 },
@@ -98,11 +97,10 @@
                     "type": "event",
                     "events": [
                         {
-                            "commentedPostStolen": {
-                                "variable": "commentedPostStolen",
-                                "value": true,
-                                "global": false
-                            }
+                            "name": "commentedPostStolen",
+                            "variable": "commentedPostStolen",
+                            "value": true,
+                            "global": false
                         }
                     ]
                 },
@@ -241,11 +239,10 @@
                     "type": "event",
                     "events": [
                         {
-                            "commentPostEarring": {
-                                "variable": "commentedPostEarring",
-                                "value": true,
-                                "global": false
-                            }
+                            "name": "commentPostEarring",
+                            "variable": "commentedPostEarring",
+                            "value": true,
+                            "global": false
                         }
                     ]
                 },
@@ -416,11 +413,10 @@
                     "type": "event",
                     "events": [
                         {
-                            "commentPostEarring": {
-                                "variable": "commentedPostTroll",
-                                "value": true,
-                                "global": false
-                            }
+                            "name": "commentPostEarring",
+                            "variable": "commentedPostTroll",
+                            "value": true,
+                            "global": false
                         }
                     ]
                 },

@@ -93,11 +93,10 @@
             "type": "event",
             "events": [
                 { 
-                    "setTalked": { 
-                        "variable": "talkedAlex", 
-                        "value": true, 
-                        "global": false
-                    }
+                    "name": "setTalked",
+                    "variable": "talkedAlex", 
+                    "value": true, 
+                    "global": false
                 }
             ]
         },
@@ -142,11 +141,10 @@
             "type": "event",
             "events": [
                 { 
-                    "setTalked": { 
-                        "variable": "talkedGuille", 
-                        "value": true, 
-                        "global": false
-                    }
+                    "name": "setTalked",
+                    "variable": "talkedGuille", 
+                    "value": true, 
+                    "global": false
                 }
             ]
         },

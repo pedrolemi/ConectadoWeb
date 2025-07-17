@@ -35,7 +35,7 @@
             "type": "event",
                 "events": [
                     { 
-                        "leaveHome": { }
+                        "name": "leaveHome"
                     }
                 ]
         }

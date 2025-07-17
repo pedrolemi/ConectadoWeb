@@ -69,24 +69,21 @@
             "type": "event",
             "events": [
                 {
-                    "prankMaria": {
-                        "variable": "pranked", 
-                        "value": true,
-                        "global": true
-                    }
+                    "name": "prankMaria",
+                    "variable": "pranked", 
+                    "value": true,
+                    "global": true
                 },
                 {
-                    "prankMaria": {
-                        "variable": "canPrank", 
-                        "value": false,
-                        "global": true
-                    }
+                    "name": "prankMaria",
+                    "variable": "canPrank", 
+                    "value": false,
+                    "global": true
                 },
                 {
-                    "changeFriendship": {
-                        "character": "Maria",
-                        "value": -40
-                    }
+                    "name": "changeFriendship",
+                    "character": "Maria",
+                    "value": -40
                 }
             ],
             "next": "pranked"
@@ -115,7 +112,7 @@
             "type": "event",
             "events": [
                 {
-                    "enterRestroom": {}
+                    "name": "enterRestroom"
                 }
             ]
         }

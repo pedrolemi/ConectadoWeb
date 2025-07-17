@@ -60,11 +60,10 @@
             "type": "event",
             "events": [
                 { 
-                    "setTalked": { 
-                        "variable": "talkedAlison", 
-                        "value": true, 
-                        "global": false
-                    }
+                    "name": "setTalked",
+                    "variable": "talkedAlison", 
+                    "value": true, 
+                    "global": false
                 }
             ]
         },
@@ -162,11 +161,10 @@
             "type": "event",
             "events": [
                 { 
-                    "setTalked": { 
-                        "variable": "talkedAna", 
-                        "value": true, 
-                        "global": false
-                    }
+                    "name": "setTalked",
+                    "variable": "talkedAna", 
+                    "value": true, 
+                    "global": false
                 }
             ],
             "next": "bellRinging"
@@ -180,7 +178,7 @@
             "type": "event",
             "events": [
                 {
-                    "openDoors": { }
+                    "name": "openDoors"
                 }
             ]
         },

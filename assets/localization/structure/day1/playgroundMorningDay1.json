@@ -32,11 +32,10 @@
             "type": "event",
             "events": [
                 { 
-                    "setTalkedJose": { 
-                        "variable": "talkedJose", 
-                        "value": true, 
-                        "global": false
-                    }
+                    "name": "setTalkedJose",
+                    "variable": "talkedJose", 
+                    "value": true, 
+                    "global": false
                 }
             ],
             "next": "ask"
@@ -112,24 +111,21 @@
             "type": "event",
             "events": [
                 { 
-                    "setIntroducedJose": { 
-                        "variable": "introducedJose", 
-                        "value": true, 
-                        "global": false
-                    }
+                    "name": "setIntroducedJose",
+                    "variable": "introducedJose", 
+                    "value": true, 
+                    "global": false
                 },
                 { 
-                    "metJose": { 
-                        "variable": "metJose", 
-                        "value": true, 
-                        "global": true
-                    }
+                    "name": "metJose",
+                    "variable": "metJose", 
+                    "value": true, 
+                    "global": true
                 },
                 { 
-                    "changeFriendship": { 
-                        "character": "Jose", 
-                        "value": 10
-                    }
+                    "name": "changeFriendship",
+                    "character": "Jose", 
+                    "value": 10
                 }
             ],
             "next": "ask"
@@ -192,17 +188,15 @@
             "type": "event",
             "events": [
                 { 
-                    "changeFriendship": { 
-                        "character": "Alison", 
-                        "value": 10
-                    }
+                    "name": "changeFriendship",
+                    "character": "Alison", 
+                    "value": 10
                 },
                 { 
-                    "setIntroduced": { 
-                        "variable": "introducedAlison", 
-                        "value": true, 
-                        "global": false
-                    }
+                    "name": "setIntroduced",
+                    "variable": "introducedAlison", 
+                    "value": true, 
+                    "global": false
                 }
             ]
         },
@@ -236,24 +230,21 @@
             "type": "event",
             "events": [
                 { 
-                    "setIntroducedGuille": { 
-                        "variable": "introducedGuille", 
-                        "value": true, 
-                        "global": false
-                    }
+                    "name": "setIntroducedGuille",
+                    "variable": "introducedGuille", 
+                    "value": true, 
+                    "global": false
                 },
                 { 
-                    "metGuille": { 
-                        "variable": "metGuille", 
-                        "value": true, 
-                        "global": true
-                    }
+                    "name": "metGuille",
+                    "variable": "metGuille", 
+                    "value": true, 
+                    "global": true
                 },
                 { 
-                    "changeFriendship": { 
-                        "character": "Guille", 
-                        "value": 10
-                    }
+                    "name": "changeFriendship",
+                    "character": "Guille", 
+                    "value": 10
                 }
             ],
             "next": "bellRinging"
@@ -262,10 +253,9 @@
             "type": "event",
             "events": [
                 { 
-                    "changeFriendship": { 
-                        "character": "Guille", 
-                        "value": -10
-                    }
+                    "name": "changeFriendship",
+                    "character": "Guille", 
+                    "value": -10
                 }
             ],
             "next": "bellRinging"
@@ -309,7 +299,7 @@
             "type": "event",
             "events": [
                 {
-                    "openDoors": { }
+                    "name": "openDoors"
                 }
             ]
         }

@@ -74,25 +74,23 @@
         "setTalkedMean": {
             "type": "event",
             "events": [
+                
                 { 
-                    "setTalked": { 
-                        "variable": "talked", 
-                        "value": true, 
-                        "global": false
-                    }
+                    "name": "setTalked",
+                    "variable": "talked", 
+                    "value": true, 
+                    "global": false
                 },
                 { 
-                    "metMaria": { 
-                        "variable": "metMaria", 
-                        "value": true, 
-                        "global": true
-                    }
+                    "name": "metMaria",
+                    "variable": "metMaria", 
+                    "value": true, 
+                    "global": true
                 },
                 { 
-                    "changeFriendship": { 
-                        "character": "Maria", 
-                        "value": -10
-                    }
+                    "name": "changeFriendship",
+                    "character": "Maria", 
+                    "value": -10
                 }
             ]
         },
@@ -100,24 +98,21 @@
             "type": "event",
             "events": [
                 { 
-                    "setTalked": { 
-                        "variable": "talked", 
-                        "value": true, 
-                        "global": false
-                    }
+                    "name": "setTalked",
+                    "variable": "talked", 
+                    "value": true, 
+                    "global": false
                 },
                 { 
-                    "metMaria": { 
-                        "variable": "metMaria", 
-                        "value": true, 
-                        "global": true
-                    }
+                    "name": "metMaria",
+                    "variable": "metMaria", 
+                    "value": true, 
+                    "global": true
                 },
                 { 
-                    "changeFriendship": { 
-                        "character": "Maria", 
-                        "value": 20
-                    }
+                    "name": "changeFriendship",
+                    "character": "Maria", 
+                    "value": 20
                 }
             ]
         },
@@ -188,7 +183,7 @@
             "type": "event",
             "events": [
                 { 
-                    "endChat": { "chat": "chat1" }
+                    "name": "endChat"
                 }
             ]
         }
@@ -234,20 +229,19 @@
             "type": "event",
             "events": [
                 { 
-                    "alisonEnter": { }
+                    "name": "alisonEnter"
                 },
                 {
-                    "returnEarring": { 
-                        "variable": "returnedEarring", 
-                        "value": true, 
-                        "global": true
-                    }
+                    
+                    "name": "returnEarring",
+                    "variable": "returnedEarring", 
+                    "value": true, 
+                    "global": true
                 },
                 { 
-                    "changeFriendship": { 
-                        "character": "Alison", 
-                        "value": 20
-                    }
+                    "name": "changeFriendship",
+                    "character": "Alison", 
+                    "value": 20
                 }
             ]
         }

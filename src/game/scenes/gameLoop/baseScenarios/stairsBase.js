@@ -3,7 +3,7 @@ import ConectadoBaseScene from "../../conectadoBaseScene.js";
 export default class StairsBase extends ConectadoBaseScene {
     /**
     * Escena base para las escaleras del colegio. Coloca los elementos que se mantienen igual todos los dias
-    * @extends BaseScene
+    * @extends ConectadoBaseScene
     * @param {String} name - id de la escena
     */
     constructor(name) {
@@ -29,10 +29,10 @@ export default class StairsBase extends ConectadoBaseScene {
         // Puerta del despacho
         this.doorNode = this.dialogManager.readNodes(this, this.everydayNodes, "everydayDialog", "stairs.door");
         
-        this.stairsDoorClosed = this.add.image(2490 * this.bgScale, 273 * this.bgScale, "stairsDoorClosed").setOrigin(0, 0).setScale(this.bgScale);
-        this.stairsDoorOpened = this.add.image(2490 * this.bgScale, 273 * this.bgScale, "stairsDoorOpened").setOrigin(0, 0).setScale(this.bgScale);
+        this.officeDoorClosed = this.add.image(2490 * this.bgScale, 273 * this.bgScale, "stairsDoorClosed").setOrigin(0, 0).setScale(this.bgScale);
+        this.officeDoorOpened = this.add.image(2490 * this.bgScale, 273 * this.bgScale, "stairsDoorOpened").setOrigin(0, 0).setScale(this.bgScale);
         // Al hacer click en la puerta, se muestra el dialogo de no hay nadie en el despacho
-        this.createToggle(this.stairsDoorClosed, "stairsDoorClosed", this.stairsDoorOpened, "stairsDoorOpened", false, () => {
+        this.createToggle(this.officeDoorClosed, "officeDoorClosed", this.officeDoorOpened, "officeDoorOpened", false, () => {
             this.dialogManager.setNode(this.doorNode);
         });
 

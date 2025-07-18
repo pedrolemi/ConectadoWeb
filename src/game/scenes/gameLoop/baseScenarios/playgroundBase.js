@@ -3,7 +3,7 @@ import ConectadoBaseScene from "../../conectadoBaseScene.js";
 export default class PlaygroundBase extends ConectadoBaseScene {
     /**
     * Escena base para el patio. Coloca los elementos que se mantienen igual todos los dias
-    * @extends BaseScene
+    * @extends ConectadoBaseScene
     * @param {String} name - id de la escena
     */
     constructor(name) {

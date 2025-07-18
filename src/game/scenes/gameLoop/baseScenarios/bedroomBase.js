@@ -4,7 +4,7 @@ import ConectadoEventNames from "../../../eventNames.js";
 export default class BedroomBase extends ConectadoBaseScene {
     /**
     * Escena base para la habitacion. Coloca los elementos que se mantienen igual todos los dias
-    * @extends BaseScene
+    * @extends ConectadoBaseScene
     * @param {String} name - id de la escena
     */
     constructor(name) {
@@ -59,7 +59,7 @@ export default class BedroomBase extends ConectadoBaseScene {
         this.setInteractive("bedroomPC", this.pc, () => {
             this.dialogManager.setNode(this.pcNode);
         });
-        this.dispatcher.add("turnPC", this, (obj) => {
+        this.dispatcher.add("turnPC", this, () => {
             this.gameManager.startComputer();
         });
 
@@ -96,9 +96,9 @@ export default class BedroomBase extends ConectadoBaseScene {
         this.bed.setDepth(this.TOGGLES_DEPTH + 1);
 
         // Evento que se llama al elegir dormir
-        this.dispatcher.addOnce("sleep", this, (obj) => {
+        this.dispatcher.addOnce("sleep", this, () => {
             // Se suscribe al evento de cerrar los ojos para que cuando acabe la animacion se pase a la pesadilla del dia correspondiente
-            this.dispatcher.addOnce(ConectadoEventNames.eyesClosed, this, (obj) => {
+            this.dispatcher.addOnce(ConectadoEventNames.eyesClosed, this, () => {
                 setTimeout(() => {
                     this.gameManager.changeScene("NightmareDay" + this.gameManager.day, null, true);
                 }, 1000);

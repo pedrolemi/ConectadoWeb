@@ -7,5 +7,8 @@ export default class CorridorMorningDay1 extends CorridorBase {
 
     create(params) {
         super.create(params);
+
+        this.stairsSceneName = "StairsMorningDay1";
+        this.classSceneName = "ClassFrontMorningDay1";
     }
 }

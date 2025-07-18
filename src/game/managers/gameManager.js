@@ -77,11 +77,13 @@ export default class GameManager extends Singleton {
         // };
         // this.changeScene("TextOnlyScene", params, true);
 
+        this.blackboard.set("gender", "female");
+        this.blackboard.set("name", "Pepito");
         // this.changeScene("AlarmScene", null, true);
         // this.changeScene("BedroomMorningDay1", null, false, false);
         // this.changeScene("LivingroomMorningDay1", null, false, false);
         
-        this.changeScene("StairsMorningDay1", null, false, false);
+        this.changeScene("CorridorMorningDay1", null, false, false);
     }
 
     startComputer() {

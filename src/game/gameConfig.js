@@ -16,7 +16,12 @@ import AlarmScene from "./scenes/gameLoop/alarmScene.js";
     import PlaygroundMorningDay1 from "./scenes/gameLoop/day1/playgroundMorningDay1.js";
     import StairsMorningDay1 from "./scenes/gameLoop/day1/stairsMorningDay1.js";
     import CorridorMorningDay1 from "./scenes/gameLoop/day1/corridorMorningDay1.js";
+    import ClassFrontMorningDay1 from "./scenes/gameLoop/day1/classFrontMorningDay1.js";
     import NightmareDay1 from "./scenes/gameLoop/day1/nightmareDay1.js";
+    
+
+    // Dia 4
+    import OppositeRestroom from "./scenes/gameLoop/oppositeRestroom.js";
     
 // UI
 import UI from "./UI/UI.js";
@@ -44,7 +49,11 @@ const CONFIG = {
 
         AlarmScene,
 
-        BedroomMorningDay1, LivingroomMorningDay1, NightmareDay1, PlaygroundMorningDay1, StairsMorningDay1, CorridorMorningDay1,
+        // Dia 1
+        BedroomMorningDay1, LivingroomMorningDay1, NightmareDay1, PlaygroundMorningDay1, StairsMorningDay1, CorridorMorningDay1, ClassFrontMorningDay1,
+
+        // Dia 4
+        OppositeRestroom,
 
         UI,
         TextOnlyScene, BusScene

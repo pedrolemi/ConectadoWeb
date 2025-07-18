@@ -14,16 +14,15 @@ export default class LivingroomBase extends ConectadoBaseScene {
         super.create(params);
 
         this.createBg("livingroomBg");
-
-        // Nombre de la escena del salon correspondiente a la escena de la habitacion 
-        this.bedroomSceneName = "";
-        
+    
         // Escala puesta a mano. La imagen original tenia otras dimensiones, pero debido a su gran
         // tamano, no es posible cargarla en dispositivos moviles, por lo que se ha reducido 
         this.bgScale = this.CANVAS_HEIGHT / 1500;
 
 
         // Puerta de la habitacion
+        this.bedroomSceneName = "";
+
         this.bedroomDoorClosed = this.add.image(3958 * this.bgScale - 5, 175 * this.bgScale - 2, this.atlasName, "bedroomDoorClosed").setOrigin(0, 0).setScale(this.bgScale);
         this.bedroomDoorOpened = this.add.image(3956 * this.bgScale - 4, 175 * this.bgScale - 2, this.atlasName, "bedroomDoorOpened").setOrigin(0, 0).setScale(this.bgScale);
 

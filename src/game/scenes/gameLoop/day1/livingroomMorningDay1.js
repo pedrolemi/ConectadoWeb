@@ -9,5 +9,6 @@ export default class LivingroomMorningDay1 extends LivingroomBase {
         super.create(params);
 
         this.bedroomSceneName = "BedroomMorningDay1";
+        this.playgroundSceneName = "PlaygroundMorningDay1";
     }
 }

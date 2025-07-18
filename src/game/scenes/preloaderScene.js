@@ -212,8 +212,8 @@ export default class PreloaderScene extends BasePreloaderScene {
         this.load.spritesheet("bus", "bus.png", { frameWidth: 632, frameHeight: 341 });
 
         // Patio
-        this.load.image("playgroundClosed", "playground/playgroundClosed.png");
-        this.load.image("playgroundOpened", "playground/playgroundOpened.png");
+        this.load.image("playgroundBg", "playground/playgroundBg.png");
+        this.load.image("schoolDoorOpened", "playground/schoolDoorOpened.png");
         this.load.image("earring", "playground/earring.png");
 
         // Escaleras

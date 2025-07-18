@@ -67,7 +67,7 @@ export default class GameManager extends Singleton {
             this.sceneManager.restartScene("UI");
         }
         
-        this.day = 0;
+        // this.day = 0;
 
         // let params = {
         //     text: this.localizationManager.translate("day1.start", "transitionScenes"),
@@ -80,7 +80,8 @@ export default class GameManager extends Singleton {
         // this.changeScene("AlarmScene", null, true);
         // this.changeScene("BedroomMorningDay1", null, false, false);
         // this.changeScene("LivingroomMorningDay1", null, false, false);
-        this.changeScene("LivingroomMorningDay1", {camPos: 1}, false, false);
+        
+        this.changeScene("StairsMorningDay1", null, false, false);
     }
 
     startComputer() {

@@ -9,6 +9,7 @@ import Credits from "./scenes/menus/credits.js";
 
 // Escenas del flujo de juego
 import AlarmScene from "./scenes/gameLoop/alarmScene.js";
+import RestroomBase from "./scenes/gameLoop/baseScenarios/restroomBase.js";
 
     // Dia 1
     import BedroomMorningDay1 from "./scenes/gameLoop/day1/bedroomMorningDay1.js";
@@ -17,6 +18,7 @@ import AlarmScene from "./scenes/gameLoop/alarmScene.js";
     import StairsMorningDay1 from "./scenes/gameLoop/day1/stairsMorningDay1.js";
     import CorridorMorningDay1 from "./scenes/gameLoop/day1/corridorMorningDay1.js";
     import ClassFrontMorningDay1 from "./scenes/gameLoop/day1/classFrontMorningDay1.js";
+    import ClassBackMorningDay1 from "./scenes/gameLoop/day1/classBackMorningDay1.js";
     import NightmareDay1 from "./scenes/gameLoop/day1/nightmareDay1.js";
     
 
@@ -47,10 +49,10 @@ const CONFIG = {
 
         LanguageMenu, MainMenu, Credits,
 
-        AlarmScene,
+        AlarmScene, RestroomBase,
 
         // Dia 1
-        BedroomMorningDay1, LivingroomMorningDay1, NightmareDay1, PlaygroundMorningDay1, StairsMorningDay1, CorridorMorningDay1, ClassFrontMorningDay1,
+        BedroomMorningDay1, LivingroomMorningDay1, NightmareDay1, PlaygroundMorningDay1, StairsMorningDay1, CorridorMorningDay1, ClassFrontMorningDay1, ClassBackMorningDay1,
 
         // Dia 4
         OppositeRestroom,
@@ -92,5 +94,5 @@ const CONFIG = {
 }
 
 gameDebug.enable = false;
-gameDebug.enableText = false;
+gameDebug.enableText = true;
 const GAME = new Phaser.Game(CONFIG);

@@ -19,13 +19,12 @@ export default class OppositeRestroom extends ConectadoBaseScene {
         // Puerta al pasillo
         this.corridorSceneName = params.corridor;
 
-        this.oppositeRestroomDorClosed = this.add.image(1353 * this.bgScale, 168 * this.bgScale, this.atlasName, "restroomDoorClosed").setOrigin(0, 0).setScale(this.bgScale);
-        this.oppositeRestroomDorOpened = this.add.image(1353 * this.bgScale, 168 * this.bgScale, this.atlasName, "restroomDoorOpened").setOrigin(0, 0).setScale(this.bgScale);
+        this.oppositeRestroomDoorClosed = this.add.image(1353 * this.bgScale, 168 * this.bgScale, this.atlasName, "restroomDoorClosed").setOrigin(0, 0).setScale(this.bgScale);
+        this.oppositeRestroomDoorOpened = this.add.image(1353 * this.bgScale, 168 * this.bgScale, this.atlasName, "restroomDoorOpened").setOrigin(0, 0).setScale(this.bgScale);
         // Al hacer click, se pasara a la escena del pasillo sin eliminar esta escena
-        this.createToggle(this.oppositeRestroomDorClosed, "oppositeRestroomDorClosed", this.oppositeRestroomDorOpened, "oppositeRestroomDorOpened", false, () => {
+        this.createToggle(this.oppositeRestroomDoorClosed, "oppositeRestroomDoorClosed", this.oppositeRestroomDoorOpened, "oppositeRestroomDoorOpened", false, () => {
             let params = {
                 camPos: ConectadoBaseScene.CAM_POS_LEFT,
-                corridor: this
             }
             this.gameManager.changeScene(this.corridorSceneName, params, false, true);
         });
@@ -34,7 +33,7 @@ export default class OppositeRestroom extends ConectadoBaseScene {
         // Puerta del segundo cubiculo
         this.stall2DoorClosed = this.add.image(593 * this.bgScale, 244 * this.bgScale, this.atlasName, "restroomStall2Closed").setOrigin(0.5, 0).setScale(this.bgScale);
         this.stall2DoorOpened = this.add.image(861 * this.bgScale, 240 * this.bgScale, this.atlasName, "restroomStall2Opened").setOrigin(0.5, 0).setScale(this.bgScale);
-        this.createToggle(this.stall2DoorClosed, "stall2DoorClosed", this.stall2DoorOpened, "stall2DoorOpened", true);
+        this.createToggle(this.stall2DoorClosed, "oppositeRestroomStall2DoorClosed", this.stall2DoorOpened, "oppositeRestroomStall2DoorOpened", true);
         this.stall2DoorClosed.flipX = true;
         this.stall2DoorOpened.flipX = true;
         

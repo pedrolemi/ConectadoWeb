@@ -83,7 +83,7 @@ export default class GameManager extends Singleton {
         // this.changeScene("BedroomMorningDay1", null, false, false);
         // this.changeScene("LivingroomMorningDay1", null, false, false);
         
-        this.changeScene("CorridorMorningDay1", null, false, false);
+        this.changeScene("NightmareDay1", null, false, false);
     }
 
     startComputer() {

@@ -1,8 +1,9 @@
 import ConectadoBaseScene from "../../conectadoBaseScene.js";
+import { setInteractive } from "../../../../framework/utils/misc.js";
 
 export default class ClassFrontBase extends ConectadoBaseScene {
     /**
-    * Escena base para el pasillo del colegio. Coloca los elementos que se mantienen igual todos los dias
+    * Escena base para la parte delantera de la clase. Coloca los elementos que se mantienen igual todos los dias
     * @extends ConectadoBaseScene
     * @param {String} name - id de la escena
     */
@@ -14,5 +15,55 @@ export default class ClassFrontBase extends ConectadoBaseScene {
         super.create(params);
 
         this.createBg("classFrontBg");
+        
+
+        // Quinta fila de sillas y mesas
+        this.row5Chairs = this.add.image(0, 0, "frontRow5Chairs").setOrigin(0, 0).setScale(this.bgScale);
+        this.row5Tables = this.add.image(0, 0, "frontRow5Tables").setOrigin(0, 0).setScale(this.bgScale);
+        
+        // Cuarta fila de sillas y mesas
+        this.row4Chairs = this.add.image(0, 0, "frontRow4Chairs").setOrigin(0, 0).setScale(this.bgScale);
+        this.row4Tables = this.add.image(0, 0, "frontRow4Tables").setOrigin(0, 0).setScale(this.bgScale);
+        
+        // Tercera fila de sillas y mesas
+        this.row3Chairs = this.add.image(0, 0, "frontRow3Chairs").setOrigin(0, 0).setScale(this.bgScale);
+        this.row3Tables = this.add.image(0, 0, "frontRow3Tables").setOrigin(0, 0).setScale(this.bgScale);
+
+        // Segunda fila de sillas y mesas
+        this.row2Chairs = this.add.image(0, 0, "frontRow2Chairs").setOrigin(0, 0).setScale(this.bgScale);
+        this.row2Tables = this.add.image(0, 0, "frontRow2Tables").setOrigin(0, 0).setScale(this.bgScale);
+
+        // Primera fila de sillas y mesas
+        this.row1Chairs = this.add.image(0, 0, "frontRow1Chairs").setOrigin(0, 0).setScale(this.bgScale);
+        this.row1Tables = this.add.image(0, 0, "frontRow1Tables").setOrigin(0, 0).setScale(this.bgScale);
+
+
+        // Forma geometrica para poder interactuar con los sitios libres
+        let graphics = this.add.graphics(0, 0);
+        let polygon = new Phaser.Geom.Polygon([
+            1240, 525,
+            910, 525,
+            1095, 670,
+            1495, 670,
+            1550, 680,
+            1550, 600,
+            1365, 615,
+            1260, 580,
+            1465, 565,
+        ]);
+        // graphics.lineStyle(5, 0xFF00FF, 1.0).fillStyle(0xFFF, 1.0).fillPoints(polygon.points, true);
+        graphics.generateTexture("tables", this.rightBound, this.CANVAS_HEIGHT);
+        graphics.destroy();
+
+        this.tables = this.add.image(0, 0, "tables").setOrigin(0, 0).setDepth(200);
+        setInteractive(this.tables, {
+            hitArea: polygon,
+            hitAreaCallback: Phaser.Geom.Polygon.Contains
+        });
+
+        this.tablesNode = null;
+        this.setInteractive("tables", this.tables, () => {
+            this.dialogManager.setNode(this.tablesNode);
+        })
     }
 }

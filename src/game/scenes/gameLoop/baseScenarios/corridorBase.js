@@ -39,36 +39,36 @@ export default class CorridorBase extends ConectadoBaseScene {
         this.oppositeRestroomSceneName = "OppositeRestroom";
         
         // Puerta al bano de los chicos
-        this.boysRestroomDorClosed = this.add.image(1485 * this.bgScale, 596 * this.bgScale, this.atlasName, "boysDoorClosed").setOrigin(0, 0).setScale(this.bgScale);
-        this.boysRestroomDorOpened = this.add.image(1485 * this.bgScale, 596 * this.bgScale, this.atlasName, "boysDoorOpened").setOrigin(0, 0).setScale(this.bgScale);
+        this.boysRestroomDoorClosed = this.add.image(1485 * this.bgScale, 596 * this.bgScale, this.atlasName, "boysDoorClosed").setOrigin(0, 0).setScale(this.bgScale);
+        this.boysRestroomDoorOpened = this.add.image(1485 * this.bgScale, 596 * this.bgScale, this.atlasName, "boysDoorOpened").setOrigin(0, 0).setScale(this.bgScale);
         // Al hacer click, si hay algun dialogo que mostrar (para indicar que no se puede entrar), se
         // mostrara. En caso contrario, se pasara a la escena del bano sin eliminar esta escena
-        this.createToggle(this.boysRestroomDorClosed, "boysRestroomDorClosed", this.boysRestroomDorOpened, "boysRestroomDorOpened", false, () => {
+        this.createToggle(this.boysRestroomDoorClosed, "boysRestroomDoorClosed", this.boysRestroomDoorOpened, "boysRestroomDoorOpened", false, () => {
             if (this.gameManager.blackboard.get("gender") == "female") {
                 this.dialogManager.setNode(this.oppositeRestroomNode);
             }
             else {
                 let params = {
                     camPos: ConectadoBaseScene.CAM_POS_LEFT,
-                    corridor: this
+                    corridor: this.scene.key
                 }
                 this.gameManager.changeScene(this.restroomSceneName, params, false, true);
             }
         });
 
         // Puerta del bano de las chicas
-        this.girlsRestroomDorClosed = this.add.image(1361 * this.bgScale, 636 * this.bgScale, this.atlasName, "girlsDoorClosed").setOrigin(0, 0).setScale(this.bgScale);
-        this.girlsRestroomDorOpened = this.add.image(1361 * this.bgScale, 636 * this.bgScale, this.atlasName, "girlsDoorOpened").setOrigin(0, 0).setScale(this.bgScale);
+        this.girlsRestroomDoorClosed = this.add.image(1361 * this.bgScale, 636 * this.bgScale, this.atlasName, "girlsDoorClosed").setOrigin(0, 0).setScale(this.bgScale);
+        this.girlsRestroomDoorOpened = this.add.image(1361 * this.bgScale, 636 * this.bgScale, this.atlasName, "girlsDoorOpened").setOrigin(0, 0).setScale(this.bgScale);
         // Al hacer click, si hay algun dialogo que mostrar (para indicar que no se puede entrar), se
         // mostrara. En caso contrario, se pasara a la escena del bano sin eliminar esta escena
-        this.createToggle(this.girlsRestroomDorClosed, "girlsRestroomDorClosed", this.girlsRestroomDorOpened, "girlsRestroomDorOpened", false, () => {
+        this.createToggle(this.girlsRestroomDoorClosed, "girlsRestroomDoorClosed", this.girlsRestroomDoorOpened, "girlsRestroomDoorOpened", false, () => {
             if (this.gameManager.blackboard.get("gender") == "male") {
                 this.dialogManager.setNode(this.oppositeRestroomNode);
             }
             else {
                 let params = {
                     camPos: ConectadoBaseScene.CAM_POS_LEFT,
-                    corridor: this
+                    corridor: this.scene.key
                 }
                 this.gameManager.changeScene(this.restroomSceneName, params, false, true);
             }
@@ -90,7 +90,6 @@ export default class CorridorBase extends ConectadoBaseScene {
             else {
                 let params = {
                     camPos: ConectadoBaseScene.CAM_POS_LEFT,
-                    corridor: this
                 }
                 this.gameManager.changeScene(this.classSceneName, params, false);
             }

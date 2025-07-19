@@ -21,6 +21,10 @@ export default class NightmareBase extends ConectadoBaseScene {
         // No se puede hacer scroll
         this.CAMERA_SPEED = 0;
 
+        // Archivo con la estructura del dialogo (a partir del dia)
+        this.nodes = this.cache.json.get("nightmareDay" + this.day);
+        // Namespace con los textos localizados (a partir del dia)
+        this.namespace = "day" + this.day + "\\nightmareDay" + this.day;
         
         
         this.dispatcher.dispatch(ConectadoEventNames.startNightmare, null);

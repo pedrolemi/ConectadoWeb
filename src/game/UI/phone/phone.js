@@ -3,6 +3,7 @@ import { growAnimation } from "../../../framework/utils/graphics.js";
 import BaseScreen from "./baseScreen.js";
 import ConectadoEventNames from "../../eventNames.js";
 import AlarmScreen from "./alarmScreen.js";
+import SettingsScreen from "./settingsScreen.js";
 
 export default class Phone extends Phaser.GameObjects.Container {
     /**
@@ -66,11 +67,12 @@ export default class Phone extends Phaser.GameObjects.Container {
 
         // Pantallas de las aplicaciones
         this.screens = new Set([
-            this.mainScreen = new BaseScreen(scene, this, "mainScreenBg", null),
-            this.alarmScreen = new AlarmScreen(scene, this, this.mainScreen),
+            // this.mainScreen = new BaseScreen(scene, this, "mainScreenBg", null),
+            // this.alarmScreen = new AlarmScreen(scene, this, this.mainScreen),
+            this.settingsScreen = new SettingsScreen(scene, this, this.mainScreen),
         ]);
 
-        this.currentScreen = this.mainScreen;
+        this.currentScreen = this.settingsScreen;
         
         
         // Botones de interaccion
@@ -99,12 +101,13 @@ export default class Phone extends Phaser.GameObjects.Container {
         this.setSize(bounds.width, bounds.height);
         
         this.activate(false, 0);
+        this.toSettingsScreen();
     }
 
     createButton(x, img, onClick) {
         let BUTTONS_SCALE = 0.34;
         let button = this.scene.add.image(x, 0, "phoneElements", img).setOrigin(0.5, 0.5).setScale(BUTTONS_SCALE);
-        growAnimation(button, button, onClick, true, 1.1, true, 50);
+        growAnimation(button, button, onClick, true, false, 1.1, true, 50);
         this.buttons.add(button);
     }
 
@@ -246,5 +249,9 @@ export default class Phone extends Phaser.GameObjects.Container {
 
     toMainScreen() {
         this.goToScreen(this.mainScreen);
+    }
+
+    toSettingsScreen() {
+        this.goToScreen(this.settingsScreen);
     }
 }

@@ -111,7 +111,7 @@ export default class Credits extends ConectadoBaseScene {
 
         let button = new RectTextButton(this, x, y, BUTTON_W, BUTTON_H, text, this.BUTTONS_TEXT_CONFIG, callback, "creditsButton", 
             0.5, 0.5, 15, 0xFFF0F0F0, 1, 1, 0x0, 1, 0.5, 0.5, 0, -20, 0, 2);
-        tintAnimation(button, button.list, callback, true, 0xffffff, 0x408e86, 0xc8c8c8);
+        tintAnimation(button, button.list, callback, true, false, 0xffffff, 0x408e86, 0xc8c8c8);
 
         return button
     }

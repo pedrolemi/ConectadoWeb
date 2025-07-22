@@ -10,6 +10,6 @@ export default class PlaygroundMorningDay1 extends PlaygroundBase {
 
         this.stairsSceneName = "StairsMorningDay1";
 
-        this.homeNode = this.dialogManager.readNodes(this, this.everydayNodes, "everydayDialog", "playground.homeMorning");
+        this.homeNode = this.localizationManager.readNodes(this, this.everydayNodes, "everydayDialog", "playground.homeMorning");
     }
 }

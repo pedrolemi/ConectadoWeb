@@ -68,10 +68,10 @@ export default class AlarmScreen extends BaseScreen {
 
         growAnimation(sleepIcon, sleepIcon, () => {
             this.dispatcher.dispatch(ConectadoEventNames.tryDelayingAlarm, null);
-        }, true, 1.1, true, 50);
+        }, true, false, 1.1, true, 50);
         growAnimation(wakeUpIcon, wakeUpIcon, () => {
             this.dispatcher.dispatch(ConectadoEventNames.wakeUp, null);
-        }, true, 1.1, true, 50);
+        }, true, false, 1.1, true, 50);
 
         this.configureEvents();
 

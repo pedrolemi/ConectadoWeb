@@ -40,11 +40,11 @@ export default class OppositeRestroom extends ConectadoBaseScene {
 
         // Telefono del jugador
         let nodes = this.cache.json.get("restroomBreakDay4");
-        let phoneNode = this.dialogManager.readNodes(this, nodes, "day4\\restroomBreakDay4", "phone");
+        let phoneNode = this.localizationManager.readNodes(this, nodes, "day4\\restroomBreakDay4", "phone");
 
         this.phone = this.add.image(2100 * this.bgScale, 1280 * this.bgScale, this.atlasName, "stolenPhone").setOrigin(0, 0).setScale(this.bgScale * 1.7);
         this.setInteractive("stolenPhone", this.phone, () => {
-            this.dialogManager.setNode(phoneNode);
+            this.localizationManager.setNode(phoneNode);
         });
 
         

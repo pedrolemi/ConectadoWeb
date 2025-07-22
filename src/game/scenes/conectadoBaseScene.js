@@ -1,5 +1,4 @@
 import BaseScene from "../../framework/scenes/baseScene.js"
-import DialogManager from "./../managers/dialogManager.js";
 import GameManager from "./../managers/gameManager.js";
 
 export default class ConectadoBaseScene extends BaseScene {
@@ -16,7 +15,6 @@ export default class ConectadoBaseScene extends BaseScene {
         super.create(params);
 
         this.gameManager = GameManager.getInstance();
-        this.dialogManager = DialogManager.getInstance();
 
         // Parametros del fondo y la camara para el scroll
         this.bg = null;

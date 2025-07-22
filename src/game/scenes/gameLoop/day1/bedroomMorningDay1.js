@@ -15,11 +15,11 @@ export default class BedroomMorningDay1 extends BedroomBase {
         let nodes = this.cache.json.get("bedroomMorningDay1");
 
         // Mochila
-        let bagNode = this.dialogManager.readNodes(this, nodes, namespace, "bag");
+        let bagNode = this.localizationManager.readNodes(this, nodes, namespace, "bag");
         let bag = this.add.image(170, this.CANVAS_HEIGHT - 170, this.atlasName, "bag").setOrigin(0, 0).setScale(this.bgScale);
         this.setInteractive("bag", bag);
         bag.on("pointerdown", () => {
-            this.dialogManager.setNode(bagNode)
+            this.localizationManager.setNode(bagNode)
         });
 
 

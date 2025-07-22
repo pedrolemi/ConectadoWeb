@@ -17,23 +17,23 @@ export default class StairsBase extends ConectadoBaseScene {
 
 
         // Cartel de la pared
-        this.signNode = this.dialogManager.readNodes(this, this.everydayNodes, "everydayDialog", "stairs.tag");
+        this.signNode = this.localizationManager.readNodes(this, this.everydayNodes, "everydayDialog", "stairs.tag");
 
         this.wallSign = this.add.zone(2321 * this.bgScale, 650 * this.bgScale, 130 * this.bgScale, 78 * this.bgScale).setOrigin(0, 0);
         // Al hacer click en el cartel se muestra el dialogo que indica el texto escrito en el
         this.setInteractive("stairsSign", this.wallSign, () => {
-            this.dialogManager.setNode(this.signNode);
+            this.localizationManager.setNode(this.signNode);
         });
 
 
         // Puerta del despacho
-        this.doorNode = this.dialogManager.readNodes(this, this.everydayNodes, "everydayDialog", "stairs.door");
+        this.doorNode = this.localizationManager.readNodes(this, this.everydayNodes, "everydayDialog", "stairs.door");
         
         this.officeDoorClosed = this.add.image(2490 * this.bgScale, 273 * this.bgScale, "stairsDoorClosed").setOrigin(0, 0).setScale(this.bgScale);
         this.officeDoorOpened = this.add.image(2490 * this.bgScale, 273 * this.bgScale, "stairsDoorOpened").setOrigin(0, 0).setScale(this.bgScale);
         // Al hacer click en la puerta, se muestra el dialogo de no hay nadie en el despacho
         this.createToggle(this.officeDoorClosed, "officeDoorClosed", this.officeDoorOpened, "officeDoorOpened", false, () => {
-            this.dialogManager.setNode(this.doorNode);
+            this.localizationManager.setNode(this.doorNode);
         });
 
 
@@ -46,7 +46,7 @@ export default class StairsBase extends ConectadoBaseScene {
         // mostrara. En caso contrario, se pasara a la escena del patio con la camara a la derecha sin eliminar esta escena
         this.setInteractive("playgroundStairs", this.playgroundStairs, () => {
             if (this.playgroundNode) {
-                this.dialogManager.setNode(this.playgroundNode);
+                this.localizationManager.setNode(this.playgroundNode);
             }
             else {
                 let params = {
@@ -66,7 +66,7 @@ export default class StairsBase extends ConectadoBaseScene {
         // mostrara. En caso contrario, se pasara a la escena del pasillo sin eliminar esta escena
         this.setInteractive("corridorStairs", this.corridorStairs, () => {
             if (this.corridorNode) {
-                this.dialogManager.setNode(this.corridorNode);
+                this.localizationManager.setNode(this.corridorNode);
             }
             else {
                 let params = {

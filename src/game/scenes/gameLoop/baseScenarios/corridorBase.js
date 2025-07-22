@@ -25,7 +25,7 @@ export default class CorridorBase extends ConectadoBaseScene {
         // mostrara. En caso contrario, se pasara a la escena de las escaleras sin eliminar esta escena
         this.setInteractive("stairsDoor", this.stairsDoor, () => {
             if (this.stairsNode) {
-                this.dialogManager.setNode(this.stairsNode);
+                this.localizationManager.setNode(this.stairsNode);
             }
             else {
                 this.gameManager.changeScene(this.stairsSceneName, null, false, true);
@@ -34,7 +34,7 @@ export default class CorridorBase extends ConectadoBaseScene {
         
 
         // Banos
-        this.oppositeRestroomNode = this.dialogManager.readNodes(this, this.everydayNodes, "everydayDialog", "corridor.restroom");
+        this.oppositeRestroomNode = this.localizationManager.readNodes(this, this.everydayNodes, "everydayDialog", "corridor.restroom");
         this.restroomSceneName = "RestroomBase";
         this.oppositeRestroomSceneName = "OppositeRestroom";
         
@@ -45,7 +45,7 @@ export default class CorridorBase extends ConectadoBaseScene {
         // mostrara. En caso contrario, se pasara a la escena del bano sin eliminar esta escena
         this.createToggle(this.boysRestroomDoorClosed, "boysRestroomDoorClosed", this.boysRestroomDoorOpened, "boysRestroomDoorOpened", false, () => {
             if (this.gameManager.blackboard.get("gender") == "female") {
-                this.dialogManager.setNode(this.oppositeRestroomNode);
+                this.localizationManager.setNode(this.oppositeRestroomNode);
             }
             else {
                 let params = {
@@ -63,7 +63,7 @@ export default class CorridorBase extends ConectadoBaseScene {
         // mostrara. En caso contrario, se pasara a la escena del bano sin eliminar esta escena
         this.createToggle(this.girlsRestroomDoorClosed, "girlsRestroomDoorClosed", this.girlsRestroomDoorOpened, "girlsRestroomDoorOpened", false, () => {
             if (this.gameManager.blackboard.get("gender") == "male") {
-                this.dialogManager.setNode(this.oppositeRestroomNode);
+                this.localizationManager.setNode(this.oppositeRestroomNode);
             }
             else {
                 let params = {
@@ -85,7 +85,7 @@ export default class CorridorBase extends ConectadoBaseScene {
         // En caso contrario, se pasara a la escena de la clase y se borrara esta escena
         this.createToggle(this.classDoorClosed, "classDoorClosed", this.classDoorOpened, "classDoorOpened", false, () => {
             if (this.classNode) {
-                this.dialogManager.setNode(this.classNode);
+                this.localizationManager.setNode(this.classNode);
             }
             else {
                 let params = {

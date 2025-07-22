@@ -82,7 +82,7 @@ export default class UI extends BaseUI {
         this.phoneIcon = this.add.image(this.CANVAS_WIDTH - ICON_OFFSET_X, this.CANVAS_HEIGHT - ICON_OFFSET_Y, "phoneElements", "phoneIcon").setScale(ICON_SCALE);
         growAnimation(this.phoneIcon, this.phoneIcon, () => {
             this.phone.toggle();
-        }, true, ICON_GROW_SCALE, false, 20);
+        }, true, false, ICON_GROW_SCALE, false, 20);
         
         // this.phoneIcon.setVisible(false);
     }

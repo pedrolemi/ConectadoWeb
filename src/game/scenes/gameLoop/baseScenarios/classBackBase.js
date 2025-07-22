@@ -62,7 +62,7 @@ export default class ClassBackBase extends ConectadoBaseScene {
         // mostrara. En caso contrario, se pasara a la escena del pasillo y se elimina esta escena
         this.createToggle(this.doorClosed, "corridorDoorClosed", this.doorOpened, "corridorDoorOpened", false, () => {
             if (this.doorNode) {
-                this.dialogManager.setNode(this.doorNode);
+                this.localizationManager.setNode(this.doorNode);
             }
             else {
                 let params = {

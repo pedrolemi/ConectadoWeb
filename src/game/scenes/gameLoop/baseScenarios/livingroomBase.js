@@ -45,7 +45,7 @@ export default class LivingroomBase extends ConectadoBaseScene {
         // Al pulsar la puerta de la calle, se cambia a la escena del patio con la camara a la izquierda
         this.createToggle(this.exitDoorClosed, "exitDoorClosed", this.exitDoorOpened, "exitDoorOpened", false, () => {
             if (this.doorNode) {
-                this.dialogManager.setNode(this.doorNode);
+                this.localizationManager.setNode(this.doorNode);
             }
             else {
                 let params = {
@@ -58,7 +58,7 @@ export default class LivingroomBase extends ConectadoBaseScene {
 
         // Se comprueba si no se ha cogido la mochila. Si no se ha cogido, se pone el dialogo en la puerta
         if (!this.gameManager.blackboard.get("bagPicked")) {
-            this.doorNode = this.dialogManager.readNodes(this, this.everydayNodes, "everydayDialog", "livingroom.doorMorning");
+            this.doorNode = this.localizationManager.readNodes(this, this.everydayNodes, "everydayDialog", "livingroom.doorMorning");
         }
 
         // Suscripcion al evento de coger la mochila por si no se 

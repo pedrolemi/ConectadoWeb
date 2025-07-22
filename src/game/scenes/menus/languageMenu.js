@@ -55,7 +55,7 @@ export default class LanguageMenu extends ConectadoBaseScene {
 
             this.localizationManager.changeLanguage(language);
             this.gameManager.startMainMenu();
-        }, true, 1.1, true, animTime);
+        }, true, false, 1.1, true, animTime);
         
         return button;
     }

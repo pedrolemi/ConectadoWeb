@@ -1,5 +1,4 @@
 import BasePreloaderScene from "../../framework/scenes/basePreloaderScene.js";
-import DialogManager from "../managers/dialogManager.js";
 import GameManager from "../managers/gameManager.js";
 
 export default class PreloaderScene extends BasePreloaderScene {
@@ -151,9 +150,6 @@ export default class PreloaderScene extends BasePreloaderScene {
             frameRate: 3,
             repeat: -1
         });
-
-        let dialogManager = DialogManager.create();
-        dialogManager.init();
 
         let gameManager = GameManager.create();
         gameManager.init();

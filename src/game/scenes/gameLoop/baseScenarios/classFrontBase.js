@@ -63,7 +63,7 @@ export default class ClassFrontBase extends ConectadoBaseScene {
 
         this.tablesNode = null;
         this.setInteractive("tables", this.tables, () => {
-            this.dialogManager.setNode(this.tablesNode);
+            this.localizationManager.setNode(this.tablesNode);
         })
     }
 }

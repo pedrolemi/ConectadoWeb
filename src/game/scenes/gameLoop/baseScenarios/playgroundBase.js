@@ -24,7 +24,7 @@ export default class PlaygroundBase extends ConectadoBaseScene {
         // mostrara. En caso contrario, se pasara a la escena del salon con la camara a la izquierda y se eliminara esta escena
         this.setInteractive("schoolExit", this.schoolExit, () => {
             if (this.homeNode) {
-                this.dialogManager.setNode(this.homeNode);
+                this.localizationManager.setNode(this.homeNode);
             }
             else {
                 let params = {
@@ -36,14 +36,14 @@ export default class PlaygroundBase extends ConectadoBaseScene {
 
 
         // Puertas del edificio
-        this.doorNode = this.dialogManager.readNodes(this, this.everydayNodes, "everydayDialog", "playground.doorMorning");;
+        this.doorNode = this.localizationManager.readNodes(this, this.everydayNodes, "everydayDialog", "playground.doorMorning");;
         this.stairsSceneName = "";
 
         this.schoolDoorClosed = this.add.zone(2640 * this.bgScale, 1060 * this.bgScale, 262, 186).setOrigin(0, 0);
         this.schoolDoorOpened = this.add.image(2631 * this.bgScale, 1045 * this.bgScale, "schoolDoorOpened").setOrigin(0, 0).setScale(this.bgScale);
         // Al hacer click sobre la puerta cerrada, se mostrara el dialogo que indica que no se puede pasar.
         this.setInteractive("schoolDoorClosed", this.schoolDoorClosed, () => {
-            this.dialogManager.setNode(this.doorNode);
+            this.localizationManager.setNode(this.doorNode);
         });
         // Al hacer click sobre la puerta abierta, si hay algun dialogo que mostrar (para indicar que no se puede entrar), se
         // mostrara. En caso contrario, se pasara a la escena de las escaleras
@@ -52,7 +52,7 @@ export default class PlaygroundBase extends ConectadoBaseScene {
                 this.gameManager.changeScene(this.stairsSceneName, null, false, true);
             }
             else {
-                this.dialogManager.setNode(this.doorNode);
+                this.localizationManager.setNode(this.doorNode);
             }
         });
         this.schoolDoorOpened.setVisible(false);

@@ -6,6 +6,7 @@ import ConectadoDialogBox from "./conectadoDialogBox.js";
 import Phone from "./phone/phone.js";
 import { growAnimation } from "../../framework/utils/graphics.js";
 import OptionBox from "../../framework/UI/optionBox.js";
+import NotificationIcon from "./phone/elements/notificationIcon.js";
 
 export default class UI extends BaseUI {
     constructor() {
@@ -15,8 +16,8 @@ export default class UI extends BaseUI {
     init(params) {
         super.init(params);
         
-        let PADDING =  10;
-        let OPTION_BOX_SCALE_X = (this.CANVAS_WIDTH - PADDING * 2) / this.textures.get("dialogs").get("optionBg").width;
+        const PADDING =  10;
+        const OPTION_BOX_SCALE_X = (this.CANVAS_WIDTH - PADDING * 2) / this.textures.get("dialogs").get("optionBg").width;
         
         this.textConfig = {
             fontFamily: "Arial",
@@ -54,6 +55,8 @@ export default class UI extends BaseUI {
         this.phone = new Phone(this);
         this.createIcon();
         // TODO: CREAR ICONO DE NOTIFICACIONES
+        // TODO: CREAR ICONO DE NOTIFICACIONES EN MAINSCREEN
+        // TODO: CREAR ICONO DE NOTIFICACIONES EN MSGLISTSCREEN
 
         this.textbox = new ConectadoDialogBox(this);
         this.textbox.on("pointerdown", () => { this.skipDialog(); });
@@ -73,24 +76,23 @@ export default class UI extends BaseUI {
 
 
     createIcon() {
-        let ICON_OFFSET_X = 70;
-        let ICON_OFFSET_Y = 75;
-        let ICON_SCALE = 0.3;
-        let ICON_GROW_SCALE = 1.1;
+        const ICON_OFFSET_X = 70;
+        const ICON_OFFSET_Y = 75;
+        const ICON_SCALE = 0.3;
+        const ICON_GROW_SCALE = 1.1;
+
+        const NOTIFICATION_OFFSET_X = 15;
+        const NOTIFICATION_OFFSET_Y = 40;
 
         // Anade el icono del telefono
         this.phoneIcon = this.add.image(this.CANVAS_WIDTH - ICON_OFFSET_X, this.CANVAS_HEIGHT - ICON_OFFSET_Y, "phoneElements", "phoneIcon").setScale(ICON_SCALE);
+        this.notifications = new NotificationIcon(this, this.phoneIcon.x + NOTIFICATION_OFFSET_X, this.phoneIcon.y - NOTIFICATION_OFFSET_Y);
+
         growAnimation(this.phoneIcon, this.phoneIcon, () => {
             this.phone.toggle();
         }, true, false, ICON_GROW_SCALE, false, 20);
-        
-        // this.phoneIcon.setVisible(false);
     }
-
-    createNotificationIcon() {
-        // TODO
-    }
-
+    
     createLids() {
         this.CLOSED_TOP_LID_Y = 0;
         this.CLOSED_BOT_LID_Y = this.CANVAS_HEIGHT / 2;
@@ -109,7 +111,7 @@ export default class UI extends BaseUI {
 
     configureAlarmEvents() {
         // Configurar eventos
-        let WAKE_TOGGLE_TIME = 1500;
+        const WAKE_TOGGLE_TIME = 1500;
         this.initalScrollX = 0;
         this.alarmScene = null;
 

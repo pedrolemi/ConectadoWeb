@@ -15,8 +15,6 @@ export default class GameManager extends Singleton {
         // Blackboard de variables de todo el juego
         this.blackboard = new Blackboard();
 
-        this.ui = null;
-
         this.day = 1;
     }
 
@@ -30,21 +28,22 @@ export default class GameManager extends Singleton {
     }
 
     startLanguageMenu() {
+        this.resetGame();
         this.changeScene("LanguageMenu", null);
     }
 
     startMainMenu() {
-        this.changeScene("MainMenu", null);
-
-        // TEST
-        // this.startGame();
-    }
-
-    startLoginMenu() {
-        // this.changeScene("LoginMenu", null, false);
+        // this.changeScene("MainMenu", null);
 
         // TEST
         this.startGame();
+    }
+
+    startLoginMenu() {
+        this.changeScene("LoginMenu", null, false);
+
+        // TEST
+        // this.startGame();
     }
 
     startCredits(fromMainMenu = true) {
@@ -54,18 +53,17 @@ export default class GameManager extends Singleton {
         this.changeScene("Credits", params, !fromMainMenu);
     }
 
-    startGame() {
+    resetGame() {
         this.blackboard.clear();
         this.dispatcher.removeAll();
 
-        if (this.ui == null) {
-            this.sceneManager.runInParalell("UI");
-            this.ui = this.sceneManager.getScene("UI");
-        }
-        else {
-            this.ui.shutdown();
-            this.sceneManager.restartScene("UI");
-        }
+        this.sceneManager.clearParallelScenes();
+    }
+
+    startGame() {
+        this.resetGame();
+        
+        this.sceneManager.runInParallel("UI");
         
         // this.day = 0;
 
@@ -77,7 +75,7 @@ export default class GameManager extends Singleton {
         // };
         // this.changeScene("TextOnlyScene", params, true);
 
-        this.localizationManager.setInterpolationValue("gender", "female");
+        this.localizationManager.setInterpolationValue("context", "female");
         this.localizationManager.setInterpolationValue("name", "Pepito");
         // this.changeScene("AlarmScene", null, true);
         // this.changeScene("BedroomMorningDay1", null, false, false);

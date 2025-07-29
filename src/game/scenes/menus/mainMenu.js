@@ -36,7 +36,7 @@ export default class MainMenu extends ConectadoBaseScene {
             color: "#004E46",
             align: "center",
         };
-        let BUTTON_START_Y = 2 * this.CANVAS_HEIGHT / 3;
+        const BUTTON_START_Y = 2 * this.CANVAS_HEIGHT / 3;
 
 
         let namespace = "menus\\titleMenu";
@@ -82,9 +82,9 @@ export default class MainMenu extends ConectadoBaseScene {
     }
 
     createMainMenuButtons(y, text, callback) {
-        let BUTTON_X = this.CANVAS_WIDTH / 2;
-        let BUTTON_W = 300;
-        let BUTTON_H = 75;
+        const BUTTON_X = this.CANVAS_WIDTH / 2;
+        const BUTTON_W = 300;
+        const BUTTON_H = 75;
 
         let button = new RectTextButton(this, BUTTON_X, y, BUTTON_W, BUTTON_H, text, this.TEXT_CONFIG, callback, "menuButton",
             0.5, 0.5, 15, 0xffffff, 1, 1, 0x0, 1);

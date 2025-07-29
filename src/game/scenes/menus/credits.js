@@ -25,8 +25,8 @@ export default class Credits extends ConectadoBaseScene {
         let bottomPadding = 40;
 
         // Flechas para indicar que los creditos van hacia adelante o hacia atras
-        let REWIND_ARROW_OFFSET = 90;
-        let REWIND_ARROW_Y = this.CANVAS_HEIGHT / 4;
+        const REWIND_ARROW_OFFSET = 90;
+        const REWIND_ARROW_Y = this.CANVAS_HEIGHT / 4;
         this.rightRewind = this.createRewindArrow(REWIND_ARROW_OFFSET, REWIND_ARROW_Y, false);
         this.leftRewind = this.createRewindArrow(this.CANVAS_WIDTH - REWIND_ARROW_OFFSET, REWIND_ARROW_Y, true);
 
@@ -51,8 +51,8 @@ export default class Credits extends ConectadoBaseScene {
             color: "#004E46",
             align: "center",
         };
-        let BUTTON_X = sidePadding;
-        let BUTTON_START_Y = this.CANVAS_HEIGHT - bottomPadding;
+        const BUTTON_X = sidePadding;
+        const BUTTON_START_Y = this.CANVAS_HEIGHT - bottomPadding;
 
         // Boton de salir
         let exitButton = this.createCreditsButtons(BUTTON_X, BUTTON_START_Y, this.localizationManager.translate("exitButton", this.namespace), () => {
@@ -106,8 +106,8 @@ export default class Credits extends ConectadoBaseScene {
     * @returns 
     */
     createCreditsButtons(x, y, text, callback) {
-        let BUTTON_W = 160;
-        let BUTTON_H = 40;
+        const BUTTON_W = 160;
+        const BUTTON_H = 40;
 
         let button = new RectTextButton(this, x, y, BUTTON_W, BUTTON_H, text, this.BUTTONS_TEXT_CONFIG, callback, "creditsButton", 
             0.5, 0.5, 15, 0xFFF0F0F0, 1, 1, 0x0, 1, 0.5, 0.5, 0, -20, 0, 2);
@@ -132,7 +132,7 @@ export default class Credits extends ConectadoBaseScene {
                 useAdvancedWrap: true
             }
         };
-        let TEXTS_X = this.CANVAS_WIDTH / 2;
+        const TEXTS_X = this.CANVAS_WIDTH / 2;
 
         // Tamanos de los textos
         let sizes = {
@@ -426,7 +426,7 @@ export default class Credits extends ConectadoBaseScene {
             namesText.push(this.createTextBelow(x, padding, names[name], normalParams));
         });
 
-        let BADGE_OFFSET = 50;
+        const BADGE_OFFSET = 50;
         let startX = 0;
         namesText.forEach((textObj) => {
             startX = Math.max(startX, textObj.x + textObj.displayWidth / 2);
@@ -499,13 +499,13 @@ export default class Credits extends ConectadoBaseScene {
         });
 
         // Se calculan las dimensiones y posiciones del grid
-        let COLS = 2;
-        let ROWS = Math.ceil(textContainers.length / COLS);
-        let PADDING = 180;
-        let GRID_WIDTH = this.CANVAS_WIDTH - (PADDING * 2);
-        let GRID_HEIGHT = ROWS * (textContainers[0].displayHeight + normalPadding);
-        let GRID_X = this.CANVAS_WIDTH / 2 - GRID_WIDTH / 2;
-        let GRID_Y = this.nextY - initialPadding / 2;
+        const COLS = 2;
+        const ROWS = Math.ceil(textContainers.length / COLS);
+        const PADDING = 180;
+        const GRID_WIDTH = this.CANVAS_WIDTH - (PADDING * 2);
+        const GRID_HEIGHT = ROWS * (textContainers[0].displayHeight + normalPadding);
+        const GRID_X = this.CANVAS_WIDTH / 2 - GRID_WIDTH / 2;
+        const GRID_Y = this.nextY - initialPadding / 2;
 
         // Se crea un grid y se anaden los containers con los nombres y localizaciones
         this.createGrid(textContainers, GRID_X, GRID_Y, GRID_WIDTH, GRID_HEIGHT, COLS, ROWS);
@@ -530,14 +530,14 @@ export default class Credits extends ConectadoBaseScene {
         });
 
         // Se calculan las dimensiones y posiciones del grid
-        let COLS = 2;
-        let ROWS = 3;
-        let PADDING = 200;
-        let IMAGE_PADDING = 50;
-        let GRID_WIDTH = this.CANVAS_WIDTH - (PADDING * 2);
-        let GRID_HEIGHT = (imagesMaxHeight + IMAGE_PADDING) * COLS;
-        let GRID_X = this.CANVAS_WIDTH / 2 - GRID_WIDTH / 2;
-        let GRID_Y = this.nextY + initialPadding;
+        const COLS = 2;
+        const ROWS = 3;
+        const PADDING = 200;
+        const IMAGE_PADDING = 50;
+        const GRID_WIDTH = this.CANVAS_WIDTH - (PADDING * 2);
+        const GRID_HEIGHT = (imagesMaxHeight + IMAGE_PADDING) * COLS;
+        const GRID_X = this.CANVAS_WIDTH / 2 - GRID_WIDTH / 2;
+        const GRID_Y = this.nextY + initialPadding;
 
         // Se crea un grid y se anaden las imagenes
         this.createGrid(images, GRID_X, GRID_Y, GRID_WIDTH, GRID_HEIGHT, COLS, ROWS);

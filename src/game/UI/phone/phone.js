@@ -3,7 +3,10 @@ import { growAnimation } from "../../../framework/utils/graphics.js";
 import BaseScreen from "./baseScreen.js";
 import ConectadoEventNames from "../../eventNames.js";
 import AlarmScreen from "./alarmScreen.js";
+import MainScreen from "./mainScreen.js";
 import SettingsScreen from "./settingsScreen.js";
+import StatusScreen from "./statusScreen.js";
+import MessagesListScreen from "./messagesListScreen.js";
 
 export default class Phone extends Phaser.GameObjects.Container {
     /**
@@ -67,19 +70,21 @@ export default class Phone extends Phaser.GameObjects.Container {
 
         // Pantallas de las aplicaciones
         this.screens = new Set([
-            // this.mainScreen = new BaseScreen(scene, this, "mainScreenBg", null),
-            // this.alarmScreen = new AlarmScreen(scene, this, this.mainScreen),
+            this.mainScreen = new MainScreen(scene, this, null),
+            this.alarmScreen = new AlarmScreen(scene, this, this.mainScreen),
+            this.statusScreen = new StatusScreen(scene, this, this.mainScreen),
             this.settingsScreen = new SettingsScreen(scene, this, this.mainScreen),
+            this.messagesListScreen = new MessagesListScreen(scene, this, this.mainScreen),
         ]);
 
-        this.currentScreen = this.settingsScreen;
+        this.currentScreen = this.mainScreen;
         
         
         // Botones de interaccion
-        let BUTTONS_START_X = this.PHONE_X - 14;
-        let BUTTONS_Y = this.PHONE_Y - 78;
-        let BUTTONS_BAR_WIDTH = 330;
-        let BUTTONS_SPACING = 10;
+        const BUTTONS_START_X = this.PHONE_X - 14;
+        const BUTTONS_Y = this.PHONE_Y - 78;
+        const BUTTONS_BAR_WIDTH = 330;
+        const BUTTONS_SPACING = 10;
 
         this.buttons = scene.add.container(BUTTONS_START_X, BUTTONS_Y);
         // this.add(scene.add.rectangle(BUTTONS_START_X, BUTTONS_Y, BUTTONS_BAR_WIDTH, 20, 0x0, 1).setOrigin(0, 0.5));
@@ -92,7 +97,6 @@ export default class Phone extends Phaser.GameObjects.Container {
         });
         this.createButton((BUTTONS_BAR_WIDTH / 4) * 3 + BUTTONS_SPACING, "uselessButton", () => { });
 
-        
         this.add(this.phoneImage);
         this.add(this.buttons);
 
@@ -100,18 +104,21 @@ export default class Phone extends Phaser.GameObjects.Container {
         let bounds = this.getBounds();
         this.setSize(bounds.width, bounds.height);
         
+
+        this.toMainScreen();
         this.activate(false, 0);
-        this.toSettingsScreen();
     }
 
     createButton(x, img, onClick) {
-        let BUTTONS_SCALE = 0.34;
+        const BUTTONS_SCALE = 0.34;
         let button = this.scene.add.image(x, 0, "phoneElements", img).setOrigin(0.5, 0.5).setScale(BUTTONS_SCALE);
         growAnimation(button, button, onClick, true, false, 1.1, true, 50);
         this.buttons.add(button);
     }
 
-
+    /**
+    * Configura la escala y la posicion para la escena de la alarma
+    */
     setAlarm() {
         this.x += this.ALARM_OFFSET_X;
         this.y += this.ALARM_OFFSET_Y;
@@ -119,7 +126,9 @@ export default class Phone extends Phaser.GameObjects.Container {
 
         this.goToScreen(this.alarmScreen);
     }
-
+    /**
+    * Desactiva la configuracion de la escena de la alarma
+    */
     disableAlarm() {
         this.x -= this.ALARM_OFFSET_X;
         this.y -= this.ALARM_OFFSET_Y;
@@ -127,6 +136,7 @@ export default class Phone extends Phaser.GameObjects.Container {
 
         this.goToScreen(this.mainScreen);
     }
+
 
     /**
     * Muestra/oculta el telefono segun su estado actual
@@ -199,6 +209,7 @@ export default class Phone extends Phaser.GameObjects.Container {
                 });
 
                 this.toggleAnim.on("complete", () => {
+                    this.toMainScreen();
                     this.bgBlock.disableInteractive();
                     this.setVisible(false);
                     this.toggleAnim = null;
@@ -225,9 +236,9 @@ export default class Phone extends Phaser.GameObjects.Container {
     * @param {BaseScreen} screen - pantalla que anadir al telefono
     */
     goToScreen(screen) {
-        // this.screens.forEach((screen) => {
-        //     screen.setVisible(false);
-        // });
+        this.screens.forEach((screen) => {
+            screen.setVisible(false);
+        });
         this.currentScreen.setVisible(false);
         this.buttons.setVisible(true);
         screen.setVisible(true);
@@ -249,6 +260,14 @@ export default class Phone extends Phaser.GameObjects.Container {
 
     toMainScreen() {
         this.goToScreen(this.mainScreen);
+    }
+
+    toStatusScreen() {
+        this.goToScreen(this.statusScreen);
+    }
+
+    toMsgListScreen() {
+        this.goToScreen(this.messagesListScreen);
     }
 
     toSettingsScreen() {

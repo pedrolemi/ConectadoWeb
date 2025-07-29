@@ -94,5 +94,5 @@ const CONFIG = {
 }
 
 gameDebug.enable = false;
-gameDebug.enableText = true;
+gameDebug.enableText = false;
 const GAME = new Phaser.Game(CONFIG);

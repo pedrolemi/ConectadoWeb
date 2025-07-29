@@ -2,7 +2,7 @@ import DialogBox from "../../framework/UI/dialogBox.js";
 
 export default class ConectadoDialogBox extends DialogBox {
     constructor(scene) {
-        let PADDING = 10;
+        const PADDING = 10;
 
         let textboxConfig = {
             imgAtlas: "dialogs",

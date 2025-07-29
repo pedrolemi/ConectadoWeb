@@ -27,7 +27,7 @@ export default class TextOnlyScene extends ConectadoBaseScene {
     create(params) {
         super.create(params);
 
-        let SKIP_DELAY = 500;
+        const SKIP_DELAY = 500;
         let text = "";
 
         let textConfig = { ...DEFAULT_TEXT_CONFIG };
@@ -46,12 +46,12 @@ export default class TextOnlyScene extends ConectadoBaseScene {
 
 
         // Se calculan las dimensiones del texto, se crea, y se ajusta al tamano
-        let PADDING = 50;
-        let BOTTOM_PADDING = 10;
+        const PADDING = 50;
+        const BOTTOM_PADDING = 10;
 
-        let TEXT_WIDTH = this.CANVAS_WIDTH - PADDING * 2;
-        let TEXT_HEIGHT = this.CANVAS_HEIGHT - BOTTOM_PADDING - PADDING;
-        let TEXT_Y = BOTTOM_PADDING + (TEXT_HEIGHT) / 2;
+        const TEXT_WIDTH = this.CANVAS_WIDTH - PADDING * 2;
+        const TEXT_HEIGHT = this.CANVAS_HEIGHT - BOTTOM_PADDING - PADDING;
+        const TEXT_Y = BOTTOM_PADDING + (TEXT_HEIGHT) / 2;
 
         textConfig.wordWrap = {
             width: TEXT_WIDTH,

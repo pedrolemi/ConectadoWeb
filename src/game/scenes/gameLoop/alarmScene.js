@@ -21,19 +21,19 @@ export default class AlarmScene extends ConectadoBaseScene {
         this.createBg("bedroomCeiling", this.CANVAS_WIDTH / 2, 0, 0.5, 0);
         
         // Pone la velocidad de scroll inicial a 0
-        let ORIGINAL_CAMERA_SPEED = this.CAMERA_SPEED;
+        const ORIGINAL_CAMERA_SPEED = this.CAMERA_SPEED;
         this.CAMERA_SPEED = 0;
         
 
-        let WARN_OFFSET = 20;
+        const WARN_OFFSET = 20;
         
         let sleepWarning = this.add.container(0, 0);
 
         createRectTexture(this, "warnRect", 407, 124, 0xFFB61E1E, 1, 1, 0x0, 1, 15);
         let warnRect = this.add.image(this.CANVAS_WIDTH / 2, WARN_OFFSET, "warnRect").setOrigin(0.5, 0);
 
-        let TEXT_PADDING = 10;
-        let TEXT_CONFIG = {
+        const TEXT_PADDING = 10;
+        const TEXT_CONFIG = {
             fontFamily: "gidole-regular",
             fontSize: 40,
             align: "center",

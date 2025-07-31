@@ -2,8 +2,11 @@ import BasePreloaderScene from "../../framework/scenes/basePreloaderScene.js";
 import GameManager from "../managers/gameManager.js";
 
 export default class PreloaderScene extends BasePreloaderScene {
+    static SPINE_PLUGIN_KEY = "SpinePlugin";
+    
     init() {
         super.init();
+
         this.DEFAULT_LOADING_BAR_CONFIG.y = this.CANVAS_HEIGHT * 0.425;
         this.DEFAULT_LOADING_BAR_CONFIG.bgColor = 0xFF408E86;
         this.DEFAULT_LOADING_BAR_CONFIG.fillColor = 0xFF004E46;
@@ -122,12 +125,12 @@ export default class PreloaderScene extends BasePreloaderScene {
 
         let loadAssets = () => {
             this.loadFlags();
-            this.loadComputersAssets();
-            this.loadCreditsSceneAssets();
+            // this.loadComputersAssets();
+            // this.loadCreditsSceneAssets();
             this.loadBackgrounds();
             this.loadDialogAssets();
-            // this.loadCharacters();
-            this.loadPhoneAssets();
+            this.loadCharacters();
+            // this.loadPhoneAssets();
             // this.loadAvatars();
 
             this.load.setPath("assets");
@@ -276,7 +279,7 @@ export default class PreloaderScene extends BasePreloaderScene {
 
         // Personajes y sus respectivas animaciones esqueletales de Spine
         this.load.setPath("assets/characters/Spine");
-
+        
         // [Idle01, IdleBase, Walk]
         this.load.spine("mom", "mom/Front.json", "mom/Front.atlas");
 

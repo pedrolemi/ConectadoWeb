@@ -1,5 +1,5 @@
 import ConectadoBaseScene from "../conectadoBaseScene.js";
-import { DEFAULT_TEXT_CONFIG } from "../../../framework/utils/graphics.js";
+import { DEFAULT_TEXT_CONFIG, fadeAnimation } from "../../../framework/utils/graphics.js";
 import TextArea from "../../../framework/UI/textArea.js";
 
 export default class TextOnlyScene extends ConectadoBaseScene {
@@ -83,11 +83,8 @@ export default class TextOnlyScene extends ConectadoBaseScene {
                     this.localizationManager.translate("transitionInfo", "transitionScenes"), textConfig, 1, 1);
 
                 // Se hace una animacion de aparicion
-                let appear = this.tweens.add({
-                    targets: infoTextObj,
-                    alpha: { from: 0, to: 1 },
-                    repeat: 0
-                });
+                infoTextObj.setVisible(false);
+                let appear = fadeAnimation(infoTextObj, true);
                 // Cuando termina la animacion de aparicion, se crea la animacion de parpadeo
                 appear.on("complete", () => {
                     this.tweens.add({

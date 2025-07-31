@@ -36,14 +36,14 @@ export default class GameManager extends Singleton {
         // this.changeScene("MainMenu", null);
 
         // TEST
-        this.startGame();
+        this.startTest();
     }
 
     startLoginMenu() {
-        this.changeScene("LoginMenu", null, false);
+        // this.changeScene("LoginMenu", null, false);
 
         // TEST
-        // this.startGame();
+        this.startTest();
     }
 
     startCredits(fromMainMenu = true) {
@@ -60,28 +60,32 @@ export default class GameManager extends Singleton {
         this.sceneManager.clearParallelScenes();
     }
 
+    startTest() {
+        this.resetGame();
+
+        this.sceneManager.runInParallel("UI");
+        
+        this.localizationManager.setInterpolationValue("context", "female");
+        this.localizationManager.setInterpolationValue("name", "Pepito");
+        // this.changeScene("AlarmScene", null, true);
+        // this.changeScene("BedroomMorningDay1", null, false, false);
+        this.changeScene("LivingroomMorningDay1", null, false, false);
+        
+        // this.changeScene("NightmareDay1", null, false, false);
+    }
     startGame() {
         this.resetGame();
         
         this.sceneManager.runInParallel("UI");
         
-        // this.day = 0;
-
-        // let params = {
-        //     text: this.localizationManager.translate("day1.start", "transitionScenes"),
-        //     onComplete: () => {
-        //         this.changeScene("AlarmScene", null, true);
-        //     }
-        // };
-        // this.changeScene("TextOnlyScene", params, true);
-
-        this.localizationManager.setInterpolationValue("context", "female");
-        this.localizationManager.setInterpolationValue("name", "Pepito");
-        // this.changeScene("AlarmScene", null, true);
-        // this.changeScene("BedroomMorningDay1", null, false, false);
-        // this.changeScene("LivingroomMorningDay1", null, false, false);
-        
-        this.changeScene("NightmareDay1", null, false, false);
+        this.day = 0;
+        let params = {
+            text: this.localizationManager.translate("day1.start", "transitionScenes"),
+            onComplete: () => {
+                this.changeScene("AlarmScene", null, true);
+            }
+        };
+        this.changeScene("TextOnlyScene", params, true);
     }
 
     startComputer() {

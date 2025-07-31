@@ -574,7 +574,7 @@ export default class Credits extends ConectadoBaseScene {
         let arrow = this.add.image(x, y, "credits_atlas", "rewind");
         arrow.setTint(Phaser.Display.Color.GetColor(0, 104, 93));
         arrow.setScale(0.95);
-        arrow.flipX = facingRight;
+        arrow.setFlipX(facingRight);
         arrow.setVisible(false);
 
         return arrow;

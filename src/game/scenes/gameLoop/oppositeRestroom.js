@@ -1,3 +1,4 @@
+import { fadeAnimation } from "../../../framework/utils/graphics.js";
 import ConectadoBaseScene from "../conectadoBaseScene.js";
 
 export default class OppositeRestroom extends ConectadoBaseScene {
@@ -13,7 +14,7 @@ export default class OppositeRestroom extends ConectadoBaseScene {
         super.create(params);
 
         this.createBg("restroomBg");
-        this.bg.flipX = true;
+        this.bg.setFlipX(true);
 
 
         // Puerta al pasillo
@@ -34,8 +35,8 @@ export default class OppositeRestroom extends ConectadoBaseScene {
         this.stall2DoorClosed = this.add.image(593 * this.bgScale, 244 * this.bgScale, this.atlasName, "restroomStall2Closed").setOrigin(0.5, 0).setScale(this.bgScale);
         this.stall2DoorOpened = this.add.image(861 * this.bgScale, 240 * this.bgScale, this.atlasName, "restroomStall2Opened").setOrigin(0.5, 0).setScale(this.bgScale);
         this.createToggle(this.stall2DoorClosed, "oppositeRestroomStall2DoorClosed", this.stall2DoorOpened, "oppositeRestroomStall2DoorOpened", true);
-        this.stall2DoorClosed.flipX = true;
-        this.stall2DoorOpened.flipX = true;
+        this.stall2DoorClosed.setFlipX(true);
+        this.stall2DoorOpened.setFlipX(true);
         
 
         // Telefono del jugador
@@ -50,12 +51,7 @@ export default class OppositeRestroom extends ConectadoBaseScene {
         
         this.dispatcher.addOnce("pickPhone", this, (obj) => {
             this.phone.disableInteractive();
-            this.tweens.add({
-                targets: this.phone,
-                alpha: { from: 1, to: 0 },
-                duration: 200,
-                repeat: 0,
-            });
+            fadeAnimation(this.phone, false, 200);
         })
     }
 }

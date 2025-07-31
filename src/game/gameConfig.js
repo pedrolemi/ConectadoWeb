@@ -39,7 +39,7 @@ const CONFIG = {
     width: MAX_W,
     height: MAX_H,
     backgroundColor: "#000000",
-    version: "1.0",
+    version: "2.0",
     type: Phaser.AUTO,
 
     // Nota: el orden de las escenas es relevante, y las que se encuentren antes en el array se renderizaran por debajo de las siguientes
@@ -88,7 +88,11 @@ const CONFIG = {
     plugins: {
         // Plugin para utilizar animaciones esqueletales creadas con Spine
         scene: [
-            { key: "SpinePlugin", plugin: window.SpinePlugin, mapping: "spine" }
+            {
+                key: PreloaderScene.SPINE_PLUGIN_KEY,
+                plugin: window.SpinePlugin,
+                mapping: "spine"
+            }
         ]
     },
 }

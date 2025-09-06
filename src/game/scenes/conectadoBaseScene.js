@@ -1,4 +1,5 @@
 import BaseScene from "../../framework/scenes/baseScene.js"
+import ConectadoEventNames from "../eventNames.js";
 import GameManager from "./../managers/gameManager.js";
 
 export default class ConectadoBaseScene extends BaseScene {
@@ -15,6 +16,8 @@ export default class ConectadoBaseScene extends BaseScene {
         super.create(params);
 
         this.gameManager = GameManager.getInstance();
+
+        this.characters = new Map();
 
         // Parametros del fondo y la camara para el scroll
         this.bg = null;
@@ -51,8 +54,13 @@ export default class ConectadoBaseScene extends BaseScene {
         this.initialSetup(params);
     }
 
+    shutdown(params) {
+        super.shutdown(params);
+        this.dispatcher.dispatch(ConectadoEventNames.stopScene, this.characters);
+    }
+
     initialSetup(params) {
-        super.initialSetup(params);
+        this.dispatcher.dispatch(ConectadoEventNames.changeScene, this.characters);
 
         // Por defecto se pone la camara en el centro y si hay parametros que indiquen
         // donde colocar la camara, se coloca a la izquierda o a la derecha

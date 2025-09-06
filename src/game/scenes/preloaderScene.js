@@ -125,13 +125,13 @@ export default class PreloaderScene extends BasePreloaderScene {
 
         let loadAssets = () => {
             this.loadFlags();
-            // this.loadComputersAssets();
-            // this.loadCreditsSceneAssets();
+            this.loadComputersAssets();
+            this.loadCreditsSceneAssets();
             this.loadBackgrounds();
             this.loadDialogAssets();
             this.loadCharacters();
-            // this.loadPhoneAssets();
-            // this.loadAvatars();
+            this.loadPhoneAssets();
+            this.loadAvatars();
 
             this.load.setPath("assets");
             this.load.image("defaultParticle", "defaultParticle.png");

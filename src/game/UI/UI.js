@@ -4,8 +4,7 @@ import GameManager from "../managers/gameManager.js";
 import ConectadoEventNames from "../eventNames.js";
 import ConectadoDialogBox from "./conectadoDialogBox.js";
 import Phone from "./phone/phone.js";
-import { growAnimation } from "../../framework/utils/graphics.js";
-import OptionBox from "../../framework/UI/optionBox.js";
+import { growAnimation, fadeAnimation } from "../../framework/utils/graphics.js";
 import NotificationIcon from "./phone/elements/notificationIcon.js";
 
 export default class UI extends BaseUI {
@@ -58,11 +57,18 @@ export default class UI extends BaseUI {
         // TODO: CREAR ICONO DE NOTIFICACIONES EN MAINSCREEN
         // TODO: CREAR ICONO DE NOTIFICACIONES EN MSGLISTSCREEN
 
+        this.activeCharacters = new Map();      // Asocia un Character en una escena con el container de su retrato
+        this.portraits = new Map();             // Asocia el nombre de un personaje con su retrato en la escena
+        this.PORTRAIT_X = 110;
+        this.PORTRAIT_Y = 980;
+        this.PORTRAIT_SCALE = 0.1;
+
         this.textbox = new ConectadoDialogBox(this);
         this.textbox.on("pointerdown", () => { this.skipDialog(); });
-
+        this.portraitMask = this.textbox.createMask();
+        
         this.createLids();
-
+        
 
         this.configureAlarmEvents();
         this.configureGameEvents();
@@ -72,6 +78,37 @@ export default class UI extends BaseUI {
         if (this.alarmScene != null) {
             this.cameras.main.scrollX = this.alarmScene.cameras.main.scrollX - this.initalScrollX;
         }
+    }
+
+    startTextNode(node) {
+        super.startTextNode(node);
+        
+        // Si la caja es visible y el personaje que habla cambia
+        if (this.textbox.visible && this.textbox.lastCharacter != node.character) {
+            // Si el personaje anterior tiene retrato, se oculta
+            if (this.portraits.has(this.textbox.lastCharacter)) {
+                fadeAnimation(this.portraits.get(this.textbox.lastCharacter).list, false);
+            }
+            // Si el personaje actual tiene retrato, se muestra
+            if (this.portraits.has(node.character)) {
+                fadeAnimation(this.portraits.get(node.character).list, true);
+            }
+        }
+        // Si no, si el personaje actual tiene retrato, se muestra
+        else {
+            if (this.portraits.has(node.character)) {
+                fadeAnimation(this.portraits.get(node.character).list, true);
+            }
+        }
+    }
+    
+    endDialogNodes() {
+        super.endDialogNodes();
+
+        // Se ocultan todos los retratos
+        this.portraits.forEach((portrait, key) =>{
+            fadeAnimation(portrait.list, false);
+        });
     }
 
 
@@ -167,6 +204,50 @@ export default class UI extends BaseUI {
 
         this.dispatcher.add(ConectadoEventNames.startNightmare, this, () => {
             this.openEyesAnimation(true);
+        });
+
+        // Al cambiar de escena
+        this.dispatcher.add(ConectadoEventNames.changeScene, this, (characters) => {
+            // Se recorren todos los personajes de la escena
+            characters.forEach((character, key) => {
+                // Si el personaje no esta guardado
+                if (!this.activeCharacters.has(character)) {
+                    // Se clona el personaje
+                    let char = character.clone(this);
+                    char.setScale(this.PORTRAIT_SCALE);
+                    char.setPosition(this.PORTRAIT_X, this.PORTRAIT_Y);
+                    char.setVisible(false);
+                    
+                    // Se mete el personaje en un container y se le aplica la mascara de la caja de texto
+                    let container = this.add.container(0, 0);
+                    container.add(char);
+                    container.setMask(this.portraitMask);
+                    
+                    // Se guarda el personaje, su container y su id
+                    this.activeCharacters.set(character, container);
+                    this.portraits.set(key, container);
+                    this.textbox.addPortrait(key);
+                }
+                // Si esta guardado, se obtiene el Character de su container y se sincroniza la animacion
+                // del retrato (ya que al cambiar de escena, la animacion de los personajes se pausa, pero
+                // la animacion del retrato sigue ejecutandose)
+                else {
+                    let char = this.activeCharacters.get(character);
+                    char = char.list[0];
+                    char.syncAnimation(character);
+                }
+            });
+        });
+
+        // Al eliminar una escena, se eliminan todos sus personajes de la UI y se eliminan sus retratos
+        this.dispatcher.add(ConectadoEventNames.stopScene, this, (characters) => {
+            characters.forEach((character, key) => {
+                if (this.activeCharacters.has(character)) {
+                    this.activeCharacters.get(character).destroy();
+                    this.activeCharacters.delete(character);
+                    this.textbox.removePortrait(key);
+                }
+            });
         });
     }
 
@@ -335,4 +416,6 @@ export default class UI extends BaseUI {
             }
         });
     }
+
+    
 }

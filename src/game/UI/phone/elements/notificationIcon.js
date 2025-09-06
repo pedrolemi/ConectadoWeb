@@ -2,6 +2,12 @@ import TextArea from "../../../../framework/UI/textArea.js";
 import { createRectTexture } from "../../../../framework/utils/graphics.js";
 
 export default class NotificationIcon extends Phaser.GameObjects.Container {
+    /**
+    * TODO: Documentar
+    * @param {*} scene 
+    * @param {*} x 
+    * @param {*} y 
+    */
     constructor(scene, x, y) {
         super(scene, x, y);
 

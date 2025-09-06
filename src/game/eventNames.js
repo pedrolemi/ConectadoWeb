@@ -1,4 +1,7 @@
 export default class ConectadoEventNames {
+    static changeScene = "changeScene";
+    static stopScene = "stopScene";
+    
     static startDay = "startDay";
     static changeHour = "changeHour";
     static eyesOpened = "eyesOpened";

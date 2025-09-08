@@ -1,6 +1,7 @@
 import BaseScene from "../../framework/scenes/baseScene.js"
 import ConectadoEventNames from "../eventNames.js";
 import GameManager from "./../managers/gameManager.js";
+import Character from "./character.js"
 
 export default class ConectadoBaseScene extends BaseScene {
     // Posibles valores de la posicion inicial de la camara
@@ -203,5 +204,16 @@ export default class ConectadoBaseScene extends BaseScene {
                 }
             });
         }
+    }
+
+    createCharacter(x, y, key, onClick, scale, animationName, depth) {
+        let char = new Character(this, x, y, key, onClick);
+        this.characters.set(key, char);
+        
+        char.setScale(scale);
+        char.setAnimation(animationName);
+        char.setDepth(depth);
+
+        return char;
     }
 }

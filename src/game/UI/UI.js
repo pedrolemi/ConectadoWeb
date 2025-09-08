@@ -1,6 +1,7 @@
 import BaseUI from "../../framework/UI/baseUI.js";
 import GameManager from "../managers/gameManager.js";
 
+import DefaultEventNames from "../../framework/utils/eventNames.js";
 import ConectadoEventNames from "../eventNames.js";
 import ConectadoDialogBox from "./conectadoDialogBox.js";
 import Phone from "./phone/phone.js";
@@ -87,11 +88,22 @@ export default class UI extends BaseUI {
         if (this.textbox.visible && this.textbox.lastCharacter != node.character) {
             // Si el personaje anterior tiene retrato, se oculta
             if (this.portraits.has(this.textbox.lastCharacter)) {
-                fadeAnimation(this.portraits.get(this.textbox.lastCharacter).list, false);
+                let anim = fadeAnimation(this.portraits.get(this.textbox.lastCharacter).list, false);
+                anim.on("complete", () => {
+                    // Si el personaje actual tiene retrato, se muestra
+                    if (this.portraits.has(node.character)) {
+                        fadeAnimation(this.portraits.get(node.character).list, true);
+                    }
+                });
             }
-            // Si el personaje actual tiene retrato, se muestra
-            if (this.portraits.has(node.character)) {
-                fadeAnimation(this.portraits.get(node.character).list, true);
+            else {
+                if (this.portraits.has(node.character)) {
+                    setTimeout(() => {
+                        // Si el personaje actual tiene retrato, se muestra
+
+                        fadeAnimation(this.portraits.get(node.character).list, true);
+                    }, 150);
+                }
             }
         }
         // Si no, si el personaje actual tiene retrato, se muestra
@@ -245,8 +257,16 @@ export default class UI extends BaseUI {
                 if (this.activeCharacters.has(character)) {
                     this.activeCharacters.get(character).destroy();
                     this.activeCharacters.delete(character);
+                    this.portraits.delete(key);
                     this.textbox.removePortrait(key);
                 }
+            });
+        });
+
+        this.dispatcher.add(DefaultEventNames.startChoiceNode, this, (node) => {
+            // Se ocultan todos los retratos
+            this.portraits.forEach((portrait, key) => {
+                fadeAnimation(portrait.list, false);
             });
         });
     }

@@ -69,7 +69,8 @@ export default class GameManager extends Singleton {
         this.localizationManager.setInterpolationValue("name", "Pepito");
         // this.changeScene("AlarmScene", null, true);
         // this.changeScene("BedroomMorningDay1", null, false, false);
-        this.changeScene("LivingroomMorningDay1", null, false, false);
+        // this.changeScene("LivingroomMorningDay1", null, false, false);
+        this.changeScene("PlaygroundMorningDay1", null, false, false);
         
         // this.changeScene("NightmareDay1", null, false, false);
     }

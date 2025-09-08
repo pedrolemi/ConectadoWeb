@@ -79,7 +79,7 @@ export default class ConectadoDialogBox extends DialogBox {
     * @param {string} id - id del personaje 
     */
     removePortrait(id) {
-        this.portraitsIds.remove(id);
+        this.portraitsIds.delete(id);
     }
     
     setDialog(name, character, text, centered, animate = true) {

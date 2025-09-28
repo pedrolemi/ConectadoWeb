@@ -17,24 +17,24 @@ export default class ClassBackBase extends ConectadoBaseScene {
 
 
         // Primera fila de sillas y mesas
-        this.row1Tables = this.add.image(0, 0, "backRow1Tables").setOrigin(0, 0).setScale(this.bgScale);
-        this.row1Chairs = this.add.image(0, 0, "backRow1Chairs").setOrigin(0, 0).setScale(this.bgScale);
+        this.row1Tables = this.add.image(0, 0, "backRow1Tables").setOrigin(0, 0).setScale(this.bgScale).setDepth(this.BG_DEPTH + 1);
+        this.row1Chairs = this.add.image(0, 0, "backRow1Chairs").setOrigin(0, 0).setScale(this.bgScale).setDepth(this.row1Tables.depth + 1);
 
         // Segunda fila de sillas y mesas
-        this.row2Tables = this.add.image(0, 0, "backRow2Tables").setOrigin(0, 0).setScale(this.bgScale);
-        this.row2Chairs = this.add.image(0, 0, "backRow2Chairs").setOrigin(0, 0).setScale(this.bgScale);
+        this.row2Tables = this.add.image(0, 0, "backRow2Tables").setOrigin(0, 0).setScale(this.bgScale).setDepth(this.row1Chairs.depth + 1);
+        this.row2Chairs = this.add.image(0, 0, "backRow2Chairs").setOrigin(0, 0).setScale(this.bgScale).setDepth(this.row2Tables.depth + 1);
 
         // Tercera fila de sillas y mesas
-        this.row3Tables = this.add.image(0, 0, "backRow3Tables").setOrigin(0, 0).setScale(this.bgScale);
-        this.row3Chairs = this.add.image(0, 0, "backRow3Chairs").setOrigin(0, 0).setScale(this.bgScale);
+        this.row3Tables = this.add.image(0, 0, "backRow3Tables").setOrigin(0, 0).setScale(this.bgScale).setDepth(this.row2Chairs.depth + 1);
+        this.row3Chairs = this.add.image(0, 0, "backRow3Chairs").setOrigin(0, 0).setScale(this.bgScale).setDepth(this.row3Tables.depth + 1);
 
         // Cuarta fila de sillas y mesas
-        this.row4Tables = this.add.image(0, 0, "backRow4Tables").setOrigin(0, 0).setScale(this.bgScale);
-        this.row4Chairs = this.add.image(0, 0, "backRow4Chairs").setOrigin(0, 0).setScale(this.bgScale);
+        this.row4Tables = this.add.image(0, 0, "backRow4Tables").setOrigin(0, 0).setScale(this.bgScale).setDepth(this.row3Chairs.depth + 1);
+        this.row4Chairs = this.add.image(0, 0, "backRow4Chairs").setOrigin(0, 0).setScale(this.bgScale).setDepth(this.row4Tables.depth + 1);
 
         // Quinta fila de sillas y mesas
-        this.row5Tables = this.add.image(0, 0, "backRow5Tables").setOrigin(0, 0).setScale(this.bgScale);
-        this.row5Chairs = this.add.image(0, 0, "backRow5Chairs").setOrigin(0, 0).setScale(this.bgScale);
+        this.row5Tables = this.add.image(0, 0, "backRow5Tables").setOrigin(0, 0).setScale(this.bgScale).setDepth(this.row4Chairs.depth + 1);
+        this.row5Chairs = this.add.image(0, 0, "backRow5Chairs").setOrigin(0, 0).setScale(this.bgScale).setDepth(this.row5Tables.depth + 1);
 
         // Dibujos de la pizarra
         let blackboardPicsPos = {
@@ -66,7 +66,7 @@ export default class ClassBackBase extends ConectadoBaseScene {
             }
             else {
                 let params = {
-                    camPos: ConectadoBaseScene.CAM_POS_LEFT,
+                    camPos: this.CAM_POS_LEFT,
                 }
                 this.gameManager.changeScene(this.corridorSceneName, params, false);
             }

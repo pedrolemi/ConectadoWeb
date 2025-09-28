@@ -50,7 +50,7 @@ export default class StairsBase extends ConectadoBaseScene {
             }
             else {
                 let params = {
-                    camPos: ConectadoBaseScene.CAM_POS_RIGHT
+                    camPos: this.CAM_POS_RIGHT
                 };
                 this.gameManager.changeScene(this.playgroundSceneName, params, false, true);
             }
@@ -70,7 +70,7 @@ export default class StairsBase extends ConectadoBaseScene {
             }
             else {
                 let params = {
-                    camPos: ConectadoBaseScene.CAM_POS_LEFT
+                    camPos: this.CAM_POS_LEFT
                 };
                 this.gameManager.changeScene(this.corridorSceneName, params, false, true);
             }

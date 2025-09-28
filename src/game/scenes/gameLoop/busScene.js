@@ -36,7 +36,7 @@ export default class BusScene extends ConectadoBaseScene {
             // La proxima escena sera el salon o el patio, y ambas escenas comienzan 
             // desde la izquierda tanto al llegar a casa como al llegar al colegio
             let nextParams = {
-                camPos: ConectadoBaseScene.CAM_POS_LEFT
+                camPos: this.CAM_POS_LEFT
             };
 
             this.gameManager.sceneManager.changeScene(nextScene, nextParams);

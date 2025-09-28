@@ -281,31 +281,31 @@ export default class PreloaderScene extends BasePreloaderScene {
         this.load.setPath("assets/characters/Spine");
         
         // [Idle01, IdleBase, Walk]
-        this.load.spine("mom", "mom/Front.json", "mom/Front.atlas");
+        this.load.spine("mom", "mom/Front.json", "mom/Front.atlas", true);
 
         // [Idle01, IdleBase]
-        this.load.spine("dad", "dad/Front 34.json", "dad/Front 34.atlas");
+        this.load.spine("dad", "dad/Front 34.json", "dad/Front 34.atlas", true);
 
         // [Idle01, IdleBase]
-        this.load.spine("Alex_front", "Alex/Front 34.json", "Alex/Front 34.atlas");
+        this.load.spine("Alex_front", "Alex/Front 34.json", "Alex/Front 34.atlas", true);
 
         // [IdleBase, Walk]
-        this.load.spine("Alex_side", "Alex/Side.json", "Alex/Side.atlas");
+        this.load.spine("Alex_side", "Alex/Side.json", "Alex/Side.atlas", true);
 
         // [Idle01, IdleBase]
-        this.load.spine("Alison", "Alison/Front 34.json", "Alison/Front 34.atlas");
+        this.load.spine("Alison", "Alison/Front 34.json", "Alison/Front 34.atlas", true);
 
         // [Idle01, IdleBase]
-        this.load.spine("Ana", "Ana/Front 34.json", "Ana/Front 34.atlas");
+        this.load.spine("Ana", "Ana/Front 34.json", "Ana/Front 34.atlas", true);
 
         // [Idle01, IdleBase]
-        this.load.spine("Guille", "Guille/Front 34.json", "Guille/Front 34.atlas");
+        this.load.spine("Guille", "Guille/Front 34.json", "Guille/Front 34.atlas", true);
 
         // [Idle01, IdleBase]
-        this.load.spine("Jose", "Jose/Front 34.json", "Jose/Front 34.atlas");
+        this.load.spine("Jose", "Jose/Front 34.json", "Jose/Front 34.atlas", true);
 
         // [Idle01, IdleBase, IdlePhone]
-        this.load.spine("Maria", "Maria/Front 34.json", "Maria/Front 34.atlas")
+        this.load.spine("Maria", "Maria/Front 34.json", "Maria/Front 34.atlas", true)
     }
 
     loadPhoneAssets() {

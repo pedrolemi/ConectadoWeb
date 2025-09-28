@@ -93,7 +93,7 @@ export default class AlarmScene extends ConectadoBaseScene {
             // Cuando el telefono termina de cerrarse, cambia a la siguiente escena
             this.dispatcher.add(ConectadoEventNames.phoneClosed, this, () => {
                 let params = {
-                    camPos: ConectadoBaseScene.CAM_POS_RIGHT
+                    camPos: this.CAM_POS_RIGHT
                 }
                 this.gameManager.changeScene("BedroomMorningDay" + this.gameManager.day, params);
             });

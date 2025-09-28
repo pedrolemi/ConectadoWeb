@@ -140,6 +140,11 @@ export default class UI extends BaseUI {
         growAnimation(this.phoneIcon, this.phoneIcon, () => {
             this.phone.toggle();
         }, true, false, ICON_GROW_SCALE, false, 20);
+
+        this.dispatcher.add(ConectadoEventNames.activatePhoneIcon, this, (active = true) => {
+            this.phoneIcon.setVisible(active);
+            // TODO: GESTIONAR NOTIFICACIONES
+        });
     }
     
     createLids() {

@@ -29,7 +29,7 @@ export default class LivingroomBase extends ConectadoBaseScene {
         // Al pulsar la puerta de la habitacion, se cambia a la escena de la habitacion con la camara a la izquierda
         this.createToggle(this.bedroomDoorClosed, "bedroomDoorClosed", this.bedroomDoorOpened, "bedroomDoorOpened", false, () => {
             let params = {
-                camPos: ConectadoBaseScene.CAM_POS_LEFT
+                camPos: this.CAM_POS_LEFT
             };
             this.gameManager.changeScene(this.bedroomSceneName, params, false, true);
         });

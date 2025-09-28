@@ -25,7 +25,7 @@ export default class OppositeRestroom extends ConectadoBaseScene {
         // Al hacer click, se pasara a la escena del pasillo sin eliminar esta escena
         this.createToggle(this.oppositeRestroomDoorClosed, "oppositeRestroomDoorClosed", this.oppositeRestroomDoorOpened, "oppositeRestroomDoorOpened", false, () => {
             let params = {
-                camPos: ConectadoBaseScene.CAM_POS_LEFT,
+                camPos: this.CAM_POS_LEFT,
             }
             this.gameManager.changeScene(this.corridorSceneName, params, false, true);
         });

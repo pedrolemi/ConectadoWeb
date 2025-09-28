@@ -18,8 +18,8 @@ export default class LivingroomMorningDay1 extends LivingroomBase {
 
         let momNode = this.localizationManager.readNodes(this, nodes, namespace, "mom");
         
-        let mom = this.createCharacter(460, this.CANVAS_HEIGHT * 0.83, "mom", () => {
+        let mom = this.createSpineCharacter(460, this.CANVAS_HEIGHT * 0.83, "mom", () => {
             this.localizationManager.setNode(momNode);
-        }, 0.15, "Idle01", ConectadoBaseScene.TOGGLES_DEPTH + 1);
+        }, 0.15, "Idle01", this.INTERACTABLES_DEPTH);
     }
 }

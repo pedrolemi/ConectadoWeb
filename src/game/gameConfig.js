@@ -19,6 +19,9 @@ import RestroomBase from "./scenes/gameLoop/baseScenarios/restroomBase.js";
     import CorridorMorningDay1 from "./scenes/gameLoop/day1/corridorMorningDay1.js";
     import ClassFrontMorningDay1 from "./scenes/gameLoop/day1/classFrontMorningDay1.js";
     import ClassBackMorningDay1 from "./scenes/gameLoop/day1/classBackMorningDay1.js";
+    import ClassBackBreakDay1 from "./scenes/gameLoop/day1/classBackBreakDay1.js";
+    import CorridorBreakDay1 from "./scenes/gameLoop/day1/corridorBreakDay1.js";
+
     import NightmareDay1 from "./scenes/gameLoop/day1/nightmareDay1.js";
     
 
@@ -52,7 +55,7 @@ const CONFIG = {
         AlarmScene, RestroomBase,
 
         // Dia 1
-        BedroomMorningDay1, LivingroomMorningDay1, NightmareDay1, PlaygroundMorningDay1, StairsMorningDay1, CorridorMorningDay1, ClassFrontMorningDay1, ClassBackMorningDay1,
+        BedroomMorningDay1, LivingroomMorningDay1, NightmareDay1, PlaygroundMorningDay1, StairsMorningDay1, CorridorMorningDay1, ClassFrontMorningDay1, ClassBackMorningDay1, ClassBackBreakDay1, CorridorBreakDay1,
 
         // Dia 4
         OppositeRestroom,

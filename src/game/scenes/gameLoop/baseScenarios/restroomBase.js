@@ -23,7 +23,7 @@ export default class RestroomBase extends ConectadoBaseScene {
         // Al hacer click, se pasara a la escena del pasillo sin eliminar esta escena
         this.createToggle(this.restroomDoorClosed, "restroomDoorClosed", this.restroomDoorOpened, "restroomDoorOpened", false, () => {
             let params = {
-                camPos: ConectadoBaseScene.CAM_POS_LEFT,
+                camPos: this.CAM_POS_LEFT,
                 corridor: this
             }
             this.gameManager.changeScene(this.corridorSceneName, params, false, true);

@@ -49,7 +49,7 @@ export default class CorridorBase extends ConectadoBaseScene {
             }
             else {
                 let params = {
-                    camPos: ConectadoBaseScene.CAM_POS_LEFT,
+                    camPos: this.CAM_POS_LEFT,
                     corridor: this.scene.key
                 }
                 this.gameManager.changeScene(this.restroomSceneName, params, false, true);
@@ -67,7 +67,7 @@ export default class CorridorBase extends ConectadoBaseScene {
             }
             else {
                 let params = {
-                    camPos: ConectadoBaseScene.CAM_POS_LEFT,
+                    camPos: this.CAM_POS_LEFT,
                     corridor: this.scene.key
                 }
                 this.gameManager.changeScene(this.restroomSceneName, params, false, true);
@@ -89,7 +89,7 @@ export default class CorridorBase extends ConectadoBaseScene {
             }
             else {
                 let params = {
-                    camPos: ConectadoBaseScene.CAM_POS_LEFT,
+                    camPos: this.CAM_POS_LEFT,
                 }
                 this.gameManager.changeScene(this.classSceneName, params, false);
             }
@@ -101,7 +101,7 @@ export default class CorridorBase extends ConectadoBaseScene {
             let params = {
                 text: this.localizationManager.translate("day" + this.gameManager.day + ".endBreak", "transitionScenes"),
                 onComplete: () => {
-                    this.gameManager.changeScene(this.classSceneName, { camPos: ConectadoBaseScene.CAM_POS_RIGHT});
+                    this.gameManager.changeScene(this.classSceneName, { camPos: this.CAM_POS_RIGHT});
                 },
                 onCompleteDelay: 500
             };
@@ -113,7 +113,7 @@ export default class CorridorBase extends ConectadoBaseScene {
         // Evento llamado cuando se elige entrar al bano opuesto
         this.dispatcher.add("enterRestroom", this, () => {
             let params = {
-                camPos: ConectadoBaseScene.CAM_POS_RIGHT,
+                camPos: this.CAM_POS_RIGHT,
                 corridor: this.scene.key
             }
             this.gameManager.changeScene(this.oppositeRestroomSceneName, params, false, true);

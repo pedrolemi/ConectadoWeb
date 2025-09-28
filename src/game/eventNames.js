@@ -10,6 +10,7 @@ export default class ConectadoEventNames {
     static eyesClosed = "eyesClosed";
     static wakeUp = "wakeUp";
 
+    static activatePhoneIcon = "activatePhoneIcon";
     static phoneOpened = "phoneOpened";
     static phoneClosed = "phoneClosed";
 

@@ -1,14 +1,9 @@
 import BaseScene from "../../framework/scenes/baseScene.js"
 import ConectadoEventNames from "../eventNames.js";
 import GameManager from "./../managers/gameManager.js";
-import Character from "./character.js"
+import SpineCharacter from "./spineCharacter.js"
 
-export default class ConectadoBaseScene extends BaseScene {
-    // Posibles valores de la posicion inicial de la camara
-    static CAM_POS_LEFT = 0;
-    static CAM_POS_RIGHT = 1;
-    static CAM_POS_CENTER = 0.5;
-    
+export default class ConectadoBaseScene extends BaseScene {  
     constructor(name, atlasName) {
         super(name, atlasName);
     }
@@ -28,6 +23,11 @@ export default class ConectadoBaseScene extends BaseScene {
         this.START_SCROLLING = 30;
         this.CAMERA_SPEED = 0.7;
 
+        // Posibles valores de la posicion inicial de la camara
+        this.CAM_POS_LEFT = 0;
+        this.CAM_POS_RIGHT = 1;
+        this.CAM_POS_CENTER = 0.5;
+        
         // Configuraciones de profundidad para los elementos del fondo
         this.BG_DEPTH = 0;
         this.INTERACTABLES_DEPTH = 3;
@@ -67,11 +67,11 @@ export default class ConectadoBaseScene extends BaseScene {
         // donde colocar la camara, se coloca a la izquierda o a la derecha
         if (params == null) {
             params = {
-                camPos: ConectadoBaseScene.CAM_POS_CENTER 
+                camPos: this.CAM_POS_CENTER 
             };
         }
         else if (params.camPos == null) {
-            params.camPos = ConectadoBaseScene.CAM_POS_CENTER;
+            params.camPos = this.CAM_POS_CENTER;
         }
         if (params.camPos != null) {
             let camOffset = this.CANVAS_WIDTH * params.camPos;
@@ -206,8 +206,21 @@ export default class ConectadoBaseScene extends BaseScene {
         }
     }
 
-    createCharacter(x, y, key, onClick, scale, animationName, depth) {
-        let char = new Character(this, x, y, key, onClick);
+    createImageCharacter(x, y, imgKey, key, scale, depth) {
+        let char = this.add.image(x, y, imgKey).setScale(scale).setOrigin(0.5, 1).setDepth(depth);
+        this.characters.set(key, char);
+
+        char.key = key;
+        char.clone = (scene) => {
+            let clone = scene.add.image(x, y, imgKey).setScale(scale).setOrigin(0.5, 1).setDepth(depth);
+            return clone;
+        }
+        char.syncAnimation = () => {};
+
+        return char;
+    }
+    createSpineCharacter(x, y, key, onClick, scale, animationName, depth) {
+        let char = new SpineCharacter(this, x, y, key, onClick);
         this.characters.set(key, char);
         
         char.setScale(scale);

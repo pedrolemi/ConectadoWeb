@@ -52,7 +52,7 @@ export default class ConectadoDialogBox extends DialogBox {
         this.createMask();
         this.portraitsIds = new Set();
 
-        this.PORTRAIT_TEXT_X = 230;
+        this.PORTRAIT_TEXT_X = 220;
         this.PORTRAIT_TEXT_WIDTH = this.textboxConfig.realWidth - (this.PORTRAIT_TEXT_X - this.textboxConfig.textX);
     }
 

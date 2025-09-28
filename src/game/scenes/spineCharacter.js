@@ -1,7 +1,8 @@
-export default class Character extends SpinePlugin.SpineGameObject {
+export default class SpineCharacter extends SpinePlugin.SpineGameObject {
     /**
     * Clase base para los personajes con animaciones esqueletales 
     * @extends SpinePlugin.SpineGameObject
+    * https://photonstorm.github.io/phaser3-docs/SpineGameObject.html
     * @param {Phaser.Scene} scene 
     * @param {Number} x - posicion x del centro de la animacion
     * @param {Number} y - posicion y del punto inferior de la animacion
@@ -70,17 +71,17 @@ export default class Character extends SpinePlugin.SpineGameObject {
     /**
     * Clonar el personaje en otra escena (o en la misma) con la animacion sincronizada
     * @param {Phaser.Scene} scene - escena en la que clonar el personaje 
-    * @returns {Character} - clon del Character desde el que se llama al metodo 
+    * @returns {SpineCharacter} - clon del Character desde el que se llama al metodo 
     */
     clone(scene) {
-        let clone = new Character(scene, this.x, this.y, this.key, null, this.getCurrentAnimationName(), this.state.timeScale, this.isLooping());
+        let clone = new SpineCharacter(scene, this.x, this.y, this.key, null, this.getCurrentAnimationName(), this.state.timeScale, this.isLooping());
         clone.syncAnimation(this);
         return clone; 
     }
 
     /**
     * Sincronizar la animacion actual para que vaya a la par que otro Character indicado
-    * @param {Character} originalChar - personaje con el que sincronizar las animaciones
+    * @param {SpineCharacter} originalChar - personaje con el que sincronizar las animaciones
     */
     syncAnimation(originalChar) {
         if (this.key == originalChar.key) {

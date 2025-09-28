@@ -20,7 +20,7 @@ export default class ClassBackMorningDay1 extends ClassBackBase {
         this.blackboardPics[2].setVisible(true);
 
         // Profesor
-        let teacher = this.createImageCharacter(this.rightBound * 0.46, this.CANVAS_HEIGHT * 0.66, "teacherChar", "teacher", 0.07, this.row1Tables.depth - 1);
+        let teacher = this.createImageCharacter(this.rightBound * 0.53, this.CANVAS_HEIGHT * 0.66, "teacherChar", 0.07, "teacher", this.row1Tables.depth - 1);
 
         // Personajes de fondo
         this.add.image(this.rightBound * 0.45, this.CANVAS_HEIGHT * 0.65, this.atlasName, "backChar8").setOrigin(0, 0).setScale(this.bgScale * 0.8).setDepth(this.row4Chairs.depth - 1);
@@ -44,13 +44,11 @@ export default class ClassBackMorningDay1 extends ClassBackBase {
         }, 500);
 
 
-        let alexTr = 0.07;
-        
         // Alex
         let alexWalk = this.createSpineCharacter(this.doorOpened.x + 160, this.doorOpened.y + this.doorOpened.displayHeight * 0.95, "Alex_side", 
-            () => {}, alexTr, "Walk", teacher.depth);
+            () => {}, 0.07, "Walk", "Alex_side", teacher.depth);
         alexWalk.disableInteractive();
-        alexWalk.setScale(-alexTr, alexTr);
+        alexWalk.setScale(-alexWalk.scaleX, alexWalk.scaleY);
         alexWalk.setAnimationSpeed(0.6);
         alexWalk.setVisible(false);
 
@@ -58,14 +56,10 @@ export default class ClassBackMorningDay1 extends ClassBackBase {
         
         // Alex de frente
         let alexFront = this.createSpineCharacter(alexFinalX, this.doorOpened.y + this.doorOpened.displayHeight * 0.95 + 10, "Alex_front", 
-            () => {}, alexTr, "IdleBase", teacher.depth);
+            () => {}, 0.07, "IdleBase", "Alex", teacher.depth);
         alexFront.disableInteractive();
-        alexFront.setScale(-alexTr, alexTr);
-        alexFront.setAnimationSpeed(0.6);
-
-        this.characters.set("Alex", alexFront);
+        alexFront.setScale(-alexFront.scaleX, alexFront.scaleY);
         alexFront.setVisible(false);
-
 
         // Evento llamado cuando el profesor termina su primer dialogo
         this.dispatcher.addOnce("enterClass", this, (obj) => {

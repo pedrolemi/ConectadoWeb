@@ -1,4 +1,3 @@
-import ConectadoBaseScene from "../../conectadoBaseScene.js";
 import LivingroomBase from "../baseScenarios/livingroomBase.js";
 
 export default class LivingroomMorningDay1 extends LivingroomBase {
@@ -20,6 +19,6 @@ export default class LivingroomMorningDay1 extends LivingroomBase {
         
         let mom = this.createSpineCharacter(460, this.CANVAS_HEIGHT * 0.83, "mom", () => {
             this.localizationManager.setNode(momNode);
-        }, 0.15, "Idle01", this.INTERACTABLES_DEPTH);
+        }, 0.15, "Idle01");
     }
 }

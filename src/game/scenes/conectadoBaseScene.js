@@ -206,11 +206,11 @@ export default class ConectadoBaseScene extends BaseScene {
         }
     }
 
-    createImageCharacter(x, y, imgKey, key, scale, depth) {
+    createImageCharacter(x, y, imgKey, scale, characterKey = imgKey, depth = this.INTERACTABLES_DEPTH) {
         let char = this.add.image(x, y, imgKey).setScale(scale).setOrigin(0.5, 1).setDepth(depth);
-        this.characters.set(key, char);
+        this.characters.set(characterKey, char);
 
-        char.key = key;
+        char.key = characterKey = imgKey;
         char.clone = (scene) => {
             let clone = scene.add.image(x, y, imgKey).setScale(scale).setOrigin(0.5, 1).setDepth(depth);
             return clone;
@@ -219,9 +219,9 @@ export default class ConectadoBaseScene extends BaseScene {
 
         return char;
     }
-    createSpineCharacter(x, y, key, onClick, scale, animationName, depth) {
-        let char = new SpineCharacter(this, x, y, key, onClick);
-        this.characters.set(key, char);
+    createSpineCharacter(x, y, spineKey, onClick, scale, animationName, characterKey = spineKey, depth = this.INTERACTABLES_DEPTH) {
+        let char = new SpineCharacter(this, x, y, spineKey, onClick);
+        this.characters.set(characterKey, char);
         
         char.setScale(scale);
         char.setAnimation(animationName);

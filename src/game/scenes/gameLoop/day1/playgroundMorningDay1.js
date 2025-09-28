@@ -1,7 +1,5 @@
-import ConectadoBaseScene from "../../conectadoBaseScene.js";
 import PlaygroundBase from "../baseScenarios/playgroundBase.js";
 import ConectadoEventNames from "../../../eventNames.js";
-import { fadeAnimation } from "../../../../framework/utils/graphics.js";
 
 export default class PlaygroundMorningDay1 extends PlaygroundBase {
     constructor() {
@@ -21,22 +19,23 @@ export default class PlaygroundMorningDay1 extends PlaygroundBase {
 
         // Si no se llega tarde, se colocan personajes de fondo
         if (!this.gameManager.blackboard.get("isLate")) {
+            // Cambia la hora del movil
             this.dispatcher.dispatch(ConectadoEventNames.changeHour, "playgroundMorning");
 
             let joseNode = this.localizationManager.readNodes(this, nodes, namespace, "jose");
             let jose = this.createSpineCharacter(280, this.CANVAS_HEIGHT * 0.95, "Jose", () => {
                 this.localizationManager.setNode(joseNode);
-            }, 0.065, "IdleBase", this.INTERACTABLES_DEPTH);
+            }, 0.065, "IdleBase");
 
             let alisonNode = this.localizationManager.readNodes(this, nodes, namespace, "alison");
             let alison = this.createSpineCharacter(this.rightBound * 0.65, this.CANVAS_HEIGHT * 0.92, "Alison", () => {
                 this.localizationManager.setNode(alisonNode);
-            }, 0.055, "IdleBase", this.INTERACTABLES_DEPTH);
+            }, 0.055, "IdleBase");
 
             let guilleNode = this.localizationManager.readNodes(this, nodes, namespace, "guille");
             let guille = this.createSpineCharacter(this.rightBound * 0.96, this.CANVAS_HEIGHT * 1.25, "Guille", () => {
                 this.localizationManager.setNode(guilleNode);
-            }, 0.2, "IdleBase", this.INTERACTABLES_DEPTH);
+            }, 0.2, "IdleBase");
 
 
             // Evento llamado cuando suena la campana
@@ -47,11 +46,9 @@ export default class PlaygroundMorningDay1 extends PlaygroundBase {
                 // Se quita el dialogo que aparece al hacer click en las puertas
                 this.doorNode = null;
 
-                jose.disableInteractive();
-                alison.disableInteractive();
-                guille.disableInteractive();
-
-                let anim = fadeAnimation([jose, alison, guille], false, 1000);
+                let anim = jose.fade(false);
+                alison.fade(false);
+                guille.fade(false);
 
                 // Una vez termina la animacion, se abren las puertas
                 anim.on('complete', () => {
@@ -61,6 +58,7 @@ export default class PlaygroundMorningDay1 extends PlaygroundBase {
         }
         // Si no, se pone la hora de llegar tarde y se dejan las puertas abiertas
         else {
+            // Cambia la hora del movil
             this.dispatcher.dispatch(ConectadoEventNames.changeHour, "playgroundMorningLate");
             super.openDoors();
         }

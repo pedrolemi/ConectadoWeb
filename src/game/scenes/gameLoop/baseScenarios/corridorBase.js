@@ -101,13 +101,13 @@ export default class CorridorBase extends ConectadoBaseScene {
             let params = {
                 text: this.localizationManager.translate("day" + this.gameManager.day + ".endBreak", "transitionScenes"),
                 onComplete: () => {
-                    this.gameManager.changeScene(this.classSceneName, { camPos: this.CAM_POS_RIGHT});
+                    this.gameManager.changeScene(this.classSceneName, { camPos: this.CAM_POS_RIGHT}, true);
                 },
                 onCompleteDelay: 500
             };
             
             // Se cambia a la escena de transicion
-            this.gameManager.changeScene("TextOnlyScene", params);
+            this.gameManager.changeScene("TextOnlyScene", params, true);
         });
 
         // Evento llamado cuando se elige entrar al bano opuesto

@@ -13,7 +13,7 @@ export default class ClassFrontMorningDay1 extends ClassFrontBase {
 
         let nodes = this.cache.json.get("classFrontMorningDay1");
         
-        let teacher = this.createImageCharacter(0, 0, "teacherChar", "teacher", 0.087, this.INTERACTABLES_DEPTH);
+        let teacher = this.createImageCharacter(0, 0, "teacherChar", 0.087, "teacher");
         teacher.setPosition(-teacher.displayWidth * 2, -teacher.displayHeight * 2);
 
         // this.gameManager.blackboard.set("isLate", true);

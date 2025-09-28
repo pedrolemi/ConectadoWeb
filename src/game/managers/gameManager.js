@@ -64,13 +64,14 @@ export default class GameManager extends Singleton {
         this.resetGame();
 
         this.sceneManager.runInParallel("UI");
+        this.day = 1;
         
         this.localizationManager.setInterpolationValue("context", "female");
         this.localizationManager.setInterpolationValue("name", "Pepito");
         // this.changeScene("AlarmScene", null, true);
         // this.changeScene("BedroomMorningDay1", null, false, false);
         // this.changeScene("LivingroomMorningDay1", null, false, false);
-        this.changeScene("ClassBackBreakDay1", null, false, false);
+        this.changeScene("CorridorBreakDay1", null, false, false);
         
         // this.changeScene("NightmareDay1", null, false, false);
     }

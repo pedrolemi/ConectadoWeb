@@ -21,17 +21,17 @@ export default class CorridorMorningDay1 extends CorridorBase {
             let mariaNode = this.localizationManager.readNodes(this, nodes, namespace, "maria");
             let maria = this.createSpineCharacter(250, this.CANVAS_HEIGHT * 0.75, "Maria", () => {
                 this.localizationManager.setNode(mariaNode);
-            }, 0.087, "IdleBase", this.INTERACTABLES_DEPTH);
+            }, 0.087, "IdleBase");
 
             let alisonNode = this.localizationManager.readNodes(this, nodes, namespace, "alison");
             let alison = this.createSpineCharacter(this.rightBound * 0.60, this.CANVAS_HEIGHT * 0.75, "Alison", () => {
                 this.localizationManager.setNode(alisonNode);
-            }, 0.083, "IdleBase", this.INTERACTABLES_DEPTH);
+            }, 0.083, "IdleBase");
 
             let guilleNode = this.localizationManager.readNodes(this, nodes, namespace, "guille");
             let guille = this.createSpineCharacter(this.rightBound * 0.76, this.CANVAS_HEIGHT * 0.93, "Guille", () => {
                 this.localizationManager.setNode(guilleNode);
-            }, 0.15, "IdleBase", this.INTERACTABLES_DEPTH);
+            }, 0.15, "IdleBase");
         }
     }
 }

@@ -1,3 +1,5 @@
+import { fadeAnimation } from "../../framework/utils/graphics.js";
+
 export default class SpineCharacter extends SpinePlugin.SpineGameObject {
     /**
     * Clase base para los personajes con animaciones esqueletales 
@@ -68,6 +70,22 @@ export default class SpineCharacter extends SpinePlugin.SpineGameObject {
         this.state.timeScale = speed;
     }
 
+    /**
+    * Anadir animacion de mostrar/ocultar el personaje con un fade in/out
+    * @param {Boolean} makeVisible - true si se quiere mostrar el objetivo, false en caso contrario
+    * @param {Number} duration - duracion en ms que durara el fade (opcional)
+    * @param {Phaser.Math.Easing, String} ease - funcion de suavizado que aplicar a la animacion (opcional)
+    * @returns {Phaser.Tweens.Tween} - instancia de la animacion reproducida (por si se quieren anadir eventos que reaccionen a ella)
+    */
+    fade(makeVisible, duration = 500, ease = Phaser.Math.Easing.Linear) {
+        this.disableInteractive();
+        let anim = fadeAnimation(this, makeVisible, duration, ease);
+        anim.on("complete", () => {
+            this.setInteractive();
+        });
+        return anim;
+    }
+    
     /**
     * Clonar el personaje en otra escena (o en la misma) con la animacion sincronizada
     * @param {Phaser.Scene} scene - escena en la que clonar el personaje 

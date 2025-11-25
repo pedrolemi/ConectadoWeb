@@ -73,7 +73,7 @@ export default class ClassBackMorningDay1 extends ClassBackBase {
             let rectangle = this.add.rectangle(this.doorOpened.x + this.doorOpened.displayWidth * 0.77, 
                 this.doorOpened.y, this.doorOpened.displayWidth * 2, this.doorOpened.displayHeight, 0xfff, 0).setOrigin(0, 0);
             let mask = rectangle.createGeometryMask();
-            mask.invertAlpha = true;
+            mask.setInvertAlpha(true);
 
             // Se crea un container al que anadirle la mascara 
             let container = this.add.container(0, 0);

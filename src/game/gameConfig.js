@@ -38,6 +38,7 @@ import UI from "./UI/UI.js";
 import TextOnlyScene from "./scenes/gameLoop/textOnlyScene.js";
 import BusScene from "./scenes/gameLoop/busScene.js";
 
+// import TestScene from "./scenes/testScene.js";
 
 
 const MAX_W = 1129, MAX_H = 847, MIN_W = 320, MIN_H = 240;
@@ -50,6 +51,7 @@ const CONFIG = {
 
     // Nota: el orden de las escenas es relevante, y las que se encuentren antes en el array se renderizaran por debajo de las siguientes
     scene: [
+        // TestScene,
         // Carga de assets
         BootScene, PreloaderScene,
 
@@ -103,6 +105,6 @@ const CONFIG = {
     },
 }
 
-gameDebug.enable = false;
+gameDebug.enable = true;
 gameDebug.enableText = false;
 const GAME = new Phaser.Game(CONFIG);

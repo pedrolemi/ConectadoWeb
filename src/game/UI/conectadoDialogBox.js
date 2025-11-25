@@ -47,7 +47,7 @@ export default class ConectadoDialogBox extends DialogBox {
         this.box.setScale(horizontalScale, 1);
         this.nameBox.setScale(horizontalScale, 1)
 
-        this.calculateRectangleSize();
+        // this.calculateRectangleSize();
 
         this.createMask();
         this.portraitsIds = new Set();
